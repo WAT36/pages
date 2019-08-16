@@ -1,3 +1,9 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseURL = "https://wat36.github.io/pages/"
+title = "T.Wakasugi hugo-test"
+author = "T.Wakasugi"
+canonifyurls = true
+paginate = 3
+theme = "hugo-book"
+publishDir = "docs"
+hasCJKLanguage = true
+languageCode = "ja-jp"
