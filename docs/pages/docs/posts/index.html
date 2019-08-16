@@ -4,20 +4,20 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Posts | T.Wakasugi hugo-test</title>
+<title>Posts | Hugo Book</title>
 
 
-<link rel="stylesheet" href="https://wat36.github.io/pages/book.min.6c7317d2e8552a0ac3ea8fd4ba500c3dfb1cc9c74e7afd73eee6d729751fad30.css">
+<link rel="stylesheet" href="/pages/book.min.6c7317d2e8552a0ac3ea8fd4ba500c3dfb1cc9c74e7afd73eee6d729751fad30.css">
 
 
-<script defer src="https://wat36.github.io/pages/search.min.72f018467402d57fcc530280975c58a4c5746caa264c591d688ea5f7458ecf06.js"></script>
+<script defer src="/pages/search.min.32094ddab3a31559c26329731b3a515d1af74fa5bd3968ff0ace8ab7efba3f03.js"></script>
 
 
 
-<link rel="icon" href="https://wat36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="icon" href="/pages/favicon.png" type="image/x-icon">
 
 
-<link rel="alternate" type="application/rss+xml" href="https://wat36.github.io/pages/posts/index.xml" title="T.Wakasugi hugo-test" />
+<link rel="alternate" type="application/rss+xml" href="https://WAT36.github.io/pages/posts/index.xml" title="Hugo Book" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -32,7 +32,7 @@ https://github.com/alex-shpak/hugo-book
     <aside class="book-menu fixed">
       <nav>
 <h2 class="book-brand">
-  <a href="https://wat36.github.io/pages/">T.Wakasugi hugo-test</a>
+  <a href="https://WAT36.github.io/pages/">Hugo Book</a>
 </h2>
 
 
@@ -47,22 +47,31 @@ https://github.com/alex-shpak/hugo-book
 
 
     
-
   
   
-
-
-
-
-
-
-  <ul>
   
-  </ul>
 
+  <style>
+  nav ul a[href$="\2fpages\2fposts\2f "] {
+      color: #004ed0;
+  }
+  </style>
 
+<ul>
+<li><a href="/pages/"><strong>Introduction</strong></a></li>
+<li><a href="/pages/docs/examples/">Examples</a>
 
-
+<ul>
+<li><a href="/pages/docs/with-toc/">With Table of Contents</a></li>
+<li><a href="/pages/docs/without-toc/">Without Table of Contents</a></li>
+<li><a href="/pages/docs/shortcodes/">Shortcodes</a><br /></li>
+</ul></li>
+<li><strong>More Examples</strong></li>
+<li><a href="/pages/docs/server/">Server</a></li>
+<li><a href="/pages/docs/client/">Client</a></li>
+<li><a href="/pages/docs/advanced/">Advanced</a><br /></li>
+<li><a href="/pages/posts/"><strong>Blog</strong></a></li>
+</ul>
 
 
 
@@ -88,7 +97,7 @@ https://github.com/alex-shpak/hugo-book
     <div class="book-posts">
       <header class="flex align-center justify-between book-header">
   <label for="menu-control">
-    <img src="https://wat36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="/pages/svg/menu.svg" alt="Menu" />
   </label>
   <strong>Posts</strong>
 </header>
@@ -99,12 +108,74 @@ https://github.com/alex-shpak/hugo-book
   
   <article class="markdown">
     <h2>
-      <a href="https://wat36.github.io/pages/posts/001/">001</a>
+      <a href="/pages/posts/creating-a-new-theme/">Creating a New Theme</a>
     </h2>
     <h5>
-      <strong>August 16, 2019</strong>
+      <strong>Sep 28, 2014</strong>
     </h5>
-    <p>test テスト
+    <p>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&rsquo;t cover using CSS to style your theme.
+We&rsquo;ll start with creating a new site with a very basic template.
+        <a href="/pages/posts/creating-a-new-theme/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown">
+    <h2>
+      <a href="/pages/posts/migrate-from-jekyll/">Migrate to Hugo from Jekyll</a>
+    </h2>
+    <h5>
+      <strong>Mar 10, 2014</strong>
+    </h5>
+    <p>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &lt;root&gt;/ ▾ images/ logo.png  should become
+▾ &lt;root&gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.
+        <a href="/pages/posts/migrate-from-jekyll/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown">
+    <h2>
+      <a href="/pages/posts/001/">001</a>
+    </h2>
+    <h5>
+      <strong>Aug 16, 2019</strong>
+    </h5>
+    <p>test
+hoge
+    </p>
+  </article>
+  
+  <article class="markdown">
+    <h2>
+      <a href="/pages/posts/goisforlovers/">(Hu)go Template Primer</a>
+    </h2>
+    <h5>
+      <strong>Apr 2, 2014</strong>
+    </h5>
+    <p>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates.
+        <a href="/pages/posts/goisforlovers/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown">
+    <h2>
+      <a href="/pages/posts/hugoisforlovers/">Getting Started with Hugo</a>
+    </h2>
+    <h5>
+      <strong>Apr 2, 2014</strong>
+    </h5>
+    <p>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at Install Hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:
+ Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:
+        <a href="/pages/posts/hugoisforlovers/">...</a>
+      
     </p>
   </article>
   
