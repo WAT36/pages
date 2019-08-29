@@ -1,7 +1,7 @@
 # hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/example
 
 baseURL = 'https://WAT36.github.io/pages/'
-title = 'Hugo Book'
+title = 'WATメモ'
 theme = 'book'
 author = 'T.Wakasugi'
 canonifyurls = true
@@ -51,6 +51,6 @@ pygmentsCodeFences = true
   # - In blog posts
   BookDateFormat = 'Jan 2, 2006'
 
-  # (Optional, default true) Enables search function with lunr.js, 
+  # (Optional, default true) Enables search function with lunr.js,
   # Index is built on fly, therefore it might slowdown your website.
   BookSearch = true
