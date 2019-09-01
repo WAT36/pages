@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Hugo Book</title>
+    <title>Posts on WATメモ</title>
     <link>https://WAT36.github.io/pages/posts/</link>
-    <description>Recent content in Posts on Hugo Book</description>
+    <description>Recent content in Posts on WATメモ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Sep 2019 02:02:47 +0900</lastBuildDate>
     
 	<atom:link href="https://WAT36.github.io/pages/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,6 +30,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>Hugo post Test</title>
+      <link>https://WAT36.github.io/pages/posts/test/</link>
+      <pubDate>Sun, 01 Sep 2019 02:02:47 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/test/</guid>
+      <description>Hugoで投稿テスト</description>
     </item>
     
     <item>
