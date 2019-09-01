@@ -7,7 +7,7 @@ headless: true
   - [With Table of Contents]({{< relref "/docs/with-toc.md" >}})
   - [Without Table of Contents]({{< relref "/docs/without-toc.md" >}})
   - [Shortcodes]({{< relref "/docs/shortcodes.md" >}})  
-- **More Examples**
+- [**Java-Python docs**]({{< relref "/docs/java-python/jp_index.md" >}})
 - [Server]({{< relref "/docs/server.md" >}})
 - [Client]({{< relref "/docs/client.md" >}})
 - [Advanced]({{< relref "/docs/advanced.md" >}})  
