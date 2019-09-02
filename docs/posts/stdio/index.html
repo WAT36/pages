@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hugo post Test | WATノート</title>
+<title>標準入力、出力 | WATノート</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7317d2e8552a0ac3ea8fd4ba500c3dfb1cc9c74e7afd73eee6d729751fad30.css">
@@ -51,7 +51,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2fposts\2ftest\2f "] {
+  nav ul a[href$="\2fposts\2fstdio\2f "] {
       color: #004ed0;
   }
   </style>
@@ -102,18 +102,106 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>Hugo post Test</strong>
+  <strong>標準入力、出力</strong>
 </header>
 
       
 
 <header class="markdown">
-  <h1>Hugo post Test</h1>
+  <h1>標準入力、出力</h1>
   <h5>
-    <strong>Sep 1, 2019</strong>
+    <strong>Sep 3, 2019</strong>
   </h5>
 </header>
-<article class="markdown"><p>Hugoで投稿テスト</p>
+<article class="markdown"><table>
+<thead>
+<tr>
+<th align="left">説明</th>
+<th align="left">Java</th>
+<th align="left">Python</th>
+<th align="left"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">標準入力をスペースで区切り数値で取得</td>
+<td align="left">Scanner.nextInt()</td>
+<td align="left">int(input().split())</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">標準入力を１行文字列として取得</td>
+<td align="left">Scanner.nextLine()</td>
+<td align="left">input()</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">標準入力を引数(argv)から取得</td>
+<td align="left">メソッドの引数にString[] argsと書いて<br>そのメソッド内でargs（引数のインデックス）</td>
+<td align="left">import sys<br>sys.argv</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">コンソールにxxを出力して改行する</td>
+<td align="left">System.out.println(xx)</td>
+<td align="left">print(xx)</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">コンソールにxxを出力して改行しない</td>
+<td align="left">System.out.print(xx)</td>
+<td align="left">print(xx,end=&ldquo;&rdquo;)</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">メソッド(関数)の宣言</td>
+<td align="left">(アクセス修飾子) <a href="戻り値の型">static</a> 関数名(引数){}<br>例：<code>public static void main(String[] args){}</code></td>
+<td align="left">def 関数名(引数):<br></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">プログラムを終了する</td>
+<td align="left">return;<br>または<br>System.exit(終了ステータス);</td>
+<td align="left">import sys<br>sys.exit()</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
 </article>
 
       
