@@ -6,7 +6,7 @@
     <description>Recent content in Posts on WATノート</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Tue, 03 Sep 2019 00:06:44 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 01 Sep 2019 02:02:47 +0900</lastBuildDate>
     
 	<atom:link href="https://WAT36.github.io/pages/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,15 +30,6 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
-    </item>
-    
-    <item>
-      <title>標準入力、出力</title>
-      <link>https://WAT36.github.io/pages/posts/stdio/</link>
-      <pubDate>Tue, 03 Sep 2019 00:06:44 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/posts/stdio/</guid>
-      <description>説明 Java Python 標準入力をスペースで区切り数値で取得 Scanner.nextInt() int(input().split()) 標準入力を１行文字列として取得 Scanner.nextLine() input() 標準入力を引数(argv)から取得 メソッドの引数にStri</description>
     </item>
     
     <item>

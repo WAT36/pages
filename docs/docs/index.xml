@@ -6,9 +6,37 @@
     <description>Recent content in Docs on WATノート</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
+    <lastBuildDate>Tue, 03 Sep 2019 08:02:46 +0900</lastBuildDate>
     
 	<atom:link href="https://WAT36.github.io/pages/docs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Integer</title>
+      <link>https://WAT36.github.io/pages/docs/integer/</link>
+      <pubDate>Tue, 03 Sep 2019 08:02:46 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/integer/</guid>
+      <description>数値 説明 Java Python 数値を文字列に変換する String.valueOf(数値) str(数値) 数字の頭をゼロ詰して表示する String.format(</description>
+    </item>
+    
+    <item>
+      <title>文字列</title>
+      <link>https://WAT36.github.io/pages/docs/string/</link>
+      <pubDate>Tue, 03 Sep 2019 07:54:45 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/string/</guid>
+      <description>文字列 説明 Java Python 文字列を大文字にする (文字列).toUpperCase() (文字列).upper() 文字列を小文字にする (文字列).toLow</description>
+    </item>
+    
+    <item>
+      <title>標準入力、出力</title>
+      <link>https://WAT36.github.io/pages/docs/stdio/</link>
+      <pubDate>Tue, 03 Sep 2019 00:06:44 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/stdio/</guid>
+      <description>標準入力・出力 説明 Java Python 標準入力をスペースで区切り数値で取得 Scanner.nextInt() int(input().split()) 標準入力を１行文字列として取得 Scanner.nextLine() input() 標準入力を引数(argv)から取得 メソッドの</description>
+    </item>
     
     <item>
       <title></title>
