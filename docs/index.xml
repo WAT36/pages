@@ -32,38 +32,47 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>Dict</title>
+      <link>https://WAT36.github.io/pages/docs/java-python/dict/</link>
+      <pubDate>Tue, 03 Sep 2019 23:05:48 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/java-python/dict/</guid>
+      <description>辞書、Map 説明 Java Python 辞書（Map) Map a = new HashMap(); (String,Stringの例) dict = {} 辞書(Map)に要素を置く (Map).put(キー,値)</description>
+    </item>
+    
+    <item>
       <title>Lists</title>
-      <link>https://WAT36.github.io/pages/docs/lists/</link>
+      <link>https://WAT36.github.io/pages/docs/java-python/lists/</link>
       <pubDate>Tue, 03 Sep 2019 22:53:31 +0900</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/lists/</guid>
+      <guid>https://WAT36.github.io/pages/docs/java-python/lists/</guid>
       <description>タプル・リスト 説明 Java Python タプル リスト List&amp;lt;型(ラッパークラス)&amp;gt; 変数名 = new ArrayList&amp;lt;&amp;gt;(); ※ArrayListにすべきかは諸説あるけど・・ 変</description>
     </item>
     
     <item>
       <title>Integer</title>
-      <link>https://WAT36.github.io/pages/docs/integer/</link>
+      <link>https://WAT36.github.io/pages/docs/java-python/integer/</link>
       <pubDate>Tue, 03 Sep 2019 08:02:46 +0900</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/integer/</guid>
+      <guid>https://WAT36.github.io/pages/docs/java-python/integer/</guid>
       <description>数値 説明 Java Python 数値を文字列に変換する String.valueOf(数値) str(数値) 数字の頭をゼロ詰して表示する String.format(</description>
     </item>
     
     <item>
       <title>文字列</title>
-      <link>https://WAT36.github.io/pages/docs/string/</link>
+      <link>https://WAT36.github.io/pages/docs/java-python/string/</link>
       <pubDate>Tue, 03 Sep 2019 07:54:45 +0900</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/string/</guid>
+      <guid>https://WAT36.github.io/pages/docs/java-python/string/</guid>
       <description>文字列 説明 Java Python 文字列を大文字にする (文字列).toUpperCase() (文字列).upper() 文字列を小文字にする (文字列).toLow</description>
     </item>
     
     <item>
       <title>標準入力、出力</title>
-      <link>https://WAT36.github.io/pages/docs/stdio/</link>
+      <link>https://WAT36.github.io/pages/docs/java-python/stdio/</link>
       <pubDate>Tue, 03 Sep 2019 00:06:44 +0900</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/stdio/</guid>
+      <guid>https://WAT36.github.io/pages/docs/java-python/stdio/</guid>
       <description>標準入力・出力 説明 Java Python 標準入力をスペースで区切り数値で取得 Scanner.nextInt() int(input().split()) 標準入力を１行文字列として取得 Scanner.nextLine() input() 標準入力を引数(argv)から取得 メソッドの</description>
     </item>
     
