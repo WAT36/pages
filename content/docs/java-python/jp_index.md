@@ -5,13 +5,15 @@
 自身もまだ勉強中のため、随時更新予定。
 
 
-## 標準入力・出力
+## [標準入力・出力]({{< relref "/docs/java-python/stdio.md" >}})
 
-## 文字列、数値
+## [文字列]({{< relref "/docs/java-python/string.md" >}})
 
-## 配列、タプル、リスト
+## [数値]({{< relref "/docs/java-python/integer.md" >}})
 
-## 辞書、Map
+## [タプル、リスト]({{< relref "/docs/java-python/lists.md" >}})
+
+## [辞書、Map]({{< relref "/docs/java-python/dict.md" >}})
 
 ## 関数、メソッド逆引き
 
