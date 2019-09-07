@@ -9,7 +9,6 @@ pagenate = 3
 publishDir = 'docs'
 hasCJKLanguage = true
 languageCode = 'ja-JP'
-disableKinds = ['taxonomy', 'taxonomyTerm']
 # themesDir = '../..'
 
 # Book configuration
@@ -54,3 +53,7 @@ pygmentsCodeFences = true
   # (Optional, default true) Enables search function with lunr.js,
   # Index is built on fly, therefore it might slowdown your website.
   BookSearch = true
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"

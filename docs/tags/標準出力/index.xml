@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>標準出力 on WATノート</title>
+    <link>https://WAT36.github.io/pages/tags/%E6%A8%99%E6%BA%96%E5%87%BA%E5%8A%9B/</link>
+    <description>Recent content in 標準出力 on WATノート</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Tue, 03 Sep 2019 00:06:44 +0900</lastBuildDate>
+    
+	<atom:link href="https://WAT36.github.io/pages/tags/%E6%A8%99%E6%BA%96%E5%87%BA%E5%8A%9B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>標準入力、出力</title>
+      <link>https://WAT36.github.io/pages/docs/java-python/stdio/</link>
+      <pubDate>Tue, 03 Sep 2019 00:06:44 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/java-python/stdio/</guid>
+      <description>標準入力・出力 標準入力・出力について、主な動作をJava/Python別にまとめる。 標準入力 数値として取得 Java Python Scanner.nextInt() int(input().split()) 文字列として取得 １行丸ごと</description>
+    </item>
+    
+  </channel>
+</rss>

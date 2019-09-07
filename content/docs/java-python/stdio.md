@@ -1,6 +1,8 @@
 ---
 title: "標準入力、出力"
 date: 2019-09-03T00:06:44+09:00
+categories: [ "java", "python" ]
+tags: [ "java", "python", "標準入力", "標準出力"]
 ---
 
 # 標準入力・出力
