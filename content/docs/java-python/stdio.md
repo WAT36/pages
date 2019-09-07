@@ -27,7 +27,9 @@ date: 2019-09-03T00:06:44+09:00
 
 ## 標準出力
 
+コンソールに出力した後改行する方法と、改行しない方法がある。
+
 |Java|Python|
 |:---|:---|
-|コンソールにxxを出力して改行する|System.out.println(xx)|print(xx)||
-|コンソールにxxを出力して改行しない|System.out.print(xx)|print(xx,end="")||
+|System.out.println(xx)|print(xx)||
+|System.out.print(xx)|print(xx,end="")||
