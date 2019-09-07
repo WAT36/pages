@@ -1,0 +1,20 @@
+{{ partial "docs/inject/head" . }}
+<h2>{{ .Title }}</h2>
+{{ if eq .Title "Tags"}}
+    {{ if lt 0 (len .Site.Taxonomies.tags) }}
+    <ul>
+        {{ range .Site.Taxonomies.tags.ByCount }}
+        <li><a href="{{ $.Site.BaseURL | relURL }}tags/{{ .Name | urlize }}">{{ .Name }}<span>({{ .Count }})</span></a></li>
+        {{ end }}
+    </ul>
+    {{ end }}
+{{ else if eq .Title "Categories"}}
+    {{ if lt 0 (len .Site.Taxonomies.categories) }}
+    <ul>
+        {{ range .Site.Taxonomies.categories.ByCount }}
+        <li><a href="{{ $.Site.BaseURL | relURL }}categories/{{ .Name | urlize }}">{{ .Name }}<span>({{ .Count }})</span></a></li>
+        {{ end }}
+    </ul>
+    {{ end }}
+{{ end }}
+{{ partial "docs/inject/footer" . }}
