@@ -31,15 +31,3 @@ date: 2019-09-03T00:06:44+09:00
 |:---|:---|
 |コンソールにxxを出力して改行する|System.out.println(xx)|print(xx)||
 |コンソールにxxを出力して改行しない|System.out.print(xx)|print(xx,end="")||
-
-
-<hr>
-
-以下工事中
-
-|説明|Java|Python||
-|:---|:---|:---|:---|
-|メソッド(関数)の宣言|(アクセス修飾子) [static] (戻り値の型) 関数名(引数){}<br>例：```public static void main(String[] args){}```|def 関数名(引数):<br>||
-|||||
-|プログラムを終了する|return;<br>または<br>System.exit(終了ステータス);|import sys<br>sys.exit()||
-||||||

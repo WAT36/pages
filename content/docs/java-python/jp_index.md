@@ -18,3 +18,5 @@
 ## 関数、メソッド逆引き
 
 ## 他、Pythonの小技など
+
+## [その他]({{< relref "/docs/java-python/other.md" >}})

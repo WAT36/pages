@@ -13,4 +13,5 @@ headless: true
   - [数値]({{< relref "/docs/java-python/integer.md" >}})
   - [タプル・リスト]({{< relref "/docs/java-python/lists.md" >}})
   - [辞書(Map)]({{< relref "/docs/java-python/dict.md" >}})
+  - [その他]({{< relref "/docs/java-python/other.md" >}})  
 - [**Blog**]({{< relref "/posts" >}})
