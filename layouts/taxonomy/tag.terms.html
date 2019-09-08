@@ -20,15 +20,13 @@
   <div>
     <h1 id="title">{{ .Title }}</h1>
     <div class="tags_list">
-      <ul>
     {{ range $key, $value := .Data.Terms }}
-        <li>
+        <h3>
         <div class="tags_item">
             <a href="{{ $key | urlize }}">{{ $key }} <span class="tags_number">{{ len $value }}</span></a>
         </div>
-        </li>
+      </h3>
      {{ end }}
-      </ul>
      </div>
    </div>
  </section>
@@ -36,7 +34,7 @@
       {{ partial "docs/git-footer" . }}
       {{ partial "docs/inject/footer" . }}
     </div>
-    {{ partial "docs/toc" . }}
+    {{ template "toc" . }}
   </main>
 
   {{ partial "docs/inject/body" . }}
