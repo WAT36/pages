@@ -1,22 +1,46 @@
 <!DOCTYPE html>
-{{ with .Site.LanguageCode }}<html lang="{{ . }}">{{ else }}<html>{{ end }}
+<html lang="{{ .Site.Language.Lang }}">
+
 <head>
-<meta charset="utf-8">
-<title>List of {{ .Title }} -- {{ .Site.Title }}</title>
+  {{ partial "docs/html-head" . }}
+  {{ partial "docs/inject/head" . }}
 </head>
+
 <body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      {{ partial "docs/menu" . }}
+    </aside>
+    <div class="book-page">
+      {{ partial "docs/mobile-header" . }}
+<!---->
 <section id="main">
   <div>
     <h1 id="title">{{ .Title }}</h1>
     <div class="tags_list">
+      <ul>
     {{ range $key, $value := .Data.Terms }}
+        <li>
         <div class="tags_item">
             <a href="{{ $key | urlize }}">{{ $key }} <span class="tags_number">{{ len $value }}</span></a>
         </div>
+        </li>
      {{ end }}
+      </ul>
      </div>
    </div>
-</section>
+ </section>
+<!---->
+      {{ partial "docs/git-footer" . }}
+      {{ partial "docs/inject/footer" . }}
+    </div>
+    {{ partial "docs/toc" . }}
+  </main>
 
+  {{ partial "docs/inject/body" . }}
+  {{ template "_internal/google_analytics_async.html" . }}
 </body>
-<html>
+
+</html>
