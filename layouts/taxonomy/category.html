@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{{ with .Site.LanguageCode }}<html lang="{{ . }}">{{ else }}<html>{{ end }}
+<head>
+<meta charset="utf-8">
+<title>List of {{ .Title }} -- {{ .Site.Title }}</title>
+</head>
+<body>
+<section id="main">
+    <div class="categories_list">
+    <div class="categories_title"><span>{{ .Title }}</span></div>
+    </div>
+    <ul id="list">
+        {{ range .Data.Pages }}
+        <li>
+            {{ .Date.Format "2006-01-02" }}
+             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+         </li>
+         {{ end }}
+     </ul>
+     <hr>
+     <a href="{{ .Site.BaseURL }}/categories">Categories</a>
+ </section>
+
+</body>
+<html>
