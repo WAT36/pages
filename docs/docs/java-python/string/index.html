@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7317d2e8552a0ac3ea8fd4ba500c3dfb1cc9c74e7afd73eee6d729751fad30.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.0bc40a51b7f937eef55a6999cd8caa654c588e29aed1d4fd4ded738ef6061d74.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.27fcc16e924d54f54d9ad4a90132fac8a648a09140c71b217d24d9785ea63acd.js"></script>
 
 
 
@@ -121,6 +121,10 @@ https://github.com/alex-shpak/hugo-book
 
 <h1 id="文字列">文字列</h1>
 
+<p>文字列について、諸操作のjava-python対応表をまとめる。</p>
+
+<h2 id="文字列の変換">文字列の変換</h2>
+
 <table>
 <thead>
 <tr>
@@ -147,6 +151,28 @@ https://github.com/alex-shpak/hugo-book
 </tr>
 
 <tr>
+<td align="left">文字列中のある文字を別の文字に一括置換する</td>
+<td align="left"></td>
+<td align="left">文字列.<strong>replace</strong>(置換対象の文字,置換後の文字)</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="文字列の追加-削除-分割">文字列の追加・削除・分割</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">説明</th>
+<th align="left">Java</th>
+<th align="left">Python</th>
+<th align="left"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
 <td align="left">文字列の後ろに１文字追加する</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -154,19 +180,34 @@ https://github.com/alex-shpak/hugo-book
 </tr>
 
 <tr>
+<td align="left">文字列をある文字で区切る</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">文字列.<strong>split</strong>(区切り文字(無い場合スペース))</td>
+<td align="left">↓の逆</td>
 </tr>
 
 <tr>
-<td align="left">数値を文字列に変更する</td>
-<td align="left">String.valueOf(数値)</td>
-<td align="left">str(数値)</td>
+<td align="left">文字列をゼロ埋めして表示する</td>
+<td align="left"></td>
+<td align="left">文字列.<strong>zfill</strong>(ゼロ埋め後の桁数)</td>
 <td align="left"></td>
 </tr>
+</tbody>
+</table>
 
+<h2 id="文字列を数値に変換する">文字列を数値に変換する</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">説明</th>
+<th align="left">Java</th>
+<th align="left">Python</th>
+<th align="left"></th>
+</tr>
+</thead>
+
+<tbody>
 <tr>
 <td align="left">文字列を数値に変更する</td>
 <td align="left">Integer.parseInt(文字列)</td>
@@ -180,21 +221,22 @@ https://github.com/alex-shpak/hugo-book
 <td align="left">ord(１文字)</td>
 <td align="left"></td>
 </tr>
+</tbody>
+</table>
 
+<h2 id="文字列を検索する">文字列を検索する</h2>
+
+<table>
+<thead>
 <tr>
-<td align="left">文字列中のある文字を別の文字に一括置換する</td>
-<td align="left"></td>
-<td align="left">文字列.<strong>replace</strong>(置換対象の文字,置換後の文字)</td>
-<td align="left"></td>
+<th align="left">説明</th>
+<th align="left">Java</th>
+<th align="left">Python</th>
+<th align="left"></th>
 </tr>
+</thead>
 
-<tr>
-<td align="left">文字列をある文字で区切る</td>
-<td align="left"></td>
-<td align="left">文字列.<strong>split</strong>(区切り文字(無い場合スペース))</td>
-<td align="left">↓の逆</td>
-</tr>
-
+<tbody>
 <tr>
 <td align="left">文字列中からある文字列が入ってるか検索する</td>
 <td align="left"></td>
@@ -206,13 +248,6 @@ https://github.com/alex-shpak/hugo-book
 <td align="left">文字列がある文字で始まっている（終わっている）かを確認する</td>
 <td align="left"></td>
 <td align="left">文字列.<strong>startswith</strong>(検索したい文字列[,開始インデックス[,終了インデックス]])<br>文字列が検索したい文字列で始まっている時にTrue(真)を返す<br>終わっているときは<strong>endswith</strong>を使う</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">文字列をゼロ埋めして表示する</td>
-<td align="left"></td>
-<td align="left">文字列.<strong>zfill</strong>(ゼロ埋め後の桁数)</td>
 <td align="left"></td>
 </tr>
 
@@ -254,7 +289,13 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#文字列">文字列</a></li>
+<li><a href="#文字列">文字列</a>
+<ul>
+<li><a href="#文字列の変換">文字列の変換</a></li>
+<li><a href="#文字列の追加-削除-分割">文字列の追加・削除・分割</a></li>
+<li><a href="#文字列を数値に変換する">文字列を数値に変換する</a></li>
+<li><a href="#文字列を検索する">文字列を検索する</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>

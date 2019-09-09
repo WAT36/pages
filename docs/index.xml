@@ -82,7 +82,7 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Tue, 03 Sep 2019 07:54:45 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/java-python/string/</guid>
-      <description>文字列 説明 Java Python 文字列を大文字にする (文字列).toUpperCase() (文字列).upper() 文字列を小文字にする (文字列).toLow</description>
+      <description>文字列 文字列について、諸操作のjava-python対応表をまとめる。 文字列の変換 説明 Java Python 文字列を大文字にする (文字列).toUpperCa</description>
     </item>
     
     <item>
