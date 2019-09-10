@@ -17,7 +17,7 @@
       <pubDate>Tue, 03 Sep 2019 00:06:44 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/java-python/stdio/</guid>
-      <description>標準入力・出力 標準入力・出力について、主な動作をJava/Python別にまとめる。 標準入力 数値として取得 Java Python Scanner.nextInt() int(input().split()) 文字列として取得 １行丸ごと</description>
+      <description>標準入力・出力について、主な動作をJava/Python別にまとめる。 標準入力 数値として取得 Java Python Scanner.nextInt() int(input().split()) 文字列として取得 １行丸ごと文字列として取</description>
     </item>
     
   </channel>

@@ -5,7 +5,6 @@ categories: [ "java", "python" ]
 tags: [ "java", "python", "標準入力", "標準出力"]
 ---
 
-# 標準入力・出力
 
 標準入力・出力について、主な動作をJava/Python別にまとめる。
 

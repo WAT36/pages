@@ -19,15 +19,19 @@
 <section id="main">
   <div>
     <h1 id="title">{{ .Title }}</h1>
+    <ul>
     <div class="tags_list">
     {{ range $key, $value := .Data.Terms }}
+      <li>
         <h3>
         <div class="tags_item">
-            <a href="{{ $key | urlize }}">{{ $key }} <span class="tags_number">{{ len $value }}</span></a>
+            <a href="{{ $key | urlize }}">{{ $key }} (<span class="tags_number">{{ len $value }}</span>)</a>
         </div>
       </h3>
+    </li>
      {{ end }}
      </div>
+    </ul>
    </div>
  </section>
 <!---->
