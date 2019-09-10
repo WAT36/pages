@@ -12,20 +12,20 @@
     
     <item>
       <title>Creating a New Theme</title>
-      <link>https://WAT36.github.io/pages/posts/sample-blog/creating-a-new-theme/</link>
+      <link>https://WAT36.github.io/pages/docs/sample/creating-a-new-theme/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/posts/sample-blog/creating-a-new-theme/</guid>
+      <guid>https://WAT36.github.io/pages/docs/sample/creating-a-new-theme/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
     </item>
     
     <item>
       <title>Migrate to Hugo from Jekyll</title>
-      <link>https://WAT36.github.io/pages/posts/sample-blog/migrate-from-jekyll/</link>
+      <link>https://WAT36.github.io/pages/docs/sample/migrate-from-jekyll/</link>
       <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/posts/sample-blog/migrate-from-jekyll/</guid>
+      <guid>https://WAT36.github.io/pages/docs/sample/migrate-from-jekyll/</guid>
       <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
@@ -96,20 +96,20 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     
     <item>
       <title>(Hu)go Template Primer</title>
-      <link>https://WAT36.github.io/pages/posts/sample-blog/goisforlovers/</link>
+      <link>https://WAT36.github.io/pages/docs/sample/goisforlovers/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/posts/sample-blog/goisforlovers/</guid>
+      <guid>https://WAT36.github.io/pages/docs/sample/goisforlovers/</guid>
       <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
 This document is a brief primer on using Go templates.</description>
     </item>
     
     <item>
       <title>Getting Started with Hugo</title>
-      <link>https://WAT36.github.io/pages/posts/sample-blog/hugoisforlovers/</link>
+      <link>https://WAT36.github.io/pages/docs/sample/hugoisforlovers/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/posts/sample-blog/hugoisforlovers/</guid>
+      <guid>https://WAT36.github.io/pages/docs/sample/hugoisforlovers/</guid>
       <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
 Save it somewhere specific as we will be using it in the next step.
 More complete instructions are available at Install Hugo
@@ -120,41 +120,70 @@ Follow the following steps:
     
     <item>
       <title></title>
-      <link>https://WAT36.github.io/pages/docs/examples/</link>
+      <link>https://WAT36.github.io/pages/docs/java-python/jp_index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/examples/</guid>
+      <guid>https://WAT36.github.io/pages/docs/java-python/jp_index/</guid>
+      <description> Java-Python docs 今まで業務でJavaをバリバリ書いたり学んだりしていた私が、急にPythonをやる必要が出てきた（やりたくなったというのも半分あるが）ため、 学びやすい様にPythonの文法・関数とJavaの文法に対応づけさせる様にしたメモである。 自身もまだ勉強中のため、随時更新予定。
+標準入力・出力 文字列 数値 タプル、リスト 辞書、Map 関数、メソッド逆引き 他、Pythonの小技など その他 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://WAT36.github.io/pages/docs/sample/examples/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/examples/</guid>
       <description>Ubi loqui Mentem genus facietque salire tempus bracchia Lorem markdownum partu paterno Achillem. Habent amne generosi aderant ad pellem nec erat sustinet merces columque haec et, dixit minus nutrit accipiam subibis subdidit. Temeraria servatum agros qui sed fulva facta. Primum ultima, dedit, suo quisque linguae medentes fixo: tum petis.
 Rapit vocant si hunc siste adspice Ora precari Patraeque Neptunia, dixit Danae Cithaeron armaque maxima in nati Coniugis templis fluidove. Effugit usus nec ingreditur agmen ac manus conlato.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://WAT36.github.io/pages/docs/hidden/</link>
+      <link>https://WAT36.github.io/pages/docs/sample/hidden/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/hidden/</guid>
+      <guid>https://WAT36.github.io/pages/docs/sample/hidden/</guid>
       <description>This page is hidden in menu Quondam non pater est dignior ille Eurotas Latent te facies Lorem markdownum arma ignoscas vocavit quoque ille texit mandata mentis ultimus, frementes, qui in vel. Hippotades Peleus pennas conscia cuiquam Caeneus quas.
  Pater demittere evincitque reddunt Maxime adhuc pressit huc Danaas quid freta Soror ego Luctus linguam saxa ultroque prior Tatiumque inquit Saepe liquitur subita superata dederat Anius sudor  Cum honorum Latona O fallor in sustinui iussorum equidem.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://WAT36.github.io/pages/docs/java-python/jp_index/</link>
+      <link>https://WAT36.github.io/pages/docs/sample/sample_index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/java-python/jp_index/</guid>
-      <description> Java-Python docs 今まで業務でJavaをバリバリ書いたり学んだりしていた私が、急にPythonをやる必要が出てきた（やりたくなったというのも半分あるが）ため、 学びやすい様にPythonの文法・関数とJavaの文法に対応づけさせる様にしたメモである。 自身もまだ勉強中のため、随時更新予定。
-・ 標準入力・出力 ・ 文字列 ・ 数値 ・ タプル、リスト ・ 辞書、Map ・ 関数、メソッド逆引き ・ 他、Pythonの小技など ・ その他 </description>
+      <guid>https://WAT36.github.io/pages/docs/sample/sample_index/</guid>
+      <description> サンプルページ creating-a-new-theme example goisforlovers hidden hugoisforlovers migrate-from-jekyll shortcodes with-toc without-toc </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://WAT36.github.io/pages/docs/shortcodes/</link>
+      <link>https://WAT36.github.io/pages/docs/sample/shortcodes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/shortcodes/</guid>
+      <guid>https://WAT36.github.io/pages/docs/sample/shortcodes/</guid>
       <description>Shortcodes Expand shortcode Default {{&amp;lt; expand &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Expand ↕  Markdown content Lorem markdownum insigne&amp;hellip;    With Custom Label {{&amp;lt; expand &amp;#34;Custom Label&amp;#34; &amp;#34;...&amp;#34; &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Custom Label ...  Markdown content Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa protulit, sed sed aere valvis inhaesuro Pallas animam: qui quid, ignes.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://WAT36.github.io/pages/docs/sample/with-toc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/with-toc/</guid>
+      <description>Caput vino delphine in tamen vias Cognita laeva illo fracta Lorem markdownum pavent auras, surgit nunc cingentibus libet Laomedonque que est. Pastor An arbor filia foedat, ne fugit aliter, per. Helicona illas et callida neptem est Oresitrophos caput, dentibus est venit. Tenet reddite famuli praesentem fortibus, quaeque vis foret si frondes gelidos gravidae circumtulit inpulit armenta nativum.
+ Te at cruciabere vides rubentis manebo Maturuit in praetemptat ruborem ignara postquam habitasse Subitarum supplevit quoque fontesque venabula spretis modo Montis tot est mali quasque gravis Quinquennem domus arsit ipse Pellem turis pugnabant locavit  Natus quaerere Pectora et sine mulcere, coniuge dum tincta incurvae.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://WAT36.github.io/pages/docs/sample/without-toc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/without-toc/</guid>
+      <description>At me ipso nepotibus nunc celebratior genus Tanto oblite Lorem markdownum pectora novis patenti igne sua opus aurae feras materiaque illic demersit imago et aristas questaque posset. Vomit quoque suo inhaesuro clara. Esse cumque, per referri triste. Ut exponit solisque communis in tendens vincetis agisque iamque huic bene ante vetat omina Thebae rates. Aeacus servat admonitu concidit, ad resimas vultus et rugas vultu dignamque Siphnon.
+Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt dixit: ritu pharetramque.</description>
     </item>
     
     <item>
@@ -174,26 +203,6 @@ var php_wireless = 4; siteWinsock.switch_inbox += so_control_logic; if (target_w
       
       <guid>https://WAT36.github.io/pages/docs/sub-section/natusque/</guid>
       <description>Natusque putat tu vero Scylaceaque neve coepisse Lorem markdownum hostem et addit arbusta iacuit laetissimus medio, quae quoque faciente. Belli et fuerant fuerat, curas Abas equos sacerdos iactasque videndo tanto, sub. Et simulasse caedis, est nec acre addiderat, manet Phrygiae quisquam, ater, aura sua deique cornua. Bacchi dixi cum tollit, ad sinistra mirum, non se dis fraudare in decimo vocet. Ducunt Acrisio sine ratem: enim illas venti, ferit nam ora.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://WAT36.github.io/pages/docs/with-toc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/with-toc/</guid>
-      <description>Caput vino delphine in tamen vias Cognita laeva illo fracta Lorem markdownum pavent auras, surgit nunc cingentibus libet Laomedonque que est. Pastor An arbor filia foedat, ne fugit aliter, per. Helicona illas et callida neptem est Oresitrophos caput, dentibus est venit. Tenet reddite famuli praesentem fortibus, quaeque vis foret si frondes gelidos gravidae circumtulit inpulit armenta nativum.
- Te at cruciabere vides rubentis manebo Maturuit in praetemptat ruborem ignara postquam habitasse Subitarum supplevit quoque fontesque venabula spretis modo Montis tot est mali quasque gravis Quinquennem domus arsit ipse Pellem turis pugnabant locavit  Natus quaerere Pectora et sine mulcere, coniuge dum tincta incurvae.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://WAT36.github.io/pages/docs/without-toc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/without-toc/</guid>
-      <description>At me ipso nepotibus nunc celebratior genus Tanto oblite Lorem markdownum pectora novis patenti igne sua opus aurae feras materiaque illic demersit imago et aristas questaque posset. Vomit quoque suo inhaesuro clara. Esse cumque, per referri triste. Ut exponit solisque communis in tendens vincetis agisque iamque huic bene ante vetat omina Thebae rates. Aeacus servat admonitu concidit, ad resimas vultus et rugas vultu dignamque Siphnon.
-Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt dixit: ritu pharetramque.</description>
     </item>
     
   </channel>

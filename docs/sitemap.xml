@@ -3,12 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://WAT36.github.io/pages/posts/sample-blog/creating-a-new-theme/</loc>
+    <loc>https://WAT36.github.io/pages/docs/sample/creating-a-new-theme/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/posts/sample-blog/migrate-from-jekyll/</loc>
+    <loc>https://WAT36.github.io/pages/docs/sample/migrate-from-jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -63,12 +63,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/python/</loc>
+    <loc>https://WAT36.github.io/pages/categories/python/</loc>
     <lastmod>2019-09-10T23:04:59+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/python/</loc>
+    <loc>https://WAT36.github.io/pages/tags/python/</loc>
     <lastmod>2019-09-10T23:04:59+09:00</lastmod>
   </url>
   
@@ -103,23 +103,13 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/posts/sample-blog/goisforlovers/</loc>
+    <loc>https://WAT36.github.io/pages/docs/sample/goisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/posts/sample-blog/hugoisforlovers/</loc>
+    <loc>https://WAT36.github.io/pages/docs/sample/hugoisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/examples/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/hidden/</loc>
-    <lastmod>2019-08-17T20:21:52+09:00</lastmod>
   </url>
   
   <url>
@@ -128,8 +118,31 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/shortcodes/</loc>
+    <loc>https://WAT36.github.io/pages/docs/sample/examples/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/sample/hidden/</loc>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/sample/sample_index/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/sample/shortcodes/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/sample/with-toc/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/sample/without-toc/</loc>
   </url>
   
   <url>
@@ -145,16 +158,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/sub-section/natusque/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/with-toc/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/without-toc/</loc>
-    <lastmod>2019-08-17T20:21:52+09:00</lastmod>
   </url>
   
   <url>
