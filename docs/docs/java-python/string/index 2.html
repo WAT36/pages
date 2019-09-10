@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>辞書、Map | WATノート</title>
+<title>文字列 | WATノート</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7317d2e8552a0ac3ea8fd4ba500c3dfb1cc9c74e7afd73eee6d729751fad30.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.482b3a17e23ade4cade32fe0fe3272b5031e3b6f3bd39224cfd5199e07f1727a.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.ef9b85c525f0e9be652754e578408a63659d26b316013aa6312945ae96ed518f.js"></script>
 
 
 
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fjava-python\2f dict\2f "] {
+  nav ul a[href$="\2f docs\2fjava-python\2fstring\2f "] {
       color: #004ed0;
   }
   </style>
@@ -113,13 +113,17 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>辞書、Map</strong>
+  <strong>文字列</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="辞書-map">辞書、Map</h1>
+<h1 id="文字列">文字列</h1>
+
+<p>文字列について、諸操作のjava-python対応表をまとめる。</p>
+
+<h2 id="文字列の変換">文字列の変換</h2>
 
 <table>
 <thead>
@@ -133,93 +137,117 @@ https://github.com/alex-shpak/hugo-book
 
 <tbody>
 <tr>
+<td align="left">文字列を大文字にする</td>
+<td align="left">(文字列).toUpperCase()</td>
+<td align="left">(文字列).upper()</td>
 <td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">文字列を小文字にする</td>
+<td align="left">(文字列).toLowerCase()</td>
+<td align="left">(文字列).lower()</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">文字列中のある文字を別の文字に一括置換する</td>
+<td align="left"></td>
+<td align="left">文字列.<strong>replace</strong>(置換対象の文字,置換後の文字)</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="文字列の追加-削除-分割">文字列の追加・削除・分割</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">説明</th>
+<th align="left">Java</th>
+<th align="left">Python</th>
+<th align="left"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">文字列の後ろに１文字追加する</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 
 <tr>
-<td align="left">辞書（Map)</td>
-<td align="left">Map<String,String> a = new HashMap<String,String>();<br>(String,Stringの例)</td>
-<td align="left">dict = {}<br></td>
+<td align="left">文字列をある文字で区切る</td>
+<td align="left"></td>
+<td align="left">文字列.<strong>split</strong>(区切り文字(無い場合スペース))</td>
+<td align="left">↓の逆</td>
+</tr>
+
+<tr>
+<td align="left">文字列をゼロ埋めして表示する</td>
+<td align="left"></td>
+<td align="left">文字列.<strong>zfill</strong>(ゼロ埋め後の桁数)</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="文字列を数値に変換する">文字列を数値に変換する</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">説明</th>
+<th align="left">Java</th>
+<th align="left">Python</th>
+<th align="left"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">文字列を数値に変更する</td>
+<td align="left">Integer.parseInt(文字列)</td>
+<td align="left">int(文字列)</td>
 <td align="left"></td>
 </tr>
 
 <tr>
-<td align="left">辞書(Map)に要素を置く</td>
-<td align="left">(Map).put(キー,値)</td>
-<td align="left">辞書[キー] = 要素</td>
+<td align="left">１文字からアスキーコードを取得</td>
+<td align="left">char c;<br>int ascii = (int)c;</td>
+<td align="left">ord(１文字)</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="文字列を検索する">文字列を検索する</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">説明</th>
+<th align="left">Java</th>
+<th align="left">Python</th>
+<th align="left"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">文字列中からある文字列が入ってるか検索する</td>
+<td align="left"></td>
+<td align="left">文字列.<strong>find</strong>(検索したい文字列[,開始インデックス[,終了インデックス]])<br>最初に見つかった位置のインデックスを返し、無い場合は-1を返す<br><strong>rfind</strong>を使うと右から検索。<br><strong>index</strong>もfindと同じ動作をするが、無い場合はValueErrorという例外を発生する</td>
 <td align="left"></td>
 </tr>
 
 <tr>
-<td align="left">辞書(Map)からキーを指定して要素取得</td>
-<td align="left">(Map).get(キー)</td>
-<td align="left"><strong>辞書[キー]</strong><br>または<br><strong>辞書.get(key[,default])</strong><br>（defaultはキーがない場合のデフォルト値）</td>
+<td align="left">文字列がある文字で始まっている（終わっている）かを確認する</td>
 <td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">辞書(Map)から要素削除</td>
-<td align="left"></td>
-<td align="left">辞書.pop(キー)<br>※全削除するなら↓<br>辞書.clear()</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">辞書(Map)から最大のキーを取得</td>
-<td align="left"></td>
-<td align="left">max(辞書)</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">辞書(Map)から最小のキーを取得</td>
-<td align="left"></td>
-<td align="left">min(辞書)</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">辞書(Map)から最大の値を取得</td>
-<td align="left"></td>
-<td align="left">max(辞書.values())</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">辞書(Map)から最小の値を取得</td>
-<td align="left"></td>
-<td align="left">min(辞書.values())</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">辞書(Map)から最大の値をとるキーを取得</td>
-<td align="left"></td>
-<td align="left">max(辞書,key=辞書.get)</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">辞書(Map)から最小の値をとるキーを取得</td>
-<td align="left"></td>
-<td align="left">min(辞書,key=辞書.get)</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">辞書(Map)からキーのリストを取得</td>
-<td align="left"></td>
-<td align="left"><strong>辞書.keys()</strong><br>（dict_keys型で取得。全てのキーを順に取るには<br><strong>for v in 辞書.keys()</strong>）</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">辞書(Map)から値のリストを取得</td>
-<td align="left"></td>
-<td align="left"><strong>辞書.values()</strong><br>（dict_values型で取得。全ての値を順に取るには<br><strong>for i in 辞書.values()</strong>）</td>
+<td align="left">文字列.<strong>startswith</strong>(検索したい文字列[,開始インデックス[,終了インデックス]])<br>文字列が検索したい文字列で始まっている時にTrue(真)を返す<br>終わっているときは<strong>endswith</strong>を使う</td>
 <td align="left"></td>
 </tr>
 
@@ -238,14 +266,14 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/10ce72c2b5e2c508c1ef2002a06dbac7c0da507d" title='Last modified Sep 4, 2019 by T.Wakasugi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 4, 2019
+    <a href="https://github.com/alex-shpak/hugo-book/commit/5e4d74aad729cde70b498c8500377d2ba3fe08e0" title='Last modified Sep 9, 2019 by T.Wakasugi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 9, 2019
     </a>
   </div>
   
   
   <div>
-    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/docs/java-python/dict.md" target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/docs/java-python/string.md" target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/edit.svg" alt="Edit" /> Edit this page
     </a>
   </div>
@@ -261,7 +289,13 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#辞書-map">辞書、Map</a></li>
+<li><a href="#文字列">文字列</a>
+<ul>
+<li><a href="#文字列の変換">文字列の変換</a></li>
+<li><a href="#文字列の追加-削除-分割">文字列の追加・削除・分割</a></li>
+<li><a href="#文字列を数値に変換する">文字列を数値に変換する</a></li>
+<li><a href="#文字列を検索する">文字列を検索する</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>

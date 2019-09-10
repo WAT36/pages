@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7317d2e8552a0ac3ea8fd4ba500c3dfb1cc9c74e7afd73eee6d729751fad30.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.876b7f2fe0bb19e099be2df18b801a0bd58696d7e204f4b5c942dcb9a4f4115d.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.482b3a17e23ade4cade32fe0fe3272b5031e3b6f3bd39224cfd5199e07f1727a.js"></script>
 
 
 
@@ -28,7 +28,6 @@ https://github.com/alex-shpak/hugo-book
 <body>
   <input type="checkbox" style="display: none" id="menu-control" />
   <main class="flex container">
-
     <aside class="book-menu fixed">
       <nav>
 <h2 class="book-brand">
@@ -52,7 +51,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fsample-blog\2fmigrate-from-jekyll\2f "] {
+  nav ul a[href$="\2fposts\2fsample-blog\2fmigrate-from-jekyll\2f "] {
       color: #004ed0;
   }
   </style>
@@ -108,7 +107,7 @@ https://github.com/alex-shpak/hugo-book
 
     </aside>
 
-    <div class="book-page">
+    <div class="book-posts">
       <header class="flex align-center justify-between book-header">
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
@@ -117,6 +116,13 @@ https://github.com/alex-shpak/hugo-book
 </header>
 
       
+
+<header class="markdown">
+  <h1>Migrate to Hugo from Jekyll</h1>
+  <h5>
+    <strong>Mar 10, 2014</strong>
+  </h5>
+</header>
 <article class="markdown">
 
 <h2 id="move-static-content-to-static">Move static content to <code>static</code></h2>
@@ -288,57 +294,7 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/e7f38940ebdb1208de44c18af5e419c256ec82f1" title='Last modified Sep 4, 2019 by T.Wakasugi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 4, 2019
-    </a>
-  </div>
-  
-  
-  <div>
-    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/docs/sample-blog/migrate-from-jekyll.md" target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/edit.svg" alt="Edit" /> Edit this page
-    </a>
-  </div>
-  
-</div>
-
-
-      
     </div>
-    
-  
-
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#move-static-content-to-static">Move static content to <code>static</code></a></li>
-<li><a href="#create-your-hugo-configuration-file">Create your Hugo configuration file</a></li>
-<li><a href="#set-your-configuration-publish-folder-to-site">Set your configuration publish folder to <code>_site</code></a></li>
-<li><a href="#convert-jekyll-templates-to-hugo-templates">Convert Jekyll templates to Hugo templates</a></li>
-<li><a href="#convert-jekyll-plugins-to-hugo-shortcodes">Convert Jekyll plugins to Hugo shortcodes</a>
-<ul>
-<li><a href="#implementation">Implementation</a></li>
-<li><a href="#usage">Usage</a></li>
-</ul></li>
-<li><a href="#finishing-touches">Finishing touches</a>
-<ul>
-<li><a href="#fix-content">Fix content</a></li>
-<li><a href="#clean-up">Clean up</a></li>
-</ul></li>
-<li><a href="#a-practical-example-in-a-diff">A practical example in a diff</a></li>
-</ul></li>
-</ul>
-</nav>
-  </aside>
-
-
-
   </main>
 
   

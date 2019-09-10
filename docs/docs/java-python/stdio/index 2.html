@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hidden | WATノート</title>
+<title>標準入力、出力 | WATノート</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7317d2e8552a0ac3ea8fd4ba500c3dfb1cc9c74e7afd73eee6d729751fad30.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.482b3a17e23ade4cade32fe0fe3272b5031e3b6f3bd39224cfd5199e07f1727a.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.ef9b85c525f0e9be652754e578408a63659d26b316013aa6312945ae96ed518f.js"></script>
 
 
 
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fhidden\2f "] {
+  nav ul a[href$="\2f docs\2fjava-python\2fstdio\2f "] {
       color: #004ed0;
   }
   </style>
@@ -113,64 +113,88 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>Hidden</strong>
+  <strong>標準入力、出力</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="this-page-is-hidden-in-menu">This page is hidden in menu</h1>
+<p>標準入力・出力について、主な動作をJava/Python別にまとめる。</p>
 
-<h1 id="quondam-non-pater-est-dignior-ille-eurotas">Quondam non pater est dignior ille Eurotas</h1>
+<h2 id="標準入力">標準入力</h2>
 
-<h2 id="latent-te-facies">Latent te facies</h2>
+<h3 id="数値として取得">数値として取得</h3>
 
-<p>Lorem markdownum arma ignoscas vocavit quoque ille texit mandata mentis ultimus,
-frementes, qui in vel. Hippotades Peleus <a href="http://gratia.net/tot-qua.php">pennas
-conscia</a> cuiquam Caeneus quas.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Java</th>
+<th align="left">Python</th>
+</tr>
+</thead>
 
-<ul>
-<li>Pater demittere evincitque reddunt</li>
-<li>Maxime adhuc pressit huc Danaas quid freta</li>
-<li>Soror ego</li>
-<li>Luctus linguam saxa ultroque prior Tatiumque inquit</li>
-<li>Saepe liquitur subita superata dederat Anius sudor</li>
-</ul>
+<tbody>
+<tr>
+<td align="left">Scanner.nextInt()</td>
+<td align="left">int(input().split())</td>
+</tr>
+</tbody>
+</table>
 
-<h2 id="cum-honorum-latona">Cum honorum Latona</h2>
+<h3 id="文字列として取得">文字列として取得</h3>
 
-<p>O fallor <a href="http://www.spectataharundine.org/aquas-relinquit.html">in sustinui
-iussorum</a> equidem.
-Nymphae operi oris alii fronde parens dumque, in auro ait mox ingenti proxima
-iamdudum maius?</p>
+<p>１行丸ごと文字列として取得する方法と、１行をスペースで区切って１個ずつ取得する方法、またargvから取得する方法がある。</p>
 
-<pre><code>reality(burnDocking(apache_nanometer),
-        pad.property_data_programming.sectorBrowserPpga(dataMask, 37,
-        recycleRup));
-intellectualVaporwareUser += -5 * 4;
-traceroute_key_upnp /= lag_optical(android.smb(thyristorTftp));
-surge_host_golden = mca_compact_device(dual_dpi_opengl, 33,
-        commerce_add_ppc);
-if (lun_ipv) {
-    verticalExtranet(1, thumbnail_ttl, 3);
-    bar_graphics_jpeg(chipset - sector_xmp_beta);
-}
-</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left">Java</th>
+<th align="left">Python</th>
+</tr>
+</thead>
 
-<h2 id="fronde-cetera-dextrae-sequens-pennis-voce-muneris">Fronde cetera dextrae sequens pennis voce muneris</h2>
+<tbody>
+<tr>
+<td align="left">Scanner.nextLine()</td>
+<td align="left">str(input())</td>
+</tr>
 
-<p>Acta cretus diem restet utque; move integer, oscula non inspirat, noctisque
-scelus! Nantemque in suas vobis quamvis, et labori!</p>
+<tr>
+<td align="left">Scanner.next()</td>
+<td align="left">list(input())</td>
+</tr>
 
-<pre><code>var runtimeDiskCompiler = home - array_ad_software;
-if (internic &gt; disk) {
-    emoticonLockCron += 37 + bps - 4;
-    wan_ansi_honeypot.cardGigaflops = artificialStorageCgi;
-    simplex -= downloadAccess;
-}
-var volumeHardeningAndroid = pixel + tftp + onProcessorUnmount;
-sector(memory(firewire + interlaced, wired));
-</code></pre>
+<tr>
+<td align="left">メソッドの引数にString[] argsと書いて<br>そのメソッド内でargs（引数のインデックス）</td>
+<td align="left">import sys<br>sys.argv</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="標準出力">標準出力</h2>
+
+<p>コンソールに出力した後改行する方法と、改行しない方法がある。</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Java</th>
+<th align="left">Python</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">System.out.println(xx)</td>
+<td align="left">print(xx)</td>
+</tr>
+
+<tr>
+<td align="left">System.out.print(xx)</td>
+<td align="left">print(xx,end=&ldquo;&rdquo;)</td>
+</tr>
+</tbody>
+</table>
 </article>
 
       
@@ -178,14 +202,14 @@ sector(memory(firewire + interlaced, wired));
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/9d794ad9139b3b35100ab9bf52c9fa4bf44e77d7" title='Last modified Aug 17, 2019 by T.Wakasugi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 17, 2019
+    <a href="https://github.com/alex-shpak/hugo-book/commit/b6987d203afa85f1de198820b2e8692ffd968387" title='Last modified Sep 10, 2019 by T.Wakasugi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 10, 2019
     </a>
   </div>
   
   
   <div>
-    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/docs/hidden.md" target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/docs/java-python/stdio.md" target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/edit.svg" alt="Edit" /> Edit this page
     </a>
   </div>
@@ -201,12 +225,14 @@ sector(memory(firewire + interlaced, wired));
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#this-page-is-hidden-in-menu">This page is hidden in menu</a></li>
-<li><a href="#quondam-non-pater-est-dignior-ille-eurotas">Quondam non pater est dignior ille Eurotas</a>
+<li>
 <ul>
-<li><a href="#latent-te-facies">Latent te facies</a></li>
-<li><a href="#cum-honorum-latona">Cum honorum Latona</a></li>
-<li><a href="#fronde-cetera-dextrae-sequens-pennis-voce-muneris">Fronde cetera dextrae sequens pennis voce muneris</a></li>
+<li><a href="#標準入力">標準入力</a>
+<ul>
+<li><a href="#数値として取得">数値として取得</a></li>
+<li><a href="#文字列として取得">文字列として取得</a></li>
+</ul></li>
+<li><a href="#標準出力">標準出力</a></li>
 </ul></li>
 </ul>
 </nav>

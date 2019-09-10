@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7317d2e8552a0ac3ea8fd4ba500c3dfb1cc9c74e7afd73eee6d729751fad30.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.876b7f2fe0bb19e099be2df18b801a0bd58696d7e204f4b5c942dcb9a4f4115d.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.482b3a17e23ade4cade32fe0fe3272b5031e3b6f3bd39224cfd5199e07f1727a.js"></script>
 
 
 
@@ -28,7 +28,6 @@ https://github.com/alex-shpak/hugo-book
 <body>
   <input type="checkbox" style="display: none" id="menu-control" />
   <main class="flex container">
-
     <aside class="book-menu fixed">
       <nav>
 <h2 class="book-brand">
@@ -52,7 +51,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fsample-blog\2f creating-a-new-theme\2f "] {
+  nav ul a[href$="\2fposts\2fsample-blog\2f creating-a-new-theme\2f "] {
       color: #004ed0;
   }
   </style>
@@ -108,7 +107,7 @@ https://github.com/alex-shpak/hugo-book
 
     </aside>
 
-    <div class="book-page">
+    <div class="book-posts">
       <header class="flex align-center justify-between book-header">
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
@@ -117,6 +116,13 @@ https://github.com/alex-shpak/hugo-book
 </header>
 
       
+
+<header class="markdown">
+  <h1>Creating a New Theme</h1>
+  <h5>
+    <strong>Sep 28, 2014</strong>
+  </h5>
+</header>
 <article class="markdown">
 
 <h2 id="introduction">Introduction</h2>
@@ -1213,113 +1219,7 @@ $ vi themes/zafta/layouts/_default/single.html
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/e7f38940ebdb1208de44c18af5e419c256ec82f1" title='Last modified Sep 4, 2019 by T.Wakasugi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 4, 2019
-    </a>
-  </div>
-  
-  
-  <div>
-    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/docs/sample-blog/creating-a-new-theme.md" target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/edit.svg" alt="Edit" /> Edit this page
-    </a>
-  </div>
-  
-</div>
-
-
-      
     </div>
-    
-  
-
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#some-definitions">Some Definitions</a>
-<ul>
-<li><a href="#skins">Skins</a></li>
-<li><a href="#the-home-page">The Home Page</a></li>
-<li><a href="#site-configuration-file">Site Configuration File</a></li>
-<li><a href="#content">Content</a>
-<ul>
-<li><a href="#front-matter">Front Matter</a></li>
-<li><a href="#markdown">Markdown</a></li>
-</ul></li>
-<li><a href="#template-files">Template Files</a>
-<ul>
-<li><a href="#single-template">Single Template</a></li>
-<li><a href="#list-template">List Template</a></li>
-<li><a href="#partial-template">Partial Template</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#create-a-new-site">Create a New Site</a>
-<ul>
-<li><a href="#generate-the-html-for-the-new-site">Generate the HTML For the New Site</a></li>
-<li><a href="#test-the-new-site">Test the New Site</a></li>
-</ul></li>
-<li><a href="#create-a-new-theme">Create a New Theme</a>
-<ul>
-<li><a href="#create-a-skeleton">Create a Skeleton</a></li>
-<li><a href="#update-the-configuration-file-to-use-the-theme">Update the Configuration File to Use the Theme</a></li>
-<li><a href="#generate-the-site">Generate the Site</a>
-<ul>
-<li><a href="#the-home-page-1">The Home Page</a></li>
-<li><a href="#the-magic-of-static">The Magic of Static</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#the-theme-development-cycle">The Theme Development Cycle</a>
-<ul>
-<li><a href="#purge-the-public-directory">Purge the public/ Directory</a></li>
-<li><a href="#hugo-s-watch-option">Hugo&rsquo;s Watch Option</a></li>
-<li><a href="#live-reload">Live Reload</a></li>
-<li><a href="#development-commands">Development Commands</a></li>
-</ul></li>
-<li><a href="#update-the-home-page-template">Update the Home Page Template</a>
-<ul>
-<li><a href="#make-a-static-home-page">Make a Static Home Page</a>
-<ul>
-<li><a href="#live-reload-1">Live Reload</a></li>
-</ul></li>
-<li><a href="#build-a-dynamic-home-page">Build a &ldquo;Dynamic&rdquo; Home Page</a>
-<ul>
-<li><a href="#create-new-posts">Create New Posts</a></li>
-</ul></li>
-<li><a href="#list-and-single-templates">List and Single Templates</a></li>
-<li><a href="#add-content-to-the-homepage">Add Content to the Homepage</a></li>
-<li><a href="#add-content-to-the-posts">Add Content to the Posts</a>
-<ul>
-<li><a href="#update-the-template-file">Update the Template File</a></li>
-</ul></li>
-<li><a href="#linking-to-content">Linking to Content</a></li>
-<li><a href="#create-a-post-listing">Create a Post Listing</a></li>
-</ul></li>
-<li><a href="#creating-top-level-pages">Creating Top Level Pages</a></li>
-<li><a href="#sharing-templates">Sharing Templates</a>
-<ul>
-<li><a href="#create-the-header-and-footer-partials">Create the Header and Footer Partials</a></li>
-<li><a href="#update-the-home-page-template-to-use-the-partials">Update the Home Page Template to Use the Partials</a></li>
-<li><a href="#update-the-default-single-template-to-use-the-partials">Update the Default Single Template to Use the Partials</a></li>
-</ul></li>
-<li><a href="#add-date-published-to-posts">Add “Date Published” to Posts</a>
-<ul>
-<li><a href="#add-date-published-to-the-template">Add “Date Published” to the Template</a></li>
-<li><a href="#don-t-repeat-yourself">Don&rsquo;t Repeat Yourself</a></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
-  </aside>
-
-
-
   </main>
 
   

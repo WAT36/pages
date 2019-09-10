@@ -4,19 +4,20 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>標準入力、出力 | WATノート</title>
+<title>python | WATノート</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7317d2e8552a0ac3ea8fd4ba500c3dfb1cc9c74e7afd73eee6d729751fad30.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.482b3a17e23ade4cade32fe0fe3272b5031e3b6f3bd39224cfd5199e07f1727a.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.ef9b85c525f0e9be652754e578408a63659d26b316013aa6312945ae96ed518f.js"></script>
 
 
 
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 
 
+<link rel="alternate" type="application/rss+xml" href="https://WAT36.github.io/pages/categories/python/index.xml" title="WATノート" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -52,7 +53,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fjava-python\2fstdio\2f "] {
+  nav ul a[href$="\2f categories\2fpython\2f "] {
       color: #004ed0;
   }
   </style>
@@ -107,111 +108,42 @@ https://github.com/alex-shpak/hugo-book
 </script>
 
     </aside>
-
     <div class="book-page">
       <header class="flex align-center justify-between book-header">
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>標準入力、出力</strong>
+  <strong>python</strong>
 </header>
 
-      
-<article class="markdown">
 
-<p>標準入力・出力について、主な動作をJava/Python別にまとめる。</p>
-
-<h2 id="標準入力">標準入力</h2>
-
-<h3 id="数値として取得">数値として取得</h3>
-
-<table>
-<thead>
-<tr>
-<th align="left">Java</th>
-<th align="left">Python</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="left">Scanner.nextInt()</td>
-<td align="left">int(input().split())</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="文字列として取得">文字列として取得</h3>
-
-<p>１行丸ごと文字列として取得する方法と、１行をスペースで区切って１個ずつ取得する方法、またargvから取得する方法がある。</p>
-
-<table>
-<thead>
-<tr>
-<th align="left">Java</th>
-<th align="left">Python</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="left">Scanner.nextLine()</td>
-<td align="left">str(input())</td>
-</tr>
-
-<tr>
-<td align="left">Scanner.next()</td>
-<td align="left">list(input())</td>
-</tr>
-
-<tr>
-<td align="left">メソッドの引数にString[] argsと書いて<br>そのメソッド内でargs（引数のインデックス）</td>
-<td align="left">import sys<br>sys.argv</td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="標準出力">標準出力</h2>
-
-<p>コンソールに出力した後改行する方法と、改行しない方法がある。</p>
-
-<table>
-<thead>
-<tr>
-<th align="left">Java</th>
-<th align="left">Python</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="left">System.out.println(xx)</td>
-<td align="left">print(xx)</td>
-</tr>
-
-<tr>
-<td align="left">System.out.print(xx)</td>
-<td align="left">print(xx,end=&ldquo;&rdquo;)</td>
-</tr>
-</tbody>
-</table>
-</article>
+<section id="main">
+    <div class="categories_list">
+    <div class="categories_title"><span>python</span></div>
+    </div>
+    <ul id="list">
+        
+        <li>
+            2019-09-03
+             <a href="https://WAT36.github.io/pages/docs/java-python/string/">文字列</a>
+         </li>
+         
+        <li>
+            2019-09-03
+             <a href="https://WAT36.github.io/pages/docs/java-python/stdio/">標準入力、出力</a>
+         </li>
+         
+     </ul>
+     <hr>
+     <a href="https://WAT36.github.io/pages/categories">Categories</a>
+ </section>
 
       
-<div class="book-footer justify-between">
+<div class="book-footer justify-end">
+  
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/b6987d203afa85f1de198820b2e8692ffd968387" title='Last modified Sep 10, 2019 by T.Wakasugi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 10, 2019
-    </a>
-  </div>
-  
-  
-  <div>
-    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/docs/java-python/stdio.md" target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/edit.svg" alt="Edit" /> Edit this page
-    </a>
   </div>
   
 </div>
@@ -220,24 +152,6 @@ https://github.com/alex-shpak/hugo-book
       
     </div>
     
-  
-
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#標準入力">標準入力</a>
-<ul>
-<li><a href="#数値として取得">数値として取得</a></li>
-<li><a href="#文字列として取得">文字列として取得</a></li>
-</ul></li>
-<li><a href="#標準出力">標準出力</a></li>
-</ul></li>
-</ul>
-</nav>
-  </aside>
-
 
 
   </main>
@@ -245,5 +159,4 @@ https://github.com/alex-shpak/hugo-book
   
   
 </body>
-
 </html>
