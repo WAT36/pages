@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7317d2e8552a0ac3ea8fd4ba500c3dfb1cc9c74e7afd73eee6d729751fad30.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.a600fe0e12afea89ae7799be33d55492908a55d15a19fc1a8ddd0ac7963f2fce.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.c6d66ee97bf87865e62ff46d235a79f4eabd6dcbdecc7fc4f06168059766fbe7.js"></script>
 
 
 
@@ -113,9 +113,63 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown">
 
-<p>標準入力・出力について、主な動作をJava/Python別にまとめる。</p>
+<h1 id="標準入力-出力">標準入力・出力</h1>
+
+<p>標準入力・出力について、主な動作をまとめる。</p>
 
 <h2 id="標準入力">標準入力</h2>
+
+<p>データの入力について<br>
+ソースコードを実行する時及び実行中に、何かデータを入力して実行することができる。<br>
+具体的な方法としては、<br>
+ソースコードを実行するときに、引数としてデータを入力（ <strong>コマンドライン引数</strong> と呼ぶ）して実行する方法と、<br>
+ソースコードを実行した後に、キーボード等でデータを打ち込んで入力する方法がある。<br>
+（後者はここではコンソール入力と呼ぶことにする、何か具体的な名前ってあったかな）</p>
+
+<h3 id="コマンドライン引数">コマンドライン引数</h3>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-commandline_input" style="display: none;" id="tabs-commandline_input-0" checked="checked" />
+  <label for="tabs-commandline_input-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>クラスはここではMain.javaとする</p>
+
+<pre><code>class Main{
+    public static void main(String args[]){
+      String[] input = args //コマンドライン引数を格納した配列を取得する
+    }
+}
+</code></pre>
+
+<p>Javaではコマンドライン引数は
+クラス内で宣言するmainメソッドの引数であるString型の配列(上記コード中の&rdquo;args&rdquo;)に入る。
+コマンドライン引数をスペースで区切って何個かに分けて入力した場合、初めから順にargsの0番目から順に入る。</p>
+
+  </div>
+
+  <input type="radio" name="tabs-commandline_input" style="display: none;" id="tabs-commandline_input-1"  />
+  <label for="tabs-commandline_input-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <pre><code>import sys
+inputs = sys.argv # コマンドライン引数を格納したリストを取得する
+</code></pre>
+
+<p>Pythonはsysモジュールのargv属性にコマンドライン引数がリストとして入る。
+コマンドライン引数を取得するには、sysモジュールをインポートしてargvを参照する。</p>
+
+  </div>
+
+</div>
+
 
 <h3 id="数値として取得">数値として取得</h3>
 
@@ -192,7 +246,14 @@ https://github.com/alex-shpak/hugo-book
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/09ca6ffc811ebc47b2da2ff208b77caaf373445e" title='Last modified Sep 11, 2019 by T.Wakasugi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 11, 2019
+    </a>
+  </div>
   
   
   <div>
@@ -212,10 +273,11 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li>
+<li><a href="#標準入力-出力">標準入力・出力</a>
 <ul>
 <li><a href="#標準入力">標準入力</a>
 <ul>
+<li><a href="#コマンドライン引数">コマンドライン引数</a></li>
 <li><a href="#数値として取得">数値として取得</a></li>
 <li><a href="#文字列として取得">文字列として取得</a></li>
 </ul></li>
