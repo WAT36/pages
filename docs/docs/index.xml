@@ -34,55 +34,55 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     
     <item>
       <title>その他</title>
-      <link>https://WAT36.github.io/pages/docs/java-python/other/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/other/</link>
       <pubDate>Sat, 07 Sep 2019 18:23:49 +0900</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/java-python/other/</guid>
+      <guid>https://WAT36.github.io/pages/docs/programming/other/</guid>
       <description>その他 その他、括れてない手法などをまとめる。 説明 Java Python メソッド(関数)の宣言 (アクセス修飾子) static 関数名(引数){} 例：public static void main(String[] args){} def 関</description>
     </item>
     
     <item>
       <title>辞書、Map</title>
-      <link>https://WAT36.github.io/pages/docs/java-python/dict/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/dict/</link>
       <pubDate>Tue, 03 Sep 2019 23:05:48 +0900</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/java-python/dict/</guid>
+      <guid>https://WAT36.github.io/pages/docs/programming/dict/</guid>
       <description>辞書、Map 説明 Java Python 辞書（Map) Map a = new HashMap(); (String,Stringの例) dict = {} 辞書(Map)に要素を置く (Map).put(キー,値)</description>
     </item>
     
     <item>
       <title>タプル・リスト</title>
-      <link>https://WAT36.github.io/pages/docs/java-python/lists/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/lists/</link>
       <pubDate>Tue, 03 Sep 2019 22:53:31 +0900</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/java-python/lists/</guid>
+      <guid>https://WAT36.github.io/pages/docs/programming/lists/</guid>
       <description>タプル・リスト 説明 Java Python タプル リスト List&amp;lt;型(ラッパークラス)&amp;gt; 変数名 = new ArrayList&amp;lt;&amp;gt;(); ※ArrayListにすべきかは諸説あるけど・・ 変</description>
     </item>
     
     <item>
       <title>数値</title>
-      <link>https://WAT36.github.io/pages/docs/java-python/integer/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/integer/</link>
       <pubDate>Tue, 03 Sep 2019 08:02:46 +0900</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/java-python/integer/</guid>
+      <guid>https://WAT36.github.io/pages/docs/programming/integer/</guid>
       <description>数値 説明 Java Python 数値を文字列に変換する String.valueOf(数値) str(数値) 数字の頭をゼロ詰して表示する String.format(</description>
     </item>
     
     <item>
       <title>文字列</title>
-      <link>https://WAT36.github.io/pages/docs/java-python/string/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/string/</link>
       <pubDate>Tue, 03 Sep 2019 07:54:45 +0900</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/java-python/string/</guid>
+      <guid>https://WAT36.github.io/pages/docs/programming/string/</guid>
       <description>文字列 文字列について、諸操作のjava-python対応表をまとめる。 文字列の変換 説明 Java Python 文字列を大文字にする (文字列).toUpperCa</description>
     </item>
     
     <item>
       <title>標準入力、出力</title>
-      <link>https://WAT36.github.io/pages/docs/java-python/stdio/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/stdio/</link>
       <pubDate>Tue, 03 Sep 2019 00:06:44 +0900</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/java-python/stdio/</guid>
+      <guid>https://WAT36.github.io/pages/docs/programming/stdio/</guid>
       <description>標準入力・出力について、主な動作をJava/Python別にまとめる。 標準入力 数値として取得 Java Python Scanner.nextInt() int(input().split()) 文字列として取得 １行丸ごと文字列として取</description>
     </item>
     
@@ -112,11 +112,11 @@ Follow the following steps:
     
     <item>
       <title></title>
-      <link>https://WAT36.github.io/pages/docs/java-python/jp_index/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/jp_index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/java-python/jp_index/</guid>
-      <description> Java-Python docs 今まで業務でJavaをバリバリ書いたり学んだりしていた私が、急にPythonをやる必要が出てきた（やりたくなったというのも半分あるが）ため、 学びやすい様にPythonの文法・関数とJavaの文法に対応づけさせる様にしたメモである。 自身もまだ勉強中のため、随時更新予定。
+      <guid>https://WAT36.github.io/pages/docs/programming/jp_index/</guid>
+      <description> プログラミング言語別対応メモ 社会人になってからは業務でJavaをバリバリ書いたり学んだりしていた私が、急にPythonをやる必要が出てきた（自分からやりたくなったというのも半分あるが）ため、 学びやすい様にPythonの文法・関数とJavaの文法とを対応づけさせる様にしたメモである。 自身もまだ勉強中のため、随時更新予定。 これらに関わらず、新しい言語についても随時追加していく予定。
 標準入力・出力 文字列 数値 タプル、リスト 辞書、Map 関数、メソッド逆引き 他、Pythonの小技など その他 </description>
     </item>
     
