@@ -1,7 +1,7 @@
 # hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/example
 
 baseURL = 'https://WAT36.github.io/pages/'
-title = 'WATノート'
+title = 'WAT Notes'
 theme = 'book'
 author = 'T.Wakasugi'
 canonifyurls = true

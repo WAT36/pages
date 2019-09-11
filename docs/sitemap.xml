@@ -4,17 +4,17 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/sample/creating-a-new-theme/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-09-11T00:15:01+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/sample/migrate-from-jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+    <lastmod>2019-09-11T00:15:01+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2019-09-10T23:04:59+09:00</lastmod>
+    <lastmod>2019-09-11T00:15:01+09:00</lastmod>
   </url>
   
   <url>
@@ -53,22 +53,22 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/java/</loc>
-    <lastmod>2019-09-10T23:04:59+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/tags/java/</loc>
     <lastmod>2019-09-10T23:04:59+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/python/</loc>
+    <loc>https://WAT36.github.io/pages/categories/java/</loc>
     <lastmod>2019-09-10T23:04:59+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/tags/python/</loc>
+    <lastmod>2019-09-10T23:04:59+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/categories/python/</loc>
     <lastmod>2019-09-10T23:04:59+09:00</lastmod>
   </url>
   
@@ -104,12 +104,12 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/sample/goisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <lastmod>2019-09-11T00:15:01+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/sample/hugoisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <lastmod>2019-09-11T00:15:01+09:00</lastmod>
   </url>
   
   <url>
@@ -124,6 +124,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/sample/hidden/</loc>
+    <lastmod>2019-09-11T00:15:01+09:00</lastmod>
   </url>
   
   <url>
@@ -143,6 +144,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/sample/without-toc/</loc>
+    <lastmod>2019-09-11T00:15:01+09:00</lastmod>
   </url>
   
   <url>
