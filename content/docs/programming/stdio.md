@@ -34,7 +34,7 @@ class Main{
 ```
 
 Javaではコマンドライン引数は
-クラス内で宣言するmainメソッドの引数であるString型の配列(上記コード中の"args")に入る。
+クラス内で宣言するmainメソッドの引数であるString型の配列(上記コード中の"args")に入る。<br>
 コマンドライン引数をスペースで区切って何個かに分けて入力した場合、初めから順にargsの0番目から順に入る。
 
 {{< /tab >}}
@@ -45,27 +45,58 @@ import sys
 inputs = sys.argv # コマンドライン引数を格納したリストを取得する
 ```
 
-Pythonはsysモジュールのargv属性にコマンドライン引数がリストとして入る。
+Pythonはsysモジュールのargv属性にコマンドライン引数がリストとして入る。<br>
 コマンドライン引数を取得するには、sysモジュールをインポートしてargvを参照する。
 
 {{< /tab >}}
 {{< /tabs >}}
 
-### 数値として取得
+### コンソール入力
 
-|Java|Python|
-|:---|:---|
-|Scanner.nextInt()|int(input().split())|
+{{< tabs "console_input" >}}
+{{< tab "Java" >}}
 
-### 文字列として取得
+クラスはここではMain.javaとする
 
-１行丸ごと文字列として取得する方法と、１行をスペースで区切って１個ずつ取得する方法、またargvから取得する方法がある。
+```
+import java.util.Scanner
 
-|Java|Python|
-|:---|:---|
-|Scanner.nextLine()|str(input())|
-|Scanner.next()|list(input())|
-|メソッドの引数にString[] argsと書いて<br>そのメソッド内でargs（引数のインデックス）|import sys<br>sys.argv |
+class Main{
+  public static void main(String args[]){
+
+    //Scannerのインスタンスを生成
+    Scanner sc = new Scanner(System.in);
+
+    //入力を何のデータ型で受け取るかで別れる
+    //(例)int型
+    int i = sc.nextInt();
+
+    //String型（１行分全て）
+    String s = sc.nextLine();
+    //String型（スペース等で区切った一部分ずつ）
+    String s = sc.next();
+  }
+}
+```
+
+javaでコンソールからの入力を扱うには **Scanner** クラスをインポートし、インスタンスを生成する。<br>
+その後、入力データを何のデータ型で受け取るかにより利用するScannerクラスのメソッドが別れるが、多いので一部に留める。<br>
+全て知りたい人は以下の公式サイトを参照。<br>
+https://docs.oracle.com/javase/jp/8/docs/api/java/util/Scanner.html
+
+{{< /tab >}}
+{{< tab "Python" >}}
+
+```
+s = input() # コンソールからの入力をsに格納する
+```
+
+Pythonでコンソールからの入力を扱うには組み込み関数の **input()** を使う。<br>
+基本入力１行を読み込み、文字列に変換して渡される。<br>
+数値にしたい場合はint()で囲うなどし、スペースを区切りたい時などはsplit()等を使う。
+
+{{< /tab >}}
+{{< /tabs >}}
 
 ## 標準出力
 

@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7317d2e8552a0ac3ea8fd4ba500c3dfb1cc9c74e7afd73eee6d729751fad30.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.c6d66ee97bf87865e62ff46d235a79f4eabd6dcbdecc7fc4f06168059766fbe7.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.80045b27709a0ad52d3b7b4d7b615ebd74142e1b1d7b8aac3f53ce7710ea3692.js"></script>
 
 
 
@@ -149,7 +149,7 @@ https://github.com/alex-shpak/hugo-book
 </code></pre>
 
 <p>Javaではコマンドライン引数は
-クラス内で宣言するmainメソッドの引数であるString型の配列(上記コード中の&rdquo;args&rdquo;)に入る。
+クラス内で宣言するmainメソッドの引数であるString型の配列(上記コード中の&rdquo;args&rdquo;)に入る。<br>
 コマンドライン引数をスペースで区切って何個かに分けて入力した場合、初めから順にargsの0番目から順に入る。</p>
 
   </div>
@@ -163,7 +163,7 @@ https://github.com/alex-shpak/hugo-book
 inputs = sys.argv # コマンドライン引数を格納したリストを取得する
 </code></pre>
 
-<p>Pythonはsysモジュールのargv属性にコマンドライン引数がリストとして入る。
+<p>Pythonはsysモジュールのargv属性にコマンドライン引数がリストとして入る。<br>
 コマンドライン引数を取得するには、sysモジュールをインポートしてargvを参照する。</p>
 
   </div>
@@ -171,53 +171,64 @@ inputs = sys.argv # コマンドライン引数を格納したリストを取得
 </div>
 
 
-<h3 id="数値として取得">数値として取得</h3>
+<h3 id="コンソール入力">コンソール入力</h3>
 
-<table>
-<thead>
-<tr>
-<th align="left">Java</th>
-<th align="left">Python</th>
-</tr>
-</thead>
 
-<tbody>
-<tr>
-<td align="left">Scanner.nextInt()</td>
-<td align="left">int(input().split())</td>
-</tr>
-</tbody>
-</table>
 
-<h3 id="文字列として取得">文字列として取得</h3>
 
-<p>１行丸ごと文字列として取得する方法と、１行をスペースで区切って１個ずつ取得する方法、またargvから取得する方法がある。</p>
 
-<table>
-<thead>
-<tr>
-<th align="left">Java</th>
-<th align="left">Python</th>
-</tr>
-</thead>
+<div class="book-tabs">
 
-<tbody>
-<tr>
-<td align="left">Scanner.nextLine()</td>
-<td align="left">str(input())</td>
-</tr>
+  <input type="radio" name="tabs-console_input" style="display: none;" id="tabs-console_input-0" checked="checked" />
+  <label for="tabs-console_input-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>クラスはここではMain.javaとする</p>
 
-<tr>
-<td align="left">Scanner.next()</td>
-<td align="left">list(input())</td>
-</tr>
+<pre><code>import java.util.Scanner
 
-<tr>
-<td align="left">メソッドの引数にString[] argsと書いて<br>そのメソッド内でargs（引数のインデックス）</td>
-<td align="left">import sys<br>sys.argv</td>
-</tr>
-</tbody>
-</table>
+class Main{
+  public static void main(String args[]){
+
+    //Scannerのインスタンスを生成
+    Scanner sc = new Scanner(System.in);
+
+    //入力を何のデータ型で受け取るかで別れる
+    //(例)int型
+    int i = sc.nextInt();
+
+    //String型（１行分全て）
+    String s = sc.nextLine();
+    //String型（スペース等で区切った一部分ずつ）
+    String s = sc.next();
+  }
+}
+</code></pre>
+
+<p>javaでコンソールからの入力を扱うには <strong>Scanner</strong> クラスをインポートし、インスタンスを生成する。<br>
+その後、入力データを何のデータ型で受け取るかにより利用するScannerクラスのメソッドが別れるが、多いので一部に留める。<br>
+全て知りたい人は以下の公式サイトを参照。<br>
+<a href="https://docs.oracle.com/javase/jp/8/docs/api/java/util/Scanner.html">https://docs.oracle.com/javase/jp/8/docs/api/java/util/Scanner.html</a></p>
+
+  </div>
+
+  <input type="radio" name="tabs-console_input" style="display: none;" id="tabs-console_input-1"  />
+  <label for="tabs-console_input-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <pre><code>s = input() # コンソールからの入力をsに格納する
+</code></pre>
+
+<p>Pythonでコンソールからの入力を扱うには組み込み関数の <strong>input()</strong> を使う。<br>
+基本入力１行を読み込み、文字列に変換して渡される。<br>
+数値にしたい場合はint()で囲うなどし、スペースを区切りたい時などはsplit()等を使う。</p>
+
+  </div>
+
+</div>
+
 
 <h2 id="標準出力">標準出力</h2>
 
@@ -250,7 +261,7 @@ inputs = sys.argv # コマンドライン引数を格納したリストを取得
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/09ca6ffc811ebc47b2da2ff208b77caaf373445e" title='Last modified Sep 11, 2019 by T.Wakasugi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/01a828caa9125b19673cdeb0ce5019ed69837d5e" title='Last modified Sep 11, 2019 by T.Wakasugi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 11, 2019
     </a>
   </div>
@@ -278,8 +289,7 @@ inputs = sys.argv # コマンドライン引数を格納したリストを取得
 <li><a href="#標準入力">標準入力</a>
 <ul>
 <li><a href="#コマンドライン引数">コマンドライン引数</a></li>
-<li><a href="#数値として取得">数値として取得</a></li>
-<li><a href="#文字列として取得">文字列として取得</a></li>
+<li><a href="#コンソール入力">コンソール入力</a></li>
 </ul></li>
 <li><a href="#標準出力">標準出力</a></li>
 </ul></li>
