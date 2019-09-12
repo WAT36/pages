@@ -1,21 +1,91 @@
 ---
 title: "文字列"
 date: 2019-09-03T07:54:45+09:00
-categories: [ "java", "python" ]
+categories: [ "プログラミング" ]
 tags: [ "java", "python", "文字列"]
 ---
 
 # 文字列
 
-文字列について、諸操作のjava-python対応表をまとめる。
+文字列について、主な動作をまとめる。
 
+## 文字列の宣言
 
 ## 文字列の変換
 
+### 文字列を全て大文字にする
+
+{{< tabs "string_uppercase" >}}
+{{< tab "Java" >}}
+
+クラスはここではMain.javaとする
+
+```
+class Main{
+    public static void main(String args[]){
+      String s = "test";
+      s = s.toUpperCase();
+    }
+}
+```
+
+JavaではStringクラスに **toUpperCase()** というメソッドがあり、これにより文字列を全て英大文字に変換して表示してくれる。<br>
+ただし、文字列自体が変換されるわけではないので、反映させたい場合は出力を元の変数に代入してやる必要がある。
+
+{{< /tab >}}
+{{< tab "Python" >}}
+
+```
+s = "test"
+s.upper()
+```
+
+Pythonは文字列型のstrオブジェクトにメソッド **upper()** があり、これにより文字列を全て大文字にできる。<br>
+ただし、これも文字列自体が変換されるわけではないので、反映させたい場合は出力を元の変数に代入してやる必要がある。
+
+
+{{< /tab >}}
+{{< /tabs >}}
+
+### 文字列を全て小文字にする
+
+{{< tabs "string_lowercase" >}}
+{{< tab "Java" >}}
+
+クラスはここではMain.javaとする
+
+```
+class Main{
+    public static void main(String args[]){
+      String s = "test";
+      s = s.toLowerCase();
+    }
+}
+```
+
+JavaではStringクラスに **toLowerCase()** というメソッドがあり、これにより文字列を全て英小文字に変換して表示してくれる。<br>
+ただし、これも文字列自体が変換されるわけではないので、反映させたい場合は出力を元の変数に代入してやる必要がある。
+
+{{< /tab >}}
+{{< tab "Python" >}}
+
+```
+s = "test"
+s.lower()
+```
+
+Pythonは文字列型のstrオブジェクトにメソッド **lower()** があり、これにより文字列を全て小文字にできる。<br>
+ただし、これも文字列自体が変換されるわけではないので、反映させたい場合は出力を元の変数に代入してやる必要がある。
+
+
+{{< /tab >}}
+{{< /tabs >}}
+
+
+
+
 |説明|Java|Python||
 |:---|:---|:---|:---|
-|文字列を大文字にする|(文字列).toUpperCase()|(文字列).upper()||
-|文字列を小文字にする|(文字列).toLowerCase()|(文字列).lower()||
 |文字列中のある文字を別の文字に一括置換する||文字列.**replace**(置換対象の文字,置換後の文字)||
 
 ## 文字列の追加・削除・分割

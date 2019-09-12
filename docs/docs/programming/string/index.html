@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7317d2e8552a0ac3ea8fd4ba500c3dfb1cc9c74e7afd73eee6d729751fad30.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.268436c2858a05be006130391632e0ad4abf36819420dd6448b94fd203041be2.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.3c4cdd2c09127245b841271127cfb4a2b394974a16c1e44bb05cab720b19be6a.js"></script>
 
 
 
@@ -106,9 +106,101 @@ https://github.com/alex-shpak/hugo-book
 
 <h1 id="文字列">文字列</h1>
 
-<p>文字列について、諸操作のjava-python対応表をまとめる。</p>
+<p>文字列について、主な動作をまとめる。</p>
+
+<h2 id="文字列の宣言">文字列の宣言</h2>
 
 <h2 id="文字列の変換">文字列の変換</h2>
+
+<h3 id="文字列を全て大文字にする">文字列を全て大文字にする</h3>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-string_uppercase" style="display: none;" id="tabs-string_uppercase-0" checked="checked" />
+  <label for="tabs-string_uppercase-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>クラスはここではMain.javaとする</p>
+
+<pre><code>class Main{
+    public static void main(String args[]){
+      String s = &quot;test&quot;;
+      s = s.toUpperCase();
+    }
+}
+</code></pre>
+
+<p>JavaではStringクラスに <strong>toUpperCase()</strong> というメソッドがあり、これにより文字列を全て英大文字に変換して表示してくれる。<br>
+ただし、文字列自体が変換されるわけではないので、反映させたい場合は出力を元の変数に代入してやる必要がある。</p>
+
+  </div>
+
+  <input type="radio" name="tabs-string_uppercase" style="display: none;" id="tabs-string_uppercase-1"  />
+  <label for="tabs-string_uppercase-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <pre><code>s = &quot;test&quot;
+s.upper()
+</code></pre>
+
+<p>Pythonは文字列型のstrオブジェクトにメソッド <strong>upper()</strong> があり、これにより文字列を全て大文字にできる。<br>
+ただし、これも文字列自体が変換されるわけではないので、反映させたい場合は出力を元の変数に代入してやる必要がある。</p>
+
+  </div>
+
+</div>
+
+
+<h3 id="文字列を全て小文字にする">文字列を全て小文字にする</h3>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-string_lowercase" style="display: none;" id="tabs-string_lowercase-0" checked="checked" />
+  <label for="tabs-string_lowercase-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>クラスはここではMain.javaとする</p>
+
+<pre><code>class Main{
+    public static void main(String args[]){
+      String s = &quot;test&quot;;
+      s = s.toLowerCase();
+    }
+}
+</code></pre>
+
+<p>JavaではStringクラスに <strong>toLowerCase()</strong> というメソッドがあり、これにより文字列を全て英小文字に変換して表示してくれる。<br>
+ただし、これも文字列自体が変換されるわけではないので、反映させたい場合は出力を元の変数に代入してやる必要がある。</p>
+
+  </div>
+
+  <input type="radio" name="tabs-string_lowercase" style="display: none;" id="tabs-string_lowercase-1"  />
+  <label for="tabs-string_lowercase-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <pre><code>s = &quot;test&quot;
+s.lower()
+</code></pre>
+
+<p>Pythonは文字列型のstrオブジェクトにメソッド <strong>lower()</strong> があり、これにより文字列を全て小文字にできる。<br>
+ただし、これも文字列自体が変換されるわけではないので、反映させたい場合は出力を元の変数に代入してやる必要がある。</p>
+
+  </div>
+
+</div>
+
 
 <table>
 <thead>
@@ -121,20 +213,6 @@ https://github.com/alex-shpak/hugo-book
 </thead>
 
 <tbody>
-<tr>
-<td align="left">文字列を大文字にする</td>
-<td align="left">(文字列).toUpperCase()</td>
-<td align="left">(文字列).upper()</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">文字列を小文字にする</td>
-<td align="left">(文字列).toLowerCase()</td>
-<td align="left">(文字列).lower()</td>
-<td align="left"></td>
-</tr>
-
 <tr>
 <td align="left">文字列中のある文字を別の文字に一括置換する</td>
 <td align="left"></td>
@@ -276,7 +354,12 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#文字列">文字列</a>
 <ul>
-<li><a href="#文字列の変換">文字列の変換</a></li>
+<li><a href="#文字列の宣言">文字列の宣言</a></li>
+<li><a href="#文字列の変換">文字列の変換</a>
+<ul>
+<li><a href="#文字列を全て大文字にする">文字列を全て大文字にする</a></li>
+<li><a href="#文字列を全て小文字にする">文字列を全て小文字にする</a></li>
+</ul></li>
 <li><a href="#文字列の追加-削除-分割">文字列の追加・削除・分割</a></li>
 <li><a href="#文字列を数値に変換する">文字列を数値に変換する</a></li>
 <li><a href="#文字列を検索する">文字列を検索する</a></li>

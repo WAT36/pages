@@ -1,7 +1,7 @@
 ---
 title: "標準入力、出力"
 date: 2019-09-03T00:06:44+09:00
-categories: [ "プログラミング","java", "python" ]
+categories: [ "プログラミング" ]
 tags: [ "java", "python", "標準入力", "標準出力"]
 ---
 
@@ -118,10 +118,10 @@ https://docs.python.org/ja/3/library/functions.html#input
 class Main{
     public static void main(String args[]){
         //出力後、改行したい時
-        System.out.println(変数もしくはデータ)
+        System.out.println(変数もしくはデータ);
 
         //出力後、改行したくない時
-        System.out.print(変数もしくはデータ)
+        System.out.print(変数もしくはデータ);
     }
 }
 ```
@@ -160,10 +160,10 @@ https://docs.python.org/ja/3/library/functions.html#print
 class Main{
     public static void main(String args[]){
         //出力後、改行したい時
-        System.err.println(変数もしくはデータ)
+        System.err.println(変数もしくはデータ);
 
         //出力後、改行したくない時
-        System.err.print(変数もしくはデータ)
+        System.err.print(変数もしくはデータ);
     }
 }
 ```
