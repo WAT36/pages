@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>数値 | WAT Notes</title>
+<title>文字列 | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7317d2e8552a0ac3ea8fd4ba500c3dfb1cc9c74e7afd73eee6d729751fad30.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.268436c2858a05be006130391632e0ad4abf36819420dd6448b94fd203041be2.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.79f9e57a1bc09f752ac7866c4a1b7dd14a6191e1d14664ad367951caec54323d.js"></script>
 
 
 
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2finteger\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fstring\2f "] {
       color: #004ed0;
   }
   </style>
@@ -107,13 +107,17 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>数値</strong>
+  <strong>文字列</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="数値">数値</h1>
+<h1 id="文字列">文字列</h1>
+
+<p>文字列について、諸操作のjava-python対応表をまとめる。</p>
+
+<h2 id="文字列の変換">文字列の変換</h2>
 
 <table>
 <thead>
@@ -127,163 +131,117 @@ https://github.com/alex-shpak/hugo-book
 
 <tbody>
 <tr>
-<td align="left">数値を文字列に変換する</td>
-<td align="left">String.valueOf(数値)</td>
-<td align="left">str(数値)</td>
+<td align="left">文字列を大文字にする</td>
+<td align="left">(文字列).toUpperCase()</td>
+<td align="left">(文字列).upper()</td>
 <td align="left"></td>
 </tr>
 
 <tr>
-<td align="left">数字の頭をゼロ詰して表示する</td>
-<td align="left"><strong>String.format(&ldquo;03d&rdquo;,数値)</strong><br>（ゼロ詰して３桁で表示する時の例）</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">数値を１６進数にして表示する</td>
-<td align="left"></td>
-<td align="left">hex(数値)</td>
+<td align="left">文字列を小文字にする</td>
+<td align="left">(文字列).toLowerCase()</td>
+<td align="left">(文字列).lower()</td>
 <td align="left"></td>
 </tr>
 
 <tr>
-<td align="left">数値を文字列に変更する</td>
-<td align="left">String.valueOf(数値)</td>
-<td align="left">str(数値)</td>
+<td align="left">文字列中のある文字を別の文字に一括置換する</td>
+<td align="left"></td>
+<td align="left">文字列.<strong>replace</strong>(置換対象の文字,置換後の文字)</td>
 <td align="left"></td>
 </tr>
+</tbody>
+</table>
 
+<h2 id="文字列の追加-削除-分割">文字列の追加・削除・分割</h2>
+
+<table>
+<thead>
 <tr>
-<td align="left">階乗の計算</td>
-<td align="left"></td>
-<td align="left">import math<br>math.factorial(数値)</td>
-<td align="left"></td>
+<th align="left">説明</th>
+<th align="left">Java</th>
+<th align="left">Python</th>
+<th align="left"></th>
 </tr>
+</thead>
 
+<tbody>
 <tr>
-<td align="left">絶対値</td>
-<td align="left">Math.abs(数値)</td>
-<td align="left">abs(数値)</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">２つの数字のうち大きい方</td>
-<td align="left">Math.max(数値、数値)</td>
-<td align="left">max(数値、数値・・)<br>幾つでも可</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">２つの数字のうち小さい方</td>
-<td align="left">Math.min(数値、数値)</td>
-<td align="left">min(数値、数値・・)<br>幾つでも可</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">円周率(π)</td>
-<td align="left"></td>
-<td align="left">import numpy as np<br><strong>np.pi</strong></td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">常用対数(底10)</td>
-<td align="left">Math.log10()</td>
-<td align="left">import math<br>math.log10(数値)</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">対数(底2)</td>
-<td align="left"></td>
-<td align="left">import math<br>math.log2(数値)</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left"></td>
+<td align="left">文字列の後ろに１文字追加する</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 
 <tr>
-<td align="left">小数点切り下げ</td>
-<td align="left">Math.floor(数値)</td>
-<td align="left">import math<br>math.floor(数値)<br><hr><br>また、割り算の時は<br>a = b <strong>//</strong> c<br>とすれば割り算と同時に切り下げも行う</td>
+<td align="left">文字列をある文字で区切る</td>
+<td align="left"></td>
+<td align="left">文字列.<strong>split</strong>(区切り文字(無い場合スペース))</td>
+<td align="left">↓の逆</td>
+</tr>
+
+<tr>
+<td align="left">文字列をゼロ埋めして表示する</td>
+<td align="left"></td>
+<td align="left">文字列.<strong>zfill</strong>(ゼロ埋め後の桁数)</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="文字列を数値に変換する">文字列を数値に変換する</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">説明</th>
+<th align="left">Java</th>
+<th align="left">Python</th>
+<th align="left"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">文字列を数値に変更する</td>
+<td align="left">Integer.parseInt(文字列)</td>
+<td align="left">int(文字列)</td>
 <td align="left"></td>
 </tr>
 
 <tr>
-<td align="left">小数点切り上げ</td>
-<td align="left">Math.ceil(数値)</td>
-<td align="left">import math<br>math.ceil(数値)<br><hr><br>また、割り算の時は<br>a =<strong>- (-b // c)</strong><br>とすれば割り算と同時に切り下げも行う</td>
+<td align="left">１文字からアスキーコードを取得</td>
+<td align="left">char c;<br>int ascii = (int)c;</td>
+<td align="left">ord(１文字)</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="文字列を検索する">文字列を検索する</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">説明</th>
+<th align="left">Java</th>
+<th align="left">Python</th>
+<th align="left"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">文字列中からある文字列が入ってるか検索する</td>
+<td align="left"></td>
+<td align="left">文字列.<strong>find</strong>(検索したい文字列[,開始インデックス[,終了インデックス]])<br>最初に見つかった位置のインデックスを返し、無い場合は-1を返す<br><strong>rfind</strong>を使うと右から検索。<br><strong>index</strong>もfindと同じ動作をするが、無い場合はValueErrorという例外を発生する</td>
 <td align="left"></td>
 </tr>
 
 <tr>
-<td align="left">二進数で表示</td>
+<td align="left">文字列がある文字で始まっている（終わっている）かを確認する</td>
 <td align="left"></td>
-<td align="left">bin(10進数の数値)</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">二進数で表示した時の長さ</td>
-<td align="left"></td>
-<td align="left">数値.bit_length()</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">８進数で表示</td>
-<td align="left"></td>
-<td align="left">oct(10進数の数値)</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">１６進数で表示</td>
-<td align="left"></td>
-<td align="left">hex(10進数の数値)</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">xとyの論理和(OR)をとる</td>
-<td align="left"></td>
-<td align="left">x ｜ y</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">xとyの論理積(AND)をとる</td>
-<td align="left"></td>
-<td align="left">x &amp; y</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">xとyの排他的論理和(XOR)をとる</td>
-<td align="left"></td>
-<td align="left">x ^ y</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">３項演算子</td>
-<td align="left">int a = (条件式) ? (正のとき入れる値) : (負のとき入れる値)</td>
-<td align="left">a = (正のとき入れる値) if (条件式) else (負のとき入れる値)</td>
+<td align="left">文字列.<strong>startswith</strong>(検索したい文字列[,開始インデックス[,終了インデックス]])<br>文字列が検索したい文字列で始まっている時にTrue(真)を返す<br>終わっているときは<strong>endswith</strong>を使う</td>
 <td align="left"></td>
 </tr>
 
@@ -309,7 +267,7 @@ https://github.com/alex-shpak/hugo-book
   
   
   <div>
-    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/docs/programming/integer.md" target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/docs/programming/string.md" target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/edit.svg" alt="Edit" /> Edit this page
     </a>
   </div>
@@ -325,7 +283,13 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#数値">数値</a></li>
+<li><a href="#文字列">文字列</a>
+<ul>
+<li><a href="#文字列の変換">文字列の変換</a></li>
+<li><a href="#文字列の追加-削除-分割">文字列の追加・削除・分割</a></li>
+<li><a href="#文字列を数値に変換する">文字列を数値に変換する</a></li>
+<li><a href="#文字列を検索する">文字列を検索する</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>
