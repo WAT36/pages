@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7317d2e8552a0ac3ea8fd4ba500c3dfb1cc9c74e7afd73eee6d729751fad30.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.3c4cdd2c09127245b841271127cfb4a2b394974a16c1e44bb05cab720b19be6a.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.aec513d991172a005702972ba36fe007cbbc12733c0d1edc2a2272b8913a7677.js"></script>
 
 
 
@@ -110,7 +110,7 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="文字列の宣言">文字列の宣言</h2>
 
-<h2 id="文字列の変換">文字列の変換</h2>
+<h2 id="文字列の変換-置換">文字列の変換・置換</h2>
 
 <h3 id="文字列を全て大文字にする">文字列を全て大文字にする</h3>
 
@@ -202,25 +202,64 @@ s.lower()
 </div>
 
 
-<table>
-<thead>
-<tr>
-<th align="left">説明</th>
-<th align="left">Java</th>
-<th align="left">Python</th>
-<th align="left"></th>
-</tr>
-</thead>
+<h3 id="文字列中のある文字を全て別の文字に置換する">文字列中のある文字を全て別の文字に置換する</h3>
 
-<tbody>
-<tr>
-<td align="left">文字列中のある文字を別の文字に一括置換する</td>
-<td align="left"></td>
-<td align="left">文字列.<strong>replace</strong>(置換対象の文字,置換後の文字)</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-string_replace" style="display: none;" id="tabs-string_replace-0" checked="checked" />
+  <label for="tabs-string_replace-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>javaで文字列を置換したい時は <strong>replace()</strong> メソッドを使う。<br>
+使用法は以下の通り。</p>
+
+<pre><code>文字列.replace(置換前の文字列,置換後の文字列);
+</code></pre>
+
+<p>以下に使用例を示す。</p>
+
+<pre><code>String s = &quot;test&quot;;
+String t = s.replace(&quot;t&quot;,&quot;b&quot;);
+System.out.println(t); // besb
+</code></pre>
+
+<p>上記例では&rdquo;test&rdquo;という文字列をreplaceメソッドで&rdquo;t&rdquo;を&rdquo;b&rdquo;に置換し、結果を表示している。結果として&rdquo;besb&rdquo;という文字列が表示される。</p>
+
+  </div>
+
+  <input type="radio" name="tabs-string_replace" style="display: none;" id="tabs-string_replace-1"  />
+  <label for="tabs-string_replace-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Pythonでは文字列型のstrオブジェクトにメソッド <strong>replace()</strong> があり、これにより文字列中の文字を置換できる。<br>
+使用法は以下の通り。</p>
+
+<pre><code>文字列.replace(old,new [,count]);
+</code></pre>
+
+<p>これにより文字列中のoldの部分をnewに変換する。
+また、オプション引数countがあり、指定すると先頭からcount個分のoldのみを置換する。</p>
+
+<p>使用例を以下に示す。</p>
+
+<pre><code>s = &quot;test&quot;
+t = s.replace(&quot;t&quot;,&quot;b&quot;)
+print(t)  # &quot;besb&quot;
+
+t = s.replace(&quot;t&quot;,&quot;b&quot;,1)
+print(t)  # &quot;best&quot;
+</code></pre>
+
+  </div>
+
+</div>
+
 
 <h2 id="文字列の追加-削除-分割">文字列の追加・削除・分割</h2>
 
@@ -329,8 +368,8 @@ s.lower()
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/09ca6ffc811ebc47b2da2ff208b77caaf373445e" title='Last modified Sep 11, 2019 by T.Wakasugi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 11, 2019
+    <a href="https://github.com/alex-shpak/hugo-book/commit/defa184d8b4c2c2e59248eec2fa58ca226313230" title='Last modified Sep 12, 2019 by T.Wakasugi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 12, 2019
     </a>
   </div>
   
@@ -355,10 +394,11 @@ s.lower()
 <li><a href="#文字列">文字列</a>
 <ul>
 <li><a href="#文字列の宣言">文字列の宣言</a></li>
-<li><a href="#文字列の変換">文字列の変換</a>
+<li><a href="#文字列の変換-置換">文字列の変換・置換</a>
 <ul>
 <li><a href="#文字列を全て大文字にする">文字列を全て大文字にする</a></li>
 <li><a href="#文字列を全て小文字にする">文字列を全て小文字にする</a></li>
+<li><a href="#文字列中のある文字を全て別の文字に置換する">文字列中のある文字を全て別の文字に置換する</a></li>
 </ul></li>
 <li><a href="#文字列の追加-削除-分割">文字列の追加・削除・分割</a></li>
 <li><a href="#文字列を数値に変換する">文字列を数値に変換する</a></li>
