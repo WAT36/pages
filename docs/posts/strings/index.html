@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>その他 | WAT Notes</title>
+<title>stringsコマンド | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7317d2e8552a0ac3ea8fd4ba500c3dfb1cc9c74e7afd73eee6d729751fad30.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.ec47279a063a7450d103b12b15919b1a7874526491f6badb9c468d3809344538.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.5b5b96a61dd4ae43d53e36639bd097da16d80aad641169276433f3214d3680ab.js"></script>
 
 
 
@@ -28,7 +28,6 @@ https://github.com/alex-shpak/hugo-book
 <body>
   <input type="checkbox" style="display: none" id="menu-control" />
   <main class="flex container">
-
     <aside class="book-menu fixed">
       <nav>
 <h2 class="book-brand">
@@ -52,7 +51,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fother\2f "] {
+  nav ul a[href$="\2fposts\2fstrings\2f "] {
       color: #004ed0;
   }
   </style>
@@ -93,77 +92,49 @@ https://github.com/alex-shpak/hugo-book
 
     </aside>
 
-    <div class="book-page">
+    <div class="book-posts">
       <header class="flex align-center justify-between book-header">
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>その他</strong>
+  <strong>stringsコマンド</strong>
 </header>
 
       
+
+<header class="markdown">
+  <h1>stringsコマンド</h1>
+  <h5>
+    <strong>Sep 15, 2019</strong>
+  </h5>
+</header>
 <article class="markdown">
 
-<h1 id="その他">その他</h1>
+<p>CTFに興味が出てきたため、社内のCTFのコミュニティに参加してちょこちょこ参加してはいるのだが、なかなか解き進めない・知識が定着せずに困っている。
+なので、１個１個覚えた知識をこのブログにつけることにした。
+最初はこの「strings」コマンドについてを書く。</p>
 
-<p>その他、括れてない手法などをまとめる。</p>
+<h1 id="stringsコマンド">stringsコマンド</h1>
 
-<table>
-<thead>
-<tr>
-<th align="left">説明</th>
-<th align="left">Java</th>
-<th align="left">Python</th>
-<th align="left"></th>
-</tr>
-</thead>
+<p>Linuxのコマンドにstringsというのがあるのだが、このコマンドは実行ファイルなどのバイナリファイルやデータファイル内から表示可能な文字列を抽出して表示してくれる。</p>
 
-<tbody>
-<tr>
-<td align="left">メソッド(関数)の宣言</td>
-<td align="left">(アクセス修飾子) <a href="戻り値の型">static</a> 関数名(引数){}<br>例：<code>public static void main(String[] args){}</code></td>
-<td align="left">def 関数名(引数):<br></td>
-<td align="left"></td>
-</tr>
+<h2 id="使用法">使用法</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ strings <span style="color:#f92672">[</span>オプション<span style="color:#f92672">]</span> ファイル</code></pre></div>
+<h2 id="オプション">オプション</h2>
 
-<tr>
-<td align="left">プログラムを終了する</td>
-<td align="left">return;<br>または<br>System.exit(終了ステータス);</td>
-<td align="left">import sys<br>sys.exit()</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>-a・・・・・ファイル全体をスキャンする</li>
+<li>-f・・・・・文字列の前にファイル名を表示する</li>
+<li>-n 文字数・・指定した文字数以上の連続した文字列を表示する</li>
+<li>-t 指定・・・「o（8進数）」「x（16進数）」「d（10進数）」のいずれかを指定して、文字列の前に位置を表示する</li>
+</ul>
+
+<p>これまで参加したCTFでもファイルが渡された事が何回かあるのだが、stringsコマンドをやる事でフラグが出ることが何回かあった。
+これがまず基本というとこだろうか？（素人意見だが）</p>
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/09ca6ffc811ebc47b2da2ff208b77caaf373445e" title='Last modified Sep 11, 2019 by T.Wakasugi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 11, 2019
-    </a>
-  </div>
-  
-</div>
-
-
-      
     </div>
-    
-  
-
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#その他">その他</a></li>
-</ul>
-</nav>
-  </aside>
-
-
-
   </main>
 
   

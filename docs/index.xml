@@ -32,6 +32,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>stringsコマンド</title>
+      <link>https://WAT36.github.io/pages/posts/strings/</link>
+      <pubDate>Sun, 15 Sep 2019 15:39:01 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/strings/</guid>
+      <description>CTFに興味が出てきたため、社内のCTFのコミュニティに参加してちょこちょこ参加してはいるのだが、なかなか解き進めない・知識が定着せずに</description>
+    </item>
+    
+    <item>
       <title>Pythonで二分探索を行うライブラリ「bisect」</title>
       <link>https://WAT36.github.io/pages/posts/bisect/</link>
       <pubDate>Sat, 14 Sep 2019 14:53:01 +0900</pubDate>
