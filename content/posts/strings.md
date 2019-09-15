@@ -1,7 +1,7 @@
 ---
 title: "stringsコマンド"
 date: 2019-09-15T15:39:01+09:00
-category: ["Linux","CTF"]
+categories: ["Linux","CTF"]
 tags: ["UNIX","Linux","CTF"]
 ---
 
