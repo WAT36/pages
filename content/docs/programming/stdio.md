@@ -25,7 +25,7 @@ tags: [ "java", "python", "標準入力", "標準出力"]
 
 クラスはここではMain.javaとする
 
-```
+```java
 class Main{
     public static void main(String args[]){
       String[] input = args //コマンドライン引数を格納した配列を取得する
@@ -40,7 +40,7 @@ Javaではコマンドライン引数は
 {{< /tab >}}
 {{< tab "Python" >}}
 
-```
+```python
 import sys
 inputs = sys.argv # コマンドライン引数を格納したリストを取得する
 ```
@@ -58,7 +58,7 @@ Pythonはsysモジュールのargv属性にコマンドライン引数がリス�
 
 クラスはここではMain.javaとする
 
-```
+```java
 import java.util.Scanner
 
 class Main{
@@ -87,7 +87,7 @@ https://docs.oracle.com/javase/jp/8/docs/api/java/util/Scanner.html
 {{< /tab >}}
 {{< tab "Python" >}}
 
-```
+```python
 s = input() # コンソールからの入力をsに格納する
 ```
 
@@ -114,7 +114,7 @@ https://docs.python.org/ja/3/library/functions.html#input
 
 クラスはここではMain.javaとする
 
-```
+```java
 class Main{
     public static void main(String args[]){
         //出力後、改行したい時
@@ -133,7 +133,7 @@ javaで画面に出力したい時は **System.out.println()** を利用する�
 {{< /tab >}}
 {{< tab "Python" >}}
 
-```
+```python
 x=(変数もしくはデータ)
 print(x)        # xを画面に出力して改行する
 print(x,end="") # xを画面に出力して改行しない
@@ -156,7 +156,7 @@ https://docs.python.org/ja/3/library/functions.html#print
 
 クラスはここではMain.javaとする
 
-```
+```java
 class Main{
     public static void main(String args[]){
         //出力後、改行したい時
@@ -174,7 +174,7 @@ class Main{
 {{< /tab >}}
 {{< tab "Python" >}}
 
-```
+```python
 import sys
 print(x,file=sys.stderr) # xを画面にエラー出力する
 ```

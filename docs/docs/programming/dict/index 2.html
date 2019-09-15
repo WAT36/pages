@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>数値 | WAT Notes</title>
+<title>辞書、Map | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7317d2e8552a0ac3ea8fd4ba500c3dfb1cc9c74e7afd73eee6d729751fad30.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.6029aabc7290ec1105f2bb16d13f32e8add3bb3ef4b02584caab04919b3585a6.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.ec47279a063a7450d103b12b15919b1a7874526491f6badb9c468d3809344538.js"></script>
 
 
 
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2finteger\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2f dict\2f "] {
       color: #004ed0;
   }
   </style>
@@ -98,13 +98,13 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>数値</strong>
+  <strong>辞書、Map</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="数値">数値</h1>
+<h1 id="辞書-map">辞書、Map</h1>
 
 <table>
 <thead>
@@ -118,83 +118,6 @@ https://github.com/alex-shpak/hugo-book
 
 <tbody>
 <tr>
-<td align="left">数値を文字列に変換する</td>
-<td align="left">String.valueOf(数値)</td>
-<td align="left">str(数値)</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">数字の頭をゼロ詰して表示する</td>
-<td align="left"><strong>String.format(&ldquo;03d&rdquo;,数値)</strong><br>（ゼロ詰して３桁で表示する時の例）</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">数値を１６進数にして表示する</td>
-<td align="left"></td>
-<td align="left">hex(数値)</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">数値を文字列に変更する</td>
-<td align="left">String.valueOf(数値)</td>
-<td align="left">str(数値)</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">階乗の計算</td>
-<td align="left"></td>
-<td align="left">import math<br>math.factorial(数値)</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">絶対値</td>
-<td align="left">Math.abs(数値)</td>
-<td align="left">abs(数値)</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">２つの数字のうち大きい方</td>
-<td align="left">Math.max(数値、数値)</td>
-<td align="left">max(数値、数値・・)<br>幾つでも可</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">２つの数字のうち小さい方</td>
-<td align="left">Math.min(数値、数値)</td>
-<td align="left">min(数値、数値・・)<br>幾つでも可</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">円周率(π)</td>
-<td align="left"></td>
-<td align="left">import numpy as np<br><strong>np.pi</strong></td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">常用対数(底10)</td>
-<td align="left">Math.log10()</td>
-<td align="left">import math<br>math.log10(数値)</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">対数(底2)</td>
-<td align="left"></td>
-<td align="left">import math<br>math.log2(数値)</td>
-<td align="left"></td>
-</tr>
-
-<tr>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -202,79 +125,86 @@ https://github.com/alex-shpak/hugo-book
 </tr>
 
 <tr>
-<td align="left">小数点切り下げ</td>
-<td align="left">Math.floor(数値)</td>
-<td align="left">import math<br>math.floor(数値)<br><hr><br>また、割り算の時は<br>a = b <strong>//</strong> c<br>とすれば割り算と同時に切り下げも行う</td>
+<td align="left">辞書（Map)</td>
+<td align="left">Map<String,String> a = new HashMap<String,String>();<br>(String,Stringの例)</td>
+<td align="left">dict = {}<br></td>
 <td align="left"></td>
 </tr>
 
 <tr>
-<td align="left">小数点切り上げ</td>
-<td align="left">Math.ceil(数値)</td>
-<td align="left">import math<br>math.ceil(数値)<br><hr><br>また、割り算の時は<br>a =<strong>- (-b // c)</strong><br>とすれば割り算と同時に切り下げも行う</td>
+<td align="left">辞書(Map)に要素を置く</td>
+<td align="left">(Map).put(キー,値)</td>
+<td align="left">辞書[キー] = 要素</td>
 <td align="left"></td>
 </tr>
 
 <tr>
-<td align="left">二進数で表示</td>
-<td align="left"></td>
-<td align="left">bin(10進数の数値)</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">二進数で表示した時の長さ</td>
-<td align="left"></td>
-<td align="left">数値.bit_length()</td>
+<td align="left">辞書(Map)からキーを指定して要素取得</td>
+<td align="left">(Map).get(キー)</td>
+<td align="left"><strong>辞書[キー]</strong><br>または<br><strong>辞書.get(key[,default])</strong><br>（defaultはキーがない場合のデフォルト値）</td>
 <td align="left"></td>
 </tr>
 
 <tr>
-<td align="left">８進数で表示</td>
+<td align="left">辞書(Map)から要素削除</td>
 <td align="left"></td>
-<td align="left">oct(10進数の数値)</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">１６進数で表示</td>
-<td align="left"></td>
-<td align="left">hex(10進数の数値)</td>
+<td align="left">辞書.pop(キー)<br>※全削除するなら↓<br>辞書.clear()</td>
 <td align="left"></td>
 </tr>
 
 <tr>
+<td align="left">辞書(Map)から最大のキーを取得</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">xとyの論理和(OR)をとる</td>
-<td align="left"></td>
-<td align="left">x ｜ y</td>
+<td align="left">max(辞書)</td>
 <td align="left"></td>
 </tr>
 
 <tr>
-<td align="left">xとyの論理積(AND)をとる</td>
+<td align="left">辞書(Map)から最小のキーを取得</td>
 <td align="left"></td>
-<td align="left">x &amp; y</td>
-<td align="left"></td>
-</tr>
-
-<tr>
-<td align="left">xとyの排他的論理和(XOR)をとる</td>
-<td align="left"></td>
-<td align="left">x ^ y</td>
+<td align="left">min(辞書)</td>
 <td align="left"></td>
 </tr>
 
 <tr>
-<td align="left">３項演算子</td>
-<td align="left">int a = (条件式) ? (正のとき入れる値) : (負のとき入れる値)</td>
-<td align="left">a = (正のとき入れる値) if (条件式) else (負のとき入れる値)</td>
+<td align="left">辞書(Map)から最大の値を取得</td>
+<td align="left"></td>
+<td align="left">max(辞書.values())</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">辞書(Map)から最小の値を取得</td>
+<td align="left"></td>
+<td align="left">min(辞書.values())</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">辞書(Map)から最大の値をとるキーを取得</td>
+<td align="left"></td>
+<td align="left">max(辞書,key=辞書.get)</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">辞書(Map)から最小の値をとるキーを取得</td>
+<td align="left"></td>
+<td align="left">min(辞書,key=辞書.get)</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">辞書(Map)からキーのリストを取得</td>
+<td align="left"></td>
+<td align="left"><strong>辞書.keys()</strong><br>（dict_keys型で取得。全てのキーを順に取るには<br><strong>for v in 辞書.keys()</strong>）</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">辞書(Map)から値のリストを取得</td>
+<td align="left"></td>
+<td align="left"><strong>辞書.values()</strong><br>（dict_values型で取得。全ての値を順に取るには<br><strong>for i in 辞書.values()</strong>）</td>
 <td align="left"></td>
 </tr>
 
@@ -309,7 +239,7 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#数値">数値</a></li>
+<li><a href="#辞書-map">辞書、Map</a></li>
 </ul>
 </nav>
   </aside>
