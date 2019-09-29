@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7317d2e8552a0ac3ea8fd4ba500c3dfb1cc9c74e7afd73eee6d729751fad30.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.e511bc717bcc2966626c88f2524b80d7b66d4d6cf77d297195297422f8bdfcfc.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.15d1351eebea3304f2197ae608ad18bb4cf21335251e69e68bab7f716ae4f9f4.js"></script>
 
 
 
@@ -120,7 +120,7 @@ https://github.com/alex-shpak/hugo-book
 <li>リストをソート ( sort() ) して一番後のインデックスにある要素（＝最大値）を取る</li>
 </ul>
 
-<p>だったのだが、いずれもどうも時間がかかってしまうらしい。
+<p>だったのだが、いずれの場合も時間がかかってしまうらしい。
 どのようにすれば良かったのか・・？</p>
 
 <p>解説を見て学んだのが &ldquo;優先度付きキュー&rdquo; というアルゴリズム。
@@ -136,8 +136,8 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 
 <p>これを二分木（ヒープ）を用いて効率的に実現したデータ構造の事を言う。
-ヒープの特性上、優先度付きキューにおいて最も高い優先度を持つ要素とは最も低い値のことになり、
-優先度付きキューとは最も低い値を取り出す事の出来るデータ構造と言うことになる。</p>
+ヒープの特性上、優先度付きキューにおいて最も高い優先度を持つ要素とは最小値のことになり、
+優先度付きキューとは最小値を取り出す事の出来るデータ構造と言うことになる。</p>
 
 <h2 id="ヒープとは">ヒープとは</h2>
 
@@ -156,13 +156,17 @@ https://github.com/alex-shpak/hugo-book
 <p>図にある通り、ヒープの特徴としては「子要素は親要素より常に大きいか等しい」と言うところである。
 また、ヒープは上から下へ、左から右へ順にノードが詰まっていく。</p>
 
-<p>「子要素は親要素より常に大きいか等しい」と言う定義から、ヒープの一番親の要素（根）は、常にヒープで一番小さい値ということになる。</p>
+<p>「子要素は親要素より常に大きいか等しい」と言う定義から、ヒープの一番親の要素（根）は、ヒープで一番小さい値(最小値)ということになる。</p>
 
-<p>ちなみに、ヒープにデータを挿入すると、入力したデータはまずヒープの最後尾に追加され、親要素と大小を比較し、親要素よりも大きくなるまで上に上げていく。（下図）</p>
+<h3 id="データの挿入">データの挿入</h3>
+
+<p>ヒープにデータを挿入すると、入力したデータはまずヒープの最後尾に追加され、親要素と大小を比較し、親要素よりも大きくなるまで上に上げていく。（下図）</p>
 
 <p><img src="https://WAT36.github.io/pages/img/heap_insert.png" alt="ヒープ挿入例" /></p>
 
-<p>また、ヒープからデータを削除（＝最小値を削除）した時は、根の位置に最後尾の要素を持っていき、その後子要素と大小を比較していずれの子要素よりも小さくなるまで下に下げていく。（下図）</p>
+<h3 id="データの削除">データの削除</h3>
+
+<p>ヒープからデータを削除（＝最小値を削除）した時は、根の位置に最後尾の要素を持っていき、その後子要素と大小を比較していずれの子要素よりも小さくなるまで下に下げていく。（下図）</p>
 
 <p><img src="https://WAT36.github.io/pages/img/heap_delete.png" alt="ヒープ削除例" /></p>
 
@@ -195,13 +199,23 @@ https://github.com/alex-shpak/hugo-book
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
 <span style="color:#f92672">&gt;&gt;&gt;</span> a
 [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">7</span>]</code></pre></div>
+<p>変換し作成されたヒープはリストを使って表現される。
+このリストでのヒープの見方は、リストのインデックスをkとした時、</p>
+
+<ul>
+<li>親要素    : リスト[k]</li>
+<li>子要素    : リスト[2k+1]、リスト[2k+2]</li>
+</ul>
+
+<p>となる。</p>
+
 <h3 id="heappush-heappop">heappush,heappop</h3>
 
-<p>heappush関数は要素をヒープにpushする関数である。
-pushされた要素は前述のヒープ挿入例に基づき、ヒープ内で要素が移動され、最終的にヒープ内で親子間の大小が保たれた形で保持される。
+<p>heappush関数は要素をヒープにpushする関数である。<br />
+pushされた要素は前述のヒープ挿入例に基づき、ヒープ内で要素が移動され、最終的にヒープ内で親子間の大小が保たれた形で保持される。<br />
 対して、heappop関数はヒープから要素を取り出し取得する関数である。
-なお、heappopで取り出すのはヒープにおける最小の要素である。
-heappop後のヒープはheappushの時と同様に前述のヒープ削除例に基づき、ヒープ内で要素が移動され、最終的にヒープ内で親子間の大小が保たれた形で保持される。
+なお、heappopで取り出すのはヒープにおける最小の要素である。<br />
+heappop後のヒープはheappushの時と同様に前述のヒープ削除例に基づき、ヒープ内で要素が移動され、最終的にヒープ内で親子間の大小が保たれた形で保持される。<br />
 使用例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> 
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> heapq
@@ -225,11 +239,11 @@ heappop後のヒープはheappushの時と同様に前述のヒープ削除例�
 <span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
 <h3 id="heappushpop-heapreplace">heappushpop,heapreplace</h3>
 
-<p>heappushpop関数はheappushとheappopを同時に行う関数である。
-順序としてはheappushを行ってからheappopを行う。
-heapreplace関数はその逆でheappopとheappushを同時に行うと言う点では同じだが、
-順序はheappopを行ってからheappushを行う。
-公式によるとheappushとheappopを別々に行うよりも、これらの関数を使う方が効率的に行えるとの事。
+<p>heappushpop関数はheappushとheappopを同時に行う関数である。<br />
+順序としてはheappushを行ってからheappopを行う。<br />
+heapreplace関数はその逆でheappopとheappushを同時に行うと言う点では同じだが、<br />
+順序はheappopを行ってからheappushを行う。<br />
+公式によるとheappushとheappopを別々に行うよりも、これらの関数を使う方が効率的に行えるとの事。<br />
 使用例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> heapq
 <span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span>[<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>]
@@ -264,17 +278,17 @@ heapreplace関数はその逆でheappopとheappushを同時に行うと言う点
 <span style="color:#f92672">&gt;&gt;&gt;</span> a
 [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>]
 <span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
-<p>heappushpop,heapreplaceはpushとpopを行う順序から、popした時に取り出される要素は最小の要素でない場合もあると言うことに注意する。
+<p>heappushpop,heapreplaceはpushとpopを行う順序から、popした時に取り出される要素は最小の要素でない場合もあると言うことに注意する。<br />
 上記の例でいうと、ヒープにヒープのどの要素よりも小さい要素をpushした時、heappushpopの場合は要素をpushしてからpopするためpushした要素がpopされるが、
-heapreplaceはヒープからpopしてから要素をpushするため、popされる要素はpushする前のヒープの最小値であり、また動作後のヒープはpushした要素が最小値となったヒープになる</p>
+heapreplaceはヒープからpopしてから要素をpushするため、popされる要素はpushする前のヒープの最小値であり、また動作後のヒープはpushした要素が最小値となったヒープになる。</p>
 
 <h2 id="ヒープから最大値を取り出すには">ヒープから最大値を取り出すには？</h2>
 
-<p>ヒープはその特性上、最小値しか取り出すことはできない。
+<p>ヒープはその特性上、最小値しか取り出すことはできない。<br />
 もし、最大値を取り出したいといった時はどうするか？</p>
 
-<p>方法としては、要素の符号を全て逆転（-1を掛ける）させてからヒープを組ませる。
-すると、そのヒープの最小値には元の最大値×(-1)した要素が来る。
+<p>方法の一例としては、要素の符号を全て逆転（-1を掛ける）させてからヒープを組ませる。<br />
+すると、そのヒープの最小値には元の最大値×(-1)した要素が来る。<br />
 その要素を取り出して(pop)また符号を逆転（-1を掛ける）させてやれば、最終的には最大値を取り出すことが可能となる。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> heapq
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#リスト（ヒープ）aから最大値を取り出す。最大値は14</span>
