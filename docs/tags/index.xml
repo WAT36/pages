@@ -6,10 +6,37 @@
     <description>Recent content in Tags on WAT Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sat, 28 Sep 2019 14:09:58 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 20:55:27 +0900</lastBuildDate>
     
 	<atom:link href="https://WAT36.github.io/pages/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CTF</title>
+      <link>https://WAT36.github.io/pages/tags/CTF/</link>
+      <pubDate>Thu, 03 Oct 2019 20:55:27 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/tags/CTF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://WAT36.github.io/pages/tags/Linux/</link>
+      <pubDate>Thu, 03 Oct 2019 20:55:27 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/tags/Linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UNIX</title>
+      <link>https://WAT36.github.io/pages/tags/UNIX/</link>
+      <pubDate>Thu, 03 Oct 2019 20:55:27 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/tags/UNIX/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>python</title>
@@ -26,33 +53,6 @@
       <pubDate>Sat, 28 Sep 2019 14:09:58 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/tags/%E5%84%AA%E5%85%88%E5%BA%A6%E4%BB%98%E3%81%8D%E3%82%AD%E3%83%A5%E3%83%BC/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CTF</title>
-      <link>https://WAT36.github.io/pages/tags/CTF/</link>
-      <pubDate>Sun, 15 Sep 2019 15:39:01 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/tags/CTF/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://WAT36.github.io/pages/tags/Linux/</link>
-      <pubDate>Sun, 15 Sep 2019 15:39:01 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/tags/Linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>UNIX</title>
-      <link>https://WAT36.github.io/pages/tags/UNIX/</link>
-      <pubDate>Sun, 15 Sep 2019 15:39:01 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/tags/UNIX/</guid>
       <description></description>
     </item>
     
