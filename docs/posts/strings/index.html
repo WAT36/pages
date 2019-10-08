@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.43f0d7e6ba2a792bbdd374977171cf2a9260f5beb832f46ba9b67c1c49319400.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.085b7e8107bb5980024557008c47effaf45fedc41a9b4d8b2890c986f728ae4a.js"></script>
 
 
 
@@ -114,8 +114,6 @@ https://github.com/alex-shpak/hugo-book
 なので、１個１個覚えた知識をこのブログにつけることにした。
 最初はこの「strings」コマンドについてを書く。</p>
 
-<h1 id="stringsコマンド">stringsコマンド</h1>
-
 <p>Linuxのコマンドにstringsというのがあるのだが、このコマンドは実行ファイルなどのバイナリファイルやデータファイル内から表示可能な文字列を抽出して表示してくれる。</p>
 
 <h2 id="使用法">使用法</h2>
@@ -124,9 +122,9 @@ https://github.com/alex-shpak/hugo-book
 
 <ul>
 <li>-a・・・・・ファイル全体をスキャンする</li>
-<li>-f・・・・・文字列の前にファイル名を表示する</li>
-<li>-n 文字数・・指定した文字数以上の連続した文字列を表示する</li>
-<li>-t 指定・・・「o（8進数）」「x（16進数）」「d（10進数）」のいずれかを指定して、文字列の前に位置を表示する</li>
+<li>-f・・・・・ファイル名も表示する</li>
+<li>-n 文字数・・最低でも指定した文字数以上の長さを表示する</li>
+<li>-t 指定・・・「o（8進数）」「x（16進数）」「d（10進数）」のいずれかを指定して表示する</li>
 </ul>
 
 <p>これまで参加したCTFでもファイルが渡された事が何回かあるのだが、stringsコマンドをやる事でフラグが出ることが何回かあった。
