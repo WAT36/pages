@@ -32,6 +32,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>標準入力・出力</title>
+      <link>https://WAT36.github.io/pages/docs/programming/stdio/stdio_index/</link>
+      <pubDate>Thu, 10 Oct 2019 07:33:35 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/stdio/stdio_index/</guid>
+      <description>標準入力・出力についての記事をまとめる。 標準入力 コマンドライン引数 コンソール入力 標準出力 標準出力 標準エラー出力</description>
+    </item>
+    
+    <item>
       <title>優先度付きキュー（ヒープ）とPythonで実装するライブラリ「heapq」について</title>
       <link>https://WAT36.github.io/pages/posts/heapq/</link>
       <pubDate>Sat, 28 Sep 2019 14:09:58 +0900</pubDate>

@@ -6,7 +6,7 @@
     <description>Recent content in Docs on WAT Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sat, 07 Sep 2019 18:23:49 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 10 Oct 2019 07:33:35 +0900</lastBuildDate>
     
 	<atom:link href="https://WAT36.github.io/pages/docs/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,6 +30,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>標準入力・出力</title>
+      <link>https://WAT36.github.io/pages/docs/programming/stdio/stdio_index/</link>
+      <pubDate>Thu, 10 Oct 2019 07:33:35 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/stdio/stdio_index/</guid>
+      <description>標準入力・出力についての記事をまとめる。 標準入力 コマンドライン引数 コンソール入力 標準出力 標準出力 標準エラー出力</description>
     </item>
     
     <item>
