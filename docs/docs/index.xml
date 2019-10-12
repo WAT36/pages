@@ -6,7 +6,7 @@
     <description>Recent content in Docs on WAT Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Thu, 10 Oct 2019 07:33:35 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 12 Oct 2019 16:42:45 +0900</lastBuildDate>
     
 	<atom:link href="https://WAT36.github.io/pages/docs/index.xml" rel="self" type="application/rss+xml" />
     
@@ -33,12 +33,21 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>コマンドライン引数</title>
+      <link>https://WAT36.github.io/pages/docs/programming/stdio/commandline_input/</link>
+      <pubDate>Sat, 12 Oct 2019 16:42:45 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/stdio/commandline_input/</guid>
+      <description>コマンドライン引数 標準入力のコマンドライン引数について。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ String[] input = args //コマンドライン引</description>
+    </item>
+    
+    <item>
       <title>標準入力・出力</title>
       <link>https://WAT36.github.io/pages/docs/programming/stdio/stdio_index/</link>
       <pubDate>Thu, 10 Oct 2019 07:33:35 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/stdio/stdio_index/</guid>
-      <description>標準入力・出力についての記事をまとめる。 標準入力 コマンドライン引数 コンソール入力 標準出力 標準出力 標準エラー出力</description>
+      <description>標準入力・出力 標準入力・出力についての記事。 標準入力 コマンドライン引数 コンソール入力 標準出力 標準出力 標準エラー出力</description>
     </item>
     
     <item>
@@ -121,18 +130,6 @@ Follow the following steps:
     
     <item>
       <title></title>
-      <link>https://WAT36.github.io/pages/docs/programming/jp_index/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/jp_index/</guid>
-      <description> プログラミング言語別対応メモ 社会人になってからは業務でJavaをバリバリ書いたり学んだりしていた私が、急にPythonをやる必要が出てきた（自分からやりたくなったというのも半分あるが）ため、 学びやすい様にPythonの文法・関数とJavaの文法とを対応づけさせる様にしたメモである。
-自身もまだ勉強中のため、随時更新予定。
-またjavaやpythonに関わらず、新しい言語についても随時追加していく予定。
-標準入力・出力 文字列 数値 タプル、リスト 辞書、Map 関数、メソッド逆引き 他、Pythonの小技など その他 </description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://WAT36.github.io/pages/docs/sample/examples/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -197,6 +194,15 @@ Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt d
       <guid>https://WAT36.github.io/pages/docs/sub-section/</guid>
       <description>Fida abluere audiat moram ferarum terram virgae Facere fluidove ab naides ut sic cornu Lorem markdownum Lucifer est, ire tangit inposito terram. Ore et pes lavet nuper longam, longa sub, erat nec Lemnicolae, in. Et nec tantaque sollicitive cognovi et ut videbar verso passis, Epimethida tutos. Dedecus Desine morae.
 Fervens esse et tenet cinisque per: et vir equus formaque superorum tollit, vires meae magnum; Latona. Fundamine potitur genialis: imagine gaudet et herba rura vates horrendum, laborum quis: potero aureus habitantque illos nox?</description>
+    </item>
+    
+    <item>
+      <title>プログラミング言語別対応メモ</title>
+      <link>https://WAT36.github.io/pages/docs/programming/jp_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/jp_index/</guid>
+      <description>プログラミング言語別対応メモ 社会人になってからは業務でJavaをバリバリ書いたり学んだりしていた私が、急にPythonをやる必要が出てきた（</description>
     </item>
     
   </channel>

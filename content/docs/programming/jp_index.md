@@ -1,3 +1,7 @@
+---
+title: "プログラミング言語別対応メモ"
+---
+
 # プログラミング言語別対応メモ
 
 社会人になってからは業務でJavaをバリバリ書いたり学んだりしていた私が、急にPythonをやる必要が出てきた（自分からやりたくなったというのも半分あるが）ため、
@@ -6,7 +10,7 @@
 またjavaやpythonに関わらず、新しい言語についても随時追加していく予定。
 
 
-## [標準入力・出力]({{< relref "/docs/programming/stdio.md" >}})
+## [標準入力・出力]({{< relref "/docs/programming/stdio/stdio_index.md" >}})
 
 ## [文字列]({{< relref "/docs/programming/string.md" >}})
 

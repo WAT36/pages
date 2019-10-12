@@ -14,12 +14,17 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2019-10-10T07:33:35+09:00</lastmod>
+    <lastmod>2019-10-12T16:42:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/stdio/commandline_input/</loc>
+    <lastmod>2019-10-12T16:42:45+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/stdio/stdio_index/</loc>
-    <lastmod>2019-10-10T07:33:35+09:00</lastmod>
+    <lastmod>2019-10-10T07:37:58+09:00</lastmod>
   </url>
   
   <url>
@@ -38,12 +43,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
     <lastmod>2019-10-10T00:25:27+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
     <lastmod>2019-10-10T00:25:27+09:00</lastmod>
   </url>
   
@@ -168,11 +173,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/jp_index/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/sample/examples/</loc>
     <priority>0</priority>
   </url>
@@ -220,6 +220,11 @@
   <url>
     <loc>https://WAT36.github.io/pages/</loc>
     <lastmod>2019-09-11T22:14:59+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/jp_index/</loc>
+    <lastmod>2019-09-12T00:17:51+09:00</lastmod>
   </url>
   
 </urlset>
