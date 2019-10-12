@@ -17,7 +17,7 @@
       <pubDate>Tue, 03 Sep 2019 00:06:44 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/stdio/</guid>
-      <description>標準入力・出力 標準入力・出力について、主な動作をまとめる。 標準入力 データの入力について ソースコードを実行する時及び実行中に、何かデータを入力</description>
+      <description>標準入力・出力 標準入力・出力について、主な動作をまとめる。 標準入力 標準出力 標準出力は指定したデータの内容をコンソール画面に出力する事を言うが</description>
     </item>
     
   </channel>
