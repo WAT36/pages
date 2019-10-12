@@ -32,6 +32,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>標準出力</title>
+      <link>https://WAT36.github.io/pages/docs/programming/stdio/stdout/</link>
+      <pubDate>Sat, 12 Oct 2019 17:19:30 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/stdio/stdout/</guid>
+      <description>標準出力について。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ //出力後、改行したい時 System.out.println(変数</description>
+    </item>
+    
+    <item>
       <title>コンソール入力</title>
       <link>https://WAT36.github.io/pages/docs/programming/stdio/console_input/</link>
       <pubDate>Sat, 12 Oct 2019 17:03:35 +0900</pubDate>
@@ -145,7 +154,7 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Tue, 03 Sep 2019 00:06:44 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/stdio/</guid>
-      <description>標準入力・出力 標準入力・出力について、主な動作をまとめる。 標準入力 標準出力 標準出力は指定したデータの内容をコンソール画面に出力する事を言うが</description>
+      <description>標準入力・出力 標準入力・出力について、主な動作をまとめる。 標準入力 標準出力 標準出力 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ /</description>
     </item>
     
     <item>

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>標準入力、出力 | WAT Notes</title>
+<title>標準出力 | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fstdio\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fstdio\2fstdout\2f "] {
       color: #004ed0;
   }
   </style>
@@ -98,23 +98,11 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>標準入力、出力</strong>
+  <strong>標準出力</strong>
 </header>
 
       
-<article class="markdown">
-
-<h1 id="標準入力-出力">標準入力・出力</h1>
-
-<p>標準入力・出力について、主な動作をまとめる。</p>
-
-<h2 id="標準入力">標準入力</h2>
-
-<hr>
-
-<h2 id="標準出力">標準出力</h2>
-
-<h3 id="標準出力-1">標準出力</h3>
+<article class="markdown"><p>標準出力について。</p>
 
 
 
@@ -161,60 +149,10 @@ https://github.com/alex-shpak/hugo-book
 
 </div>
 
-
-<h3 id="標準エラー出力">標準エラー出力</h3>
-
-
-
-
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-standard_error_output" style="display: none;" id="tabs-standard_error_output-0" checked="checked" />
-  <label for="tabs-standard_error_output-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>クラスはここではMain.javaとする</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-        <span style="color:#75715e">//出力後、改行したい時
-</span><span style="color:#75715e"></span>        System.<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">println</span>(変数もしくはデータ);
-
-        <span style="color:#75715e">//出力後、改行したくない時
-</span><span style="color:#75715e"></span>        System.<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">print</span>(変数もしくはデータ);
-    }
-}</code></pre></div>
-<p>基本標準出力の時と同じ。<br>
-ただし、エラー出力はjavaの場合例外処理を受け取ったときに利用するため、そのときに出たエラーメッセージを出力するのが普通。</p>
-
-  </div>
-
-  <input type="radio" name="tabs-standard_error_output" style="display: none;" id="tabs-standard_error_output-1"  />
-  <label for="tabs-standard_error_output-1">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> sys
-<span style="color:#66d9ef">print</span>(x,file<span style="color:#f92672">=</span>sys<span style="color:#f92672">.</span>stderr) <span style="color:#75715e"># xを画面にエラー出力する</span></code></pre></div>
-<p>Pythonでエラー出力を扱うにはまずsysモジュールをインポートし、<br>
-print()のfileパラメータに <strong>sys.stderr</strong> を指定する。</p>
-
-  </div>
-
-</div>
-
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/159457c2e7d59dc897a090d3b0ff4badd59b3d1b" title='Last modified Oct 12, 2019 by T.Wakasugi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 12, 2019
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
@@ -223,22 +161,6 @@ print()のfileパラメータに <strong>sys.stderr</strong> を指定する。<
     </div>
     
   
-
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#標準入力-出力">標準入力・出力</a>
-<ul>
-<li><a href="#標準入力">標準入力</a></li>
-<li><a href="#標準出力">標準出力</a>
-<ul>
-<li><a href="#標準出力-1">標準出力</a></li>
-<li><a href="#標準エラー出力">標準エラー出力</a></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
-  </aside>
 
 
 
