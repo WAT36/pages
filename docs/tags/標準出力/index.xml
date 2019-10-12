@@ -6,18 +6,27 @@
     <description>Recent content in 標準出力 on WAT Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Tue, 03 Sep 2019 00:06:44 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 12 Oct 2019 17:25:47 +0900</lastBuildDate>
     
 	<atom:link href="https://WAT36.github.io/pages/tags/%E6%A8%99%E6%BA%96%E5%87%BA%E5%8A%9B/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>標準入力、出力</title>
-      <link>https://WAT36.github.io/pages/docs/programming/stdio/</link>
-      <pubDate>Tue, 03 Sep 2019 00:06:44 +0900</pubDate>
+      <title>標準エラー出力</title>
+      <link>https://WAT36.github.io/pages/docs/programming/stdio/stderr/</link>
+      <pubDate>Sat, 12 Oct 2019 17:25:47 +0900</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/programming/stdio/</guid>
-      <description>標準入力・出力 標準入力・出力について、主な動作をまとめる。 標準入力 標準出力 標準出力 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ /</description>
+      <guid>https://WAT36.github.io/pages/docs/programming/stdio/stderr/</guid>
+      <description>標準エラー出力 標準エラー出力について。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ //出力後、改行したい時 System.err.</description>
+    </item>
+    
+    <item>
+      <title>標準出力</title>
+      <link>https://WAT36.github.io/pages/docs/programming/stdio/stdout/</link>
+      <pubDate>Sat, 12 Oct 2019 17:19:30 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/stdio/stdout/</guid>
+      <description>標準出力 標準出力について。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ //出力後、改行したい時 System.out.printl</description>
     </item>
     
   </channel>

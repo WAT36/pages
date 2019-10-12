@@ -12,7 +12,7 @@ date: 2019-10-10T07:33:35+09:00
  - [コンソール入力]({{< relref "/docs/programming/stdio/console_input.md" >}})
 - 標準出力
  - [標準出力]({{< relref "/docs/programming/stdio/stdout.md" >}})
- - 標準エラー出力
+ - [標準エラー出力]({{< relref "/docs/programming/stdio/stderr.md" >}})
 
 <hr>
 
