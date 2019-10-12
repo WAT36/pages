@@ -32,6 +32,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>コンソール入力</title>
+      <link>https://WAT36.github.io/pages/docs/programming/stdio/console_input/</link>
+      <pubDate>Sat, 12 Oct 2019 17:03:35 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/stdio/console_input/</guid>
+      <description>コンソール入力 標準入力のコンソール入力について。 Java クラスはここではMain.javaとする import java.util.Scanner class Main{ public static void main(String args[]){ //Scannerのインスタンス</description>
+    </item>
+    
+    <item>
       <title>コマンドライン引数</title>
       <link>https://WAT36.github.io/pages/docs/programming/stdio/commandline_input/</link>
       <pubDate>Sat, 12 Oct 2019 16:42:45 +0900</pubDate>

@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.bbed2b7e61d765f52cac1e38939d07a7321956c2d8ed5f8cf806f8b8c927e131.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.06240650636f18a615493f07546fc59feee7b376a00da508e721df11eef0cab2.js"></script>
 
 
 
@@ -117,62 +117,6 @@ https://github.com/alex-shpak/hugo-book
 ソースコードを実行した後に、キーボード等でデータを打ち込んで入力する方法がある。<br>
 （後者はここではコンソール入力と呼ぶことにする、何か具体的な名前ってあったか？）</p>
 
-<h3 id="コンソール入力">コンソール入力</h3>
-
-
-
-
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-console_input" style="display: none;" id="tabs-console_input-0" checked="checked" />
-  <label for="tabs-console_input-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>クラスはここではMain.javaとする</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">Scanner</span>
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
-  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-
-    <span style="color:#75715e">//Scannerのインスタンスを生成
-</span><span style="color:#75715e"></span>    Scanner <span style="color:#a6e22e">sc</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner(System.<span style="color:#a6e22e">in</span>);
-
-    <span style="color:#75715e">//入力を何のデータ型で受け取るかで別れる
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">//(例)int型
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> sc.<span style="color:#a6e22e">nextInt</span>();
-
-    <span style="color:#75715e">//String型（１行分全て）
-</span><span style="color:#75715e"></span>    String <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> sc.<span style="color:#a6e22e">nextLine</span>();
-    <span style="color:#75715e">//String型（スペース等で区切った一部分ずつ）
-</span><span style="color:#75715e"></span>    String <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> sc.<span style="color:#a6e22e">next</span>();
-  }
-}</code></pre></div>
-<p>javaでコンソールからの入力を扱うには <strong>Scanner</strong> クラスをインポートし、インスタンスを生成する。<br>
-その後、入力データを何のデータ型で受け取るかにより利用するScannerクラスのメソッドが別れるが、多いので一部に留める。<br>
-全て知りたい人は以下の公式サイトを参照。<br>
-<a href="https://docs.oracle.com/javase/jp/8/docs/api/java/util/Scanner.html">https://docs.oracle.com/javase/jp/8/docs/api/java/util/Scanner.html</a></p>
-
-  </div>
-
-  <input type="radio" name="tabs-console_input" style="display: none;" id="tabs-console_input-1"  />
-  <label for="tabs-console_input-1">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">s <span style="color:#f92672">=</span> input() <span style="color:#75715e"># コンソールからの入力をsに格納する</span></code></pre></div>
-<p>Pythonでコンソールからの入力を扱うには組み込み関数の <strong>input()</strong> を使う。<br>
-基本入力１行を読み込み、文字列に変換して渡される。<br>
-数値にしたい場合はint()で囲うなどし、スペースを区切りたい時などはsplit()等を使う。<br>
-詳しくは以下の公式ドキュメント参照。<br>
-<a href="https://docs.python.org/ja/3/library/functions.html#input">https://docs.python.org/ja/3/library/functions.html#input</a></p>
-
-  </div>
-
-</div>
-
-
 <hr>
 
 <h2 id="標準出力">標準出力</h2>
@@ -277,8 +221,8 @@ print()のfileパラメータに <strong>sys.stderr</strong> を指定する。<
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/319a10a49b877ce30c1e5504df82c5ae12028591" title='Last modified Sep 15, 2019 by T.Wakasugi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 15, 2019
+    <a href="https://github.com/alex-shpak/hugo-book/commit/d7345e28bee7e6560739598faed5659c820e306a" title='Last modified Oct 12, 2019 by T.Wakasugi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 12, 2019
     </a>
   </div>
   
@@ -295,10 +239,7 @@ print()のfileパラメータに <strong>sys.stderr</strong> を指定する。<
 <ul>
 <li><a href="#標準入力-出力">標準入力・出力</a>
 <ul>
-<li><a href="#標準入力">標準入力</a>
-<ul>
-<li><a href="#コンソール入力">コンソール入力</a></li>
-</ul></li>
+<li><a href="#標準入力">標準入力</a></li>
 <li><a href="#標準出力">標準出力</a>
 <ul>
 <li><a href="#標準出力-1">標準出力</a></li>
