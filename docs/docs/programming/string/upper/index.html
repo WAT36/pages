@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>コマンドライン引数 | WAT Notes</title>
+<title>英字文字列を全て英字大文字にする | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fstdio\2f commandline_input\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fstring\2fupper\2f "] {
       color: #004ed0;
   }
   </style>
@@ -98,15 +98,16 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>コマンドライン引数</strong>
+  <strong>英字文字列を全て英字大文字にする</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="コマンドライン引数">コマンドライン引数</h1>
+<h1 id="英字文字列を全て英字大文字にする">英字文字列を全て英字大文字にする</h1>
 
-<p>標準入力のコマンドライン引数について。</p>
+<p>英字の文字列を全て大文字にする方法について。
+ほとんどの言語では、だいたいこの手の関数やメソッドが用意されているので、それを利用する。</p>
 
 
 
@@ -114,32 +115,32 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" name="tabs-commandline_input" style="display: none;" id="tabs-commandline_input-0" checked="checked" />
-  <label for="tabs-commandline_input-0">
+  <input type="radio" name="tabs-string_uppercase" style="display: none;" id="tabs-string_uppercase-0" checked="checked" />
+  <label for="tabs-string_uppercase-0">
     Java
   </label>
   <div class="book-tabs-content markdown-inner">
     <p>クラスはここではMain.javaとする</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
     <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-      String[] <span style="color:#a6e22e">input</span> <span style="color:#f92672">=</span> args <span style="color:#75715e">//コマンドライン引数を格納した配列を取得する
-</span><span style="color:#75715e"></span>    }
+      String <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;test&#34;</span>;
+      s <span style="color:#f92672">=</span> s.<span style="color:#a6e22e">toUpperCase</span>();
+    }
 }</code></pre></div>
-<p>Javaではコマンドライン引数は
-クラス内で宣言するmainメソッドの引数であるString型の配列(上記コード中の&rdquo;args&rdquo;)に入る。<br>
-コマンドライン引数をスペースで区切って何個かに分けて入力した場合、初めから順にargsの0番目から順に入る。</p>
+<p>JavaではStringクラスに <strong>toUpperCase()</strong> というメソッドがあり、これにより文字列を全て英大文字に変換して表示してくれる。<br>
+ただし、文字列自体が変換されるわけではないので、反映させたい場合は出力を元の変数に代入してやる必要がある。</p>
 
   </div>
 
-  <input type="radio" name="tabs-commandline_input" style="display: none;" id="tabs-commandline_input-1"  />
-  <label for="tabs-commandline_input-1">
+  <input type="radio" name="tabs-string_uppercase" style="display: none;" id="tabs-string_uppercase-1"  />
+  <label for="tabs-string_uppercase-1">
     Python
   </label>
   <div class="book-tabs-content markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> sys
-inputs <span style="color:#f92672">=</span> sys<span style="color:#f92672">.</span>argv <span style="color:#75715e"># コマンドライン引数を格納したリストを取得する</span></code></pre></div>
-<p>Pythonはsysモジュールのargv属性にコマンドライン引数がリストとして入る。<br>
-コマンドライン引数を取得するには、sysモジュールをインポートしてargvを参照する。</p>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;test&#34;</span>
+s<span style="color:#f92672">.</span>upper()</code></pre></div>
+<p>Pythonは文字列型のstrオブジェクトにメソッド <strong>upper()</strong> があり、これにより文字列を全て大文字にできる。<br>
+ただし、これも文字列自体が変換されるわけではないので、反映させたい場合は出力を元の変数に代入してやる必要がある。</p>
 
   </div>
 
@@ -148,14 +149,7 @@ inputs <span style="color:#f92672">=</span> sys<span style="color:#f92672">.</sp
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/1ecc02d9a54802cf25dc682e43d5be5bdc6ae248" title='Last modified Oct 12, 2019 by T.Wakasugi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 12, 2019
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
@@ -168,7 +162,7 @@ inputs <span style="color:#f92672">=</span> sys<span style="color:#f92672">.</sp
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#コマンドライン引数">コマンドライン引数</a></li>
+<li><a href="#英字文字列を全て英字大文字にする">英字文字列を全て英字大文字にする</a></li>
 </ul>
 </nav>
   </aside>

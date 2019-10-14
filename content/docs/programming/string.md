@@ -13,39 +13,7 @@ tags: [ "java", "python", "文字列"]
 
 ## 文字列の変換・置換
 
-### 文字列を全て大文字にする
 
-{{< tabs "string_uppercase" >}}
-{{< tab "Java" >}}
-
-クラスはここではMain.javaとする
-
-```java
-class Main{
-    public static void main(String args[]){
-      String s = "test";
-      s = s.toUpperCase();
-    }
-}
-```
-
-JavaではStringクラスに **toUpperCase()** というメソッドがあり、これにより文字列を全て英大文字に変換して表示してくれる。<br>
-ただし、文字列自体が変換されるわけではないので、反映させたい場合は出力を元の変数に代入してやる必要がある。
-
-{{< /tab >}}
-{{< tab "Python" >}}
-
-```python
-s = "test"
-s.upper()
-```
-
-Pythonは文字列型のstrオブジェクトにメソッド **upper()** があり、これにより文字列を全て大文字にできる。<br>
-ただし、これも文字列自体が変換されるわけではないので、反映させたい場合は出力を元の変数に代入してやる必要がある。
-
-
-{{< /tab >}}
-{{< /tabs >}}
 
 ### 文字列を全て小文字にする
 

@@ -14,12 +14,17 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2019-10-14T23:26:28+09:00</lastmod>
+    <lastmod>2019-10-14T23:32:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/string/upper/</loc>
+    <lastmod>2019-10-14T23:32:45+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/string/string_index/</loc>
-    <lastmod>2019-10-14T23:26:28+09:00</lastmod>
+    <lastmod>2019-10-14T23:30:30+09:00</lastmod>
   </url>
   
   <url>
@@ -108,12 +113,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
     <lastmod>2019-10-10T00:25:27+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
     <lastmod>2019-10-10T00:25:27+09:00</lastmod>
   </url>
   
@@ -249,7 +254,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/jp_index/</loc>
-    <lastmod>2019-10-12T17:02:53+09:00</lastmod>
+    <lastmod>2019-10-14T23:30:30+09:00</lastmod>
   </url>
   
 </urlset>
