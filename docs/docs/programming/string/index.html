@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.792b05bdf1dd7a15a54bf25018ddacc02f54ade7e3b3d18535d49f110f8aefcc.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.6300bfc6dcd6707797b94c991fd31b8c3b75e477a5bd99f2b71c287bccfabd51.js"></script>
 
 
 
@@ -111,56 +111,6 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="文字列の宣言">文字列の宣言</h2>
 
 <h2 id="文字列の変換-置換">文字列の変換・置換</h2>
-
-<h3 id="文字列中のある文字を全て別の文字に置換する">文字列中のある文字を全て別の文字に置換する</h3>
-
-
-
-
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-string_replace" style="display: none;" id="tabs-string_replace-0" checked="checked" />
-  <label for="tabs-string_replace-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>javaで文字列を置換したい時は <strong>replace()</strong> メソッドを使う。<br>
-使用法は以下の通り。</p>
-
-<pre><code>文字列.replace(置換前の文字列,置換後の文字列);
-</code></pre>
-
-<p>以下に使用例を示す。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;test&#34;</span>;
-String <span style="color:#a6e22e">t</span> <span style="color:#f92672">=</span> s.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;t&#34;</span>,<span style="color:#e6db74">&#34;b&#34;</span>);
-System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(t); <span style="color:#f92672">//</span> besb</code></pre></div>
-<p>上記例では&rdquo;test&rdquo;という文字列をreplaceメソッドで&rdquo;t&rdquo;を&rdquo;b&rdquo;に置換し、結果を表示している。結果として&rdquo;besb&rdquo;という文字列が表示される。</p>
-
-  </div>
-
-  <input type="radio" name="tabs-string_replace" style="display: none;" id="tabs-string_replace-1"  />
-  <label for="tabs-string_replace-1">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Pythonでは文字列型のstrオブジェクトにメソッド <strong>replace()</strong> があり、これにより文字列中の文字を置換できる。<br>
-使用法は以下の通り。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">文字列</span><span style="color:#f92672">.</span>replace(old,new [,count]);</code></pre></div>
-<p>これにより文字列中のoldの部分をnewに変換する。
-また、オプション引数countがあり、指定すると先頭からcount個分のoldのみを置換する。</p>
-
-<p>使用例を以下に示す。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;test&#34;</span>
-t <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34;t&#34;</span>,<span style="color:#e6db74">&#34;b&#34;</span>)
-<span style="color:#66d9ef">print</span>(t)  <span style="color:#75715e"># &#34;besb&#34;</span>
-
-t <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34;t&#34;</span>,<span style="color:#e6db74">&#34;b&#34;</span>,<span style="color:#ae81ff">1</span>)
-<span style="color:#66d9ef">print</span>(t)  <span style="color:#75715e"># &#34;best&#34;</span></code></pre></div>
-  </div>
-
-</div>
-
 
 <h2 id="文字列の追加-削除-分割">文字列の追加・削除・分割</h2>
 
@@ -315,7 +265,7 @@ t <span style="color:#f92672">=</span> s <span style="color:#f92672">*</span> <s
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/173d58c65715a543e30579fabe2086c242f31a75" title='Last modified Oct 14, 2019 by T.Wakasugi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/9e9b3f4c86554e5a1a056e27f88a171209499e08" title='Last modified Oct 14, 2019 by T.Wakasugi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 14, 2019
     </a>
   </div>
@@ -334,10 +284,7 @@ t <span style="color:#f92672">=</span> s <span style="color:#f92672">*</span> <s
 <li><a href="#文字列">文字列</a>
 <ul>
 <li><a href="#文字列の宣言">文字列の宣言</a></li>
-<li><a href="#文字列の変換-置換">文字列の変換・置換</a>
-<ul>
-<li><a href="#文字列中のある文字を全て別の文字に置換する">文字列中のある文字を全て別の文字に置換する</a></li>
-</ul></li>
+<li><a href="#文字列の変換-置換">文字列の変換・置換</a></li>
 <li><a href="#文字列の追加-削除-分割">文字列の追加・削除・分割</a>
 <ul>
 <li><a href="#文字列に別の文字列を追加する">文字列に別の文字列を追加する</a></li>

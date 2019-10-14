@@ -80,7 +80,7 @@
       <pubDate>Tue, 03 Sep 2019 07:54:45 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/string/</guid>
-      <description>文字列 文字列について、主な動作をまとめる。 文字列の宣言 文字列の変換・置換 文字列中のある文字を全て別の文字に置換する Java javaで文字列を置換し</description>
+      <description>文字列 文字列について、主な動作をまとめる。 文字列の宣言 文字列の変換・置換 文字列の追加・削除・分割 文字列に別の文字列を追加する Java javaの場合</description>
     </item>
     
   </channel>
