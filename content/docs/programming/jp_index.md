@@ -12,7 +12,7 @@ title: "プログラミング言語別対応メモ"
 
 ## [標準入力・出力]({{< relref "/docs/programming/stdio/stdio_index.md" >}})
 
-## [文字列]({{< relref "/docs/programming/string.md" >}})
+## [文字列]({{< relref "/docs/programming/string/string_index.md" >}})
 
 ## [数値]({{< relref "/docs/programming/integer.md" >}})
 

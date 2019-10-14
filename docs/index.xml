@@ -32,6 +32,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>文字列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/string_index/</link>
+      <pubDate>Mon, 14 Oct 2019 23:26:28 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/string_index/</guid>
+      <description>文字列 文字列についての記事。 文字列の宣言 文字列の変換・置換 文字列の追加・削除・分割</description>
+    </item>
+    
+    <item>
       <title>標準エラー出力</title>
       <link>https://WAT36.github.io/pages/docs/programming/stdio/stderr/</link>
       <pubDate>Sat, 12 Oct 2019 17:25:47 +0900</pubDate>
