@@ -32,6 +32,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>文字列に別の文字列を追加する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/append/</link>
+      <pubDate>Mon, 14 Oct 2019 23:58:19 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/append/</guid>
+      <description>文字列に別の文字列を追加する 文字列の末尾に別の文字列を繋げる方法についてまとめる。 Java javaの場合は使用しているクラスにより方法が異なる。 S</description>
+    </item>
+    
+    <item>
       <title>文字列を別の文字列に置換する</title>
       <link>https://WAT36.github.io/pages/docs/programming/string/replace/</link>
       <pubDate>Mon, 14 Oct 2019 23:46:41 +0900</pubDate>
@@ -190,7 +199,7 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Tue, 03 Sep 2019 07:54:45 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/string/</guid>
-      <description>文字列 文字列について、主な動作をまとめる。 文字列の宣言 文字列の変換・置換 文字列の追加・削除・分割 文字列に別の文字列を追加する Java javaの場合</description>
+      <description>文字列 文字列について、主な動作をまとめる。 文字列の宣言 文字列の変換・置換 文字列の追加・削除・分割 説明 Java Python 文字列をある文字で区切る 文字列.sp</description>
     </item>
     
     <item>

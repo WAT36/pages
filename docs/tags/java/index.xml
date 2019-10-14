@@ -53,7 +53,7 @@
       <pubDate>Tue, 03 Sep 2019 07:54:45 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/string/</guid>
-      <description>文字列 文字列について、主な動作をまとめる。 文字列の宣言 文字列の変換・置換 文字列の追加・削除・分割 文字列に別の文字列を追加する Java javaの場合</description>
+      <description>文字列 文字列について、主な動作をまとめる。 文字列の宣言 文字列の変換・置換 文字列の追加・削除・分割 説明 Java Python 文字列をある文字で区切る 文字列.sp</description>
     </item>
     
   </channel>
