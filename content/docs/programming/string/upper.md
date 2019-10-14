@@ -30,7 +30,7 @@ JavaではStringクラスに **toUpperCase()** というメソッドがあり、
 
 ```python
 s = "test"
-s.upper()
+s = s.upper()
 ```
 
 Pythonは文字列型のstrオブジェクトにメソッド **upper()** があり、これにより文字列を全て大文字にできる。<br>

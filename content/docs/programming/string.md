@@ -15,39 +15,6 @@ tags: [ "java", "python", "文字列"]
 
 
 
-### 文字列を全て小文字にする
-
-{{< tabs "string_lowercase" >}}
-{{< tab "Java" >}}
-
-クラスはここではMain.javaとする
-
-```java
-class Main{
-    public static void main(String args[]){
-      String s = "test";
-      s = s.toLowerCase();
-    }
-}
-```
-
-JavaではStringクラスに **toLowerCase()** というメソッドがあり、これにより文字列を全て英小文字に変換して表示してくれる。<br>
-ただし、これも文字列自体が変換されるわけではないので、反映させたい場合は出力を元の変数に代入してやる必要がある。
-
-{{< /tab >}}
-{{< tab "Python" >}}
-
-```python
-s = "test"
-s.lower()
-```
-
-Pythonは文字列型のstrオブジェクトにメソッド **lower()** があり、これにより文字列を全て小文字にできる。<br>
-ただし、これも文字列自体が変換されるわけではないので、反映させたい場合は出力を元の変数に代入してやる必要がある。
-
-
-{{< /tab >}}
-{{< /tabs >}}
 
 
 ### 文字列中のある文字を全て別の文字に置換する

@@ -6,7 +6,7 @@
     <description>Recent content in Docs on WAT Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Mon, 14 Oct 2019 23:32:45 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 14 Oct 2019 23:40:21 +0900</lastBuildDate>
     
 	<atom:link href="https://WAT36.github.io/pages/docs/index.xml" rel="self" type="application/rss+xml" />
     
@@ -33,6 +33,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>英字文字列を全て英字小文字にする</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/lower/</link>
+      <pubDate>Mon, 14 Oct 2019 23:40:21 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/lower/</guid>
+      <description>英字文字列を全て英字小文字にする 英字の文字列を全て小文字にする方法について。 小文字の場合も、大文字同様にほとんどの言語で関数やメソッドが用意</description>
+    </item>
+    
+    <item>
       <title>英字文字列を全て英字大文字にする</title>
       <link>https://WAT36.github.io/pages/docs/programming/string/upper/</link>
       <pubDate>Mon, 14 Oct 2019 23:32:45 +0900</pubDate>
@@ -47,7 +56,7 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Mon, 14 Oct 2019 23:26:28 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/string/string_index/</guid>
-      <description>文字列 文字列についての記事。 文字列の宣言 文字列の変換・置換 英字文字列を全て英字大文字にする 文字列の追加・削除・分割</description>
+      <description>文字列 文字列についての記事。 文字列の宣言 文字列の変換・置換 英字文字列を全て英字大文字にする 英字文字列を全て英字小文字にする - 文字列の追加・削</description>
     </item>
     
     <item>
@@ -137,7 +146,7 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Tue, 03 Sep 2019 07:54:45 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/string/</guid>
-      <description>文字列 文字列について、主な動作をまとめる。 文字列の宣言 文字列の変換・置換 文字列を全て小文字にする Java クラスはここではMain.javaとする class</description>
+      <description>文字列 文字列について、主な動作をまとめる。 文字列の宣言 文字列の変換・置換 文字列中のある文字を全て別の文字に置換する Java javaで文字列を置換し</description>
     </item>
     
     <item>
