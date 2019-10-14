@@ -27,3 +27,10 @@ draft: true
 
 ![](/img/queue_dequeue.png)
 
+
+# Pythonでの実装方法
+
+Pythonにはキューのモジュールである **queue** モジュールが実装されている。
+
+しかし、もう一つ **collections** モジュールに **deque** オブジェクトがあり、こちらもキューとして利用できるそうだ。
+
