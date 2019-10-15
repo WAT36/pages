@@ -6,7 +6,7 @@
     <description>Recent content in Linux on WAT Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Thu, 03 Oct 2019 20:55:27 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 15 Oct 2019 23:44:23 +0900</lastBuildDate>
     
 	<atom:link href="https://WAT36.github.io/pages/categories/Linux/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>fileコマンドとファイルのマジックナンバーについて</title>
       <link>https://WAT36.github.io/pages/posts/file_magic/</link>
-      <pubDate>Thu, 03 Oct 2019 20:55:27 +0900</pubDate>
+      <pubDate>Tue, 15 Oct 2019 23:44:23 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/posts/file_magic/</guid>
       <description>先日CTFの勉強会に参加してきた。 勉強会といっても、今回参加したのは総まとめ回だったそうで、実践演習的な回だったが、、 運営側が用意した問題を</description>

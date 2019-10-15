@@ -32,6 +32,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>fileコマンドとファイルのマジックナンバーについて</title>
+      <link>https://WAT36.github.io/pages/posts/file_magic/</link>
+      <pubDate>Tue, 15 Oct 2019 23:44:23 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/file_magic/</guid>
+      <description>先日CTFの勉強会に参加してきた。 勉強会といっても、今回参加したのは総まとめ回だったそうで、実践演習的な回だったが、、 運営側が用意した問題を</description>
+    </item>
+    
+    <item>
       <title>文字列を数値に変換する</title>
       <link>https://WAT36.github.io/pages/docs/programming/string/parseInt/</link>
       <pubDate>Tue, 15 Oct 2019 22:02:08 +0900</pubDate>
@@ -128,15 +137,6 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       
       <guid>https://WAT36.github.io/pages/docs/programming/stdio/stdio_index/</guid>
       <description>標準入力・出力 標準入力・出力についての記事。 標準入力 コマンドライン引数 コンソール入力 標準出力 標準出力 標準エラー出力 データの入力について ソース</description>
-    </item>
-    
-    <item>
-      <title>fileコマンドとファイルのマジックナンバーについて</title>
-      <link>https://WAT36.github.io/pages/posts/file_magic/</link>
-      <pubDate>Thu, 03 Oct 2019 20:55:27 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/posts/file_magic/</guid>
-      <description>先日CTFの勉強会に参加してきた。 勉強会といっても、今回参加したのは総まとめ回だったそうで、実践演習的な回だったが、、 運営側が用意した問題を</description>
     </item>
     
     <item>
