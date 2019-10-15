@@ -6,7 +6,7 @@
     <description>Recent content in Docs on WAT Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Mon, 14 Oct 2019 23:58:19 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 15 Oct 2019 22:02:08 +0900</lastBuildDate>
     
 	<atom:link href="https://WAT36.github.io/pages/docs/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,6 +30,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>文字列を数値に変換する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/parseInt/</link>
+      <pubDate>Tue, 15 Oct 2019 22:02:08 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/parseInt/</guid>
+      <description>文字列を数値に変換する 数字の文字列を数値に変換する方法を述べる。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ String s = &amp;#34;1&amp;#34;; int i = Integer.parseInt(s); System.out.println(i) //</description>
     </item>
     
     <item>
