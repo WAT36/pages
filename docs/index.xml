@@ -32,6 +32,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>文字列を宣言する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/string/</link>
+      <pubDate>Thu, 17 Oct 2019 22:05:28 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/string/</guid>
+      <description>文字列を宣言する 文字列のデータ（文字列リテラル）を宣言するにはどうすればよいか？ Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ char c</description>
+    </item>
+    
+    <item>
       <title>fileコマンドとファイルのマジックナンバーについて</title>
       <link>https://WAT36.github.io/pages/posts/file_magic/</link>
       <pubDate>Tue, 15 Oct 2019 23:44:23 +0900</pubDate>
@@ -91,7 +100,7 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Mon, 14 Oct 2019 23:26:28 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/string/string_index/</guid>
-      <description>文字列 文字列についての記事。 文字列の宣言 文字列の宣言 文字列の変換・置換 英字文字列を全て英字大文字にする 英字文字列を全て英字小文字にする 文字列</description>
+      <description>文字列 文字列についての記事。 文字列の宣言 文字列を宣言する 文字列の変換・置換 英字文字列を全て英字大文字にする 英字文字列を全て英字小文字にする 文</description>
     </item>
     
     <item>

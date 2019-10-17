@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>標準出力 | WAT Notes</title>
+<title>文字列を宣言する | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fstdio\2fstdout\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fstring\2fstring\2f "] {
       color: #004ed0;
   }
   </style>
@@ -98,15 +98,15 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>標準出力</strong>
+  <strong>文字列を宣言する</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="標準出力">標準出力</h1>
+<h1 id="文字列を宣言する">文字列を宣言する</h1>
 
-<p>標準出力について。</p>
+<p>文字列のデータ（文字列リテラル）を宣言するにはどうすればよいか？</p>
 
 
 
@@ -114,41 +114,58 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" name="tabs-standard_output" style="display: none;" id="tabs-standard_output-0" checked="checked" />
-  <label for="tabs-standard_output-0">
+  <input type="radio" name="tabs-string" style="display: none;" id="tabs-string-0" checked="checked" />
+  <label for="tabs-string-0">
     Java
   </label>
   <div class="book-tabs-content markdown-inner">
     <p>クラスはここではMain.javaとする</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
     <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-        <span style="color:#75715e">//出力後、改行したい時
-</span><span style="color:#75715e"></span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(変数もしくはデータ);
+      <span style="color:#66d9ef">char</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;c&#39;</span>;
 
-        <span style="color:#75715e">//出力後、改行したくない時
-</span><span style="color:#75715e"></span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(変数もしくはデータ);
-    }
+      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(c); <span style="color:#75715e">// c
+</span><span style="color:#75715e"></span>
+      String <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Words&#34;</span>;
+
+      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(s); <span style="color:#75715e">// Words
+</span><span style="color:#75715e"></span>    }
 }</code></pre></div>
-<p>javaで画面に出力したい時は <strong>System.out.println()</strong> を利用する。<br>
-引数には画面に出力したい変数またはデータを入れる。
-出力後改行したくない時は System.out. <strong>print()</strong> を使う。</p>
+<p>Javaで文字を扱うには、基本データ型であり1文字のみを扱える<strong>char</strong>型と、
+2文字以上の文字列を扱える<strong>String</strong>型がある。（もう少し言うとStringBuilder型というのもあるがここでは割愛する
+）
+char型の場合は1文字をシングルクォート(&ldquo;)で囲んで宣言する。char型で2文字以上の文字を宣言するとコンパイルエラ
+ーとなる。</p>
+
+<p>String型の場合は文字列をダブルクォート(&ldquo;&rdquo;)で囲んで宣言する。文字列は0文字から扱える。</p>
 
   </div>
 
-  <input type="radio" name="tabs-standard_output" style="display: none;" id="tabs-standard_output-1"  />
-  <label for="tabs-standard_output-1">
+  <input type="radio" name="tabs-string" style="display: none;" id="tabs-string-1"  />
+  <label for="tabs-string-1">
     Python
   </label>
   <div class="book-tabs-content markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x<span style="color:#f92672">=</span>(<span style="color:#960050;background-color:#1e0010">変数もしくはデータ</span>)
-<span style="color:#66d9ef">print</span>(x)        <span style="color:#75715e"># xを画面に出力して改行する</span>
-<span style="color:#66d9ef">print</span>(x,end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>) <span style="color:#75715e"># xを画面に出力して改行しない</span></code></pre></div>
-<p>Pythonでコンソール画面への出力を扱うには組み込み関数の <strong>print()</strong> を使う。<br>
-基本、入力された引数を画面に出力する。<br>
-改行したくない場合はprint()のendパラメータに&rdquo;&ldquo;を指定。<br>
-詳しくは以下の公式ドキュメント参照。<br>
-<a href="https://docs.python.org/ja/3/library/functions.html#print">https://docs.python.org/ja/3/library/functions.html#print</a></p>
+    <p>Pythonでは文字列を扱うには</p>
 
+<pre><code>(変数) = &quot;文字列&quot;
+</code></pre>
+
+<p>または</p>
+
+<pre><code>(変数) = '文字列'
+</code></pre>
+
+<p>のようにする。
+Javaとは違い、Pythonでは文字列を宣言するときにはシングルクォート(&ldquo;)、ダブルクォート(&rdquo;&ldquo;)のどちらを利用しても
+よい。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;a&#34;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(s)
+a
+<span style="color:#f92672">&gt;&gt;&gt;</span> c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;c&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(c)
+c
+<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
   </div>
 
 </div>
@@ -156,14 +173,7 @@ https://github.com/alex-shpak/hugo-book
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/1ecc02d9a54802cf25dc682e43d5be5bdc6ae248" title='Last modified Oct 12, 2019 by T.Wakasugi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 12, 2019
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
@@ -176,7 +186,7 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#標準出力">標準出力</a></li>
+<li><a href="#文字列を宣言する">文字列を宣言する</a></li>
 </ul>
 </nav>
   </aside>
