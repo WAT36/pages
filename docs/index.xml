@@ -32,6 +32,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>1文字からその文字の文字コード（アスキーコード）を取得する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/ascii/</link>
+      <pubDate>Thu, 24 Oct 2019 20:43:32 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/ascii/</guid>
+      <description>1文字からその文字の文字コード（アスキーコード）を取得する コンピュータは二進数しか扱えないため、文字データも二進数（つまり整数）として扱われ</description>
+    </item>
+    
+    <item>
       <title>文字列を宣言する</title>
       <link>https://WAT36.github.io/pages/docs/programming/string/string/</link>
       <pubDate>Thu, 17 Oct 2019 22:05:28 +0900</pubDate>
