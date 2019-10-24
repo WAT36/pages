@@ -14,7 +14,7 @@ date: 2019-10-14T23:26:28+09:00
  - [英字文字列を全て英字小文字にする]({{< relref "/docs/programming/string/lower.md" >}}) 
  - [文字列を別の文字列に置換する]({{< relref "/docs/programming/string/replace.md" >}}) 
  - [文字列を数値に変換する]({{< relref "/docs/programming/string/parseInt.md" >}}) 
- - １文字からその文字のアスキーコードを取得する
+ - [１文字からその文字のアスキーコードを取得する]({{< relref "/docs/programming/string/ascii.md" >}}) 
 - 文字列の追加・削除・分割
  - [文字列に別の文字列を追加する]({{< relref "/docs/programming/string/append.md" >}}) 
  - 文字列をある文字で区切る
