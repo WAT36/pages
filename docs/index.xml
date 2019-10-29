@@ -32,6 +32,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>文字列中にある文字列が含まれているかを確認する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/contain/</link>
+      <pubDate>Tue, 29 Oct 2019 23:27:48 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/contain/</guid>
+      <description>文字列中にある文字列が含まれているかを確認する 文字列中に特定の文字列を含んでいるかを確認したい場合どうするか？ ここではその方法についてを示す</description>
+    </item>
+    
+    <item>
       <title>文字列をある文字で分割する</title>
       <link>https://WAT36.github.io/pages/docs/programming/string/split/</link>
       <pubDate>Tue, 29 Oct 2019 23:19:29 +0900</pubDate>

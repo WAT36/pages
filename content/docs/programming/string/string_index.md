@@ -19,6 +19,6 @@ date: 2019-10-14T23:26:28+09:00
  - [文字列に別の文字列を追加する]({{< relref "/docs/programming/string/append.md" >}}) 
  - [文字列をある文字で分割する]({{< relref "/docs/programming/string/split.md" >}}) 
 - 文字列の検索
- - 文字列中からある文字列が入ってるか検索する
+ - [文字列中にある文字列が含まれているかを確認する]({{< relref "/docs/programming/string/contain.md" >}}) 
  - 文字列がある文字で始まっている（終わっている）かを確認する
 
