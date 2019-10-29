@@ -209,7 +209,7 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Tue, 03 Sep 2019 07:54:45 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/string/</guid>
-      <description>文字列 文字列について、主な動作をまとめる。 文字列の宣言 文字列の変換・置換 文字列の追加・削除・分割 説明 Java Python 文字列をある文字で区切る 文字列.sp</description>
+      <description>文字列 文字列について、主な動作をまとめる。 文字列の宣言 文字列の変換・置換 文字列の追加・削除・分割 説明 Java Python 文字列をゼロ埋めして表示する 文字列.</description>
     </item>
     
     <item>
