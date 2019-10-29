@@ -32,6 +32,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>文字列をある文字で分割する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/split/</link>
+      <pubDate>Tue, 29 Oct 2019 23:19:29 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/split/</guid>
+      <description>文字列をある文字で分割する 文字列に対して、ある文字を境に複数に分割したいという場面もあるだろう。 ここではその方法についてを示す。 Java Javaで</description>
+    </item>
+    
+    <item>
       <title>1文字からその文字の文字コード（アスキーコード）を取得する</title>
       <link>https://WAT36.github.io/pages/docs/programming/string/ascii/</link>
       <pubDate>Thu, 24 Oct 2019 20:43:32 +0900</pubDate>

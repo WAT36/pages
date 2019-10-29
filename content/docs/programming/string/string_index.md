@@ -17,7 +17,7 @@ date: 2019-10-14T23:26:28+09:00
  - [１文字からその文字のアスキーコードを取得する]({{< relref "/docs/programming/string/ascii.md" >}}) 
 - 文字列の追加・削除・分割
  - [文字列に別の文字列を追加する]({{< relref "/docs/programming/string/append.md" >}}) 
- - 文字列をある文字で区切る
+ - [文字列をある文字で分割する]({{< relref "/docs/programming/string/split.md" >}}) 
 - 文字列の検索
  - 文字列中からある文字列が入ってるか検索する
  - 文字列がある文字で始まっている（終わっている）かを確認する
