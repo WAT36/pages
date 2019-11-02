@@ -14,7 +14,7 @@ title: "プログラミング言語別対応メモ"
 
 ## [文字列]({{< relref "/docs/programming/string/string_index.md" >}})
 
-## [数値]({{< relref "/docs/programming/integer.md" >}})
+## [数値]({{< relref "/docs/programming/number/number_index.md" >}})
 
 ## [タプル、リスト]({{< relref "/docs/programming/lists.md" >}})
 

@@ -32,6 +32,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>数値</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/number_index/</link>
+      <pubDate>Sun, 03 Nov 2019 08:07:28 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/number_index/</guid>
+      <description>数値 数値についての記事。 数値の演算 常用対数(底10) 対数(底2) 小数点切り下げ 小数点切り上げ xとyの論理和(OR)をとる xとyの論理積(AN</description>
+    </item>
+    
+    <item>
       <title>文字列中にある文字列が含まれているかを確認する</title>
       <link>https://WAT36.github.io/pages/docs/programming/string/contain/</link>
       <pubDate>Tue, 29 Oct 2019 23:27:48 +0900</pubDate>
