@@ -3,6 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/number/max/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/sample/creating-a-new-theme/</loc>
     <lastmod>2019-09-11T00:15:01+09:00</lastmod>
   </url>
@@ -14,12 +18,12 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2019-11-03T08:07:28+09:00</lastmod>
+    <lastmod>2019-11-03T08:21:01+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/number_index/</loc>
-    <lastmod>2019-11-03T08:07:28+09:00</lastmod>
+    <lastmod>2019-11-03T08:21:01+09:00</lastmod>
   </url>
   
   <url>
@@ -304,7 +308,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/jp_index/</loc>
-    <lastmod>2019-10-14T23:30:30+09:00</lastmod>
+    <lastmod>2019-11-03T08:21:01+09:00</lastmod>
   </url>
   
 </urlset>

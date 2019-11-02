@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>２つの数字のうち大きい方をとる</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/max/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/max/</guid>
+      <description>２つの数字のうち大きい方をとる 複数の数値から一番大きい数値を取り出したい時の方法を示す。 Java Javaではjava.lang.Mathクラス内に</description>
+    </item>
+    
+    <item>
       <title>Creating a New Theme</title>
       <link>https://WAT36.github.io/pages/docs/sample/creating-a-new-theme/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
