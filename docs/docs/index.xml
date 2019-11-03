@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>複数の数字のうち最も小さい数字をとる</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/min/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/min/</guid>
+      <description>複数の数字のうち最も小さい数字をとる 複数の数値から一番小さい数値を取り出したい時の方法を示す。 Java Javaではjava.lang.Mathクラ</description>
+    </item>
+    
+    <item>
       <title>Creating a New Theme</title>
       <link>https://WAT36.github.io/pages/docs/sample/creating-a-new-theme/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
