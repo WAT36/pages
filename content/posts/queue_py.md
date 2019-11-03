@@ -30,7 +30,39 @@ draft: true
 
 # Pythonでの実装方法
 
-Pythonにはキューのモジュールである **queue** モジュールが実装されている。
+Pythonにはキューを実装するには、 **collections** モジュールの **deque** 型を利用する。
 
-しかし、もう一つ **collections** モジュールに **deque** オブジェクトがあり、こちらもキューとして利用できるそうだ。
+## キューの作成
 
+dequeをインポートしてキューのオブジェクトを作成する。
+
+```python
+>>> from collections import deque
+>>> 
+>>> a=deque()
+>>> 
+```
+
+## キューへの要素の追加
+
+dequeに要素を追加するには**append**()メソッドで行う。
+appendメソッドにより、要素がキューの右側から追加される。  
+左から追加するには**appendleft**()メソッドを使う。
+
+```python
+>>> a
+deque([])
+>>> 
+>>> a.append(1)
+>>> a
+deque([1])
+>>> 
+>>> a.append(2)
+>>> a
+deque([1, 2])
+>>> 
+>>> a.appendleft(3)
+>>> a
+deque([3, 1, 2])
+>>> 
+```
