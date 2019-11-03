@@ -1,15 +1,15 @@
 ---
-title: "２つの数字のうち大きい方をとる"
+title: "複数の数字のうち最も大きい数字をとる"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
 ---
 
-# ２つの数字のうち大きい方をとる
+# 複数の数字のうち最も大きい数字をとる
 
 複数の数値から一番大きい数値を取り出したい時の方法を示す。
 
-{{< tabs "ascii" >}}
+{{< tabs "max" >}}
 {{< tab "Java" >}}
 
 Javaでは**java.lang.Math**クラス内にある**max()**メソッドがこの役割を果たす。
@@ -52,8 +52,19 @@ $ java Main
 {{< /tab >}}
 {{< tab "Python" >}}
 
-Pythonでは**max()**関数を利用する。
+Pythonでは組み込み関数の**max()**関数を利用する。
+javaと違い、こちらは引数の数に制限はないため、比較したい値をいくらでも入力できる。
 
+```python
+>>> a=1
+>>> b=2
+>>> c=3
+>>> max(a,b)
+2
+>>> max(a,b,c)
+3
+>>> 
+```
 
 {{< /tab >}}
 {{< /tabs >}}

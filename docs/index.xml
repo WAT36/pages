@@ -11,12 +11,12 @@
     
     
     <item>
-      <title>２つの数字のうち大きい方をとる</title>
+      <title>複数の数字のうち最も大きい数字をとる</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/max/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/max/</guid>
-      <description>２つの数字のうち大きい方をとる 複数の数値から一番大きい数値を取り出したい時の方法を示す。 Java Javaではjava.lang.Mathクラス内に</description>
+      <description>複数の数字のうち最も大きい数字をとる 複数の数値から一番大きい数値を取り出したい時の方法を示す。 Java Javaではjava.lang.Mathクラ</description>
     </item>
     
     <item>
