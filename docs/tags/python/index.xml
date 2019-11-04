@@ -6,10 +6,19 @@
     <description>Recent content in python on WAT Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sat, 12 Oct 2019 17:25:47 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 04 Nov 2019 09:59:32 +0900</lastBuildDate>
     
 	<atom:link href="https://WAT36.github.io/pages/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>キューとPythonでの実装モジュール「deque」</title>
+      <link>https://WAT36.github.io/pages/posts/queue_py/</link>
+      <pubDate>Mon, 04 Nov 2019 09:59:32 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/queue_py/</guid>
+      <description>幅優先探索を実装する時にキューと言うデータ構造を使用するのが良いそうなので、 今回はキューについてを調べて見た。（幅優先探索については後日・・</description>
+    </item>
     
     <item>
       <title>標準エラー出力</title>
@@ -45,15 +54,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/stdio/commandline_input/</guid>
       <description>コマンドライン引数 標準入力のコマンドライン引数について。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ String[] input = args //コマンドライン引</description>
-    </item>
-    
-    <item>
-      <title>キューとPythonでの実装モジュール「queue」</title>
-      <link></link>
-      <pubDate>Sun, 06 Oct 2019 01:42:32 +0900</pubDate>
-      
-      <guid></guid>
-      <description></description>
     </item>
     
     <item>

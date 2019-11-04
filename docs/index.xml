@@ -50,6 +50,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>キューとPythonでの実装モジュール「deque」</title>
+      <link>https://WAT36.github.io/pages/posts/queue_py/</link>
+      <pubDate>Mon, 04 Nov 2019 09:59:32 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/queue_py/</guid>
+      <description>幅優先探索を実装する時にキューと言うデータ構造を使用するのが良いそうなので、 今回はキューについてを調べて見た。（幅優先探索については後日・・</description>
+    </item>
+    
+    <item>
       <title>数値</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/number_index/</link>
       <pubDate>Sun, 03 Nov 2019 08:07:28 +0900</pubDate>
