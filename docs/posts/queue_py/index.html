@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.31868e26ac45e5074db6d7c901dc46c07b3cbbaeafae1a186ba625db9eee9c6a.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.74bef43b5600f01ed66ef3c725de581e62df37daec4b2f2c17c4259199d66c9a.js"></script>
 
 
 
@@ -123,10 +123,10 @@ https://github.com/alex-shpak/hugo-book
 
 <p><img src="https://WAT36.github.io/pages/img/queue_example.png" alt="" /></p>
 
-<p>イメージとしては筒のようなもの。
-キューの中にキューの後ろからデータを入れる事ができ（エンキュー）、
-キューの先頭からデータを取り出す事ができる（デキュー）。
-構造上取り出せるデータはキューに入れた順となる。
+<p>イメージとしては筒のようなもの。<br />
+キューの中にキューの後ろからデータを入れる事ができ（エンキュー）、<br />
+キューの先頭からデータを取り出す事ができる（デキュー）。<br />
+構造上取り出せるデータはキューに入れた順となる。<br />
 エンキュー、デキューを下図に示す。</p>
 
 <p><img src="https://WAT36.github.io/pages/img/queue_enqueue.png" alt="" /></p>
@@ -135,8 +135,8 @@ https://github.com/alex-shpak/hugo-book
 
 <h1 id="pythonでの実装方法">Pythonでの実装方法</h1>
 
-<p>Pythonにはキューを実装するには、 <strong>collections</strong> モジュールの <strong>deque</strong> 型を利用する。
-このdeque型だが、キューに加えスタックの機能も持ったようなデータ構造であり、使い方次第ではスタックとしても使用できる。
+<p>Pythonにはキューを実装するには、 <strong>collections</strong> モジュールの <strong>deque</strong> 型を利用する。<br />
+このdeque型だが、キューに加えスタックの機能も持ったようなデータ構造であり、使い方次第ではスタックとしても使用できる。<br />
 今回はキューとして利用することを前提に説明する。</p>
 
 <h2 id="キューの作成">キューの作成</h2>
@@ -148,9 +148,9 @@ https://github.com/alex-shpak/hugo-book
 <span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
 <h2 id="キューへの要素の追加">キューへの要素の追加</h2>
 
-<p>dequeに要素を追加するには<strong>append</strong>()メソッドで行う。
+<p>dequeに要素を追加するには<strong>append</strong>()メソッドで行う。<br />
 appendメソッドにより、要素がキューの右側から追加される。<br />
-左から追加するには<strong>appendleft</strong>()メソッドを使う。</p>
+本来のキューの使い方ではないが、左から追加するには<strong>appendleft</strong>()メソッドを使う。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a
 deque([])
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
@@ -187,11 +187,11 @@ deque([<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span
 <span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
 <h2 id="キューから要素を取り出す-削除">キューから要素を取り出す・削除</h2>
 
-<p>dequeから要素を取り出すときは<strong>pop</strong>メソッドを使う。
-popメソッドにより、dequeの右側から要素を一つ削除し、その要素が返される。
+<p>dequeから要素を取り出すときは<strong>pop</strong>メソッドを使う。<br />
+popメソッドにより、dequeの右側から要素を一つ削除し、その要素が返される。<br />
 dequeの左側から要素を取り出したい時は<strong>popleft</strong>メソッドを使う。</p>
 
-<p>また、dequeから特定の要素を削除したい時は<strong>remove</strong>メソッドを使う。
+<p>また、dequeから特定の要素を削除したい時は<strong>remove</strong>メソッドを使う。<br />
 deque.remove(x) でdeque内に最初に現れるxを削除する。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a
 deque([<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>])
