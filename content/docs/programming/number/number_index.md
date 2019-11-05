@@ -17,7 +17,7 @@ date: 2019-11-03T08:07:28+09:00
  - xとyの排他的論理和(XOR)をとる
  - ３項演算子
  - 階乗の計算
- - 絶対値
+ - [絶対値]({{< relref "/docs/programming/number/abs.md" >}})
  - [複数の数字のうち最も大きい数字をとる]({{< relref "/docs/programming/number/max.md" >}})
  - [複数の数字のうち最も小さい数字をとる]({{< relref "/docs/programming/number/min.md" >}})
 - 数値の表記を変換する
