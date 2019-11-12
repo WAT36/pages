@@ -15,7 +15,7 @@ draft: false
 
 図にすると以下のような構造を持つデータ構造である。
 
-![](/img/queue_example.png)
+![キュー例](/img/queue_example.png)
 
 イメージとしては筒のようなもの。  
 キューの中にキューの後ろからデータを入れる事ができ（エンキュー）、  
@@ -23,9 +23,9 @@ draft: false
 構造上取り出せるデータはキューに入れた順となる。  
 エンキュー、デキューを下図に示す。  
 
-![](/img/queue_enqueue.png)
+![エンキュー](/img/queue_enqueue.png)
 
-![](/img/queue_dequeue.png)
+![デキュー](/img/queue_dequeue.png)
 
 
 # Pythonでの実装方法
