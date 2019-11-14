@@ -12,9 +12,13 @@ date: 2019-11-03T08:07:28+09:00
  - 対数(底2)
  - 小数点切り下げ
  - 小数点切り上げ
- - [xとyの論理和(OR)をとる]({{< relref "/docs/programming/number/or.md" >}})
- - [xとyの論理積(AND)をとる]({{< relref "/docs/programming/number/and.md" >}})
- - xとyの排他的論理和(XOR)をとる
+ - 論理演算
+  - [AND演算]({{< relref "/docs/programming/number/and.md" >}})
+  - [OR演算]({{< relref "/docs/programming/number/or.md" >}})
+ - ビット演算
+  - 論理和(OR)
+  - 論理積(AND)
+  - 排他的論理和(XOR)
  - ３項演算子
  - 階乗の計算
  - [絶対値]({{< relref "/docs/programming/number/abs.md" >}})

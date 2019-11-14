@@ -11,21 +11,21 @@
     
     
     <item>
-      <title>xとyの論理和(OR)をとる</title>
-      <link>https://WAT36.github.io/pages/docs/programming/number/or/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/number/or/</guid>
-      <description>xとyの論理和(OR)をとる ORの論理演算をする方法についてを示す。 Java JavaではORの論理演算子 || を使用する。戻り値はboolean型。 (</description>
-    </item>
-    
-    <item>
-      <title>xとyの論理積(AND)をとる</title>
+      <title>AND演算</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/and/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/and/</guid>
-      <description>xとyの論理積(AND)をとる ANDの論理演算をする方法についてを示す。 Java JavaではANDの論理演算子 &amp;amp;&amp;amp; を使用する。戻り値はboolean</description>
+      <description>AND演算 ANDの論理演算をする方法についてを示す。 Java JavaではANDの論理演算子 &amp;amp;&amp;amp; を使用する。戻り値はboolean型。 (左辺) &amp;amp;&amp;amp; (右辺</description>
+    </item>
+    
+    <item>
+      <title>OR演算</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/or/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/or/</guid>
+      <description>OR演算 ORの論理演算をする方法についてを示す。 Java JavaではORの論理演算子 || を使用する。戻り値はboolean型。 (左辺) || (右辺) ちな</description>
     </item>
     
     <item>
@@ -91,7 +91,7 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Sun, 03 Nov 2019 08:07:28 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/number_index/</guid>
-      <description>数値 数値についての記事。 数値の演算 常用対数(底10) 対数(底2) 小数点切り下げ 小数点切り上げ xとyの論理和(OR)をとる xとyの論理積(AN</description>
+      <description>数値 数値についての記事。 数値の演算 常用対数(底10) 対数(底2) 小数点切り下げ 小数点切り上げ 論理演算 AND演算 OR演算 ビット演算 論理和(OR</description>
     </item>
     
     <item>

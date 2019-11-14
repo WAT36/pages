@@ -1,11 +1,11 @@
 ---
-title: "xとyの論理和(OR)をとる"
+title: "OR演算"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
 ---
 
-# xとyの論理和(OR)をとる
+# OR演算
 
 ORの論理演算をする方法についてを示す。
 

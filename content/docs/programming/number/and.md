@@ -1,11 +1,11 @@
 ---
-title: "xとyの論理積(AND)をとる"
+title: "AND演算"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
 ---
 
-# xとyの論理積(AND)をとる
+# AND演算
 
 ANDの論理演算をする方法についてを示す。
 
