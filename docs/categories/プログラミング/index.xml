@@ -74,14 +74,5 @@
       <description>趣味で競プロをやるようになり、Atcoderの問題を何問か解いているのだが、 やっている内に覚えないといけないこともいくつかあるわけで。 その内</description>
     </item>
     
-    <item>
-      <title>文字列</title>
-      <link>https://WAT36.github.io/pages/docs/programming/string/</link>
-      <pubDate>Tue, 03 Sep 2019 07:54:45 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/string/</guid>
-      <description>文字列 文字列について、主な動作をまとめる。 文字列の宣言 文字列の変換・置換 文字列の追加・削除・分割 説明 Java Python 文字列をゼロ埋めして表示する 文字列.</description>
-    </item>
-    
   </channel>
 </rss>
