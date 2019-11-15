@@ -16,7 +16,7 @@ date: 2019-11-03T08:07:28+09:00
      - [AND演算]({{< relref "/docs/programming/number/and.md" >}})
      - [OR演算]({{< relref "/docs/programming/number/or.md" >}})
  - ビット演算
-     - 論理和(OR)
+     - [論理和(OR)]({{< relref "/docs/programming/number/and_bit.md" >}})
      - 論理積(AND)
      - [排他的論理和(XOR)]({{< relref "/docs/programming/number/xor.md" >}})
  - ３項演算子
