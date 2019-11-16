@@ -74,6 +74,15 @@
     </item>
     
     <item>
+      <title>２進数に変換して表示</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/bin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/bin/</guid>
+      <description>2進数に変換して表示 数値を2進数に変換して表示する方法についてを示す。 Java JavaではラッパークラスIntegerに数値を2進数に変換するメソ</description>
+    </item>
+    
+    <item>
       <title>Creating a New Theme</title>
       <link>https://WAT36.github.io/pages/docs/sample/creating-a-new-theme/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
