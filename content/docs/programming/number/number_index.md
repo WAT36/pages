@@ -10,8 +10,9 @@ date: 2019-11-03T08:07:28+09:00
 - 数値の演算
  - 常用対数(底10)
  - 対数(底2)
- - 小数点切り下げ
- - 小数点切り上げ
+ - [小数点以下切り捨て]({{< relref "/docs/programming/number/floor.md" >}})
+ - 小数点以下切り上げ
+ - 小数点以下四捨五入
  - 論理演算
      - [AND演算]({{< relref "/docs/programming/number/and.md" >}})
      - [OR演算]({{< relref "/docs/programming/number/or.md" >}})
