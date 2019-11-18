@@ -74,6 +74,15 @@
     </item>
     
     <item>
+      <title>論理和(OR)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/or_bit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/or_bit/</guid>
+      <description>論理和(OR) ORのビット演算をする方法についてを示す。 Java JavaではORのビット演算子 | を使用する。論理演算の時とは違い、こちらは|1個な</description>
+    </item>
+    
+    <item>
       <title>論理積(AND)</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/and_bit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
