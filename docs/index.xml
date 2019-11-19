@@ -145,7 +145,7 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Sun, 03 Nov 2019 08:07:28 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/number_index/</guid>
-      <description>数値 数値についての記事。 数値の演算 常用対数(底10) 対数(底2) 小数点以下切り捨て 小数点以下切り上げ 小数点以下四捨五入 論理演算 AND演算 OR</description>
+      <description>数値 数値についての記事。 数値の演算 対数 常用対数(底10) 自然対数(底e) 任意の底の対数 小数点以下切り捨て 小数点以下切り上げ 小数点以下四捨五入</description>
     </item>
     
     <item>
