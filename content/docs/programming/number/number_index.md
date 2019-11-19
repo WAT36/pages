@@ -30,7 +30,7 @@ date: 2019-11-03T08:07:28+09:00
  - 数字の頭をゼロ詰して表示する
  - 基数変換
      - [２進数に変換して表示]({{< relref "/docs/programming/number/bin.md" >}})
-     - ８進数に変換して表示
+     - [８進数に変換して表示]({{< relref "/docs/programming/number/oct.md" >}})
      - １６進数に変換して表示
 - 数値の定数
  - 円周率(π)
