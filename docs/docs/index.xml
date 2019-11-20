@@ -312,6 +312,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>配列・タプル・リスト</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/list_index/</link>
+      <pubDate>Tue, 03 Sep 2019 22:53:31 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/list_index/</guid>
+      <description>配列・タプル・リスト 配列・タプル・リストについての記事。 これらは言語により定義が違うので注意。 例えばJavaでは配列とリストは別のデータ構造</description>
+    </item>
+    
+    <item>
       <title>数値</title>
       <link>https://WAT36.github.io/pages/docs/programming/integer/</link>
       <pubDate>Tue, 03 Sep 2019 08:02:46 +0900</pubDate>

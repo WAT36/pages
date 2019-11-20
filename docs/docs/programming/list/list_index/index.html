@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>標準入力・出力 | WAT Notes</title>
+<title>配列・タプル・リスト | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fstdio\2fstdio_index\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2flist\2flist_index\2f "] {
       color: #004ed0;
   }
   </style>
@@ -98,54 +98,52 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>標準入力・出力</strong>
+  <strong>配列・タプル・リスト</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="標準入力-出力">標準入力・出力</h1>
+<h1 id="配列-タプル-リスト">配列・タプル・リスト</h1>
 
-<p>標準入力・出力についての記事。</p>
+<p>配列・タプル・リストについての記事。</p>
+
+<p>これらは言語により定義が違うので注意。<br />
+例えばJavaでは配列とリストは別のデータ構造だが、<br />
+Pythonではリスト（・タプル）のみで、配列という概念はない。（全部ひっくるめてリストとしている？個人の理解だが）</p>
+
+<h2 id="配列">配列</h2>
+
+<h2 id="リスト-タプル">リスト（・タプル）</h2>
 
 <ul>
-<li>標準入力
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/programming/stdio/commandline_input/">コマンドライン引数</a></li>
-<li><a href="https://WAT36.github.io/pages/docs/programming/stdio/console_input/">コンソール入力</a></li>
-</ul></li>
-<li>標準出力
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/programming/stdio/stdout/">標準出力</a></li>
-<li><a href="https://WAT36.github.io/pages/docs/programming/stdio/stderr/">標準エラー出力</a></li>
-</ul></li>
+<li>リストの宣言</li>
+<li>リストの長さ</li>
+<li>リストの全要素の合計値</li>
+<li>リストのソート</li>
+<li>リストを逆順にソート</li>
+<li>リストを逆順にする</li>
+<li>リストa,bに共通して入っている要素のみを表示（積集合）</li>
+<li>リストaまたはbに入っている要素のみを表示（和集合）</li>
+<li>文字列を１文字ずつのリストにする</li>
+<li>リストの指定したインデックスの要素を削除する</li>
+<li>リストの指定した要素を削除する</li>
+<li>指定した要素がリスト内にいくつあるか調べる</li>
+<li>指定した要素がリスト内にあるか調べる</li>
+<li>リスト内の指定した２要素を入れ替える</li>
+<li>リストの全要素を連結して１つの文字列に変換する</li>
+<li>リストから条件に合う要素のみを取得した新しいリストを作成する</li>
+<li>多次元リスト(配列)である列をキーにしてソートする</li>
+<li>指定した要素のリスト内でのインデックスを調べる</li>
+<li>リストの内一番大きい要素を調べる</li>
+<li>リストの内一番小さい要素を調べる</li>
+<li>２つの配列a,bの同じインデックスの要素を１つの組にした２次元配列を作る</li>
+<li>リストが空であるか判別する</li>
 </ul>
-
-<hr>
-
-<p>データの入力について<br>
-ソースコードを実行する時及び実行中に、何かデータを入力して実行することができる。<br>
-具体的な方法としては、<br>
-ソースコードを実行するときに、引数としてデータを入力（ <strong>コマンドライン引数</strong> と呼ぶ）して実行する方法と、<br>
-ソースコードを実行した後に、キーボード等でデータを打ち込んで入力する方法がある。<br>
-（後者はここではコンソール入力と呼ぶことにする、何か具体的な名前ってあったか？）</p>
-
-<p>データの出力について<br>
-標準出力は指定したデータの内容をコンソール画面に出力する事を言うが、<br>
-標準出力にも通常の標準出力の他に、エラー発生時用の出力である標準エラー出力というのもある。<br></p>
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/1ecc02d9a54802cf25dc682e43d5be5bdc6ae248" title='Last modified Oct 12, 2019 by T.Wakasugi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 12, 2019
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
@@ -158,7 +156,11 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#標準入力-出力">標準入力・出力</a></li>
+<li><a href="#配列-タプル-リスト">配列・タプル・リスト</a>
+<ul>
+<li><a href="#配列">配列</a></li>
+<li><a href="#リスト-タプル">リスト（・タプル）</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>
