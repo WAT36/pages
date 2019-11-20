@@ -33,6 +33,6 @@ date: 2019-11-03T08:07:28+09:00
  - 基数変換
      - [２進数に変換して表示]({{< relref "/docs/programming/number/bin.md" >}})
      - [８進数に変換して表示]({{< relref "/docs/programming/number/oct.md" >}})
-     - １６進数に変換して表示
+     - [１６進数に変換して表示]({{< relref "/docs/programming/number/hex.md" >}})
 - 数値の定数
  - 円周率(π)
