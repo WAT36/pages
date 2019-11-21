@@ -9,7 +9,7 @@ date: 2019-11-03T08:07:28+09:00
 
 - 数値の演算
  - 対数
-     - 常用対数(底10)
+     - [常用対数(底10)]({{< relref "/docs/programming/number/log10.md" >}})
      - 自然対数(底e)
      - 任意の底の対数
  - [小数点以下切り捨て]({{< relref "/docs/programming/number/floor.md" >}})
