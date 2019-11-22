@@ -16,7 +16,7 @@ title: "プログラミング言語別対応メモ"
 
 ## [数値]({{< relref "/docs/programming/number/number_index.md" >}})
 
-## [配列、タプル、リスト]({{< relref "/docs/programming/list/list_index.md" >}})
+## [配列・リスト]({{< relref "/docs/programming/list/list_index.md" >}})
 
 ## [辞書、Map]({{< relref "/docs/programming/dict.md" >}})
 

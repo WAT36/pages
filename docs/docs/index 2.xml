@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on WAT Notes</title>
+    <link>https://WAT36.github.io/pages/docs/</link>
+    <description>Recent content in Docs on WAT Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Sun, 03 Nov 2019 08:07:28 +0900</lastBuildDate>
+    
+	<atom:link href="https://WAT36.github.io/pages/docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>16進数に変換して表示</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/hex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/hex/</guid>
+      <description>16進数に変換して表示 数値を16進数に変換して表示する方法についてを示す。 Java JavaではラッパークラスIntegerに数値を16進数に変換す</description>
+    </item>
+    
+    <item>
+      <title>8進数に変換して表示</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/oct/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/oct/</guid>
+      <description>8進数に変換して表示 数値を8進数に変換して表示する方法についてを示す。 Java JavaではラッパークラスIntegerに数値を8進数に変換するメソ</description>
+    </item>
+    
+    <item>
+      <title>AND演算</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/and/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/and/</guid>
+      <description>AND演算 ANDの論理演算をする方法についてを示す。 Java JavaではANDの論理演算子 &amp;amp;&amp;amp; を使用する。戻り値はboolean型。 (左辺) &amp;amp;&amp;amp; (右辺</description>
+    </item>
+    
+    <item>
+      <title>OR演算</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/or/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/or/</guid>
+      <description>OR演算 ORの論理演算をする方法についてを示す。 Java JavaではORの論理演算子 || を使用する。戻り値はboolean型。 (左辺) || (右辺) ちな</description>
+    </item>
+    
+    <item>
+      <title>小数点以下切り捨て</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/floor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/floor/</guid>
+      <description>小数点以下切り捨て 小数点以下切り捨てする方法についてを示す。 Java JavaではMathクラスにあるメソッドfloor()を利用することで小数点以</description>
+    </item>
+    
+    <item>
+      <title>常用対数(底10)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/log10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/log10/</guid>
+      <description>常用対数(底10) 常用対数を算出する方法についてを示す。 Java Javaではjava.lang.Mathクラス内にあるlog10()メソッドがこの</description>
+    </item>
+    
+    <item>
+      <title>排他的論理和(XOR)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/xor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/xor/</guid>
+      <description>排他的論理和(XOR) XORのビット演算をする方法についてを示す。 Java JavaではXORのビット演算子 ^ を使用する。数値型リテラルでも、boo</description>
+    </item>
+    
+    <item>
+      <title>数値の絶対値を算出する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/abs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/abs/</guid>
+      <description>数値の絶対値を算出する 数値の絶対値を算出する方法についてを示す。 Java Javaではjava.lang.Mathクラス内にあるabs()メソッドが</description>
+    </item>
+    
+    <item>
+      <title>複数の数字のうち最も大きい数字をとる</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/max/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/max/</guid>
+      <description>複数の数字のうち最も大きい数字をとる 複数の数値から一番大きい数値を取り出したい時の方法を示す。 Java Javaではjava.lang.Mathクラ</description>
+    </item>
+    
+    <item>
+      <title>複数の数字のうち最も小さい数字をとる</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/min/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/min/</guid>
+      <description>複数の数字のうち最も小さい数字をとる 複数の数値から一番小さい数値を取り出したい時の方法を示す。 Java Javaではjava.lang.Mathクラ</description>
+    </item>
+    
+    <item>
+      <title>論理和(OR)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/or_bit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/or_bit/</guid>
+      <description>論理和(OR) ORのビット演算をする方法についてを示す。 Java JavaではORのビット演算子 | を使用する。論理演算の時とは違い、こちらは|1個な</description>
+    </item>
+    
+    <item>
+      <title>論理積(AND)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/and_bit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/and_bit/</guid>
+      <description>論理積(AND) ANDのビット演算をする方法についてを示す。 Java JavaではANDのビット演算子 &amp;amp; を使用する。論理演算の時とは違い、こちらは&amp;</description>
+    </item>
+    
+    <item>
+      <title>２進数に変換して表示</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/bin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/bin/</guid>
+      <description>2進数に変換して表示 数値を2進数に変換して表示する方法についてを示す。 Java JavaではラッパークラスIntegerに数値を2進数に変換するメソ</description>
+    </item>
+    
+    <item>
+      <title>Creating a New Theme</title>
+      <link>https://WAT36.github.io/pages/docs/sample/creating-a-new-theme/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/creating-a-new-theme/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>https://WAT36.github.io/pages/docs/sample/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/migrate-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>数値</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/number_index/</link>
+      <pubDate>Sun, 03 Nov 2019 08:07:28 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/number_index/</guid>
+      <description>数値 数値についての記事。 数値の演算 対数 常用対数(底10) 自然対数(底e) 任意の底の対数 小数点以下切り捨て 小数点以下切り上げ 小数点以下四捨五入</description>
+    </item>
+    
+    <item>
+      <title>文字列中にある文字列が含まれているかを確認する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/contain/</link>
+      <pubDate>Tue, 29 Oct 2019 23:27:48 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/contain/</guid>
+      <description>文字列中にある文字列が含まれているかを確認する 文字列中に特定の文字列を含んでいるかを確認したい場合どうするか？ ここではその方法についてを示す</description>
+    </item>
+    
+    <item>
+      <title>文字列をある文字で分割する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/split/</link>
+      <pubDate>Tue, 29 Oct 2019 23:19:29 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/split/</guid>
+      <description>文字列をある文字で分割する 文字列に対して、ある文字を境に複数に分割したいという場面もあるだろう。 ここではその方法についてを示す。 Java Javaで</description>
+    </item>
+    
+    <item>
+      <title>1文字からその文字の文字コード（アスキーコード）を取得する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/ascii/</link>
+      <pubDate>Thu, 24 Oct 2019 20:43:32 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/ascii/</guid>
+      <description>1文字からその文字の文字コード（アスキーコード）を取得する コンピュータは二進数しか扱えないため、文字データも二進数（つまり整数）として扱われ</description>
+    </item>
+    
+    <item>
+      <title>文字列を宣言する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/string/</link>
+      <pubDate>Thu, 17 Oct 2019 22:05:28 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/string/</guid>
+      <description>文字列を宣言する 文字列のデータ（文字列リテラル）を宣言するにはどうすればよいか？ Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ char c</description>
+    </item>
+    
+    <item>
+      <title>文字列を数値に変換する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/parseInt/</link>
+      <pubDate>Tue, 15 Oct 2019 22:02:08 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/parseInt/</guid>
+      <description>文字列を数値に変換する 数字の文字列を数値に変換する方法を述べる。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ String s = &amp;#34;1&amp;#34;; int i = Integer.parseInt(s); System.out.println(i) //</description>
+    </item>
+    
+    <item>
+      <title>文字列に別の文字列を追加する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/append/</link>
+      <pubDate>Mon, 14 Oct 2019 23:58:19 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/append/</guid>
+      <description>文字列に別の文字列を追加する 文字列の末尾に別の文字列を繋げる方法についてまとめる。 Java javaの場合は使用しているクラスにより方法が異なる。 S</description>
+    </item>
+    
+    <item>
+      <title>文字列を別の文字列に置換する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/replace/</link>
+      <pubDate>Mon, 14 Oct 2019 23:46:41 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/replace/</guid>
+      <description>文字列を別の文字列に置換する 文字列を別の文字列に置換する方法。 その文字列全ての他、文字列の一部分または文字列中の条件に合う文字列に対する置換</description>
+    </item>
+    
+    <item>
+      <title>英字文字列を全て英字小文字にする</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/lower/</link>
+      <pubDate>Mon, 14 Oct 2019 23:40:21 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/lower/</guid>
+      <description>英字文字列を全て英字小文字にする 英字の文字列を全て小文字にする方法について。 小文字の場合も、大文字同様にほとんどの言語で関数やメソッドが用意</description>
+    </item>
+    
+    <item>
+      <title>英字文字列を全て英字大文字にする</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/upper/</link>
+      <pubDate>Mon, 14 Oct 2019 23:32:45 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/upper/</guid>
+      <description>英字文字列を全て英字大文字にする 英字の文字列を全て大文字にする方法について。 ほとんどの言語では、だいたいこの手の関数やメソッドが用意されてい</description>
+    </item>
+    
+    <item>
+      <title>文字列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/string_index/</link>
+      <pubDate>Mon, 14 Oct 2019 23:26:28 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/string_index/</guid>
+      <description>文字列 文字列についての記事。 文字列の宣言 文字列を宣言する 文字列の変換・置換 英字文字列を全て英字大文字にする 英字文字列を全て英字小文字にする 文</description>
+    </item>
+    
+    <item>
+      <title>標準エラー出力</title>
+      <link>https://WAT36.github.io/pages/docs/programming/stdio/stderr/</link>
+      <pubDate>Sat, 12 Oct 2019 17:25:47 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/stdio/stderr/</guid>
+      <description>標準エラー出力 標準エラー出力について。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ //出力後、改行したい時 System.err.</description>
+    </item>
+    
+    <item>
+      <title>標準出力</title>
+      <link>https://WAT36.github.io/pages/docs/programming/stdio/stdout/</link>
+      <pubDate>Sat, 12 Oct 2019 17:19:30 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/stdio/stdout/</guid>
+      <description>標準出力 標準出力について。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ //出力後、改行したい時 System.out.printl</description>
+    </item>
+    
+    <item>
+      <title>コンソール入力</title>
+      <link>https://WAT36.github.io/pages/docs/programming/stdio/console_input/</link>
+      <pubDate>Sat, 12 Oct 2019 17:03:35 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/stdio/console_input/</guid>
+      <description>コンソール入力 標準入力のコンソール入力について。 Java クラスはここではMain.javaとする import java.util.Scanner class Main{ public static void main(String args[]){ //Scannerのインスタンス</description>
+    </item>
+    
+    <item>
+      <title>コマンドライン引数</title>
+      <link>https://WAT36.github.io/pages/docs/programming/stdio/commandline_input/</link>
+      <pubDate>Sat, 12 Oct 2019 16:42:45 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/stdio/commandline_input/</guid>
+      <description>コマンドライン引数 標準入力のコマンドライン引数について。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ String[] input = args //コマンドライン引</description>
+    </item>
+    
+    <item>
+      <title>標準入力・出力</title>
+      <link>https://WAT36.github.io/pages/docs/programming/stdio/stdio_index/</link>
+      <pubDate>Thu, 10 Oct 2019 07:33:35 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/stdio/stdio_index/</guid>
+      <description>標準入力・出力 標準入力・出力についての記事。 標準入力 コマンドライン引数 コンソール入力 標準出力 標準出力 標準エラー出力 データの入力について ソース</description>
+    </item>
+    
+    <item>
+      <title>その他</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/</link>
+      <pubDate>Sat, 07 Sep 2019 18:23:49 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/</guid>
+      <description>その他 その他、括れてない手法などをまとめる。 説明 Java Python メソッド(関数)の宣言 (アクセス修飾子) static 関数名(引数){} 例：public static void main(String[] args){} def 関</description>
+    </item>
+    
+    <item>
+      <title>辞書、Map</title>
+      <link>https://WAT36.github.io/pages/docs/programming/dict/</link>
+      <pubDate>Tue, 03 Sep 2019 23:05:48 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/dict/</guid>
+      <description>辞書、Map 説明 Java Python 辞書（Map) Map a = new HashMap(); (String,Stringの例) dict = {} 辞書(Map)に要素を置く (Map).put(キー,値)</description>
+    </item>
+    
+    <item>
+      <title>タプル・リスト</title>
+      <link>https://WAT36.github.io/pages/docs/programming/lists/</link>
+      <pubDate>Tue, 03 Sep 2019 22:53:31 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/lists/</guid>
+      <description>タプル・リスト 説明 Java Python タプル リスト List&amp;lt;型(ラッパークラス)&amp;gt; 変数名 = new ArrayList&amp;lt;&amp;gt;(); ※ArrayListにすべきかは諸説あるけど・・ 変</description>
+    </item>
+    
+    <item>
+      <title>配列・タプル・リスト</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/list_index/</link>
+      <pubDate>Tue, 03 Sep 2019 22:53:31 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/list_index/</guid>
+      <description>配列・タプル・リスト 配列・タプル・リストについての記事。 これらは言語により定義が違うので注意。 例えばJavaでは配列とリストは別のデータ構造</description>
+    </item>
+    
+    <item>
+      <title>数値</title>
+      <link>https://WAT36.github.io/pages/docs/programming/integer/</link>
+      <pubDate>Tue, 03 Sep 2019 08:02:46 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/integer/</guid>
+      <description>数値 説明 Java Python 数値を文字列に変換する String.valueOf(数値) str(数値) 数字の頭をゼロ詰して表示する String.format(</description>
+    </item>
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>https://WAT36.github.io/pages/docs/sample/goisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/goisforlovers/</guid>
+      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>https://WAT36.github.io/pages/docs/sample/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/hugoisforlovers/</guid>
+      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at Install Hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:
+ Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://WAT36.github.io/pages/docs/sample/examples/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/examples/</guid>
+      <description>Ubi loqui Mentem genus facietque salire tempus bracchia Lorem markdownum partu paterno Achillem. Habent amne generosi aderant ad pellem nec erat sustinet merces columque haec et, dixit minus nutrit accipiam subibis subdidit. Temeraria servatum agros qui sed fulva facta. Primum ultima, dedit, suo quisque linguae medentes fixo: tum petis.
+Rapit vocant si hunc siste adspice Ora precari Patraeque Neptunia, dixit Danae Cithaeron armaque maxima in nati Coniugis templis fluidove. Effugit usus nec ingreditur agmen ac manus conlato.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://WAT36.github.io/pages/docs/sample/hidden/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/hidden/</guid>
+      <description>This page is hidden in menu Quondam non pater est dignior ille Eurotas Latent te facies Lorem markdownum arma ignoscas vocavit quoque ille texit mandata mentis ultimus, frementes, qui in vel. Hippotades Peleus pennas conscia cuiquam Caeneus quas.
+ Pater demittere evincitque reddunt Maxime adhuc pressit huc Danaas quid freta Soror ego Luctus linguam saxa ultroque prior Tatiumque inquit Saepe liquitur subita superata dederat Anius sudor  Cum honorum Latona O fallor in sustinui iussorum equidem.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://WAT36.github.io/pages/docs/sample/sample_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/sample_index/</guid>
+      <description> サンプルページ creating-a-new-theme example goisforlovers hidden hugoisforlovers migrate-from-jekyll shortcodes with-toc without-toc </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://WAT36.github.io/pages/docs/sample/shortcodes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/shortcodes/</guid>
+      <description>Shortcodes Expand shortcode Default {{&amp;lt; expand &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Expand ↕  Markdown content Lorem markdownum insigne&amp;hellip;    With Custom Label {{&amp;lt; expand &amp;#34;Custom Label&amp;#34; &amp;#34;...&amp;#34; &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Custom Label ...  Markdown content Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa protulit, sed sed aere valvis inhaesuro Pallas animam: qui quid, ignes.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://WAT36.github.io/pages/docs/sample/with-toc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/with-toc/</guid>
+      <description>Caput vino delphine in tamen vias Cognita laeva illo fracta Lorem markdownum pavent auras, surgit nunc cingentibus libet Laomedonque que est. Pastor An arbor filia foedat, ne fugit aliter, per. Helicona illas et callida neptem est Oresitrophos caput, dentibus est venit. Tenet reddite famuli praesentem fortibus, quaeque vis foret si frondes gelidos gravidae circumtulit inpulit armenta nativum.
+ Te at cruciabere vides rubentis manebo Maturuit in praetemptat ruborem ignara postquam habitasse Subitarum supplevit quoque fontesque venabula spretis modo Montis tot est mali quasque gravis Quinquennem domus arsit ipse Pellem turis pugnabant locavit  Natus quaerere Pectora et sine mulcere, coniuge dum tincta incurvae.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://WAT36.github.io/pages/docs/sample/without-toc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/without-toc/</guid>
+      <description>At me ipso nepotibus nunc celebratior genus Tanto oblite Lorem markdownum pectora novis patenti igne sua opus aurae feras materiaque illic demersit imago et aristas questaque posset. Vomit quoque suo inhaesuro clara. Esse cumque, per referri triste. Ut exponit solisque communis in tendens vincetis agisque iamque huic bene ante vetat omina Thebae rates. Aeacus servat admonitu concidit, ad resimas vultus et rugas vultu dignamque Siphnon.
+Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt dixit: ritu pharetramque.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://WAT36.github.io/pages/docs/sub-section/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sub-section/</guid>
+      <description>Fida abluere audiat moram ferarum terram virgae Facere fluidove ab naides ut sic cornu Lorem markdownum Lucifer est, ire tangit inposito terram. Ore et pes lavet nuper longam, longa sub, erat nec Lemnicolae, in. Et nec tantaque sollicitive cognovi et ut videbar verso passis, Epimethida tutos. Dedecus Desine morae.
+Fervens esse et tenet cinisque per: et vir equus formaque superorum tollit, vires meae magnum; Latona. Fundamine potitur genialis: imagine gaudet et herba rura vates horrendum, laborum quis: potero aureus habitantque illos nox?</description>
+    </item>
+    
+    <item>
+      <title>プログラミング言語別対応メモ</title>
+      <link>https://WAT36.github.io/pages/docs/programming/jp_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/jp_index/</guid>
+      <description>プログラミング言語別対応メモ 社会人になってからは業務でJavaをバリバリ書いたり学んだりしていた私が、急にPythonをやる必要が出てきた（</description>
+    </item>
+    
+  </channel>
+</rss>
