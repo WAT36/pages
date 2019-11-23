@@ -93,6 +93,15 @@
     </item>
     
     <item>
+      <title>自然対数(底e)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/loge/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/loge/</guid>
+      <description>自然対数(底e) 自然対数を算出する方法についてを示す。 Java Javaではjava.lang.Mathクラス内にあるlog()メソッドがこの役割を</description>
+    </item>
+    
+    <item>
       <title>複数の数字のうち最も大きい数字をとる</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/max/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
