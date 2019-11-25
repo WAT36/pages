@@ -36,3 +36,5 @@ date: 2019-11-03T08:07:28+09:00
      - [１６進数に変換して表示]({{< relref "/docs/programming/number/hex.md" >}})
 - 数値の定数
  - [円周率(π)]({{< relref "/docs/programming/number/pi.md" >}})
+- その他
+ - 数値（整数）の桁数を調べる
