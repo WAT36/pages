@@ -244,7 +244,7 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Tue, 15 Oct 2019 22:02:08 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/string/parseInt/</guid>
-      <description>文字列を数値に変換する 数字の文字列を数値に変換する方法を述べる。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ String s = &amp;#34;1&amp;#34;; int i = Integer.parseInt(s); System.out.println(i) //</description>
+      <description>文字列を数値に変換する 数字の文字列を数値に変換する方法を述べる。 ちなみに、逆の数値を文字列にする方法もある。 Java クラスはここではMain.ja</description>
     </item>
     
     <item>
