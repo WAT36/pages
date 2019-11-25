@@ -57,6 +57,15 @@
     </item>
     
     <item>
+      <title>小数点以下切り上げ</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/ceil/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/ceil/</guid>
+      <description>小数点以下切り上げ 小数点以下切り上げする方法についてを示す。 Java JavaではMathクラスにあるメソッドceil()を利用することで小数点以下</description>
+    </item>
+    
+    <item>
       <title>小数点以下切り捨て</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/floor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

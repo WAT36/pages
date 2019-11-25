@@ -13,7 +13,7 @@ date: 2019-11-03T08:07:28+09:00
      - [自然対数(底e)]({{< relref "/docs/programming/number/loge.md" >}})
      - 任意の底の対数
  - [小数点以下切り捨て]({{< relref "/docs/programming/number/floor.md" >}})
- - 小数点以下切り上げ
+ - [小数点以下切り上げ]({{< relref "/docs/programming/number/ceil.md" >}})
  - 小数点以下四捨五入
  - 論理演算
      - [AND演算]({{< relref "/docs/programming/number/and.md" >}})
