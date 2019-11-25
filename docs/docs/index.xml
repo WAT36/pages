@@ -93,6 +93,15 @@
     </item>
     
     <item>
+      <title>数値を文字列に変換する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/str/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/str/</guid>
+      <description>数値を文字列に変換する 文字列を数値にする方法があったように、逆の数値を文字列に変換する方法も存在する。 ここではその方法を示す。 Java Javaでは</description>
+    </item>
+    
+    <item>
       <title>自然対数(底e)</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/loge/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -28,7 +28,7 @@ date: 2019-11-03T08:07:28+09:00
  - [複数の数字のうち最も大きい数字をとる]({{< relref "/docs/programming/number/max.md" >}})
  - [複数の数字のうち最も小さい数字をとる]({{< relref "/docs/programming/number/min.md" >}})
 - 数値の表記を変換する
- - 数値を文字列に変換する
+ - [数値を文字列に変換する]({{< relref "/docs/programming/number/str.md" >}})
  - 数字の頭をゼロ詰して表示する
  - 基数変換
      - [２進数に変換して表示]({{< relref "/docs/programming/number/bin.md" >}})
