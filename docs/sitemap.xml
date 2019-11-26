@@ -29,6 +29,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/ceil/</loc>
+    <lastmod>2019-11-26T00:20:16+09:00</lastmod>
   </url>
   
   <url>
@@ -54,6 +55,10 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/str/</loc>
     <lastmod>2019-11-25T22:46:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/string/length/</loc>
   </url>
   
   <url>
@@ -143,12 +148,12 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2019-11-25T22:53:35+09:00</lastmod>
+    <lastmod>2019-11-26T00:20:16+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/number_index/</loc>
-    <lastmod>2019-11-25T22:53:35+09:00</lastmod>
+    <lastmod>2019-11-26T00:20:16+09:00</lastmod>
   </url>
   
   <url>
@@ -172,12 +177,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -187,12 +192,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   

@@ -111,6 +111,15 @@
     </item>
     
     <item>
+      <title>文字列の長さ（文字数）を調べる</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/length/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/length/</guid>
+      <description>文字列の長さ（文字数）を調べる 文字列の長さ（＝文字列が何文字であるか）を取得する方法を示す。 Java JavaではStringクラスにlength(</description>
+    </item>
+    
+    <item>
       <title>自然対数(底e)</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/loge/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
