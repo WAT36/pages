@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>常用対数(底10) | WAT Notes</title>
+<title>数値（整数）の桁数を調べる | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fnumber\2flog10\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fnumber\2f digits\2f "] {
       color: #004ed0;
   }
   </style>
@@ -98,15 +98,16 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>常用対数(底10)</strong>
+  <strong>数値（整数）の桁数を調べる</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="常用対数-底10">常用対数(底10)</h1>
+<h1 id="数値-整数-の桁数を調べる">数値（整数）の桁数を調べる</h1>
 
-<p>常用対数を算出する方法についてを示す。</p>
+<p>整数の桁数を調べる方法については、
+数値を文字列に変換してその文字列の長さを取得すればよい。</p>
 
 
 
@@ -114,48 +115,50 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" name="tabs-log10" style="display: none;" id="tabs-log10-0" checked="checked" />
-  <label for="tabs-log10-0">
+  <input type="radio" name="tabs-digits" style="display: none;" id="tabs-digits-0" checked="checked" />
+  <label for="tabs-digits-0">
     Java
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>Javaではjava.lang.Mathクラス内にある<strong>log10()</strong>メソッドがこの役割を果たす。<br />
-利用するにはjava.lang.Mathクラスをインポートする。<br />
-<code>public static double log10(double a)</code></p>
+    <p>Javaでは<a href="https://WAT36.github.io/pages/docs/programming/number/str/">数値を文字列に変換</a>し、その<a href="https://WAT36.github.io/pages/docs/programming/string/length/">文字列の長さを取得</a>すればOK。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">lang</span>.<span style="color:#a6e22e">Math</span>;
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
     <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-        <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> 100;
-        <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> 500;
+        <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> 10;
+        <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> 123;
+        <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> 76543;
 
-        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(Math.<span style="color:#a6e22e">log10</span>(a));
-        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(Math.<span style="color:#a6e22e">log10</span>(b));
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(String.<span style="color:#a6e22e">valueOf</span>(a).<span style="color:#a6e22e">length</span>());
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(String.<span style="color:#a6e22e">valueOf</span>(b).<span style="color:#a6e22e">length</span>());
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(String.<span style="color:#a6e22e">valueOf</span>(c).<span style="color:#a6e22e">length</span>());
     }
 }</code></pre></div>
 <p>実行結果</p>
 
 <pre><code>&gt; java Main
-2.0
-2.6989700043360187
+2
+3
+5
 </code></pre>
 
   </div>
 
-  <input type="radio" name="tabs-log10" style="display: none;" id="tabs-log10-1"  />
-  <label for="tabs-log10-1">
+  <input type="radio" name="tabs-digits" style="display: none;" id="tabs-digits-1"  />
+  <label for="tabs-digits-1">
     Python
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>pythonで常用対数を算出するにはmathモジュールにある関数 <strong>log10()</strong> 関数を使用する。<br />
-使用するにはmathモジュールをインポートする。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> math
-<span style="color:#f92672">&gt;&gt;&gt;</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>     
-<span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span> 
+    <p>同様にPythonでも<a href="https://WAT36.github.io/pages/docs/programming/number/str/">数値を文字列に変換</a>し、その<a href="https://WAT36.github.io/pages/docs/programming/string/length/">文字列の長さを取得</a>すればOK。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> b<span style="color:#f92672">=</span><span style="color:#ae81ff">123</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> c<span style="color:#f92672">=</span><span style="color:#ae81ff">76543</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(math<span style="color:#f92672">.</span>log10(a))
-<span style="color:#ae81ff">2.0</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(math<span style="color:#f92672">.</span>log10(b))
-<span style="color:#ae81ff">2.6989700043360187</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> len(str(a))
+<span style="color:#ae81ff">2</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> len(str(b))
+<span style="color:#ae81ff">3</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> len(str(c))
+<span style="color:#ae81ff">5</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
   </div>
 
@@ -164,14 +167,7 @@ https://github.com/alex-shpak/hugo-book
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/5233c446bd325b410b1ea2e4aa38ca2bf286ca17" title='Last modified Nov 21, 2019 by T.Wakasugi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Nov 21, 2019
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
@@ -184,7 +180,7 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#常用対数-底10">常用対数(底10)</a></li>
+<li><a href="#数値-整数-の桁数を調べる">数値（整数）の桁数を調べる</a></li>
 </ul>
 </nav>
   </aside>

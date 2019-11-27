@@ -37,4 +37,4 @@ date: 2019-11-03T08:07:28+09:00
 - 数値の定数
  - [円周率(π)]({{< relref "/docs/programming/number/pi.md" >}})
 - その他
- - 数値（整数）の桁数を調べる
+ - [数値（整数）の桁数を調べる]({{< relref "/docs/programming/number/digits.md" >}})
