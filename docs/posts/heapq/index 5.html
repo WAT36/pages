@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>優先度付きキュー（ヒープ）とPythonで実装するライブラリ「heapq」について | WAT Notes</title>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.e16c023af5772a6bfa22d86931e944f17b83aee9e97732af503834c62a2111bc.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2fposts\2fheapq\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング言語別対応メモ</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-posts">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>優先度付きキュー（ヒープ）とPythonで実装するライブラリ「heapq」について</strong>
+</header>
+
+      
+
+<header class="markdown">
+  <h1>優先度付きキュー（ヒープ）とPythonで実装するライブラリ「heapq」について</h1>
+  <h5>
+    <strong>Sep 28, 2019</strong>
+  </h5>
+</header>
+<article class="markdown">
+
+<p>先日Atcoder Beginner Contest 141に参加してきたが、D問題がいくらやってもTLEになり詰まった挙句TIME UPになった。
+原因はリストから最大値を取り出してくる箇所。
+リストから最大値を取り出し、２で割って（点以下切り捨て）再度リストに格納、という動作をループで回す必要があったのだが、いくら直してもTLEになり続けた。
+自分が考えていた方法としては</p>
+
+<ul>
+<li>リストの最大値を取る組み込み関数 max() を使う</li>
+<li>リストをソート ( sort() ) して一番後のインデックスにある要素（＝最大値）を取る</li>
+</ul>
+
+<p>だったのだが、いずれの場合も時間がかかってしまうらしい。
+どのようにすれば良かったのか・・？</p>
+
+<p>解説を見て学んだのが &ldquo;優先度付きキュー&rdquo; というアルゴリズム。
+この優先度付きキューについて、調べて見た。</p>
+
+<h1 id="優先度付きキュー">優先度付きキュー</h1>
+
+<p>優先度付きキュー (Priority Queue) とは以下の操作が行えるデータ構造。</p>
+
+<ul>
+<li>キューに数（要素）を優先度付きで追加する。</li>
+<li>最も高い優先度を持つ要素を取り出す（値を取得し、削除する）</li>
+</ul>
+
+<p>これを二分木（ヒープ）を用いて効率的に実現したデータ構造の事を言う。
+ヒープの特性上、優先度付きキューにおいて最も高い優先度を持つ要素とは最小値のことになり、
+優先度付きキューとは最小値を取り出す事の出来るデータ構造と言うことになる。</p>
+
+<h2 id="ヒープとは">ヒープとは</h2>
+
+<p>ではヒープ（二分木）とは何か？</p>
+
+<blockquote>
+<p>ヒープとは、「子要素は親要素より常に大きいか等しい（または常に小さいか等しい）」と言う制約を持つ木構造の事。単に「ヒープ」という場合、二分木を使った二分ヒープを指すことが多いため、そちらを参照すること。
+ヒープは最小値（または最大値）を求めるのに適した木構造の一種であり、「子要素は親要素より常に大きいか等しい（または常に小さいか等しい）」と言う制約を持つ。子要素が複数ある場合、子要素間の大小関係に制約はない。
+（Wikipediaより）</p>
+</blockquote>
+
+<p>図に表すと以下のような構造を持つデータ構造である。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/heap_example.png" alt="ヒープ例" /></p>
+
+<p>図にある通り、ヒープの特徴としては「子要素は親要素より常に大きいか等しい」と言うところである。
+また、ヒープは上から下へ、左から右へ順にノードが詰まっていく。</p>
+
+<p>「子要素は親要素より常に大きいか等しい」と言う定義から、ヒープの一番親の要素（根）は、ヒープで一番小さい値(最小値)ということになる。</p>
+
+<h3 id="データの挿入">データの挿入</h3>
+
+<p>ヒープにデータを挿入すると、入力したデータはまずヒープの最後尾に追加され、親要素と大小を比較し、親要素よりも大きくなるまで上に上げていく。（下図）</p>
+
+<p><img src="https://WAT36.github.io/pages/img/heap_insert.png" alt="ヒープ挿入例" /></p>
+
+<h3 id="データの削除">データの削除</h3>
+
+<p>ヒープからデータを削除（＝最小値を削除）した時は、根の位置に最後尾の要素を持っていき、その後子要素と大小を比較していずれの子要素よりも小さくなるまで下に下げていく。（下図）</p>
+
+<p><img src="https://WAT36.github.io/pages/img/heap_delete.png" alt="ヒープ削除例" /></p>
+
+<h2 id="pythonでの優先度付きキュー">Pythonでの優先度付きキュー</h2>
+
+<p>ではこのヒープ及び優先度付きキューをプログラミングで実装するにはどうすれば良いのか？
+今回も私が現在競プロでよく使用しているPythonで考えてみることにした。</p>
+
+<p>しかし、調べてみると何と優先度付きキューもPythonではライブラリが実装されているそうだ。
+それがこの <strong>heapq</strong> と言うライブラリで、このライブラリについて調べて見た。</p>
+
+<h3 id="バージョン">バージョン</h3>
+
+<p>Python : 3.7.4</p>
+
+<h2 id="heapq">heapq</h2>
+
+<p>heapqライブラリの諸関数を以下に記載する。</p>
+
+<h3 id="heapify">heapify</h3>
+
+<p>heapify関数はリストをヒープに変換する関数である。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> heapq
+<span style="color:#f92672">&gt;&gt;&gt;</span> a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">1</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a
+[<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">1</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> heapq<span style="color:#f92672">.</span>heapify(a)
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">7</span>]</code></pre></div>
+<p>変換し作成されたヒープはリストを使って表現される。
+このリストでのヒープの見方は、リストのインデックスをkとした時、</p>
+
+<ul>
+<li>親要素    : リスト[k]</li>
+<li>子要素    : リスト[2k+1]、リスト[2k+2]</li>
+</ul>
+
+<p>となる。</p>
+
+<h3 id="heappush-heappop">heappush,heappop</h3>
+
+<p>heappush関数は要素をヒープにpushする関数である。<br />
+pushされた要素は前述のヒープ挿入例に基づき、ヒープ内で要素が移動され、最終的にヒープ内で親子間の大小が保たれた形で保持される。<br />
+対して、heappop関数はヒープから要素を取り出し取得する関数である。
+なお、heappopで取り出すのはヒープにおける最小の要素である。<br />
+heappop後のヒープはheappushの時と同様に前述のヒープ削除例に基づき、ヒープ内で要素が移動され、最終的にヒープ内で親子間の大小が保たれた形で保持される。<br />
+使用例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> heapq
+<span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span>[<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> heapq<span style="color:#f92672">.</span>heapify(a)
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> heapq<span style="color:#f92672">.</span>heappush(a,<span style="color:#ae81ff">7</span>)  <span style="color:#75715e">#7をヒープにプッシュ</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">13</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> heapq<span style="color:#f92672">.</span>heappop(a) <span style="color:#75715e">#ヒープから要素をpop</span>
+<span style="color:#ae81ff">1</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#最小の要素(1)がヒープからpopされる</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a
+[<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
+<h3 id="heappushpop-heapreplace">heappushpop,heapreplace</h3>
+
+<p>heappushpop関数はheappushとheappopを同時に行う関数である。<br />
+順序としてはheappushを行ってからheappopを行う。<br />
+heapreplace関数はその逆でheappopとheappushを同時に行うと言う点では同じだが、<br />
+順序はheappopを行ってからheappushを行う。<br />
+公式によるとheappushとheappopを別々に行うよりも、これらの関数を使う方が効率的に行えるとの事。<br />
+使用例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> heapq
+<span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span>[<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> heapq<span style="color:#f92672">.</span>heapify(a)
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> heapq<span style="color:#f92672">.</span>heappushpop(a,<span style="color:#ae81ff">11</span>)
+<span style="color:#ae81ff">1</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a
+[<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> heapq<span style="color:#f92672">.</span>heappushpop(a,<span style="color:#ae81ff">1</span>)
+<span style="color:#ae81ff">1</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a
+[<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> heapq<span style="color:#f92672">.</span>heapreplace(a,<span style="color:#ae81ff">7</span>)
+<span style="color:#ae81ff">2</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a
+[<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> heapq<span style="color:#f92672">.</span>heapreplace(a,<span style="color:#ae81ff">1</span>)
+<span style="color:#ae81ff">3</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
+<p>heappushpop,heapreplaceはpushとpopを行う順序から、popした時に取り出される要素は最小の要素でない場合もあると言うことに注意する。<br />
+上記の例でいうと、ヒープにヒープのどの要素よりも小さい要素をpushした時、heappushpopの場合は要素をpushしてからpopするためpushした要素がpopされるが、
+heapreplaceはヒープからpopしてから要素をpushするため、popされる要素はpushする前のヒープの最小値であり、また動作後のヒープはpushした要素が最小値となったヒープになる。</p>
+
+<h2 id="ヒープから最大値を取り出すには">ヒープから最大値を取り出すには？</h2>
+
+<p>ヒープはその特性上、最小値しか取り出すことはできない。<br />
+もし、最大値を取り出したいといった時はどうするか？</p>
+
+<p>方法の一例としては、要素の符号を全て逆転（-1を掛ける）させてからヒープを組ませる。<br />
+すると、そのヒープの最小値には元の最大値×(-1)した要素が来る。<br />
+その要素を取り出して(pop)また符号を逆転（-1を掛ける）させてやれば、最終的には最大値を取り出すことが可能となる。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> heapq
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#リスト（ヒープ）aから最大値を取り出す。最大値は14</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span>[<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#要素に全て-1をかけて符号を逆転する</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span>[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">*</span> i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> a]
+<span style="color:#f92672">&gt;&gt;&gt;</span> a
+[<span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">6</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">12</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">14</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">9</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">10</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> heapq<span style="color:#f92672">.</span>heapify(a)
+<span style="color:#f92672">&gt;&gt;&gt;</span> a
+[<span style="color:#f92672">-</span><span style="color:#ae81ff">14</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">12</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">10</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">9</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">6</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#元の最大値×(-1)させた-14がヒープの最小値に来る</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#ヒープから最小値を取り出し-1を掛ける</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> heapq<span style="color:#f92672">.</span>heappop(a) <span style="color:#f92672">*</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">14</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#元の最大値14が取り出された</span></code></pre></div>
+<p>今後活用する機会があれば利用していきたい。</p>
+</article>
+
+      
+    </div>
+  </main>
+
+  
+  
+</body>
+
+</html>

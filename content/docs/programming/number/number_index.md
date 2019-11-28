@@ -22,7 +22,7 @@ date: 2019-11-03T08:07:28+09:00
      - [論理和(OR)]({{< relref "/docs/programming/number/or_bit.md" >}})
      - [論理積(AND)]({{< relref "/docs/programming/number/and_bit.md" >}})
      - [排他的論理和(XOR)]({{< relref "/docs/programming/number/xor.md" >}})
- - ３項演算子
+ - [三項演算子]({{< relref "/docs/programming/number/ternary.md" >}})
  - 階乗の計算
  - [絶対値]({{< relref "/docs/programming/number/abs.md" >}})
  - [複数の数字のうち最も大きい数字をとる]({{< relref "/docs/programming/number/max.md" >}})
