@@ -110,6 +110,15 @@
     </item>
     
     <item>
+      <title>数値の頭をゼロ詰して表示する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/zfill/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/zfill/</guid>
+      <description>数値の頭をゼロ詰して表示する 数値の頭をゼロ詰して表示する方法についてを示す。 Java JavaではStringクラスにあるformat() メソッドで</description>
+    </item>
+    
+    <item>
       <title>数値を文字列に変換する</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/str/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
