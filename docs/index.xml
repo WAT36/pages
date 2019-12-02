@@ -191,6 +191,15 @@
     </item>
     
     <item>
+      <title>階乗</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/factorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/factorial/</guid>
+      <description>階乗 階乗計算についてを示す。 基本、階乗計算はn * n-1 * n-2 * &amp;hellip; * 1を地道にやっていく計算量O(n)の計算を行うので、時間がかかりやすいという特徴</description>
+    </item>
+    
+    <item>
       <title>２進数に変換して表示</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/bin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数値の頭をゼロ詰して表示する | WAT Notes</title>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.d60f76aa36b8c97eb49d531f82f38c66a62b4847c0c60dd1767f8e53334173b7.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fnumber\2fzfill\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング言語別対応メモ</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>数値の頭をゼロ詰して表示する</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="数値の頭をゼロ詰して表示する">数値の頭をゼロ詰して表示する</h1>
+
+<p>数値の頭をゼロ詰して表示する方法についてを示す。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-zfill" style="display: none;" id="tabs-zfill-0" checked="checked" />
+  <label for="tabs-zfill-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>JavaではStringクラスにある<strong>format()</strong> メソッドで頭をゼロ詰めして表示することができる。</p>
+
+<p><code>public static String format(String format,Object... args)</code></p>
+
+<p>第1引数(format)には、値をどのような形式で表示するかを指定する。<br />
+例えば5桁でゼロ詰めしたい時は下記の値を入力する。</p>
+
+<ul>
+<li>%05d
+
+<ul>
+<li>%　・・・　書式文字列であることを示す</li>
+<li>0　・・・　埋める文字。今回の場合0</li>
+<li>5　・・・　桁数。今回の場合5桁なので5</li>
+<li>d　・・・　出力する値の型。今回は数値なのでd
+<br /></li>
+</ul></li>
+</ul>
+
+<p>この第1引数(format)に関しては種類によって記法が定められているので、詳しくは下記の公式レファレンスを参照のこと。<br />
+<a href="https://docs.oracle.com/javase/jp/8/docs/api/java/util/Formatter.html#syntax">https://docs.oracle.com/javase/jp/8/docs/api/java/util/Formatter.html#syntax</a></p>
+
+<p>実行例を下記に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">lang</span>.<span style="color:#a6e22e">Math</span>;
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+      <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> 1;
+      <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> 22;
+      <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> 333;
+      <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> 55555;
+
+      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(String.<span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#34;%05d&#34;</span>,a));
+      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(String.<span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#34;%05d&#34;</span>,b));
+      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(String.<span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#34;%05d&#34;</span>,c));
+      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(String.<span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#34;%05d&#34;</span>,d));
+    }
+}</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>&gt; java Main
+00001
+00022
+00333
+55555
+</code></pre>
+
+  </div>
+
+  <input type="radio" name="tabs-zfill" style="display: none;" id="tabs-zfill-1"  />
+  <label for="tabs-zfill-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>pythonで数値をゼロ詰めして表示するには文字列の組み込み関数の<strong>zfill()</strong>を利用する。<br />
+<code>str.zfill(width)</code><br />
+この場合、文字strが長さwidthになるように、strの左から0を詰めていく。</p>
+
+<p>実行例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> b<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> c<span style="color:#f92672">=</span><span style="color:#ae81ff">333</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> d<span style="color:#f92672">=</span><span style="color:#ae81ff">55555</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(str(a)<span style="color:#f92672">.</span>zfill(<span style="color:#ae81ff">5</span>))
+<span style="color:#ae81ff">00001</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(str(b)<span style="color:#f92672">.</span>zfill(<span style="color:#ae81ff">5</span>)) 
+<span style="color:#ae81ff">00022</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(str(c)<span style="color:#f92672">.</span>zfill(<span style="color:#ae81ff">5</span>)) 
+<span style="color:#ae81ff">00333</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(str(d)<span style="color:#f92672">.</span>zfill(<span style="color:#ae81ff">5</span>)) 
+<span style="color:#ae81ff">55555</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/61790aa15befc7684af8fe0763fb627bbd186b1b" title='Last modified Nov 30, 2019 by T.Wakasugi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Nov 30, 2019
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#数値の頭をゼロ詰して表示する">数値の頭をゼロ詰して表示する</a></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>
