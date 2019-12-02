@@ -11,7 +11,7 @@ date: 2019-11-03T08:07:28+09:00
  - 対数
      - [常用対数(底10)]({{< relref "/docs/programming/number/log10.md" >}})
      - [自然対数(底e)]({{< relref "/docs/programming/number/loge.md" >}})
-     - 任意の底の対数
+     - [任意の底の対数]({{< relref "/docs/programming/number/log.md" >}})
  - [小数点以下切り捨て]({{< relref "/docs/programming/number/floor.md" >}})
  - [小数点以下切り上げ]({{< relref "/docs/programming/number/ceil.md" >}})
  - 小数点以下四捨五入

@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>円周率(π) | WAT Notes</title>
+<title>任意の底の対数 | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.d60f76aa36b8c97eb49d531f82f38c66a62b4847c0c60dd1767f8e53334173b7.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.cc4a78884d4aa268723e4317f8d24b2d9eaaa2789abbe95695dcaad526dbc792.js"></script>
 
 
 
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fnumber\2fpi\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fnumber\2flog\2f "] {
       color: #004ed0;
   }
   </style>
@@ -98,16 +98,19 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>円周率(π)</strong>
+  <strong>任意の底の対数</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="円周率-π">円周率(π)</h1>
+<h1 id="任意の底の対数">任意の底の対数</h1>
 
-<p>重要な定数は大体ライブラリ（モジュール）内で定義されていることが多い。
-ここでは円周率(π)を参照する方法についてを示す。</p>
+<p>任意の底の対数を算出する方法についてを示す。
+しかし、任意の底の対数を算出するライブラリは無いことが多い。
+そのため、以下の公式を用いて算出を行う。（底の変換公式）</p>
+
+<p>log<sub>a</sub>b = log<sub>c</sub>b / log<sub>c</sub>a</p>
 
 
 
@@ -115,38 +118,56 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" name="tabs-abs" style="display: none;" id="tabs-abs-0" checked="checked" />
-  <label for="tabs-abs-0">
+  <input type="radio" name="tabs-log" style="display: none;" id="tabs-log-0" checked="checked" />
+  <label for="tabs-log-0">
     Java
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>Javaではjava.lang.Mathクラス内にフィールド変数<strong>PI</strong>が定義されており、これがJava上で円周率に最も近い数とされている。<br />
-利用するにはjava.lang.Mathクラスをインポートする。<br />
-ちなみに型はDouble型である。</p>
+    <p>Javaには任意の底での対数を算出するメソッドは無いため、<br />
+底の変換公式  を用いて前述の<strong>log10()</strong>、<strong>loge()</strong> を利用し算出する。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">lang</span>.<span style="color:#a6e22e">Math</span>;
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
     <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(Math.<span style="color:#a6e22e">PI</span>);
-    }
+        <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> 2;
+        <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> 4;
+        <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> 1024;
+
+        <span style="color:#75715e">//log2(n)を算出する
+</span><span style="color:#75715e"></span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(Math.<span style="color:#a6e22e">log</span>(b)<span style="color:#f92672">/</span>Math.<span style="color:#a6e22e">log</span>(a)); <span style="color:#75715e">//log(2)4
+</span><span style="color:#75715e"></span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(Math.<span style="color:#a6e22e">log</span>(c)<span style="color:#f92672">/</span>Math.<span style="color:#a6e22e">log</span>(a)); <span style="color:#75715e">//log(2)1024
+</span><span style="color:#75715e"></span>    }
 }</code></pre></div>
 <p>実行結果</p>
 
-<pre><code>&gt; java Main   
-3.141592653589793   
+<pre><code>&gt; java Main
+2.0
+10.0
 </code></pre>
 
   </div>
 
-  <input type="radio" name="tabs-abs" style="display: none;" id="tabs-abs-1"  />
-  <label for="tabs-abs-1">
+  <input type="radio" name="tabs-log" style="display: none;" id="tabs-log-1"  />
+  <label for="tabs-log-1">
     Python
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>pythonではmathモジュールに定数<strong>pi</strong>が定義されており、これがpython上で最も円周率に近い数とされている。
-利用するにはmathモジュールをインポートする。</p>
+    <p>pythonには任意の数を底とする対数を算出する関数が存在し、<br />
+それは自然対数を算出する時にも利用したmathモジュールにある<strong>log()</strong>関数である。</p>
+
+<p><code>math.log(x,y)</code></p>
+
+<p>log(x,y)関数は、yを底としたxの対数を返す。<br />
+yを略した場合（引数１つの場合）、底は自動的にeとなり、自然対数になる。(→自然対数)<br />
+使用するにはmathモジュールをインポートする。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> math
-<span style="color:#f92672">&gt;&gt;&gt;</span> math<span style="color:#f92672">.</span>pi
-<span style="color:#ae81ff">3.141592653589793</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> b<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> c<span style="color:#f92672">=</span><span style="color:#ae81ff">1024</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> math<span style="color:#f92672">.</span>log(b,a) 
+<span style="color:#ae81ff">2.0</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> math<span style="color:#f92672">.</span>log(c,a)
+<span style="color:#ae81ff">10.0</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
   </div>
 
@@ -155,14 +176,7 @@ https://github.com/alex-shpak/hugo-book
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/e3f8ace09c170dd94860caadf1845fe913e4dc63" title='Last modified Nov 22, 2019 by T.Wakasugi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Nov 22, 2019
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
@@ -175,7 +189,7 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#円周率-π">円周率(π)</a></li>
+<li><a href="#任意の底の対数">任意の底の対数</a></li>
 </ul>
 </nav>
   </aside>
