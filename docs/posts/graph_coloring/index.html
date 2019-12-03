@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.cc4a78884d4aa268723e4317f8d24b2d9eaaa2789abbe95695dcaad526dbc792.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.33131774c9f6125d709bf8b6ee8b91ee7b9763830f5d316d0565d0d663195198.js"></script>
 
 
 
@@ -134,13 +134,16 @@ https://github.com/alex-shpak/hugo-book
 これは彩色を貪欲法で行う方法であり、ある頂点の色に隣接する頂点で使っていない色を設定していき、それまでに使ったどの色も頂点に設定できない場合は新たな色を設定するというアルゴリズムである。<br />
 調べる頂点の順番によっては最適な彩色が行えないため、最適な彩色を行うために頂点は次数の大きい順に行う。</p>
 
-<p>疑似的なアルゴリズムを以下に示す。
-1. グラフGの頂点次数の大きい順にソートし、 V<sub>i</sub> (i=1,2,…n)とする。
-2. i = 1 とする
-3. c = 1 とする
-4. V<sub>i</sub> の隣接点で色cを持つものが存在しなければ、V<sub>i</sub> に色cを与えて6.へ進む
-5. c = c + 1 として4.に戻る
-6. i &lt; |V| ならば、i = i + 1 として3.に戻る。i = |V| なら終了。</p>
+<p>疑似的なアルゴリズムを以下に示す。</p>
+
+<ol>
+<li>グラフGの頂点次数の大きい順にソートし、 V<sub>i</sub> (i=1,2,…n)とする。<br /></li>
+<li>i = 1 とする<br /></li>
+<li>c = 1 とする<br /></li>
+<li>V<sub>i</sub> の隣接点で色cを持つものが存在しなければ、V<sub>i</sub> に色cを与えて6.へ進む<br /></li>
+<li>c = c + 1 として4.に戻る<br /></li>
+<li>i &lt; |V| ならば、i = i + 1 として3.に戻る。i = |V| なら終了。<br /></li>
+</ol>
 
 <h1 id="面彩色">面彩色</h1>
 
