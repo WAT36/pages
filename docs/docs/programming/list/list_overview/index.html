@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>優先度付きキュー | WAT Notes</title>
+<title>リストの定義 | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
@@ -17,7 +17,6 @@
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 
 
-<link rel="alternate" type="application/rss+xml" href="https://WAT36.github.io/pages/tags/%E5%84%AA%E5%85%88%E5%BA%A6%E4%BB%98%E3%81%8D%E3%82%AD%E3%83%A5%E3%83%BC/index.xml" title="WAT Notes" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -53,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2ftags\2f%E5%84%AA%E5%85%88%E5%BA%A6%E4%BB%98%E3%81%8D%E3%82%AD%E3%83%A5%E3%83%BC\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2flist\2flist_overview\2f "] {
       color: #004ed0;
   }
   </style>
@@ -93,30 +92,51 @@ https://github.com/alex-shpak/hugo-book
 </script>
 
     </aside>
+
     <div class="book-page">
       <header class="flex align-center justify-between book-header">
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>優先度付きキュー</strong>
+  <strong>リストの定義</strong>
 </header>
 
+      
+<article class="markdown">
 
-<section id="main">
-    <div class="tags_list">
-    <div class="tags_title"><span>優先度付きキュー</span></div>
-    </div>
-    <ul id="list">
-        
-        <li>
-            2019-09-28
-             <a href="https://WAT36.github.io/pages/posts/heapq/">優先度付きキュー（ヒープ）とPythonで実装するライブラリ「heapq」について</a>
-         </li>
-         
-     </ul>
-     <hr>
-     <a href="https://WAT36.github.io/pages/tags">Tags</a>
- </section>
+<h1 id="リストの定義">リストの定義</h1>
+
+<p>リストについて。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-list" style="display: none;" id="tabs-list-0" checked="checked" />
+  <label for="tabs-list-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    Javaのリストは配列とは全く別のデータ型として定義されてあり、その定義は<strong>java.util.List</strong>クラスにある。<br />
+配列との違いは、配列は宣言時に長さも指定し、基本指定した長さの分しかデータを格納できないのに対し、<br />
+リストは長さを指定せずに宣言でき、かつ好きなだけデータを格納、取り出すことができ、長さは入っているデータにより変わるという、いわば可変長の配列といってもよい。
+  </div>
+
+  <input type="radio" name="tabs-list" style="display: none;" id="tabs-list-1"  />
+  <label for="tabs-list-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    配列・リストに関して、Pythonには基本「リスト」という概念しかなく、配列は定義されていない。<br />
+他言語でいう配列といったデータ構造は、pythonの場合この「リスト」にひっくるめられていると考えていい（はず・・・）
+pythonの場合もリストは長さを指定せずに宣言でき、好きなだけデータを格納、取り出すことも可能、そして長さは入っているデータにより変わる。
+  </div>
+
+</div>
+
+</article>
 
       
 <div class="book-footer justify-end">
@@ -127,6 +147,16 @@ https://github.com/alex-shpak/hugo-book
       
     </div>
     
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#リストの定義">リストの定義</a></li>
+</ul>
+</nav>
+  </aside>
+
 
 
   </main>
@@ -134,4 +164,5 @@ https://github.com/alex-shpak/hugo-book
   
   
 </body>
+
 </html>

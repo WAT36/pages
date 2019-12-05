@@ -48,6 +48,15 @@
     </item>
     
     <item>
+      <title>リストの定義</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/list_overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/list_overview/</guid>
+      <description>リストの定義 リストについて。 Java Javaのリストは配列とは全く別のデータ型として定義されてあり、その定義はjava.util.Listクラスに</description>
+    </item>
+    
+    <item>
       <title>リストの宣言</title>
       <link>https://WAT36.github.io/pages/docs/programming/list/list/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
