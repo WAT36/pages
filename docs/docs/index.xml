@@ -48,6 +48,15 @@
     </item>
     
     <item>
+      <title>リストの宣言</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/list/</guid>
+      <description>リストの宣言 リストを使用する方法を示す。 Java JavaでのリストはListクラスをインポートして利用する。 しかし、Listクラスはインターフェー</description>
+    </item>
+    
+    <item>
       <title>三項演算子</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/ternary/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
