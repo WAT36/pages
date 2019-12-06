@@ -20,6 +20,7 @@ date: 2019-10-14T23:26:28+09:00
  - [文字列をある文字で分割する]({{< relref "/docs/programming/string/split.md" >}})
 - 文字列の検索
  - [文字列中にある文字列が含まれているかを確認する]({{< relref "/docs/programming/string/contain.md" >}}) 
+ - [文字列中にある文字列が含まれているときにその位置を確認する]({{< relref "/docs/programming/string/find.md" >}}) 
  - 文字列がある文字で始まっている（終わっている）かを確認する
 - その他
  - [文字列の長さ（文字数）を調べる]({{< relref "/docs/programming/string/length.md" >}}) 

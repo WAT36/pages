@@ -173,6 +173,15 @@
     </item>
     
     <item>
+      <title>文字列中にある文字列が含まれているときにその位置を確認する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/find/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/find/</guid>
+      <description>文字列中にある文字列が含まれているときにその位置を確認する 文字列中に特定の文字列が含まれていた時、その位置を確認したい場合どうするか？ ここで</description>
+    </item>
+    
+    <item>
       <title>自然対数(底e)</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/loge/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
