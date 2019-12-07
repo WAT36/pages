@@ -65,6 +65,15 @@
     </item>
     
     <item>
+      <title>リストの長さ</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/len/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/len/</guid>
+      <description>リストの長さ リストの長さ（＝リストに入っているデータの個数）を取得する方法を示す。 Java JavaではListクラスにsize()というメソッドが</description>
+    </item>
+    
+    <item>
       <title>三項演算子</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/ternary/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
