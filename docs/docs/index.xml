@@ -48,6 +48,15 @@
     </item>
     
     <item>
+      <title>リストに要素を加える</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/append/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/append/</guid>
+      <description>リストに要素を加える リストに要素を加える方法についてを示す。 Java JavaではListクラスにadd()というメソッドがあり、引数の要素をリスト</description>
+    </item>
+    
+    <item>
       <title>リストの定義</title>
       <link>https://WAT36.github.io/pages/docs/programming/list/list_overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
