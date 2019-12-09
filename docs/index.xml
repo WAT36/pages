@@ -56,6 +56,15 @@
     </item>
     
     <item>
+      <title>リストの全要素の合計値</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/sum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/sum/</guid>
+      <description>リストの全要素の合計値 リスト中の全要素を合計した値を取得する方法についてを示す。 またここで扱うリスト内の要素は全て数値であることを前提とする</description>
+    </item>
+    
+    <item>
       <title>リストの定義</title>
       <link>https://WAT36.github.io/pages/docs/programming/list/list_overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
