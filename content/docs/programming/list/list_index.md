@@ -23,7 +23,7 @@ Pythonではリスト（・タプル）のみで、配列という概念はな�
 - [リストの長さ]({{< relref "/docs/programming/list/len.md" >}})
 - [リストへの要素追加]({{< relref "/docs/programming/list/append.md" >}})
 - [リストの全要素の合計値]({{< relref "/docs/programming/list/sum.md" >}})
-- リストのソート
+- [リストのソート]({{< relref "/docs/programming/list/sort.md" >}})
 - リストを逆順にソート
 - リストを逆順にする
 - リストa,bに共通して入っている要素のみを表示（積集合）
