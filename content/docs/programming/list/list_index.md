@@ -25,7 +25,7 @@ Pythonではリスト（・タプル）のみで、配列という概念はな�
 - [リストの全要素の合計値]({{< relref "/docs/programming/list/sum.md" >}})
 - [リストのソート]({{< relref "/docs/programming/list/sort.md" >}})
 - リストを逆順にソート
-- リストを逆順にする
+- [リストを逆順にする]({{< relref "/docs/programming/list/reverse.md" >}})
 - リストa,bに共通して入っている要素のみを表示（積集合）
 - リストaまたはbに入っている要素のみを表示（和集合）
 - 文字列を１文字ずつのリストにする

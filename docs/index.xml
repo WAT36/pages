@@ -101,6 +101,15 @@
     </item>
     
     <item>
+      <title>リストを逆順にする</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/reverse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/reverse/</guid>
+      <description>リストを逆順にする リスト内の要素を逆順にする方法についてを示す。 Java Javaではライブラリjava.util.Collectionsに、リスト</description>
+    </item>
+    
+    <item>
       <title>三項演算子</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/ternary/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
