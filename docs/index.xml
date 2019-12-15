@@ -128,6 +128,15 @@
     </item>
     
     <item>
+      <title>リスト内の要素の最小値を取得する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/min/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/min/</guid>
+      <description>リスト内の要素の最小値を取得する リスト内の要素のうち一番小さい値を取得する方法についてを示す。 Java Javaではリストに関するメソッドがあるライ</description>
+    </item>
+    
+    <item>
       <title>三項演算子</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/ternary/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
