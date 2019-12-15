@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>タプル・リスト | WAT Notes</title>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.b291de46b3a4ee44127893db892e1d0c7d7be2c11e9937b29780751dccc5830a.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2flists\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング言語別対応メモ</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>タプル・リスト</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="タプル-リスト">タプル・リスト</h1>
+
+<table>
+<thead>
+<tr>
+<th align="left">説明</th>
+<th align="left">Java</th>
+<th align="left">Python</th>
+<th align="left"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">タプル</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">リスト</td>
+<td align="left">List&lt;型(ラッパークラス)&gt; 変数名 = new ArrayList&lt;&gt;();<br>※ArrayListにすべきかは諸説あるけど・・</td>
+<td align="left">変数 = [ , , ・・]<br>または<br>変数 = list()</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">リストの長さ</td>
+<td align="left">リスト.size()</td>
+<td align="left">len(リスト)</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">リストの全要素の合計</td>
+<td align="left">for文ループして合計する</td>
+<td align="left">sum(リスト)</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">リストのソート（リスト自体は変化しない）</td>
+<td align="left">ない？</td>
+<td align="left">sorted(リスト)</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">リストのソート（リスト自体もソートされる）</td>
+<td align="left">Collections.sort(リスト)</td>
+<td align="left">リスト.sort()</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">リストを逆順にソートする</td>
+<td align="left"></td>
+<td align="left">リスト.sort(<strong>reverse=True</strong>)<br>※sortedでも同じ</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">リストを逆順にする（リスト自体も逆順になる）</td>
+<td align="left">Collections.reverse(リスト)</td>
+<td align="left">リスト.reverse()</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">リストa,bの共通要素のみを表示</td>
+<td align="left"></td>
+<td align="left">c = [x for x in a if x in b]<br>もしくはa,bをsetにして &amp; (and)でつなぐ<br>A = set(a)<br>B = set(b)<br>C = A &amp; B</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">リストa,bの和集合を表示</td>
+<td align="left"></td>
+<td align="left">a,bをsetにして ｜ (or)でつなぐ<br>A = set(a)<br>B = set(b)<br>C = A ｜ B</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">文字列Sを１文字ずつのリストにする</td>
+<td align="left"></td>
+<td align="left"><strong>list(文字列)</strong><br>（これでOKらしい・・）</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">リストから指定したインデックスの要素を削除する</td>
+<td align="left">リスト.remove(インデックス)</td>
+<td align="left"><strong>del</strong> リスト[インデックス]<br>または<br>リスト.<strong>pop()</strong><br>popはカッコの中で削除する要素のインデックスを指定、ない場合は末尾を削除する。削除した後に要素をずらす操作を行うので、動作が遅くなりやすい。</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">リストから指定した要素を削除する</td>
+<td align="left">リスト.remove(要素)<br>※ただし、intの場合は↑とかぶるため、要素を削除したい場合はInteger(要素)としてやる</td>
+<td align="left">リスト.<strong>remove(要素)</strong><br>要素が複数ある場合は、最初に検出された要素１つのみを削除する</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">リストの各要素のリスト内での個数を調べる</td>
+<td align="left"></td>
+<td align="left">リスト.<strong>count</strong>(要素)</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">リストに指定した要素が含まれているかを調べる</td>
+<td align="left">(リスト).contains(要素)</td>
+<td align="left">要素 in リスト</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">リスト内の指定した２要素の位置を入れ替える</td>
+<td align="left">Collections.swap(リスト,i,j)</td>
+<td align="left">リスト[ i ], リスト[ j ] = リスト[ j ], リスト[ i ]</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">リストを１つの文字列に変換する</td>
+<td align="left"></td>
+<td align="left">&rdquo;.<strong>join(リスト)</strong><br>※最初の&rdquo;は区切り文字を表しており、リスト内の各要素をこの区切り文字で連結して返す。</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">リストから条件に合う要素のみを取得した新しいリストを作成する</td>
+<td align="left"></td>
+<td align="left"><strong>リスト内包表記</strong>を利用する<br>list = （元のリストを定義）<br>new_list = [e for e in list if e%2 == 0]<br><strong>[式 for 要素 in リスト if 条件]</strong></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">多次元リスト(配列)である列をキーにしてソートしたい時</td>
+<td align="left"></td>
+<td align="left">リスト.sort(key=<strong>lambda x:x[1]</strong>)<br>２つ指定したいときは<br>リスト.sort(key=<strong>lambda x:(x[1],x[2])</strong>)<br>※sortedでも同じ</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">リストの指定した要素のインデックスを調べる</td>
+<td align="left">リスト.indexOf(要素)</td>
+<td align="left">リスト.<strong>index</strong>(要素)</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">２つの配列、リストをどちらかを軸にして対応させるようにソートする <strong>競プロ頻出テク</strong></td>
+<td align="left">int[][] a<br>Arrays.sort(a,(x,y) -&gt; Integer.comparator(x[0],y[0]))<br>（配列の形式と比較させたい方法によって適宜変更）</td>
+<td align="left">c = zip(a,b)<br>c = sorted&copy;<br>a,b = zip(*c)<br>※ただしa,bはタプルで返ってくる</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">２つの配列a,bの同じインデックスの要素を１つの組にした２次元配列を作る</td>
+<td align="left"></td>
+<td align="left">zip(a,b)</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">リストのうち一番大きい数字</td>
+<td align="left">Collections.max(リスト)</td>
+<td align="left">max(リスト)</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">リストの各要素をある文字列で連結して一つの文字列にする</td>
+<td align="left"></td>
+<td align="left">文字列.<strong>join</strong>(リストorシーケンス)</td>
+<td align="left">↑の逆</td>
+</tr>
+
+<tr>
+<td align="left">リストが空であるか判別する</td>
+<td align="left">リスト.isEmpty()</td>
+<td align="left"><strong>not リスト</strong><br>または<br><strong>len(リスト)==0</strong></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/09ca6ffc811ebc47b2da2ff208b77caaf373445e" title='Last modified Sep 11, 2019 by T.Wakasugi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 11, 2019
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#タプル-リスト">タプル・リスト</a></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>
