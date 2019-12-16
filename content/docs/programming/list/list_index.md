@@ -41,4 +41,4 @@ Pythonではリスト（・タプル）のみで、配列という概念はな�
 - [リストの内一番大きい要素を調べる]({{< relref "/docs/programming/list/max.md" >}})
 - [リストの内一番小さい要素を調べる]({{< relref "/docs/programming/list/min.md" >}})
 - ２つの配列a,bの同じインデックスの要素を１つの組にした２次元配列を作る
-- リストが空であるか判別する
+- [リストが空であるか判別する]({{< relref "/docs/programming/list/isempty.md" >}})

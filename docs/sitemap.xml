@@ -23,6 +23,10 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/list/isempty/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/list/append/</loc>
     <lastmod>2019-12-08T20:48:10+09:00</lastmod>
   </url>
@@ -69,6 +73,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/list/min/</loc>
+    <lastmod>2019-12-15T21:37:27+09:00</lastmod>
   </url>
   
   <url>
@@ -253,7 +258,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2019-12-15T21:30:45+09:00</lastmod>
+    <lastmod>2019-12-15T21:37:27+09:00</lastmod>
   </url>
   
   <url>
@@ -282,12 +287,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -428,7 +433,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/list/list_index/</loc>
-    <lastmod>2019-12-15T21:30:45+09:00</lastmod>
+    <lastmod>2019-12-15T21:37:27+09:00</lastmod>
   </url>
   
   <url>
