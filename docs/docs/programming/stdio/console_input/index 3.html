@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>コンソール入力 | WAT Notes</title>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.1ab54c90b12884987dd5724a461d02e9425484c12e1051866850df222533231e.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fstdio\2f console_input\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング言語別対応メモ</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>コンソール入力</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="コンソール入力">コンソール入力</h1>
+
+<p>標準入力のコンソール入力について。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-console_input" style="display: none;" id="tabs-console_input-0" checked="checked" />
+  <label for="tabs-console_input-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>クラスはここではMain.javaとする</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">Scanner</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+
+    <span style="color:#75715e">//Scannerのインスタンスを生成
+</span><span style="color:#75715e"></span>    Scanner <span style="color:#a6e22e">sc</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner(System.<span style="color:#a6e22e">in</span>);
+
+    <span style="color:#75715e">//入力を何のデータ型で受け取るかで別れる
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//(例)int型
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> sc.<span style="color:#a6e22e">nextInt</span>();
+
+    <span style="color:#75715e">//String型（１行分全て）
+</span><span style="color:#75715e"></span>    String <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> sc.<span style="color:#a6e22e">nextLine</span>();
+    <span style="color:#75715e">//String型（スペース等で区切った一部分ずつ）
+</span><span style="color:#75715e"></span>    String <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> sc.<span style="color:#a6e22e">next</span>();
+  }
+}</code></pre></div>
+<p>javaでコンソールからの入力を扱うには <strong>Scanner</strong> クラスをインポートし、インスタンスを生成する。<br>
+その後、入力データを何のデータ型で受け取るかにより利用するScannerクラスのメソッドが別れるが、多いので一部に留める。<br>
+全て知りたい人は以下の公式サイトを参照。<br>
+<a href="https://docs.oracle.com/javase/jp/8/docs/api/java/util/Scanner.html">https://docs.oracle.com/javase/jp/8/docs/api/java/util/Scanner.html</a></p>
+
+  </div>
+
+  <input type="radio" name="tabs-console_input" style="display: none;" id="tabs-console_input-1"  />
+  <label for="tabs-console_input-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">s <span style="color:#f92672">=</span> input() <span style="color:#75715e"># コンソールからの入力をsに格納する</span></code></pre></div>
+<p>Pythonでコンソールからの入力を扱うには組み込み関数の <strong>input()</strong> を使う。<br>
+基本入力１行を読み込み、文字列に変換して渡される。<br>
+数値にしたい場合はint()で囲うなどし、スペースを区切りたい時などはsplit()等を使う。<br>
+詳しくは以下の公式ドキュメント参照。<br>
+<a href="https://docs.python.org/ja/3/library/functions.html#input">https://docs.python.org/ja/3/library/functions.html#input</a></p>
+
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/1ecc02d9a54802cf25dc682e43d5be5bdc6ae248" title='Last modified Oct 12, 2019 by T.Wakasugi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 12, 2019
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#コンソール入力">コンソール入力</a></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

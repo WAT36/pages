@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>標準出力 | WAT Notes</title>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.1ab54c90b12884987dd5724a461d02e9425484c12e1051866850df222533231e.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fstdio\2fstdout\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング言語別対応メモ</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>標準出力</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="標準出力">標準出力</h1>
+
+<p>標準出力について。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-standard_output" style="display: none;" id="tabs-standard_output-0" checked="checked" />
+  <label for="tabs-standard_output-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>クラスはここではMain.javaとする</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+        <span style="color:#75715e">//出力後、改行したい時
+</span><span style="color:#75715e"></span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(変数もしくはデータ);
+
+        <span style="color:#75715e">//出力後、改行したくない時
+</span><span style="color:#75715e"></span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(変数もしくはデータ);
+    }
+}</code></pre></div>
+<p>javaで画面に出力したい時は <strong>System.out.println()</strong> を利用する。<br>
+引数には画面に出力したい変数またはデータを入れる。
+出力後改行したくない時は System.out. <strong>print()</strong> を使う。</p>
+
+  </div>
+
+  <input type="radio" name="tabs-standard_output" style="display: none;" id="tabs-standard_output-1"  />
+  <label for="tabs-standard_output-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x<span style="color:#f92672">=</span>(<span style="color:#960050;background-color:#1e0010">変数もしくはデータ</span>)
+<span style="color:#66d9ef">print</span>(x)        <span style="color:#75715e"># xを画面に出力して改行する</span>
+<span style="color:#66d9ef">print</span>(x,end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>) <span style="color:#75715e"># xを画面に出力して改行しない</span></code></pre></div>
+<p>Pythonでコンソール画面への出力を扱うには組み込み関数の <strong>print()</strong> を使う。<br>
+基本、入力された引数を画面に出力する。<br>
+改行したくない場合はprint()のendパラメータに&rdquo;&ldquo;を指定。<br>
+詳しくは以下の公式ドキュメント参照。<br>
+<a href="https://docs.python.org/ja/3/library/functions.html#print">https://docs.python.org/ja/3/library/functions.html#print</a></p>
+
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/1ecc02d9a54802cf25dc682e43d5be5bdc6ae248" title='Last modified Oct 12, 2019 by T.Wakasugi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 12, 2019
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#標準出力">標準出力</a></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>
