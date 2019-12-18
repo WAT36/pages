@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.35569da139a0d2f1d938b976bdcb63a0e902144e22a143f2faca082e8e35c6d1.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.5b105d58170569f80cdf40927e0a8ccd43934a585ef84fc3a67f5a2795af72f4.js"></script>
 
 
 
@@ -125,57 +125,52 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="intのリストで使いたい時は">intのリストで使いたい時は？</h2>
 
-<p>intのリストでこのメソッドを使いたい時、先述の[リストの指定したインデックスの要素を削除する]で述べた</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-E remove(int index)```" data-lang="E remove(int index)```">と混同するだろう。しかしListのメソッドremoveはintの値を入力した場合、このインデックスから要素を削除する法のメソッドが使われる。  
-指定したintの要素を削除したい時はどうするか？  
-  
-方法は、intのラッパークラス**Integer**を利用する。そのメソッドvalueOfを使ってintの値をIntegerに置き換えてremoveメソッドを使うと、前者の指定した要素を削除するremoveが使われる。  
+<p>intのリストでこのメソッドを使いたい時、先述の<a href="https://WAT36.github.io/pages/docs/programming/list/pop/">リストの指定したインデックスの要素を削除する</a>で述べた</p>
 
-使用例を以下に示す。  </code></pre></div>
-<p>java
-import java.util.ArrayList;
-import java.util.List;
-class Main{
-  public static void main(String args[]){
-    List<Integer> l = new ArrayList<Integer>();
-    l.add(1);
-    l.add(3);
-    l.add(-2);
-    l.add(100);</p>
+<p><code>E remove(int index)</code></p>
 
-<pre><code>for(int i=0;i&lt;l.size();i++){
-    System.out.print(l.get(i) + &quot; &quot;);
-}
+<p>と混同するだろう。しかしListのメソッドremoveはintの値を入力した場合、このインデックスから要素を削除する方のメソッドが使われる。<br />
+指定したintの要素を削除したい時はどうするか？</p>
 
-System.out.println();
-l.remove(1);                    //この場合だとl[1]を削除する
+<p>方法は、intのラッパークラス<strong>Integer</strong>を利用する。そのメソッドvalueOfを使ってintの値をIntegerに置き換えてremoveメソッドを使うと、前者の指定した要素を削除するremoveが使われる。</p>
 
-for(int i=0;i&lt;l.size();i++){
-  System.out.print(l.get(i) + &quot; &quot;);
-}
+<p>使用例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">ArrayList</span>;
+<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">List</span>;
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+    List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span>();
+    l.<span style="color:#a6e22e">add</span>(1);
+    l.<span style="color:#a6e22e">add</span>(3);
+    l.<span style="color:#a6e22e">add</span>(<span style="color:#f92672">-</span>2);
+    l.<span style="color:#a6e22e">add</span>(100);
 
-System.out.println();
-l.remove(Integer.valueOf(1));   //この場合だとlで最初に出る「1」を削除する
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>l.<span style="color:#a6e22e">size</span>();i<span style="color:#f92672">++</span>){
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(l.<span style="color:#a6e22e">get</span>(i) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span>);
+    }
+    
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>();
+    l.<span style="color:#a6e22e">remove</span>(1);                    <span style="color:#75715e">//この場合だとl[1]を削除する
+</span><span style="color:#75715e"></span>    
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>l.<span style="color:#a6e22e">size</span>();i<span style="color:#f92672">++</span>){
+      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(l.<span style="color:#a6e22e">get</span>(i) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span>);
+    }
 
-for(int i=0;i&lt;l.size();i++){
-  System.out.print(l.get(i) + &quot; &quot;);
-}
-</code></pre>
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>();
+    l.<span style="color:#a6e22e">remove</span>(Integer.<span style="color:#a6e22e">valueOf</span>(1));   <span style="color:#75715e">//この場合だとlで最初に出る「1」を削除する
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>l.<span style="color:#a6e22e">size</span>();i<span style="color:#f92672">++</span>){
+      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(l.<span style="color:#a6e22e">get</span>(i) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span>);
+    }
+  }
+}</code></pre></div>
+<p>実行結果</p>
 
-<p>}
-}</p>
-
-<pre><code>
-実行結果
-</code></pre>
-
-<blockquote>
-<p>java Main
+<pre><code>&gt; java Main
 1 3 -2 100
 1 -2 100
 -2 100
-```</p>
-</blockquote>
+</code></pre>
 
   </div>
 
@@ -218,7 +213,14 @@ Traceback (most recent call last):
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/f95db3cb1fc24a91ffea19e6ccf481042e50c586" title='Last modified Dec 18, 2019 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Dec 18, 2019
+    </a>
+  </div>
   
 </div>
 
