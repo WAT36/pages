@@ -228,6 +228,15 @@
     </item>
     
     <item>
+      <title>指定した要素のリスト内でのインデックスを調べる</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/indexof/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/indexof/</guid>
+      <description>指定した要素のリスト内でのインデックスを調べる 指定した要素がリスト内でどの位置にいるかを調べる方法を示す。 Java JavaではListクラスにある</description>
+    </item>
+    
+    <item>
       <title>排他的論理和(XOR)</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/xor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
