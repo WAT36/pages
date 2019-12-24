@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>リストのソート | WAT Notes</title>
+<title>リスト内の指定した２要素を入れ替える | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2flist\2fsort\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2flist\2fswap\2f "] {
       color: #004ed0;
   }
   </style>
@@ -98,15 +98,15 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>リストのソート</strong>
+  <strong>リスト内の指定した２要素を入れ替える</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="リストのソート">リストのソート</h1>
+<h1 id="リスト内の指定した２要素を入れ替える">リスト内の指定した２要素を入れ替える</h1>
 
-<p>リスト内の要素をソートする方法についてを示す。</p>
+<p>リストの指定した２つの位置の要素を入れ替える方法についてを示す。</p>
 
 
 
@@ -114,68 +114,69 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" name="tabs-sort" style="display: none;" id="tabs-sort-0" checked="checked" />
-  <label for="tabs-sort-0">
+  <input type="radio" name="tabs-swap" style="display: none;" id="tabs-swap-0" checked="checked" />
+  <label for="tabs-swap-0">
     Java
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>Javaではリストに関するメソッドがあるライブラリ<strong>java.util.Collections</strong>に、リストをソートするメソッド<strong>sort()</strong>があるので、それを利用する。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">ArrayList</span>;
+    <p>JavaはListの親クラスであるCollectionsクラスに<strong>swap()</strong>メソッドがあるので、これを利用する。<br />
+<code>public static void swap(List&lt;?&gt; list,int i,int j)</code><br />
+使用例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">Collections</span>;
+<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">ArrayList</span>;
 <span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">List</span>;
-<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">Collections</span>;
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
-  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-    List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span>();
-    l.<span style="color:#a6e22e">add</span>(1);
-    l.<span style="color:#a6e22e">add</span>(3);
-    l.<span style="color:#a6e22e">add</span>(<span style="color:#f92672">-</span>2);
-    l.<span style="color:#a6e22e">add</span>(100);
 
-    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>l.<span style="color:#a6e22e">size</span>();i<span style="color:#f92672">++</span>){
-        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(l.<span style="color:#a6e22e">get</span>(i) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span>);
-    }
-    
-    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>();
-    Collections.<span style="color:#a6e22e">sort</span>(l);
-    
+  <span style="color:#75715e">//List println
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">listprint</span>(String <span style="color:#a6e22e">name</span>,List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">l</span>){
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;: &#34;</span>);
     <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>l.<span style="color:#a6e22e">size</span>();i<span style="color:#f92672">++</span>){
       System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(l.<span style="color:#a6e22e">get</span>(i) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span>);
     }
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>();
+  }
+
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+    List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span>();
+    a.<span style="color:#a6e22e">add</span>(1);
+    a.<span style="color:#a6e22e">add</span>(3);
+    a.<span style="color:#a6e22e">add</span>(100);
+    a.<span style="color:#a6e22e">add</span>(0);
+    listprint(<span style="color:#e6db74">&#34;a&#34;</span>, a);
+
+    Collections.<span style="color:#a6e22e">swap</span>(a,0,2);
+
+    listprint(<span style="color:#e6db74">&#34;a&#34;</span>, a);
+
   }
 }</code></pre></div>
 <p>実行結果</p>
 
 <pre><code>&gt; java Main
-1 3 -2 100
--2 1 3 100
+a: 1 3 100 0 
+a: 100 3 1 0 
 </code></pre>
 
   </div>
 
-  <input type="radio" name="tabs-sort" style="display: none;" id="tabs-sort-1"  />
-  <label for="tabs-sort-1">
+  <input type="radio" name="tabs-swap" style="display: none;" id="tabs-swap-1"  />
+  <label for="tabs-swap-1">
     Python
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>Pythonではリストをソートする関数は以下の2つがある。</p>
+    <p>Pythonではリストの2要素の交換に関しての関数は特に無いが、以下のように書くことで要素の入れ替えが行える。<br />
+（リストの0番目、1番目の要素の入れ替え）<br />
+<code>l[0],l[1] = l[1],l[0]</code></p>
 
-<ul>
-<li>組み込み関数<strong>sorted()</strong><br /></li>
-<li>リストの関数<strong>sort()</strong><br /></li>
-</ul>
-
-<p>sorted関数は引数に受け取ったリストをソートしたものを返す。この時、リスト自体はソートされた形にはならない。<br />
-sort関数は引数は無く、ソートしたいリストの関数として呼び出し利用する。実行後、リスト自体がソートされた形に変更される。</p>
+<p>使用例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>]
-<span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> sorted(a)
-[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>]
 <span style="color:#f92672">&gt;&gt;&gt;</span> a
 [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>]
-<span style="color:#f92672">&gt;&gt;&gt;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">.</span>sort()
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a[<span style="color:#ae81ff">0</span>],a[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> a[<span style="color:#ae81ff">2</span>],a[<span style="color:#ae81ff">0</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
 <span style="color:#f92672">&gt;&gt;&gt;</span> a
-[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>]
+[<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>]
 <span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
   </div>
 
@@ -184,14 +185,7 @@ sort関数は引数は無く、ソートしたいリストの関数として呼�
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/0bf353866c62522c54a126b72e9c5a104fd692ca" title='Last modified Dec 10, 2019 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Dec 10, 2019
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
@@ -204,7 +198,7 @@ sort関数は引数は無く、ソートしたいリストの関数として呼�
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#リストのソート">リストのソート</a></li>
+<li><a href="#リスト内の指定した２要素を入れ替える">リスト内の指定した２要素を入れ替える</a></li>
 </ul>
 </nav>
   </aside>

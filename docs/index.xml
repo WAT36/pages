@@ -164,6 +164,15 @@
     </item>
     
     <item>
+      <title>リスト内の指定した２要素を入れ替える</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/swap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/swap/</guid>
+      <description>リスト内の指定した２要素を入れ替える リストの指定した２つの位置の要素を入れ替える方法についてを示す。 Java JavaはListの親クラスであるCo</description>
+    </item>
+    
+    <item>
       <title>リスト内の要素の最大値を取得する</title>
       <link>https://WAT36.github.io/pages/docs/programming/list/max/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
