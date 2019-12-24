@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>指定した要素がリスト内にあるか調べる | WAT Notes</title>
+<title>文字列を１文字ずつのリストにする | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2flist\2flist_in\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2flist\2fstring_list\2f "] {
       color: #004ed0;
   }
   </style>
@@ -98,15 +98,15 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>指定した要素がリスト内にあるか調べる</strong>
+  <strong>文字列を１文字ずつのリストにする</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="指定した要素がリスト内にあるか調べる">指定した要素がリスト内にあるか調べる</h1>
+<h1 id="文字列を１文字ずつのリストにする">文字列を１文字ずつのリストにする</h1>
 
-<p>ある要素がリスト内に存在するかを調べる方法についてを示す。</p>
+<p>文字列を1文字ずつのリストに変換する方法についてを示す。</p>
 
 
 
@@ -114,63 +114,66 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" name="tabs-list_in" style="display: none;" id="tabs-list_in-0" checked="checked" />
-  <label for="tabs-list_in-0">
+  <input type="radio" name="tabs-stringlist" style="display: none;" id="tabs-stringlist-0" checked="checked" />
+  <label for="tabs-stringlist-0">
     Java
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>JavaではListクラスに<strong>contains()</strong>というメソッドがある。これは呼び出し元のリストに引数に指定した要素が含まれていた場合にtrue、そうでない場合falseを返すメソッドである。<br />
-<code>boolean contains(Object o)</code></p>
+    <p>Javaでは以下２つの手順を踏んで行う。</p>
 
-<p>使用例を以下に示す。</p>
+<ul>
+<li>文字列を分割するString.<strong>split()</strong>を利用して文字列を１文字ずつの配列に分割する</li>
+<li><strong>Arrays.asList()</strong>メソッドを利用して配列をリストに変換する</li>
+</ul>
+
+<p>String.split()は引数に指定した文字列を境に元の文字列を切り分けるメソッドである。引数に空文字&rdquo;&ldquo;を入力したときは、文字列を１文字ずつに分割する。<br />
+Arrays.asList()は引数に指定した配列を対応するリストに変換するというものである。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">ArrayList</span>;
+<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">Arrays</span>;
 <span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">List</span>;
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
 
   <span style="color:#75715e">//List println
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">listprint</span>(String <span style="color:#a6e22e">name</span>,List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">l</span>){
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">listprint</span>(String <span style="color:#a6e22e">name</span>,List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">l</span>){
     System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;: &#34;</span>);
     <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>l.<span style="color:#a6e22e">size</span>();i<span style="color:#f92672">++</span>){
-      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(l.<span style="color:#a6e22e">get</span>(i) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span>);
+      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(l.<span style="color:#a6e22e">get</span>(i) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;,&#34;</span>);
     }
     System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>();
   }
 
   <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-    List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span>();
-    l.<span style="color:#a6e22e">add</span>(1);
-    l.<span style="color:#a6e22e">add</span>(3);
-    l.<span style="color:#a6e22e">add</span>(100);
-    l.<span style="color:#a6e22e">add</span>(0);
 
+    String <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;apple banana&#34;</span>;
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(s);
+
+    List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> Arrays.<span style="color:#a6e22e">asList</span>(s.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;&#34;</span>));
     listprint(<span style="color:#e6db74">&#34;l&#34;</span>, l);
-
-    
   }
 }</code></pre></div>
 <p>実行結果</p>
 
 <pre><code>&gt; java Main
-l: 1 3 100 0
-true
-false
+apple banana
+l: a,p,p,l,e, ,b,a,n,a,n,a,
 </code></pre>
 
   </div>
 
-  <input type="radio" name="tabs-list_in" style="display: none;" id="tabs-list_in-1"  />
-  <label for="tabs-list_in-1">
+  <input type="radio" name="tabs-stringlist" style="display: none;" id="tabs-stringlist-1"  />
+  <label for="tabs-stringlist-1">
     Python
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>Pythonでは <strong>in</strong> 演算子が利用でき、これにより指定した要素がリスト内に含まれているかを確認できる。<br />
-含まれている場合はTrueを、そうでない場合はFalseを返す。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>]
+    <p>Pythonでは文字列をそのまま<strong>list()</strong>の引数に指定してやると、文字列を１文字ずつのリストに変換してくれる。</p>
+
+<p>使用例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> s<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;apple banana&#34;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> s
+<span style="color:#e6db74">&#39;apple banana&#39;</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">in</span> a
-True
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">in</span> a
-False
+<span style="color:#f92672">&gt;&gt;&gt;</span> list(s)
+[<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;p&#39;</span>, <span style="color:#e6db74">&#39;p&#39;</span>, <span style="color:#e6db74">&#39;l&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39; &#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;n&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;n&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>]
 <span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
   </div>
 
@@ -179,14 +182,7 @@ False
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/d8a122fc650c42df540c8344e36cf3a17d4f543c" title='Last modified Dec 21, 2019 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Dec 21, 2019
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
@@ -199,7 +195,7 @@ False
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#指定した要素がリスト内にあるか調べる">指定した要素がリスト内にあるか調べる</a></li>
+<li><a href="#文字列を１文字ずつのリストにする">文字列を１文字ずつのリストにする</a></li>
 </ul>
 </nav>
   </aside>

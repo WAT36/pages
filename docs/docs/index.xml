@@ -318,6 +318,15 @@
     </item>
     
     <item>
+      <title>文字列を１文字ずつのリストにする</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/string_list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/string_list/</guid>
+      <description>文字列を１文字ずつのリストにする 文字列を1文字ずつのリストに変換する方法についてを示す。 Java Javaでは以下２つの手順を踏んで行う。 文字列を分</description>
+    </item>
+    
+    <item>
       <title>文字列中にある文字列が含まれているときにその位置を確認する</title>
       <link>https://WAT36.github.io/pages/docs/programming/string/find/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

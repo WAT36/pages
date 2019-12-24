@@ -28,7 +28,7 @@ Pythonではリスト（・タプル）のみで、配列という概念はな�
 - [リストを逆順にする]({{< relref "/docs/programming/list/reverse.md" >}})
 - [リストa,bに共通して入っている要素のみを表示（積集合）]({{< relref "/docs/programming/list/list_and.md" >}})
 - [リストaまたはbに入っている要素のみを表示（和集合）]({{< relref "/docs/programming/list/list_or.md" >}})
-- 文字列を１文字ずつのリストにする
+- [文字列を１文字ずつのリストにする]({{< relref "/docs/programming/list/string_list.md" >}})
 - [リストの指定したインデックスの要素を削除する]({{< relref "/docs/programming/list/pop.md" >}})
 - [リストの指定した要素を削除する]({{< relref "/docs/programming/list/remove.md" >}})
 - 指定した要素がリスト内にいくつあるか調べる
