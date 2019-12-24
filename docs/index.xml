@@ -101,6 +101,15 @@
     </item>
     
     <item>
+      <title>リストの全要素を連結して１つの文字列に変換する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/join/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/join/</guid>
+      <description>リストの全要素を連結して１つの文字列に変換する リストの全要素を連結して1つの文字列にする方法についてを示す。 なお、前提としてここでいうリスト</description>
+    </item>
+    
+    <item>
       <title>リストの定義</title>
       <link>https://WAT36.github.io/pages/docs/programming/list/list_overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
