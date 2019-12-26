@@ -35,7 +35,7 @@ Pythonではリスト（・タプル）のみで、配列という概念はな�
 - [指定した要素がリスト内にあるか調べる]({{< relref "/docs/programming/list/list_in.md" >}})
 - [リスト内の指定した２要素を入れ替える]({{< relref "/docs/programming/list/swap.md" >}})
 - [リストの全要素を連結して１つの文字列に変換する]({{< relref "/docs/programming/list/join.md" >}})
-- リストから条件に合う要素のみを取得した新しいリストを作成する
+- [リストから条件に合う要素のみを取得した新しいリストを作成する]({{< relref "/docs/programming/list/inclusion.md" >}})
 - 多次元リスト(配列)である列をキーにしてソートする
 - [指定した要素のリスト内でのインデックスを調べる]({{< relref "/docs/programming/list/indexof.md" >}})
 - [リストの内一番大きい要素を調べる]({{< relref "/docs/programming/list/max.md" >}})
