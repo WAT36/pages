@@ -618,15 +618,6 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
-      <title>タプル・リスト</title>
-      <link>https://WAT36.github.io/pages/docs/programming/lists/</link>
-      <pubDate>Tue, 03 Sep 2019 22:53:31 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/lists/</guid>
-      <description>タプル・リスト 説明 Java Python タプル リスト List&amp;lt;型(ラッパークラス)&amp;gt; 変数名 = new ArrayList&amp;lt;&amp;gt;(); ※ArrayListにすべきかは諸説あるけど・・ 変</description>
-    </item>
-    
-    <item>
       <title>配列・リスト</title>
       <link>https://WAT36.github.io/pages/docs/programming/list/list_index/</link>
       <pubDate>Tue, 03 Sep 2019 22:53:31 +0900</pubDate>
