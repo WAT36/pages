@@ -236,6 +236,15 @@
     </item>
     
     <item>
+      <title>多次元リスト(配列)である列をキーにしてソートする</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/multisortlist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/multisortlist/</guid>
+      <description>多次元リスト(配列)である列をキーにしてソートする リストの中に更にリストが入っているようなリストをソートした時どうなるか？ 各要素(リスト)の</description>
+    </item>
+    
+    <item>
       <title>小数点以下切り上げ</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/ceil/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
