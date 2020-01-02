@@ -31,7 +31,7 @@ Pythonではリスト（・タプル）のみで、配列という概念はな�
 - [文字列を１文字ずつのリストにする]({{< relref "/docs/programming/list/string_list.md" >}})
 - [リストの指定したインデックスの要素を削除する]({{< relref "/docs/programming/list/pop.md" >}})
 - [リストの指定した要素を削除する]({{< relref "/docs/programming/list/remove.md" >}})
-- 指定した要素がリスト内にいくつあるか調べる
+- [指定した要素がリスト内にいくつあるか調べる]({{< relref "/docs/programming/list/count.md" >}})
 - [指定した要素がリスト内にあるか調べる]({{< relref "/docs/programming/list/list_in.md" >}})
 - [リスト内の指定した２要素を入れ替える]({{< relref "/docs/programming/list/swap.md" >}})
 - [リストの全要素を連結して１つの文字列に変換する]({{< relref "/docs/programming/list/join.md" >}})
