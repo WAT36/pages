@@ -18,7 +18,7 @@ title: "プログラミング言語別対応メモ"
 
 ## [配列・リスト]({{< relref "/docs/programming/list/list_index.md" >}})
 
-## [辞書、Map]({{< relref "/docs/programming/dict.md" >}})
+## [辞書、Map]({{< relref "/docs/programming/map/map_index.md" >}})
 
 ## 関数、メソッド逆引き
 
