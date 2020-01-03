@@ -1,13 +1,13 @@
 ---
-title: "辞書(Map)にキー・値を追加する"
+title: "辞書(Map)に要素を追加する"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
 ---
 
-# 辞書(Map)にキー・値を追加する
+# 辞書(Map)に要素を追加する
 
-辞書(Map)にキー・値を追加する方法についてを示す。  
+辞書(Map)に要素(キー・値)を追加する方法についてを示す。  
 
 
 {{< tabs "map_in" >}}

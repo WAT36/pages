@@ -425,12 +425,21 @@
     </item>
     
     <item>
-      <title>辞書(Map)にキー・値を追加する</title>
+      <title>辞書(Map)からキーを指定して値を取得</title>
+      <link>https://WAT36.github.io/pages/docs/programming/map/get/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/map/get/</guid>
+      <description>辞書(Map)からキーを指定して値を取得 辞書(Map)からキーを指定して値を取得する方法についてを示す。 Java JavaではMapクラスにget(</description>
+    </item>
+    
+    <item>
+      <title>辞書(Map)に要素を追加する</title>
       <link>https://WAT36.github.io/pages/docs/programming/map/put/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/map/put/</guid>
-      <description>辞書(Map)にキー・値を追加する 辞書(Map)にキー・値を追加する方法についてを示す。 Java JavaではMapクラスにput()というメソッド</description>
+      <description>辞書(Map)に要素を追加する 辞書(Map)に要素(キー・値)を追加する方法についてを示す。 Java JavaではMapクラスにput()というメソ</description>
     </item>
     
     <item>
