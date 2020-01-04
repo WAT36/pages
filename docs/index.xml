@@ -434,6 +434,15 @@
     </item>
     
     <item>
+      <title>辞書(Map)から要素削除</title>
+      <link>https://WAT36.github.io/pages/docs/programming/map/pop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/map/pop/</guid>
+      <description>辞書(Map)から要素削除 辞書(Map)から要素を削除する方法についてを示す。 Java JavaではMapクラスにremove()というメソッドがあ</description>
+    </item>
+    
+    <item>
       <title>辞書(Map)に要素を追加する</title>
       <link>https://WAT36.github.io/pages/docs/programming/map/put/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

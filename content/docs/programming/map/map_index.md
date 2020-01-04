@@ -13,7 +13,7 @@ JavaではMap、Pythonでは辞書と呼ばれている。
 - [辞書(Map)]({{< relref "/docs/programming/map/map.md" >}})
 - [辞書(Map)に要素を追加する]({{< relref "/docs/programming/map/put.md" >}})
 - [辞書(Map)からキーを指定して値を取得]({{< relref "/docs/programming/map/get.md" >}})
-- 辞書(Map)から要素削除
+- [辞書(Map)から要素削除]({{< relref "/docs/programming/map/pop.md" >}})
 - 辞書(Map)から最大のキーを取得
 - 辞書(Map)から最小のキーを取得
 - 辞書(Map)から最大の値を取得
