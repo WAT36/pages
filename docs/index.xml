@@ -443,6 +443,15 @@
     </item>
     
     <item>
+      <title>辞書(Map)から最大の値を取得</title>
+      <link>https://WAT36.github.io/pages/docs/programming/map/maxval/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/map/maxval/</guid>
+      <description>辞書(Map)から最大の値を取得 辞書(Map)から最大の値を取得する方法についてを示す。 Java JavaでMapにある値の最大値を取得するには以下</description>
+    </item>
+    
+    <item>
       <title>辞書(Map)から最小のキーを取得</title>
       <link>https://WAT36.github.io/pages/docs/programming/map/minkey/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
