@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>辞書(Map)から最大の値を取得 | WAT Notes</title>
+<title>辞書(Map)から最小の値を取得 | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmap\2fmaxval\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fmap\2fminval\2f "] {
       color: #004ed0;
   }
   </style>
@@ -98,15 +98,15 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>辞書(Map)から最大の値を取得</strong>
+  <strong>辞書(Map)から最小の値を取得</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="辞書-map-から最大の値を取得">辞書(Map)から最大の値を取得</h1>
+<h1 id="辞書-map-から最小の値を取得">辞書(Map)から最小の値を取得</h1>
 
-<p>辞書(Map)から最大の値を取得する方法についてを示す。</p>
+<p>辞書(Map)から最小の値を取得する方法についてを示す。</p>
 
 
 
@@ -114,20 +114,17 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" name="tabs-maxval" style="display: none;" id="tabs-maxval-0" checked="checked" />
-  <label for="tabs-maxval-0">
+  <input type="radio" name="tabs-minval" style="display: none;" id="tabs-minval-0" checked="checked" />
+  <label for="tabs-minval-0">
     Java
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>JavaでMapにある値の最大値を取得するには以下の手順で行う。</p>
+    <p>JavaでMapにある値の最小値を取得するには、最大値の時と同様に以下の手順で行う。</p>
 
 <ul>
 <li>Mapのメソッド<strong>values()</strong>を使い、値のみを格納したListを取得する</li>
-<li>その値のListをCollectionsクラスの<strong>max()</strong>メソッドを用いて最大値を取得する(参考：<a href="https://WAT36.github.io/pages/docs/programming/list/max/">リストの内一番大きい要素を調べる</a>)</li>
+<li>その値のListをCollectionsクラスの<strong>min()</strong>メソッドを用いて最小値を取得する(参考：<a href="https://WAT36.github.io/pages/docs/programming/list/min/">リストの内一番小さい要素を調べる</a>)</li>
 </ul>
-
-<p>Mapクラスのvalues()メソッドは、Mapにある値をCollection(List,Setの親クラス)に格納したものを返すメソッドである。<br />
-<code>Collection&lt;V&gt; values()</code></p>
 
 <p>実行例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">List</span>;
@@ -147,34 +144,35 @@ https://github.com/alex-shpak/hugo-book
     System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(m);
 
     List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>(m.<span style="color:#a6e22e">values</span>());
-    String <span style="color:#a6e22e">maxval</span> <span style="color:#f92672">=</span> Collections.<span style="color:#a6e22e">max</span>(value);
+    String <span style="color:#a6e22e">maxval</span> <span style="color:#f92672">=</span> Collections.<span style="color:#a6e22e">min</span>(value);
 
-    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;max value: &#34;</span> <span style="color:#f92672">+</span> maxval);
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;min value: &#34;</span> <span style="color:#f92672">+</span> maxval);
   }
 }</code></pre></div>
 <p>実行結果</p>
 
 <pre><code>&gt; java Main
 {key2=value2, key3=value3, key=value}
-max value: value3
+min value: value
 </code></pre>
 
   </div>
 
-  <input type="radio" name="tabs-maxval" style="display: none;" id="tabs-maxval-1"  />
-  <label for="tabs-maxval-1">
+  <input type="radio" name="tabs-minval" style="display: none;" id="tabs-minval-1"  />
+  <label for="tabs-minval-1">
     Python
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>Pythonでは辞書の関数<strong>values()</strong>で値のみのビューオブジェクト(イテラブル)を取得できるので、これに組み込み関数<strong>max()</strong>を適用すると、値の最大値を取得できる。</p>
+    <p>Pythonでは辞書の関数<strong>values()</strong>で値のみのビューオブジェクト(イテラブル)を取得できるので、これに組み込み関数<strong>min()</strong>を適用すると、値の最小値を取得できる。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> d<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;key&#39;</span>:<span style="color:#e6db74">&#39;value&#39;</span>, <span style="color:#e6db74">&#39;key2&#39;</span>:<span style="color:#e6db74">&#39;value2&#39;</span>, <span style="color:#e6db74">&#39;key3&#39;</span>:<span style="color:#e6db74">&#39;value3&#39;</span>}
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
 <span style="color:#f92672">&gt;&gt;&gt;</span> d
 {<span style="color:#e6db74">&#39;key&#39;</span>: <span style="color:#e6db74">&#39;value&#39;</span>, <span style="color:#e6db74">&#39;key2&#39;</span>: <span style="color:#e6db74">&#39;value2&#39;</span>, <span style="color:#e6db74">&#39;key3&#39;</span>: <span style="color:#e6db74">&#39;value3&#39;</span>}
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
 <span style="color:#f92672">&gt;&gt;&gt;</span> v<span style="color:#f92672">=</span>d<span style="color:#f92672">.</span>values()
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> max(v)
-<span style="color:#e6db74">&#39;value3&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> min(v)
+<span style="color:#e6db74">&#39;value&#39;</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
   </div>
 
@@ -183,14 +181,7 @@ max value: value3
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/3c2f9db0fbde43be5b1281a9fd2939e1d1e0bac5" title='Last modified Jan 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 4, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
@@ -203,7 +194,7 @@ max value: value3
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#辞書-map-から最大の値を取得">辞書(Map)から最大の値を取得</a></li>
+<li><a href="#辞書-map-から最小の値を取得">辞書(Map)から最小の値を取得</a></li>
 </ul>
 </nav>
   </aside>
