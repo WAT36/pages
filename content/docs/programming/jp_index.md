@@ -24,4 +24,4 @@ title: "プログラミング言語別対応メモ"
 
 ## 他、Pythonの小技など
 
-## [その他]({{< relref "/docs/programming/other.md" >}})
+## [その他]({{< relref "/docs/programming/other/other_index.md" >}})
