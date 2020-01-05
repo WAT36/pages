@@ -3,6 +3,7 @@ title: "数値（整数）の桁数を調べる"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
+bookToc: false
 ---
 
 # 数値（整数）の桁数を調べる

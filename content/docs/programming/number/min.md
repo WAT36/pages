@@ -3,6 +3,7 @@ title: "複数の数字のうち最も小さい数字をとる"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
+bookToc: false
 ---
 
 # 複数の数字のうち最も小さい数字をとる

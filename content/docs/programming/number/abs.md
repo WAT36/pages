@@ -3,6 +3,7 @@ title: "数値の絶対値を算出する"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
+bookToc: false
 ---
 
 # 数値の絶対値を算出する

@@ -3,6 +3,7 @@ title: "円周率(π)"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
+bookToc: false
 ---
 
 # 円周率(π)

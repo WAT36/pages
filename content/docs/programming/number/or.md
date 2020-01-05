@@ -3,6 +3,7 @@ title: "OR演算"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
+bookToc: false
 ---
 
 # OR演算

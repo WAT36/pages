@@ -30,42 +30,6 @@
     </item>
     
     <item>
-      <title>標準エラー出力</title>
-      <link>https://WAT36.github.io/pages/docs/programming/stdio/stderr/</link>
-      <pubDate>Sat, 12 Oct 2019 17:25:47 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/stdio/stderr/</guid>
-      <description>標準エラー出力 標準エラー出力について。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ //出力後、改行したい時 System.err.</description>
-    </item>
-    
-    <item>
-      <title>標準出力</title>
-      <link>https://WAT36.github.io/pages/docs/programming/stdio/stdout/</link>
-      <pubDate>Sat, 12 Oct 2019 17:19:30 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/stdio/stdout/</guid>
-      <description>標準出力 標準出力について。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ //出力後、改行したい時 System.out.printl</description>
-    </item>
-    
-    <item>
-      <title>コンソール入力</title>
-      <link>https://WAT36.github.io/pages/docs/programming/stdio/console_input/</link>
-      <pubDate>Sat, 12 Oct 2019 17:03:35 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/stdio/console_input/</guid>
-      <description>コンソール入力 標準入力のコンソール入力について。 Java クラスはここではMain.javaとする import java.util.Scanner class Main{ public static void main(String args[]){ //Scannerのインスタンス</description>
-    </item>
-    
-    <item>
-      <title>コマンドライン引数</title>
-      <link>https://WAT36.github.io/pages/docs/programming/stdio/commandline_input/</link>
-      <pubDate>Sat, 12 Oct 2019 16:42:45 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/stdio/commandline_input/</guid>
-      <description>コマンドライン引数 標準入力のコマンドライン引数について。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ String[] input = args //コマンドライン引</description>
-    </item>
-    
-    <item>
       <title>優先度付きキュー（ヒープ）とPythonで実装するライブラリ「heapq」について</title>
       <link>https://WAT36.github.io/pages/posts/heapq/</link>
       <pubDate>Sat, 28 Sep 2019 14:09:58 +0900</pubDate>

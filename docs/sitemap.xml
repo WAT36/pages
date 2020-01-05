@@ -254,6 +254,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/map/minval/</loc>
+    <lastmod>2020-01-05T14:04:49+09:00</lastmod>
   </url>
   
   <url>
@@ -268,7 +269,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/map/map_index/</loc>
-    <lastmod>2020-01-04T20:11:48+09:00</lastmod>
+    <lastmod>2020-01-05T14:04:49+09:00</lastmod>
   </url>
   
   <url>
@@ -363,7 +364,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-01-04T20:11:48+09:00</lastmod>
+    <lastmod>2020-01-05T14:04:49+09:00</lastmod>
   </url>
   
   <url>
@@ -392,12 +393,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -407,12 +408,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -452,17 +453,7 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/java/</loc>
-    <lastmod>2019-10-12T17:51:49+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/stdio/stderr/</loc>
-    <lastmod>2019-10-12T17:51:49+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/tags/%E6%A8%99%E6%BA%96%E5%87%BA%E5%8A%9B/</loc>
     <lastmod>2019-10-12T17:51:49+09:00</lastmod>
   </url>
   
@@ -473,11 +464,6 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/stdio/console_input/</loc>
-    <lastmod>2019-10-12T17:51:49+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/tags/%E6%A8%99%E6%BA%96%E5%85%A5%E5%8A%9B/</loc>
     <lastmod>2019-10-12T17:51:49+09:00</lastmod>
   </url>
   

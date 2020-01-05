@@ -3,6 +3,7 @@ title: "小数点以下切り捨て"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
+bookToc: false
 ---
 
 # 小数点以下切り捨て

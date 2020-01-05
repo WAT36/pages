@@ -1,8 +1,7 @@
 ---
 title: "標準出力"
 date: 2019-10-12T17:19:30+09:00
-categories: [ "プログラミング" ]
-tags: [ "java", "python", "標準出力"]
+bookToc: false
 ---
 
 # 標準出力

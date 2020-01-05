@@ -1,8 +1,7 @@
 ---
 title: "コマンドライン引数"
 date: 2019-10-12T16:42:45+09:00
-categories: [ "プログラミング" ]
-tags: [ "java", "python", "標準入力"]
+bookToc: false
 ---
 
 # コマンドライン引数

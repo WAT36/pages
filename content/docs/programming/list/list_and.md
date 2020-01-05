@@ -3,6 +3,7 @@ title: "リストa,bに共通して入っている要素のみを表示（積集
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
+bookToc: false
 ---
 
 # リストa,bに共通して入っている要素のみを表示（積集合）

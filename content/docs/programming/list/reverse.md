@@ -3,6 +3,7 @@ title: "リストを逆順にする"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
+bookToc: false
 ---
 
 # リストを逆順にする

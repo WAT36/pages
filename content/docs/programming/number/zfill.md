@@ -3,6 +3,7 @@ title: "数値の頭をゼロ詰して表示する"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
+bookToc: false
 ---
 
 # 数値の頭をゼロ詰して表示する

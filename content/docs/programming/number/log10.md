@@ -3,6 +3,7 @@ title: "常用対数(底10)"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
+bookToc: false
 ---
 
 # 常用対数(底10)

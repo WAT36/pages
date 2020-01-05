@@ -3,6 +3,7 @@ title: "排他的論理和(XOR)"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
+bookToc: false
 ---
 
 # 排他的論理和(XOR)

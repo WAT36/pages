@@ -3,6 +3,7 @@ title: "任意の底の対数"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
+bookToc: false
 ---
 
 # 任意の底の対数

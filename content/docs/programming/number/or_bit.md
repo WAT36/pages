@@ -3,6 +3,7 @@ title: "論理和(OR)"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
+bookToc: false
 ---
 
 # 論理和(OR)

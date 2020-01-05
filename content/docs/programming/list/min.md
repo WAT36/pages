@@ -3,6 +3,7 @@ title: "リスト内の要素の最小値を取得する"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
+bookToc: false
 ---
 
 # リスト内の要素の最小値を取得する

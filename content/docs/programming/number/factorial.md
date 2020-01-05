@@ -3,6 +3,7 @@ title: "階乗"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
+bookToc: false
 ---
 
 # 階乗
