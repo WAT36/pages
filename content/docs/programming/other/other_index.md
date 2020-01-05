@@ -11,4 +11,4 @@ bookToc: false
 その他、括れてない手法などをまとめる。
 
 - 変数
- - 変数の型を調べる
+ - [変数の型を調べる]({{< relref "/docs/programming/other/type.md" >}})

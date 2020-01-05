@@ -24,6 +24,11 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/other/other_index/</loc>
+    <lastmod>2020-01-05T16:48:21+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/other/type/</loc>
   </url>
   
   <url>
@@ -368,7 +373,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-01-05T16:37:57+09:00</lastmod>
+    <lastmod>2020-01-05T16:48:21+09:00</lastmod>
   </url>
   
   <url>
@@ -397,12 +402,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -588,7 +593,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/jp_index/</loc>
-    <lastmod>2020-01-02T13:52:31+09:00</lastmod>
+    <lastmod>2020-01-05T16:48:21+09:00</lastmod>
   </url>
   
 </urlset>
