@@ -416,6 +416,15 @@
     </item>
     
     <item>
+      <title>行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/matrix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/matrix/</guid>
+      <description>行列 行列の定義についてを示す。 Python 行列(2次元配列)もベクトルと同様、numpyライブラリにある関数array(list)を使って定義する。引</description>
+    </item>
+    
+    <item>
       <title>複数の数字のうち最も大きい数字をとる</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/max/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

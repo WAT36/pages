@@ -15,3 +15,4 @@ bookToc: false
 
 - 線形代数
  - [ベクトル]({{< relref "/docs/programming/math/vector.md" >}})
+ - [行列]({{< relref "/docs/programming/math/matrix.md" >}})
