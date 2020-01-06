@@ -11,6 +11,7 @@ bookToc: false
 数学に関する手法などをまとめる。  
 都合上、現在はPythonのみ記載。  
 
+線形代数では**numpy**というライブラリを利用する。
 
 - 線形代数
- - ベクトル
+ - [ベクトル]({{< relref "/docs/programming/math/vector.md" >}})
