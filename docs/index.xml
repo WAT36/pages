@@ -916,6 +916,15 @@ var php_wireless = 4; siteWinsock.switch_inbox += so_control_logic; if (target_w
     </item>
     
     <item>
+      <title>CTF</title>
+      <link>https://WAT36.github.io/pages/docs/ctf/ctf_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/ctf/ctf_index/</guid>
+      <description>CTFメモ 最近CTFにも興味が出て参加しているが、なかなかテクニックが覚えられないため、備忘のために覚えたことを書き記しておくためのページで</description>
+    </item>
+    
+    <item>
       <title>プログラミング言語別対応メモ</title>
       <link>https://WAT36.github.io/pages/docs/programming/jp_index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
