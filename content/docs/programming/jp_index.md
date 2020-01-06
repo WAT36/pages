@@ -20,8 +20,10 @@ title: "プログラミング言語別対応メモ"
 
 ## [辞書、Map]({{< relref "/docs/programming/map/map_index.md" >}})
 
-## 関数、メソッド逆引き
-
 ## 他、Pythonの小技など
 
 ## [その他]({{< relref "/docs/programming/other/other_index.md" >}})
+
+<hr>
+
+## [数学系]({{< relref "/docs/programming/math/math_index.md" >}})

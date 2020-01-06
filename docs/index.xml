@@ -362,6 +362,15 @@
     </item>
     
     <item>
+      <title>数学系</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/math_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/math_index/</guid>
+      <description>数学系 数学に関する手法などをまとめる。 都合上、現在はPythonのみ記載。 線形代数 ベクトル</description>
+    </item>
+    
+    <item>
       <title>文字列の長さ（文字数）を調べる</title>
       <link>https://WAT36.github.io/pages/docs/programming/string/length/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
