@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>辞書(Map)から最小のキーを取得 | WAT Notes</title>
+<title>辞書(Map)からキーのリストを取得 | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmap\2fminkey\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fmap\2fkeylist\2f "] {
       color: #004ed0;
   }
   </style>
@@ -98,15 +98,15 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>辞書(Map)から最小のキーを取得</strong>
+  <strong>辞書(Map)からキーのリストを取得</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="辞書-map-から最小のキーを取得">辞書(Map)から最小のキーを取得</h1>
+<h1 id="辞書-map-からキーのリストを取得">辞書(Map)からキーのリストを取得</h1>
 
-<p>辞書(Map)から最小のキーを取得する方法についてを示す。</p>
+<p>辞書(Map)からキーのリストを取得する方法についてを示す。</p>
 
 
 
@@ -114,26 +114,22 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" name="tabs-minkey" style="display: none;" id="tabs-minkey-0" checked="checked" />
-  <label for="tabs-minkey-0">
+  <input type="radio" name="tabs-keylist" style="display: none;" id="tabs-keylist-0" checked="checked" />
+  <label for="tabs-keylist-0">
     Java
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>JavaでMapにあるキーの最小値を取得するには、最大値と同じで以下の手順で行う。</p>
+    <p>JavaではMapクラスに<strong>keySet()</strong>というメソッドがある。これによりMapのキーをSetで取得することができる。</p>
 
-<ul>
-<li>Mapのメソッド<strong>keySet()</strong>を使い、キーのみをSetに格納したデータを取得する</li>
-<li>そのキーのSetをCollectionsクラスの<strong>min()</strong>メソッドを用いて最小値を取得する(参考：<a href="https://WAT36.github.io/pages/docs/programming/list/min/">リストの内一番小さい要素を調べる</a>)</li>
-</ul>
+<p><code>Set&lt;K&gt; keySet()</code></p>
 
-<p>MapクラスのkeySet()メソッドは、MapにあるキーをSetに格納したものを返すメソッドである。SetはListから重複要素を除外させたデータ構造である。<br />
-<code>Set&lt;K&gt; keySet()</code></p>
-
-<p>実行例を以下に示す。</p>
+<p>Listに変換したい時はListの変数の初期化時にこのSetを指定してやればよい。<br />
+実行例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">Set</span>;
 <span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">Map</span>;
 <span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">HashMap</span>;
-<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">Collections</span>;
+<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">List</span>;
+<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">ArrayList</span>;
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
   <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
 
@@ -146,33 +142,41 @@ https://github.com/alex-shpak/hugo-book
     System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(m);
 
     Set<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> m.<span style="color:#a6e22e">keySet</span>();
-    String <span style="color:#a6e22e">minkey</span> <span style="color:#f92672">=</span> Collections.<span style="color:#a6e22e">min</span>(key);
+    List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">keylist</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>(key);
 
-    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;min key: &#34;</span> <span style="color:#f92672">+</span> minkey);
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(keylist);
   }
 }</code></pre></div>
 <p>実行結果</p>
 
 <pre><code>&gt; java Main
 {key2=value2, key3=value3, key=value}
-min key: key
+[key2, key3, key]
 </code></pre>
 
   </div>
 
-  <input type="radio" name="tabs-minkey" style="display: none;" id="tabs-minkey-1"  />
-  <label for="tabs-minkey-1">
+  <input type="radio" name="tabs-keylist" style="display: none;" id="tabs-keylist-1"  />
+  <label for="tabs-keylist-1">
     Python
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>Pythonでは単に組み込み関数<strong>min()</strong>を使えば、辞書にある最小のキーを取得できる。</p>
+    <p>Pythonは辞書の関数に<strong>keys()</strong>という関数があり、これを利用することで辞書のキーのイテラブルオブジェクトを取得できる。<br />
+ただし、このkeys関数で返されるオブジェクトはリストではなくdict_keys型なので注意。リストに変換したい場合はlist()を使って変換する。<br />
+for文でループさせたい時は <code>for i in 辞書.keys()</code> のようにすればよい。<br />
+実行例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> d<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;key&#39;</span>:<span style="color:#e6db74">&#39;value&#39;</span>, <span style="color:#e6db74">&#39;key2&#39;</span>:<span style="color:#e6db74">&#39;value2&#39;</span>, <span style="color:#e6db74">&#39;key3&#39;</span>:<span style="color:#e6db74">&#39;value3&#39;</span>}
 <span style="color:#f92672">&gt;&gt;&gt;</span> d
 {<span style="color:#e6db74">&#39;key&#39;</span>: <span style="color:#e6db74">&#39;value&#39;</span>, <span style="color:#e6db74">&#39;key2&#39;</span>: <span style="color:#e6db74">&#39;value2&#39;</span>, <span style="color:#e6db74">&#39;key3&#39;</span>: <span style="color:#e6db74">&#39;value3&#39;</span>}
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> keylist<span style="color:#f92672">=</span>d<span style="color:#f92672">.</span>keys()
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> min(d)
-<span style="color:#e6db74">&#39;key&#39;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
+<span style="color:#f92672">&gt;&gt;&gt;</span> keylist
+dict_keys([<span style="color:#e6db74">&#39;key&#39;</span>, <span style="color:#e6db74">&#39;key2&#39;</span>, <span style="color:#e6db74">&#39;key3&#39;</span>])
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> list(keylist) 
+[<span style="color:#e6db74">&#39;key&#39;</span>, <span style="color:#e6db74">&#39;key2&#39;</span>, <span style="color:#e6db74">&#39;key3&#39;</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
   </div>
 
 </div>
@@ -180,14 +184,7 @@ min key: key
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f3dcb4ba0aed4e8c96315c519011ed407623594e" title='Last modified Jan 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 5, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 

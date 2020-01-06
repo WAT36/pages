@@ -21,5 +21,5 @@ JavaではMap、Pythonでは辞書と呼ばれている。
 - [辞書(Map)から最小の値を取得]({{< relref "/docs/programming/map/minval.md" >}})
 - 辞書(Map)から最大の値をとるキーを取得
 - 辞書(Map)から最小の値をとるキーを取得
-- 辞書(Map)からキーのリストを取得
+- [辞書(Map)からキーのリストを取得]({{< relref "/docs/programming/map/keylist.md" >}})
 - 辞書(Map)から値のリストを取得
