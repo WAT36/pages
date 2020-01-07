@@ -9,6 +9,9 @@ title: "CTF"
 
 ## 重要事項
 
+- binary
+ - シェルコード
+
 
 ## writeup
 
