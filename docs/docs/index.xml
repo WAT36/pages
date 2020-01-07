@@ -426,6 +426,15 @@
     </item>
     
     <item>
+      <title>行列の型(サイズ)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/matrix_size/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/matrix_size/</guid>
+      <description>行列の型(サイズ) 行列の型(サイズ)を調べる方法についてを示す。 Python 行列(2次元配列)のサイズはnumpy.ndarray型の変数.shape</description>
+    </item>
+    
+    <item>
       <title>複数の数字のうち最も大きい数字をとる</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/max/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
