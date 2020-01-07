@@ -489,6 +489,15 @@
     </item>
     
     <item>
+      <title>辞書(Map)から値のリストを取得</title>
+      <link>https://WAT36.github.io/pages/docs/programming/map/valuelist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/map/valuelist/</guid>
+      <description>辞書(Map)から値のリストを取得 辞書(Map)から値のリストを取得を取得する方法についてを示す。 Java JavaではMapクラスにvalues(</description>
+    </item>
+    
+    <item>
       <title>辞書(Map)から最大のキーを取得</title>
       <link>https://WAT36.github.io/pages/docs/programming/map/maxkey/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
