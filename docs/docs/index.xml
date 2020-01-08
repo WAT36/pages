@@ -588,6 +588,15 @@
     </item>
     
     <item>
+      <title>零行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/zero/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/zero/</guid>
+      <description>零行列 零行列を生成する方法についてを示す。 Python 零行列はnumpyの関数zerosで生成できる。 引数に１つの整数を渡した場合は1次元(ベクトル)</description>
+    </item>
+    
+    <item>
       <title>２進数に変換して表示</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/bin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
