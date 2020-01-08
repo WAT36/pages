@@ -300,6 +300,15 @@
     </item>
     
     <item>
+      <title>平方根</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/root/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/root/</guid>
+      <description>平方根 平方根（ルート）を計算する方法についてを示す。 方法は大まかに分けると ライブラリにある専用の関数/メソッドを用いる 累乗で求める（n乗根な</description>
+    </item>
+    
+    <item>
       <title>指定した要素がリスト内にあるか調べる</title>
       <link>https://WAT36.github.io/pages/docs/programming/list/list_in/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

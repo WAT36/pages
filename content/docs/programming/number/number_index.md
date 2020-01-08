@@ -26,6 +26,7 @@ bookToc: false
  - [三項演算子]({{< relref "/docs/programming/number/ternary.md" >}})
  - [階乗]({{< relref "/docs/programming/number/factorial.md" >}})
  - [絶対値]({{< relref "/docs/programming/number/abs.md" >}})
+ - [平方根・n乗根]({{< relref "/docs/programming/number/root.md" >}})
  - [複数の数字のうち最も大きい数字をとる]({{< relref "/docs/programming/number/max.md" >}})
  - [複数の数字のうち最も小さい数字をとる]({{< relref "/docs/programming/number/min.md" >}})
 - 数値の表記を変換する
