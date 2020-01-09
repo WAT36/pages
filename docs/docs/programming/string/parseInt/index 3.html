@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文字列を数値に変換する | WAT Notes</title>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.bf505593ad2b16e0d1727f111a0632ae5df4f881fa22137f4860b6a0fb87ade4.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fstring\2fparseInt\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>文字列を数値に変換する</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="文字列を数値に変換する">文字列を数値に変換する</h1>
+
+<p>数字の文字列を数値に変換する方法を述べる。<br />
+ちなみに、逆の<a href="https://WAT36.github.io/pages/docs/programming/number/str/">数値を文字列にする</a>方法もある。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-parseint" style="display: none;" id="tabs-parseint-0" checked="checked" />
+  <label for="tabs-parseint-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>クラスはここではMain.javaとする</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+      String <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1&#34;</span>;
+      
+      <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> Integer.<span style="color:#a6e22e">parseInt</span>(s);
+
+      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(i) <span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span>    }
+}</code></pre></div>
+<p>Javaでは各数値型のラッパークラスに <strong>parsexxx(String s)</strong> というメソッドがあり、これにより文字列を数値リテラルに変換してくれる。<br />
+int型の場合はintのラッパークラスIntegerに<strong>parseInt</strong>というメソッドがあり、そのメソッドに文字列を入力すると、対応する数値に変換してくれる。上記例では&rdquo;1&rdquo;という文字列をparseIntに入力すると、int型(数値リテラル)の1が返る。<br />
+数値リテラルに変換できないような文字列を入力すると<code>NumberFormatException</code>という例外エラーが発生する。</p>
+
+<p>他の数値型に変換したいときは、それぞれ対応するラッパークラスにparsexxメソッドがあるのでそれを活用する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+      String <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1&#34;</span>;
+      
+      <span style="color:#66d9ef">long</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> Long.<span style="color:#a6e22e">parseLong</span>(s); <span style="color:#75715e">//&#34;1&#34;をLong型に変換
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">byte</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> Byte.<span style="color:#a6e22e">parseByte</span>(s); <span style="color:#75715e">//&#34;1&#34;をByte型に変換
+</span><span style="color:#75715e"></span>
+      <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> Double.<span style="color:#a6e22e">parseDouble</span>(s); <span style="color:#75715e">//&#34;1&#34;をDouble型に変換
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">float</span>  <span style="color:#a6e22e">f</span> <span style="color:#f92672">=</span> Float.<span style="color:#a6e22e">parseFloat</span>(s);   <span style="color:#75715e">//&#34;1&#34;をFloat型に変換
+</span><span style="color:#75715e"></span>    }
+}</code></pre></div>
+  </div>
+
+  <input type="radio" name="tabs-parseint" style="display: none;" id="tabs-parseint-1"  />
+  <label for="tabs-parseint-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Pythonで数値の文字列を数値リテラルに変換したい時は組み込み関数の<strong>int()</strong>や<strong>float()</strong>を利用する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1&#34;</span>
+<span style="color:#66d9ef">print</span>(s) <span style="color:#75715e">#&#39;1&#39;</span>
+
+s <span style="color:#f92672">=</span> int(s)
+<span style="color:#66d9ef">print</span>(s) <span style="color:#75715e"># 1</span>
+
+s <span style="color:#f92672">=</span> float(s)
+<span style="color:#66d9ef">print</span>(s) <span style="color:#75715e"># 1.0</span></code></pre></div>
+<p>数値リテラルに変換できないような文字列を入力したときは、例外<code>ValueError</code>を返す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span>s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;+&#34;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span>s <span style="color:#f92672">=</span> int(s)
+Traceback (most recent call last):
+  File <span style="color:#e6db74">&#34;&lt;stdin&gt;&#34;</span>, line <span style="color:#ae81ff">1</span>, <span style="color:#f92672">in</span> <span style="color:#f92672">&lt;</span>module<span style="color:#f92672">&gt;</span>
+<span style="color:#a6e22e">ValueError</span>: invalid literal <span style="color:#66d9ef">for</span> int() <span style="color:#66d9ef">with</span> base <span style="color:#ae81ff">10</span>: <span style="color:#e6db74">&#39;+&#39;</span></code></pre></div>
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/f3dcb4ba0aed4e8c96315c519011ed407623594e" title='Last modified Jan 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 5, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>
