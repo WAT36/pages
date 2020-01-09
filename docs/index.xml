@@ -470,6 +470,15 @@
     </item>
     
     <item>
+      <title>要素が全て１の行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/ones/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/ones/</guid>
+      <description>要素が全て１の行列 要素が全て１の行列を生成する方法についてを示す。 Python numpyの関数onesを使うと、要素が全て１の行列を生成できる。 零行列</description>
+    </item>
+    
+    <item>
       <title>論理和(OR)</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/or_bit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
