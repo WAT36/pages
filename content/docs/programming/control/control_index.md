@@ -12,4 +12,4 @@ bookToc: false
 条件分岐やループなど、処理の流れを制御する文の記法などをここでは示す。  
 
 - 制御構文
- - if-else文
+ - [if-else文]({{< relref "/docs/programming/control/ifelse.md" >}})
