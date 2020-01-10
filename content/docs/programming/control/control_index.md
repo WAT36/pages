@@ -13,3 +13,9 @@ bookToc: false
 
 - 制御構文
  - [if-else文]({{< relref "/docs/programming/control/ifelse.md" >}})
+ - for文
+ - while文
+ - break文
+ - continue文
+ - switch文
+ - pass文
