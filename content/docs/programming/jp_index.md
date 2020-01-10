@@ -18,6 +18,8 @@ title: "プログラミング言語別対応メモ"
 
 ## [配列・リスト]({{< relref "/docs/programming/list/list_index.md" >}})
 
+## [制御構文]({{< relref "/docs/programming/control/control_index.md" >}})
+
 ## [辞書、Map]({{< relref "/docs/programming/map/map_index.md" >}})
 
 ## [その他]({{< relref "/docs/programming/other/other_index.md" >}})

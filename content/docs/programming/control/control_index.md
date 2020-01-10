@@ -1,0 +1,15 @@
+---
+title: "制御構文"
+weight: 1
+# bookFlatSection: false
+# bookShowToC: true
+bookToc: false
+---
+
+# 制御構文
+
+プログラミングをする上で必ずと言っていいほど出るのがこの制御構文。  
+条件分岐やループなど、処理の流れを制御する文の記法などをここでは示す。  
+
+- 制御構文
+ - if-else文
