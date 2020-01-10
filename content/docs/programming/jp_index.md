@@ -22,6 +22,8 @@ title: "プログラミング言語別対応メモ"
 
 ## [辞書、Map]({{< relref "/docs/programming/map/map_index.md" >}})
 
+## [クラス・関数(メソッド)]({{< relref "/docs/programming/class_func/classfunc_index.md" >}})
+
 ## [その他]({{< relref "/docs/programming/other/other_index.md" >}})
 
 <hr>
