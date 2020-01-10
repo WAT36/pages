@@ -798,15 +798,6 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
-      <title>辞書、Map</title>
-      <link>https://WAT36.github.io/pages/docs/programming/dict/</link>
-      <pubDate>Tue, 03 Sep 2019 23:05:48 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/dict/</guid>
-      <description>辞書、Map 説明 Java Python 辞書（Map) Map a = new HashMap(); (String,Stringの例) dict = {} 辞書(Map)に要素を置く (Map).put(キー,値)</description>
-    </item>
-    
-    <item>
       <title>配列・リスト</title>
       <link>https://WAT36.github.io/pages/docs/programming/list/list_index/</link>
       <pubDate>Tue, 03 Sep 2019 22:53:31 +0900</pubDate>
