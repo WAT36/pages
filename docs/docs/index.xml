@@ -480,6 +480,15 @@
     </item>
     
     <item>
+      <title>行列のサイズを変更する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/reshape/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/reshape/</guid>
+      <description>行列のサイズを変更する 行列のサイズを変更する方法についてを示す。 Python 行列のサイズを変更したい場合は変数名.reshape(n,m)を使う。 変更</description>
+    </item>
+    
+    <item>
       <title>行列の型(サイズ)</title>
       <link>https://WAT36.github.io/pages/docs/programming/math/matrix_size/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
