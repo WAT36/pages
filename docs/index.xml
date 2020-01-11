@@ -65,6 +65,15 @@
     </item>
     
     <item>
+      <title>Rand</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/rand/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/rand/</guid>
+      <description>要素がランダムの行列 要素がランダムの行列を生成する方法を示す。 Python 要素がランダムな行列(2次元配列)を生成するにはnumpy.random.r</description>
+    </item>
+    
+    <item>
       <title>Type</title>
       <link>https://WAT36.github.io/pages/docs/programming/other/type/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
