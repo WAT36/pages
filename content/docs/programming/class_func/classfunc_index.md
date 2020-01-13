@@ -16,4 +16,6 @@ bookToc: false
 - 関数
  - 関数(メソッド)の定義
  - 匿名（無名）クラス
- - ラムダ式
+ - [ラムダ式（無名関数）]({{< relref "/docs/programming/class_func/lambda.md" >}})
+
+ 
