@@ -22,3 +22,6 @@ bookToc: false
      - [要素がランダムの行列]({{< relref "/docs/programming/math/rand.md" >}})
      - [行列のサイズを変更する]({{< relref "/docs/programming/math/reshape.md" >}})
      - [スカラー*行列]({{< relref "/docs/programming/math/scalar.md" >}})
+     - [行列積(ベクトルの内積)]({{< relref "/docs/programming/math/dot.md" >}})
+
+

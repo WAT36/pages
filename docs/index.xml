@@ -515,6 +515,15 @@
     </item>
     
     <item>
+      <title>行列積(ベクトルの内積)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/dot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/dot/</guid>
+      <description>行列積(ベクトルの内積) 行列積、ベクトルでいう内積を算出する方法についてを示す。 Python 行列積を算出したいときは、numpy変数の関数dotを使用</description>
+    </item>
+    
+    <item>
       <title>複数の数字のうち最も大きい数字をとる</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/max/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
