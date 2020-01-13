@@ -17,5 +17,5 @@ bookToc: false
  - while文
  - break文
  - continue文
- - switch文
+ - [switch文]({{< relref "/docs/programming/control/switch.md" >}})
  - pass文

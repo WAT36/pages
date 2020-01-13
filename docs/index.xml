@@ -74,6 +74,15 @@
     </item>
     
     <item>
+      <title>switch文</title>
+      <link>https://WAT36.github.io/pages/docs/programming/control/switch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/control/switch/</guid>
+      <description>switch文 switch文は一つの式の結果から多くの処理に分岐させたいときに用いる。 ここではそのswitch文についてを示す。 Java Javaで</description>
+    </item>
+    
+    <item>
       <title>Type</title>
       <link>https://WAT36.github.io/pages/docs/programming/other/type/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

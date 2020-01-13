@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>switch文 | WAT Notes</title>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.558b236420941cdf5bb458887d5b2da4bf23b96dcdf58b1f2e3ac1a4684fb8eb.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2f control\2fswitch\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>switch文</strong>
+</header>
+
+      
+<article class="markdown"><p>switch文は一つの式の結果から多くの処理に分岐させたいときに用いる。<br />
+ここではそのswitch文についてを示す。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-sort" style="display: none;" id="tabs-sort-0" checked="checked" />
+  <label for="tabs-sort-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Javaでのswitch文での記法は以下の通り。</p>
+
+<pre><code>switch (式) {
+    case 定数１:
+        //式の結果が定数１に一致したときはここの処理が実行
+        break;
+    case 定数２：
+        //式の結果が定数２に一致したときはここの処理が実行
+        break;
+    ・・・
+    ・・・
+    default:
+        //どのcaseにも一致しなかった場合はこの処理が実行
+        break;
+}
+</code></pre>
+
+<p>case,default後の処理の最後には必ず<strong>break</strong>を書く。書かないとその後ろのcase文の処理も実行してしまう。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">Random</span>;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+
+    Random <span style="color:#a6e22e">random</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Random();
+    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">val</span> <span style="color:#f92672">=</span> random.<span style="color:#a6e22e">nextInt</span>(3); <span style="color:#75715e">//0~2でランダムに数値選出
+</span><span style="color:#75715e"></span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(val <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;: &#34;</span>);
+
+    <span style="color:#66d9ef">switch</span>(val){
+      <span style="color:#66d9ef">case</span> 2<span style="color:#f92672">:</span>
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;大吉&#34;</span>);
+        <span style="color:#66d9ef">break</span>;
+      <span style="color:#66d9ef">case</span> 1<span style="color:#f92672">:</span>
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;中吉&#34;</span>);
+        <span style="color:#66d9ef">break</span>;
+      <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;吉&#34;</span>);
+        <span style="color:#66d9ef">break</span>;
+    }
+
+  }
+}</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>$ java Main
+0: 吉
+$ java Main
+2: 大吉
+</code></pre>
+
+  </div>
+
+  <input type="radio" name="tabs-sort" style="display: none;" id="tabs-sort-1"  />
+  <label for="tabs-sort-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Pythonには<strong>switch文が存在しない</strong>。</p>
+
+<p>そのためif-elseなどで条件分岐を実装する。</p>
+
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-end">
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>グラフ on WAT Notes</title>
+    <link>https://WAT36.github.io/pages/tags/%E3%82%B0%E3%83%A9%E3%83%95/</link>
+    <description>Recent content in グラフ on WAT Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Sat, 30 Nov 2019 15:05:05 +0900</lastBuildDate>
+    
+	<atom:link href="https://WAT36.github.io/pages/tags/%E3%82%B0%E3%83%A9%E3%83%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>グラフの彩色問題 ～Welsh・Powellのアルゴリズム～</title>
+      <link>https://WAT36.github.io/pages/posts/graph_coloring/</link>
+      <pubDate>Sat, 30 Nov 2019 15:05:05 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/graph_coloring/</guid>
+      <description>競プロでグラフの彩色問題が出てきたので、今回はグラフの頂点彩色問題について、復習がてら記事を書いてみる。 グラフの彩色 そもそもグラフの彩色とは</description>
+    </item>
+    
+  </channel>
+</rss>

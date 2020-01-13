@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ラムダ式（無名関数） | WAT Notes</title>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.558b236420941cdf5bb458887d5b2da4bf23b96dcdf58b1f2e3ac1a4684fb8eb.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2f class_func\2flambda\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>ラムダ式（無名関数）</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="ラムダ式-無名関数">ラムダ式（無名関数）</h1>
+
+<p>ラムダ式（無名関数）についてを述べる。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-sort" style="display: none;" id="tabs-sort-0" checked="checked" />
+  <label for="tabs-sort-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Javaでは簡易的なメソッドを実装する方法としてラムダ式というのがある。</p>
+
+<p><code>( 実装するメソッドの引数 ) -&gt; { 処理 }</code></p>
+
+<p>ラムダ式では、<strong>関数型インターフェース</strong>の変数に、この記法で記述されたコードを代入する。<br />
+関数型インターフェースとは<strong>java.util.function</strong>に定義されているインターフェースであり、それぞれ用途があるが、共通して言えるのは定義されているのが抽象メソッド１つということである。この抽象メソッドをラムダ式で実装することによって利用する。</p>
+
+<p>記法について、引数には型名も基本必要だが、すでに定義している変数を使う場合は型名が省略できる。<br />
+また、引数が１つの場合は()を省略できる。</p>
+
+<p><code>引数 -&gt; { 処理 }</code></p>
+
+<p>ただし、引数が無い場合は()の省略はできない。</p>
+
+<p><code>() -&gt; { 処理 }</code></p>
+
+<p>右辺において、処理が1文の場合は、{}の省略が可能。{}を省略している場合は、returnも省略可能。</p>
+
+<p><code>(引数) -&gt; 処理</code></p>
+
+<p>実行例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">function</span>.<span style="color:#a6e22e">Function</span>;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+
+    Function<span style="color:#f92672">&lt;</span>String,String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">func</span> <span style="color:#f92672">=</span> (String <span style="color:#a6e22e">str</span>) <span style="color:#f92672">-&gt;</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Lambda:&#34;</span> <span style="color:#f92672">+</span> str;
+    };
+
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(func.<span style="color:#a6e22e">apply</span>(<span style="color:#e6db74">&#34;implemented.&#34;</span>));
+
+
+    func <span style="color:#f92672">=</span> str <span style="color:#f92672">-&gt;</span> <span style="color:#e6db74">&#34;none() Lambda:&#34;</span> <span style="color:#f92672">+</span> str;
+
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(func.<span style="color:#a6e22e">apply</span>(<span style="color:#e6db74">&#34;implemented.&#34;</span>));
+
+  }
+}</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>$ java Main
+Lambda:implemented.
+none() Lambda:implemented.
+</code></pre>
+
+<p>この例で出てきたFunctionクラスは関数型インターフェースで、中には抽象メソッド<strong>R apply(T t)</strong>が定義されている(Tは引数の型、Rは返り値の型)。Functionクラスの変数宣言時にラムダ式を代入すると、そのラムダ式の定義が抽象メソッドapplyに適用される。<br />
+他の関数型インタフェースに対しても、同様にラムダ式を定義し代入することで利用できる。（他にどのような関数型インタフェースがあるかはここでは割愛する。）</p>
+
+  </div>
+
+  <input type="radio" name="tabs-sort" style="display: none;" id="tabs-sort-1"  />
+  <label for="tabs-sort-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Pythonではキーワード<strong>lambda</strong>を使って定義することで無名関数が書ける。</p>
+
+<p><code>lambda (引数): (返す値、式)</code></p>
+
+<p>引数は何個でも設定できる。<br />
+特徴としてはlambdaの式は変数に格納することができる。<br />
+その変数に引数を指定して実行すると、lambdaに渡されて実行される。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x:x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a(<span style="color:#ae81ff">0</span>)
+<span style="color:#ae81ff">1</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> a(<span style="color:#ae81ff">1</span>)
+<span style="color:#ae81ff">2</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> b<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x,y:x<span style="color:#f92672">*</span>y
+<span style="color:#f92672">&gt;&gt;&gt;</span> b(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>)
+<span style="color:#ae81ff">2</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> b(<span style="color:#ae81ff">10</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">10</span>)
+<span style="color:#f92672">-</span><span style="color:#ae81ff">100</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/8d46880224d8ae2a81d92b39b477ed476acf359e" title='Last modified Jan 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 13, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>
