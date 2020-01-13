@@ -21,3 +21,4 @@ bookToc: false
      - [要素が全て１の行列]({{< relref "/docs/programming/math/ones.md" >}})
      - [要素がランダムの行列]({{< relref "/docs/programming/math/rand.md" >}})
      - [行列のサイズを変更する]({{< relref "/docs/programming/math/reshape.md" >}})
+     - [スカラー*行列]({{< relref "/docs/programming/math/scalar.md" >}})

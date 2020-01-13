@@ -92,6 +92,15 @@
     </item>
     
     <item>
+      <title>スカラー*行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/scalar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/scalar/</guid>
+      <description>スカラー*行列 スカラーと行列を書ける方法についてを示す。 Python スカラーと行列をかけたいときは、普通にスカラーとnumpy.ndarray型の変数</description>
+    </item>
+    
+    <item>
       <title>ベクトル</title>
       <link>https://WAT36.github.io/pages/docs/programming/math/vector/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -106,7 +115,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/class_func/lambda/</guid>
-      <description>ラムダ式（無名関数） ラムダ式（無名関数）についてを述べる。 Java Javaでは簡易的なメソッドを実装する方法としてラムダ式というのがある。 { 処理 }```&#34;</description>
+      <description>ラムダ式（無名関数） ラムダ式（無名関数）についてを述べる。 Java Javaでは簡易的なメソッドを実装する方法としてラムダ式というのがある。 ( 実装す</description>
     </item>
     
     <item>

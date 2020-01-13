@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>行列 | WAT Notes</title>
+<title>スカラー*行列 | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmath\2fmatrix\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fmath\2fscalar\2f "] {
       color: #004ed0;
   }
   </style>
@@ -99,15 +99,15 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>行列</strong>
+  <strong>スカラー*行列</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="行列">行列</h1>
+<h1 id="スカラー-行列">スカラー*行列</h1>
 
-<p>行列の定義についてを示す。</p>
+<p>スカラーと行列を書ける方法についてを示す。</p>
 
 
 
@@ -115,37 +115,28 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" name="tabs-matrix" style="display: none;" id="tabs-matrix-0" checked="checked" />
-  <label for="tabs-matrix-0">
+  <input type="radio" name="tabs-scalar" style="display: none;" id="tabs-scalar-0" checked="checked" />
+  <label for="tabs-scalar-0">
     Python
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>行列(2次元配列)もベクトルと同様、numpyライブラリにある関数<strong>array(list)</strong>を使って定義する。引数のリストは2次元にする。<br />
-type()を使って型を確認すると、<strong>numpy.ndarray</strong>型となっていることがわかる。<br />
-行列の要素を書き換えたいときはリストの時と同様にインデックスを指定して書き換える。インデックスは0から始まる事に注意。</p>
+    <p>スカラーと行列をかけたいときは、普通にスカラーとnumpy.ndarray型の変数を掛け算すれば良い。<br />
+計算後、ndarray型変数の全ての要素が掛けられた値になる。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
 <span style="color:#f92672">&gt;&gt;&gt;</span> x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>],[<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>]])
-<span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> x
-array([[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>],
-       [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]])
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(x)
 [[<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>]
  [<span style="color:#ae81ff">4</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span>]]
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#行列の要素を書き換える</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> x[<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(<span style="color:#ae81ff">10</span><span style="color:#f92672">*</span>x)
+[[<span style="color:#ae81ff">10</span> <span style="color:#ae81ff">20</span> <span style="color:#ae81ff">30</span>]
+ [<span style="color:#ae81ff">40</span> <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">60</span>]]
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(x)
-[[  <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">2</span>   <span style="color:#ae81ff">3</span>]
- [  <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">100</span>   <span style="color:#ae81ff">6</span>]]
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#x[1][1]が100に書き換わっている</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> type(x)
-<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">numpy</span><span style="color:#f92672">.</span>ndarray<span style="color:#e6db74">&#39;&gt;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#xはndarray型</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>x)
+[[ <span style="color:#ae81ff">2</span>  <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">6</span>]
+ [ <span style="color:#ae81ff">8</span> <span style="color:#ae81ff">10</span> <span style="color:#ae81ff">12</span>]]
 <span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
   </div>
 
@@ -154,14 +145,7 @@ array([[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</spa
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/136939bc4d11628d0ea29ae69c319a0c12a32bbb" title='Last modified Jan 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 7, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
