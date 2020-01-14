@@ -40,3 +40,4 @@ bookToc: false
  - [円周率(π)]({{< relref "/docs/programming/number/pi.md" >}})
 - その他
  - [数値（整数）の桁数を調べる]({{< relref "/docs/programming/number/digits.md" >}})
+ - [数値をランダムに取得する(乱数)]({{< relref "/docs/programming/number/random.md" >}})
