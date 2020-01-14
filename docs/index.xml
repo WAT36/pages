@@ -61,7 +61,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/other/other_index/</guid>
-      <description>その他 その他、括れてない手法などをまとめる。 変数 変数の型を調べる</description>
+      <description>その他 その他、括れてない手法などをまとめる。 変数 変数の型を調べる 関数、メソッドのヘルプを見る(Python)</description>
     </item>
     
     <item>
@@ -683,6 +683,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/map/map_index/</guid>
       <description>辞書、Map 辞書、Mapについての記事。 多くの言語でこれに似たようなデータ構造がある（と予想している）が、言語により名前が違うので注意。 Ja</description>
+    </item>
+    
+    <item>
+      <title>関数、メソッドのヘルプを見る</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/help/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/help/</guid>
+      <description>関数、メソッドのヘルプを見る 関数やメソッドの使い方がわからないとき、ヘルプを見る方法がある。それについてを述べる。 ただし、対話型などこちらが</description>
     </item>
     
     <item>

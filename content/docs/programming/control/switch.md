@@ -11,7 +11,7 @@ bookToc: false
 switch文は一つの式の結果から多くの処理に分岐させたいときに用いる。  
 ここではそのswitch文についてを示す。
 
-{{< tabs "sort" >}}
+{{< tabs "switch" >}}
 {{< tab "Java" >}}
 
 Javaでのswitch文での記法は以下の通り。  

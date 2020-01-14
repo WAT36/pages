@@ -139,6 +139,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/list/clear/</loc>
+    <lastmod>2020-01-13T13:18:43+09:00</lastmod>
   </url>
   
   <url>
@@ -377,6 +378,10 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/other/help/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/factorial/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
   </url>
@@ -473,7 +478,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-01-13T12:36:13+09:00</lastmod>
+    <lastmod>2020-01-13T13:18:43+09:00</lastmod>
   </url>
   
   <url>
@@ -502,12 +507,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -517,12 +522,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -623,7 +628,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/list/list_index/</loc>
-    <lastmod>2020-01-09T20:24:27+09:00</lastmod>
+    <lastmod>2020-01-13T13:18:43+09:00</lastmod>
   </url>
   
   <url>
