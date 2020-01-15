@@ -36,6 +36,7 @@ bookToc: false
      - [２進数に変換して表示]({{< relref "/docs/programming/number/bin.md" >}})
      - [８進数に変換して表示]({{< relref "/docs/programming/number/oct.md" >}})
      - [１６進数に変換して表示]({{< relref "/docs/programming/number/hex.md" >}})
+     - [２、８、１６進数を１０進数に変換して表示]({{< relref "/docs/programming/number/dec.md" >}})
 - 数値の定数
  - [円周率(π)]({{< relref "/docs/programming/number/pi.md" >}})
 - その他

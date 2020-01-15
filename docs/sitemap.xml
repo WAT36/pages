@@ -8,6 +8,10 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/number/dec/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/oct/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
   </url>
@@ -244,6 +248,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/random/</loc>
+    <lastmod>2020-01-14T22:47:31+09:00</lastmod>
   </url>
   
   <url>
@@ -483,12 +488,12 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-01-14T21:57:53+09:00</lastmod>
+    <lastmod>2020-01-14T22:47:31+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/number_index/</loc>
-    <lastmod>2020-01-08T20:18:06+09:00</lastmod>
+    <lastmod>2020-01-14T22:47:31+09:00</lastmod>
   </url>
   
   <url>
@@ -512,12 +517,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
