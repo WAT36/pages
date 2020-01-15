@@ -25,7 +25,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/dec/</guid>
-      <description>2,8,16進数を10進数に変換して表示 2,8,16進数を10進数に変換する方法についてを示す。 Java Javaでは[文字列を数値に変換する]()</description>
+      <description>2,8,16進数を10進数に変換して表示 2,8,16進数を10進数に変換する方法についてを示す。 Java Javaでは文字列を数値に変換する の所で述</description>
     </item>
     
     <item>
@@ -53,6 +53,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/control/ifelse/</guid>
       <description>if-else文 指定した条件に応じて処理を分岐させる時に使うのがif-else文である。 これはほぼ全てのプログラミング言語に実装されている。</description>
+    </item>
+    
+    <item>
+      <title>ndarray型のデータをファイルに保存する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/save/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/save/</guid>
+      <description>ndarray型のデータをファイルに保存する ndarray型変数をファイルに保存する方法についてを示す。 Python ndarray型変数をファイルに保</description>
     </item>
     
     <item>
