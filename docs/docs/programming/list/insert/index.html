@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>リストを空にする | WAT Notes</title>
+<title>リストの指定した位置に要素追加 | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2flist\2f clear\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2flist\2finsert\2f "] {
       color: #004ed0;
   }
   </style>
@@ -99,15 +99,15 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>リストを空にする</strong>
+  <strong>リストの指定した位置に要素追加</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="リストを空にする">リストを空にする</h1>
+<h1 id="リストの指定した位置に要素追加">リストの指定した位置に要素追加</h1>
 
-<p>リストから全ての要素を削除する方法についてを述べる。</p>
+<p>リストの指定した位置に要素を追加する方法についてを示す。</p>
 
 
 
@@ -115,60 +115,62 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" name="tabs-clear" style="display: none;" id="tabs-clear-0" checked="checked" />
-  <label for="tabs-clear-0">
+  <input type="radio" name="tabs-insert" style="display: none;" id="tabs-insert-0" checked="checked" />
+  <label for="tabs-insert-0">
     Java
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>JavaではListクラスにあるメソッド<strong>clear()</strong> を利用する。</p>
+    <p>JavaではListクラスに<strong>add()</strong>というメソッドがある。<a href="https://WAT36.github.io/pages/docs/programming/list/append/">リストへの要素追加</a>で述べたメソッドと名前が同じであるが、こちらはそれに挿入する位置を引数に追加したメソッドである。<br />
+<code>void add(int index,E element)</code><br />
+このメソッドを活用することによりリストの任意の位置に要素を追加することができる。</p>
 
-<p><code>void clear()</code></p>
-
-<p>実行例を以下に示す。</p>
+<p>使用例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">List</span>;
 <span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">ArrayList</span>;
-
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
   <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+    List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>();
+    l.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;a&#34;</span>);
+    l.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;b&#34;</span>);
+    l.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;c&#34;</span>);
+    l.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;d&#34;</span>);
 
-    List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>();
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(l);
 
-    l.<span style="color:#a6e22e">add</span>(1);
-    l.<span style="color:#a6e22e">add</span>(2);
-    l.<span style="color:#a6e22e">add</span>(3);
-    l.<span style="color:#a6e22e">add</span>(4);
+    <span style="color:#75715e">//リストの2番目に要素&#34;[2]&#34;を追加
+</span><span style="color:#75715e"></span>    l.<span style="color:#a6e22e">add</span>(2,<span style="color:#e6db74">&#34;[2]&#34;</span>);
 
-    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;clear前&#34;</span> <span style="color:#f92672">+</span> l);
-
-    l.<span style="color:#a6e22e">clear</span>();
-
-    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;clear後&#34;</span> <span style="color:#f92672">+</span> l);
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(l);
   }
 }</code></pre></div>
 <p>実行結果</p>
 
-<pre><code>$ java Main
-clear前[1, 2, 3, 4]
-clear後[]
+<pre><code>&gt; java Main      
+[a, b, c, d]
+[a, b, [2], c, d]
 </code></pre>
 
   </div>
 
-  <input type="radio" name="tabs-clear" style="display: none;" id="tabs-clear-1"  />
-  <label for="tabs-clear-1">
+  <input type="radio" name="tabs-insert" style="display: none;" id="tabs-insert-1"  />
+  <label for="tabs-insert-1">
     Python
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>Pythonではリストにある関数<strong>clear()</strong>を使う。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>]
+    <p>Pythonではリストに関数<strong>insert</strong>がある。これを利用することにより、リストの指定した位置に要素を追加できる。<br />
+<code>list.insert(i, x)</code><br />
+第１引数はリストのインデックスで、その位置に第２引数xが挿入される。</p>
+
+<p>実行例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> l<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>] 
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> a
-[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> l
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">.</span>clear()
+<span style="color:#f92672">&gt;&gt;&gt;</span> l<span style="color:#f92672">.</span>insert(<span style="color:#ae81ff">2</span>,<span style="color:#e6db74">&#34;[2]&#34;</span>) 
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> a
-[]
+<span style="color:#f92672">&gt;&gt;&gt;</span> l
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;[2]&#39;</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]
 <span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
   </div>
 
@@ -177,14 +179,7 @@ clear後[]
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/05e9114b9f80cb5154f891854604fafb47c86144" title='Last modified Jan 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 13, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
