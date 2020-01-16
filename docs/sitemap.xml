@@ -3,6 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/graph/plot/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/hex/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
   </url>
@@ -23,16 +27,13 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/control/ifelse/</loc>
     <lastmod>2020-01-11T01:35:52+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/math/save/</loc>
+    <lastmod>2020-01-16T00:24:34+09:00</lastmod>
   </url>
   
   <url>
@@ -63,6 +64,11 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/classfunc_index/</loc>
     <lastmod>2020-01-13T09:19:37+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</loc>
+    <lastmod>2020-01-16T00:24:34+09:00</lastmod>
   </url>
   
   <url>
@@ -497,7 +503,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-01-15T22:27:27+09:00</lastmod>
+    <lastmod>2020-01-16T00:24:34+09:00</lastmod>
   </url>
   
   <url>
@@ -717,7 +723,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/jp_index/</loc>
-    <lastmod>2020-01-11T01:45:06+09:00</lastmod>
+    <lastmod>2020-01-16T00:24:34+09:00</lastmod>
   </url>
   
 </urlset>

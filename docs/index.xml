@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>(折れ線)グラフを描画する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/plot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/plot/</guid>
+      <description>(折れ線)グラフを描画する Python グラフを描くためにはmatplotlibのpyplotライブラリを利用する。 ここでは2次元の折れ線グラフを作成す</description>
+    </item>
+    
+    <item>
       <title>16進数に変換して表示</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/hex/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -44,15 +53,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/and/</guid>
       <description>AND演算 ANDの論理演算をする方法についてを示す。 Java JavaではANDの論理演算子 &amp;amp;&amp;amp; を使用する。戻り値はboolean型。 (左辺) &amp;amp;&amp;amp; (右辺</description>
-    </item>
-    
-    <item>
-      <title>Graph Index</title>
-      <link>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</guid>
-      <description>グラフ データサイエンスでは必須？ グラフ描画についてをまとめる。 グラフ</description>
     </item>
     
     <item>
@@ -125,6 +125,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/class_func/classfunc_index/</guid>
       <description>クラス・関数(メソッド) クラス及び関数（メソッド）の定義についてを示す。 これも言語によって違う名前で呼ばれているものもあるので注意。 クラス ク</description>
+    </item>
+    
+    <item>
+      <title>グラフ</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</guid>
+      <description>グラフ データサイエンスでは必須？ グラフ描画についてをまとめる。 ここも都合上、現在はPythonのみ記載。 グラフ描画ではmatplotlibの</description>
     </item>
     
     <item>
