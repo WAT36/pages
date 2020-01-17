@@ -363,6 +363,15 @@
     </item>
     
     <item>
+      <title>一変数関数f(x)をグラフに描画する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/func_plot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/func_plot/</guid>
+      <description>一変数関数f(x)をグラフに描画する 定義した一変数関数f(x)をグラフに描画する方法を示す。 Python 一変数関数f(x)を描画するには、まず自分で一</description>
+    </item>
+    
+    <item>
       <title>三項演算子</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/ternary/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
