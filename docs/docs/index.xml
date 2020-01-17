@@ -57,6 +57,15 @@
     </item>
     
     <item>
+      <title>for文</title>
+      <link>https://WAT36.github.io/pages/docs/programming/control/for/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/control/for/</guid>
+      <description>for文 繰り返し処理を行う制御構文の一つ、for文について各言語での利用法を示す。 Java Javaでの記法は以下の通り。 for(初期化式;条件式;</description>
+    </item>
+    
+    <item>
       <title>if-else文</title>
       <link>https://WAT36.github.io/pages/docs/programming/control/ifelse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
