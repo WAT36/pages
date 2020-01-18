@@ -15,6 +15,7 @@ bookToc: false
 
 - 線形代数
  - [ベクトル]({{< relref "/docs/programming/math/vector.md" >}})
+     - [要素が等間隔になるベクトル]({{< relref "/docs/programming/math/arange.md" >}})
  - [行列]({{< relref "/docs/programming/math/matrix.md" >}})
      - [行列の型(サイズ)]({{< relref "/docs/programming/math/matrix_size.md" >}})
      - [零行列]({{< relref "/docs/programming/math/zero.md" >}})

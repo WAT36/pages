@@ -641,6 +641,15 @@
     </item>
     
     <item>
+      <title>要素が等間隔になるベクトル</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/arange/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/arange/</guid>
+      <description>要素が等間隔になるベクトル 指定した範囲内で、全ての要素の感覚が等しくなるようなベクトルを生成する方法についてを示す。 Python 主に方法は二つある。 numpy.arange()</description>
+    </item>
+    
+    <item>
       <title>論理和(OR)</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/or_bit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
