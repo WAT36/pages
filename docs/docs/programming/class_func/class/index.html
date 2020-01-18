@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hugo初投稿 | WAT Notes</title>
+<title>クラスの定義 | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
@@ -28,6 +28,7 @@ https://github.com/alex-shpak/hugo-book
 <body>
   <input type="checkbox" style="display: none" id="menu-control" />
   <main class="flex container">
+
     <aside class="book-menu fixed">
       <nav>
 <h2 class="book-brand">
@@ -51,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2fposts\2finitial\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2f class_func\2f class\2f "] {
       color: #004ed0;
   }
   </style>
@@ -93,35 +94,73 @@ https://github.com/alex-shpak/hugo-book
 
     </aside>
 
-    <div class="book-posts">
+    <div class="book-page">
       <header class="flex align-center justify-between book-header">
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>Hugo初投稿</strong>
+  <strong>クラスの定義</strong>
 </header>
 
       
+<article class="markdown">
 
-<header class="markdown">
-  <h1>Hugo初投稿</h1>
-  <h5>
-    <strong>Sep 4, 2019</strong>
-  </h5>
-</header>
-<article class="markdown"><p>投稿テスト。</p>
+<h1 id="クラスの定義">クラスの定義</h1>
 
-<p>My Githubにhugoでブログを立ててみました。</p>
+<p>クラスを定義する方法についてを示す。</p>
 
-<p>個人用に、技術的な事をここに色々メモしていく予定。</p>
 
-<p>でもまず、MarkDownに慣れねばならないね・・</p>
 
-<p>続けられる様に頑張ります！</p>
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-for" style="display: none;" id="tabs-for-0" checked="checked" />
+  <label for="tabs-for-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Javaでのクラス定義方法は以下の通り。</p>
+
+<pre><code>[public] class クラス名 [extends 継承元クラス名] [implements 実装先インタフェース名]{
+    //文
+}
+</code></pre>
+
+<p>あるクラスを継承して作りたい時はクラス名の後にextendsを、インタフェースを実装する時はその後にimplementsを書き加える。</p>
+
+  </div>
+
+  <input type="radio" name="tabs-for" style="display: none;" id="tabs-for-1"  />
+  <label for="tabs-for-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Pythonでのクラスを定義するときの記法は以下の通り。</p>
+
+<pre><code>class クラス名:
+    //文
+</code></pre>
+
+  </div>
+
+</div>
+
 </article>
 
       
+<div class="book-footer justify-end">
+  
+</div>
+
+
+      
     </div>
+    
+  
+
+
+
   </main>
 
   

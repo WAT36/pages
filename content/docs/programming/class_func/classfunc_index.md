@@ -12,7 +12,7 @@ bookToc: false
 これも言語によって違う名前で呼ばれているものもあるので注意。
 
 - クラス
- - クラスの定義
+ - [クラスの定義]({{< relref "/docs/programming/class_func/class.md" >}})
 - 関数
  - 関数(メソッド)の定義
  - 匿名（無名）クラス
