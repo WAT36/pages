@@ -14,5 +14,7 @@ bookToc: false
 グラフ描画では**matplotlib**の**pyplot**というライブラリを利用する。
 
 - グラフ
- - [(折れ線)グラフを描画する]({{< relref "/docs/programming/graph/plot.md" >}})
- - [一変数関数f(x)をグラフに描画する]({{< relref "/docs/programming/graph/func_plot.md" >}})
+ - 2軸グラフ
+      - [(折れ線)グラフを描画する]({{< relref "/docs/programming/graph/plot.md" >}})
+      - [一変数関数f(x)をグラフに描画する]({{< relref "/docs/programming/graph/func_plot.md" >}})
+      - [グラフに色をつける]({{< relref "/docs/programming/graph/color.md" >}})
