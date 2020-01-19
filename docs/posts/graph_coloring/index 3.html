@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>グラフの彩色問題 ～Welsh・Powellのアルゴリズム～ | WAT Notes</title>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.42533213d2140fbca26170b64e401f0aa6f049d60fd04e4ba7640f4e9dfa834a.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2fposts\2fgraph_coloring\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-posts">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>グラフの彩色問題 ～Welsh・Powellのアルゴリズム～</strong>
+</header>
+
+      
+
+<header class="markdown">
+  <h1>グラフの彩色問題 ～Welsh・Powellのアルゴリズム～</h1>
+  <h5>
+    <strong>Nov 30, 2019</strong>
+  </h5>
+</header>
+<article class="markdown">
+
+<p>競プロでグラフの彩色問題が出てきたので、今回はグラフの頂点彩色問題について、復習がてら記事を書いてみる。</p>
+
+<h1 id="グラフの彩色">グラフの彩色</h1>
+
+<p>そもそもグラフの彩色とは何か？</p>
+
+<blockquote>
+<p>グラフ彩色（英: Graph coloring）とは、グラフの何らかの要素に、ある制約条件を満たすように色を割り当てることである。最も単純なものは、隣接する頂点同士が同じ色にならないように全頂点に彩色する問題である。これを頂点彩色という。同様に辺彩色は、隣接する辺同士が同じ色にならないように全辺を彩色する問題、面彩色は、平面グラフの辺で囲まれた各領域（面）を隣接する面同士が同じ色にならないように彩色する問題である。
+(Wikipedia引用)</p>
+</blockquote>
+
+<p>要は、グラフの隣接する頂点が全て違う色になるように頂点を色分けできるか？というものである。<br />
+辺彩色の場合は辺、面彩色の場合は面になる。</p>
+
+<p>頂点彩色の一例は以下の図のようなものがある。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/colored_vertex.png" alt="頂点彩色の一例" /></p>
+
+<h1 id="頂点彩色のアルゴリズム-welsh-powellのアルゴリズム">頂点彩色のアルゴリズム (Welsh・Powellのアルゴリズム)</h1>
+
+<p>グラフの頂点彩色のアルゴリズムとしてWelsh・Powellのアルゴリズムが知られている。
+これは彩色を貪欲法で行う方法であり、ある頂点の色に隣接する頂点で使っていない色を設定していき、それまでに使ったどの色も頂点に設定できない場合は新たな色を設定するというアルゴリズムである。<br />
+調べる頂点の順番によっては最適な彩色が行えないため、最適な彩色を行うために頂点は次数の大きい順に行う。</p>
+
+<p>疑似的なアルゴリズムを以下に示す。</p>
+
+<ol>
+<li>グラフGの頂点次数の大きい順にソートし、 V<sub>i</sub> (i=1,2,…n)とする。<br /></li>
+<li>i = 1 とする<br /></li>
+<li>c = 1 とする<br /></li>
+<li>V<sub>i</sub> の隣接点で色cを持つものが存在しなければ、V<sub>i</sub> に色cを与えて6.へ進む<br /></li>
+<li>c = c + 1 として4.に戻る<br /></li>
+<li>i &lt; |V| ならば、i = i + 1 として3.に戻る。i = |V| なら終了。<br /></li>
+</ol>
+
+<h1 id="面彩色">面彩色</h1>
+
+<p>面彩色は頂点彩色を応用して行える。
+面をグラフの一つの頂点とみなし、接している面（頂点）同士を辺で繋げたグラフに頂点彩色を行い、彩色された頂点の色をそのまま対応する面に置き換えれば面彩色が行える。</p>
+
+<p>イメージとしては以下のような図。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/colored_plane.png" alt="面彩色" /></p>
+
+<h1 id="辺彩色">辺彩色</h1>
+
+<p>問題にもよるが、これも頂点彩色を応用して行える？<br />
+１つの辺において、隣接している辺（＝辺が結んでいる頂点が結んでいる他の辺）の数が大きい順に辺をソートし、<br />
+大きい辺から頂点彩色アルゴリズムを応用して行えば、彩色が行える（・・・はず）</p>
+</article>
+
+      
+    </div>
+  </main>
+
+  
+  
+</body>
+
+</html>

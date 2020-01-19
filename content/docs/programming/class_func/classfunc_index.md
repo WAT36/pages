@@ -13,7 +13,7 @@ bookToc: false
 
 - クラス
  - [クラスの定義]({{< relref "/docs/programming/class_func/class.md" >}})
- - フィールド変数
+ - [フィールド(クラス変数・インスタンス変数)]({{< relref "/docs/programming/class_func/field.md" >}})
  - コンストラクタ
  - クラス内のメソッド(関数)
  - 継承
