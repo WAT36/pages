@@ -164,6 +164,15 @@
     </item>
     
     <item>
+      <title>コンストラクタ(  init  )</title>
+      <link>https://WAT36.github.io/pages/docs/programming/class_func/constructor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/class_func/constructor/</guid>
+      <description>コンストラクタ(__init__) クラスのコンストラクタについてを書く。 コンストラクタとはクラスのインスタンスを作成した時に、そのインスタン</description>
+    </item>
+    
+    <item>
       <title>スカラー*行列</title>
       <link>https://WAT36.github.io/pages/docs/programming/math/scalar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

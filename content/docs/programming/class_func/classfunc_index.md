@@ -14,7 +14,7 @@ bookToc: false
 - クラス
  - [クラスの定義]({{< relref "/docs/programming/class_func/class.md" >}})
  - [フィールド(クラス変数・インスタンス変数)]({{< relref "/docs/programming/class_func/field.md" >}})
- - コンストラクタ
+ - [コンストラクタ(\_\_init\_\_)]({{< relref "/docs/programming/class_func/constructor.md" >}})
  - クラス内のメソッド(関数)
  - 継承
  - 多重継承
