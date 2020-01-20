@@ -18,3 +18,6 @@ bookToc: false
       - [(折れ線)グラフを描画する]({{< relref "/docs/programming/graph/plot.md" >}})
       - [一変数関数f(x)をグラフに描画する]({{< relref "/docs/programming/graph/func_plot.md" >}})
       - [グラフに色をつける]({{< relref "/docs/programming/graph/color.md" >}})
+      - [グラフの凡例を表示する]({{< relref "/docs/programming/graph/legend.md" >}})
+
+
