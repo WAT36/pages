@@ -137,6 +137,15 @@
     </item>
     
     <item>
+      <title>x,y軸の表示範囲を指定する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/lim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/lim/</guid>
+      <description>x,y軸の表示範囲を指定する Python グラフの軸の表示範囲は入力した座標の最大値、最小値に基づいて決定されるが、 こちらでx,y軸の表示範囲を指定した</description>
+    </item>
+    
+    <item>
       <title>クラスの定義</title>
       <link>https://WAT36.github.io/pages/docs/programming/class_func/class/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
