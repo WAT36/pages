@@ -20,5 +20,7 @@ bookToc: false
       - [グラフに色をつける]({{< relref "/docs/programming/graph/color.md" >}})
       - [グラフの凡例を表示する]({{< relref "/docs/programming/graph/legend.md" >}})
       - [x,y軸の表示範囲を指定する]({{< relref "/docs/programming/graph/lim.md" >}})
+      - [グラフのタイトルを設定する]({{< relref "/docs/programming/graph/title.md" >}})
+
 
 

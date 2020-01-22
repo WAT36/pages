@@ -191,6 +191,15 @@
     </item>
     
     <item>
+      <title>グラフのタイトルを設定する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/title/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/title/</guid>
+      <description>グラフのタイトルを設定する Python グラフのタイトルを設定、表示するにはpyplotの関数title()を利用する。 例として、前述のグラフに色をつけ</description>
+    </item>
+    
+    <item>
       <title>グラフの凡例を表示する</title>
       <link>https://WAT36.github.io/pages/docs/programming/graph/legend/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
