@@ -56,6 +56,15 @@
     </item>
     
     <item>
+      <title>break文</title>
+      <link>https://WAT36.github.io/pages/docs/programming/control/break/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/control/break/</guid>
+      <description>break文 ループを抜け出す際に用いるbreak文についてを示す。 Java ループ処理のfor文、while文において、処理の途中にbreakがあっ</description>
+    </item>
+    
+    <item>
       <title>for文</title>
       <link>https://WAT36.github.io/pages/docs/programming/control/for/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

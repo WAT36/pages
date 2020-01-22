@@ -28,6 +28,10 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/control/break/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/control/for/</loc>
     <lastmod>2020-01-17T22:14:37+09:00</lastmod>
   </url>
@@ -74,6 +78,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/graph/lim/</loc>
+    <lastmod>2020-01-21T23:42:27+09:00</lastmod>
   </url>
   
   <url>
@@ -88,7 +93,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</loc>
-    <lastmod>2020-01-20T22:45:17+09:00</lastmod>
+    <lastmod>2020-01-21T23:42:27+09:00</lastmod>
   </url>
   
   <url>
@@ -558,7 +563,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-01-21T23:26:42+09:00</lastmod>
+    <lastmod>2020-01-21T23:42:27+09:00</lastmod>
   </url>
   
   <url>
@@ -602,12 +607,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   

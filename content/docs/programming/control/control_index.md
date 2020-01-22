@@ -15,7 +15,7 @@ bookToc: false
  - [if-else文]({{< relref "/docs/programming/control/ifelse.md" >}})
  - [for文]({{< relref "/docs/programming/control/for.md" >}})
  - [while文]({{< relref "/docs/programming/control/while.md" >}})
- - break文
+ - [break文]({{< relref "/docs/programming/control/break.md" >}})
  - continue文
  - [switch文]({{< relref "/docs/programming/control/switch.md" >}})
  - pass文
