@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>プログラミング on WAT Notes</title>
+    <link>https://WAT36.github.io/pages/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</link>
+    <description>Recent content in プログラミング on WAT Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Sat, 30 Nov 2019 15:05:05 +0900</lastBuildDate>
+    
+	<atom:link href="https://WAT36.github.io/pages/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>グラフの彩色問題 ～Welsh・Powellのアルゴリズム～</title>
+      <link>https://WAT36.github.io/pages/posts/graph_coloring/</link>
+      <pubDate>Sat, 30 Nov 2019 15:05:05 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/graph_coloring/</guid>
+      <description>競プロでグラフの彩色問題が出てきたので、今回はグラフの頂点彩色問題について、復習がてら記事を書いてみる。 グラフの彩色 そもそもグラフの彩色とは</description>
+    </item>
+    
+    <item>
+      <title>キューとPythonでの実装モジュール「deque」</title>
+      <link>https://WAT36.github.io/pages/posts/queue_py/</link>
+      <pubDate>Mon, 04 Nov 2019 09:59:32 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/queue_py/</guid>
+      <description>幅優先探索を実装する時にキューと言うデータ構造を使用するのが良いそうなので、 今回はキューについてを調べて見た。（幅優先探索については後日・・</description>
+    </item>
+    
+    <item>
+      <title>優先度付きキュー（ヒープ）とPythonで実装するライブラリ「heapq」について</title>
+      <link>https://WAT36.github.io/pages/posts/heapq/</link>
+      <pubDate>Sat, 28 Sep 2019 14:09:58 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/heapq/</guid>
+      <description>先日Atcoder Beginner Contest 141に参加してきたが、D問題がいくらやってもTLEになり詰まった挙句TIME UPになった。 原因はリストから最大値を取</description>
+    </item>
+    
+    <item>
+      <title>Pythonで二分探索を行うライブラリ「bisect」</title>
+      <link>https://WAT36.github.io/pages/posts/bisect/</link>
+      <pubDate>Sat, 14 Sep 2019 14:53:01 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/bisect/</guid>
+      <description>趣味で競プロをやるようになり、Atcoderの問題を何問か解いているのだが、 やっている内に覚えないといけないこともいくつかあるわけで。 その内</description>
+    </item>
+    
+  </channel>
+</rss>

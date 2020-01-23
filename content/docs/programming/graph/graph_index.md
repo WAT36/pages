@@ -22,6 +22,7 @@ bookToc: false
       - [x,y軸の表示範囲を指定する]({{< relref "/docs/programming/graph/lim.md" >}})
       - [グラフのタイトルを設定する]({{< relref "/docs/programming/graph/title.md" >}})
       - [軸のラベルを設定する]({{< relref "/docs/programming/graph/label.md" >}})
+      - [グラフにグリッド線を表示させる]({{< relref "/docs/programming/graph/grid.md" >}})
 
 
 

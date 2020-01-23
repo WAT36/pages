@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>リストの指定した要素を削除する | WAT Notes</title>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.3ada9a972c73c9de56260bdd5d3adcf7f0dc4eecfbe1ad4e6d12da20a87ffe92.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2flist\2fremove\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>リストの指定した要素を削除する</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="リストの指定した要素を削除する">リストの指定した要素を削除する</h1>
+
+<p>リストの指定した要素を削除する方法についてを示す。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-remove" style="display: none;" id="tabs-remove-0" checked="checked" />
+  <label for="tabs-remove-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>JavaではListクラスにリストの指定した要素を削除するメソッド<strong>remove()</strong>がある。<br />
+<code>boolean remove(Object o)</code><br />
+このメソッドはリストから指定した要素を削除する。複数ある場合は最初のもののみを削除する。</p>
+
+<h2 id="intのリストで使いたい時は">intのリストで使いたい時は？</h2>
+
+<p>intのリストでこのメソッドを使いたい時、先述の<a href="https://WAT36.github.io/pages/docs/programming/list/pop/">リストの指定したインデックスの要素を削除する</a>で述べた</p>
+
+<p><code>E remove(int index)</code></p>
+
+<p>と混同するだろう。しかしListのメソッドremoveはintの値を入力した場合、このインデックスから要素を削除する方のメソッドが使われる。<br />
+指定したintの要素を削除したい時はどうするか？</p>
+
+<p>方法は、intのラッパークラス<strong>Integer</strong>を利用する。そのメソッドvalueOfを使ってintの値をIntegerに置き換えてremoveメソッドを使うと、前者の指定した要素を削除するremoveが使われる。</p>
+
+<p>使用例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">ArrayList</span>;
+<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">List</span>;
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+    List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span>();
+    l.<span style="color:#a6e22e">add</span>(1);
+    l.<span style="color:#a6e22e">add</span>(3);
+    l.<span style="color:#a6e22e">add</span>(<span style="color:#f92672">-</span>2);
+    l.<span style="color:#a6e22e">add</span>(100);
+
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>l.<span style="color:#a6e22e">size</span>();i<span style="color:#f92672">++</span>){
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(l.<span style="color:#a6e22e">get</span>(i) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span>);
+    }
+    
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>();
+    l.<span style="color:#a6e22e">remove</span>(1);                    <span style="color:#75715e">//この場合だとl[1]を削除する
+</span><span style="color:#75715e"></span>    
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>l.<span style="color:#a6e22e">size</span>();i<span style="color:#f92672">++</span>){
+      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(l.<span style="color:#a6e22e">get</span>(i) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span>);
+    }
+
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>();
+    l.<span style="color:#a6e22e">remove</span>(Integer.<span style="color:#a6e22e">valueOf</span>(1));   <span style="color:#75715e">//この場合だとlで最初に出る「1」を削除する
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>l.<span style="color:#a6e22e">size</span>();i<span style="color:#f92672">++</span>){
+      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(l.<span style="color:#a6e22e">get</span>(i) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span>);
+    }
+  }
+}</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>&gt; java Main
+1 3 -2 100
+1 -2 100
+-2 100
+</code></pre>
+
+  </div>
+
+  <input type="radio" name="tabs-remove" style="display: none;" id="tabs-remove-1"  />
+  <label for="tabs-remove-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Pythonにはリストに指定した要素を削除する関数<strong>remove()</strong>があるので、これを利用する。<br />
+引数にはリストから削除したい要素を入力する。<br />
+指定した要素がリスト内に複数ある場合は、最初のもののみを削除する。<br />
+リストに存在しない値を入力するとエラーになる。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">.</span>remove(<span style="color:#ae81ff">9</span>) 
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> b<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>] 
+<span style="color:#f92672">&gt;&gt;&gt;</span> b
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span>      
+<span style="color:#f92672">&gt;&gt;&gt;</span> b<span style="color:#f92672">.</span>remove(<span style="color:#ae81ff">1</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> b
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span>   
+<span style="color:#f92672">&gt;&gt;&gt;</span> b<span style="color:#f92672">.</span>remove(<span style="color:#ae81ff">2</span>)
+Traceback (most recent call last):       
+  File <span style="color:#e6db74">&#34;&lt;stdin&gt;&#34;</span>, line <span style="color:#ae81ff">1</span>, <span style="color:#f92672">in</span> <span style="color:#f92672">&lt;</span>module<span style="color:#f92672">&gt;</span>    
+<span style="color:#a6e22e">ValueError</span>: list<span style="color:#f92672">.</span>remove(x): x <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> list
+<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/f3dcb4ba0aed4e8c96315c519011ed407623594e" title='Last modified Jan 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 5, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

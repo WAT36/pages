@@ -191,6 +191,15 @@
     </item>
     
     <item>
+      <title>グラフにグリッド線を表示させる</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/grid/</guid>
+      <description>グラフにグリッド線を表示させる Python グラフにグリッド線(方眼)を表示するにはpyplotの関数grid()を利用する。引数にはTrueを入れる。</description>
+    </item>
+    
+    <item>
       <title>グラフに色をつける</title>
       <link>https://WAT36.github.io/pages/docs/programming/graph/color/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
