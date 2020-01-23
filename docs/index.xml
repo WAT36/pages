@@ -65,6 +65,15 @@
     </item>
     
     <item>
+      <title>continue文</title>
+      <link>https://WAT36.github.io/pages/docs/programming/control/continue/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/control/continue/</guid>
+      <description>continue文 continue文はfor文、while文のループ処理において、そのループ1回分の処理をそこで終了し、 条件式の判定（for</description>
+    </item>
+    
+    <item>
       <title>for文</title>
       <link>https://WAT36.github.io/pages/docs/programming/control/for/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

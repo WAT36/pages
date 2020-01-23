@@ -33,6 +33,10 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/control/continue/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/control/for/</loc>
     <lastmod>2020-01-17T22:14:37+09:00</lastmod>
   </url>
@@ -94,7 +98,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</loc>
-    <lastmod>2020-01-21T23:42:27+09:00</lastmod>
+    <lastmod>2020-01-22T22:30:07+09:00</lastmod>
   </url>
   
   <url>
@@ -104,6 +108,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/graph/title/</loc>
+    <lastmod>2020-01-22T22:30:07+09:00</lastmod>
   </url>
   
   <url>
@@ -568,7 +573,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-01-22T22:17:02+09:00</lastmod>
+    <lastmod>2020-01-22T22:30:07+09:00</lastmod>
   </url>
   
   <url>
@@ -597,12 +602,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
