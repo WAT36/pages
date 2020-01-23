@@ -21,6 +21,7 @@ bookToc: false
       - [グラフの凡例を表示する]({{< relref "/docs/programming/graph/legend.md" >}})
       - [x,y軸の表示範囲を指定する]({{< relref "/docs/programming/graph/lim.md" >}})
       - [グラフのタイトルを設定する]({{< relref "/docs/programming/graph/title.md" >}})
+      - [軸のラベルを設定する]({{< relref "/docs/programming/graph/label.md" >}})
 
 
 
