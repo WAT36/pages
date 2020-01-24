@@ -119,6 +119,15 @@
     </item>
     
     <item>
+      <title>Pass</title>
+      <link>https://WAT36.github.io/pages/docs/programming/control/pass/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/control/pass/</guid>
+      <description>pass文 何も処理をしない文、pass文についてを示す。 構文としては何か記述が必要だが、特に処理をする必要がないという時に使う。 言語によりあ</description>
+    </item>
+    
+    <item>
       <title>Rand</title>
       <link>https://WAT36.github.io/pages/docs/programming/math/rand/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

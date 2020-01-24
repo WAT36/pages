@@ -18,4 +18,4 @@ bookToc: false
  - [break文]({{< relref "/docs/programming/control/break.md" >}})
  - [continue文]({{< relref "/docs/programming/control/continue.md" >}})
  - [switch文]({{< relref "/docs/programming/control/switch.md" >}})
- - pass文
+ - [pass文]({{< relref "/docs/programming/control/pass.md" >}})
