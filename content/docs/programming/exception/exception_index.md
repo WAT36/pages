@@ -12,4 +12,4 @@ bookToc: false
 コンパイルエラーに関しては文法上の問題なので、ここでは主に実行時エラーに関することについてを示す。  
 
 - 例外処理
- - 例外処理(try文)
+ - [例外処理(try文)]({{< relref "/docs/programming/exception/try.md" >}})

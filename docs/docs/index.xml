@@ -507,6 +507,15 @@
     </item>
     
     <item>
+      <title>例外処理(try文)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/exception/try/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/exception/try/</guid>
+      <description>例外処理(try文) 実行時エラー(例外)のハンドリングを行うtry文についてを示す。 言語により微妙に呼び名が違うところがあるので注意。 Java Ja</description>
+    </item>
+    
+    <item>
       <title>円周率(π)</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/pi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
