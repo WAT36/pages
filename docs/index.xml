@@ -245,6 +245,15 @@
     </item>
     
     <item>
+      <title>グラフを複数表示させる</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/subplot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/subplot/</guid>
+      <description>グラフを複数表示させる Python グラフを複数表示するにはpyplotの関数subplotを使う。 subplot(nrows, ncols, index) subplotを使うと縦nrows×横ncol</description>
+    </item>
+    
+    <item>
       <title>コンストラクタ(  init  )</title>
       <link>https://WAT36.github.io/pages/docs/programming/class_func/constructor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -23,6 +23,9 @@ bookToc: false
       - [グラフのタイトルを設定する]({{< relref "/docs/programming/graph/title.md" >}})
       - [軸のラベルを設定する]({{< relref "/docs/programming/graph/label.md" >}})
       - [グラフにグリッド線を表示させる]({{< relref "/docs/programming/graph/grid.md" >}})
+      - [グラフを複数表示させる]({{< relref "/docs/programming/graph/subplot.md" >}})
+
+
 
 
 
