@@ -24,6 +24,8 @@ title: "プログラミング言語別対応メモ"
 
 ## [クラス・関数(メソッド)]({{< relref "/docs/programming/class_func/classfunc_index.md" >}})
 
+## [例外処理]({{< relref "/docs/programming/exception/exception_index.md" >}})
+
 ## [その他]({{< relref "/docs/programming/other/other_index.md" >}})
 
 <hr>

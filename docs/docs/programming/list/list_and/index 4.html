@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>リストa,bに共通して入っている要素のみを表示（積集合） | WAT Notes</title>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.b7bed1029b05f57590fe5a85e4ad312b6f21d4c0200e23098fb5694418cf3fa8.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2flist\2flist_and\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>リストa,bに共通して入っている要素のみを表示（積集合）</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="リストa-bに共通して入っている要素のみを表示-積集合">リストa,bに共通して入っている要素のみを表示（積集合）</h1>
+
+<p>2つのリストに共通して入っている要素のみを表示する方法についてを示す。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-list_and" style="display: none;" id="tabs-list_and-0" checked="checked" />
+  <label for="tabs-list_and-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>JavaではListクラスに<strong>retainAll()</strong>というメソッドがある。これは呼び出し元のリストに含まれている要素の内、引数に指定したリスト内にも含まれている要素のみを残し、他の要素は全て削除するというメソッドである。<br />
+<code>boolean retainAll(Collection&lt;?&gt; c)</code><br />
+このメソッドを活用することにより２つのリストに共通して入っている要素のみを取り出すことができる。ただし同じ値の要素が複数入っていた場合はその数だけ要素が残るということもあるので、重複している値を１つにするには<strong>Set()</strong>等を使い重複を排除する。</p>
+
+<p>使用例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">ArrayList</span>;
+<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">List</span>;
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+
+  <span style="color:#75715e">//List println
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">listprint</span>(String <span style="color:#a6e22e">name</span>,List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">l</span>){
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;: &#34;</span>);
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>l.<span style="color:#a6e22e">size</span>();i<span style="color:#f92672">++</span>){
+      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(l.<span style="color:#a6e22e">get</span>(i) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span>);
+    }
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>();
+  }
+
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+    List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span>();
+    l.<span style="color:#a6e22e">add</span>(1);
+    l.<span style="color:#a6e22e">add</span>(3);
+    l.<span style="color:#a6e22e">add</span>(100);
+    l.<span style="color:#a6e22e">add</span>(0);
+
+    List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span>();
+    m.<span style="color:#a6e22e">add</span>(2);
+    m.<span style="color:#a6e22e">add</span>(4);
+    m.<span style="color:#a6e22e">add</span>(100);
+    m.<span style="color:#a6e22e">add</span>(100);
+
+    listprint(<span style="color:#e6db74">&#34;l&#34;</span>, l);
+    listprint(<span style="color:#e6db74">&#34;m&#34;</span>, m);
+
+    l.<span style="color:#a6e22e">retainAll</span>(m);
+    
+    listprint(<span style="color:#e6db74">&#34;l&#34;</span>, l);
+  }
+}</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>&gt; java Main
+l: 1 3 100 0
+m: 2 4 100 100
+l: 100
+</code></pre>
+
+  </div>
+
+  <input type="radio" name="tabs-list_and" style="display: none;" id="tabs-list_and-1"  />
+  <label for="tabs-list_and-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Pythonではリストをset型に変換し、その後 <strong>&amp;</strong> 演算子を使うと、重複している要素のみが残る。<br />
+リストに戻したい時は、計算後のsetをlist()で変換してリストにする。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> b<span style="color:#f92672">=</span>[<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> a_and_b<span style="color:#f92672">=</span>set(a) <span style="color:#f92672">&amp;</span> set(b)
+<span style="color:#f92672">&gt;&gt;&gt;</span> a_and_b
+{<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> list(a_and_b)
+[<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/f3dcb4ba0aed4e8c96315c519011ed407623594e" title='Last modified Jan 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 5, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数値をランダムに取得する(乱数) | WAT Notes</title>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.b7bed1029b05f57590fe5a85e4ad312b6f21d4c0200e23098fb5694418cf3fa8.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fnumber\2frandom\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>数値をランダムに取得する(乱数)</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="数値をランダムに取得する-乱数">数値をランダムに取得する(乱数)</h1>
+
+<p>なんでもいいから適当に数値を取ってきたい場合どうするか？その時は<strong>乱数</strong>というのを使う。ここではその方法についてを示す。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-random" style="display: none;" id="tabs-random-0" checked="checked" />
+  <label for="tabs-random-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Javaでは主に以下の２つの方法がある。</p>
+
+<ol>
+<li><strong>java.util.Random</strong>クラスを用いる。</li>
+</ol>
+
+<p>Random()クラスのインスタンスを生成し、Randomクラスにある多種多様なメソッドを利用する事で数値をランダムに取得することができる。<br />
+メソッドの数は多いため、ここでは割愛する。詳しくは公式レファレンスを参照。</p>
+
+<ol>
+<li>java.lang.Mathクラスにある<strong>random</strong>メソッドを使う。</li>
+</ol>
+
+<p><code>public static double random()</code></p>
+
+<p>このメソッドを用いると、0.0~1.0の範囲のdouble値をランダムに出力する。</p>
+
+<p>用途にもよるが、2.を使った方が簡単（だと思う）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">Random</span>;
+<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">lang</span>.<span style="color:#a6e22e">Math</span>;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+
+    <span style="color:#75715e">//Randomクラスを使って0~100から５回ランダムに取得して表示
+</span><span style="color:#75715e"></span>    Random <span style="color:#a6e22e">random</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Random();
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>5;i<span style="color:#f92672">++</span>){
+      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Random.nextInt[&#34;</span><span style="color:#f92672">+</span>i<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;]:&#34;</span><span style="color:#f92672">+</span>random.<span style="color:#a6e22e">nextInt</span>(101));
+    }
+
+    <span style="color:#75715e">//Mathクラスを使って0~100から５回ランダムに取得して表示
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>5;i<span style="color:#f92672">++</span>){
+      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Math.random[&#34;</span><span style="color:#f92672">+</span>i<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;]:&#34;</span><span style="color:#f92672">+</span>(<span style="color:#66d9ef">int</span>)(Math.<span style="color:#a6e22e">random</span>()<span style="color:#f92672">*</span>100));
+    }
+  }
+}</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>$ java Main
+Random.nextInt[0]:18
+Random.nextInt[1]:63
+Random.nextInt[2]:28
+Random.nextInt[3]:31
+Random.nextInt[4]:11
+Math.random[0]:58
+Math.random[1]:34
+Math.random[2]:60
+Math.random[3]:30
+Math.random[4]:69
+</code></pre>
+
+  </div>
+
+  <input type="radio" name="tabs-random" style="display: none;" id="tabs-random-1"  />
+  <label for="tabs-random-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>pythonでは<strong>random</strong>モジュールを利用することで乱数を取り扱える。<br />
+randomモジュールの中に乱数に関する関数が多くあるので、それぞれの説明はここでは省略する。詳しくは公式レファレンスを参照。</p>
+
+<p>実行例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> random
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#0.0~1.0間の数値をランダムに取得</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> random<span style="color:#f92672">.</span>random()
+<span style="color:#ae81ff">0.3762480735792372</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> random<span style="color:#f92672">.</span>random()
+<span style="color:#ae81ff">0.0714801741824369</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> random<span style="color:#f92672">.</span>random()
+<span style="color:#ae81ff">0.1025080846456623</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> random<span style="color:#f92672">.</span>random()
+<span style="color:#ae81ff">0.340342947399805</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#1~100間の整数をランダムに取得</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">100</span>)
+<span style="color:#ae81ff">55</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">100</span>)
+<span style="color:#ae81ff">33</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">100</span>)
+<span style="color:#ae81ff">32</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">100</span>)
+<span style="color:#ae81ff">84</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/d8e19063fad410cc5d36c46a17c205097bbe236d" title='Last modified Jan 14, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 14, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

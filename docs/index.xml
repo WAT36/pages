@@ -74,6 +74,15 @@
     </item>
     
     <item>
+      <title>Exception Index</title>
+      <link>https://WAT36.github.io/pages/docs/programming/exception/exception_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/exception/exception_index/</guid>
+      <description>例外処理 プログラミングをする上で誰もが経験するのはエラー（例外）だろう。 コンパイルエラーに関しては文法上の問題なので、ここでは主に実行時エラ</description>
+    </item>
+    
+    <item>
       <title>for文</title>
       <link>https://WAT36.github.io/pages/docs/programming/control/for/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
