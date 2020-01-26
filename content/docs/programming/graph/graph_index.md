@@ -14,7 +14,7 @@ bookToc: false
 グラフ描画では**matplotlib**の**pyplot**というライブラリを利用する。
 
 - グラフ
- - 2軸グラフ
+ - 2次元グラフ
       - [(折れ線)グラフを描画する]({{< relref "/docs/programming/graph/plot.md" >}})
       - [一変数関数f(x)をグラフに描画する]({{< relref "/docs/programming/graph/func_plot.md" >}})
       - [グラフに色をつける]({{< relref "/docs/programming/graph/color.md" >}})
@@ -24,7 +24,8 @@ bookToc: false
       - [軸のラベルを設定する]({{< relref "/docs/programming/graph/label.md" >}})
       - [グラフにグリッド線を表示させる]({{< relref "/docs/programming/graph/grid.md" >}})
       - [グラフを複数表示させる]({{< relref "/docs/programming/graph/subplot.md" >}})
-
+ - 3次元グラフ
+      - [2変数関数を定義する]({{< relref "/docs/programming/graph/2varfunc.md" >}})
 
 
 

@@ -39,6 +39,15 @@
     </item>
     
     <item>
+      <title>2変数関数を定義する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/2varfunc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/2varfunc/</guid>
+      <description>2変数関数を定義する Python 2変数関数の定義は関数定義の時に引数を２つ設定すれば良い。 試しに、f(x,y) = √(x2 + y2)を定義する例を示す。 &amp;gt;&amp;gt;&amp;gt;</description>
+    </item>
+    
+    <item>
       <title>8進数に変換して表示</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/oct/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

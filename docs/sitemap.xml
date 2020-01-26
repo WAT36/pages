@@ -18,6 +18,10 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/graph/2varfunc/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/oct/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
   </url>
@@ -104,7 +108,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/classfunc_index/</loc>
-    <lastmod>2020-01-20T22:06:21+09:00</lastmod>
+    <lastmod>2020-01-26T12:52:01+09:00</lastmod>
   </url>
   
   <url>
@@ -504,6 +508,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/func/</loc>
+    <lastmod>2020-01-26T12:52:01+09:00</lastmod>
   </url>
   
   <url>
@@ -608,7 +613,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-01-26T02:28:23+09:00</lastmod>
+    <lastmod>2020-01-26T12:52:01+09:00</lastmod>
   </url>
   
   <url>
@@ -637,12 +642,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
