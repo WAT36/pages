@@ -912,6 +912,15 @@
     </item>
     
     <item>
+      <title>関数(メソッド)の定義</title>
+      <link>https://WAT36.github.io/pages/docs/programming/class_func/func/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/class_func/func/</guid>
+      <description>関数(メソッド)の定義 関数・メソッドを定義する方法についてを示す。 Java Javaではメソッドと言う名で呼ばれる。定義するための記法は以下の通り。</description>
+    </item>
+    
+    <item>
       <title>関数、メソッドのヘルプを見る</title>
       <link>https://WAT36.github.io/pages/docs/programming/other/help/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
