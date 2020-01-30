@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文字列を別の文字列に置換する | WAT Notes</title>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.358b4e33c8bd2ecdeea75cf4abaea0cfacf59525778cd1e96b9d24c3f5cd8323.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fstring\2freplace\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>文字列を別の文字列に置換する</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="文字列を別の文字列に置換する">文字列を別の文字列に置換する</h1>
+
+<p>文字列を別の文字列に置換する方法。
+その文字列全ての他、文字列の一部分または文字列中の条件に合う文字列に対する置換も行える。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-string_replace" style="display: none;" id="tabs-string_replace-0" checked="checked" />
+  <label for="tabs-string_replace-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>javaで文字列を置換したい時は <strong>replace()</strong> メソッドを使う。<br>
+使用法は以下の通り。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">文字列.<span style="color:#a6e22e">replace</span>(置換前の文字列,置換後の文字列);</code></pre></div>
+<p>以下に使用例を示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;test&#34;</span>;
+String <span style="color:#a6e22e">t</span> <span style="color:#f92672">=</span> s.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;t&#34;</span>,<span style="color:#e6db74">&#34;b&#34;</span>);
+System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(t); <span style="color:#f92672">//</span> besb</code></pre></div>
+<p>上記例では&rdquo;test&rdquo;という文字列をreplaceメソッドで&rdquo;t&rdquo;を&rdquo;b&rdquo;に置換し、結果を表示している。結果として&rdquo;besb&rdquo;という文字列が表示される。</p>
+
+  </div>
+
+  <input type="radio" name="tabs-string_replace" style="display: none;" id="tabs-string_replace-1"  />
+  <label for="tabs-string_replace-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Pythonでは文字列型のstrオブジェクトにメソッド <strong>replace()</strong> があり、これにより文字列中の文字を置換できる。<br>
+使用法は以下の通り。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">文字列</span><span style="color:#f92672">.</span>replace(old,new [,count]);</code></pre></div>
+<p>これにより文字列中のoldの部分をnewに変換する。
+また、オプション引数countがあり、指定すると先頭からcount個分のoldのみを置換する。</p>
+
+<p>使用例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;test&#34;</span>
+t <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34;t&#34;</span>,<span style="color:#e6db74">&#34;b&#34;</span>)
+<span style="color:#66d9ef">print</span>(t)  <span style="color:#75715e"># &#34;besb&#34;</span>
+
+t <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34;t&#34;</span>,<span style="color:#e6db74">&#34;b&#34;</span>,<span style="color:#ae81ff">1</span>)
+<span style="color:#66d9ef">print</span>(t)  <span style="color:#75715e"># &#34;best&#34;</span></code></pre></div>
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/f3dcb4ba0aed4e8c96315c519011ed407623594e" title='Last modified Jan 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 5, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

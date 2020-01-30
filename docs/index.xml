@@ -38,6 +38,15 @@
     </item>
     
     <item>
+      <title>2変数関数のグラフ(ヒートマップ)を作成する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/pcolor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/pcolor/</guid>
+      <description>2変数関数のグラフ(ヒートマップ)を作成する Python 2変数関数のグラフとして、、ヒートマップで表示するにはpyplotの関数pcolorを利用する</description>
+    </item>
+    
+    <item>
       <title>2変数関数を定義する</title>
       <link>https://WAT36.github.io/pages/docs/programming/graph/2varfunc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

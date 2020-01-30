@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>グラフの凡例を表示する | WAT Notes</title>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.358b4e33c8bd2ecdeea75cf4abaea0cfacf59525778cd1e96b9d24c3f5cd8323.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fgraph\2flegend\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>グラフの凡例を表示する</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="グラフの凡例を表示する">グラフの凡例を表示する</h1>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-plot" style="display: none;" id="tabs-plot-0" checked="checked" />
+  <label for="tabs-plot-0">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>グラフに凡例を表示させるには、まずグラフを表示するときに使ったpyplotの関数plotの引数に<strong>label</strong>というパラメータがあるので、そこに指定する。<br />
+凡例をグラフのどこに表示するかは自動で決まるが、こちらで指定したい場合はplotの関数<strong>legend</strong>を利用する。</p>
+
+<p>例として、前述の<a href="https://WAT36.github.io/pages/docs/programming/graph/color/">グラフに色をつける</a>で作成したグラフに凡例を表示する例を示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(x,w):
+<span style="color:#f92672">...</span>     <span style="color:#66d9ef">return</span> (x<span style="color:#f92672">-</span>w)<span style="color:#f92672">*</span>x<span style="color:#f92672">*</span>(x<span style="color:#f92672">+</span>w)
+<span style="color:#f92672">...</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>linspace(<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">61</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#y:f(x) = x**3、w=0という凡例をつける</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> y <span style="color:#f92672">=</span> f(x,<span style="color:#ae81ff">0</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> plt<span style="color:#f92672">.</span>plot(x,y,color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;black&#39;</span>,label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;$w=0$&#39;</span>)
+[<span style="color:#f92672">&lt;</span>matplotlib<span style="color:#f92672">.</span>lines<span style="color:#f92672">.</span>Line2D object at <span style="color:#ae81ff">0x118e0b748</span><span style="color:#f92672">&gt;</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#y2:f(x) = (x-2)x(x+2)、w=2という凡例をつける</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> y2 <span style="color:#f92672">=</span> f(x,<span style="color:#ae81ff">2</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> plt<span style="color:#f92672">.</span>plot(x,y2,color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>,label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;$w=2$&#39;</span>)
+[<span style="color:#f92672">&lt;</span>matplotlib<span style="color:#f92672">.</span>lines<span style="color:#f92672">.</span>Line2D object at <span style="color:#ae81ff">0x118e0bb38</span><span style="color:#f92672">&gt;</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#グラフに凡例を表示</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> plt<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;upper left&#34;</span>)
+<span style="color:#f92672">&lt;</span>matplotlib<span style="color:#f92672">.</span>legend<span style="color:#f92672">.</span>Legend object at <span style="color:#ae81ff">0x113bbbf60</span><span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> plt<span style="color:#f92672">.</span>show()
+<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
+<p>実行結果</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_4.png" width=50%></p>
+
+<p>グラフに凡例を表示する際は、legend関数の引数<strong>loc</strong>に表示させたい位置を入力する。<br />
+入力できる値は以下の通り。</p>
+
+<ul>
+<li>&lsquo;best&rsquo;<br /></li>
+<li>&lsquo;upper right&rsquo;<br /></li>
+<li>&lsquo;upper left&rsquo;<br /></li>
+<li>&lsquo;lower left&rsquo;<br /></li>
+<li>&lsquo;lower right&rsquo;<br /></li>
+<li>&lsquo;right&rsquo;<br /></li>
+<li>&lsquo;center left&rsquo;<br /></li>
+<li>&lsquo;center right&rsquo;<br /></li>
+<li>&lsquo;lower center&rsquo;<br /></li>
+<li>&lsquo;upper center&rsquo;<br /></li>
+<li>&lsquo;center&rsquo;<br /></li>
+</ul>
+
+<p>&lsquo;best&rsquo;にすると凡例を最適な位置に配置してくれる。</p>
+
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/1bac701a673d2cc1576b9685fa3d6bc86f0e3efe" title='Last modified Jan 20, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 20, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

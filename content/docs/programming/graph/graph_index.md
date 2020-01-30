@@ -26,6 +26,7 @@ bookToc: false
       - [グラフを複数表示させる]({{< relref "/docs/programming/graph/subplot.md" >}})
  - 3次元グラフ
       - [2変数関数を定義する]({{< relref "/docs/programming/graph/2varfunc.md" >}})
+      - [2変数関数のグラフ(ヒートマップ)を作成する]({{< relref "/docs/programming/graph/pcolor.md" >}})
 
 
 
