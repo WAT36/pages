@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>コンストラクタ(  init  ) | WAT Notes</title>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.242259374f68daefc514a6ae932ddda62f7005cf6bb24c666de94852b0dd6916.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2f class_func\2f constructor\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>コンストラクタ(  init  )</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="コンストラクタ-init">コンストラクタ(__init__)</h1>
+
+<p>クラスのコンストラクタについてを書く。<br />
+コンストラクタとはクラスのインスタンスを作成した時に、そのインスタンスで最初に実行される関数である。主に初期化のために使われる。<br />
+これも言語により呼び名が違うので注意。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-constructor" style="display: none;" id="tabs-constructor-0" checked="checked" />
+  <label for="tabs-constructor-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Javaでは、クラス内でそのクラス名と同じ名前のメソッドを定義した時、それがコンストラクタになる。<br />
+引数を変えれば、多重定義（オーバーロード）でいくらでも定義できる。<br />
+ただし、コンストラクタを定義したら、インスタンス生成時に設定する引数はそのコンストラクタと同じでなければならない。<br />
+因みにコンストラクタは定義しなくても良い。その場合インスタンス生成時に設定する引数は無しでないといけない。</p>
+
+<p>使用例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Car</span>{
+
+  String <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+  String <span style="color:#a6e22e">number</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+  String <span style="color:#a6e22e">owner</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Car</span>(String <span style="color:#a6e22e">carname</span>,String <span style="color:#a6e22e">carnumber</span>,String <span style="color:#a6e22e">carowner</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> carname;
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">number</span> <span style="color:#f92672">=</span> carnumber;
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">owner</span> <span style="color:#f92672">=</span> carowner;
+  }
+}
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+
+    Car <span style="color:#a6e22e">car1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Car(<span style="color:#e6db74">&#34;lexus&#34;</span>,<span style="color:#e6db74">&#34;100-1010&#34;</span>,<span style="color:#e6db74">&#34;ai-ueo&#34;</span>);
+    Car <span style="color:#a6e22e">car2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Car(<span style="color:#e6db74">&#34;carrola&#34;</span>,<span style="color:#e6db74">&#34;200-2020&#34;</span>,<span style="color:#e6db74">&#34;kaki-kukeko&#34;</span>);
+
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Car1:&#34;</span><span style="color:#f92672">+</span>car1.<span style="color:#a6e22e">name</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">+</span>car1.<span style="color:#a6e22e">number</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">+</span>car1.<span style="color:#a6e22e">owner</span>);
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Car2:&#34;</span><span style="color:#f92672">+</span>car2.<span style="color:#a6e22e">name</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">+</span>car2.<span style="color:#a6e22e">number</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">+</span>car2.<span style="color:#a6e22e">owner</span>);
+  }
+}</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>&gt; java Main
+Car1:lexus 100-1010 ai-ueo
+Car2:carrola 200-2020 kaki-kukeko
+</code></pre>
+
+  </div>
+
+  <input type="radio" name="tabs-constructor" style="display: none;" id="tabs-constructor-1"  />
+  <label for="tabs-constructor-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Pythonでは　<strong>__init()__</strong> という関数がクラスのコンストラクタの役目を果たす。<br />
+クラスのインスタンス生成後、真っ先にこの関数__init__が実行される。<br />
+大体はインスタンス変数を設定するために利用されることが多い。そのときは__init__の引数に、変数に設定したい値に加えて<strong>self</strong>を追加することを忘れずに行う。</p>
+
+<p>実行例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Car</span>:
+<span style="color:#f92672">...</span>     <span style="color:#66d9ef">def</span> __init__(self,carname,carnumber,carowner):
+<span style="color:#f92672">...</span>             self<span style="color:#f92672">.</span>name<span style="color:#f92672">=</span>carname
+<span style="color:#f92672">...</span>             self<span style="color:#f92672">.</span>number<span style="color:#f92672">=</span>carnumber
+<span style="color:#f92672">...</span>             self<span style="color:#f92672">.</span>owner<span style="color:#f92672">=</span>carowner
+<span style="color:#f92672">...</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> car1 <span style="color:#f92672">=</span> Car(<span style="color:#e6db74">&#34;lexus&#34;</span>,<span style="color:#e6db74">&#34;100-1010&#34;</span>,<span style="color:#e6db74">&#34;ai-ueo&#34;</span>) 
+<span style="color:#f92672">&gt;&gt;&gt;</span> car2 <span style="color:#f92672">=</span> Car(<span style="color:#e6db74">&#34;carrola&#34;</span>,<span style="color:#e6db74">&#34;200-2020&#34;</span>,<span style="color:#e6db74">&#34;kaki-kukeko&#34;</span>) 
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> [car1<span style="color:#f92672">.</span>name,car1<span style="color:#f92672">.</span>number,car1<span style="color:#f92672">.</span>owner]  
+[<span style="color:#e6db74">&#39;lexus&#39;</span>, <span style="color:#e6db74">&#39;100-1010&#39;</span>, <span style="color:#e6db74">&#39;ai-ueo&#39;</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> [car2<span style="color:#f92672">.</span>name,car2<span style="color:#f92672">.</span>number,car2<span style="color:#f92672">.</span>owner] 
+[<span style="color:#e6db74">&#39;carrola&#39;</span>, <span style="color:#e6db74">&#39;200-2020&#39;</span>, <span style="color:#e6db74">&#39;kaki-kukeko&#39;</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/6af38773b6c0f16c60263ca2ad1f579d56ad1efd" title='Last modified Jan 20, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 20, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

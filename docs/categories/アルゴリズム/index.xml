@@ -6,10 +6,19 @@
     <description>Recent content in アルゴリズム on WAT Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sat, 30 Nov 2019 15:05:05 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jan 2020 22:09:35 +0900</lastBuildDate>
     
 	<atom:link href="https://WAT36.github.io/pages/categories/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ワーシャル・フロイド法</title>
+      <link></link>
+      <pubDate>Thu, 30 Jan 2020 22:09:35 +0900</pubDate>
+      
+      <guid></guid>
+      <description></description>
+    </item>
     
     <item>
       <title>グラフの彩色問題 ～Welsh・Powellのアルゴリズム～</title>
