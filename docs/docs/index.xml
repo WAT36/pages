@@ -48,6 +48,15 @@
     </item>
     
     <item>
+      <title>2変数関数のグラフ(３D面グラフ)を作成する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/surface/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/surface/</guid>
+      <description>2変数関数のグラフ(３D面グラフ)を作成する Python 2変数関数のグラフとして、3D面グラフで表示するにはmpl_toolkits.mplot3dの</description>
+    </item>
+    
+    <item>
       <title>2変数関数を定義する</title>
       <link>https://WAT36.github.io/pages/docs/programming/graph/2varfunc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

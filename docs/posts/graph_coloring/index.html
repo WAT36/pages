@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.2c80ecc596815fb100492d3423066c119cabe45701cef2c5bc2c8661315adf13.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.914f37bd9d47c8b2609aace628487fa2446a6fea666dfb4b659fac57b01da988.js"></script>
 
 
 
@@ -157,9 +157,22 @@ https://github.com/alex-shpak/hugo-book
 
 <h1 id="辺彩色">辺彩色</h1>
 
-<p>問題にもよるが、これも頂点彩色を応用して行える？<br />
-１つの辺において、隣接している辺（＝辺が結んでいる頂点が結んでいる他の辺）の数が大きい順に辺をソートし、<br />
+<p>辺彩色は専用のアルゴリズムがある？と聞いたが調べても見つからず、そのため問題にもよるが、これも頂点彩色を応用して行えると予想している。<br />
+１つの辺において、隣接辺（＝辺が結んでいる頂点が結んでいる他の辺）の数が大きい順に辺をソートし、<br />
 大きい辺から頂点彩色アルゴリズムを応用して行えば、彩色が行える（・・・はず）</p>
+
+<ol>
+<li>グラフGの辺を隣接辺の数の大きい順にソートし、 E<sub>i</sub> (i=1,2,…n)とする。<br /></li>
+<li>i = 1 とする<br /></li>
+<li>c = 1 とする<br /></li>
+<li>E<sub>i</sub> の隣接辺で色cを持つものが存在しなければ、E<sub>i</sub> に色cを与えて6.へ進む<br /></li>
+<li>c = c + 1 として4.に戻る<br /></li>
+<li>i &lt; |E| ならば、i = i + 1 として3.に戻る。i = |E| なら終了。<br /></li>
+</ol>
+
+<p>イメージとしては以下のような図。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/colored_edge.png" alt="辺彩色" /></p>
 </article>
 
       
