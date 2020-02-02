@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>その他 | WAT Notes</title>
+<title>Comment | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.e4d6fc727f6a024513fbf7e50ccf911121caff0e323da1885b4c89a9f43363d8.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.715dff30f55c83684560c65ef2be6e7581cbab7f649860808df04241fc7d150e.js"></script>
 
 
 
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fother\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fother\2f comment\2f "] {
       color: #004ed0;
   }
   </style>
@@ -99,53 +99,66 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>その他</strong>
+  <strong>Comment</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="その他">その他</h1>
+<h1 id="コメントアウト">コメントアウト</h1>
 
-<p>その他、括れてない手法などをまとめる。</p>
+<p>プログラミングでコメント（注釈）を付け加えたい時、或いはある箇所だけを実行(・コンパイル)の対象外としたい時にはコメントアウトを使う。ここではコメントアウトの方法についてを示す。</p>
 
-<table>
-<thead>
-<tr>
-<th align="left">説明</th>
-<th align="left">Java</th>
-<th align="left">Python</th>
-<th align="left"></th>
-</tr>
-</thead>
 
-<tbody>
-<tr>
-<td align="left">メソッド(関数)の宣言</td>
-<td align="left">(アクセス修飾子) <a href="戻り値の型">static</a> 関数名(引数){}<br>例：<code>public static void main(String[] args){}</code></td>
-<td align="left">def 関数名(引数):<br></td>
-<td align="left"></td>
-</tr>
 
-<tr>
-<td align="left">プログラムを終了する</td>
-<td align="left">return;<br>または<br>System.exit(終了ステータス);</td>
-<td align="left">import sys<br>sys.exit()</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-comment" style="display: none;" id="tabs-comment-0" checked="checked" />
+  <label for="tabs-comment-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Javaでのコメントアウトの仕方は以下の通り。</p>
+
+<pre><code>//  (コメント)
+
+/*
+ (コメント)
+ */
+</code></pre>
+
+<p>1行だけをコメントアウトしたい時は<code>//</code>を利用した方が良い。これを利用すると、その行内で//から後は全てコメントアウトされる。<br />
+複数行をコメントアウトするときは<code>/* */</code>を利用する。これを利用すると、/* から */ までの間は全てコメントアウトされる。</p>
+
+  </div>
+
+  <input type="radio" name="tabs-comment" style="display: none;" id="tabs-comment-1"  />
+  <label for="tabs-comment-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Pythonでは <strong>#</strong> がコメントアウトの役割を成す。<br />
+＃を書くと、その行で#以後の部分はコメントアウトされる。<br />
+＃は１行に対してのコメントアウトである。<br />
+複数行に対して行うには、コメントアウトしたい行をシングルクォート(&lsquo;)またはダブルクォート(&ldquo;)<strong>３つ</strong>で囲むと、コメントアウトされる。</p>
+
+<pre><code>#  (コメント)
+
+'''
+(コメント)
+'''
+</code></pre>
+
+  </div>
+
+</div>
+
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/09ca6ffc811ebc47b2da2ff208b77caaf373445e" title='Last modified Sep 11, 2019 by T.Wakasugi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 11, 2019
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
@@ -154,14 +167,6 @@ https://github.com/alex-shpak/hugo-book
     </div>
     
   
-
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#その他">その他</a></li>
-</ul>
-</nav>
-  </aside>
 
 
 

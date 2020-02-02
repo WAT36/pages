@@ -92,6 +92,15 @@
     </item>
     
     <item>
+      <title>Comment</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/comment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/comment/</guid>
+      <description>コメントアウト プログラミングでコメント（注釈）を付け加えたい時、或いはある箇所だけを実行(・コンパイル)の対象外としたい時にはコメントアウト</description>
+    </item>
+    
+    <item>
       <title>continue文</title>
       <link>https://WAT36.github.io/pages/docs/programming/control/continue/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -151,7 +160,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/other/other_index/</guid>
-      <description>その他 その他、括れてない手法などをまとめる。 変数 変数の型を調べる 関数、メソッドのヘルプを見る(Python)</description>
+      <description>その他 その他、括れてない手法などをまとめる。 変数 変数の型を調べる 関数、メソッドのヘルプを見る(Python) コメントアウト</description>
     </item>
     
     <item>
