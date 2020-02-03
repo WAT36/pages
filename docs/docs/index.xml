@@ -849,6 +849,15 @@
     </item>
     
     <item>
+      <title>転置行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/transpose/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/transpose/</guid>
+      <description>転置行列 転置行列を算出する方法についてを示す。 Python 転置行列を算出したい時は、(ndarray型の変数).Tで行う。 &amp;gt;&amp;gt;&amp;gt; import numpy as np &amp;gt;&amp;gt;&amp;gt; &amp;gt;&amp;gt;&amp;gt; a = np.array([[1, 2]]) &amp;gt;&amp;gt;&amp;gt; &amp;gt;&amp;gt;&amp;gt; print(a)</description>
+    </item>
+    
+    <item>
       <title>軸にラベルを設定する</title>
       <link>https://WAT36.github.io/pages/docs/programming/graph/label/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
