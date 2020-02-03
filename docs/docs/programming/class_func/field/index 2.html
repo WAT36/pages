@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>フィールド(クラス変数・インスタンス変数) | WAT Notes</title>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.c1c9864e80845121fd9e99187cc642b9ffa207f6852f3c263e4db0ad685638e6.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2f class_func\2f field\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>フィールド(クラス変数・インスタンス変数)</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="フィールド-クラス変数-インスタンス変数">フィールド(クラス変数・インスタンス変数)</h1>
+
+<p>フィールド変数とはクラス内に定義する変数のこと。<br />
+その中でも主に、クラス内で定義して全てのインスタンス間で値を共有する変数をクラス変数、<br />
+インスタンス毎に独立して値を保持する変数をインスタンス変数という。<br />
+言語により呼び名が違う？ので注意</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-field" style="display: none;" id="tabs-field-0" checked="checked" />
+  <label for="tabs-field-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Javaでのフィールド変数定義方法は以下の通り。</p>
+
+<pre><code>class クラス名{
+
+    //フィールド変数
+    [static] (フィールド変数１　定義)
+    [static] (フィールド変数２　定義)
+    ・・・
+
+    //文
+}
+</code></pre>
+
+<p>クラス変数にしたい時は変数の前に<strong>static</strong>をつける。<br />
+staticをつけない場合はインスタンス変数となる。<br />
+フィールド変数を参照したい時は、クラス変数は<strong>クラス(インスタンス)名.変数名</strong>で参照できる。<br />
+インスタンス変数はインスタンス毎で独立のため、<strong>インスタンス名.変数名</strong> で参照すること。クラス名を使っても参照はできない(コンパイルエラーとなる)</p>
+
+<p>実行例は以下の通り。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Car</span> {
+
+    <span style="color:#75715e">//フィールド変数
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">String</span> name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;lexus&#34;</span>;
+    String <span style="color:#a6e22e">number</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+    String <span style="color:#a6e22e">owner</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+}
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+
+    Car <span style="color:#a6e22e">c1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Car();
+    c1.<span style="color:#a6e22e">number</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100-1010&#34;</span>;
+    c1.<span style="color:#a6e22e">owner</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ai-ueo&#34;</span>;
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;c1:&#34;</span> <span style="color:#f92672">+</span> c1.<span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> c1.<span style="color:#a6e22e">number</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> c1.<span style="color:#a6e22e">owner</span>);
+
+    Car <span style="color:#a6e22e">c2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Car();
+    c2.<span style="color:#a6e22e">number</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;200-2020&#34;</span>;
+    c2.<span style="color:#a6e22e">owner</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;kaki-kukeko&#34;</span>;
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;c2:&#34;</span> <span style="color:#f92672">+</span> c2.<span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> c2.<span style="color:#a6e22e">number</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> c2.<span style="color:#a6e22e">owner</span>);
+
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;carname :&#34;</span><span style="color:#f92672">+</span>Car.<span style="color:#a6e22e">name</span>);   <span style="color:#75715e">//Car.name   -&gt;クラス変数なのでクラス名.変数名で参照できる
+</span><span style="color:#75715e"></span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;carnum  :&#34;</span><span style="color:#f92672">+</span>Car.<span style="color:#a6e22e">number</span>); <span style="color:#75715e">//Car.number -&gt;インスタンス変数なのでクラス名からは参照できない(エラー)
+</span><span style="color:#75715e"></span>  }
+}</code></pre></div>
+<p>実行結果（コンパイルエラー発生）</p>
+
+<pre><code>$ javac Main.java
+Main.java:22: エラー: staticでない変数 numberをstaticコンテキストから参照することはできません
+    System.out.println(&quot;carnum  :&quot;+Car.number); 
+                                      ^
+エラー1個
+</code></pre>
+
+<p>そのためエラー箇所をコメントアウトして再度実行する</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">//</span>  System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;carnum  :&#34;</span><span style="color:#f92672">+</span>Car.<span style="color:#a6e22e">number</span>);</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>$ javac Main.java
+$ java Main
+c1:lexus 100-1010 ai-ueo
+c2:lexus 200-2020 kaki-kukeko
+carname :lexus
+</code></pre>
+
+  </div>
+
+  <input type="radio" name="tabs-field" style="display: none;" id="tabs-field-1"  />
+  <label for="tabs-field-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Pythonにもクラス変数とインスタンス変数がある。<br />
+クラス変数はクラス内、各関数外に定義し、クラス、インスタンスオブジェクトから参照することができる。<br />
+インスタンス変数は、後述するがクラスの<strong>init</strong>関数で定義する。ここで定義した変数はインスタンスからしか参照できない。</p>
+
+<p>使用例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Car</span>:
+<span style="color:#f92672">...</span>     name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;lexus&#34;</span>
+<span style="color:#f92672">...</span>     <span style="color:#66d9ef">def</span> __init__(self,n,o):
+<span style="color:#f92672">...</span>             self<span style="color:#f92672">.</span>number<span style="color:#f92672">=</span>n
+<span style="color:#f92672">...</span>             self<span style="color:#f92672">.</span>owner<span style="color:#f92672">=</span>o
+<span style="color:#f92672">...</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> c1<span style="color:#f92672">=</span>Car(<span style="color:#e6db74">&#34;100-1010&#34;</span>,<span style="color:#e6db74">&#34;ai-ueo&#34;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> c2<span style="color:#f92672">=</span>Car(<span style="color:#e6db74">&#34;200-2020&#34;</span>,<span style="color:#e6db74">&#34;kaki-kukeko&#34;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(Car<span style="color:#f92672">.</span>name)
+lexus
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(Car<span style="color:#f92672">.</span>number)
+Traceback (most recent call last):
+  File <span style="color:#e6db74">&#34;&lt;stdin&gt;&#34;</span>, line <span style="color:#ae81ff">1</span>, <span style="color:#f92672">in</span> <span style="color:#f92672">&lt;</span>module<span style="color:#f92672">&gt;</span>
+<span style="color:#a6e22e">AttributeError</span>: type object <span style="color:#e6db74">&#39;Car&#39;</span> has no attribute <span style="color:#e6db74">&#39;number&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(c1<span style="color:#f92672">.</span>name)
+lexus
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(c1<span style="color:#f92672">.</span>number)
+<span style="color:#ae81ff">100</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1010</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(c1<span style="color:#f92672">.</span>owner)
+ai<span style="color:#f92672">-</span>ueo
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(c2<span style="color:#f92672">.</span>name)
+lexus
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(c2<span style="color:#f92672">.</span>number)
+<span style="color:#ae81ff">200</span><span style="color:#f92672">-</span><span style="color:#ae81ff">2020</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(c2<span style="color:#f92672">.</span>owner)
+kaki<span style="color:#f92672">-</span>kukeko
+<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/041d6a3cf375a68bd55ba27082a538e30877a734" title='Last modified Jan 19, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 19, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

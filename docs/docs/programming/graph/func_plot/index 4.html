@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一変数関数f(x)をグラフに描画する | WAT Notes</title>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.014a1d423eadae627c704a1d75b9d3ad8ae988c9c69c8ac0d95db4a306f9356f.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fgraph\2f func_plot\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>一変数関数f(x)をグラフに描画する</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="一変数関数f-x-をグラフに描画する">一変数関数f(x)をグラフに描画する</h1>
+
+<p>定義した一変数関数f(x)をグラフに描画する方法を示す。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-fx" style="display: none;" id="tabs-fx-0" checked="checked" />
+  <label for="tabs-fx-0">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>一変数関数f(x)を描画するには、まず自分で一変数関数を定義し、そこに入力するデータを用意し、実際に関数に入力して得られるデータを用意する。<br />
+入力データと出力データをplotすると関数のグラフの概形が得られる。</p>
+
+<p>例として、３次関数f(x) = x<sup>3</sup>を-10~10の範囲で描画して見る。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#f(x)定義</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(x):
+<span style="color:#f92672">...</span>     <span style="color:#66d9ef">return</span> x<span style="color:#f92672">**</span><span style="color:#ae81ff">3</span>
+<span style="color:#f92672">...</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#入力データxを-10~10の整数で用意</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> x<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>arange(<span style="color:#f92672">-</span><span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">1</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> x
+array([<span style="color:#f92672">-</span><span style="color:#ae81ff">10</span>,  <span style="color:#f92672">-</span><span style="color:#ae81ff">9</span>,  <span style="color:#f92672">-</span><span style="color:#ae81ff">8</span>,  <span style="color:#f92672">-</span><span style="color:#ae81ff">7</span>,  <span style="color:#f92672">-</span><span style="color:#ae81ff">6</span>,  <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>,  <span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>,  <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>,  <span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>,  <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,   <span style="color:#ae81ff">0</span>,   <span style="color:#ae81ff">1</span>,   <span style="color:#ae81ff">2</span>,
+         <span style="color:#ae81ff">3</span>,   <span style="color:#ae81ff">4</span>,   <span style="color:#ae81ff">5</span>,   <span style="color:#ae81ff">6</span>,   <span style="color:#ae81ff">7</span>,   <span style="color:#ae81ff">8</span>,   <span style="color:#ae81ff">9</span>,  <span style="color:#ae81ff">10</span>])
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#出力データy=f(x)を用意</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> y<span style="color:#f92672">=</span>f(x)
+<span style="color:#f92672">&gt;&gt;&gt;</span> y
+array([<span style="color:#f92672">-</span><span style="color:#ae81ff">1000</span>,  <span style="color:#f92672">-</span><span style="color:#ae81ff">729</span>,  <span style="color:#f92672">-</span><span style="color:#ae81ff">512</span>,  <span style="color:#f92672">-</span><span style="color:#ae81ff">343</span>,  <span style="color:#f92672">-</span><span style="color:#ae81ff">216</span>,  <span style="color:#f92672">-</span><span style="color:#ae81ff">125</span>,   <span style="color:#f92672">-</span><span style="color:#ae81ff">64</span>,   <span style="color:#f92672">-</span><span style="color:#ae81ff">27</span>,    <span style="color:#f92672">-</span><span style="color:#ae81ff">8</span>,
+          <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,     <span style="color:#ae81ff">0</span>,     <span style="color:#ae81ff">1</span>,     <span style="color:#ae81ff">8</span>,    <span style="color:#ae81ff">27</span>,    <span style="color:#ae81ff">64</span>,   <span style="color:#ae81ff">125</span>,   <span style="color:#ae81ff">216</span>,   <span style="color:#ae81ff">343</span>,
+         <span style="color:#ae81ff">512</span>,   <span style="color:#ae81ff">729</span>,  <span style="color:#ae81ff">1000</span>])
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#x,yをプロット(描画)する</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> plt<span style="color:#f92672">.</span>plot(x,y)
+[<span style="color:#f92672">&lt;</span>matplotlib<span style="color:#f92672">.</span>lines<span style="color:#f92672">.</span>Line2D object at <span style="color:#ae81ff">0x104089860</span><span style="color:#f92672">&gt;</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> plt<span style="color:#f92672">.</span>show()</code></pre></div>
+<p>実行結果</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_2.png" width=50%></p>
+
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/656c65fb146c2fb07a15c3822e6bffad5a524896" title='Last modified Jan 17, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 17, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

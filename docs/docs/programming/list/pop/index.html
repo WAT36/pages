@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.c1c9864e80845121fd9e99187cc642b9ffa207f6852f3c263e4db0ad685638e6.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.7e9bb4141d6163f474dfe75290bcede8952852ca95026fe8429460cebdde8299.js"></script>
 
 
 
@@ -161,18 +161,34 @@ https://github.com/alex-shpak/hugo-book
     Python
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>Pythonにはリストに指定した位置（インデックス）の要素を取り出して返す関数<strong>pop()</strong>があるので、これを利用する。<br />
-引数にはリストから取り出したい位置のインデックスを入力する。</p>
+    <p>Pythonでの方法は次の2つがある。</p>
+
+<ul>
+<li>リストの関数<strong>pop()</strong>を利用する。<br /></li>
+<li><strong>del</strong> 文を利用する</li>
+</ul>
+
+<p>pop関数はリストの指定した位置（インデックス）を引数とし、実行するとリストからそのインデックスの要素を取り出し、返す。<br />
+del文は リスト[インデックス] の形で入力を行い、実行するとリストからそのインデックスの要素が取り出されるが、値は返されない。</p>
+
+<p>以下に実行例を示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>]
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
 <span style="color:#f92672">&gt;&gt;&gt;</span> a
 [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>]
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#pop では値が返ってくる</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">.</span>pop(<span style="color:#ae81ff">1</span>) 
 <span style="color:#ae81ff">9</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> a
 [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#delでは取り出された値は返ってこない (返り値無し)</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">del</span> a[<span style="color:#ae81ff">1</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a
+[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>]
 <span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
   </div>
 
