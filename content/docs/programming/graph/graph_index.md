@@ -28,6 +28,9 @@ bookToc: false
       - [2変数関数を定義する]({{< relref "/docs/programming/graph/2varfunc.md" >}})
       - [2変数関数のグラフ(ヒートマップ)を作成する]({{< relref "/docs/programming/graph/pcolor.md" >}})
       - [2変数関数のグラフ(３D面グラフ)を作成する]({{< relref "/docs/programming/graph/surface.md" >}})
+      - [2変数関数のグラフ(等高線プロット)を作成する]({{< relref "/docs/programming/graph/contour.md" >}})
+
+
       
 
 

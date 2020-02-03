@@ -48,6 +48,15 @@
     </item>
     
     <item>
+      <title>2変数関数のグラフ(等高線プロット)を作成する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/contour/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/contour/</guid>
+      <description>2変数関数のグラフ(等高線プロット)を作成する Python 2変数関数のグラフとして、等高線プロットで表示するにはpyplotの関数contourを利用</description>
+    </item>
+    
+    <item>
       <title>2変数関数のグラフ(３D面グラフ)を作成する</title>
       <link>https://WAT36.github.io/pages/docs/programming/graph/surface/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
