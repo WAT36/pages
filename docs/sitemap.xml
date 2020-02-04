@@ -4,6 +4,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/default_arg/</loc>
+    <lastmod>2020-02-04T20:50:16+09:00</lastmod>
   </url>
   
   <url>
@@ -133,7 +134,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/classfunc_index/</loc>
-    <lastmod>2020-01-26T12:52:01+09:00</lastmod>
+    <lastmod>2020-02-04T20:50:16+09:00</lastmod>
   </url>
   
   <url>
@@ -184,6 +185,10 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/math/vector/</loc>
     <lastmod>2020-01-06T22:40:20+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/norm/</loc>
   </url>
   
   <url>
@@ -648,7 +653,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-02-04T08:23:33+09:00</lastmod>
+    <lastmod>2020-02-04T20:50:16+09:00</lastmod>
   </url>
   
   <url>
@@ -677,12 +682,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   

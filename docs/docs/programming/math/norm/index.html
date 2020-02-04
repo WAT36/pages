@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>クラス・関数(メソッド) | WAT Notes</title>
+<title>ベクトルの大きさ(ノルム) | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2f class_func\2f classfunc_index\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fmath\2fnorm\2f "] {
       color: #004ed0;
   }
   </style>
@@ -99,47 +99,54 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>クラス・関数(メソッド)</strong>
+  <strong>ベクトルの大きさ(ノルム)</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="クラス-関数-メソッド">クラス・関数(メソッド)</h1>
+<h1 id="ベクトルの大きさ-ノルム">ベクトルの大きさ(ノルム)</h1>
 
-<p>クラス及び関数（メソッド）の定義についてを示す。
-これも言語によって違う名前で呼ばれているものもあるので注意。</p>
 
-<ul>
-<li>クラス
 
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/class/">クラスの定義</a></li>
-<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/field/">フィールド(クラス変数・インスタンス変数)</a></li>
-<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/constructor/">コンストラクタ(__init__)</a></li>
-<li>継承</li>
-<li>多重継承</li>
-</ul></li>
-<li>関数
 
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/func/">関数(メソッド)の定義</a></li>
-<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/default_arg/">(Python)引数のデフォルト値</a></li>
-<li>匿名（無名）クラス</li>
-<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/lambda/">ラムダ式（無名関数）</a></li>
-</ul></li>
-</ul>
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-norm" style="display: none;" id="tabs-norm-0" checked="checked" />
+  <label for="tabs-norm-0">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>ベクトルの大きさ(ノルム)を算出したいときは、numpy.linalgモジュールにある関数<strong>norm</strong>を使用する。</p>
+
+<p><code>numpy.linalg.norm(ベクトル)</code></p>
+
+<p>実行例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>])
+<span style="color:#f92672">&gt;&gt;&gt;</span> a
+array([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>])
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> np<span style="color:#f92672">.</span>linalg<span style="color:#f92672">.</span>norm(a)
+<span style="color:#ae81ff">2.23606797749979</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> b<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>])
+<span style="color:#f92672">&gt;&gt;&gt;</span> b
+array([<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>])
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> np<span style="color:#f92672">.</span>linalg<span style="color:#f92672">.</span>norm(b)
+<span style="color:#ae81ff">5.0</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
+  </div>
+
+</div>
+
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/70c2939b43aa954cdc09006d2990f02b5547a692" title='Last modified Feb 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Feb 4, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
