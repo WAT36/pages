@@ -19,6 +19,7 @@ bookToc: false
  - 多重継承
 - 関数
  - [関数(メソッド)の定義]({{< relref "/docs/programming/class_func/func.md" >}})
+ - [(Python)引数のデフォルト値]({{< relref "/docs/programming/class_func/default_arg.md" >}})
  - 匿名（無名）クラス
  - [ラムダ式（無名関数）]({{< relref "/docs/programming/class_func/lambda.md" >}})
  

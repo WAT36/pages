@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>リストの定義 | WAT Notes</title>
+<title>(Python)引数のデフォルト値 | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2flist\2flist_overview\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2f class_func\2f default_arg\2f "] {
       color: #004ed0;
   }
   </style>
@@ -99,15 +99,16 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>リストの定義</strong>
+  <strong>(Python)引数のデフォルト値</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="リストの定義">リストの定義</h1>
+<h1 id="python-引数のデフォルト値">(Python)引数のデフォルト値</h1>
 
-<p>リストについて。</p>
+<p>関数の引数にデフォルト値を設定できる言語がある。<br />
+定義した引数に何も値が入力されなかった場合に、自動でデフォルト値が指定された引数に入るという仕組みである。ここではそれについてを示す。</p>
 
 
 
@@ -115,24 +116,28 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" name="tabs-list" style="display: none;" id="tabs-list-0" checked="checked" />
-  <label for="tabs-list-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    Javaのリストは配列とは全く別のデータ型として定義されてあり、その定義は<strong>java.util.List</strong>クラスにある。<br />
-配列との違いは、配列は宣言時に長さも指定し、基本指定した長さの分しかデータを格納できないのに対し、<br />
-リストは長さを指定せずに宣言でき、かつ好きなだけデータを格納、取り出すことができ、長さは入っているデータにより変わるという、いわば可変長の配列といってもよい。
-  </div>
-
-  <input type="radio" name="tabs-list" style="display: none;" id="tabs-list-1"  />
-  <label for="tabs-list-1">
+  <input type="radio" name="tabs-defarg" style="display: none;" id="tabs-defarg-0" checked="checked" />
+  <label for="tabs-defarg-0">
     Python
   </label>
   <div class="book-tabs-content markdown-inner">
-    配列・リストに関して、Pythonには基本「リスト」という概念しかなく、配列は定義されていない。<br />
-他言語でいう配列といったデータ構造は、pythonの場合この「リスト」にひっくるめられていると考えていい（はず・・・）
-pythonの場合もリストは長さを指定せずに宣言でき、好きなだけデータを格納、取り出すことも可能、そして長さは入っているデータにより変わる。
+    <p>Pythonでは関数の定義時に引数に<strong>引数名=デフォルト値</strong>と書くとデフォルト値を設定できる。</p>
+
+<p>実行例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#関数greet、引数の文字をそのまま返す。引数のデフォルト値は&#34;Hello!&#34;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">greet</span>(s<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Hello!&#39;</span>):
+<span style="color:#f92672">...</span>     <span style="color:#66d9ef">return</span> s
+<span style="color:#f92672">...</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#引数に&#34;World!&#34; -&gt; 引数sに&#34;World!&#34;が入りそれが返る</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> greet(<span style="color:#e6db74">&#39;World!&#39;</span>)
+<span style="color:#e6db74">&#39;World!&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#引数無し -&gt; 引数sにはデフォルト値&#34;Hello!&#34;が入りそれが返る</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> greet()
+<span style="color:#e6db74">&#39;Hello!&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
   </div>
 
 </div>
@@ -140,14 +145,7 @@ pythonの場合もリストは長さを指定せずに宣言でき、好きな�
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f3dcb4ba0aed4e8c96315c519011ed407623594e" title='Last modified Jan 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 5, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 

@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>(Python)引数のデフォルト値</title>
+      <link>https://WAT36.github.io/pages/docs/programming/class_func/default_arg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/class_func/default_arg/</guid>
+      <description>(Python)引数のデフォルト値 関数の引数にデフォルト値を設定できる言語がある。 定義した引数に何も値が入力されなかった場合に、自動でデフォ</description>
+    </item>
+    
+    <item>
       <title>(折れ線)グラフを描画する</title>
       <link>https://WAT36.github.io/pages/docs/programming/graph/plot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
