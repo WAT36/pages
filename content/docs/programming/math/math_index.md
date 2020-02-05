@@ -26,6 +26,7 @@ bookToc: false
      - [スカラー*行列]({{< relref "/docs/programming/math/scalar.md" >}})
      - [行列積(ベクトルの内積)]({{< relref "/docs/programming/math/dot.md" >}})
      - [転置行列]({{< relref "/docs/programming/math/transpose.md" >}})
+     - [単位行列]({{< relref "/docs/programming/math/identity.md" >}})
  - [ndarray型のデータをファイルに保存する]({{< relref "/docs/programming/math/save.md" >}})
 
 

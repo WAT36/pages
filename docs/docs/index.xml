@@ -606,6 +606,15 @@
     </item>
     
     <item>
+      <title>単位行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/identity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/identity/</guid>
+      <description>単位行列 単位行列を生成する方法を述べる。 Python 単位行列を算出したいときは、numpyモジュールにある関数identityを使用する。 numpy.linalg.identity(n) 上記の式に</description>
+    </item>
+    
+    <item>
       <title>多次元リスト(配列)である列をキーにしてソートする</title>
       <link>https://WAT36.github.io/pages/docs/programming/list/multisortlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
