@@ -552,6 +552,15 @@
     </item>
     
     <item>
+      <title>リスト内包表記</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/comprehension/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/comprehension/</guid>
+      <description>リスト内包表記 リスト内包表記についてを示す。 Python リスト内包とは大かっこ [ ] の中に式とfor文（・if文）を書くことにより、その式によって評価さ</description>
+    </item>
+    
+    <item>
       <title>一変数関数f(x)をグラフに描画する</title>
       <link>https://WAT36.github.io/pages/docs/programming/graph/func_plot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

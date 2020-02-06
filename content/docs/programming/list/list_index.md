@@ -46,5 +46,6 @@ Pythonではリスト（・タプル）のみで、配列という概念はな�
 - ２つの配列a,bの同じインデックスの要素を１つの組にした２次元配列を作る
 - [リストが空であるか判別する]({{< relref "/docs/programming/list/isempty.md" >}})
 - [リストを空にする]({{< relref "/docs/programming/list/clear.md" >}})
+- [(Python)リスト内包表記]({{< relref "/docs/programming/list/comprehension.md" >}})
 
 
