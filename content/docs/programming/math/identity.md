@@ -16,7 +16,7 @@ bookToc: false
 
 単位行列を算出したいときは、numpyモジュールにある関数**identity**を使用する。  
 
-`numpy.linalg.identity(n)`   
+`numpy.identity(n)`   
 
 上記の式により、n×nの単位行列が生成される。  
 実行例を以下に示す。  
