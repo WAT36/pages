@@ -1010,6 +1010,15 @@
     </item>
     
     <item>
+      <title>逆行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/inv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/inv/</guid>
+      <description>逆行列 逆行列を算出する方法についてを述べる。 Python 逆行列を算出したいときは、numpy.linalgモジュールにある関数invを使用する。 numpy.linalg.inv(A) 上記</description>
+    </item>
+    
+    <item>
       <title>関数(メソッド)の定義</title>
       <link>https://WAT36.github.io/pages/docs/programming/class_func/func/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
