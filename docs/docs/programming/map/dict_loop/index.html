@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>辞書(Map)に要素を追加する | WAT Notes</title>
+<title>辞書(Map)のループ | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmap\2fput\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fmap\2f dict_loop\2f "] {
       color: #004ed0;
   }
   </style>
@@ -99,15 +99,15 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>辞書(Map)に要素を追加する</strong>
+  <strong>辞書(Map)のループ</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="辞書-map-に要素を追加する">辞書(Map)に要素を追加する</h1>
+<h1 id="辞書-map-のループ">辞書(Map)のループ</h1>
 
-<p>辞書(Map)に要素(キー・値)を追加する方法についてを示す。</p>
+<p>辞書(Map)のループを行う方法についてを示す。</p>
 
 
 
@@ -115,63 +115,60 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" name="tabs-map_in" style="display: none;" id="tabs-map_in-0" checked="checked" />
-  <label for="tabs-map_in-0">
+  <input type="radio" name="tabs-dict_loop" style="display: none;" id="tabs-dict_loop-0" checked="checked" />
+  <label for="tabs-dict_loop-0">
     Java
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>JavaではMapクラスに<strong>put()</strong>というメソッドがあり、引数にキー・値を指定すると、そのMap内にキー・値が入る。<br />
-<code>V put(K key, V value)</code><br />
-既に同じキーがあった場合は上書きされて入る。</p>
+    <p>JavaでMapにループを掛けるには、Mapのメソッドである<strong>entrySet()</strong>を利用してMap内の全てのキー・値の組み合わせを取得し、それを拡張for文などでループさせる。</p>
+
+<pre><code>for( Map.entry&lt;キーの型,値の型&gt; entry: (Mapの変数).entrySet() ){
+    キーの型 key = entry.getKey();
+    値の型 value = entry.getValue();
+}
+</code></pre>
 
 <p>実行例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">Map</span>;
 <span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">HashMap</span>;
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
   <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-
     Map<span style="color:#f92672">&lt;</span>String,String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;</span>();
+    m.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;key1&#34;</span>,<span style="color:#e6db74">&#34;val1&#34;</span>);
+    m.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;key2&#34;</span>,<span style="color:#e6db74">&#34;val2&#34;</span>);
+    m.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;key3&#34;</span>,<span style="color:#e6db74">&#34;val3&#34;</span>);
 
-    m.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;key&#34;</span>,<span style="color:#e6db74">&#34;value&#34;</span>);
-    m.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;key2&#34;</span>,<span style="color:#e6db74">&#34;value&#34;</span>);
-    m.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;key&#34;</span>,<span style="color:#e6db74">&#34;value3&#34;</span>);
-
-    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(m);
+    <span style="color:#66d9ef">for</span>(Map.<span style="color:#a6e22e">Entry</span><span style="color:#f92672">&lt;</span>String,String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">:</span> m.<span style="color:#a6e22e">entrySet</span>()){
+      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(e.<span style="color:#a6e22e">getKey</span>() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> e.<span style="color:#a6e22e">getValue</span>());
+    }
   }
 }</code></pre></div>
 <p>実行結果</p>
 
 <pre><code>&gt; java Main
-{key2=value, key=value3}
+key1 val1
+key2 val2
+key3 val3
 </code></pre>
 
   </div>
 
-  <input type="radio" name="tabs-map_in" style="display: none;" id="tabs-map_in-1"  />
-  <label for="tabs-map_in-1">
+  <input type="radio" name="tabs-dict_loop" style="display: none;" id="tabs-dict_loop-1"  />
+  <label for="tabs-dict_loop-1">
     Python
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>Pythonでは以下のような記法で辞書にキー・値を追加できる。</p>
+    <p>Pythonで辞書にループをかけるには、for文のループに辞書の<strong>items()</strong>関数を使いループすると行える。<br />
+items関数は辞書にあるキーと値の組み合わせを全て取得する関数である。<br />
+これを利用し、以下のように行うと辞書のループが行える。</p>
 
-<p><code>辞書[キー] = 値</code></p>
+<pre><code>for k,v in 辞書.items():
+    //kにはキー、vには値が入る
+    //処理文
+</code></pre>
 
-<p>既に同じキーがあった場合は、値が上書きされる。<br />
-実行例を以下に示す。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> d[<span style="color:#e6db74">&#34;key&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;value&#34;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> d
-{<span style="color:#e6db74">&#39;key&#39;</span>: <span style="color:#e6db74">&#39;value&#39;</span>}
-<span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> d[<span style="color:#e6db74">&#34;key2&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;value2&#34;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> d
-{<span style="color:#e6db74">&#39;key&#39;</span>: <span style="color:#e6db74">&#39;value&#39;</span>, <span style="color:#e6db74">&#39;key2&#39;</span>: <span style="color:#e6db74">&#39;value2&#39;</span>}
-<span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> d[<span style="color:#e6db74">&#34;key&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;value3&#34;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> d
-{<span style="color:#e6db74">&#39;key&#39;</span>: <span style="color:#e6db74">&#39;value3&#39;</span>, <span style="color:#e6db74">&#39;key2&#39;</span>: <span style="color:#e6db74">&#39;value2&#39;</span>}
-<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
+<p>キーだけを取り出したい時はkeys()、値のみで行いたい時はvalues()関数を利用する。</p>
+
   </div>
 
 </div>
@@ -179,14 +176,7 @@ https://github.com/alex-shpak/hugo-book
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f3dcb4ba0aed4e8c96315c519011ed407623594e" title='Last modified Jan 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 5, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
