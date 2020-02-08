@@ -29,5 +29,7 @@ bookToc: false
      - [単位行列]({{< relref "/docs/programming/math/identity.md" >}})
      - [逆行列]({{< relref "/docs/programming/math/inv.md" >}})
  - [ndarray型のデータをファイルに保存する]({{< relref "/docs/programming/math/save.md" >}})
+- 関数
+ - [シグモイド関数]({{< relref "/docs/programming/math/sigmoid.md" >}})
 
 
