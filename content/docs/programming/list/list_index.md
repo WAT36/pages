@@ -47,5 +47,6 @@ Pythonではリスト（・タプル）のみで、配列という概念はな�
 - [リストが空であるか判別する]({{< relref "/docs/programming/list/isempty.md" >}})
 - [リストを空にする]({{< relref "/docs/programming/list/clear.md" >}})
 - [(Python)リスト内包表記]({{< relref "/docs/programming/list/comprehension.md" >}})
+- [Set型]({{< relref "/docs/programming/list/set.md" >}})
 
 
