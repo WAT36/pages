@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>(Python)引数のデフォルト値 | WAT Notes</title>
+<title>(Python)タプル | WAT Notes</title>
 
 
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2f class_func\2f default_arg\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2flist\2ftuple\2f "] {
       color: #004ed0;
   }
   </style>
@@ -99,16 +99,15 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>(Python)引数のデフォルト値</strong>
+  <strong>(Python)タプル</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="python-引数のデフォルト値">(Python)引数のデフォルト値</h1>
+<h1 id="python-タプル">(Python)タプル</h1>
 
-<p>関数の引数にデフォルト値を設定できる言語がある。<br />
-定義した引数に何も値が入力されなかった場合に、自動でデフォルト値が指定された引数に入るという仕組みである。ここではそれについてを示す。</p>
+<p>Pythonで使うタプルについてを述べる。</p>
 
 
 
@@ -116,27 +115,30 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" name="tabs-defarg" style="display: none;" id="tabs-defarg-0" checked="checked" />
-  <label for="tabs-defarg-0">
+  <input type="radio" name="tabs-tuple" style="display: none;" id="tabs-tuple-0" checked="checked" />
+  <label for="tabs-tuple-0">
     Python
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>Pythonでは関数の定義時に引数に<strong>引数名=デフォルト値</strong>と書くとデフォルト値を設定できる。</p>
-
-<p>実行例を以下に示す。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#関数greet、引数の文字をそのまま返す。引数のデフォルト値は&#34;Hello!&#34;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">greet</span>(s<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Hello!&#39;</span>):
-<span style="color:#f92672">...</span>     <span style="color:#66d9ef">return</span> s
-<span style="color:#f92672">...</span> 
+    <p>タプルとはPythonで使われるデータ構造で、リストと同様に複数のデータを格納できるシーケンス型のデータ構造である。丸括弧 <strong>( )</strong> で表記される。<br />
+リストと同じように見えるが、違う点はタプルは <strong>変更不能</strong> という点であり、中の値は変えることはできない。<br />
+実行例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#タプルの宣言</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> a <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> a
+(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span>      
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#リストと同様にインデックスを指定した値の参照は行える</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> a[<span style="color:#ae81ff">0</span>]
+<span style="color:#ae81ff">1</span>   
+<span style="color:#f92672">&gt;&gt;&gt;</span> a[<span style="color:#ae81ff">1</span>]
+<span style="color:#ae81ff">2</span>   
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#引数に&#34;World!&#34; -&gt; 引数sに&#34;World!&#34;が入りそれが返る</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> greet(<span style="color:#e6db74">&#39;World!&#39;</span>)
-<span style="color:#e6db74">&#39;World!&#39;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#引数無し -&gt; 引数sにはデフォルト値&#34;Hello!&#34;が入りそれが返る</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> greet()
-<span style="color:#e6db74">&#39;Hello!&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#タプルでは値の書き換えは行えない</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> a[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>
+Traceback (most recent call last):
+  File <span style="color:#e6db74">&#34;&lt;stdin&gt;&#34;</span>, line <span style="color:#ae81ff">1</span>, <span style="color:#f92672">in</span> <span style="color:#f92672">&lt;</span>module<span style="color:#f92672">&gt;</span>
+<span style="color:#a6e22e">TypeError</span>: <span style="color:#e6db74">&#39;tuple&#39;</span> object does <span style="color:#f92672">not</span> support item assignment
 <span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
   </div>
 
@@ -145,14 +147,7 @@ https://github.com/alex-shpak/hugo-book
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/70c2939b43aa954cdc09006d2990f02b5547a692" title='Last modified Feb 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Feb 4, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
