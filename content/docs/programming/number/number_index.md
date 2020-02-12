@@ -29,6 +29,7 @@ bookToc: false
  - [平方根・n乗根]({{< relref "/docs/programming/number/root.md" >}})
  - [複数の数字のうち最も大きい数字をとる]({{< relref "/docs/programming/number/max.md" >}})
  - [複数の数字のうち最も小さい数字をとる]({{< relref "/docs/programming/number/min.md" >}})
+ - [変数の値を1増やす・減らす（インクリメント・デクリメント）]({{< relref "/docs/programming/number/increment.md" >}})
 - 数値の表記を変換する
  - [数値を文字列に変換する]({{< relref "/docs/programming/number/str.md" >}})
  - [数字の頭をゼロ詰して表示する]({{< relref "/docs/programming/number/zfill.md" >}})
