@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>グラフに色をつける | WAT Notes</title>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.ddc3e70931eb8b2692d528c3abeaaed20ee1aa6227daa84299e9c3b58f9c0750.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fgraph\2f color\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>グラフに色をつける</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="グラフに色をつける">グラフに色をつける</h1>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-plot" style="display: none;" id="tabs-plot-0" checked="checked" />
+  <label for="tabs-plot-0">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>グラフに色をつけて表示させるには、グラフを表示するときに使ったpyplotの関数plotの引数に<strong>color</strong>というパラメータがあるので、そこに指定したい色を入力する。</p>
+
+<p>色以外にもplotには多くのパラメータが定義されている。詳しくは以下の公式レファレンスを参照する。</p>
+
+<ul>
+<li><a href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot">pyplot.plot</a></li>
+</ul>
+
+<p>実行例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#関数定義</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(x,w):
+<span style="color:#f92672">...</span>     <span style="color:#66d9ef">return</span> (x<span style="color:#f92672">-</span>w)<span style="color:#f92672">*</span>x<span style="color:#f92672">*</span>(x<span style="color:#f92672">+</span>w)
+<span style="color:#f92672">...</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>linspace(<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">61</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> x
+array([<span style="color:#f92672">-</span><span style="color:#ae81ff">3.</span> , <span style="color:#f92672">-</span><span style="color:#ae81ff">2.9</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">2.8</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">2.7</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">2.6</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">2.5</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">2.4</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">2.3</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">2.2</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">2.1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">2.</span> ,
+       <span style="color:#f92672">-</span><span style="color:#ae81ff">1.9</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1.8</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1.7</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1.6</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1.5</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1.4</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1.3</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1.2</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1.1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1.</span> , <span style="color:#f92672">-</span><span style="color:#ae81ff">0.9</span>,
+       <span style="color:#f92672">-</span><span style="color:#ae81ff">0.8</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">0.7</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">0.6</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">0.5</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">0.4</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">0.3</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">0.2</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">0.1</span>,  <span style="color:#ae81ff">0.</span> ,  <span style="color:#ae81ff">0.1</span>,  <span style="color:#ae81ff">0.2</span>,
+        <span style="color:#ae81ff">0.3</span>,  <span style="color:#ae81ff">0.4</span>,  <span style="color:#ae81ff">0.5</span>,  <span style="color:#ae81ff">0.6</span>,  <span style="color:#ae81ff">0.7</span>,  <span style="color:#ae81ff">0.8</span>,  <span style="color:#ae81ff">0.9</span>,  <span style="color:#ae81ff">1.</span> ,  <span style="color:#ae81ff">1.1</span>,  <span style="color:#ae81ff">1.2</span>,  <span style="color:#ae81ff">1.3</span>,
+        <span style="color:#ae81ff">1.4</span>,  <span style="color:#ae81ff">1.5</span>,  <span style="color:#ae81ff">1.6</span>,  <span style="color:#ae81ff">1.7</span>,  <span style="color:#ae81ff">1.8</span>,  <span style="color:#ae81ff">1.9</span>,  <span style="color:#ae81ff">2.</span> ,  <span style="color:#ae81ff">2.1</span>,  <span style="color:#ae81ff">2.2</span>,  <span style="color:#ae81ff">2.3</span>,  <span style="color:#ae81ff">2.4</span>,
+        <span style="color:#ae81ff">2.5</span>,  <span style="color:#ae81ff">2.6</span>,  <span style="color:#ae81ff">2.7</span>,  <span style="color:#ae81ff">2.8</span>,  <span style="color:#ae81ff">2.9</span>,  <span style="color:#ae81ff">3.</span> ])
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#y:f(x) = x**3</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> y <span style="color:#f92672">=</span> f(x,<span style="color:#ae81ff">0</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#y2:f(x) = (x-2)x(x+2)</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> y2 <span style="color:#f92672">=</span> f(x,<span style="color:#ae81ff">2</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#yは黒い線で描画</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> plt<span style="color:#f92672">.</span>plot(x,y,color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;black&#39;</span>)
+[<span style="color:#f92672">&lt;</span>matplotlib<span style="color:#f92672">.</span>lines<span style="color:#f92672">.</span>Line2D object at <span style="color:#ae81ff">0x10d76c320</span><span style="color:#f92672">&gt;</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#y2は赤い線で描画</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> plt<span style="color:#f92672">.</span>plot(x,y2,color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>)
+[<span style="color:#f92672">&lt;</span>matplotlib<span style="color:#f92672">.</span>lines<span style="color:#f92672">.</span>Line2D object at <span style="color:#ae81ff">0x10ea1f4e0</span><span style="color:#f92672">&gt;</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#グラフ表示</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> plt<span style="color:#f92672">.</span>show()
+<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
+<p>実行結果</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_3.png" width=50%></p>
+
+<p>因みに、colorに指定できる値は<strong>matplotlib.colors.cnames</strong>で確認することができる。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> matplotlib
+<span style="color:#f92672">&gt;&gt;&gt;</span> matplotlib<span style="color:#f92672">.</span>colors<span style="color:#f92672">.</span>cnames
+{<span style="color:#e6db74">&#39;aliceblue&#39;</span>: <span style="color:#e6db74">&#39;#F0F8FF&#39;</span>, <span style="color:#e6db74">&#39;antiquewhite&#39;</span>: <span style="color:#e6db74">&#39;#FAEBD7&#39;</span>, <span style="color:#e6db74">&#39;aqua&#39;</span>: <span style="color:#e6db74">&#39;#00FFFF&#39;</span>, <span style="color:#e6db74">&#39;aquamarine&#39;</span>: <span style="color:#e6db74">&#39;#7FFFD4&#39;</span>, <span style="color:#e6db74">&#39;azure&#39;</span>: <span style="color:#e6db74">&#39;#F0FFFF&#39;</span>, <span style="color:#e6db74">&#39;beige&#39;</span>: <span style="color:#e6db74">&#39;#F5F5DC&#39;</span>, <span style="color:#e6db74">&#39;bisque&#39;</span>: <span style="color:#e6db74">&#39;#FFE4C4&#39;</span>, <span style="color:#e6db74">&#39;black&#39;</span>: <span style="color:#e6db74">&#39;#000000&#39;</span>, <span style="color:#e6db74">&#39;blanchedalmond&#39;</span>: <span style="color:#e6db74">&#39;#FFEBCD&#39;</span>, <span style="color:#e6db74">&#39;blue&#39;</span>: <span style="color:#e6db74">&#39;#0000FF&#39;</span>, <span style="color:#e6db74">&#39;blueviolet&#39;</span>: <span style="color:#e6db74">&#39;#8A2BE2&#39;</span>, <span style="color:#e6db74">&#39;brown&#39;</span>: <span style="color:#e6db74">&#39;#A52A2A&#39;</span>, <span style="color:#e6db74">&#39;burlywood&#39;</span>: <span style="color:#e6db74">&#39;#DEB887&#39;</span>, <span style="color:#e6db74">&#39;cadetblue&#39;</span>: <span style="color:#e6db74">&#39;#5F9EA0&#39;</span>, <span style="color:#e6db74">&#39;chartreuse&#39;</span>: <span style="color:#e6db74">&#39;#7FFF00&#39;</span>, <span style="color:#e6db74">&#39;chocolate&#39;</span>: <span style="color:#e6db74">&#39;#D2691E&#39;</span>, <span style="color:#e6db74">&#39;coral&#39;</span>: <span style="color:#e6db74">&#39;#FF7F50&#39;</span>, <span style="color:#e6db74">&#39;cornflowerblue&#39;</span>: <span style="color:#e6db74">&#39;#6495ED&#39;</span>, <span style="color:#e6db74">&#39;cornsilk&#39;</span>: <span style="color:#e6db74">&#39;#FFF8DC&#39;</span>, <span style="color:#e6db74">&#39;crimson&#39;</span>: <span style="color:#e6db74">&#39;#DC143C&#39;</span>, <span style="color:#e6db74">&#39;cyan&#39;</span>: <span style="color:#e6db74">&#39;#00FFFF&#39;</span>, <span style="color:#e6db74">&#39;darkblue&#39;</span>: <span style="color:#e6db74">&#39;#00008B&#39;</span>, <span style="color:#e6db74">&#39;darkcyan&#39;</span>: <span style="color:#e6db74">&#39;#008B8B&#39;</span>, <span style="color:#e6db74">&#39;darkgoldenrod&#39;</span>: <span style="color:#e6db74">&#39;#B8860B&#39;</span>, <span style="color:#e6db74">&#39;darkgray&#39;</span>: <span style="color:#e6db74">&#39;#A9A9A9&#39;</span>, <span style="color:#e6db74">&#39;darkgreen&#39;</span>: <span style="color:#e6db74">&#39;#006400&#39;</span>, <span style="color:#e6db74">&#39;darkgrey&#39;</span>: <span style="color:#e6db74">&#39;#A9A9A9&#39;</span>, <span style="color:#e6db74">&#39;darkkhaki&#39;</span>: <span style="color:#e6db74">&#39;#BDB76B&#39;</span>, <span style="color:#e6db74">&#39;darkmagenta&#39;</span>: <span style="color:#e6db74">&#39;#8B008B&#39;</span>, <span style="color:#e6db74">&#39;darkolivegreen&#39;</span>: <span style="color:#e6db74">&#39;#556B2F&#39;</span>, <span style="color:#e6db74">&#39;darkorange&#39;</span>: <span style="color:#e6db74">&#39;#FF8C00&#39;</span>, <span style="color:#e6db74">&#39;darkorchid&#39;</span>: <span style="color:#e6db74">&#39;#9932CC&#39;</span>, <span style="color:#e6db74">&#39;darkred&#39;</span>: <span style="color:#e6db74">&#39;#8B0000&#39;</span>, <span style="color:#e6db74">&#39;darksalmon&#39;</span>: <span style="color:#e6db74">&#39;#E9967A&#39;</span>, <span style="color:#e6db74">&#39;darkseagreen&#39;</span>: <span style="color:#e6db74">&#39;#8FBC8F&#39;</span>, <span style="color:#e6db74">&#39;darkslateblue&#39;</span>: <span style="color:#e6db74">&#39;#483D8B&#39;</span>, <span style="color:#e6db74">&#39;darkslategray&#39;</span>: <span style="color:#e6db74">&#39;#2F4F4F&#39;</span>, <span style="color:#e6db74">&#39;darkslategrey&#39;</span>: <span style="color:#e6db74">&#39;#2F4F4F&#39;</span>, <span style="color:#e6db74">&#39;darkturquoise&#39;</span>: <span style="color:#e6db74">&#39;#00CED1&#39;</span>, <span style="color:#e6db74">&#39;darkviolet&#39;</span>: <span style="color:#e6db74">&#39;#9400D3&#39;</span>, <span style="color:#e6db74">&#39;deeppink&#39;</span>: <span style="color:#e6db74">&#39;#FF1493&#39;</span>, <span style="color:#e6db74">&#39;deepskyblue&#39;</span>: <span style="color:#e6db74">&#39;#00BFFF&#39;</span>, <span style="color:#e6db74">&#39;dimgray&#39;</span>: <span style="color:#e6db74">&#39;#696969&#39;</span>, <span style="color:#e6db74">&#39;dimgrey&#39;</span>: <span style="color:#e6db74">&#39;#696969&#39;</span>, <span style="color:#e6db74">&#39;dodgerblue&#39;</span>: <span style="color:#e6db74">&#39;#1E90FF&#39;</span>, <span style="color:#e6db74">&#39;firebrick&#39;</span>: <span style="color:#e6db74">&#39;#B22222&#39;</span>, <span style="color:#e6db74">&#39;floralwhite&#39;</span>: <span style="color:#e6db74">&#39;#FFFAF0&#39;</span>, <span style="color:#e6db74">&#39;forestgreen&#39;</span>: <span style="color:#e6db74">&#39;#228B22&#39;</span>, <span style="color:#e6db74">&#39;fuchsia&#39;</span>: <span style="color:#e6db74">&#39;#FF00FF&#39;</span>, <span style="color:#e6db74">&#39;gainsboro&#39;</span>: <span style="color:#e6db74">&#39;#DCDCDC&#39;</span>, <span style="color:#e6db74">&#39;ghostwhite&#39;</span>: <span style="color:#e6db74">&#39;#F8F8FF&#39;</span>, <span style="color:#e6db74">&#39;gold&#39;</span>: <span style="color:#e6db74">&#39;#FFD700&#39;</span>, <span style="color:#e6db74">&#39;goldenrod&#39;</span>: <span style="color:#e6db74">&#39;#DAA520&#39;</span>, <span style="color:#e6db74">&#39;gray&#39;</span>: <span style="color:#e6db74">&#39;#808080&#39;</span>, <span style="color:#e6db74">&#39;green&#39;</span>: <span style="color:#e6db74">&#39;#008000&#39;</span>, <span style="color:#e6db74">&#39;greenyellow&#39;</span>: <span style="color:#e6db74">&#39;#ADFF2F&#39;</span>, <span style="color:#e6db74">&#39;grey&#39;</span>: <span style="color:#e6db74">&#39;#808080&#39;</span>, <span style="color:#e6db74">&#39;honeydew&#39;</span>: <span style="color:#e6db74">&#39;#F0FFF0&#39;</span>, <span style="color:#e6db74">&#39;hotpink&#39;</span>: <span style="color:#e6db74">&#39;#FF69B4&#39;</span>, <span style="color:#e6db74">&#39;indianred&#39;</span>: <span style="color:#e6db74">&#39;#CD5C5C&#39;</span>, <span style="color:#e6db74">&#39;indigo&#39;</span>: <span style="color:#e6db74">&#39;#4B0082&#39;</span>, <span style="color:#e6db74">&#39;ivory&#39;</span>: <span style="color:#e6db74">&#39;#FFFFF0&#39;</span>, <span style="color:#e6db74">&#39;khaki&#39;</span>: <span style="color:#e6db74">&#39;#F0E68C&#39;</span>, <span style="color:#e6db74">&#39;lavender&#39;</span>: <span style="color:#e6db74">&#39;#E6E6FA&#39;</span>, <span style="color:#e6db74">&#39;lavenderblush&#39;</span>: <span style="color:#e6db74">&#39;#FFF0F5&#39;</span>, <span style="color:#e6db74">&#39;lawngreen&#39;</span>: <span style="color:#e6db74">&#39;#7CFC00&#39;</span>, <span style="color:#e6db74">&#39;lemonchiffon&#39;</span>: <span style="color:#e6db74">&#39;#FFFACD&#39;</span>, <span style="color:#e6db74">&#39;lightblue&#39;</span>: <span style="color:#e6db74">&#39;#ADD8E6&#39;</span>, <span style="color:#e6db74">&#39;lightcoral&#39;</span>: <span style="color:#e6db74">&#39;#F08080&#39;</span>, <span style="color:#e6db74">&#39;lightcyan&#39;</span>: <span style="color:#e6db74">&#39;#E0FFFF&#39;</span>, <span style="color:#e6db74">&#39;lightgoldenrodyellow&#39;</span>: <span style="color:#e6db74">&#39;#FAFAD2&#39;</span>, <span style="color:#e6db74">&#39;lightgray&#39;</span>: <span style="color:#e6db74">&#39;#D3D3D3&#39;</span>, <span style="color:#e6db74">&#39;lightgreen&#39;</span>: <span style="color:#e6db74">&#39;#90EE90&#39;</span>, <span style="color:#e6db74">&#39;lightgrey&#39;</span>: <span style="color:#e6db74">&#39;#D3D3D3&#39;</span>, <span style="color:#e6db74">&#39;lightpink&#39;</span>: <span style="color:#e6db74">&#39;#FFB6C1&#39;</span>, <span style="color:#e6db74">&#39;lightsalmon&#39;</span>: <span style="color:#e6db74">&#39;#FFA07A&#39;</span>, <span style="color:#e6db74">&#39;lightseagreen&#39;</span>: <span style="color:#e6db74">&#39;#20B2AA&#39;</span>, <span style="color:#e6db74">&#39;lightskyblue&#39;</span>: <span style="color:#e6db74">&#39;#87CEFA&#39;</span>, <span style="color:#e6db74">&#39;lightslategray&#39;</span>: <span style="color:#e6db74">&#39;#778899&#39;</span>, <span style="color:#e6db74">&#39;lightslategrey&#39;</span>: <span style="color:#e6db74">&#39;#778899&#39;</span>, <span style="color:#e6db74">&#39;lightsteelblue&#39;</span>: <span style="color:#e6db74">&#39;#B0C4DE&#39;</span>, <span style="color:#e6db74">&#39;lightyellow&#39;</span>: <span style="color:#e6db74">&#39;#FFFFE0&#39;</span>, <span style="color:#e6db74">&#39;lime&#39;</span>: <span style="color:#e6db74">&#39;#00FF00&#39;</span>, <span style="color:#e6db74">&#39;limegreen&#39;</span>: <span style="color:#e6db74">&#39;#32CD32&#39;</span>, <span style="color:#e6db74">&#39;linen&#39;</span>: <span style="color:#e6db74">&#39;#FAF0E6&#39;</span>, <span style="color:#e6db74">&#39;magenta&#39;</span>: <span style="color:#e6db74">&#39;#FF00FF&#39;</span>, <span style="color:#e6db74">&#39;maroon&#39;</span>: <span style="color:#e6db74">&#39;#800000&#39;</span>, <span style="color:#e6db74">&#39;mediumaquamarine&#39;</span>: <span style="color:#e6db74">&#39;#66CDAA&#39;</span>, <span style="color:#e6db74">&#39;mediumblue&#39;</span>: <span style="color:#e6db74">&#39;#0000CD&#39;</span>, <span style="color:#e6db74">&#39;mediumorchid&#39;</span>: <span style="color:#e6db74">&#39;#BA55D3&#39;</span>, <span style="color:#e6db74">&#39;mediumpurple&#39;</span>: <span style="color:#e6db74">&#39;#9370DB&#39;</span>, <span style="color:#e6db74">&#39;mediumseagreen&#39;</span>: <span style="color:#e6db74">&#39;#3CB371&#39;</span>, <span style="color:#e6db74">&#39;mediumslateblue&#39;</span>: <span style="color:#e6db74">&#39;#7B68EE&#39;</span>, <span style="color:#e6db74">&#39;mediumspringgreen&#39;</span>: <span style="color:#e6db74">&#39;#00FA9A&#39;</span>, <span style="color:#e6db74">&#39;mediumturquoise&#39;</span>: <span style="color:#e6db74">&#39;#48D1CC&#39;</span>, <span style="color:#e6db74">&#39;mediumvioletred&#39;</span>: <span style="color:#e6db74">&#39;#C71585&#39;</span>, <span style="color:#e6db74">&#39;midnightblue&#39;</span>: <span style="color:#e6db74">&#39;#191970&#39;</span>, <span style="color:#e6db74">&#39;mintcream&#39;</span>: <span style="color:#e6db74">&#39;#F5FFFA&#39;</span>, <span style="color:#e6db74">&#39;mistyrose&#39;</span>: <span style="color:#e6db74">&#39;#FFE4E1&#39;</span>, <span style="color:#e6db74">&#39;moccasin&#39;</span>: <span style="color:#e6db74">&#39;#FFE4B5&#39;</span>, <span style="color:#e6db74">&#39;navajowhite&#39;</span>: <span style="color:#e6db74">&#39;#FFDEAD&#39;</span>, <span style="color:#e6db74">&#39;navy&#39;</span>: <span style="color:#e6db74">&#39;#000080&#39;</span>, <span style="color:#e6db74">&#39;oldlace&#39;</span>: <span style="color:#e6db74">&#39;#FDF5E6&#39;</span>, <span style="color:#e6db74">&#39;olive&#39;</span>: <span style="color:#e6db74">&#39;#808000&#39;</span>, <span style="color:#e6db74">&#39;olivedrab&#39;</span>: <span style="color:#e6db74">&#39;#6B8E23&#39;</span>, <span style="color:#e6db74">&#39;orange&#39;</span>: <span style="color:#e6db74">&#39;#FFA500&#39;</span>, <span style="color:#e6db74">&#39;orangered&#39;</span>: <span style="color:#e6db74">&#39;#FF4500&#39;</span>, <span style="color:#e6db74">&#39;orchid&#39;</span>: <span style="color:#e6db74">&#39;#DA70D6&#39;</span>, <span style="color:#e6db74">&#39;palegoldenrod&#39;</span>: <span style="color:#e6db74">&#39;#EEE8AA&#39;</span>, <span style="color:#e6db74">&#39;palegreen&#39;</span>: <span style="color:#e6db74">&#39;#98FB98&#39;</span>, <span style="color:#e6db74">&#39;paleturquoise&#39;</span>: <span style="color:#e6db74">&#39;#AFEEEE&#39;</span>, <span style="color:#e6db74">&#39;palevioletred&#39;</span>: <span style="color:#e6db74">&#39;#DB7093&#39;</span>, <span style="color:#e6db74">&#39;papayawhip&#39;</span>: <span style="color:#e6db74">&#39;#FFEFD5&#39;</span>, <span style="color:#e6db74">&#39;peachpuff&#39;</span>: <span style="color:#e6db74">&#39;#FFDAB9&#39;</span>, <span style="color:#e6db74">&#39;peru&#39;</span>: <span style="color:#e6db74">&#39;#CD853F&#39;</span>, <span style="color:#e6db74">&#39;pink&#39;</span>: <span style="color:#e6db74">&#39;#FFC0CB&#39;</span>, <span style="color:#e6db74">&#39;plum&#39;</span>: <span style="color:#e6db74">&#39;#DDA0DD&#39;</span>, <span style="color:#e6db74">&#39;powderblue&#39;</span>: <span style="color:#e6db74">&#39;#B0E0E6&#39;</span>, <span style="color:#e6db74">&#39;purple&#39;</span>: <span style="color:#e6db74">&#39;#800080&#39;</span>, <span style="color:#e6db74">&#39;rebeccapurple&#39;</span>: <span style="color:#e6db74">&#39;#663399&#39;</span>, <span style="color:#e6db74">&#39;red&#39;</span>: <span style="color:#e6db74">&#39;#FF0000&#39;</span>, <span style="color:#e6db74">&#39;rosybrown&#39;</span>: <span style="color:#e6db74">&#39;#BC8F8F&#39;</span>, <span style="color:#e6db74">&#39;royalblue&#39;</span>: <span style="color:#e6db74">&#39;#4169E1&#39;</span>, <span style="color:#e6db74">&#39;saddlebrown&#39;</span>: <span style="color:#e6db74">&#39;#8B4513&#39;</span>, <span style="color:#e6db74">&#39;salmon&#39;</span>: <span style="color:#e6db74">&#39;#FA8072&#39;</span>, <span style="color:#e6db74">&#39;sandybrown&#39;</span>: <span style="color:#e6db74">&#39;#F4A460&#39;</span>, <span style="color:#e6db74">&#39;seagreen&#39;</span>: <span style="color:#e6db74">&#39;#2E8B57&#39;</span>, <span style="color:#e6db74">&#39;seashell&#39;</span>: <span style="color:#e6db74">&#39;#FFF5EE&#39;</span>, <span style="color:#e6db74">&#39;sienna&#39;</span>: <span style="color:#e6db74">&#39;#A0522D&#39;</span>, <span style="color:#e6db74">&#39;silver&#39;</span>: <span style="color:#e6db74">&#39;#C0C0C0&#39;</span>, <span style="color:#e6db74">&#39;skyblue&#39;</span>: <span style="color:#e6db74">&#39;#87CEEB&#39;</span>, <span style="color:#e6db74">&#39;slateblue&#39;</span>: <span style="color:#e6db74">&#39;#6A5ACD&#39;</span>, <span style="color:#e6db74">&#39;slategray&#39;</span>: <span style="color:#e6db74">&#39;#708090&#39;</span>, <span style="color:#e6db74">&#39;slategrey&#39;</span>: <span style="color:#e6db74">&#39;#708090&#39;</span>, <span style="color:#e6db74">&#39;snow&#39;</span>: <span style="color:#e6db74">&#39;#FFFAFA&#39;</span>, <span style="color:#e6db74">&#39;springgreen&#39;</span>: <span style="color:#e6db74">&#39;#00FF7F&#39;</span>, <span style="color:#e6db74">&#39;steelblue&#39;</span>: <span style="color:#e6db74">&#39;#4682B4&#39;</span>, <span style="color:#e6db74">&#39;tan&#39;</span>: <span style="color:#e6db74">&#39;#D2B48C&#39;</span>, <span style="color:#e6db74">&#39;teal&#39;</span>: <span style="color:#e6db74">&#39;#008080&#39;</span>, <span style="color:#e6db74">&#39;thistle&#39;</span>: <span style="color:#e6db74">&#39;#D8BFD8&#39;</span>, <span style="color:#e6db74">&#39;tomato&#39;</span>: <span style="color:#e6db74">&#39;#FF6347&#39;</span>, <span style="color:#e6db74">&#39;turquoise&#39;</span>: <span style="color:#e6db74">&#39;#40E0D0&#39;</span>, <span style="color:#e6db74">&#39;violet&#39;</span>: <span style="color:#e6db74">&#39;#EE82EE&#39;</span>, <span style="color:#e6db74">&#39;wheat&#39;</span>: <span style="color:#e6db74">&#39;#F5DEB3&#39;</span>, <span style="color:#e6db74">&#39;white&#39;</span>: <span style="color:#e6db74">&#39;#FFFFFF&#39;</span>, <span style="color:#e6db74">&#39;whitesmoke&#39;</span>: <span style="color:#e6db74">&#39;#F5F5F5&#39;</span>, <span style="color:#e6db74">&#39;yellow&#39;</span>: <span style="color:#e6db74">&#39;#FFFF00&#39;</span>, <span style="color:#e6db74">&#39;yellowgreen&#39;</span>: <span style="color:#e6db74">&#39;#9ACD32&#39;</span>}
+<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
+<p>また基本色として定義されているのが以下の値。一文字でも、正式名でも良い。</p>
+
+<p>&lsquo;b&rsquo;:blue<br />
+&lsquo;g&rsquo;:green<br />
+&lsquo;r&rsquo;:red<br />
+&lsquo;c&rsquo;:cyan<br />
+&rsquo;m&rsquo;:magenta<br />
+&lsquo;y&rsquo;:yellow<br />
+&lsquo;k&rsquo;:black<br />
+&lsquo;w&rsquo;:white</p>
+
+<p>これ以外にカラーコード、CSSの色名もcolorに指定できる。</p>
+
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/fd2186e8ae0b027c583bcc2447eabaa6507c14ec" title='Last modified Jan 19, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 19, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

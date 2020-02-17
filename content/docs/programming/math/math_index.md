@@ -31,5 +31,5 @@ bookToc: false
  - [ndarray型のデータをファイルに保存する]({{< relref "/docs/programming/math/save.md" >}})
 - 関数
  - [シグモイド関数]({{< relref "/docs/programming/math/sigmoid.md" >}})
-
+ - [ソフトマックス関数]({{< relref "/docs/programming/math/softmax.md" >}})
 
