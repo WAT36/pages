@@ -199,6 +199,11 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/file_io/file_index/</loc>
+    <lastmod>2020-02-17T22:12:08+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/file_io/fileopen/</loc>
   </url>
   
   <url>
@@ -703,7 +708,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-02-17T22:03:21+09:00</lastmod>
+    <lastmod>2020-02-17T22:12:08+09:00</lastmod>
   </url>
   
   <url>
@@ -732,12 +737,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -747,12 +752,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -923,7 +928,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/jp_index/</loc>
-    <lastmod>2020-01-25T22:55:08+09:00</lastmod>
+    <lastmod>2020-02-17T22:12:08+09:00</lastmod>
   </url>
   
 </urlset>
