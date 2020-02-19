@@ -345,6 +345,15 @@
     </item>
     
     <item>
+      <title>シグモイド関数とソフトマックス関数</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/softmax_sigmoid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/softmax_sigmoid/</guid>
+      <description>シグモイド関数とソフトマックス関数 シグモイド関数とソフトマックス関数は類似しているところがある。 Python 2変数(x0、x1)の時のソフトマックス関</description>
+    </item>
+    
+    <item>
       <title>スカラー*行列</title>
       <link>https://WAT36.github.io/pages/docs/programming/math/scalar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

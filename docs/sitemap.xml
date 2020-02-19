@@ -188,6 +188,10 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/softmax_sigmoid/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/math/scalar/</loc>
     <lastmod>2020-01-13T09:52:52+09:00</lastmod>
   </url>
@@ -199,11 +203,12 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/file_io/file_index/</loc>
-    <lastmod>2020-02-17T22:12:08+09:00</lastmod>
+    <lastmod>2020-02-19T22:30:06+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/file_io/fileopen/</loc>
+    <lastmod>2020-02-19T22:30:06+09:00</lastmod>
   </url>
   
   <url>
@@ -708,7 +713,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-02-17T22:12:08+09:00</lastmod>
+    <lastmod>2020-02-19T22:30:06+09:00</lastmod>
   </url>
   
   <url>
