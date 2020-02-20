@@ -33,4 +33,5 @@ bookToc: false
  - [シグモイド関数]({{< relref "/docs/programming/math/sigmoid.md" >}})
  - [ソフトマックス関数]({{< relref "/docs/programming/math/softmax.md" >}})
  - [シグモイド関数とソフトマックス関数]({{< relref "/docs/programming/math/softmax_sigmoid.md" >}})
+ - [ガウス関数]({{< relref "/docs/programming/math/gauss.md" >}})
 
