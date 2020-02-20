@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.e45da52cec905a3237044875eb17c442913975d7e5c34e06d74013fb6b8ad698.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.41fa946eb1f5c85bfecbd83f9ba4d6f308e47e18fda4286522f8e7dfd725dae2.js"></script>
 
 
 
@@ -287,6 +287,11 @@ open関数で開いたファイルは、ファイルオブジェクトとして�
 
 <p>また、openで開いたファイルでの作業が終わったら、最後にファイルオブジェクトの関数<strong>close()</strong>を利用してファイルをクローズする。これによりオープンしたファイルが占めていたシステムリソースを全て開放する。</p>
 
+<p>一連の操作についてここまで述べたが、実はこれらの動作を行う際は<strong>with</strong>文を使うのが非常に便利である。<br />
+その利点は、with文から抜けるときに自動的にファイルクローズを実行してくれるからであり（途中に例外が発生しても行われる）、同様の処理をtry-except文で実装するよりも簡略化できる。<br />
+使用法は以下の通り。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;ファイル名&#39;</span>,<span style="color:#e6db74">&#39;モード&#39;</span>) <span style="color:#66d9ef">as</span> f:
+    data <span style="color:#f92672">=</span> f<span style="color:#f92672">.</span>read()</code></pre></div>
 <p>実行例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> ls
 test<span style="color:#f92672">.</span>txt
@@ -320,6 +325,20 @@ ddd
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#ファイルをクローズする</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> f<span style="color:#f92672">.</span>close()
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#with文を使ってファイルを読み込む</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;test.txt&#39;</span>,<span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> f:
+<span style="color:#f92672">...</span>     <span style="color:#66d9ef">print</span>(f<span style="color:#f92672">.</span>read())
+<span style="color:#f92672">...</span> 
+aaa
+bbb
+ccc
+ddd
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#fがクローズされているか確認</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> f<span style="color:#f92672">.</span>closed
+True
 <span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
   </div>
 
