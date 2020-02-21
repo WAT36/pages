@@ -30,6 +30,7 @@ bookToc: false
                             <mn>)</mn>
                         </mrow>
                         <mn>2</mn>
+                    </msup>
                 </mrow>
                 <mrow>
                     <msup>
@@ -48,7 +49,7 @@ bookToc: false
 - σ：標準偏差
 - a：高さ(係数)
 
-この時、
+ここで、
 <math>
     <mi>a</mi>
     <mo>=</mo>
