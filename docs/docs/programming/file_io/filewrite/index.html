@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filewrite | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.57d69e5f39631668d995e9e6a0d78a79db2240d80763593c69e4907021874463.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2f file_io\2f filewrite\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>Filewrite</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="ファイル書き込み">ファイル書き込み</h1>
+
+<p>ファイルを書き込む方法についてを示す。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-fwrite" style="display: none;" id="tabs-fwrite-0" checked="checked" />
+  <label for="tabs-fwrite-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    Javaでは
+  </div>
+
+  <input type="radio" name="tabs-fwrite" style="display: none;" id="tabs-fwrite-1"  />
+  <label for="tabs-fwrite-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Pythonでは関数openでファイルを開いた後、ファイルオブジェクトの関数<strong>write()</strong>を利用してファイルを書き込む。</p>
+
+<p><code>write(文字列)</code></p>
+
+<p>ファイルへの書き込みを行う際にはopenで開く時にモードを <strong>&lsquo;w&rsquo;</strong> または <strong>&lsquo;a&rsquo;</strong> と必ず指定する。それ以外の時はwrite関数実行時にエラーになる。
+モードが&rsquo;w&rsquo;のときはファイルに上書きされ、&rsquo;a&rsquo;の時はファイルの末尾に追記される形で書き込まれる。</p>
+
+<p>こちらも読み込みの時と同様に、作業が終わったら最後にファイルオブジェクトの関数<strong>close()</strong>を利用してファイルをクローズする。</p>
+
+<p>また、書き込みにおいても<strong>with</strong>文が利用できる。with文を抜け出したとき、自動でファイルクローズも行うので便利。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;ファイル名&#39;</span>,<span style="color:#e6db74">&#39;モード&#39;</span>) <span style="color:#66d9ef">as</span> f:
+    f<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;ファイルに書き込む文字列&#39;</span>)</code></pre></div>
+<p>実行例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> ls
+test<span style="color:#f92672">.</span>txt
+<span style="color:#960050;background-color:#1e0010">$</span> cat test<span style="color:#f92672">.</span>txt
+aaa
+bbb
+ccc
+ddd
+<span style="color:#960050;background-color:#1e0010">$</span> python
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#&#39;w&#39;のときは上書きされて書き込まれる</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;test.txt&#39;</span>,<span style="color:#e6db74">&#39;w&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> f<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;overwrote!!&#39;</span>)
+<span style="color:#ae81ff">12</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> f<span style="color:#f92672">.</span>close()
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> quit()
+<span style="color:#960050;background-color:#1e0010">$</span> cat test<span style="color:#f92672">.</span>txt
+overwrote<span style="color:#960050;background-color:#1e0010">!!</span>
+
+<span style="color:#960050;background-color:#1e0010">$</span> python
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e"># &#39;a&#39;の時はファイルの末尾から追記される形で書き込まれる</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;test.txt&#39;</span>,<span style="color:#e6db74">&#39;a&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> f<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;aaa&#39;</span>)
+<span style="color:#ae81ff">3</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> f<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;bbb&#39;</span>)
+<span style="color:#ae81ff">3</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> f<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;ccc&#39;</span>)
+<span style="color:#ae81ff">3</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> f<span style="color:#f92672">.</span>close()
+<span style="color:#f92672">&gt;&gt;&gt;</span> quit()
+<span style="color:#960050;background-color:#1e0010">$</span> cat test<span style="color:#f92672">.</span>txt
+overwrote<span style="color:#960050;background-color:#1e0010">!!</span>aaabbbccc
+
+<span style="color:#960050;background-color:#1e0010">$</span> python
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e"># with文を使って書き込む</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;test.txt&#39;</span>,<span style="color:#e6db74">&#39;w&#39;</span>) <span style="color:#66d9ef">as</span> f:
+<span style="color:#f92672">...</span>     f<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;use with and overwrite&#39;</span>)
+<span style="color:#f92672">...</span>
+<span style="color:#ae81ff">22</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> quit()
+<span style="color:#960050;background-color:#1e0010">$</span> cat test<span style="color:#f92672">.</span>txt
+use <span style="color:#66d9ef">with</span> <span style="color:#f92672">and</span> overwrite</code></pre></div>
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-end">
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

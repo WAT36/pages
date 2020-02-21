@@ -146,6 +146,15 @@
     </item>
     
     <item>
+      <title>Filewrite</title>
+      <link>https://WAT36.github.io/pages/docs/programming/file_io/filewrite/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/file_io/filewrite/</guid>
+      <description>ファイル書き込み ファイルを書き込む方法についてを示す。 Java Javaでは Python Pythonでは関数openでファイルを開いた後、ファイルオブジェクト</description>
+    </item>
+    
+    <item>
       <title>for文</title>
       <link>https://WAT36.github.io/pages/docs/programming/control/for/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -385,7 +394,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/file_io/file_index/</guid>
-      <description>ファイル入出力 ファイル入出力の手法についてをまとめる。 ファイル読み込み</description>
+      <description>ファイル入出力 ファイル入出力の手法についてをまとめる。 ファイル読み込み ファイル書き込み</description>
     </item>
     
     <item>
