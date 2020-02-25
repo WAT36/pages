@@ -78,10 +78,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/file_io/filewrite/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/control/for/</loc>
     <lastmod>2020-01-17T22:14:37+09:00</lastmod>
   </url>
@@ -213,7 +209,12 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/file_io/file_index/</loc>
-    <lastmod>2020-02-19T22:30:06+09:00</lastmod>
+    <lastmod>2020-02-21T22:28:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/file_io/filewrite/</loc>
+    <lastmod>2020-02-21T22:28:07+09:00</lastmod>
   </url>
   
   <url>
@@ -723,7 +724,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-02-21T22:09:01+09:00</lastmod>
+    <lastmod>2020-02-21T22:28:07+09:00</lastmod>
   </url>
   
   <url>

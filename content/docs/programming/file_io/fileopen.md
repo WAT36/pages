@@ -27,9 +27,11 @@ Javaでファイルを読み込むには以下の2つの方法がある。
 
 FileInputStreamクラスはファイルからbyte単位で読み込みを行うストリームである。  
 ストリームとはデータの送受信を連続的に行うプログラムのことで、データを読み込む時のストリームは入力ストリームという。    
-このクラスは宣言時(コンストラクタ)にFile型のオブジェクトを入力する。Fileクラスは宣言時(コンストラクタ)にファイルのパス(相対パス)を文字列型で入力してできるオブジェクトである。これにより、このファイルからの入力ストリームが得られる。
+このクラスは宣言時(コンストラクタ)にString型でファイルのパスまたはFile型のオブジェクトを入力する。Fileクラスは宣言時(コンストラクタ)にファイルのパス(相対パス)を文字列型で入力してできるオブジェクトである。これにより、このファイルからの入力ストリームが得られる。
 
-`FileInputStream(File file) throws FileNotFoundException`
+`FileInputStream(String name) throws FileNotFoundException`  
+
+`FileInputStream(File file) throws FileNotFoundException`  
 
 作成した入力ストリームからバイトデータを読み込むメソッドとして、**read()**というメソッドがある。
 
@@ -106,10 +108,12 @@ $ java Main
 
 
 FileReaderクラスはファイルからchar単位で読み込みを行う入力ストリームである。  
-このクラスもFileInputStreamクラスと同様に、宣言時(コンストラクタ)にFile型のオブジェクトを入力する。これにより、このファイルからの入力ストリームが得られる。
+このクラスもFileInputStreamクラスと同様に、宣言時(コンストラクタ)にString型でファイルパスまたはFile型のオブジェクトを入力する。これにより、このファイルからの入力ストリームが得られる。
 
 
 `FileReader(File file) throws FileNotFoundException`
+
+`FileReader(String name) throws FileNotFoundException`
 
 
 作成した入力ストリームからバイトデータを読み込むメソッドとして、こちらも**read()**というメソッドがある。
