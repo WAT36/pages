@@ -1,0 +1,1451 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on WAT Notes</title>
+    <link>https://WAT36.github.io/pages/docs/</link>
+    <description>Recent content in Docs on WAT Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Sun, 03 Nov 2019 08:07:28 +0900</lastBuildDate>
+    
+	<atom:link href="https://WAT36.github.io/pages/docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>(Python)タプル</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/tuple/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/tuple/</guid>
+      <description>(Python)タプル Pythonで使うタプルについてを述べる。 Python タプルとはPythonで使われるデータ構造で、リストと同様に複数のデータを</description>
+    </item>
+    
+    <item>
+      <title>(Python)引数のデフォルト値</title>
+      <link>https://WAT36.github.io/pages/docs/programming/class_func/default_arg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/class_func/default_arg/</guid>
+      <description>(Python)引数のデフォルト値 関数の引数にデフォルト値を設定できる言語がある。 定義した引数に何も値が入力されなかった場合に、自動でデフォ</description>
+    </item>
+    
+    <item>
+      <title>(折れ線)グラフを描画する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/plot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/plot/</guid>
+      <description>(折れ線)グラフを描画する Python グラフを描くためにはmatplotlibのpyplotライブラリを利用する。 ここでは2次元の折れ線グラフを作成す</description>
+    </item>
+    
+    <item>
+      <title>16進数に変換して表示</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/hex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/hex/</guid>
+      <description>16進数に変換して表示 数値を16進数に変換して表示する方法についてを示す。 Java JavaではラッパークラスIntegerに数値を16進数に変換す</description>
+    </item>
+    
+    <item>
+      <title>2,8,16進数を10進数に変換して表示</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/dec/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/dec/</guid>
+      <description>2,8,16進数を10進数に変換して表示 2,8,16進数を10進数に変換する方法についてを示す。 Java Javaでは文字列を数値に変換する の所で述</description>
+    </item>
+    
+    <item>
+      <title>2変数関数のグラフ(ヒートマップ)を作成する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/pcolor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/pcolor/</guid>
+      <description>2変数関数のグラフ(ヒートマップ)を作成する Python 2変数関数のグラフとして、、ヒートマップで表示するにはpyplotの関数pcolorを利用する</description>
+    </item>
+    
+    <item>
+      <title>2変数関数のグラフ(等高線プロット)を作成する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/contour/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/contour/</guid>
+      <description>2変数関数のグラフ(等高線プロット)を作成する Python 2変数関数のグラフとして、等高線プロットで表示するにはpyplotの関数contourを利用</description>
+    </item>
+    
+    <item>
+      <title>2変数関数のグラフ(３D面グラフ)を作成する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/surface/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/surface/</guid>
+      <description>2変数関数のグラフ(３D面グラフ)を作成する Python 2変数関数のグラフとして、3D面グラフで表示するにはmpl_toolkits.mplot3dの</description>
+    </item>
+    
+    <item>
+      <title>2変数関数を定義する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/2varfunc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/2varfunc/</guid>
+      <description>2変数関数を定義する Python 2変数関数の定義は関数定義の時に引数を２つ設定すれば良い。 試しに、f(x,y) = √(x2 + y2)を定義する例を示す。 &amp;gt;&amp;gt;&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>8進数に変換して表示</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/oct/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/oct/</guid>
+      <description>8進数に変換して表示 数値を8進数に変換して表示する方法についてを示す。 Java JavaではラッパークラスIntegerに数値を8進数に変換するメソ</description>
+    </item>
+    
+    <item>
+      <title>AND演算</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/and/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/and/</guid>
+      <description>AND演算 ANDの論理演算をする方法についてを示す。 Java JavaではANDの論理演算子 &amp;amp;&amp;amp; を使用する。戻り値はboolean型。 (左辺) &amp;amp;&amp;amp; (右辺</description>
+    </item>
+    
+    <item>
+      <title>break文</title>
+      <link>https://WAT36.github.io/pages/docs/programming/control/break/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/control/break/</guid>
+      <description>break文 ループを抜け出す際に用いるbreak文についてを示す。 Java ループ処理のfor文、while文において、処理の途中にbreakがあっ</description>
+    </item>
+    
+    <item>
+      <title>Comment</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/comment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/comment/</guid>
+      <description>コメントアウト プログラミングでコメント（注釈）を付け加えたい時、或いはある箇所だけを実行(・コンパイル)の対象外としたい時にはコメントアウト</description>
+    </item>
+    
+    <item>
+      <title>continue文</title>
+      <link>https://WAT36.github.io/pages/docs/programming/control/continue/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/control/continue/</guid>
+      <description>continue文 continue文はfor文、while文のループ処理において、そのループ1回分の処理をそこで終了し、 条件式の判定（for</description>
+    </item>
+    
+    <item>
+      <title>Exception Index</title>
+      <link>https://WAT36.github.io/pages/docs/programming/exception/exception_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/exception/exception_index/</guid>
+      <description>例外処理 プログラミングをする上で誰もが経験するのはエラー（例外）だろう。 コンパイルエラーに関しては文法上の問題なので、ここでは主に実行時エラ</description>
+    </item>
+    
+    <item>
+      <title>for文</title>
+      <link>https://WAT36.github.io/pages/docs/programming/control/for/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/control/for/</guid>
+      <description>for文 繰り返し処理を行う制御構文の一つ、for文について各言語での利用法を示す。 Java Javaでの記法は以下の通り。 for(初期化式;条件式;</description>
+    </item>
+    
+    <item>
+      <title>if-else文</title>
+      <link>https://WAT36.github.io/pages/docs/programming/control/ifelse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/control/ifelse/</guid>
+      <description>if-else文 指定した条件に応じて処理を分岐させる時に使うのがif-else文である。 これはほぼ全てのプログラミング言語に実装されている。</description>
+    </item>
+    
+    <item>
+      <title>ndarray型のデータをファイルに保存する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/save/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/save/</guid>
+      <description>ndarray型のデータをファイルに保存する ndarray型変数をファイルに保存する方法についてを示す。 Python ndarray型変数をファイルに保</description>
+    </item>
+    
+    <item>
+      <title>OR演算</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/or/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/or/</guid>
+      <description>OR演算 ORの論理演算をする方法についてを示す。 Java JavaではORの論理演算子 || を使用する。戻り値はboolean型。 (左辺) || (右辺) ちな</description>
+    </item>
+    
+    <item>
+      <title>Other Index</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/other_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/other_index/</guid>
+      <description>その他 その他、括れてない手法などをまとめる。 変数 変数の型を調べる 関数、メソッドのヘルプを見る(Python) コメントアウト</description>
+    </item>
+    
+    <item>
+      <title>Pass</title>
+      <link>https://WAT36.github.io/pages/docs/programming/control/pass/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/control/pass/</guid>
+      <description>pass文 何も処理をしない文、pass文についてを示す。 構文としては何か記述が必要だが、特に処理をする必要がないという時に使う。 言語によりあ</description>
+    </item>
+    
+    <item>
+      <title>Rand</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/rand/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/rand/</guid>
+      <description>要素がランダムの行列 要素がランダムの行列を生成する方法を示す。 Python 要素がランダムな行列(2次元配列)を生成するにはnumpy.random.r</description>
+    </item>
+    
+    <item>
+      <title>Set型</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/set/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/set/</guid>
+      <description>Set型 Set型変数とはリストと似たデータ構造で、リストから要素の重複を除いたものを順不同で集めたデータ構造である。しかし、インデックスを指</description>
+    </item>
+    
+    <item>
+      <title>switch文</title>
+      <link>https://WAT36.github.io/pages/docs/programming/control/switch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/control/switch/</guid>
+      <description>switch文 switch文は一つの式の結果から多くの処理に分岐させたいときに用いる。 ここではそのswitch文についてを示す。 Java Javaで</description>
+    </item>
+    
+    <item>
+      <title>Type</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/type/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/type/</guid>
+      <description>変数の型を調べる 変数の型を調べる方法についてを示す。 Java javaにはinstanceofという演算子がある。 変数 instanceof クラス名 変数に入っているデー</description>
+    </item>
+    
+    <item>
+      <title>while文</title>
+      <link>https://WAT36.github.io/pages/docs/programming/control/while/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/control/while/</guid>
+      <description>while文 繰り返し処理を行う制御構文の一つ、while文について各言語での利用法を示す。 Java Javaでの記法は以下の通り。 while(条件式</description>
+    </item>
+    
+    <item>
+      <title>x,y軸の表示範囲を指定する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/lim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/lim/</guid>
+      <description>x,y軸の表示範囲を指定する Python グラフの軸の表示範囲は入力した座標の最大値、最小値に基づいて決定されるが、 こちらでx,y軸の表示範囲を指定した</description>
+    </item>
+    
+    <item>
+      <title>ガウス関数</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/gauss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/gauss/</guid>
+      <description>ガウス関数 Python ガウス関数は以下の式で表される関数である。 a exp ( - (x - &amp;mu; ) 2 &amp;sigma; 2 ) ここで、式中の変数は以下の意味を持つ。 μ：中心(平均) σ：標準</description>
+    </item>
+    
+    <item>
+      <title>クラスの定義</title>
+      <link>https://WAT36.github.io/pages/docs/programming/class_func/class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/class_func/class/</guid>
+      <description>クラスの定義 クラスを定義する方法についてを示す。 Java Javaでのクラス定義方法は以下の通り。 [public] class クラス名 [extends 継承元クラス名] [implements 実装先インタフェー</description>
+    </item>
+    
+    <item>
+      <title>クラス・関数(メソッド)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/class_func/classfunc_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/class_func/classfunc_index/</guid>
+      <description>クラス・関数(メソッド) クラス及び関数（メソッド）の定義についてを示す。 これも言語によって違う名前で呼ばれているものもあるので注意。 クラス ク</description>
+    </item>
+    
+    <item>
+      <title>グラフ</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</guid>
+      <description>グラフ データサイエンスでは必須？ グラフ描画についてをまとめる。 ここも都合上、現在はPythonのみ記載。 グラフ描画ではmatplotlibの</description>
+    </item>
+    
+    <item>
+      <title>グラフにグリッド線を表示させる</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/grid/</guid>
+      <description>グラフにグリッド線を表示させる Python グラフにグリッド線(方眼)を表示するにはpyplotの関数grid()を利用する。引数にはTrueを入れる。</description>
+    </item>
+    
+    <item>
+      <title>グラフに色をつける</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/color/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/color/</guid>
+      <description>グラフに色をつける Python グラフに色をつけて表示させるには、グラフを表示するときに使ったpyplotの関数plotの引数にcolorというパラメー</description>
+    </item>
+    
+    <item>
+      <title>グラフのタイトルを設定する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/title/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/title/</guid>
+      <description>グラフのタイトルを設定する Python グラフのタイトルを設定、表示するにはpyplotの関数title()を利用する。 例として、前述のグラフに色をつけ</description>
+    </item>
+    
+    <item>
+      <title>グラフの凡例を表示する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/legend/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/legend/</guid>
+      <description>グラフの凡例を表示する Python グラフに凡例を表示させるには、まずグラフを表示するときに使ったpyplotの関数plotの引数にlabelというパラ</description>
+    </item>
+    
+    <item>
+      <title>グラフを複数表示させる</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/subplot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/subplot/</guid>
+      <description>グラフを複数表示させる Python グラフを複数表示するにはpyplotの関数subplotを使う。 subplot(nrows, ncols, index) subplotを使うと縦nrows×横ncol</description>
+    </item>
+    
+    <item>
+      <title>コンストラクタ(  init  )</title>
+      <link>https://WAT36.github.io/pages/docs/programming/class_func/constructor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/class_func/constructor/</guid>
+      <description>コンストラクタ(__init__) クラスのコンストラクタについてを書く。 コンストラクタとはクラスのインスタンスを作成した時に、そのインスタン</description>
+    </item>
+    
+    <item>
+      <title>シグモイド関数</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/sigmoid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/sigmoid/</guid>
+      <description>シグモイド関数 機械学習でよく用いられるシグモイド関数についてを述べる。 シグモイド関数とは以下の式で定義される関数である。 Python シグモイド関数をプ</description>
+    </item>
+    
+    <item>
+      <title>シグモイド関数とソフトマックス関数</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/softmax_sigmoid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/softmax_sigmoid/</guid>
+      <description>シグモイド関数とソフトマックス関数 シグモイド関数とソフトマックス関数は類似しているところがある。 2変数(x0、x1)の時のソフトマックス関数</description>
+    </item>
+    
+    <item>
+      <title>スカラー*行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/scalar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/scalar/</guid>
+      <description>スカラー*行列 スカラーと行列を書ける方法についてを示す。 Python スカラーと行列をかけたいときは、普通にスカラーとnumpy.ndarray型の変数</description>
+    </item>
+    
+    <item>
+      <title>ソフトマックス関数</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/softmax/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/softmax/</guid>
+      <description>ソフトマックス関数 Python 複数の数x1,x2,&amp;hellip;xiがあり、それらの数の大小関係を保ったままそれぞれを確率を表す数y1,y2,&amp;he</description>
+    </item>
+    
+    <item>
+      <title>ファイル入出力</title>
+      <link>https://WAT36.github.io/pages/docs/programming/file_io/file_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/file_io/file_index/</guid>
+      <description>ファイル入出力 ファイル入出力の手法についてをまとめる。 ファイル読み込み ファイル書き込み</description>
+    </item>
+    
+    <item>
+      <title>ファイル書き込み</title>
+      <link>https://WAT36.github.io/pages/docs/programming/file_io/filewrite/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/file_io/filewrite/</guid>
+      <description>ファイル書き込み ファイルを書き込む方法についてを示す。 Java 読み込み時と同様に、ここではテキストファイルなど一般的なファイルに対する読み込み方法</description>
+    </item>
+    
+    <item>
+      <title>ファイル読み込み</title>
+      <link>https://WAT36.github.io/pages/docs/programming/file_io/fileopen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/file_io/fileopen/</guid>
+      <description>ファイル読み込み ファイルを読み込む方法についてを示す。 Java Javaではプロパティファイル(.propertiesで終わるファイル)に関しては専</description>
+    </item>
+    
+    <item>
+      <title>フィールド(クラス変数・インスタンス変数)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/class_func/field/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/class_func/field/</guid>
+      <description>フィールド(クラス変数・インスタンス変数) フィールド変数とはクラス内に定義する変数のこと。 その中でも主に、クラス内で定義して全てのインスタン</description>
+    </item>
+    
+    <item>
+      <title>ベクトル</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/vector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/vector/</guid>
+      <description>ベクトル ベクトルの定義についてを示す。 Python ベクトル(1次元配列)は、numpyライブラリにある関数array(list)を使って定義する。 同じ</description>
+    </item>
+    
+    <item>
+      <title>ベクトルの大きさ(ノルム)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/norm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/norm/</guid>
+      <description>ベクトルの大きさ(ノルム) Python ベクトルの大きさ(ノルム)を算出したいときは、numpy.linalgモジュールにある関数normを使用する。 n</description>
+    </item>
+    
+    <item>
+      <title>ラムダ式（無名関数）</title>
+      <link>https://WAT36.github.io/pages/docs/programming/class_func/lambda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/class_func/lambda/</guid>
+      <description>ラムダ式（無名関数） ラムダ式（無名関数）についてを述べる。 Java Javaでは簡易的なメソッドを実装する方法としてラムダ式というのがある。 ( 実装す</description>
+    </item>
+    
+    <item>
+      <title>リストa,bに共通して入っている要素のみを表示（積集合）</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/list_and/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/list_and/</guid>
+      <description>リストa,bに共通して入っている要素のみを表示（積集合） 2つのリストに共通して入っている要素のみを表示する方法についてを示す。 Java Javaでは</description>
+    </item>
+    
+    <item>
+      <title>リストaにありリストbに入ってない要素のみを表示（差集合）</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/list_except/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/list_except/</guid>
+      <description>リストaにありリストbに入ってない要素のみを表示（差集合） リストaにありリストbに入ってない要素のみを表示する方法についてを示す。 なお、リス</description>
+    </item>
+    
+    <item>
+      <title>リストaまたはbに入っている要素を表示（和集合）</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/list_or/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/list_or/</guid>
+      <description>リストaまたはbに入っている要素を表示（和集合） 2つのリストの少なくとも一つに入っている要素のみを表示する方法についてを示す。 なお、リスト内</description>
+    </item>
+    
+    <item>
+      <title>リストから条件に合う要素のみを取得した新しいリストを作成する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/inclusion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/inclusion/</guid>
+      <description>リストから条件に合う要素のみを取得した新しいリストを作成する リストから条件に合う要素のみを取得した新しいリストを作成する方法を示す。 Java Jav</description>
+    </item>
+    
+    <item>
+      <title>リストが空であるか判別する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/isempty/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/isempty/</guid>
+      <description>リストが空であるか判別する リストが空（＝要素が何も入っていない状態）であるか判別する方法についてを示す。 Java JavaではListクラスにリスト</description>
+    </item>
+    
+    <item>
+      <title>リストに要素を加える</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/append/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/append/</guid>
+      <description>リストに要素を加える リストに要素を加える方法についてを示す。 Java JavaではListクラスにadd()というメソッドがあり、引数の要素をリスト</description>
+    </item>
+    
+    <item>
+      <title>リストのソート</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/sort/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/sort/</guid>
+      <description>リストのソート リスト内の要素をソートする方法についてを示す。 Java Javaではリストに関するメソッドがあるライブラリjava.util.Coll</description>
+    </item>
+    
+    <item>
+      <title>リストの全要素の合計値</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/sum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/sum/</guid>
+      <description>リストの全要素の合計値 リスト中の全要素を合計した値を取得する方法についてを示す。 またここで扱うリスト内の要素は全て数値であることを前提とする</description>
+    </item>
+    
+    <item>
+      <title>リストの全要素を連結して１つの文字列に変換する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/join/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/join/</guid>
+      <description>リストの全要素を連結して１つの文字列に変換する リストの全要素を連結して1つの文字列にする方法についてを示す。 なお、前提としてここでいうリスト</description>
+    </item>
+    
+    <item>
+      <title>リストの定義</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/list_overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/list_overview/</guid>
+      <description>リストの定義 リストについて。 Java Javaのリストは配列とは全く別のデータ型として定義されてあり、その定義はjava.util.Listクラスに</description>
+    </item>
+    
+    <item>
+      <title>リストの宣言</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/list/</guid>
+      <description>リストの宣言 リストを使用する方法を示す。 Java JavaでのリストはListクラスをインポートして利用する。 しかし、Listクラスはインターフェー</description>
+    </item>
+    
+    <item>
+      <title>リストの指定したインデックスの要素を削除する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/pop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/pop/</guid>
+      <description>リストの指定したインデックスの要素を削除する リストの指定した位置の要素を削除する方法についてを示す。 Java JavaではListクラスにリストの指</description>
+    </item>
+    
+    <item>
+      <title>リストの指定した位置に要素追加</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/insert/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/insert/</guid>
+      <description>リストの指定した位置に要素追加 リストの指定した位置に要素を追加する方法についてを示す。 Java JavaではListクラスにadd()というメソッド</description>
+    </item>
+    
+    <item>
+      <title>リストの指定した要素を削除する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/remove/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/remove/</guid>
+      <description>リストの指定した要素を削除する リストの指定した要素を削除する方法についてを示す。 Java JavaではListクラスにリストの指定した要素を削除する</description>
+    </item>
+    
+    <item>
+      <title>リストの長さ</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/len/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/len/</guid>
+      <description>リストの長さ リストの長さ（＝リストに入っているデータの個数）を取得する方法を示す。 Java JavaではListクラスにsize()というメソッドが</description>
+    </item>
+    
+    <item>
+      <title>リストを空にする</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/clear/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/clear/</guid>
+      <description>リストを空にする リストから全ての要素を削除する方法についてを述べる。 Java JavaではListクラスにあるメソッドclear() を利用する。 void clear()</description>
+    </item>
+    
+    <item>
+      <title>リストを逆順にする</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/reverse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/reverse/</guid>
+      <description>リストを逆順にする リスト内の要素を逆順にする方法についてを示す。 Java Javaではライブラリjava.util.Collectionsに、リスト</description>
+    </item>
+    
+    <item>
+      <title>リストを逆順にソート</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/reverse_sort/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/reverse_sort/</guid>
+      <description>リストを逆順にソート リスト内の要素を逆順にソートする方法についてを示す。 Java Javaではリストを逆順にソートするメソッドは無いため、前述のリス</description>
+    </item>
+    
+    <item>
+      <title>リスト内の指定した２要素を入れ替える</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/swap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/swap/</guid>
+      <description>リスト内の指定した２要素を入れ替える リストの指定した２つの位置の要素を入れ替える方法についてを示す。 Java JavaはListの親クラスであるCo</description>
+    </item>
+    
+    <item>
+      <title>リスト内の要素の最大値を取得する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/max/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/max/</guid>
+      <description>リスト内の要素の最大値を取得する リスト内の要素のうち一番大きい値を取得する方法についてを示す。 Java Javaではリストに関するメソッドがあるライ</description>
+    </item>
+    
+    <item>
+      <title>リスト内の要素の最小値を取得する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/min/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/min/</guid>
+      <description>リスト内の要素の最小値を取得する リスト内の要素のうち一番小さい値を取得する方法についてを示す。 Java Javaではリストに関するメソッドがあるライ</description>
+    </item>
+    
+    <item>
+      <title>リスト内包表記</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/comprehension/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/comprehension/</guid>
+      <description>リスト内包表記 リスト内包表記についてを示す。 Python リスト内包とは大かっこ [ ] の中に式とfor文（・if文）を書くことにより、その式によって評価さ</description>
+    </item>
+    
+    <item>
+      <title>一変数関数f(x)をグラフに描画する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/func_plot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/func_plot/</guid>
+      <description>一変数関数f(x)をグラフに描画する 定義した一変数関数f(x)をグラフに描画する方法を示す。 Python 一変数関数f(x)を描画するには、まず自分で一</description>
+    </item>
+    
+    <item>
+      <title>三項演算子</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/ternary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/ternary/</guid>
+      <description>三項演算子 条件分岐を行う三項演算子についてを示す。 Java Javaでは三項演算子 &amp;ldquo;?&amp;rdquo; が実装されている。 例えば a ? b : c としたとき、aがtrueならb</description>
+    </item>
+    
+    <item>
+      <title>任意の底の対数</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/log/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/log/</guid>
+      <description>任意の底の対数 任意の底の対数を算出する方法についてを示す。 しかし、任意の底の対数を算出するライブラリは無いことが多い。 そのため、以下の公式を</description>
+    </item>
+    
+    <item>
+      <title>例外処理(try文)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/exception/try/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/exception/try/</guid>
+      <description>例外処理(try文) 実行時エラー(例外)のハンドリングを行うtry文についてを示す。 言語により微妙に呼び名が違うところがあるので注意。 Java Ja</description>
+    </item>
+    
+    <item>
+      <title>円周率(π)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/pi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/pi/</guid>
+      <description>円周率(π) 重要な定数は大体ライブラリ（モジュール）内で定義されていることが多い。 ここでは円周率(π)を参照する方法についてを示す。 Java Jav</description>
+    </item>
+    
+    <item>
+      <title>制御構文</title>
+      <link>https://WAT36.github.io/pages/docs/programming/control/control_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/control/control_index/</guid>
+      <description>制御構文 プログラミングをする上で必ずと言っていいほど出るのがこの制御構文。 条件分岐やループなど、処理の流れを制御する文の記法などをここでは示</description>
+    </item>
+    
+    <item>
+      <title>単位行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/identity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/identity/</guid>
+      <description>単位行列 単位行列を生成する方法を述べる。 Python 単位行列を算出したいときは、numpyモジュールにある関数identityを使用する。 numpy.identity(n) 上記の式に</description>
+    </item>
+    
+    <item>
+      <title>変数の値を1増やす・減らす（インクリメント・デクリメント）</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/increment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/increment/</guid>
+      <description>変数の値を1増やす・減らす（インクリメント・デクリメント） Java Javaではインクリメント・デクリメントの演算子（ ++、&amp;ndash; ）がそれぞ</description>
+    </item>
+    
+    <item>
+      <title>多次元リスト(配列)である列をキーにしてソートする</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/multisortlist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/multisortlist/</guid>
+      <description>多次元リスト(配列)である列をキーにしてソートする リストの中に更にリストが入っているようなリストをソートした時どうなるか？ 各要素(リスト)の</description>
+    </item>
+    
+    <item>
+      <title>小数点以下切り上げ</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/ceil/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/ceil/</guid>
+      <description>小数点以下切り上げ 小数点以下切り上げする方法についてを示す。 Java JavaではMathクラスにあるメソッドceil()を利用することで小数点以下</description>
+    </item>
+    
+    <item>
+      <title>小数点以下切り捨て</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/floor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/floor/</guid>
+      <description>小数点以下切り捨て 小数点以下切り捨てする方法についてを示す。 Java JavaではMathクラスにあるメソッドfloor()を利用することで小数点以</description>
+    </item>
+    
+    <item>
+      <title>常用対数(底10)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/log10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/log10/</guid>
+      <description>常用対数(底10) 常用対数を算出する方法についてを示す。 Java Javaではjava.lang.Mathクラス内にあるlog10()メソッドがこの</description>
+    </item>
+    
+    <item>
+      <title>平方根</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/root/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/root/</guid>
+      <description>平方根 平方根（ルート）を計算する方法についてを示す。 方法は大まかに分けると ライブラリにある専用の関数/メソッドを用いる 累乗で求める（n乗根な</description>
+    </item>
+    
+    <item>
+      <title>指定した要素がリスト内にあるか調べる</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/list_in/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/list_in/</guid>
+      <description>指定した要素がリスト内にあるか調べる ある要素がリスト内に存在するかを調べる方法についてを示す。 Java JavaではListクラスにcontains</description>
+    </item>
+    
+    <item>
+      <title>指定した要素がリスト内にいくつあるか調べる</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/count/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/count/</guid>
+      <description>指定した要素がリスト内にいくつあるか調べる 指定した要素がリスト内にいくつあるか調べる方法についてを示す。 Java Javaでは具体的なメソッドが(調</description>
+    </item>
+    
+    <item>
+      <title>指定した要素のリスト内でのインデックスを調べる</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/indexof/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/indexof/</guid>
+      <description>指定した要素のリスト内でのインデックスを調べる 指定した要素がリスト内でどの位置にいるかを調べる方法を示す。 Java JavaではListクラスにある</description>
+    </item>
+    
+    <item>
+      <title>排他的論理和(XOR)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/xor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/xor/</guid>
+      <description>排他的論理和(XOR) XORのビット演算をする方法についてを示す。 Java JavaではXORのビット演算子 ^ を使用する。数値型リテラルでも、boo</description>
+    </item>
+    
+    <item>
+      <title>数値の絶対値を算出する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/abs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/abs/</guid>
+      <description>数値の絶対値を算出する 数値の絶対値を算出する方法についてを示す。 Java Javaではjava.lang.Mathクラス内にあるabs()メソッドが</description>
+    </item>
+    
+    <item>
+      <title>数値の頭をゼロ詰して表示する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/zfill/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/zfill/</guid>
+      <description>数値の頭をゼロ詰して表示する 数値の頭をゼロ詰して表示する方法についてを示す。 Java JavaではStringクラスにあるformat() メソッドで</description>
+    </item>
+    
+    <item>
+      <title>数値をランダムに取得する(乱数)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/random/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/random/</guid>
+      <description>数値をランダムに取得する(乱数) なんでもいいから適当に数値を取ってきたい場合どうするか？その時は乱数というのを使う。ここではその方法について</description>
+    </item>
+    
+    <item>
+      <title>数値を文字列に変換する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/str/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/str/</guid>
+      <description>数値を文字列に変換する 文字列を数値にする方法があったように、逆の数値を文字列に変換する方法も存在する。 ここではその方法を示す。 Java Javaでは</description>
+    </item>
+    
+    <item>
+      <title>数値（整数）の桁数を調べる</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/digits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/digits/</guid>
+      <description>数値（整数）の桁数を調べる 整数の桁数を調べる方法については、 数値を文字列に変換してその文字列の長さを取得すればよい。 Java Javaでは数値を文字</description>
+    </item>
+    
+    <item>
+      <title>数学系</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/math_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/math_index/</guid>
+      <description>数学系 数学に関する手法などをまとめる。 都合上、現在はPythonのみ記載。 線形代数ではnumpyというライブラリを利用する。 線形代数 ベクトル</description>
+    </item>
+    
+    <item>
+      <title>文字列の長さ（文字数）を調べる</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/length/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/length/</guid>
+      <description>文字列の長さ（文字数）を調べる 文字列の長さ（＝文字列が何文字であるか）を取得する方法を示す。 Java JavaではStringクラスにlength(</description>
+    </item>
+    
+    <item>
+      <title>文字列を１文字ずつのリストにする</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/string_list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/string_list/</guid>
+      <description>文字列を１文字ずつのリストにする 文字列を1文字ずつのリストに変換する方法についてを示す。 Java Javaでは以下２つの手順を踏んで行う。 文字列を分</description>
+    </item>
+    
+    <item>
+      <title>文字列中にある文字列が含まれているときにその位置を確認する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/find/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/find/</guid>
+      <description>文字列中にある文字列が含まれているときにその位置を確認する 文字列中に特定の文字列が含まれていた時、その位置を確認したい場合どうするか？ ここで</description>
+    </item>
+    
+    <item>
+      <title>自然対数(底e)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/loge/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/loge/</guid>
+      <description>自然対数(底e) 自然対数を算出する方法についてを示す。 Java Javaではjava.lang.Mathクラス内にあるlog()メソッドがこの役割を</description>
+    </item>
+    
+    <item>
+      <title>行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/matrix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/matrix/</guid>
+      <description>行列 行列の定義についてを示す。 Python 行列(2次元配列)もベクトルと同様、numpyライブラリにある関数array(list)を使って定義する。引</description>
+    </item>
+    
+    <item>
+      <title>行列のサイズを変更する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/reshape/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/reshape/</guid>
+      <description>行列のサイズを変更する 行列のサイズを変更する方法についてを示す。 Python 行列のサイズを変更したい場合は変数名.reshape(n,m)を使う。 変更</description>
+    </item>
+    
+    <item>
+      <title>行列の型(サイズ)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/matrix_size/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/matrix_size/</guid>
+      <description>行列の型(サイズ) 行列の型(サイズ)を調べる方法についてを示す。 Python 行列(2次元配列)のサイズはnumpy.ndarray型の変数.shape</description>
+    </item>
+    
+    <item>
+      <title>行列積(ベクトルの内積)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/dot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/dot/</guid>
+      <description>行列積(ベクトルの内積) 行列積、ベクトルでいう内積を算出する方法についてを示す。 Python 行列積を算出したいときは、numpy変数の関数dotを使用</description>
+    </item>
+    
+    <item>
+      <title>複数の数字のうち最も大きい数字をとる</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/max/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/max/</guid>
+      <description>複数の数字のうち最も大きい数字をとる 複数の数値から一番大きい数値を取り出したい時の方法を示す。 Java Javaではjava.lang.Mathクラ</description>
+    </item>
+    
+    <item>
+      <title>複数の数字のうち最も小さい数字をとる</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/min/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/min/</guid>
+      <description>複数の数字のうち最も小さい数字をとる 複数の数値から一番小さい数値を取り出したい時の方法を示す。 Java Javaではjava.lang.Mathクラ</description>
+    </item>
+    
+    <item>
+      <title>要素が全て１の行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/ones/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/ones/</guid>
+      <description>要素が全て１の行列 要素が全て１の行列を生成する方法についてを示す。 Python numpyの関数onesを使うと、要素が全て１の行列を生成できる。 零行列</description>
+    </item>
+    
+    <item>
+      <title>要素が等間隔になるベクトル</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/arange/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/arange/</guid>
+      <description>要素が等間隔になるベクトル 指定した範囲内で、全ての要素の感覚が等しくなるようなベクトルを生成する方法についてを示す。 Python 主に方法は二つある。 numpy.arange()</description>
+    </item>
+    
+    <item>
+      <title>論理和(OR)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/or_bit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/or_bit/</guid>
+      <description>論理和(OR) ORのビット演算をする方法についてを示す。 Java JavaではORのビット演算子 | を使用する。論理演算の時とは違い、こちらは|1個な</description>
+    </item>
+    
+    <item>
+      <title>論理積(AND)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/and_bit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/and_bit/</guid>
+      <description>論理積(AND) ANDのビット演算をする方法についてを示す。 Java JavaではANDのビット演算子 &amp;amp; を使用する。論理演算の時とは違い、こちらは&amp;</description>
+    </item>
+    
+    <item>
+      <title>転置行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/transpose/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/transpose/</guid>
+      <description>転置行列 転置行列を算出する方法についてを示す。 Python 転置行列を算出したい時は、(ndarray型の変数).Tで行う。 &amp;gt;&amp;gt;&amp;gt; import numpy as np &amp;gt;&amp;gt;&amp;gt; &amp;gt;&amp;gt;&amp;gt; a = np.array([[1, 2]]) &amp;gt;&amp;gt;&amp;gt; &amp;gt;&amp;gt;&amp;gt; print(a)</description>
+    </item>
+    
+    <item>
+      <title>軸にラベルを設定する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/label/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/label/</guid>
+      <description>軸にラベルを設定する Python グラフの軸にラベルを設定、表示するにはpyplotの関数xlabel(&amp;lsquo;ラベル名&amp;rsquo;)、ylab</description>
+    </item>
+    
+    <item>
+      <title>辞書(Map)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/map/map/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/map/map/</guid>
+      <description>辞書(Map) 辞書(Map)とは何か？ 辞書(Map)とは &amp;ldquo;キー&amp;rdquo; と &amp;ldquo;値&amp;rdquo; の２つの要素からなる</description>
+    </item>
+    
+    <item>
+      <title>辞書(Map)からキーのリストを取得</title>
+      <link>https://WAT36.github.io/pages/docs/programming/map/keylist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/map/keylist/</guid>
+      <description>辞書(Map)からキーのリストを取得 辞書(Map)からキーのリストを取得する方法についてを示す。 Java JavaではMapクラスにkeySet()</description>
+    </item>
+    
+    <item>
+      <title>辞書(Map)からキーを指定して値を取得</title>
+      <link>https://WAT36.github.io/pages/docs/programming/map/get/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/map/get/</guid>
+      <description>辞書(Map)からキーを指定して値を取得 辞書(Map)からキーを指定して値を取得する方法についてを示す。 Java JavaではMapクラスにget(</description>
+    </item>
+    
+    <item>
+      <title>辞書(Map)から値のリストを取得</title>
+      <link>https://WAT36.github.io/pages/docs/programming/map/valuelist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/map/valuelist/</guid>
+      <description>辞書(Map)から値のリストを取得 辞書(Map)から値のリストを取得を取得する方法についてを示す。 Java JavaではMapクラスにvalues(</description>
+    </item>
+    
+    <item>
+      <title>辞書(Map)から最大のキーを取得</title>
+      <link>https://WAT36.github.io/pages/docs/programming/map/maxkey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/map/maxkey/</guid>
+      <description>辞書(Map)から最大のキーを取得 辞書(Map)から最大のキーを取得する方法についてを示す。 Java JavaでMapにあるキーの最大値を取得するに</description>
+    </item>
+    
+    <item>
+      <title>辞書(Map)から最大の値を取得</title>
+      <link>https://WAT36.github.io/pages/docs/programming/map/maxval/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/map/maxval/</guid>
+      <description>辞書(Map)から最大の値を取得 辞書(Map)から最大の値を取得する方法についてを示す。 Java JavaでMapにある値の最大値を取得するには以下</description>
+    </item>
+    
+    <item>
+      <title>辞書(Map)から最小のキーを取得</title>
+      <link>https://WAT36.github.io/pages/docs/programming/map/minkey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/map/minkey/</guid>
+      <description>辞書(Map)から最小のキーを取得 辞書(Map)から最小のキーを取得する方法についてを示す。 Java JavaでMapにあるキーの最小値を取得するに</description>
+    </item>
+    
+    <item>
+      <title>辞書(Map)から最小の値を取得</title>
+      <link>https://WAT36.github.io/pages/docs/programming/map/minval/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/map/minval/</guid>
+      <description>辞書(Map)から最小の値を取得 辞書(Map)から最小の値を取得する方法についてを示す。 Java JavaでMapにある値の最小値を取得するには、最</description>
+    </item>
+    
+    <item>
+      <title>辞書(Map)から要素削除</title>
+      <link>https://WAT36.github.io/pages/docs/programming/map/pop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/map/pop/</guid>
+      <description>辞書(Map)から要素削除 辞書(Map)から要素を削除する方法についてを示す。 Java JavaではMapクラスにremove()というメソッドがあ</description>
+    </item>
+    
+    <item>
+      <title>辞書(Map)に要素を追加する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/map/put/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/map/put/</guid>
+      <description>辞書(Map)に要素を追加する 辞書(Map)に要素(キー・値)を追加する方法についてを示す。 Java JavaではMapクラスにput()というメソ</description>
+    </item>
+    
+    <item>
+      <title>辞書(Map)のループ</title>
+      <link>https://WAT36.github.io/pages/docs/programming/map/dict_loop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/map/dict_loop/</guid>
+      <description>辞書(Map)のループ 辞書(Map)のループを行う方法についてを示す。 Java JavaでMapにループを掛けるには、Mapのメソッドであるentr</description>
+    </item>
+    
+    <item>
+      <title>辞書、Map</title>
+      <link>https://WAT36.github.io/pages/docs/programming/map/map_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/map/map_index/</guid>
+      <description>辞書、Map 辞書、Mapについての記事。 多くの言語でこれに似たようなデータ構造がある（と予想している）が、言語により名前が違うので注意。 Ja</description>
+    </item>
+    
+    <item>
+      <title>逆行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/inv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/inv/</guid>
+      <description>逆行列 逆行列を算出する方法についてを述べる。 Python 逆行列を算出したいときは、numpy.linalgモジュールにある関数invを使用する。 numpy.linalg.inv(A) 上記</description>
+    </item>
+    
+    <item>
+      <title>関数(メソッド)の定義</title>
+      <link>https://WAT36.github.io/pages/docs/programming/class_func/func/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/class_func/func/</guid>
+      <description>関数(メソッド)の定義 関数・メソッドを定義する方法についてを示す。 Java Javaではメソッドと言う名で呼ばれる。定義するための記法は以下の通り。</description>
+    </item>
+    
+    <item>
+      <title>関数、メソッドのヘルプを見る</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/help/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/help/</guid>
+      <description>関数、メソッドのヘルプを見る 関数やメソッドの使い方がわからないとき、ヘルプを見る方法がある。それについてを述べる。 ただし、対話型などこちらが</description>
+    </item>
+    
+    <item>
+      <title>階乗</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/factorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/factorial/</guid>
+      <description>階乗 階乗計算についてを示す。 基本、階乗計算はn * n-1 * n-2 * &amp;hellip; * 1を地道にやっていく計算量O(n)の計算を行うので、時間がかかりやすいという特徴</description>
+    </item>
+    
+    <item>
+      <title>零行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/zero/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/zero/</guid>
+      <description>零行列 零行列を生成する方法についてを示す。 Python 零行列はnumpyの関数zerosで生成できる。 引数に１つの整数を渡した場合は1次元(ベクトル)</description>
+    </item>
+    
+    <item>
+      <title>２進数に変換して表示</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/bin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/bin/</guid>
+      <description>2進数に変換して表示 数値を2進数に変換して表示する方法についてを示す。 Java JavaではラッパークラスIntegerに数値を2進数に変換するメソ</description>
+    </item>
+    
+    <item>
+      <title>Creating a New Theme</title>
+      <link>https://WAT36.github.io/pages/docs/sample/creating-a-new-theme/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/creating-a-new-theme/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>https://WAT36.github.io/pages/docs/sample/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/migrate-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>数値</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/number_index/</link>
+      <pubDate>Sun, 03 Nov 2019 08:07:28 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/number_index/</guid>
+      <description>数値 数値についての記事。 数値の演算 対数 常用対数(底10) 自然対数(底e) 任意の底の対数 小数点以下切り捨て 小数点以下切り上げ 小数点以下四捨五入</description>
+    </item>
+    
+    <item>
+      <title>文字列中にある文字列が含まれているかを確認する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/contain/</link>
+      <pubDate>Tue, 29 Oct 2019 23:27:48 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/contain/</guid>
+      <description>文字列中にある文字列が含まれているかを確認する 文字列中に特定の文字列を含んでいるかを確認したい場合どうするか？ ここではその方法についてを示す</description>
+    </item>
+    
+    <item>
+      <title>文字列をある文字で分割する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/split/</link>
+      <pubDate>Tue, 29 Oct 2019 23:19:29 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/split/</guid>
+      <description>文字列をある文字で分割する 文字列に対して、ある文字を境に複数に分割したいという場面もあるだろう。 ここではその方法についてを示す。 Java Javaで</description>
+    </item>
+    
+    <item>
+      <title>1文字からその文字の文字コード（アスキーコード）を取得する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/ascii/</link>
+      <pubDate>Thu, 24 Oct 2019 20:43:32 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/ascii/</guid>
+      <description>1文字からその文字の文字コード（アスキーコード）を取得する コンピュータは二進数しか扱えないため、文字データも二進数（つまり整数）として扱われ</description>
+    </item>
+    
+    <item>
+      <title>文字列を宣言する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/string/</link>
+      <pubDate>Thu, 17 Oct 2019 22:05:28 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/string/</guid>
+      <description>文字列を宣言する 文字列のデータ（文字列リテラル）を宣言するにはどうすればよいか？ Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ char c</description>
+    </item>
+    
+    <item>
+      <title>文字列を数値に変換する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/parseInt/</link>
+      <pubDate>Tue, 15 Oct 2019 22:02:08 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/parseInt/</guid>
+      <description>文字列を数値に変換する 数字の文字列を数値に変換する方法を述べる。 ちなみに、逆の数値を文字列にする方法もある。 Java クラスはここではMain.ja</description>
+    </item>
+    
+    <item>
+      <title>文字列に別の文字列を追加する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/append/</link>
+      <pubDate>Mon, 14 Oct 2019 23:58:19 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/append/</guid>
+      <description>文字列に別の文字列を追加する 文字列の末尾に別の文字列を繋げる方法についてまとめる。 Java javaの場合は使用しているクラスにより方法が異なる。 S</description>
+    </item>
+    
+    <item>
+      <title>文字列を別の文字列に置換する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/replace/</link>
+      <pubDate>Mon, 14 Oct 2019 23:46:41 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/replace/</guid>
+      <description>文字列を別の文字列に置換する 文字列を別の文字列に置換する方法。 その文字列全ての他、文字列の一部分または文字列中の条件に合う文字列に対する置換</description>
+    </item>
+    
+    <item>
+      <title>英字文字列を全て英字小文字にする</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/lower/</link>
+      <pubDate>Mon, 14 Oct 2019 23:40:21 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/lower/</guid>
+      <description>英字文字列を全て英字小文字にする 英字の文字列を全て小文字にする方法について。 小文字の場合も、大文字同様にほとんどの言語で関数やメソッドが用意</description>
+    </item>
+    
+    <item>
+      <title>英字文字列を全て英字大文字にする</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/upper/</link>
+      <pubDate>Mon, 14 Oct 2019 23:32:45 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/upper/</guid>
+      <description>英字文字列を全て英字大文字にする 英字の文字列を全て大文字にする方法について。 ほとんどの言語では、だいたいこの手の関数やメソッドが用意されてい</description>
+    </item>
+    
+    <item>
+      <title>文字列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/string/string_index/</link>
+      <pubDate>Mon, 14 Oct 2019 23:26:28 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/string/string_index/</guid>
+      <description>文字列 文字列についての記事。 文字列の宣言 文字列を宣言する 文字列の変換・置換 英字文字列を全て英字大文字にする 英字文字列を全て英字小文字にする 文</description>
+    </item>
+    
+    <item>
+      <title>標準エラー出力</title>
+      <link>https://WAT36.github.io/pages/docs/programming/stdio/stderr/</link>
+      <pubDate>Sat, 12 Oct 2019 17:25:47 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/stdio/stderr/</guid>
+      <description>標準エラー出力 標準エラー出力について。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ //出力後、改行したい時 System.err.</description>
+    </item>
+    
+    <item>
+      <title>標準出力</title>
+      <link>https://WAT36.github.io/pages/docs/programming/stdio/stdout/</link>
+      <pubDate>Sat, 12 Oct 2019 17:19:30 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/stdio/stdout/</guid>
+      <description>標準出力 標準出力について。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ //出力後、改行したい時 System.out.printl</description>
+    </item>
+    
+    <item>
+      <title>コンソール入力</title>
+      <link>https://WAT36.github.io/pages/docs/programming/stdio/console_input/</link>
+      <pubDate>Sat, 12 Oct 2019 17:03:35 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/stdio/console_input/</guid>
+      <description>コンソール入力 標準入力のコンソール入力について。 Java クラスはここではMain.javaとする import java.util.Scanner class Main{ public static void main(String args[]){ //Scannerのインスタンス</description>
+    </item>
+    
+    <item>
+      <title>コマンドライン引数</title>
+      <link>https://WAT36.github.io/pages/docs/programming/stdio/commandline_input/</link>
+      <pubDate>Sat, 12 Oct 2019 16:42:45 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/stdio/commandline_input/</guid>
+      <description>コマンドライン引数 標準入力のコマンドライン引数について。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ String[] input = args //コマンドライン引</description>
+    </item>
+    
+    <item>
+      <title>標準入力・出力</title>
+      <link>https://WAT36.github.io/pages/docs/programming/stdio/stdio_index/</link>
+      <pubDate>Thu, 10 Oct 2019 07:33:35 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/stdio/stdio_index/</guid>
+      <description>標準入力・出力 標準入力・出力についての記事。 標準入力 コマンドライン引数 コンソール入力 標準出力 標準出力 標準エラー出力 データの入力について ソース</description>
+    </item>
+    
+    <item>
+      <title>その他</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/</link>
+      <pubDate>Sat, 07 Sep 2019 18:23:49 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/</guid>
+      <description>その他 その他、括れてない手法などをまとめる。 説明 Java Python メソッド(関数)の宣言 (アクセス修飾子) static 関数名(引数){} 例：public static void main(String[] args){} def 関</description>
+    </item>
+    
+    <item>
+      <title>配列・リスト</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/list_index/</link>
+      <pubDate>Tue, 03 Sep 2019 22:53:31 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/list_index/</guid>
+      <description>配列・リスト 配列・リストについての記事。 これらは言語により定義が違うので注意。 例えばJavaでは配列とリストは別のデータ構造だが、 Pytho</description>
+    </item>
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>https://WAT36.github.io/pages/docs/sample/goisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/goisforlovers/</guid>
+      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>https://WAT36.github.io/pages/docs/sample/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/hugoisforlovers/</guid>
+      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at Install Hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:
+ Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://WAT36.github.io/pages/docs/sample/examples/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/examples/</guid>
+      <description>Ubi loqui Mentem genus facietque salire tempus bracchia Lorem markdownum partu paterno Achillem. Habent amne generosi aderant ad pellem nec erat sustinet merces columque haec et, dixit minus nutrit accipiam subibis subdidit. Temeraria servatum agros qui sed fulva facta. Primum ultima, dedit, suo quisque linguae medentes fixo: tum petis.
+Rapit vocant si hunc siste adspice Ora precari Patraeque Neptunia, dixit Danae Cithaeron armaque maxima in nati Coniugis templis fluidove. Effugit usus nec ingreditur agmen ac manus conlato.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://WAT36.github.io/pages/docs/sample/hidden/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/hidden/</guid>
+      <description>This page is hidden in menu Quondam non pater est dignior ille Eurotas Latent te facies Lorem markdownum arma ignoscas vocavit quoque ille texit mandata mentis ultimus, frementes, qui in vel. Hippotades Peleus pennas conscia cuiquam Caeneus quas.
+ Pater demittere evincitque reddunt Maxime adhuc pressit huc Danaas quid freta Soror ego Luctus linguam saxa ultroque prior Tatiumque inquit Saepe liquitur subita superata dederat Anius sudor  Cum honorum Latona O fallor in sustinui iussorum equidem.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://WAT36.github.io/pages/docs/sample/sample_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/sample_index/</guid>
+      <description> サンプルページ creating-a-new-theme example goisforlovers hidden hugoisforlovers migrate-from-jekyll shortcodes with-toc without-toc </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://WAT36.github.io/pages/docs/sample/shortcodes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/shortcodes/</guid>
+      <description>Shortcodes Expand shortcode Default {{&amp;lt; expand &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Expand ↕  Markdown content Lorem markdownum insigne&amp;hellip;    With Custom Label {{&amp;lt; expand &amp;#34;Custom Label&amp;#34; &amp;#34;...&amp;#34; &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Custom Label ...  Markdown content Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa protulit, sed sed aere valvis inhaesuro Pallas animam: qui quid, ignes.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://WAT36.github.io/pages/docs/sample/with-toc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/with-toc/</guid>
+      <description>Caput vino delphine in tamen vias Cognita laeva illo fracta Lorem markdownum pavent auras, surgit nunc cingentibus libet Laomedonque que est. Pastor An arbor filia foedat, ne fugit aliter, per. Helicona illas et callida neptem est Oresitrophos caput, dentibus est venit. Tenet reddite famuli praesentem fortibus, quaeque vis foret si frondes gelidos gravidae circumtulit inpulit armenta nativum.
+ Te at cruciabere vides rubentis manebo Maturuit in praetemptat ruborem ignara postquam habitasse Subitarum supplevit quoque fontesque venabula spretis modo Montis tot est mali quasque gravis Quinquennem domus arsit ipse Pellem turis pugnabant locavit  Natus quaerere Pectora et sine mulcere, coniuge dum tincta incurvae.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://WAT36.github.io/pages/docs/sample/without-toc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sample/without-toc/</guid>
+      <description>At me ipso nepotibus nunc celebratior genus Tanto oblite Lorem markdownum pectora novis patenti igne sua opus aurae feras materiaque illic demersit imago et aristas questaque posset. Vomit quoque suo inhaesuro clara. Esse cumque, per referri triste. Ut exponit solisque communis in tendens vincetis agisque iamque huic bene ante vetat omina Thebae rates. Aeacus servat admonitu concidit, ad resimas vultus et rugas vultu dignamque Siphnon.
+Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt dixit: ritu pharetramque.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://WAT36.github.io/pages/docs/sub-section/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/sub-section/</guid>
+      <description>Fida abluere audiat moram ferarum terram virgae Facere fluidove ab naides ut sic cornu Lorem markdownum Lucifer est, ire tangit inposito terram. Ore et pes lavet nuper longam, longa sub, erat nec Lemnicolae, in. Et nec tantaque sollicitive cognovi et ut videbar verso passis, Epimethida tutos. Dedecus Desine morae.
+Fervens esse et tenet cinisque per: et vir equus formaque superorum tollit, vires meae magnum; Latona. Fundamine potitur genialis: imagine gaudet et herba rura vates horrendum, laborum quis: potero aureus habitantque illos nox?</description>
+    </item>
+    
+    <item>
+      <title>CTF</title>
+      <link>https://WAT36.github.io/pages/docs/ctf/ctf_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/ctf/ctf_index/</guid>
+      <description>CTFメモ 最近CTFにも興味が出て参加しているが、なかなかテクニックが覚えられないため、備忘のために覚えたことを書き記しておくためのページで</description>
+    </item>
+    
+    <item>
+      <title>プログラミング言語別対応メモ</title>
+      <link>https://WAT36.github.io/pages/docs/programming/jp_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/jp_index/</guid>
+      <description>プログラミング言語別対応メモ 社会人になってからは業務でJavaをバリバリ書いたり学んだりしていた私が、急にPythonをやる必要が出てきた（</description>
+    </item>
+    
+  </channel>
+</rss>

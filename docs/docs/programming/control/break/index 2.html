@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>break文 | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.69aca9e7c9d9b2ec9f7e3b0b7aff34c00a5481ea13fc81de406a8193a86538d2.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2f control\2f break\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>break文</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="break文">break文</h1>
+
+<p>ループを抜け出す際に用いるbreak文についてを示す。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-break" style="display: none;" id="tabs-break-0" checked="checked" />
+  <label for="tabs-break-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>ループ処理のfor文、while文において、処理の途中にbreakがあった場合、ループを途中で中断し、ループから抜け出してくれる。<br />
+ループを何重にも重ねていた場合は、そのbreakがある一番内側のループにbreakが適用される。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>5;i<span style="color:#f92672">++</span>){
+      <span style="color:#75715e">//i&gt;3になったらループ中断して抜け出す
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">if</span>(i<span style="color:#f92672">&gt;</span>3){
+        <span style="color:#66d9ef">break</span>;
+      }
+      <span style="color:#75715e">//0..3までprint  それより上はbreakで中断されるためここには来ない
+</span><span style="color:#75715e"></span>      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(i);
+    }
+
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>();
+
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>3;i<span style="color:#f92672">++</span>){
+      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(i);
+
+      <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">j</span><span style="color:#f92672">=</span>0;j<span style="color:#f92672">&lt;</span>3;j<span style="color:#f92672">++</span>){
+        <span style="color:#75715e">//j&gt;1になったらループ中断して抜け出す　が、抜け出せるのはjのループだけ
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">//iのループを抜け出したい時は、その階層内でbreakを設ける
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>(j<span style="color:#f92672">&gt;</span>1){
+          <span style="color:#66d9ef">break</span>;
+        }
+
+        <span style="color:#75715e">//j=0..1までprintされる
+</span><span style="color:#75715e"></span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(i<span style="color:#f92672">+</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">+</span>j);
+      }
+    }
+
+  }
+}</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>&gt; java Main
+0
+1
+2
+3
+
+0
+0 0
+0 1
+1
+1 0
+1 1
+2
+2 0
+2 1
+</code></pre>
+
+<p>ちなみに、switch文ではこのbreak文は必須である。<br />
+break文がない場合、該当したcase文以下のcase文の処理が行われてしまうので注意。</p>
+
+<p>実行例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">k</span><span style="color:#f92672">=</span>1;
+    <span style="color:#66d9ef">switch</span>(k){
+      <span style="color:#66d9ef">case</span> 1<span style="color:#f92672">:</span>
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(1);
+        <span style="color:#75715e">//break;
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">case</span> 2<span style="color:#f92672">:</span>
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(2);
+        <span style="color:#75715e">//break;
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;default&#34;</span>);
+        <span style="color:#75715e">//break;
+</span><span style="color:#75715e"></span>    }
+
+  }
+}</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>&gt; java Main      
+1
+2
+default
+</code></pre>
+
+<p>この例の場合、本当はcase 1の所の処理だけ行わせたいのだが、breakを置かない場合case 1の下、case 2やdefaultの処理も順に行ってしまう。switch文でbreakを設けるのはこれが理由。</p>
+
+  </div>
+
+  <input type="radio" name="tabs-break" style="display: none;" id="tabs-break-1"  />
+  <label for="tabs-break-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>break文の使い方はPythonもjavaと同じ。<br />
+途中で中断したいfor,whileループの中に設定する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>): 
+<span style="color:#f92672">...</span>     <span style="color:#66d9ef">if</span>(i<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">3</span>):
+<span style="color:#f92672">...</span>             <span style="color:#66d9ef">break</span>
+<span style="color:#f92672">...</span>     <span style="color:#66d9ef">print</span>(i)
+<span style="color:#f92672">...</span> 
+<span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">2</span>
+<span style="color:#ae81ff">3</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>):
+<span style="color:#f92672">...</span>     <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>):
+<span style="color:#f92672">...</span>             <span style="color:#66d9ef">if</span>(j<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">1</span>):
+<span style="color:#f92672">...</span>                     <span style="color:#66d9ef">break</span>
+<span style="color:#f92672">...</span>             <span style="color:#66d9ef">print</span>(i,j) 
+<span style="color:#f92672">...</span> 
+<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">2</span> <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">2</span> <span style="color:#ae81ff">1</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/966e0f1a970581f0dcfbac6aa89f064fefb1ee10" title='Last modified Jan 22, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 22, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

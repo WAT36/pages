@@ -143,6 +143,10 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/gauss_2D/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/class/</loc>
     <lastmod>2020-01-18T15:26:59+09:00</lastmod>
   </url>
@@ -214,12 +218,12 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/file_io/filewrite/</loc>
-    <lastmod>2020-02-21T22:28:07+09:00</lastmod>
+    <lastmod>2020-02-25T17:43:35+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/file_io/fileopen/</loc>
-    <lastmod>2020-02-20T22:25:14+09:00</lastmod>
+    <lastmod>2020-02-25T17:43:35+09:00</lastmod>
   </url>
   
   <url>
@@ -724,7 +728,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-02-21T22:28:07+09:00</lastmod>
+    <lastmod>2020-02-25T17:43:35+09:00</lastmod>
   </url>
   
   <url>
@@ -753,12 +757,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -768,12 +772,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
