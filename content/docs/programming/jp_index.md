@@ -26,7 +26,7 @@ title: "プログラミング言語別対応メモ"
 
 ## [例外処理]({{< relref "/docs/programming/exception/exception_index.md" >}})
 
-## [ファイル入出力]({{< relref "/docs/programming/file_io/file_index.md" >}})
+## [ファイル]({{< relref "/docs/programming/file_io/file_index.md" >}})
 
 ## [その他]({{< relref "/docs/programming/other/other_index.md" >}})
 

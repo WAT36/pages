@@ -268,7 +268,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/gauss_2D/</guid>
-      <description>ガウス関数(2次元) Python ガウス関数 a exp ( - (x - &amp;mu; ) 2 &amp;sigma; 2 ) において、入力xを2次元ベクトルとした時の場合を考える。(以下) x = x 0 x 1</description>
+      <description>ガウス関数(2次元) Python ガウス関数 a exp ( - (x - &amp;mu; ) 2 &amp;sigma; 2 ) において、入力xを2次元ベクトルとした時の場合を考える。(以下) x = x 0 x 1 この時、</description>
     </item>
     
     <item>
@@ -389,12 +389,12 @@
     </item>
     
     <item>
-      <title>ファイル入出力</title>
+      <title>ファイル</title>
       <link>https://WAT36.github.io/pages/docs/programming/file_io/file_index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/file_io/file_index/</guid>
-      <description>ファイル入出力 ファイル入出力の手法についてをまとめる。 ファイル読み込み ファイル書き込み</description>
+      <description>ファイル ファイルを扱う手法についてをまとめる。 ファイル入出力 ファイル読み込み ファイル書き込み 外部ライブラリの使用 外部ファイルのインポート</description>
     </item>
     
     <item>
