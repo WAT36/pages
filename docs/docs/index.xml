@@ -723,6 +723,15 @@
     </item>
     
     <item>
+      <title>外部ファイルのインポート</title>
+      <link>https://WAT36.github.io/pages/docs/programming/file_io/import/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/file_io/import/</guid>
+      <description>外部ファイルのインポート プログラムの中で、別のプログラムにある変数や関数を利用したい時があると思う。その時はファイルをインポートしてくるのが</description>
+    </item>
+    
+    <item>
       <title>多次元リスト(配列)である列をキーにしてソートする</title>
       <link>https://WAT36.github.io/pages/docs/programming/list/multisortlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
