@@ -34,5 +34,5 @@ bookToc: false
  - [ソフトマックス関数]({{< relref "/docs/programming/math/softmax.md" >}})
  - [シグモイド関数とソフトマックス関数]({{< relref "/docs/programming/math/softmax_sigmoid.md" >}})
  - [ガウス関数]({{< relref "/docs/programming/math/gauss.md" >}})
- - [ガウス関数(2次元)]({{< relref "/docs/programming/math/gauss_2D.md" >}})
+ - ガウス関数(2次元)
 

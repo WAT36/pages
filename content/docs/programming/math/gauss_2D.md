@@ -182,6 +182,12 @@ bookToc: false
     </mrow>
 </math>
 
+このガウス関数をPythonで実装した例を以下に示す。
+
+```python
+def gauss(a, x, mu, sigma):
+    
+```
 
 {{< /tab >}}
 {{< /tabs >}}
