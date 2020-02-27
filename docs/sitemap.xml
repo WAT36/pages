@@ -494,6 +494,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/</loc>
+    <lastmod>2020-02-27T22:06:59+09:00</lastmod>
   </url>
   
   <url>
@@ -667,6 +668,11 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/posts/</loc>
+    <lastmod>2020-02-02T13:27:15+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/tags/</loc>
     <lastmod>2020-02-02T13:27:15+09:00</lastmod>
   </url>
@@ -682,13 +688,13 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/%E6%8E%A2%E7%B4%A2/</loc>
+    <loc>https://WAT36.github.io/pages/posts/warshall_floyd/</loc>
     <lastmod>2020-01-30T23:14:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/posts/</loc>
-    <lastmod>2020-02-02T13:27:15+09:00</lastmod>
+    <loc>https://WAT36.github.io/pages/tags/%E6%8E%A2%E7%B4%A2/</loc>
+    <lastmod>2020-01-30T23:14:00+09:00</lastmod>
   </url>
   
   <url>
@@ -738,7 +744,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-02-27T21:42:34+09:00</lastmod>
+    <lastmod>2020-02-27T22:06:59+09:00</lastmod>
   </url>
   
   <url>
@@ -782,12 +788,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -958,7 +964,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/jp_index/</loc>
-    <lastmod>2020-02-26T21:40:32+09:00</lastmod>
+    <lastmod>2020-02-27T22:06:59+09:00</lastmod>
   </url>
   
 </urlset>

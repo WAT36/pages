@@ -6,10 +6,19 @@
     <description>Recent content in Posts on WAT Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sat, 30 Nov 2019 15:05:05 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jan 2020 22:09:35 +0900</lastBuildDate>
     
 	<atom:link href="https://WAT36.github.io/pages/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ワーシャル・フロイド法</title>
+      <link>https://WAT36.github.io/pages/posts/warshall_floyd/</link>
+      <pubDate>Thu, 30 Jan 2020 22:09:35 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/warshall_floyd/</guid>
+      <description>経路探索アルゴリズムの一つ「ワーシャル・フロイド法」についてを調べてみた。 ワーシャル・フロイド法とは？ ワーシャル・フロイド法とは、グラフのあ</description>
+    </item>
     
     <item>
       <title>グラフの彩色問題 ～Welsh・Powellのアルゴリズム～</title>

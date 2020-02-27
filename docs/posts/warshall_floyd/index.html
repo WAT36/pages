@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Categories | WAT Notes</title>
+<title>ワーシャル・フロイド法 | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -19,7 +19,6 @@
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 
 
-<link rel="alternate" type="application/rss+xml" href="https://WAT36.github.io/pages/categories/index.xml" title="WAT Notes" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -31,7 +30,6 @@ https://github.com/alex-shpak/hugo-book
 <body>
   <input type="checkbox" style="display: none" id="menu-control" />
   <main class="flex container">
-
     <aside class="book-menu fixed">
       <nav>
 <h2 class="book-brand">
@@ -55,7 +53,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f categories\2f "] {
+  nav ul a[href$="\2fposts\2fwarshall_floyd\2f "] {
       color: #004ed0;
   }
   </style>
@@ -96,74 +94,74 @@ https://github.com/alex-shpak/hugo-book
 </script>
 
     </aside>
-    <div class="book-page">
+
+    <div class="book-posts">
       <header class="flex align-center justify-between book-header">
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>Categories</strong>
+  <strong>ワーシャル・フロイド法</strong>
 </header>
 
-
-<section id="main">
-  <div>
-    <h1 id="title">Categories</h1>
-    <ul>
-    <div class="categories_list">
-    
-    <li>
-        <h3>
-        <div class="categories_item">
-            <a href="CTF">CTF (<span class="categories_number">2</span>)</a>
-        </div>
-        </h3>
-      </li>
-     
-    <li>
-        <h3>
-        <div class="categories_item">
-            <a href="Linux">Linux (<span class="categories_number">2</span>)</a>
-        </div>
-        </h3>
-      </li>
-     
-    <li>
-        <h3>
-        <div class="categories_item">
-            <a href="%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0">アルゴリズム (<span class="categories_number">5</span>)</a>
-        </div>
-        </h3>
-      </li>
-     
-    <li>
-        <h3>
-        <div class="categories_item">
-            <a href="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">プログラミング (<span class="categories_number">5</span>)</a>
-        </div>
-        </h3>
-      </li>
-     
-     </div>
-   </ul>
-   </div>
-</section>
-
       
-<div class="book-footer justify-end">
-  
-</div>
 
+<header class="markdown">
+  <h1>ワーシャル・フロイド法</h1>
+  <h5>
+    <strong>Jan 30, 2020</strong>
+  </h5>
+</header>
+<article class="markdown">
+
+<p>経路探索アルゴリズムの一つ「ワーシャル・フロイド法」についてを調べてみた。</p>
+
+<h1 id="ワーシャル-フロイド法とは">ワーシャル・フロイド法とは？</h1>
+
+<p>ワーシャル・フロイド法とは、グラフのある頂点からある頂点までの最短経路を全ての組み合わせにおいて探索するアルゴリズムである。</p>
+
+<ul>
+<li>入力
+
+<ul>
+<li>グラフ G = (V,E)</li>
+<li>Eの各辺の長さ</li>
+</ul></li>
+<li>出力
+
+<ul>
+<li>全ての頂点i,j(∈V)における最短経路</li>
+</ul></li>
+</ul>
+
+<h1 id="アルゴリズム">アルゴリズム</h1>
+
+<p>アルゴリズムは以下の通り。</p>
+
+<pre><code>V = (辺の数)
+d[V][V]     // d[i][j]は頂点iから頂点jまでにかかるコスト。最初は全て0で初期化する
+d ← E       // dに辺Eを反映させる (d[i][j]にEの長さを入れる)
+
+for(k = 0;k = V;k++){
+    for(i = 0;i &lt; V;i++){
+        for(j = 0;j &lt; V;j++){
+            d[i][j] = min(d[i][j], d[i][k] + d[k][j])
+        }
+    }
+}
+
+return d
+</code></pre>
+
+<p>考え方としては、頂点iからグラフGの頂点それぞれを経由して頂点jまで行く計|V|通りの経路を調べ、調べた|V|通りのパターンの中から最小のコストを取り出したものが、頂点iから頂点jへの最小コストとなる。<br />
+これを全ての(i,j)の組み合わせにおいて調べることで、グラフGの全ての頂点間の最小コストを調べられる。全体の計算量はO(|V|<sup>3</sup>)となる。</p>
+</article>
 
       
     </div>
-    
-  
-
-
-
   </main>
 
   
   
 </body>
+
 </html>
