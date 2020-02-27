@@ -9,7 +9,7 @@ bookToc: false
 
 # 外部ファイルのインポート
 
-プログラムの中で、別のプログラムにある変数や関数を利用したい時があると思う。その時はファイルをインポートしてくるのが手っ取り早いことが多い。その方法を示す。
+プログラムの中で、別のプログラムにある変数や関数を利用したい場合もある。その時はファイルをインポートしてくるのが手っ取り早いことが多い。その方法を示す。
 
 {{< tabs "import" >}}
 {{< tab "Java" >}}
@@ -18,10 +18,68 @@ Javaでは**import**文があり、これを利用することで他のプログ
 利用するには、importの後に利用したいクラス名をパッケージ名を含めて記載する。  
 ただし、自分と同じパッケージに属している他クラスはimport文無しでも利用できるので、import文は主に外部パッケージにあるクラスに対し利用する。  
 
+前述のリストやMapの所では、これらのクラスを利用するためにListクラスやMapクラスをimportしていた。これもimportを利用している例になる。  
 
+指定したパッケージ以下のクラスを全てインポートしたい時は、「*」を利用することで指定したパッケージに属する全てのクラスを利用できる。
+
+しかし、どのクラスを利用しているかを判別するために、大体は「*」は使わずクラスを明示してインポートする。  
+
+例1(クラスを指定してインポートしたい時。大体はこっちを使用)
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+
+class Main{
+  public static void main(String args[]){
+    List<Integer> l = new ArrayList<Integer>();
+    l.add(1);
+    l.add(3);
+    l.add(1,100);
+
+    for(int i=0;i<l.size();i++){
+        System.out.println(l.get(i));
+    }
+
+    Map<String,String> m = new HashMap<>();
+
+    m.put("key","value");
+    m.put("key2","value");
+    m.put("key","value3");
+
+    System.out.println(m);
+  }
+}
 ```
-// TODO
--- 作成中 --
+
+
+例2（「*」を指定してインポートしたい時）  
+
+```java
+import java.util.*;
+
+class Main{
+  public static void main(String args[]){
+    List<Integer> l = new ArrayList<Integer>();
+    l.add(1);
+    l.add(3);
+    l.add(1,100);
+
+    for(int i=0;i<l.size();i++){
+        System.out.println(l.get(i));
+    }
+
+    Map<String,String> m = new HashMap<>();
+
+    m.put("key","value");
+    m.put("key2","value");
+    m.put("key","value3");
+
+    System.out.println(m);
+  }
+}
 ```
 
 

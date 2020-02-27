@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.57d21773b8f2588005bfaede798488fde6da0bb76cc40677c7128e1bc9139746.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.7b73c7a789a17d597d495e296dada08cb97c5530376c90f14c77ae6ffe0ead95.js"></script>
 
 
 
@@ -109,7 +109,7 @@ https://github.com/alex-shpak/hugo-book
 
 <h1 id="外部ファイルのインポート">外部ファイルのインポート</h1>
 
-<p>プログラムの中で、別のプログラムにある変数や関数を利用したい時があると思う。その時はファイルをインポートしてくるのが手っ取り早いことが多い。その方法を示す。</p>
+<p>プログラムの中で、別のプログラムにある変数や関数を利用したい場合もある。その時はファイルをインポートしてくるのが手っ取り早いことが多い。その方法を示す。</p>
 
 
 
@@ -126,10 +126,61 @@ https://github.com/alex-shpak/hugo-book
 利用するには、importの後に利用したいクラス名をパッケージ名を含めて記載する。<br />
 ただし、自分と同じパッケージに属している他クラスはimport文無しでも利用できるので、import文は主に外部パッケージにあるクラスに対し利用する。</p>
 
-<pre><code>// TODO
--- 作成中 --
-</code></pre>
+<p>前述のリストやMapの所では、これらのクラスを利用するためにListクラスやMapクラスをimportしていた。これもimportを利用している例になる。</p>
 
+<p>指定したパッケージ以下のクラスを全てインポートしたい時は、「*」を利用することで指定したパッケージに属する全てのクラスを利用できる。</p>
+
+<p>しかし、どのクラスを利用しているかを判別するために、大体は「*」は使わずクラスを明示してインポートする。</p>
+
+<p>例1(クラスを指定してインポートしたい時。大体はこっちを使用)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">ArrayList</span>;
+<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">List</span>;
+<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">Map</span>;
+<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">HashMap</span>;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+    List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span>();
+    l.<span style="color:#a6e22e">add</span>(1);
+    l.<span style="color:#a6e22e">add</span>(3);
+    l.<span style="color:#a6e22e">add</span>(1,100);
+
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>l.<span style="color:#a6e22e">size</span>();i<span style="color:#f92672">++</span>){
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(l.<span style="color:#a6e22e">get</span>(i));
+    }
+
+    Map<span style="color:#f92672">&lt;</span>String,String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;</span>();
+
+    m.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;key&#34;</span>,<span style="color:#e6db74">&#34;value&#34;</span>);
+    m.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;key2&#34;</span>,<span style="color:#e6db74">&#34;value&#34;</span>);
+    m.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;key&#34;</span>,<span style="color:#e6db74">&#34;value3&#34;</span>);
+
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(m);
+  }
+}</code></pre></div>
+<p>例2（「*」を指定してインポートしたい時）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#f92672">*</span>;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+    List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span>();
+    l.<span style="color:#a6e22e">add</span>(1);
+    l.<span style="color:#a6e22e">add</span>(3);
+    l.<span style="color:#a6e22e">add</span>(1,100);
+
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>l.<span style="color:#a6e22e">size</span>();i<span style="color:#f92672">++</span>){
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(l.<span style="color:#a6e22e">get</span>(i));
+    }
+
+    Map<span style="color:#f92672">&lt;</span>String,String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;</span>();
+
+    m.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;key&#34;</span>,<span style="color:#e6db74">&#34;value&#34;</span>);
+    m.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;key2&#34;</span>,<span style="color:#e6db74">&#34;value&#34;</span>);
+    m.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;key&#34;</span>,<span style="color:#e6db74">&#34;value3&#34;</span>);
+
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(m);
+  }
+}</code></pre></div>
   </div>
 
   <input type="radio" name="tabs-import" style="display: none;" id="tabs-import-1"  />
