@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>辞書(Map)から最大の値を取得 | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.4a13e42880ec20a35337744d4ab69bc00ad8c79e6386d280ab29bdee10451251.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fmap\2fmaxval\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>辞書(Map)から最大の値を取得</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="辞書-map-から最大の値を取得">辞書(Map)から最大の値を取得</h1>
+
+<p>辞書(Map)から最大の値を取得する方法についてを示す。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-maxval" style="display: none;" id="tabs-maxval-0" checked="checked" />
+  <label for="tabs-maxval-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>JavaでMapにある値の最大値を取得するには以下の手順で行う。</p>
+
+<ul>
+<li>Mapのメソッド<strong>values()</strong>を使い、値のみを格納したListを取得する</li>
+<li>その値のListをCollectionsクラスの<strong>max()</strong>メソッドを用いて最大値を取得する(参考：<a href="https://WAT36.github.io/pages/docs/programming/list/max/">リストの内一番大きい要素を調べる</a>)</li>
+</ul>
+
+<p>Mapクラスのvalues()メソッドは、Mapにある値をCollection(List,Setの親クラス)に格納したものを返すメソッドである。<br />
+<code>Collection&lt;V&gt; values()</code></p>
+
+<p>実行例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">List</span>;
+<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">ArrayList</span>;
+<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">Map</span>;
+<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">HashMap</span>;
+<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">Collections</span>;
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+
+    Map<span style="color:#f92672">&lt;</span>String,String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;</span>();
+
+    m.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;key&#34;</span>,<span style="color:#e6db74">&#34;value&#34;</span>);
+    m.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;key2&#34;</span>,<span style="color:#e6db74">&#34;value2&#34;</span>);
+    m.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;key3&#34;</span>,<span style="color:#e6db74">&#34;value3&#34;</span>);
+
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(m);
+
+    List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>(m.<span style="color:#a6e22e">values</span>());
+    String <span style="color:#a6e22e">maxval</span> <span style="color:#f92672">=</span> Collections.<span style="color:#a6e22e">max</span>(value);
+
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;max value: &#34;</span> <span style="color:#f92672">+</span> maxval);
+  }
+}</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>&gt; java Main
+{key2=value2, key3=value3, key=value}
+max value: value3
+</code></pre>
+
+  </div>
+
+  <input type="radio" name="tabs-maxval" style="display: none;" id="tabs-maxval-1"  />
+  <label for="tabs-maxval-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Pythonでは辞書の関数<strong>values()</strong>で値のみのビューオブジェクト(イテラブル)を取得できるので、これに組み込み関数<strong>max()</strong>を適用すると、値の最大値を取得できる。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> d<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;key&#39;</span>:<span style="color:#e6db74">&#39;value&#39;</span>, <span style="color:#e6db74">&#39;key2&#39;</span>:<span style="color:#e6db74">&#39;value2&#39;</span>, <span style="color:#e6db74">&#39;key3&#39;</span>:<span style="color:#e6db74">&#39;value3&#39;</span>}
+<span style="color:#f92672">&gt;&gt;&gt;</span> d
+{<span style="color:#e6db74">&#39;key&#39;</span>: <span style="color:#e6db74">&#39;value&#39;</span>, <span style="color:#e6db74">&#39;key2&#39;</span>: <span style="color:#e6db74">&#39;value2&#39;</span>, <span style="color:#e6db74">&#39;key3&#39;</span>: <span style="color:#e6db74">&#39;value3&#39;</span>}
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> v<span style="color:#f92672">=</span>d<span style="color:#f92672">.</span>values()
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> max(v)
+<span style="color:#e6db74">&#39;value3&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/f3dcb4ba0aed4e8c96315c519011ed407623594e" title='Last modified Jan 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 5, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>
