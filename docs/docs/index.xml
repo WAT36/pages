@@ -813,6 +813,15 @@
     </item>
     
     <item>
+      <title>教師あり学習</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/supervised_learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/supervised_learning/</guid>
+      <description>教師あり学習 教師あり学習とは何か？ 教師あり学習とは与えられた入力とそれに対する結果のデータセットを元に、それとは別の新しい入力に対する結果を</description>
+    </item>
+    
+    <item>
       <title>数値の絶対値を算出する</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/abs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -895,11 +904,11 @@
     
     <item>
       <title>機械学習</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/</guid>
-      <description>機械学習 機械学習の手法についてをまとめる。 機械学習</description>
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</guid>
+      <description>機械学習 機械学習の手法についてをまとめる。 教師あり学習</description>
     </item>
     
     <item>

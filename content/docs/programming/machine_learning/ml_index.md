@@ -10,4 +10,4 @@ bookToc: false
 
 機械学習の手法についてをまとめる。
 
-- 機械学習
+- [教師あり学習]({{< relref "/docs/programming/machine_learning/supervised_learning.md" >}})

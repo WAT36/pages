@@ -36,4 +36,4 @@ title: "プログラミング言語別対応メモ"
 
 ## [グラフ]({{< relref "/docs/programming/graph/graph_index.md" >}})
 
-## [機械学習]({{< relref "/docs/programming/machine_learning/index.md" >}})
+## [機械学習]({{< relref "/docs/programming/machine_learning/ml_index.md" >}})
