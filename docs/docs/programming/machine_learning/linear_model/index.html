@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>探索 | WAT Notes</title>
+<title>直線モデル(線形回帰) | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -19,7 +19,6 @@
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 
 
-<link rel="alternate" type="application/rss+xml" href="https://WAT36.github.io/pages/tags/%E6%8E%A2%E7%B4%A2/index.xml" title="WAT Notes" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -55,7 +54,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2ftags\2f%E6%8E%A2%E7%B4%A2\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2flinear_model\2f "] {
       color: #004ed0;
   }
   </style>
@@ -96,30 +95,32 @@ https://github.com/alex-shpak/hugo-book
 </script>
 
     </aside>
+
     <div class="book-page">
       <header class="flex align-center justify-between book-header">
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>探索</strong>
+  <strong>直線モデル(線形回帰)</strong>
 </header>
 
+      
+<article class="markdown">
 
-<section id="main">
-    <div class="tags_list">
-    <div class="tags_title"><span>探索</span></div>
-    </div>
-    <ul id="list">
-        
-        <li>
-            2020-01-30
-             <a href="https://WAT36.github.io/pages/posts/warshall_floyd/">ワーシャル・フロイド法</a>
-         </li>
-         
-     </ul>
-     <hr>
-     <a href="https://WAT36.github.io/pages/tags">Tags</a>
- </section>
+<h1 id="直線モデル">直線モデル</h1>
+
+<p>回帰問題の手法の一つである直線モデルについて。</p>
+
+<p><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/supervised_learning/">教師あり学習</a>
+で与えられた入力と結果から関係式を算出すると言うことを述べたが、
+必ずしも100%正確な式を算出すると言うことでは無いことを念頭においてほしい。（と言うよりどのような入力に対して100%正解と言えるような値を算出することは不可能である。勿論算出する式は正確性を高くする事を目標に算出するが）</p>
+
+<p>関係式は、現入力データに対して最も誤差が少ないような結果を出力するような式を算出すると言うやり方で考える。</p>
+
+<p>その関係式だが、基本となる数式を元に算出を行う。この基本となる数式を<strong>モデル</strong>と呼ぶ。</p>
+
+<p>今回は直線の式(<strong>直線モデル</strong>)を利用して予測を行なってみる。</p>
+</article>
 
       
 <div class="book-footer justify-end">
@@ -130,6 +131,8 @@ https://github.com/alex-shpak/hugo-book
       
     </div>
     
+  
+
 
 
   </main>
@@ -137,4 +140,5 @@ https://github.com/alex-shpak/hugo-book
   
   
 </body>
+
 </html>
