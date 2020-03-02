@@ -18,8 +18,6 @@ bookToc: false
 
 その関係式だが、基本となる数式を元に算出を行う。この基本となる数式を**モデル**と呼ぶ。  
 
-今回は直線の式(**直線モデル**)を利用して予測を行なってみる。  
-
 今回は例として、以下の身長と体重からなるデータを用意する。
 
 |身長|体重|
@@ -49,6 +47,38 @@ bookToc: false
 
 <img src="/img/datascience/Figure_16.png" width=50%>
 
+今回は直線の式(**直線モデル**)を利用して予測を行ってみる。  
+
+このデータに対して、なんとなくだが、以下のような直線を引くとそれらしい予測を行えそうである。  
+
+<img src="/img/datascience/Figure_17.png" width=50%>
+
+直線の式は以下の式のように表すことができる。
+
+<math>
+<mi>y(x)</mi>
+<mo>=</mo>
+<msub>
+    <mi>w</mi>
+    <mn>0</mn>
+</msub>
+<mi>x</mi>
+<mo>+</mo>
+<msub>
+    <mi>w</mi>
+    <mn>1</mn>
+</msub>
+</math>
+
+最適な直線モデルの式を求めるには、最適なw<sub>0</sub>とw<sub>1</sub>を求めれば良いのだが、どのように求めれば良いのか？  
+
+そちらは次章で記載する。  
+
+<参考>グラフのコード
+
+{{< tabs "import" >}}
+{{< tab "Python" >}}
+
 ```python
 >>> import numpy as np
 >>> import matplotlib.pyplot as plt
@@ -66,4 +96,21 @@ bookToc: false
 >>> plt.show()
 >>> 
 ```
+
+```python
+>>> #↑でplt.gridまで行なった後
+>>> def f(x):
+...     return (0.9038 * x) - 92.1461
+... 
+>>> x2 = np.array([0,100,200])
+>>> y2 = f(x2)
+>>> 
+>>> plt.plot(x2,y2,color='red')
+[<matplotlib.lines.Line2D object at 0x120b47ba8>]
+>>> 
+>>> plt.show()
+```
+
+{{< /tab >}}
+{{< /tabs >}}
 
