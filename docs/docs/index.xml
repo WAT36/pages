@@ -814,15 +814,6 @@
     
     <item>
       <title>教師あり学習</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/supervised_learning-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/supervised_learning-2/</guid>
-      <description>教師あり学習 教師あり学習とは何か？ 教師あり学習とは与えられた入力とそれに対する結果のデータセットを元に、それとは別の新しい入力に対する結果を</description>
-    </item>
-    
-    <item>
-      <title>教師あり学習</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/supervised_learning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -913,29 +904,11 @@
     
     <item>
       <title>機械学習</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index-2/</guid>
-      <description>機械学習 機械学習の手法についてをまとめる。 教師あり学習 直線モデル(線形回帰)</description>
-    </item>
-    
-    <item>
-      <title>機械学習</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</guid>
       <description>機械学習 機械学習の手法についてをまとめる。 教師あり学習 直線モデル(線形回帰)</description>
-    </item>
-    
-    <item>
-      <title>直線モデル(線形回帰)</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/linear_model-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/linear_model-2/</guid>
-      <description>直線モデル 回帰問題の手法の一つである直線モデルについて。 教師あり学習 で与えられた入力と結果から関係式を算出すると言うことを述べたが、 必ずしも</description>
     </item>
     
     <item>
@@ -954,6 +927,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/procon/procon_index/</guid>
       <description>競プロテク 競技プログラミングでよく使う手法についてまとめる。 個人的に学びながらなので進度遅めかも 二分探索(Pythonで二分探索を行うライブ</description>
+    </item>
+    
+    <item>
+      <title>継承</title>
+      <link>https://WAT36.github.io/pages/docs/programming/class_func/inheritance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/class_func/inheritance/</guid>
+      <description>継承 クラスを実装できる言語の大半は、他のクラスの構造を受け継ぎ、そこから新しい変数やメソッド(関数)等を付け足す形でクラスを定義することがで</description>
     </item>
     
     <item>
