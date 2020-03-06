@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.76b60dab366ef9ea1fb2bd6f0083c1d9cc14caf1fee9d0e3d30581faf29fe51c.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.7e1a9d780b7936a95a24a423fe686060d5a3906ddaf5aae4454ae506d7441c74.js"></script>
 
 
 
@@ -124,8 +124,79 @@ https://github.com/alex-shpak/hugo-book
     Java
   </label>
   <div class="book-tabs-content markdown-inner">
-    Javaでは・・
-（作成中）
+    <p>Javaでのクラスの継承の方法は以下の通り。</p>
+
+<pre><code>[アクセス修飾子]　class クラス名 **extends** 継承元クラス(スーパークラス)名 {
+  //文
+}
+</code></pre>
+
+<p>Javaでは継承する元となるクラスを<strong>スーパークラス</strong>、継承して作成したクラスを<strong>サブクラス</strong>という。<br />
+サブクラスはスーパークラスを継承して作成されるため、スーパークラスで定義した変数やメソッドは全て受け継がれる。
+サブクラスからはスーパークラスの変数やメソッドを利用することができる（ただし設定されているアクセス修飾子により、利用できない場合がある）</p>
+
+<p>実行例を以下に示す。</p>
+
+<p>Beverageクラス</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Beverage</span>{
+
+    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">price</span> <span style="color:#f92672">=</span> 0;
+    String <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Beverage</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">p</span>,String <span style="color:#a6e22e">n</span>){
+        price <span style="color:#f92672">=</span> p;
+        name <span style="color:#f92672">=</span> n;
+    }
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">void</span> howMuch(){
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;This &#34;</span><span style="color:#f92672">+</span>name<span style="color:#f92672">+</span><span style="color:#e6db74">&#34; is &#34;</span><span style="color:#f92672">+</span>price<span style="color:#f92672">+</span><span style="color:#e6db74">&#34; yen.&#34;</span>);
+    }
+}</code></pre></div>
+<p>Liquorクラス（Beverageクラスを継承）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Liquor</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Beverage</span>{
+    
+    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">alcohol_content</span><span style="color:#f92672">=</span>100;
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Liquor</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">p</span>,String <span style="color:#a6e22e">n</span>,<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">a</span>){
+        <span style="color:#66d9ef">super</span>(p,n); <span style="color:#75715e">//スーパークラスのコンストラクタ
+</span><span style="color:#75715e"></span>        alcohol_content<span style="color:#f92672">=</span>a;
+    }
+}</code></pre></div>
+<p>Mainクラス</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+
+    Beverage <span style="color:#a6e22e">orange_juice</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Beverage(100,<span style="color:#e6db74">&#34;orange juice&#34;</span>);
+    Liquor <span style="color:#a6e22e">screw_driver</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Liquor(1000,<span style="color:#e6db74">&#34;screw driver&#34;</span>,15);
+
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;orange_juice.price:&#34;</span> <span style="color:#f92672">+</span> orange_juice.<span style="color:#a6e22e">price</span>);
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;orange_juice.name :&#34;</span> <span style="color:#f92672">+</span> orange_juice.<span style="color:#a6e22e">name</span>);
+
+<span style="color:#75715e">//  以下、Beverageクラスはalcohol_contentは持ってないので、参照しようとするとエラーになる
+</span><span style="color:#75715e">//  というよりコンパイルエラーになるので、一時的にコメントアウトして表示させる
+</span><span style="color:#75715e">//   System.out.println(&#34;orange_juice.alcohol_content:&#34; + orange_juice.alcohol_content); 
+</span><span style="color:#75715e"></span>
+    orange_juice.<span style="color:#a6e22e">howMuch</span>();
+
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;screw_driver.price:&#34;</span> <span style="color:#f92672">+</span> screw_driver.<span style="color:#a6e22e">price</span>);
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;screw_driver.name :&#34;</span> <span style="color:#f92672">+</span> screw_driver.<span style="color:#a6e22e">name</span>);
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;screw_driver.alcohol_content:&#34;</span> <span style="color:#f92672">+</span> screw_driver.<span style="color:#a6e22e">alcohol_content</span>);
+
+    screw_driver.<span style="color:#a6e22e">howMuch</span>();
+  }
+}</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>&gt; java Main
+orange_juice.price:100
+orange_juice.name :orange juice
+This orange juice is 100 yen.
+screw_driver.price:1000
+screw_driver.name :screw driver
+screw_driver.alcohol_content:15
+This screw driver is 1000 yen.
+</code></pre>
+
   </div>
 
   <input type="radio" name="tabs-inheritance" style="display: none;" id="tabs-inheritance-1"  />
@@ -203,7 +274,14 @@ Traceback (most recent call last):
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/4a908a8ec7c47b9f69992d036bff5acd94292a02" title='Last modified Mar 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 4, 2020
+    </a>
+  </div>
   
 </div>
 

@@ -16,8 +16,94 @@ bookToc: false
 {{< tabs "inheritance" >}}
 {{< tab "Java" >}}
 
-Javaでは・・
-（作成中）
+Javaでのクラスの継承の方法は以下の通り。
+
+```
+[アクセス修飾子]　class クラス名 extends 継承元クラス(スーパークラス)名 {
+  //文
+}
+```
+
+Javaでは継承する元となるクラスを**スーパークラス**、継承して作成したクラスを**サブクラス**という。  
+サブクラスはスーパークラスを継承して作成されるため、スーパークラスで定義した変数やメソッドは全て受け継がれる。
+サブクラスからはスーパークラスの変数やメソッドを利用することができる（ただし設定されているアクセス修飾子により、利用できない場合がある）
+
+実行例を以下に示す。
+
+Beverageクラス
+
+```java
+class Beverage{
+
+    int price = 0;
+    String name = "";
+
+    public Beverage(int p,String n){
+        price = p;
+        name = n;
+    }
+
+    public void howMuch(){
+        System.out.println("This "+name+" is "+price+" yen.");
+    }
+}
+```
+
+Liquorクラス（Beverageクラスを継承）
+
+```java
+class Liquor extends Beverage{
+    
+    int alcohol_content=100;
+
+    public Liquor(int p,String n,int a){
+        super(p,n); //スーパークラスのコンストラクタ
+        alcohol_content=a;
+    }
+}
+```
+
+Mainクラス
+
+```java
+class Main{
+  public static void main(String args[]){
+
+    Beverage orange_juice = new Beverage(100,"orange juice");
+    Liquor screw_driver = new Liquor(1000,"screw driver",15);
+
+    //orange_juice,変数、メソッドを表示
+    System.out.println("orange_juice.price:" + orange_juice.price);
+    System.out.println("orange_juice.name :" + orange_juice.name);
+
+//  以下、Beverageクラスはalcohol_contentは持ってないので、参照しようとするとエラーになる
+//  というよりコンパイルエラーになるので、一時的にコメントアウトして表示させる
+//   System.out.println("orange_juice.alcohol_content:" + orange_juice.alcohol_content); 
+
+    orange_juice.howMuch();
+
+    //screw_driver、変数、メソッドを表示
+    System.out.println("screw_driver.price:" + screw_driver.price);
+    System.out.println("screw_driver.name :" + screw_driver.name);
+    System.out.println("screw_driver.alcohol_content:" + screw_driver.alcohol_content);
+
+    screw_driver.howMuch();
+  }
+}
+```
+
+実行結果
+
+```
+> java Main
+orange_juice.price:100
+orange_juice.name :orange juice
+This orange juice is 100 yen.
+screw_driver.price:1000
+screw_driver.name :screw driver
+screw_driver.alcohol_content:15
+This screw driver is 1000 yen.
+```
 
 {{< /tab >}}
 {{< tab "Python" >}}
