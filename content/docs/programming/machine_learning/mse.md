@@ -69,8 +69,8 @@ bookToc: false
 import numpy as np
 
 def mse(w,x,t):
-    y = w[0]*x + w[1]  #理論値
-    mse = np.mean( (y - t)**2 ) 
+    y = w[0]*x + w[1]            # 理論値
+    mse = np.mean( (y - t)**2 )  # 平均二乗誤差を算出
     return mse 
 ```
 
@@ -88,8 +88,8 @@ t  = np.array([58.0,58.2,60.1,65.2,55.0,60.9,61.9,56.4,62.9,57.0,64.9,55.9,68.0,
 w0 = np.linspace(-30,30,100)
 w1 = np.linspace(-30,30,100)
 
+#平均二乗誤差J,全てのw0,w1の組み合わせで算出
 J = np.zeros((len(w0),len(w1)))
-
 for i0 in range(100):
     for i1 in range(100):    
             J[i1,i0]=mse((w0[i0],w1[i1]),x,t)
