@@ -77,7 +77,7 @@ class Main{
     System.out.println("orange_juice.name :" + orange_juice.name);
 
 //  以下、Beverageクラスはalcohol_contentは持ってないので、参照しようとするとエラーになる
-//  というよりコンパイルエラーになるので、一時的にコメントアウトして表示させる
+//  というよりコンパイルエラーになるので、一時的にコメントアウト
 //   System.out.println("orange_juice.alcohol_content:" + orange_juice.alcohol_content); 
 
     orange_juice.howMuch();
