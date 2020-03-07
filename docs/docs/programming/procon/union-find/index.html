@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Union-Find木 | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.13622aa6d8994276bf552bbfff858ef7e28e2e1cfb2d02eed45a31af1233cea5.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fprocon\2funion-find\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>Union-Find木</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="union-find木">Union-Find木</h1>
+
+<p>Union-Find木について。</p>
+
+<p>Union-Find木は要素のグループ分けを管理するデータ構造である。
+1つ以上の要素を含むグループが何個かあった時、次の事が行える。</p>
+
+<ul>
+<li>2つのグループをマージする</li>
+<li>2つの要素が同じグループに含まれているか判定する</li>
+</ul>
+
+<p>注意としては、グループを分割することはできないという事。<br />
+例としては、以下のような図になる。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/union-find1.png" alt="Union-Find木 例" /></p>
+
+<p>Union-find木は特に根や次数等は決まっておらず、グループ内の要素がすべて含まれていればどのような木構造でも良い。</p>
+
+<h2 id="初期化">初期化</h2>
+
+<p>まずは要素を用意し、それぞれの要素のノードを作る。初期の状態ではこのノードがそれぞれグループを表す。この段階ではまだ要素が1つだけだが、これでも一応木を表す。以下の図にその例を示す。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/union-find2.png" alt="ノード(要素)" /></p>
+
+<h2 id="2グループのマージ">2グループのマージ</h2>
+
+<p>2つのグループ(木)をマージするには、片方のグループ(木)の根の下にもう片方のグループ(木)の根を結び付ける。以下例。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/union-find3.png" alt="グループ(木)のマージ例" /></p>
+
+<h2 id="2要素が同一グループにいることの判定">2要素が同一グループにいることの判定</h2>
+
+<p>ある2つの要素が同じグループにいることを判定するには、それぞれの要素がいるグループ(木)の根の要素が同じであるかで判定できる。以下がその例である。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/union-find4.png" alt="要素の同一グループ判定例、２要素の根が同じなら同一グループ" /></p>
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/6e81030645433f2ed42b051761b42d2981debba3" title='Last modified Mar 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 7, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>
