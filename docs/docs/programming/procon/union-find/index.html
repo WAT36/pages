@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>関数、メソッドのヘルプを見る | WAT Notes</title>
+<title>Union-Find木 | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -54,7 +54,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fother\2fhelp\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fprocon\2funion-find\2f "] {
       color: #004ed0;
   }
   </style>
@@ -101,52 +101,48 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>関数、メソッドのヘルプを見る</strong>
+  <strong>Union-Find木</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="関数-メソッドのヘルプを見る">関数、メソッドのヘルプを見る</h1>
+<h1 id="union-find木">Union-Find木</h1>
 
-<p>関数やメソッドの使い方がわからないとき、ヘルプを見る方法がある。それについてを述べる。<br />
-ただし、対話型などこちらがコマンドライン上で扱える言語に限る。故に今はPythonのみ記載する。</p>
+<p>Union-Find木について。</p>
 
+<p>Union-Find木は要素のグループ分けを管理するデータ構造である。
+1つ以上の要素を含むグループが何個かあった時、次の事が行える。</p>
 
+<ul>
+<li>2つのグループをマージする</li>
+<li>2つの要素が同じグループに含まれているか判定する</li>
+</ul>
 
+<p>注意としては、グループを分割することはできないという事。<br />
+例としては、以下のような図になる。</p>
 
+<p><img src="https://WAT36.github.io/pages/img/procon/union-find1.png" alt="Union-Find木 例" /></p>
 
-<div class="book-tabs">
+<p>Union-find木は特に根や次数等は決まっておらず、グループ内の要素がすべて含まれていればどのような木構造でも良い。</p>
 
-  <input type="radio" name="tabs-help" style="display: none;" id="tabs-help-0" checked="checked" />
-  <label for="tabs-help-0">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Pythonに<strong>help()</strong>という組み込み関数がある。引数に関数名を入力すると、文字列として扱われて検索し、得たレファレンスなどを返してくれる。<br />
-help()は、対話モードで使用する。</p>
+<h2 id="初期化">初期化</h2>
 
-<p>例えば関数maxをhelpで調べて見ると以下のようになる。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> help(max)</code></pre></div>
-<p>実行結果</p>
+<p>まずは要素を用意し、それぞれの要素のノードを作る。初期の状態ではこのノードがそれぞれグループを表す。この段階ではまだ要素が1つだけだが、これでも一応木を表す。以下の図にその例を示す。</p>
 
-<pre><code>Help on built-in function max in module builtins:
+<p><img src="https://WAT36.github.io/pages/img/procon/union-find2.png" alt="ノード(要素)" /></p>
 
-max(...)
-    max(iterable, *[, default=obj, key=func]) -&gt; value
-    max(arg1, arg2, *args, *[, key=func]) -&gt; value
-    
-    With a single iterable argument, return its biggest item. The
-    default keyword-only argument specifies an object to return if
-    the provided iterable is empty.
-    With two or more arguments, return the largest argument.
-(END)
-</code></pre>
+<h2 id="2グループのマージ">2グループのマージ</h2>
 
-  </div>
+<p>2つのグループ(木)をマージするには、片方のグループ(木)の根の下にもう片方のグループ(木)の根を結び付ける。以下例。</p>
 
-</div>
+<p><img src="https://WAT36.github.io/pages/img/procon/union-find3.png" alt="グループ(木)のマージ例" /></p>
 
+<h2 id="2要素が同一グループにいることの判定">2要素が同一グループにいることの判定</h2>
+
+<p>ある2つの要素が同じグループにいることを判定するには、それぞれの要素がいるグループ(木)の根の要素が同じであるかで判定できる。以下がその例である。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/union-find4.png" alt="要素の同一グループ判定例、２要素の根が同じなら同一グループ" /></p>
 </article>
 
       
@@ -154,8 +150,8 @@ max(...)
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/d55ad309fdacb5657186ff7910869326947a12fd" title='Last modified Jan 14, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 14, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/6e81030645433f2ed42b051761b42d2981debba3" title='Last modified Mar 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 7, 2020
     </a>
   </div>
   
