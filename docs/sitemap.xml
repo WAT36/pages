@@ -423,6 +423,11 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/mse/</loc>
+    <lastmod>2020-03-07T00:47:04+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/root/</loc>
     <lastmod>2020-01-08T20:18:06+09:00</lastmod>
   </url>
@@ -499,7 +504,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</loc>
-    <lastmod>2020-03-01T16:42:13+09:00</lastmod>
+    <lastmod>2020-03-04T22:47:10+09:00</lastmod>
   </url>
   
   <url>
@@ -514,7 +519,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/inheritance/</loc>
-    <lastmod>2020-03-06T23:40:12+09:00</lastmod>
+    <lastmod>2020-03-07T11:17:02+09:00</lastmod>
   </url>
   
   <url>
@@ -769,7 +774,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-03-06T23:40:12+09:00</lastmod>
+    <lastmod>2020-03-07T11:17:02+09:00</lastmod>
   </url>
   
   <url>
@@ -798,12 +803,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
