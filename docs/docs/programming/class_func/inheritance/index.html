@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>継承 | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.ec88cbc1de17634ad0aed857b82e2401b4d362d4caa3c4069d494930b8864aed.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2f class_func\2finheritance\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>継承</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="継承">継承</h1>
+
+<p>クラスを実装できる言語の大半は、他のクラスの構造を受け継ぎ、そこから新しい変数やメソッド(関数)等を付け足す形でクラスを定義することができる。<br />
+これを<strong>継承</strong>という。<br />
+クラスの継承の方法についてをここでは示す。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-inheritance" style="display: none;" id="tabs-inheritance-0" checked="checked" />
+  <label for="tabs-inheritance-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Javaでのクラスの継承の方法は以下の通り。</p>
+
+<pre><code>[アクセス修飾子]　class クラス名 extends 継承元クラス(スーパークラス)名 {
+  //文
+}
+</code></pre>
+
+<p>Javaでは継承する元となるクラスを<strong>スーパークラス</strong>、継承して作成したクラスを<strong>サブクラス</strong>という。<br />
+サブクラスはスーパークラスを継承して作成されるため、スーパークラスで定義した変数やメソッドは全て受け継がれる。
+サブクラスからはスーパークラスの変数やメソッドを利用することができる（ただし設定されているアクセス修飾子により、利用できない場合がある）</p>
+
+<p>実行例を以下に示す。</p>
+
+<p>Beverageクラス</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Beverage</span>{
+
+    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">price</span> <span style="color:#f92672">=</span> 0;
+    String <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Beverage</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">p</span>,String <span style="color:#a6e22e">n</span>){
+        price <span style="color:#f92672">=</span> p;
+        name <span style="color:#f92672">=</span> n;
+    }
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">void</span> howMuch(){
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;This &#34;</span><span style="color:#f92672">+</span>name<span style="color:#f92672">+</span><span style="color:#e6db74">&#34; is &#34;</span><span style="color:#f92672">+</span>price<span style="color:#f92672">+</span><span style="color:#e6db74">&#34; yen.&#34;</span>);
+    }
+}</code></pre></div>
+<p>Liquorクラス（Beverageクラスを継承）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Liquor</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Beverage</span>{
+    
+    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">alcohol_content</span><span style="color:#f92672">=</span>100;
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Liquor</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">p</span>,String <span style="color:#a6e22e">n</span>,<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">a</span>){
+        <span style="color:#66d9ef">super</span>(p,n); <span style="color:#75715e">//スーパークラスのコンストラクタ
+</span><span style="color:#75715e"></span>        alcohol_content<span style="color:#f92672">=</span>a;
+    }
+}</code></pre></div>
+<p>Mainクラス</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+
+    Beverage <span style="color:#a6e22e">orange_juice</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Beverage(100,<span style="color:#e6db74">&#34;orange juice&#34;</span>);
+    Liquor <span style="color:#a6e22e">screw_driver</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Liquor(1000,<span style="color:#e6db74">&#34;screw driver&#34;</span>,15);
+
+    <span style="color:#75715e">//orange_juice,変数、メソッドを表示
+</span><span style="color:#75715e"></span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;orange_juice.price:&#34;</span> <span style="color:#f92672">+</span> orange_juice.<span style="color:#a6e22e">price</span>);
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;orange_juice.name :&#34;</span> <span style="color:#f92672">+</span> orange_juice.<span style="color:#a6e22e">name</span>);
+
+<span style="color:#75715e">//  以下、Beverageクラスはalcohol_contentは持ってないので、参照しようとするとエラーになる
+</span><span style="color:#75715e">//  というよりコンパイルエラーになるので、一時的にコメントアウト
+</span><span style="color:#75715e">//   System.out.println(&#34;orange_juice.alcohol_content:&#34; + orange_juice.alcohol_content); 
+</span><span style="color:#75715e"></span>
+    orange_juice.<span style="color:#a6e22e">howMuch</span>();
+
+    <span style="color:#75715e">//screw_driver、変数、メソッドを表示
+</span><span style="color:#75715e"></span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;screw_driver.price:&#34;</span> <span style="color:#f92672">+</span> screw_driver.<span style="color:#a6e22e">price</span>);
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;screw_driver.name :&#34;</span> <span style="color:#f92672">+</span> screw_driver.<span style="color:#a6e22e">name</span>);
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;screw_driver.alcohol_content:&#34;</span> <span style="color:#f92672">+</span> screw_driver.<span style="color:#a6e22e">alcohol_content</span>);
+
+    screw_driver.<span style="color:#a6e22e">howMuch</span>();
+  }
+}</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>&gt; java Main
+orange_juice.price:100
+orange_juice.name :orange juice
+This orange juice is 100 yen.
+screw_driver.price:1000
+screw_driver.name :screw driver
+screw_driver.alcohol_content:15
+This screw driver is 1000 yen.
+</code></pre>
+
+  </div>
+
+  <input type="radio" name="tabs-inheritance" style="display: none;" id="tabs-inheritance-1"  />
+  <label for="tabs-inheritance-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Pythonでのクラスの継承の方法は以下の通り。</p>
+
+<pre><code>class クラス名(継承元クラス名):
+    //文
+</code></pre>
+
+<p>ここで定義したクラスは継承元クラスが持つ変数や関数を受け継ぐので、文中に定義しなくても参照が可能である。<br />
+別クラスを継承したクラスに定義した変数や関数はそのクラスのみが持ち、継承元のクラスは利用できない。</p>
+
+<p>実行例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#Beverageクラス(飲み物)</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Beverage</span>():
+<span style="color:#f92672">...</span>     price<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>       
+<span style="color:#f92672">...</span>     name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>        
+<span style="color:#f92672">...</span>     <span style="color:#66d9ef">def</span> __init__(self,p,n):
+<span style="color:#f92672">...</span>             self<span style="color:#f92672">.</span>price<span style="color:#f92672">=</span>p    
+<span style="color:#f92672">...</span>             self<span style="color:#f92672">.</span>name<span style="color:#f92672">=</span>n     
+<span style="color:#f92672">...</span>     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">howmuch</span>(self):  
+<span style="color:#f92672">...</span>             <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;This &#34;</span><span style="color:#f92672">+</span>self<span style="color:#f92672">.</span>name<span style="color:#f92672">+</span><span style="color:#e6db74">&#34; is &#34;</span><span style="color:#f92672">+</span>str(self<span style="color:#f92672">.</span>price)<span style="color:#f92672">+</span><span style="color:#e6db74">&#34; yen.&#34;</span> 
+<span style="color:#f92672">...</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#Liquorクラス(アルコール飲料)、Beverageクラスを継承</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Liquor</span>(Beverage):
+<span style="color:#f92672">...</span>     alcohol_content<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span> 
+<span style="color:#f92672">...</span>     <span style="color:#66d9ef">def</span> __init__(self,p,n,a): 
+<span style="color:#f92672">...</span>             self<span style="color:#f92672">.</span>price<span style="color:#f92672">=</span>p      
+<span style="color:#f92672">...</span>             self<span style="color:#f92672">.</span>name<span style="color:#f92672">=</span>n  
+<span style="color:#f92672">...</span>             self<span style="color:#f92672">.</span>alcohol_content<span style="color:#f92672">=</span>a
+<span style="color:#f92672">...</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> orange_juice <span style="color:#f92672">=</span> Beverage(<span style="color:#ae81ff">100</span>,<span style="color:#e6db74">&#34;orange juice&#34;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> screw_driver <span style="color:#f92672">=</span> Liquor(<span style="color:#ae81ff">1000</span>,<span style="color:#e6db74">&#34;screw driver&#34;</span>,<span style="color:#ae81ff">15</span>) 
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#Beverageクラスのprice,nameは参照できる</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> orange_juice<span style="color:#f92672">.</span>price
+<span style="color:#ae81ff">100</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> orange_juice<span style="color:#f92672">.</span>name 
+<span style="color:#e6db74">&#39;orange juice&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#Beverageクラスはalcohol_contentは持ってないので、参照しようとするとエラーになる</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> orange_juice<span style="color:#f92672">.</span>alcohol_content
+Traceback (most recent call last):
+  File <span style="color:#e6db74">&#34;&lt;stdin&gt;&#34;</span>, line <span style="color:#ae81ff">1</span>, <span style="color:#f92672">in</span> <span style="color:#f92672">&lt;</span>module<span style="color:#f92672">&gt;</span>
+<span style="color:#a6e22e">AttributeError</span>: <span style="color:#e6db74">&#39;Beverage&#39;</span> object has no attribute <span style="color:#e6db74">&#39;alcohol_content&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#Beverageクラスのhowmuch関数は利用できる</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> orange_juice<span style="color:#f92672">.</span>howmuch()
+<span style="color:#e6db74">&#39;This orange juice is 100 yen.&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#LiquorクラスはBeverageクラスを継承しているので、変数price,nameを参照できる。</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> screw_driver<span style="color:#f92672">.</span>price            
+<span style="color:#ae81ff">1000</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> screw_driver<span style="color:#f92672">.</span>name             
+<span style="color:#e6db74">&#39;screw driver&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#Liquorクラスはalcohol_contentを定義しているので、これも参照できる。</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> screw_driver<span style="color:#f92672">.</span>alcohol_content  
+<span style="color:#ae81ff">15</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#LiquorクラスはBeverageクラスを継承しているので、関数howmuch()を利用できる。</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> screw_driver<span style="color:#f92672">.</span>howmuch()        
+<span style="color:#e6db74">&#39;This screw driver is 1000 yen.&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/9323ddf05838413c65885ec7edcfe4e94e55c08c" title='Last modified Mar 6, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 6, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

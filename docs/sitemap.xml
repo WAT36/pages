@@ -154,7 +154,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/classfunc_index/</loc>
-    <lastmod>2020-02-04T20:50:16+09:00</lastmod>
+    <lastmod>2020-03-04T23:10:47+09:00</lastmod>
   </url>
   
   <url>
@@ -423,11 +423,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/mse/</loc>
-    <lastmod>2020-03-06T23:31:01+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/root/</loc>
     <lastmod>2020-01-08T20:18:06+09:00</lastmod>
   </url>
@@ -504,7 +499,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</loc>
-    <lastmod>2020-03-04T22:47:10+09:00</lastmod>
+    <lastmod>2020-03-01T16:42:13+09:00</lastmod>
   </url>
   
   <url>
@@ -515,6 +510,11 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/procon/procon_index/</loc>
     <lastmod>2020-03-02T08:01:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/class_func/inheritance/</loc>
+    <lastmod>2020-03-06T23:40:12+09:00</lastmod>
   </url>
   
   <url>
@@ -769,7 +769,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-03-06T23:31:01+09:00</lastmod>
+    <lastmod>2020-03-06T23:40:12+09:00</lastmod>
   </url>
   
   <url>
@@ -798,12 +798,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
