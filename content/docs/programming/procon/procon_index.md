@@ -19,3 +19,4 @@ bookToc: false
  - [ワーシャル・フロイド法]({{< relref "/posts/warshall_floyd.md" >}})
 - 木
  - [Union-Find木]({{< relref "/docs/programming/procon/union-find.md" >}})
+- [動的計画法]({{< relref "/docs/programming/procon/dynamic_planning.md" >}})
