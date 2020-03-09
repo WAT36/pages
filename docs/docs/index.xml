@@ -1401,15 +1401,6 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
-      <title>その他</title>
-      <link>https://WAT36.github.io/pages/docs/programming/other/</link>
-      <pubDate>Sat, 07 Sep 2019 18:23:49 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/other/</guid>
-      <description>その他 その他、括れてない手法などをまとめる。 説明 Java Python メソッド(関数)の宣言 (アクセス修飾子) static 関数名(引数){} 例：public static void main(String[] args){} def 関</description>
-    </item>
-    
-    <item>
       <title>配列・リスト</title>
       <link>https://WAT36.github.io/pages/docs/programming/list/list_index/</link>
       <pubDate>Tue, 03 Sep 2019 22:53:31 +0900</pubDate>
