@@ -713,6 +713,15 @@
     </item>
     
     <item>
+      <title>勾配法(最急降下法)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/steepest_descent_method/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/steepest_descent_method/</guid>
+      <description>勾配法(最急降下法) 前述の平均二乗誤差で最も誤差が小さくなるw0,w1を正確に求めるにはどうすればよいのか？ その一例として、ここでは勾配法と</description>
+    </item>
+    
+    <item>
       <title>単位行列</title>
       <link>https://WAT36.github.io/pages/docs/programming/math/identity/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -925,7 +934,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</guid>
-      <description>機械学習 機械学習の手法についてをまとめる。 教師あり学習 直線モデル(線形回帰) 平均二乗誤差</description>
+      <description>機械学習 機械学習の手法についてをまとめる。 教師あり学習 直線モデル(線形回帰) 平均二乗誤差 勾配法(最急降下法)</description>
     </item>
     
     <item>
