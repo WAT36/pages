@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>競プロテク | WAT Notes</title>
+<title>グラフ | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -54,7 +54,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fprocon\2fprocon_index\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fgraph\2fgraph_index\2f "] {
       color: #004ed0;
   }
   </style>
@@ -101,31 +101,47 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>競プロテク</strong>
+  <strong>グラフ</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="競プロテク">競プロテク</h1>
+<h1 id="グラフ">グラフ</h1>
 
-<p>競技プログラミングでよく使う手法についてまとめる。
-個人的に学びながらなので進度遅めかも</p>
+<p>データサイエンスでは必須？  グラフ描画についてをまとめる。
+ここも都合上、現在はPythonのみ記載。</p>
+
+<p>グラフ描画では<strong>matplotlib</strong>の<strong>pyplot</strong>というライブラリを利用する。</p>
 
 <ul>
-<li><a href="https://WAT36.github.io/pages/posts/bisect/">二分探索(Pythonで二分探索を行うライブラリ「bisect」)</a></li>
-<li><a href="https://WAT36.github.io/pages/posts/heapq/">優先度付きキュー(Pythonで実装するライブラリ「heapq」)</a></li>
-<li><a href="https://WAT36.github.io/pages/posts/queue_py/">キュー(Pythonでの実装モジュール「deque」)</a></li>
 <li>グラフ
 
 <ul>
-<li><a href="https://WAT36.github.io/pages/posts/graph_coloring/">グラフの頂点彩色・面彩色・辺彩色(Welsh・Powellのアルゴリズム)</a></li>
-<li><a href="https://WAT36.github.io/pages/posts/warshall_floyd/">ワーシャル・フロイド法</a></li>
-</ul></li>
-<li>木
+<li>2次元グラフ
 
 <ul>
-<li><a href="https://WAT36.github.io/pages/docs/programming/procon/union-find/">Union-Find木</a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/graph/plot/">(折れ線)グラフを描画する</a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/graph/func_plot/">一変数関数f(x)をグラフに描画する</a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/graph/color/">グラフに色をつける</a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/graph/legend/">グラフの凡例を表示する</a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/graph/lim/">x,y軸の表示範囲を指定する</a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/graph/title/">グラフのタイトルを設定する</a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/graph/label/">軸のラベルを設定する</a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/graph/grid/">グラフにグリッド線を表示させる</a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/graph/subplot/">グラフを複数表示させる</a></li>
+</ul></li>
+<li>3次元グラフ
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/graph/2varfunc/">2変数関数を定義する</a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/graph/pcolor/">2変数関数のグラフ(ヒートマップ)を作成する</a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/graph/surface/">2変数関数のグラフ(３D面グラフ)を作成する</a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/graph/contour/">2変数関数のグラフ(等高線プロット)を作成する</a>
+
+
+<br /></li>
+</ul></li>
 </ul></li>
 </ul>
 </article>
@@ -135,8 +151,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/553442b9a2479afa644f96f5ade11b4c629a6a53" title='Last modified Mar 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 4, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/3ee01fcb84ff062dcd70744df4d35b2552805472" title='Last modified Feb 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Feb 3, 2020
     </a>
   </div>
   

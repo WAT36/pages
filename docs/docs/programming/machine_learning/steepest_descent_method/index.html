@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.fdc468a51860e488edb455eee6a94b0c282ecbfc5430b8d5192693cb2a00a01d.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.8bcb5c05ca9bdbc12020b5d19ff18e2aaec9804052874055ad5fa21f272cda16.js"></script>
 
 
 
@@ -113,11 +113,64 @@ https://github.com/alex-shpak/hugo-book
 
 <p>その一例として、ここでは<strong>勾配法</strong>という方法についてを述べる。</p>
 
-<p>勾配法とは</p>
+<p>勾配法とは曲面(2変数関数のグラフ)において、最初にある座標を定めて曲面の傾きを求め、そこから傾きの方向(=曲面の座標が低くなる方向)へ座標を移していく、という動作を繰り返し、最終的に傾き0の座標にたどり着くことで曲面が最も小さくなる座標を求めるという方法である。</p>
+
+<p>前述の平均二乗誤差Jにおいて、この勾配法を利用し最もJが小さくなるw0,w1の組み合わせを求めることを考える。</p>
+
+<p>平均二乗誤差Jの(w0,w1)での傾きは以下のように表される。</p>
+
+<p>(∇J = [Jをw0,w1で偏微分した行列] = [Jを展開しw0,w1で実際に偏微分した式を示す])</p>
+
+<p>この値はそれぞれJのw0,w1に関する傾きを示している。</p>
+
+<p>これを利用し、w0,w1の座標を移動させることで、傾きが0かつJの値が低くなる方向へと近づけていく。</p>
+
+<p><b>w</b> = [w0,w1] とし、t回移動させた後の<b>w</b>を<b>w</b>(t)とすると、以下の漸化式が成り立つ。</p>
+
+<p><b>w</b>(t+1) = <b>w</b>(t) - α∇J|w(t)</p>
+
+<p>ここでαは<strong>学習率</strong>と呼ばれるパラメータで、1回の移動で<b>w</b>をどれだけ移動させるかの度合を示す。</p>
+
+<p>w0,w1それぞれで表すと以下のようになる。</p>
+
+<p>w<sub>0</sub>(t+1) = w<sub>0</sub>(t) - α(Jをw0で偏微分)|w0(t),w1(t)</p>
+
+<p>w<sub>1</sub>(t+1) = w<sub>1</sub>(t) - α(Jをw1で偏微分)|w0(t),w1(t)</p>
+
+<p>それではこの式を利用するために、この式に出てくるJをw0,w1で偏微分した値を求めてみよう。</p>
+
+<p>まずJは前述の平均二乗誤差の定義から以下のような式である。</p>
+
+<p>(Jの定義式を載せる)</p>
+
+<p>yn = w0x + w1 より</p>
+
+<p>(J = 右辺はyを展開した式)</p>
+
+<p>これをw0,w1でそれぞれ偏微分すると</p>
+
+<p>(Jを偏微分した式)</p>
+
+<p>になる。これより、上式は</p>
+
+<p>w<sub>0</sub>(t+1) = w<sub>0</sub>(t) - α(↑で求めた式)</p>
+
+<p>w<sub>1</sub>(t+1) = w<sub>1</sub>(t) - α(↑で求めた式)</p>
+
+<p>となる。これを利用して求めてみよう。</p>
+
+<p>コード例を以下に記載する。</p>
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/31126ce9eac237865ba6877ecf1dc9b24f061ed2" title='Last modified Mar 9, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 9, 2020
+    </a>
+  </div>
   
 </div>
 
