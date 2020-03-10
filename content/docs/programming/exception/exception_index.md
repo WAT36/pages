@@ -1,5 +1,5 @@
 ---
-title: "Exception Index"
+title: "例外処理"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
@@ -13,3 +13,4 @@ bookToc: false
 
 - 例外処理
  - [例外処理(try文)]({{< relref "/docs/programming/exception/try.md" >}})
+ - [自分で例外クラスを定義する]({{< relref "/docs/programming/exception/myexception.md" >}})

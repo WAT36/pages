@@ -138,15 +138,6 @@
     </item>
     
     <item>
-      <title>Exception Index</title>
-      <link>https://WAT36.github.io/pages/docs/programming/exception/exception_index/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/exception/exception_index/</guid>
-      <description>例外処理 プログラミングをする上で誰もが経験するのはエラー（例外）だろう。 コンパイルエラーに関しては文法上の問題なので、ここでは主に実行時エラ</description>
-    </item>
-    
-    <item>
       <title>for文</title>
       <link>https://WAT36.github.io/pages/docs/programming/control/for/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -687,6 +678,15 @@
     </item>
     
     <item>
+      <title>例外処理</title>
+      <link>https://WAT36.github.io/pages/docs/programming/exception/exception_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/exception/exception_index/</guid>
+      <description>例外処理 プログラミングをする上で誰もが経験するのはエラー（例外）だろう。 コンパイルエラーに関しては文法上の問題なので、ここでは主に実行時エラ</description>
+    </item>
+    
+    <item>
       <title>例外処理(try文)</title>
       <link>https://WAT36.github.io/pages/docs/programming/exception/try/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -954,6 +954,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/class_func/inheritance/</guid>
       <description>継承 クラスを実装できる言語の大半は、他のクラスの構造を受け継ぎ、そこから新しい変数やメソッド(関数)等を付け足す形でクラスを定義することがで</description>
+    </item>
+    
+    <item>
+      <title>自分で例外クラスを定義する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/exception/myexception/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/exception/myexception/</guid>
+      <description>自分で例外クラスを定義する 基本、例外(エラー)はあらかじめ定義されている、対応する例外を示すクラスが投げられるという形で例外の発生を示すが、</description>
     </item>
     
     <item>
