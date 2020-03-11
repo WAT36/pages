@@ -61,3 +61,14 @@ w<sub>1</sub>(t+1) = w<sub>1</sub>(t) - α(↑で求めた式)
 
 コード例を以下に記載する。
 
+まずは平均二乗誤差Jのw<sub>0</sub>,<sub>1</sub>における勾配(↑の　Jを偏微分した式　というやつ)を求める関数をd_mseとおくと以下のようになる。(w,x,tを入力)
+
+```python
+
+def d_mse(w,x,t):
+    y = w[0] * x + w[1]
+    d_w0 = 2 * np.mean((y-t)*x)
+    d_w1 = 2 * np.mean(y-t)
+    return d_w0,d_w1
+
+```
