@@ -15,39 +15,127 @@ bookToc: false
 
 勾配法とは曲面(2変数関数のグラフ)において、最初にある座標を定めて曲面の傾きを求め、そこから傾きの方向(=曲面の座標が低くなる方向)へ座標を移していく、という動作を繰り返し、最終的に傾き0の座標にたどり着くことで曲面が最も小さくなる座標を求めるという方法である。  
 
-前述の平均二乗誤差Jにおいて、この勾配法を利用し最もJが小さくなるw0,w1の組み合わせを求めることを考える。  
+前述の平均二乗誤差Jにおいて、この勾配法を利用し最もJが小さくなるw<sub>0</sub>,w<sub>1</sub>の組み合わせを求めることを考える。  
 
-平均二乗誤差Jの(w0,w1)での傾きは以下のように表される。  
+平均二乗誤差Jの(w<sub>0</sub>,w<sub>1</sub>)での傾きは以下のように表される。  
 
-(∇J = [Jをw0,w1で偏微分した行列] = [Jを展開しw0,w1で実際に偏微分した式を示す])
+<math>
+<mi>∇</mi>
+<mi>J</mi>
+<mo>=</mo>
+<mfenced open="[" close="]"> <mtable>
+<mtr> 
+    <mtd>
+    <mfrac> 
+        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
+        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>0</mn></msub></mrow>
+    </mfrac>
+    </mtd>
+</mtr> 
+<mtr>
+    <mtd>
+    <mfrac> 
+        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
+        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>1</mn></msub></mrow>
+    </mfrac>
+    </mtd>
+</mtr>
+</mtable> 
+</mfenced>
+<mo>=</mo>
+<mfenced open="[" close="]"> 
+<mtable>
+<mtr> 
+    <mtd>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+    <mo>(</mo>
+    <msub>
+        <mi>y</mi>
+        <mi>n</mi> 
+    </msub>
+    <mo>-</mo>
+    <msub>
+        <mi>t</mi>
+        <mi>n</mi> 
+    </msub>
+    <mo>)</mo>
+    <msub>
+        <mi>x</mi>
+        <mi>n</mi> 
+    </msub>
+    </mtd>
+</mtr> 
+<mtr>
+    <mtd>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+        <mi>N-1</mi> 
+    </munderover> 
+    <mo>(</mo>
+    <msub>
+        <mi>y</mi>
+        <mi>n</mi> 
+    </msub>
+    <mo>-</mo>
+    <msub>
+        <mi>t</mi>
+        <mi>n</mi> 
+    </msub>
+    <mo>)</mo>
+    </mtd>
+</mtr>
+</mtable> 
+</mfenced>
+</math>
 
-この値はそれぞれJのw0,w1に関する傾きを示している。
+この値はそれぞれJのw<sub>0</sub>,w<sub>1</sub>に関する傾きを示している。
 
-これを利用し、w0,w1の座標を移動させることで、傾きが0かつJの値が低くなる方向へと近づけていく。
+これを利用し、w<sub>0</sub>,w<sub>1</sub>の座標を移動させることで、傾きが0かつJの値が低くなる方向へと近づけていく。
 
-<b>w</b> = [w0,w1] とし、t回移動させた後の<b>w</b>を<b>w</b>(t)とすると、以下の漸化式が成り立つ。
+<b>w</b> = [w<sub>0</sub>,w<sub>1</sub>] とし、t回移動させた後の<b>w</b>を<b>w</b>(t)とすると、以下の漸化式が成り立つ。
 
 <b>w</b>(t+1) = <b>w</b>(t) - α∇J|w(t)
 
 ここでαは**学習率**と呼ばれるパラメータで、1回の移動で<b>w</b>をどれだけ移動させるかの度合を示す。
 
-w0,w1それぞれで表すと以下のようになる。
+w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
 
 w<sub>0</sub>(t+1) = w<sub>0</sub>(t) - α(Jをw0で偏微分)|w0(t),w1(t)
 
 w<sub>1</sub>(t+1) = w<sub>1</sub>(t) - α(Jをw1で偏微分)|w0(t),w1(t)
 
-それではこの式を利用するために、この式に出てくるJをw0,w1で偏微分した値を求めてみよう。  
+それではこの式を利用するために、この式に出てくるJをw<sub>0</sub>,w<sub>1</sub>で偏微分した値を求めてみよう。  
 
 まずJは前述の平均二乗誤差の定義から以下のような式である。  
 
 (Jの定義式を載せる)
 
-yn = w0x + w1 より
+yn = w<sub>0</sub> x + w<sub>1</sub> より
 
 (J = 右辺はyを展開した式)
 
-これをw0,w1でそれぞれ偏微分すると
+これをw<sub>0</sub>,w<sub>1</sub>でそれぞれ偏微分すると
 
 (Jを偏微分した式)
 
