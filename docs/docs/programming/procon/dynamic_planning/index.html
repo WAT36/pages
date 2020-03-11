@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.24bddbeb067de8c306195ea84309f76e304c46c76d08fd1011b00cbbffd72797.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.715221e636c7690bb57724c9a6250a38f3b90b0a2e3ff9a85d98023902ef3746.js"></script>
 
 
 
@@ -170,6 +170,10 @@ https://github.com/alex-shpak/hugo-book
 <p>しかし、数が大きいと計算量が膨大となり、また途中で同じ値を求める計算を複数回行うこともあり非効率な時がある。<br />
 このような時、動的計画法を使うと一度計算した結果を記憶しているため参照するだけで利用でき、再帰よりも効率的に求められる。</p>
 
+<p>一連の動作を図で表すと以下の通りになる。</p>
+
+<p>（図を載せる）</p>
+
 <p>利用例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">dp <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)]
 dp[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
@@ -186,16 +190,69 @@ dp[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">=</span><spa
 
 <p>動的計画法の2次元での問題例として有名なのが　ナップザック問題　である。</p>
 
-<p>~~ 作成中 ~~</p>
-</article>
+<p>ナップザック問題とは
+重さがw<sub>i</sub>、価値がv<sub>i</sub>であるようなn個の品物があった時、重さの総和がWを超えないように品物を選ぶ時の、価値の総和の最大値を求める問題である。(0＜i≦n)</p>
+
+<p>深さ優先探索や全探索等を用いて求める方法が考えられるが、
+計算量が膨大( O(2<sup>n</sup>) )となり非効率な場合もある。</p>
+
+<p>(ビット)全探索を用いた実装例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">n<span style="color:#f92672">=</span>int(input())                   <span style="color:#75715e">#品物の数</span>
+w<span style="color:#f92672">=</span>list(map(int,input()<span style="color:#f92672">.</span>split())) <span style="color:#75715e">#重さ</span>
+v<span style="color:#f92672">=</span>list(map(int,input()<span style="color:#f92672">.</span>split())) <span style="color:#75715e">#価値</span>
+W<span style="color:#f92672">=</span>int(input())                   <span style="color:#75715e">#重さの閾値</span>
+
+ans<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>   <span style="color:#75715e">#答え</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>n):
+    bit_i <span style="color:#f92672">=</span> bin(i)[<span style="color:#ae81ff">2</span>:]<span style="color:#f92672">.</span>zfill(n)  <span style="color:#75715e">#数字iをn桁の2進数で表す</span>
+    vi<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>                         <span style="color:#75715e">#bit_iのパターンの時の価値</span>
+    wi<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>                         <span style="color:#75715e">#bit_iのパターンの時の重さ</span>
+    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(n):
+        <span style="color:#66d9ef">if</span>(bit_i[j] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;1&#39;</span>):
+            vi<span style="color:#f92672">+=</span>v[i]             <span style="color:#75715e">#bit_iのj番目の桁が1ならj番目の品物を選ぶ</span>
+            wi<span style="color:#f92672">+=</span>w[i]
+    <span style="color:#66d9ef">if</span>(wi<span style="color:#f92672">&lt;=</span>W):                  
+        ans<span style="color:#f92672">=</span>max(ans,vi)          <span style="color:#75715e">#重さがW以下で価値がこれまで調べたものより大きいならそれを最大価値とする</span>
+
+<span style="color:#66d9ef">print</span>(ans) <span style="color:#75715e">#最大価値を出力</span></code></pre></div>
+<p>そこで、動的計画法を用い、計算を効率化させることを考える。</p>
+
+<p>まず、2次元リストdp[i][j]を用意する。dp[i][j]を「i番目の品物までの間で、重さの総和がjを超えないような選び方での価値の最大値」と定義する。</p>
+
+<p>この時、dpは以下の式で表せられる。</p>
+
+<p>dp[i][j] = {max(dp[i-1][j-w[i-1]]+v[i-1],dp[i-1][j])  (j&gt;=w[i-1])
+            dp[i-1]<a href="j&lt;w[i-1]">j</a></p>
+
+<p>動作を図で表すと以下の通り。</p>
+
+<p>（図を載せる）</p>
+
+<p>動的計画法を用いると計算量はO(nW)となり、全探索を行うよりも非常に効率的に行える。</p>
+
+<p>実装例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">w<span style="color:#f92672">=</span>list(map(int,input()<span style="color:#f92672">.</span>split())) <span style="color:#75715e">#重さ</span>
+v<span style="color:#f92672">=</span>list(map(int,input()<span style="color:#f92672">.</span>split())) <span style="color:#75715e">#価値</span>
+W<span style="color:#f92672">=</span>int(input())                   <span style="color:#75715e">#重さの閾値</span>
+
+dp<span style="color:#f92672">=</span>[[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(W<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)]
+
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,n):
+    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,W):
+        <span style="color:#66d9ef">if</span>(j<span style="color:#f92672">&lt;</span>w[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]):
+            dp[i][j] <span style="color:#f92672">=</span> dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j]
+        <span style="color:#66d9ef">else</span>:
+            dp[i][j] <span style="color:#f92672">=</span> max(dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">-</span>w[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]]<span style="color:#f92672">+</span>v[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j])
+
+<span style="color:#66d9ef">print</span>(dp[n][W]) <span style="color:#75715e">#n番目の品物の中から重さの総和がWを超えない選び方での最大の価値 = 答え</span></code></pre></div></article>
 
       
 <div class="book-footer justify-between">
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/54f7c2e96b0d996e48b913f9273bd3bae987dc4d" title='Last modified Mar 9, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 9, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/ce0a284730d682eb6aeee4dff956cbbe90e7e55d" title='Last modified Mar 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 11, 2020
     </a>
   </div>
   
