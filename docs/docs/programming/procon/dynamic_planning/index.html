@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.715221e636c7690bb57724c9a6250a38f3b90b0a2e3ff9a85d98023902ef3746.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.84ac78961f63b8a8d560c1388a6f753fb033f8907f72286c108fe2617b1c7743.js"></script>
 
 
 
@@ -121,9 +121,8 @@ https://github.com/alex-shpak/hugo-book
 フィボナッチ数列とは</p>
 
 <math>
-<msub>
-    <mi>F(n)</mi> 
-</msub>
+<mi>F</mi> 
+<mo>(n)</mo>
 <mo>=</mo>
 <mrow>
     <mo rspace="0.25em">{</mo>
@@ -146,9 +145,11 @@ https://github.com/alex-shpak/hugo-book
         </mtr>
         <mtr>
             <mtd>
-                    <mi>F(n-2)</mi> 
+                    <mi>F</mi> 
+                    <mo>(n-2)</mo>
                 <mo>+</mo>
-                    <mi>F(n-1)</mi> 
+                    <mi>F</mi>
+                    <mo>(n-1)</mo> 
             </mtd>
             <mtd>
                 <mtext>other</mtext>
@@ -167,12 +168,11 @@ https://github.com/alex-shpak/hugo-book
         <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
     <span style="color:#66d9ef">elif</span>(n<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">1</span>):
         <span style="color:#66d9ef">return</span> fib(n<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">+</span> fib(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)</code></pre></div>
-<p>しかし、数が大きいと計算量が膨大となり、また途中で同じ値を求める計算を複数回行うこともあり非効率な時がある。<br />
-このような時、動的計画法を使うと一度計算した結果を記憶しているため参照するだけで利用でき、再帰よりも効率的に求められる。</p>
+<p>しかし、数が大きいと計算量が膨大となり、また途中で同じ値を求める計算を複数回行うこともあり非効率な時がある。</p>
 
-<p>一連の動作を図で表すと以下の通りになる。</p>
+<p><img src="https://WAT36.github.io/pages/img/procon/dynamic_planning1.png" alt="再帰での計算イメージ" /></p>
 
-<p>（図を載せる）</p>
+<p>このような時、動的計画法を使うと一度計算した結果を記憶しているため参照するだけで利用でき、再帰よりも効率的に求められる。</p>
 
 <p>利用例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">dp <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)]
@@ -186,6 +186,10 @@ dp[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">=</span><spa
         <span style="color:#75715e">#dp[i] = dp[i-1] + dp[i-2]をnまで計算</span>
         <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">2</span>,n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
             dp[i] <span style="color:#f92672">=</span> dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>]</code></pre></div>
+<p>一連の動作を図で表すと以下の通りになる。</p>
+
+<p>（図を載せる）</p>
+
 <h2 id="2次元の例-ナップザック問題">2次元の例（ナップザック問題）</h2>
 
 <p>動的計画法の2次元での問題例として有名なのが　ナップザック問題　である。</p>
@@ -251,7 +255,7 @@ dp<span style="color:#f92672">=</span>[[<span style="color:#ae81ff">0</span> <sp
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/ce0a284730d682eb6aeee4dff956cbbe90e7e55d" title='Last modified Mar 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/3260afb3ad73e66c74f8f4d1916f1ba33e714faa" title='Last modified Mar 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 11, 2020
     </a>
   </div>

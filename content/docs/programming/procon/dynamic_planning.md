@@ -20,9 +20,8 @@ bookToc: false
 フィボナッチ数列とは  
 
 <math>
-<msub>
-    <mi>F(n)</mi> 
-</msub>
+<mi>F</mi> 
+<mo>(n)</mo>
 <mo>=</mo>
 <mrow>
     <mo rspace="0.25em">{</mo>
@@ -45,9 +44,11 @@ bookToc: false
         </mtr>
         <mtr>
             <mtd>
-                    <mi>F(n-2)</mi> 
+                    <mi>F</mi> 
+                    <mo>(n-2)</mo>
                 <mo>+</mo>
-                    <mi>F(n-1)</mi> 
+                    <mi>F</mi>
+                    <mo>(n-1)</mo> 
             </mtd>
             <mtd>
                 <mtext>other</mtext>
@@ -71,12 +72,10 @@ def fib(n):
 ```
 
 しかし、数が大きいと計算量が膨大となり、また途中で同じ値を求める計算を複数回行うこともあり非効率な時がある。  
+
+![再帰での計算イメージ](/img/procon/dynamic_planning1.png)
+
 このような時、動的計画法を使うと一度計算した結果を記憶しているため参照するだけで利用でき、再帰よりも効率的に求められる。  
-
-一連の動作を図で表すと以下の通りになる。
-
-（図を載せる）
-
 
 利用例を以下に示す。  
 
@@ -93,6 +92,10 @@ def fib(n):
         for i in range(2,n+1):
             dp[i] = dp[i-1] + dp[i-2]
 ```
+
+一連の動作を図で表すと以下の通りになる。
+
+（図を載せる）
 
 
 ## 2次元の例（ナップザック問題）
