@@ -103,7 +103,7 @@ def fib(n):
 動的計画法の2次元での問題例として有名なのが　ナップザック問題　である。  
 
 ナップザック問題とは
-重さがw<sub>i</sub>、価値がv<sub>i</sub>であるようなn個の品物があった時、重さの総和がWを超えないように品物を選ぶ時の、価値の総和の最大値を求める問題である。(0＜i≦n)
+重さがw<sub>i</sub>、価値がv<sub>i</sub>であるようなn個の品物があった時、重さの総和がWを超えないように品物を選ぶ時の、価値の総和の最大値を求める問題である。(0<i≦n)
 
 深さ優先探索や全探索等を用いて求める方法が考えられるが、
 計算量が膨大( O(2<sup>n</sup>) )となり非効率な場合もある。
@@ -137,8 +137,93 @@ print(ans) #最大価値を出力
 
 この時、dpは以下の式で表せられる。
 
-dp[i][j] = {max(dp[i-1][j-w[i-1]]+v[i-1],dp[i-1][j])  (j>=w[i-1])
-            dp[i-1][j]                                (j<w[i-1])
+<math>
+<mi>dp</mi> 
+<mfenced open="[" close="]"><mi>i</mi></mfenced>
+<mfenced open="[" close="]"><mi>j</mi></mfenced>
+<mo>=</mo>
+<mrow>
+    <mo rspace="0.25em">{</mo>
+    <mtable columnalign="left" columnspacing="0.5em">
+        <mtr>
+            <mtd>
+                <mi>max</mi>
+                <mo>(</mo>
+                <mi>dp</mi> 
+                <mo>[</mo>
+                <mi>i</mi>
+                <mo>-</mo>
+                <mn>1</mn>
+                <mo>]</mo>
+                <mo>[</mo>
+                <mi>j</mi>
+                <mo>-</mo>
+                <mi>w</mi>
+                <mo>[</mo>
+                <mi>i</mi>
+                <mo>-</mo>
+                <mn>1</mn>
+                <mo>]</mo>
+                <mo>]</mo>
+                <mo>+</mo>                
+                <mi>v</mi> 
+                <mo>[</mo>
+                <mi>i</mi>
+                <mo>-</mo>
+                <mn>1</mn>
+                <mo>]</mo>
+                <mi>,</mi>
+                <mi>dp</mi> 
+                <mo>[</mo>
+                <mi>i</mi>
+                <mo>-</mo>
+                <mn>1</mn>
+                <mo>]</mo>
+                <mo>[</mo>
+                <mi>j</mi>
+                <mo>]</mo>
+                <mo>)</mo>
+            </mtd>
+            <mtd>
+                <mo>(</mo>
+                <mi>j</mi>
+                <mo>&gE;</mo>
+                <mi>w</mi> 
+                <mo>[</mo>
+                <mi>i</mi>
+                <mo>-</mo>
+                <mn>1</mn>
+                <mo>]</mo>
+                <mo>)</mo>
+            </mtd>
+        </mtr>
+        <mtr>
+            <mtd>
+                <mi>dp</mi> 
+                <mo>[</mo>
+                <mi>i</mi>
+                <mo>-</mo>
+                <mn>1</mn>
+                <mo>]</mo>
+                <mo>[</mo>
+                <mi>j</mi>
+                <mo>]</mo>
+            </mtd>
+            <mtd>
+                <mo>(</mo>
+                <mi>j</mi>
+                <mo><</mo>
+                <mi>w</mi> 
+                <mo>[</mo>
+                <mi>i</mi>
+                <mo>-</mo>
+                <mn>1</mn>
+                <mo>]</mo>
+                <mo>)</mo>
+            </mtd>
+        </mtr>
+</mrow>
+</math>
 
 動作を図で表すと以下の通り。
 
