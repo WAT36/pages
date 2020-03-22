@@ -142,15 +142,110 @@ bookToc: false
     <mo>)</mo>
 </mrow>
 </msub>
+
 </math>
 
 ここでαは**学習率**と呼ばれるパラメータで、1回の移動で<b>w</b>をどれだけ移動させるかの度合を示す。
 
 w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
 
-w<sub>0</sub>(t+1) = w<sub>0</sub>(t) - α(Jをw0で偏微分)|<sub>w0(t),w1(t)</sub>
-
-w<sub>1</sub>(t+1) = w<sub>1</sub>(t) - α(Jをw1で偏微分)|<sub>w0(t),w1(t)</sub>
+<math>
+<msub>
+<mi>w</mi>
+<mn>0</mn>
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>+</mo>
+<mn>1</mn>
+<mo>)</mo>
+<mo>=</mo>
+<msub>
+<mi>w</mi>
+<mn>0</mn>
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+<mo>-</mo>
+<mi>α</mi>
+    <mfrac> 
+        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
+        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>0</mn></msub></mrow>
+    </mfrac>
+<mfenced open="|" close=""> 
+<mi></mi>
+</mfenced>
+<msub>
+<mi></mi>
+<mrow>
+<msub>
+<mi>w</mi>
+<mn>0</mn>
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+<mo>,</mo>
+<msub>
+<mi>w</mi>
+<mn>1</mn>
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+</mrow>
+</msub>
+</math>
+<br>
+<math>
+<msub>
+<mi>w</mi>
+<mn>1</mn>
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>+</mo>
+<mn>1</mn>
+<mo>)</mo>
+<mo>=</mo>
+<msub>
+<mi>w</mi>
+<mn>1</mn>
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+<mo>-</mo>
+<mi>α</mi>
+    <mfrac> 
+        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
+        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>1</mn></msub></mrow>
+    </mfrac>
+<mfenced open="|" close=""> 
+<mi></mi>
+</mfenced>
+<msub>
+<mi></mi>
+<mrow>
+<msub>
+<mi>w</mi>
+<mn>0</mn>
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+<mo>,</mo>
+<msub>
+<mi>w</mi>
+<mn>1</mn>
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+</mrow>
+</msub>
+</math>
 
 それではこの式を利用するために、この式に出てくるJをw<sub>0</sub>,w<sub>1</sub>で偏微分した値を求めてみよう。  
 

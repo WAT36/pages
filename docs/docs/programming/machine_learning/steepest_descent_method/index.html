@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.76be4b88c3538364b335aef2d6ded29e998dc343e63463d24a93c9fb3dda9e1a.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.a5f06b1a0fa83765f8cab07b52d425a188fcf4bc7e0c7bfed3350b658633faff.js"></script>
 
 
 
@@ -242,15 +242,110 @@ https://github.com/alex-shpak/hugo-book
     <mo>)</mo>
 </mrow>
 </msub>
+
 </math>
 
 <p>ここでαは<strong>学習率</strong>と呼ばれるパラメータで、1回の移動で<b>w</b>をどれだけ移動させるかの度合を示す。</p>
 
 <p>w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。</p>
 
-<p>w<sub>0</sub>(t+1) = w<sub>0</sub>(t) - α(Jをw0で偏微分)|<sub>w0(t),w1(t)</sub></p>
-
-<p>w<sub>1</sub>(t+1) = w<sub>1</sub>(t) - α(Jをw1で偏微分)|<sub>w0(t),w1(t)</sub></p>
+<math>
+<msub>
+<mi>w</mi>
+<mn>0</mn>
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>+</mo>
+<mn>1</mn>
+<mo>)</mo>
+<mo>=</mo>
+<msub>
+<mi>w</mi>
+<mn>0</mn>
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+<mo>-</mo>
+<mi>α</mi>
+    <mfrac> 
+        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
+        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>0</mn></msub></mrow>
+    </mfrac>
+<mfenced open="|" close=""> 
+<mi></mi>
+</mfenced>
+<msub>
+<mi></mi>
+<mrow>
+<msub>
+<mi>w</mi>
+<mn>0</mn>
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+<mo>,</mo>
+<msub>
+<mi>w</mi>
+<mn>1</mn>
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+</mrow>
+</msub>
+</math>
+<br>
+<math>
+<msub>
+<mi>w</mi>
+<mn>1</mn>
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>+</mo>
+<mn>1</mn>
+<mo>)</mo>
+<mo>=</mo>
+<msub>
+<mi>w</mi>
+<mn>1</mn>
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+<mo>-</mo>
+<mi>α</mi>
+    <mfrac> 
+        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
+        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>1</mn></msub></mrow>
+    </mfrac>
+<mfenced open="|" close=""> 
+<mi></mi>
+</mfenced>
+<msub>
+<mi></mi>
+<mrow>
+<msub>
+<mi>w</mi>
+<mn>0</mn>
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+<mo>,</mo>
+<msub>
+<mi>w</mi>
+<mn>1</mn>
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+</mrow>
+</msub>
+</math>
 
 <p>それではこの式を利用するために、この式に出てくるJをw<sub>0</sub>,w<sub>1</sub>で偏微分した値を求めてみよう。</p>
 
@@ -288,8 +383,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/73b926f7be2fe3468828cfc08d54f39e53396d0c" title='Last modified Mar 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 11, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/69b293d268f70b94a2d89b9e4c67ae36eda7d700" title='Last modified Mar 23, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 23, 2020
     </a>
   </div>
   
