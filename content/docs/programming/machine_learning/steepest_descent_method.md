@@ -115,15 +115,42 @@ bookToc: false
 
 <b>w</b> = [w<sub>0</sub>,w<sub>1</sub>] とし、t回移動させた後の<b>w</b>を<b>w</b>(t)とすると、以下の漸化式が成り立つ。
 
-<b>w</b>(t+1) = <b>w</b>(t) - α∇J|w(t)
+<math>
+<mi mathvariant="bold-italic">w</mi>
+<mo>(</mo>
+<mi>t</mi>
+<mo>+</mo>
+<mn>1</mn>
+<mo>)</mo>
+<mo>=</mo>
+<mi mathvariant="bold-italic">w</mi>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+<mo>=</mo>
+<mi>α</mi>
+<mi>∇</mi>
+<mi>J</mi>
+<mfenced open="|" close=""> <mi></mi>
+</mfenced>
+<msub>
+<mi></mi>
+<mrow>
+    <mi mathvariant="bold-italic">w</mi>
+    <mo>(</mo>
+    <mi>t</mi>
+    <mo>)</mo>
+</mrow>
+</msub>
+</math>
 
 ここでαは**学習率**と呼ばれるパラメータで、1回の移動で<b>w</b>をどれだけ移動させるかの度合を示す。
 
 w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
 
-w<sub>0</sub>(t+1) = w<sub>0</sub>(t) - α(Jをw0で偏微分)|w0(t),w1(t)
+w<sub>0</sub>(t+1) = w<sub>0</sub>(t) - α(Jをw0で偏微分)|<sub>w0(t),w1(t)</sub>
 
-w<sub>1</sub>(t+1) = w<sub>1</sub>(t) - α(Jをw1で偏微分)|w0(t),w1(t)
+w<sub>1</sub>(t+1) = w<sub>1</sub>(t) - α(Jをw1で偏微分)|<sub>w0(t),w1(t)</sub>
 
 それではこの式を利用するために、この式に出てくるJをw<sub>0</sub>,w<sub>1</sub>で偏微分した値を求めてみよう。  
 
