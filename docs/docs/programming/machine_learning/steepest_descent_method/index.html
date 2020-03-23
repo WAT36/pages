@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.664bf2aebd366e0a582744146160ee605843b49427c9667e8c2b7f4279cbd784.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.5fad5c63cc32bea7488e9e9167c4acaae84a722fb13c12686d31dfbf69f5a884.js"></script>
 
 
 
@@ -351,27 +351,353 @@ https://github.com/alex-shpak/hugo-book
 
 <p>まずJは前述の平均二乗誤差の定義から以下のような式である。</p>
 
-<p>(Jの定義式を載せる)</p>
+<math>
+<mi>J</mi>
+<mo>=</mo>
+    <mfrac> 
+        <mn>1</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+    <msup>
+        <mrow>
+            <mo>(</mo>
+            <msub>
+                <mi>y</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>)</mo>
+        </mrow>
+        <mn>2</mn> 
+    </msup>
 
-<p>yn = w<sub>0</sub> x + w<sub>1</sub> より</p>
+</math>
 
-<p>(J = 右辺はyを展開した式)</p>
+<p>ここで
+<math>
+<msub>
+<mn>y</mn>
+<mn>n</mn>
+</msub>
+<mo>=</mo>
+<msub>
+<mn>w</mn>
+<mn>0</mn>
+</msub>
+<mn>x</mn>
+<mo>+</mo>
+<msub>
+<mn>w</mn>
+<mn>1</mn>
+</msub>
+</math>
+より</p>
+
+<math>
+<mi>J</mi>
+<mo>=</mo>
+    <mfrac> 
+        <mn>1</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+    <msup>
+        <mrow>
+            <mo>(</mo>
+            <msub>
+                <mi>w</mi>
+                <mn>0</mn> 
+            </msub>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>+</mo>
+            <msub>
+                <mi>w</mi>
+                <mn>1</mn> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>)</mo>
+        </mrow>
+        <mn>2</mn> 
+    </msup>
+</math>
 
 <p>これをw<sub>0</sub>,w<sub>1</sub>でそれぞれ偏微分すると</p>
 
-<p>(Jを偏微分した式)</p>
+<math>
+    <mfrac> 
+        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
+        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>0</mn></msub></mrow>
+    </mfrac>
+<mo>=</mo>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+            <mo>(</mo>
+            <msub>
+                <mi>w</mi>
+                <mn>0</mn> 
+            </msub>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>+</mo>
+            <msub>
+                <mi>w</mi>
+                <mn>1</mn> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>)</mo>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+<mo>=</mo>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+            <mo>(</mo>
+            <msub>
+                <mi>y</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>)</mo>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+</math>
+<br>
+<math>
+    <mfrac> 
+        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
+        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>1</mn></msub></mrow>
+    </mfrac>
+<mo>=</mo>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+            <mo>(</mo>
+            <msub>
+                <mi>w</mi>
+                <mn>0</mn> 
+            </msub>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>+</mo>
+            <msub>
+                <mi>w</mi>
+                <mn>1</mn> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>)</mo>
+<mo>=</mo>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+            <mo>(</mo>
+            <msub>
+                <mi>y</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>)</mo>
+</math>
 
 <p>になる。これより、上式は</p>
 
-<p>w<sub>0</sub>(t+1) = w<sub>0</sub>(t) - α(↑で求めた式)</p>
-
-<p>w<sub>1</sub>(t+1) = w<sub>1</sub>(t) - α(↑で求めた式)</p>
+<math>
+<msub>
+    <mi>w</mi>
+    <mn>0</mn> 
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>+</mo>
+<mn>1</mn>
+<mo>)</mo>
+<mo>=</mo>
+<msub>
+    <mi>w</mi>
+    <mn>0</mn> 
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+<mo>-</mo>
+<mn>α</mn>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+            <mo>(</mo>
+            <msub>
+                <mi>y</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>)</mo>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+</math>
+<br>
+<math>
+<msub>
+    <mi>w</mi>
+    <mn>1</mn> 
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>+</mo>
+<mn>1</mn>
+<mo>)</mo>
+<mo>=</mo>
+<msub>
+    <mi>w</mi>
+    <mn>1</mn> 
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+<mo>-</mo>
+<mn>α</mn>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+            <mo>(</mo>
+            <msub>
+                <mi>y</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>)</mo>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+</math>
 
 <p>となる。これを利用して求めてみよう。</p>
 
 <p>コード例を以下に記載する。</p>
 
-<p>まずは平均二乗誤差Jのw<sub>0</sub>,<sub>1</sub>における勾配(↑の　Jを偏微分した式　というやつ)を求める関数をd_mseとおくと以下のようになる。(w,x,tを入力)</p>
+<p>まずは平均二乗誤差Jのw<sub>0</sub>,<sub>1</sub>における勾配を求める関数をd_mseとおくと以下のようになる。(w,x,tを入力とする)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">d_mse</span>(w,x,t):
     y <span style="color:#f92672">=</span> w[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> x <span style="color:#f92672">+</span> w[<span style="color:#ae81ff">1</span>]
     d_w0 <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>mean((y<span style="color:#f92672">-</span>t)<span style="color:#f92672">*</span>x)
@@ -383,7 +709,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/625a5e402f641ff7adc7c73f1dc93c210cc07d2b" title='Last modified Mar 23, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/65b6e1a759de79e4ff1ef6d88c102b377338995e" title='Last modified Mar 23, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 23, 2020
     </a>
   </div>

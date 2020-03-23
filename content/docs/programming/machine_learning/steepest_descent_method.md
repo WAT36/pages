@@ -394,6 +394,35 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
                 <mi>x</mi>
                 <mi>n</mi> 
             </msub>
+<mo>=</mo>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+            <mo>(</mo>
+            <msub>
+                <mi>y</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>)</mo>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
 </math>
 <br>
 <math>
@@ -435,20 +464,141 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
                 <mi>n</mi> 
             </msub>
             <mo>)</mo>
+<mo>=</mo>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+            <mo>(</mo>
+            <msub>
+                <mi>y</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>)</mo>
 </math>
 
 
 になる。これより、上式は
 
-w<sub>0</sub>(t+1) = w<sub>0</sub>(t) - α(↑で求めた式)
-
-w<sub>1</sub>(t+1) = w<sub>1</sub>(t) - α(↑で求めた式)
+<math>
+<msub>
+    <mi>w</mi>
+    <mn>0</mn> 
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>+</mo>
+<mn>1</mn>
+<mo>)</mo>
+<mo>=</mo>
+<msub>
+    <mi>w</mi>
+    <mn>0</mn> 
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+<mo>-</mo>
+<mn>α</mn>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+            <mo>(</mo>
+            <msub>
+                <mi>y</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>)</mo>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+</math>
+<br>
+<math>
+<msub>
+    <mi>w</mi>
+    <mn>1</mn> 
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>+</mo>
+<mn>1</mn>
+<mo>)</mo>
+<mo>=</mo>
+<msub>
+    <mi>w</mi>
+    <mn>1</mn> 
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+<mo>-</mo>
+<mn>α</mn>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+            <mo>(</mo>
+            <msub>
+                <mi>y</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>)</mo>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+</math>
 
 となる。これを利用して求めてみよう。
 
 コード例を以下に記載する。
 
-まずは平均二乗誤差Jのw<sub>0</sub>,<sub>1</sub>における勾配(↑の　Jを偏微分した式　というやつ)を求める関数をd_mseとおくと以下のようになる。(w,x,tを入力)
+まずは平均二乗誤差Jのw<sub>0</sub>,<sub>1</sub>における勾配を求める関数をd_mseとおくと以下のようになる。(w,x,tを入力とする)
 
 ```python
 
@@ -457,5 +607,4 @@ def d_mse(w,x,t):
     d_w0 = 2 * np.mean((y-t)*x)
     d_w1 = 2 * np.mean(y-t)
     return d_w0,d_w1
-
 ```
