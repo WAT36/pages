@@ -73,11 +73,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/exception/exception_index/</loc>
-    <lastmod>2020-01-26T01:35:02+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/control/for/</loc>
     <lastmod>2020-01-17T22:14:37+09:00</lastmod>
   </url>
@@ -378,6 +373,16 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/exception/throw/</loc>
+    <lastmod>2020-03-11T21:50:44+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/exception/exception_index/</loc>
+    <lastmod>2020-03-11T21:50:44+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/exception/try/</loc>
     <lastmod>2020-01-26T01:35:02+09:00</lastmod>
   </url>
@@ -390,11 +395,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/control/control_index/</loc>
     <lastmod>2020-01-24T23:44:43+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/procon/dynamic_planning/</loc>
-    <lastmod>2020-03-15T09:09:57+09:00</lastmod>
   </url>
   
   <url>
@@ -524,12 +524,17 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/procon/procon_index/</loc>
-    <lastmod>2020-03-08T12:38:47+09:00</lastmod>
+    <lastmod>2020-03-04T23:00:05+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/inheritance/</loc>
     <lastmod>2020-03-07T11:17:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/exception/myexception/</loc>
+    <lastmod>2020-03-11T00:39:43+09:00</lastmod>
   </url>
   
   <url>
@@ -784,7 +789,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-03-15T09:09:57+09:00</lastmod>
+    <lastmod>2020-03-11T21:50:44+09:00</lastmod>
   </url>
   
   <url>
@@ -813,12 +818,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -920,11 +925,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/tags/%E4%BA%8C%E5%88%86%E6%8E%A2%E7%B4%A2/</loc>
     <lastmod>2019-09-15T12:49:10+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/other/</loc>
-    <lastmod>2019-09-11T22:42:38+09:00</lastmod>
   </url>
   
   <url>

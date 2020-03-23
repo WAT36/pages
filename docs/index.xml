@@ -137,15 +137,6 @@
     </item>
     
     <item>
-      <title>Exception Index</title>
-      <link>https://WAT36.github.io/pages/docs/programming/exception/exception_index/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/exception/exception_index/</guid>
-      <description>例外処理 プログラミングをする上で誰もが経験するのはエラー（例外）だろう。 コンパイルエラーに関しては文法上の問題なので、ここでは主に実行時エラ</description>
-    </item>
-    
-    <item>
       <title>for文</title>
       <link>https://WAT36.github.io/pages/docs/programming/control/for/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -686,6 +677,24 @@
     </item>
     
     <item>
+      <title>例外の明示的な発生</title>
+      <link>https://WAT36.github.io/pages/docs/programming/exception/throw/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/exception/throw/</guid>
+      <description>例外の明示的な発生 例外(エラー)は実行時にコードの不備によりに起こるのみではなく、（コード中で）自分で意図的に発生させることもできる。ここで</description>
+    </item>
+    
+    <item>
+      <title>例外処理</title>
+      <link>https://WAT36.github.io/pages/docs/programming/exception/exception_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/exception/exception_index/</guid>
+      <description>例外処理 プログラミングをする上で誰もが経験するのはエラー（例外）だろう。 コンパイルエラーに関しては文法上の問題なので、ここでは主に実行時エラ</description>
+    </item>
+    
+    <item>
       <title>例外処理(try文)</title>
       <link>https://WAT36.github.io/pages/docs/programming/exception/try/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -962,6 +971,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/class_func/inheritance/</guid>
       <description>継承 クラスを実装できる言語の大半は、他のクラスの構造を受け継ぎ、そこから新しい変数やメソッド(関数)等を付け足す形でクラスを定義することがで</description>
+    </item>
+    
+    <item>
+      <title>自分で例外クラスを定義する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/exception/myexception/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/exception/myexception/</guid>
+      <description>自分で例外クラスを定義する 基本、例外(エラー)はあらかじめ定義されている、対応する例外を示すクラスが投げられるという形で例外の発生を示すが、</description>
     </item>
     
     <item>
@@ -1478,15 +1496,6 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       
       <guid>https://WAT36.github.io/pages/posts/bisect/</guid>
       <description>趣味で競プロをやるようになり、Atcoderの問題を何問か解いているのだが、 やっている内に覚えないといけないこともいくつかあるわけで。 その内</description>
-    </item>
-    
-    <item>
-      <title>その他</title>
-      <link>https://WAT36.github.io/pages/docs/programming/other/</link>
-      <pubDate>Sat, 07 Sep 2019 18:23:49 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/other/</guid>
-      <description>その他 その他、括れてない手法などをまとめる。 説明 Java Python メソッド(関数)の宣言 (アクセス修飾子) static 関数名(引数){} 例：public static void main(String[] args){} def 関</description>
     </item>
     
     <item>
