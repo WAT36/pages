@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.5fad5c63cc32bea7488e9e9167c4acaae84a722fb13c12686d31dfbf69f5a884.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.6f322f026002f4ce25ceb659195c6675df34b6951364ba6502befa3998637b53.js"></script>
 
 
 
@@ -702,15 +702,32 @@ https://github.com/alex-shpak/hugo-book
     y <span style="color:#f92672">=</span> w[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> x <span style="color:#f92672">+</span> w[<span style="color:#ae81ff">1</span>]
     d_w0 <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>mean((y<span style="color:#f92672">-</span>t)<span style="color:#f92672">*</span>x)
     d_w1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>mean(y<span style="color:#f92672">-</span>t)
-    <span style="color:#66d9ef">return</span> d_w0,d_w1</code></pre></div></article>
+    <span style="color:#66d9ef">return</span> d_w0,d_w1</code></pre></div>
+<p>試しに、w=[10,10]での平均二乗誤差を算出してみる。データは前章で使ったデータを利用する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#入力値</span>
+<span style="color:#f92672">...</span> x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">167.9</span>,<span style="color:#ae81ff">164.3</span>,<span style="color:#ae81ff">171.6</span>,<span style="color:#ae81ff">172.7</span>,<span style="color:#ae81ff">162.8</span>,<span style="color:#ae81ff">170.2</span>,<span style="color:#ae81ff">172.3</span>,<span style="color:#ae81ff">163.8</span>,<span style="color:#ae81ff">168.8</span>,<span style="color:#ae81ff">167.2</span>,<span style="color:#ae81ff">172.3</span>,<span style="color:#ae81ff">166.4</span>,<span style="color:#ae81ff">173.1</span>,<span style="color:#ae81ff">176.9</span>,<span style="color:#ae81ff">178.4</span>,<span style="color:#ae81ff">167.1</span>,<span style="color:#ae81ff">177.4</span>,<span style="color:#ae81ff">173.7</span>,<span style="color:#ae81ff">172.0</span>,<span style="color:#ae81ff">174.1</span>])
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#実測値</span>
+<span style="color:#f92672">...</span> t  <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">58.0</span>,<span style="color:#ae81ff">58.2</span>,<span style="color:#ae81ff">60.1</span>,<span style="color:#ae81ff">65.2</span>,<span style="color:#ae81ff">55.0</span>,<span style="color:#ae81ff">60.9</span>,<span style="color:#ae81ff">61.9</span>,<span style="color:#ae81ff">56.4</span>,<span style="color:#ae81ff">62.9</span>,<span style="color:#ae81ff">57.0</span>,<span style="color:#ae81ff">64.9</span>,<span style="color:#ae81ff">55.9</span>,<span style="color:#ae81ff">68.0</span>,<span style="color:#ae81ff">67.9</span>,<span style="color:#ae81ff">69.1</span>,<span style="color:#ae81ff">60.8</span>,<span style="color:#ae81ff">65.6</span>,<span style="color:#ae81ff">66.1</span>,<span style="color:#ae81ff">59.9</span>,<span style="color:#ae81ff">69.5</span>])
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">d_mse</span>(w,x,t):
+<span style="color:#f92672">...</span>     <span style="color:#75715e">#略</span>
+<span style="color:#f92672">...</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> d_w <span style="color:#f92672">=</span> d_mse([<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">10</span>],x,t)
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(d_w)
+(<span style="color:#ae81ff">564976.373</span>, <span style="color:#ae81ff">3308.6699999999996</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div></article>
 
       
 <div class="book-footer justify-between">
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/65b6e1a759de79e4ff1ef6d88c102b377338995e" title='Last modified Mar 23, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 23, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/e96db29505ce7eeb88c9a3e822a050d4e3144f33" title='Last modified Mar 24, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 24, 2020
     </a>
   </div>
   
