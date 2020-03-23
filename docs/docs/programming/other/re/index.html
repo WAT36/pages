@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>関数、メソッドのヘルプを見る | WAT Notes</title>
+<title>正規表現 | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -54,7 +54,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fother\2fhelp\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fother\2fre\2f "] {
       color: #004ed0;
   }
   </style>
@@ -104,16 +104,17 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>関数、メソッドのヘルプを見る</strong>
+  <strong>正規表現</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="関数-メソッドのヘルプを見る">関数、メソッドのヘルプを見る</h1>
+<h1 id="正規表現">正規表現</h1>
 
-<p>関数やメソッドの使い方がわからないとき、ヘルプを見る方法がある。それについてを述べる。<br />
-ただし、対話型などこちらがコマンドライン上で扱える言語に限る。故に今はPythonのみ記載する。</p>
+<p>文字列に正規表現を適用してある文字列パターンを抽出・検索したいという場合があると思う。</p>
+
+<p>その場合に利用する方法を示す。</p>
 
 
 
@@ -121,30 +122,30 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" name="tabs-help" style="display: none;" id="tabs-help-0" checked="checked" />
-  <label for="tabs-help-0">
+  <input type="radio" name="tabs-re" style="display: none;" id="tabs-re-0" checked="checked" />
+  <label for="tabs-re-0">
     Python
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>Pythonに<strong>help()</strong>という組み込み関数がある。引数に関数名を入力すると、文字列として扱われて検索し、得たレファレンスなどを返してくれる。<br />
-help()は、対話モードで使用する。</p>
+    <p>Pythonでは正規表現を扱う<strong>re</strong>モジュールがある。
+この中には色々関数があり、これらを利用して文字列パターンの抽出や検索を行う。</p>
 
-<p>例えば関数maxをhelpで調べて見ると以下のようになる。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> help(max)</code></pre></div>
-<p>実行結果</p>
+<p>また、reを使う時、条件として使う正規表現も文字列として入力するが、正規表現で使う文字は特殊文字が多く、そのまま入力すると正規表現として認識してくれない時がある。
+それを防ぐため、pythonの<strong>raw文字列</strong>を使って正規表現を書く。raw文字列を使うと、特殊文字を無視して一文字として扱ってくれるのでこの場合便利。使用法は文字列のクォーテーション(&lsquo;)の前にrを付ける。</p>
 
-<pre><code>Help on built-in function max in module builtins:
+<p>(例)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;C:\Users\Downloads&#39;</span>) 
+  File <span style="color:#e6db74">&#34;&lt;stdin&gt;&#34;</span>, line <span style="color:#ae81ff">1</span>
+<span style="color:#a6e22e">SyntaxError</span>: (unicode error) <span style="color:#e6db74">&#39;unicodeescape&#39;</span> codec can<span style="color:#e6db74">&#39;t decode bytes in position 2-3: truncated \UXXXXXXXX escape</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e"># \u はUnicode文字列として認識されてエラーになる</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;C:\Users\Downloads&#39;</span>) 
+C:\Users\Downloads
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e"># \Uも\Dも特殊文字とは認識せずそのまま出力する</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
+<p>以下に例を示す。</p>
 
-max(...)
-    max(iterable, *[, default=obj, key=func]) -&gt; value
-    max(arg1, arg2, *args, *[, key=func]) -&gt; value
-    
-    With a single iterable argument, return its biggest item. The
-    default keyword-only argument specifies an object to return if
-    the provided iterable is empty.
-    With two or more arguments, return the largest argument.
-(END)
-</code></pre>
+<p>（作成中）</p>
 
   </div>
 
@@ -153,14 +154,7 @@ max(...)
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/d55ad309fdacb5657186ff7910869326947a12fd" title='Last modified Jan 14, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 14, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
