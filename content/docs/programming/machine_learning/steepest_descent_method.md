@@ -251,15 +251,192 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
 
 まずJは前述の平均二乗誤差の定義から以下のような式である。  
 
-(Jの定義式を載せる)
+<math>
+<mi>J</mi>
+<mo>=</mo>
+    <mfrac> 
+        <mn>1</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+    <msup>
+        <mrow>
+            <mo>(</mo>
+            <msub>
+                <mi>y</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>)</mo>
+        </mrow>
+        <mn>2</mn> 
+    </msup>
 
-yn = w<sub>0</sub> x + w<sub>1</sub> より
+</math>
 
-(J = 右辺はyを展開した式)
+ここで
+<math>
+<msub>
+<mn>y</mn>
+<mn>n</mn>
+</msub>
+<mo>=</mo>
+<msub>
+<mn>w</mn>
+<mn>0</mn>
+</msub>
+<mn>x</mn>
+<mo>+</mo>
+<msub>
+<mn>w</mn>
+<mn>1</mn>
+</msub>
+</math>
+より
+
+<math>
+<mi>J</mi>
+<mo>=</mo>
+    <mfrac> 
+        <mn>1</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+    <msup>
+        <mrow>
+            <mo>(</mo>
+            <msub>
+                <mi>w</mi>
+                <mn>0</mn> 
+            </msub>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>+</mo>
+            <msub>
+                <mi>w</mi>
+                <mn>1</mn> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>)</mo>
+        </mrow>
+        <mn>2</mn> 
+    </msup>
+</math>
 
 これをw<sub>0</sub>,w<sub>1</sub>でそれぞれ偏微分すると
 
-(Jを偏微分した式)
+<math>
+    <mfrac> 
+        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
+        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>0</mn></msub></mrow>
+    </mfrac>
+<mo>=</mo>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+            <mo>(</mo>
+            <msub>
+                <mi>w</mi>
+                <mn>0</mn> 
+            </msub>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>+</mo>
+            <msub>
+                <mi>w</mi>
+                <mn>1</mn> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>)</mo>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+</math>
+<br>
+<math>
+    <mfrac> 
+        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
+        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>1</mn></msub></mrow>
+    </mfrac>
+<mo>=</mo>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+            <mo>(</mo>
+            <msub>
+                <mi>w</mi>
+                <mn>0</mn> 
+            </msub>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>+</mo>
+            <msub>
+                <mi>w</mi>
+                <mn>1</mn> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>)</mo>
+</math>
+
 
 になる。これより、上式は
 
