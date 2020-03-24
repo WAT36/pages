@@ -15,6 +15,7 @@ bookToc: false
 - [優先度付きキュー(Pythonで実装するライブラリ「heapq」)]({{< relref "/posts/heapq.md" >}})
 - [キュー(Pythonでの実装モジュール「deque」)]({{< relref "/posts/queue_py.md" >}})
 - グラフ 
+ - [グラフの表現方法]({{< relref "/docs/programming/procon/graph.md" >}})
  - [グラフの頂点彩色・面彩色・辺彩色(Welsh・Powellのアルゴリズム)]({{< relref "/posts/graph_coloring.md" >}})
  - [ワーシャル・フロイド法]({{< relref "/posts/warshall_floyd.md" >}})
 - 木

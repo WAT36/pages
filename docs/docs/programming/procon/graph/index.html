@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>その他 | WAT Notes</title>
+<title>グラフの表現方法 | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.ad5c2cd09e8766953c362d22587f1133aa08b5932fac80379443360b55a3dcb1.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.69df028cb230edc6395cc1d55b8ffc686aac88f05bd15d67c01288cce3d85f15.js"></script>
 
 
 
@@ -54,17 +54,20 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fother\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fprocon\2fgraph\2f "] {
       color: #004ed0;
   }
   </style>
 
 <ul>
 <li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li>Notes
+
+<ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+</ul></li>
 <li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/sample/sample_index/">サンプルページ</a></li>
 </ul>
 
 
@@ -101,53 +104,37 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>その他</strong>
+  <strong>グラフの表現方法</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="その他">その他</h1>
+<h1 id="グラフの表現方法">グラフの表現方法</h1>
 
-<p>その他、括れてない手法などをまとめる。</p>
+<p>グラフはコード上でどのように表現して作ればよいのか？</p>
 
-<table>
-<thead>
-<tr>
-<th align="left">説明</th>
-<th align="left">Java</th>
-<th align="left">Python</th>
-<th align="left"></th>
-</tr>
-</thead>
+<p>ここではいくつか方法を示す。</p>
 
-<tbody>
-<tr>
-<td align="left">メソッド(関数)の宣言</td>
-<td align="left">(アクセス修飾子) <a href="戻り値の型">static</a> 関数名(引数){}<br>例：<code>public static void main(String[] args){}</code></td>
-<td align="left">def 関数名(引数):<br></td>
-<td align="left"></td>
-</tr>
+<h2 id="隣接行列">隣接行列</h2>
 
-<tr>
-<td align="left">プログラムを終了する</td>
-<td align="left">return;<br>または<br>System.exit(終了ステータス);</td>
-<td align="left">import sys<br>sys.exit()</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+<p>まずは隣接行列という方法について。</p>
+
+<p>グラフの頂点の数をVとしたときに初期値が全て0、大きさ|V|*|V|の２次元リストGを用意し、頂点iと頂点jが結ばれているときにG[i][j]、G[j][i]を1にする、という形でグラフを表現する方法である。なお、有向グラフの場合は有効な方向のみに1を設定し、重み付きグラフのときは1ではなく具体的な重みを入力する、という形で表現できる。</p>
+
+<p>（隣接行列の図の例をここに載せる、無向グラフだけでなく有向グラフなども）</p>
+
+<p>隣接行列はある2頂点が辺で結ばれているかがすぐわかるという利点があるが、|V|*|V|のリストを作るため頂点の数が多いとリストがかなり大きくなり、かつ辺の数が少ないとほとんどが使われない領域となってしまい、無駄にメモリ量を食ってしまうという欠点がある。</p>
+
+<h2 id="隣接リスト">隣接リスト</h2>
+
+<p>次に隣接リストという方法についてを述べる。</p>
+
+<p>隣接リストは</p>
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/09ca6ffc811ebc47b2da2ff208b77caaf373445e" title='Last modified Sep 11, 2019 by T.Wakasugi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 11, 2019
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
@@ -156,14 +143,6 @@ https://github.com/alex-shpak/hugo-book
     </div>
     
   
-
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#その他">その他</a></li>
-</ul>
-</nav>
-  </aside>
 
 
 
