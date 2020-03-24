@@ -601,7 +601,7 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
 まずは平均二乗誤差Jのw<sub>0</sub>,<sub>1</sub>における勾配を求める関数をd_mseとおくと以下のようになる。(w,x,tを入力とする)
 
 ```python
-
+import numpy as np
 def d_mse(w,x,t):
     y = w[0] * x + w[1]
     d_w0 = 2 * np.mean((y-t)*x)
@@ -630,4 +630,48 @@ def d_mse(w,x,t):
 >>> 
 ```
 
+w=[10,10]ではw<sub>0</sub>方向への勾配が大きいことがわかる。
 
+ではこのJの勾配を算出する関数d_mseを利用した勾配法を行う関数steepest_descent_method(x,t)を実装してみよう。
+wは先ほどの[10,10]から始めるものとし、学習率αは今回は0.001として行う。
+
+```python
+import numpy as np
+def steepest_descent_method(x,t):
+    w=[10,10]           #wの初期値
+    alpha=0.001         #学習率
+    N=10000             #繰り返し回数
+    min_dJ=0.1          #勾配法をやめる勾配の絶対値の閾値
+    w_i=np.zeros([N,2]) #w_i[j]にはj回の勾配法で算出したwの値が入る
+    w_i[0,:]=w          #w_iの最初の1行をwにする
+    for i in range(1,N):
+        dJ=d_mse(w_i[i-1],x,t)
+        w_i[i,0]=w_i[i-1,0]-alpha*dJ[0] #w0(t+1)=w0(t)-α*∂J/∂w0
+        w_i[i,1]=w_i[i-1,1]-alpha*dJ[1] #w1(t+1)=w1(t)-α*∂J/∂w1
+        if( max(np.absolute(dJ)) < min_dJ):
+            break
+    w0=w_i[i,0]     
+    w1=w_i[i,1]     
+    w_i=w_i[:i,:]   
+    return w0,w1,dJ,w_i
+```
+
+これを利用し、平均二乗誤差Jの最小値を勾配法を用いて求めて見る。
+
+```python
+>>> import numpy as np
+>>> import matplotlib.pyplot as plt
+>>> def d_mse(w,x,t):
+...     # 略
+>>> 
+>>> def steepest_descent_method(x,t):
+...     # 略
+>>> 
+>>> 
+>>> xn=100
+>>> x0=np.linspace(-25,25,xn)
+>>> x1=np.linspace(120,170,xn)
+>>> xx0,xx1=np.meshgrid(x0,x1)
+>>> J=np.zeros((len(x0),len(x1)))
+
+```
