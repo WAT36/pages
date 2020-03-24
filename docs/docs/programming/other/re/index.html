@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.9374955dce121ec69841cc0dc0d7caf37cdd92567a60b2b9d924e0dd86b032ad.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.6b16e001c65ff6d2e75188de0d622d730e03cede327b451dcfa17fcf1938e99e.js"></script>
 
 
 
@@ -116,6 +116,8 @@ https://github.com/alex-shpak/hugo-book
 
 <p>その場合に利用する方法を示す。</p>
 
+<p>ちなみに正規表現の文法についてはここでは割愛する。</p>
+
 
 
 
@@ -143,9 +145,19 @@ https://github.com/alex-shpak/hugo-book
 C:\Users\Downloads
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e"># \Uも\Dも特殊文字とは認識せずそのまま出力する</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
-<p>以下に例を示す。</p>
+<p>このraw文字列を使い、以下に正規表現の関数の例を示す。</p>
 
-<p>（作成中）</p>
+<h2 id="正規表現の文字列を正規表現オブジェクトに変換する">正規表現の文字列を正規表現オブジェクトに変換する</h2>
+
+<p>pythonのreで正規表現を使うには、文字列で表した正規表現をそのまま使う方法と、正規表現オブジェクトに変換して使う方法の2つがある。<br />
+どちらでもよいが、正規表現の動作を何回も行わせるときは最初に文字列を正規表現オブジェクトに変換させてそれを繰り返し使わせた方が効率良く利用できる。</p>
+
+<p>文字列を正規表現オブジェクトに変換するには、reモジュールの<strong>compile</strong>関数を使う。</p>
+
+<pre><code>re.compile(pattern, flags=0)
+</code></pre>
+
+<p>引数patternに文字列で表した正規表現を入れると、それに対応した正規表現オブジェクトを返してくれる。</p>
 
   </div>
 
@@ -154,7 +166,14 @@ C:\Users\Downloads
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/777a5169e17ec91bf80dff315f6e5bceb8683e51" title='Last modified Mar 24, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 24, 2020
+    </a>
+  </div>
   
 </div>
 
