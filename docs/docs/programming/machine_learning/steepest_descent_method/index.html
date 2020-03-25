@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.4dafe82ad685f79a7bf194e3618da139e63cf33712807620688dea28894c7953.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.6ccfafaa2f14f08a508635861f8cc3981a203517ece19ecac7018d0f157079e8.js"></script>
 
 
 
@@ -708,9 +708,9 @@ https://github.com/alex-shpak/hugo-book
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> 
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#入力値</span>
-<span style="color:#f92672">...</span> x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">167.9</span>,<span style="color:#ae81ff">164.3</span>,<span style="color:#ae81ff">171.6</span>,<span style="color:#ae81ff">172.7</span>,<span style="color:#ae81ff">162.8</span>,<span style="color:#ae81ff">170.2</span>,<span style="color:#ae81ff">172.3</span>,<span style="color:#ae81ff">163.8</span>,<span style="color:#ae81ff">168.8</span>,<span style="color:#ae81ff">167.2</span>,<span style="color:#ae81ff">172.3</span>,<span style="color:#ae81ff">166.4</span>,<span style="color:#ae81ff">173.1</span>,<span style="color:#ae81ff">176.9</span>,<span style="color:#ae81ff">178.4</span>,<span style="color:#ae81ff">167.1</span>,<span style="color:#ae81ff">177.4</span>,<span style="color:#ae81ff">173.7</span>,<span style="color:#ae81ff">172.0</span>,<span style="color:#ae81ff">174.1</span>])
+<span style="color:#f92672">&gt;&gt;&gt;</span> x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">167.9</span>,<span style="color:#ae81ff">164.3</span>,<span style="color:#ae81ff">171.6</span>,<span style="color:#ae81ff">172.7</span>,<span style="color:#ae81ff">162.8</span>,<span style="color:#ae81ff">170.2</span>,<span style="color:#ae81ff">172.3</span>,<span style="color:#ae81ff">163.8</span>,<span style="color:#ae81ff">168.8</span>,<span style="color:#ae81ff">167.2</span>,<span style="color:#ae81ff">172.3</span>,<span style="color:#ae81ff">166.4</span>,<span style="color:#ae81ff">173.1</span>,<span style="color:#ae81ff">176.9</span>,<span style="color:#ae81ff">178.4</span>,<span style="color:#ae81ff">167.1</span>,<span style="color:#ae81ff">177.4</span>,<span style="color:#ae81ff">173.7</span>,<span style="color:#ae81ff">172.0</span>,<span style="color:#ae81ff">174.1</span>])
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#実測値</span>
-<span style="color:#f92672">...</span> t  <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">58.0</span>,<span style="color:#ae81ff">58.2</span>,<span style="color:#ae81ff">60.1</span>,<span style="color:#ae81ff">65.2</span>,<span style="color:#ae81ff">55.0</span>,<span style="color:#ae81ff">60.9</span>,<span style="color:#ae81ff">61.9</span>,<span style="color:#ae81ff">56.4</span>,<span style="color:#ae81ff">62.9</span>,<span style="color:#ae81ff">57.0</span>,<span style="color:#ae81ff">64.9</span>,<span style="color:#ae81ff">55.9</span>,<span style="color:#ae81ff">68.0</span>,<span style="color:#ae81ff">67.9</span>,<span style="color:#ae81ff">69.1</span>,<span style="color:#ae81ff">60.8</span>,<span style="color:#ae81ff">65.6</span>,<span style="color:#ae81ff">66.1</span>,<span style="color:#ae81ff">59.9</span>,<span style="color:#ae81ff">69.5</span>])
+<span style="color:#f92672">&gt;&gt;&gt;</span> t  <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">58.0</span>,<span style="color:#ae81ff">58.2</span>,<span style="color:#ae81ff">60.1</span>,<span style="color:#ae81ff">65.2</span>,<span style="color:#ae81ff">55.0</span>,<span style="color:#ae81ff">60.9</span>,<span style="color:#ae81ff">61.9</span>,<span style="color:#ae81ff">56.4</span>,<span style="color:#ae81ff">62.9</span>,<span style="color:#ae81ff">57.0</span>,<span style="color:#ae81ff">64.9</span>,<span style="color:#ae81ff">55.9</span>,<span style="color:#ae81ff">68.0</span>,<span style="color:#ae81ff">67.9</span>,<span style="color:#ae81ff">69.1</span>,<span style="color:#ae81ff">60.8</span>,<span style="color:#ae81ff">65.6</span>,<span style="color:#ae81ff">66.1</span>,<span style="color:#ae81ff">59.9</span>,<span style="color:#ae81ff">69.5</span>])
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">d_mse</span>(w,x,t):
 <span style="color:#f92672">...</span>     <span style="color:#75715e">#略</span>
@@ -744,28 +744,15 @@ wは先ほどの[10,10]から始めるものとし、学習率αは今回は0.00
     w_i<span style="color:#f92672">=</span>w_i[:i,:]   
     <span style="color:#66d9ef">return</span> w0,w1,dJ,w_i</code></pre></div>
 <p>これを利用し、平均二乗誤差Jの最小値を勾配法を用いて求めて見る。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">d_mse</span>(w,x,t):
-<span style="color:#f92672">...</span>     <span style="color:#75715e"># 略</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">steepest_descent_method</span>(x,t):
-<span style="color:#f92672">...</span>     <span style="color:#75715e"># 略</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> xn<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> x0<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>linspace(<span style="color:#f92672">-</span><span style="color:#ae81ff">25</span>,<span style="color:#ae81ff">25</span>,xn)
-<span style="color:#f92672">&gt;&gt;&gt;</span> x1<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>linspace(<span style="color:#ae81ff">120</span>,<span style="color:#ae81ff">170</span>,xn)
-<span style="color:#f92672">&gt;&gt;&gt;</span> xx0,xx1<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>meshgrid(x0,x1)
-<span style="color:#f92672">&gt;&gt;&gt;</span> J<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros((len(x0),len(x1)))</code></pre></div></article>
+</article>
 
       
 <div class="book-footer justify-between">
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/5a350d3c0b9d3234021f4a4850eb4540a9561a02" title='Last modified Mar 24, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 24, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/baed58086ae3395eb818d7fc41169e2239ebff64" title='Last modified Mar 25, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 25, 2020
     </a>
   </div>
   
