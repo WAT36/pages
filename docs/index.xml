@@ -1064,6 +1064,15 @@
     </item>
     
     <item>
+      <title>要素とタグ</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/element/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/element/</guid>
+      <description>要素とタグ HTMLは、各コンテンツの内容をタグで囲い、それが文書の内の何であるかを示す言語である。 HTML文書内の各構成要素の事を要素(el</description>
+    </item>
+    
+    <item>
       <title>論理和(OR)</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/or_bit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1632,7 +1641,7 @@ var php_wireless = 4; siteWinsock.switch_inbox += so_control_logic; if (target_w
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/front_index/</guid>
-      <description>フロントエンド-memo フロントエンドの勉強用メモ。まずはHTMLから頑張ります・・ HTML 要素</description>
+      <description>フロントエンド-memo フロントエンドの勉強用メモ。まずはHTMLから頑張ります・・ HTML 要素とタグ</description>
     </item>
     
     <item>
