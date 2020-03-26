@@ -9,6 +9,7 @@ pagenate = 3
 publishDir = 'docs'
 hasCJKLanguage = true
 languageCode = 'ja-JP'
+googleAnalytics = 'UA-161908250-1'
 # themesDir = '../..'
 
 # Book configuration
