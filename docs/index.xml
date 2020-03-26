@@ -934,7 +934,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</guid>
-      <description>機械学習 機械学習の手法についてをまとめる。 教師あり学習 直線モデル(線形回帰) 平均二乗誤差 勾配法(最急降下法)</description>
+      <description>機械学習 機械学習の手法についてをまとめる。 教師あり学習 直線モデル(線形回帰) 平均二乗誤差 勾配法(最急降下法) 解析解</description>
     </item>
     
     <item>
@@ -1043,6 +1043,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/arange/</guid>
       <description>要素が等間隔になるベクトル 指定した範囲内で、全ての要素の感覚が等しくなるようなベクトルを生成する方法についてを示す。 Python 主に方法は二つある。 numpy.arange()</description>
+    </item>
+    
+    <item>
+      <title>解析解</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/analytical_solution/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/analytical_solution/</guid>
+      <description>解析解 先程の直線モデルの例では勾配法を用いてw0、w1の値を求めたが、実は勾配法を用いなくても数式を計算していけば最適なw0、w1が求められ</description>
     </item>
     
     <item>

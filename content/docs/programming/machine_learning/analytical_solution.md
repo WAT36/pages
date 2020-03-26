@@ -1,0 +1,198 @@
+---
+title: "解析解"
+weight: 1
+# bookFlatSection: false
+# bookShowToC: true
+bookToc: false
+---
+
+# 解析解
+
+先程の直線モデルの例では勾配法を用いてw<sub>0</sub>、w<sub>1</sub>の値を求めたが、実は勾配法を用いなくても数式を計算していけば最適なw<sub>0</sub>、w<sub>1</sub>が求められる場合がある。
+
+勾配法のような数値計算法で求められた近似的な解は数値解といい、方程式を解くことによって求められた厳密な解は**解析解**という。
+
+先程の勾配法の章において、平均二乗誤差Jが極小になる時がw<sub>0</sub>、w<sub>1</sub>の求める値なので、この条件式からw0、w1の解析解を求めていく。
+
+<math>
+    <mfrac> 
+        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
+        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>0</mn></msub></mrow>
+    </mfrac>
+<mo>=</mo>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+            <mo>(</mo>
+            <msub>
+                <mi>w</mi>
+                <mn>0</mn> 
+            </msub>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>+</mo>
+            <msub>
+                <mi>w</mi>
+                <mn>1</mn> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>)</mo>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+<mo>=</mo>
+<mn>0</mn>
+</math>
+<br>
+<math>
+    <mfrac> 
+        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
+        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>1</mn></msub></mrow>
+    </mfrac>
+<mo>=</mo>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+            <mo>(</mo>
+            <msub>
+                <mi>w</mi>
+                <mn>0</mn> 
+            </msub>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>+</mo>
+            <msub>
+                <mi>w</mi>
+                <mn>1</mn> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>)</mo>
+<mo>=</mo>
+<mn>0</mn>
+</math>
+
+
+この2式は以下のように展開できる。
+
+<math>
+    <msub>
+        <mi>w</mi>
+        <mn>0</mn> 
+    </msub>
+    <mfrac> 
+        <mn>1</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+    <msup>
+        <mrow>
+        <msub>
+            <mi>x</mi>
+            <mi>n</mi> 
+        </msub>
+        </mrow>
+        <mi>2</mi>
+    </msup>
+<mo>+</mo>
+    <msub>
+        <mi>w</mi>
+        <mn>1</mn> 
+    </msub>
+    <mfrac> 
+        <mn>1</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+    <msub>
+        <mi>x</mi>
+        <mi>n</mi> 
+    </msub>
+<mo>-</mo>
+    <mfrac> 
+        <mn>1</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+    <msub>
+        <mi>t</mi>
+        <mi>n</mi> 
+    </msub>
+    <msub>
+        <mi>x</mi>
+        <mi>n</mi> 
+    </msub>
+<mo>=</mo>
+<mn>0</mn>
+</math>
+<br>
+
+
+この時、1/N sigma xn はxnの平均値を表す。
+ここで、avg(x)をxの平均値を算出する関数とおくと、上式は以下のように置き換えられる。
+
+( avgを使って書き換えた式を載せる　)
+
+これらの式をw0、w1についてそれぞれ解くと、w0、w1は以下のように表される。
+
+(w0、w1の式を載せる)
+
+では、実際にx、tを代入してw0、w1を求めてみよう。
+
+
