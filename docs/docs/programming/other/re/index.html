@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.6b16e001c65ff6d2e75188de0d622d730e03cede327b451dcfa17fcf1938e99e.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.d0a375755483c97a726bd41f3908077f3d3228e6015f420ad2bf5ea652e98e32.js"></script>
 
 
 
@@ -159,6 +159,65 @@ C:\Users\Downloads
 
 <p>引数patternに文字列で表した正規表現を入れると、それに対応した正規表現オブジェクトを返してくれる。</p>
 
+<h2 id="正規表現を使って文字列を検索-抽出する">正規表現を使って文字列を検索・抽出する</h2>
+
+<p>実際に正規表現を使って文字列から該当する部分を検索・抽出するにはどうすればよいのか？
+それにはreモジュールの以下諸関数を利用する。</p>
+
+<ul>
+<li>re.<strong>search</strong>(pattern, string, flags=0)     #stringで正規表現patternに最初にマッチした部分を返す</li>
+<li>re.<strong>match</strong>(pattern, string, flags=0)      #stringの先頭が正規表現patternにマッチしていたらそれを返す</li>
+<li>re.<strong>fullmatch</strong>(pattern, string, flags=0)  #string全体が正規表現patternにマッチしていたらそれを返す</li>
+<li>re.<strong>findall</strong>(pattern, string, flags=0)    #string中で正規表現patternにマッチしているものをリストにして全て返す</li>
+</ul>
+
+<p>いずれの関数も、もし該当する部分がない場合はNoneが返される。
+また、これら諸関数の返り値は文字列ではなく、マッチオブジェクトと呼ばれる型のデータを返す(findallはリストを返す)。
+マッチオブジェクトから結果を取得したい場合は、以下の諸関数をさらに利用する。</p>
+
+<ul>
+<li>Match.<strong>start</strong>()   #マッチした文字列の文字列中での最初のインデックスを返す</li>
+<li>Match.<strong>end</strong>()     #マッチした文字列の文字列中での最後のインデックスを返す</li>
+<li>Match.<strong>span</strong>()    #マッチした文字列が文字列中でどこからどこまでのインデックスにあるのか返す</li>
+
+<li><p>Match.<strong>group</strong>()   #マッチした文字列を返す</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> re
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnnoooppp&#34;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> pattern<span style="color:#f92672">=</span>re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;d+&#39;</span>) 
+<span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(pattern,s)     
+<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>group()                 
+<span style="color:#e6db74">&#39;ddd&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>start()
+<span style="color:#ae81ff">9</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>end()
+<span style="color:#ae81ff">12</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>span()
+(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">12</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>match(pattern,s) 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(m)  <span style="color:#75715e">#先頭(aaa...)に一致しないのでNone</span>
+None
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> pattern<span style="color:#f92672">=</span>re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;a+&#39;</span>) 
+<span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>match(pattern,s)
+<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>group()
+<span style="color:#e6db74">&#39;aaa&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;aaa&#34;</span>                                               
+<span style="color:#f92672">&gt;&gt;&gt;</span> pattern<span style="color:#f92672">=</span>re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;a+&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>fullmatch(pattern,s)
+<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>group()
+<span style="color:#e6db74">&#39;aaa&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span>  
+<span style="color:#f92672">&gt;&gt;&gt;</span> pattern<span style="color:#f92672">=</span>re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;a&#39;</span>)    
+<span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(pattern,s)   
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(m)
+[<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div></li>
+</ul>
+
   </div>
 
 </div>
@@ -170,7 +229,7 @@ C:\Users\Downloads
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/777a5169e17ec91bf80dff315f6e5bceb8683e51" title='Last modified Mar 24, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/803796339e44cf24520b70eb873096bf58d8dabd" title='Last modified Mar 24, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 24, 2020
     </a>
   </div>

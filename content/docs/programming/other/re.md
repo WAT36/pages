@@ -51,7 +51,62 @@ re.compile(pattern, flags=0)
 
 引数patternに文字列で表した正規表現を入れると、それに対応した正規表現オブジェクトを返してくれる。
 
+## 正規表現を使って文字列を検索・抽出する
 
+実際に正規表現を使って文字列から該当する部分を検索・抽出するにはどうすればよいのか？
+それにはreモジュールの以下諸関数を利用する。
+
+- re.**search**(pattern, string, flags=0)     #stringで正規表現patternに最初にマッチした部分を返す
+- re.**match**(pattern, string, flags=0)      #stringの先頭が正規表現patternにマッチしていたらそれを返す
+- re.**fullmatch**(pattern, string, flags=0)  #string全体が正規表現patternにマッチしていたらそれを返す
+- re.**findall**(pattern, string, flags=0)    #string中で正規表現patternにマッチしているものをリストにして全て返す
+
+いずれの関数も、もし該当する部分がない場合はNoneが返される。
+また、これら諸関数の返り値は文字列ではなく、マッチオブジェクトと呼ばれる型のデータを返す(findallはリストを返す)。
+マッチオブジェクトから結果を取得したい場合は、以下の諸関数をさらに利用する。
+
+- Match.**start**()   #マッチした文字列の文字列中での最初のインデックスを返す
+- Match.**end**()     #マッチした文字列の文字列中での最後のインデックスを返す
+- Match.**span**()    #マッチした文字列が文字列中でどこからどこまでのインデックスにあるのか返す
+- Match.**group**()   #マッチした文字列を返す
+
+```python
+>>> import re
+>>> 
+>>> s = "aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnnoooppp"
+>>> 
+>>> pattern=re.compile(r'd+') 
+>>> m = re.search(pattern,s)     
+>>> m.group()                 
+'ddd'
+>>> m.start()
+9
+>>> m.end()
+12
+>>> m.span()
+(9, 12)
+>>>
+>>> m = re.match(pattern,s) 
+>>> print(m)  #先頭(aaa...)に一致しないのでNone
+None
+>>>
+>>> pattern=re.compile(r'a+') 
+>>> m = re.match(pattern,s)
+>>> m.group()
+'aaa'
+>>>
+>>> s = "aaa"                                               
+>>> pattern=re.compile(r'a+')
+>>> m = re.fullmatch(pattern,s)
+>>> m.group()
+'aaa'
+>>>  
+>>> pattern=re.compile(r'a')    
+>>> m = re.findall(pattern,s)   
+>>> print(m)
+['a', 'a', 'a']
+>>> 
+```
 
 {{< /tab >}}
 {{< /tabs >}}
