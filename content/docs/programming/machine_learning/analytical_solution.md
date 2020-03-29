@@ -182,16 +182,304 @@ bookToc: false
 <mn>0</mn>
 </math>
 <br>
+<br>
+<math>
+    <msub>
+        <mi>w</mi>
+        <mn>0</mn> 
+    </msub>
+    <mfrac> 
+        <mn>1</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+    <msub>
+        <mi>x</mi>
+        <mi>n</mi> 
+    </msub>
+<mo>+</mo>
+    <msub>
+        <mi>w</mi>
+        <mn>1</mn> 
+    </msub>
+<mo>-</mo>
+    <mfrac> 
+        <mn>1</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+    <msub>
+        <mi>t</mi>
+        <mi>n</mi> 
+    </msub>
+<mo>=</mo>
+<mn>0</mn>
+</math>
 
 
-この時、1/N sigma xn はxnの平均値を表す。
+この時、
+<math>
+    <mfrac> 
+        <mn>1</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+    <msub>
+        <mi>x</mi>
+        <mi>n</mi> 
+    </msub>
+</math>
+はx<sub>n</sub>の平均値を表す。
+
 ここで、avg(x)をxの平均値を算出する関数とおくと、上式は以下のように置き換えられる。
 
-( avgを使って書き換えた式を載せる　)
+<math>
+<msub>
+    <mi>w</mi>
+    <mn>0</mn> 
+</msub>
+<mi>avg</mi>
+<mo>(</mo>
+<msup>
+    <mrow>
+    <msub>
+        <mi>x</mi>
+        <mi>n</mi> 
+    </msub>
+    </mrow>
+    <mi>2</mi>
+</msup>
+<mo>)</mo>
+<mo>+</mo>
+<msub>
+    <mi>w</mi>
+    <mn>1</mn> 
+</msub>
+<mi>avg</mi>
+<mo>(</mo>
+<msub>
+    <mi>x</mi>
+    <mi>n</mi> 
+</msub>
+<mo>)</mo>
+<mo>-</mo>
+<mi>avg</mi>
+<mo>(</mo>
+<msub>
+    <mi>t</mi>
+    <mi>n</mi> 
+</msub>
+<msub>
+    <mi>x</mi>
+    <mi>n</mi> 
+</msub>
+<mo>)</mo>
+</math>
+<br>
+<br>
+<math>
+<msub>
+    <mi>w</mi>
+    <mn>0</mn> 
+</msub>
+<mi>avg</mi>
+<mo>(</mo>
+<msub>
+    <mi>x</mi>
+    <mi>n</mi> 
+</msub>
+<mo>)</mo>
+<mo>+</mo>
+<msub>
+    <mi>w</mi>
+    <mn>1</mn> 
+</msub>
+<mo>-</mo>
+<mi>avg</mi>
+<mo>(</mo>
+<msub>
+    <mi>t</mi>
+    <mi>n</mi> 
+</msub>
+<mo>)</mo>
+</math>
 
 これらの式をw0、w1についてそれぞれ解くと、w0、w1は以下のように表される。
 
-(w0、w1の式を載せる)
+<math>
+<msub>
+    <mi>w</mi>
+    <mn>0</mn> 
+</msub>
+<mo>=</mo>
+<mfrac> 
+    <mrow>
+    <mi>avg</mi>
+    <mo>(</mo>
+    <msub>
+        <mi>t</mi>
+        <mi>n</mi> 
+    </msub>
+    <msub>
+        <mi>x</mi>
+        <mi>n</mi> 
+    </msub>
+    <mo>)</mo>
+    <mo>-</mo>
+    <mi>avg</mi>
+    <mo>(</mo>
+    <msub>
+        <mi>t</mi>
+        <mi>n</mi> 
+    </msub>
+    <mo>)</mo>
+    <mi>avg</mi>
+    <mo>(</mo>
+    <msub>
+        <mi>x</mi>
+        <mi>n</mi> 
+    </msub>
+    <mo>)</mo>
+    </mrow>
+    <mrow>
+    <mi>avg</mi>
+    <mo>(</mo>
+    <msup>
+        <mrow>
+        <msub>
+            <mi>x</mi>
+            <mi>n</mi> 
+        </msub>
+        </mrow>
+        <mi>2</mi>
+    </msup>
+    <mo>)</mo>
+    <mo>-</mo>
+    <msup>
+    <mrow>
+    <mi>avg</mi>
+    <mo>(</mo>
+    <msup>
+        <msub>
+            <mi>x</mi>
+            <mi>n</mi> 
+        </msub>
+    </msup>
+    <mo>)</mo>
+    </mrow>
+    <mn>2</mn>
+    </mrow>
+</mfrac>
+</math>
+<br>
+<br>
+<math>
+<msub>
+    <mi>w</mi>
+    <mn>1</mn> 
+</msub>
+<mo>=</mo>
+    <mi>avg</mi>
+    <mn>(</mn>
+    <msup>
+        <msub>
+            <mi>t</mi>
+            <mi>n</mi> 
+        </msub>
+    </msup>
+    <mn>)</mn>
+<mo>-</mo>
+<mfrac> 
+    <mrow>
+    <mi>avg</mi>
+    <mo>(</mo>
+    <msub>
+        <mi>t</mi>
+        <mi>n</mi> 
+    </msub>
+    <msub>
+        <mi>x</mi>
+        <mi>n</mi> 
+    </msub>
+    <mo>)</mo>
+    <mo>-</mo>
+    <mi>avg</mi>
+    <mo>(</mo>
+    <msub>
+        <mi>t</mi>
+        <mi>n</mi> 
+    </msub>
+    <mo>)</mo>
+    <mi>avg</mi>
+    <mo>(</mo>
+    <msub>
+        <mi>x</mi>
+        <mi>n</mi> 
+    </msub>
+    <mo>)</mo>
+    </mrow>
+    <mrow>
+    <mi>avg</mi>
+    <mo>(</mo>
+    <msup>
+        <mrow>
+        <msub>
+            <mi>x</mi>
+            <mi>n</mi> 
+        </msub>
+        </mrow>
+        <mi>2</mi>
+    </msup>
+    <mo>)</mo>
+    <mo>-</mo>
+    <msup>
+    <mrow>
+    <mi>avg</mi>
+    <mo>(</mo>
+    <msup>
+        <msub>
+            <mi>x</mi>
+            <mi>n</mi> 
+        </msub>
+    </msup>
+    <mo>)</mo>
+    </mrow>
+    <mn>2</mn>
+    </mrow>
+</mfrac>
+    <mi>avg(</mi>
+    <msup>
+        <msub>
+            <mi>x</mi>
+            <mi>n</mi> 
+        </msub>
+    </msup>
+    <mn>)</mn>
+</math>
 
 では、実際にx、tを代入してw0、w1を求めてみよう。
 

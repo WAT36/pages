@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.60be80d56ec672d2ea5142fc5ccafb0a2262d60f02ffd6f8ccf3fafab6296ff1.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.941bcf952381e7e89592c94c70028801cb1844a31e8124d3c8fedf2b763d7f24.js"></script>
 
 
 
@@ -207,29 +207,29 @@ https://github.com/alex-shpak/hugo-book
 
 <p>この2式は以下のように展開できる。</p>
 
-<p><math>
+<math>
     <msub>
         <mi>w</mi>
-        <mn>0</mn>
+        <mn>0</mn> 
     </msub>
-    <mfrac>
-        <mn>1</mn>
+    <mfrac> 
+        <mn>1</mn> 
         <mi>N</mi>
     </mfrac>
-    <munderover>
-        <mo>&Sum;</mo>
+    <munderover> 
+        <mo>&Sum;</mo> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
-                <mn>0</mn>
+                <mn>0</mn> 
             </mrow>
-            <mi>N-1</mi>
-    </munderover>
+            <mi>N-1</mi> 
+    </munderover> 
     <msup>
         <mrow>
         <msub>
             <mi>x</mi>
-            <mi>n</mi>
+            <mi>n</mi> 
         </msub>
         </mrow>
         <mi>2</mi>
@@ -237,66 +237,361 @@ https://github.com/alex-shpak/hugo-book
 <mo>+</mo>
     <msub>
         <mi>w</mi>
-        <mn>1</mn>
+        <mn>1</mn> 
     </msub>
-    <mfrac>
-        <mn>1</mn>
+    <mfrac> 
+        <mn>1</mn> 
         <mi>N</mi>
     </mfrac>
-    <munderover>
-        <mo>&Sum;</mo>
+    <munderover> 
+        <mo>&Sum;</mo> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
-                <mn>0</mn>
+                <mn>0</mn> 
             </mrow>
-            <mi>N-1</mi>
-    </munderover>
+            <mi>N-1</mi> 
+    </munderover> 
     <msub>
         <mi>x</mi>
-        <mi>n</mi>
+        <mi>n</mi> 
     </msub>
 <mo>-</mo>
-    <mfrac>
-        <mn>1</mn>
+    <mfrac> 
+        <mn>1</mn> 
         <mi>N</mi>
     </mfrac>
-    <munderover>
-        <mo>&Sum;</mo>
+    <munderover> 
+        <mo>&Sum;</mo> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
-                <mn>0</mn>
+                <mn>0</mn> 
             </mrow>
-            <mi>N-1</mi>
-    </munderover>
+            <mi>N-1</mi> 
+    </munderover> 
     <msub>
         <mi>t</mi>
-        <mi>n</mi>
+        <mi>n</mi> 
     </msub>
     <msub>
         <mi>x</mi>
-        <mi>n</mi>
+        <mi>n</mi> 
     </msub>
 <mo>=</mo>
 <mn>0</mn>
 </math>
-<br></p>
+<br>
+<br>
+<math>
+    <msub>
+        <mi>w</mi>
+        <mn>0</mn> 
+    </msub>
+    <mfrac> 
+        <mn>1</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+    <msub>
+        <mi>x</mi>
+        <mi>n</mi> 
+    </msub>
+<mo>+</mo>
+    <msub>
+        <mi>w</mi>
+        <mn>1</mn> 
+    </msub>
+<mo>-</mo>
+    <mfrac> 
+        <mn>1</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mo>&Sum;</mo> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+    <msub>
+        <mi>t</mi>
+        <mi>n</mi> 
+    </msub>
+<mo>=</mo>
+<mn>0</mn>
+</math>
 
-<p>この時、1/N sigma xn はxnの平均値を表す。
-ここで、avg(x)をxの平均値を算出する関数とおくと、上式は以下のように置き換えられる。</p>
+<p>この時、
+<math>
+    <mfrac>
+        <mn>1</mn>
+        <mi>N</mi>
+    </mfrac>
+    <munderover>
+        <mo>&Sum;</mo>
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn>
+            </mrow>
+            <mi>N-1</mi>
+    </munderover>
+    <msub>
+        <mi>x</mi>
+        <mi>n</mi>
+    </msub>
+</math>
+はx<sub>n</sub>の平均値を表す。</p>
 
-<p>( avgを使って書き換えた式を載せる　)</p>
+<p>ここで、avg(x)をxの平均値を算出する関数とおくと、上式は以下のように置き換えられる。</p>
+
+<math>
+<msub>
+    <mi>w</mi>
+    <mn>0</mn> 
+</msub>
+<mi>avg</mi>
+<mo>(</mo>
+<msup>
+    <mrow>
+    <msub>
+        <mi>x</mi>
+        <mi>n</mi> 
+    </msub>
+    </mrow>
+    <mi>2</mi>
+</msup>
+<mo>)</mo>
+<mo>+</mo>
+<msub>
+    <mi>w</mi>
+    <mn>1</mn> 
+</msub>
+<mi>avg</mi>
+<mo>(</mo>
+<msub>
+    <mi>x</mi>
+    <mi>n</mi> 
+</msub>
+<mo>)</mo>
+<mo>-</mo>
+<mi>avg</mi>
+<mo>(</mo>
+<msub>
+    <mi>t</mi>
+    <mi>n</mi> 
+</msub>
+<msub>
+    <mi>x</mi>
+    <mi>n</mi> 
+</msub>
+<mo>)</mo>
+</math>
+<br>
+<br>
+<math>
+<msub>
+    <mi>w</mi>
+    <mn>0</mn> 
+</msub>
+<mi>avg</mi>
+<mo>(</mo>
+<msub>
+    <mi>x</mi>
+    <mi>n</mi> 
+</msub>
+<mo>)</mo>
+<mo>+</mo>
+<msub>
+    <mi>w</mi>
+    <mn>1</mn> 
+</msub>
+<mo>-</mo>
+<mi>avg</mi>
+<mo>(</mo>
+<msub>
+    <mi>t</mi>
+    <mi>n</mi> 
+</msub>
+<mo>)</mo>
+</math>
 
 <p>これらの式をw0、w1についてそれぞれ解くと、w0、w1は以下のように表される。</p>
 
-<p>(w0、w1の式を載せる)</p>
+<math>
+<msub>
+    <mi>w</mi>
+    <mn>0</mn> 
+</msub>
+<mo>=</mo>
+<mfrac> 
+    <mrow>
+    <mi>avg</mi>
+    <mo>(</mo>
+    <msub>
+        <mi>t</mi>
+        <mi>n</mi> 
+    </msub>
+    <msub>
+        <mi>x</mi>
+        <mi>n</mi> 
+    </msub>
+    <mo>)</mo>
+    <mo>-</mo>
+    <mi>avg</mi>
+    <mo>(</mo>
+    <msub>
+        <mi>t</mi>
+        <mi>n</mi> 
+    </msub>
+    <mo>)</mo>
+    <mi>avg</mi>
+    <mo>(</mo>
+    <msub>
+        <mi>x</mi>
+        <mi>n</mi> 
+    </msub>
+    <mo>)</mo>
+    </mrow>
+    <mrow>
+    <mi>avg</mi>
+    <mo>(</mo>
+    <msup>
+        <mrow>
+        <msub>
+            <mi>x</mi>
+            <mi>n</mi> 
+        </msub>
+        </mrow>
+        <mi>2</mi>
+    </msup>
+    <mo>)</mo>
+    <mo>-</mo>
+    <msup>
+    <mrow>
+    <mi>avg</mi>
+    <mo>(</mo>
+    <msup>
+        <msub>
+            <mi>x</mi>
+            <mi>n</mi> 
+        </msub>
+    </msup>
+    <mo>)</mo>
+    </mrow>
+    <mn>2</mn>
+    </mrow>
+</mfrac>
+</math>
+<br>
+<br>
+<math>
+<msub>
+    <mi>w</mi>
+    <mn>1</mn> 
+</msub>
+<mo>=</mo>
+    <mi>avg</mi>
+    <mn>(</mn>
+    <msup>
+        <msub>
+            <mi>t</mi>
+            <mi>n</mi> 
+        </msub>
+    </msup>
+    <mn>)</mn>
+<mo>-</mo>
+<mfrac> 
+    <mrow>
+    <mi>avg</mi>
+    <mo>(</mo>
+    <msub>
+        <mi>t</mi>
+        <mi>n</mi> 
+    </msub>
+    <msub>
+        <mi>x</mi>
+        <mi>n</mi> 
+    </msub>
+    <mo>)</mo>
+    <mo>-</mo>
+    <mi>avg</mi>
+    <mo>(</mo>
+    <msub>
+        <mi>t</mi>
+        <mi>n</mi> 
+    </msub>
+    <mo>)</mo>
+    <mi>avg</mi>
+    <mo>(</mo>
+    <msub>
+        <mi>x</mi>
+        <mi>n</mi> 
+    </msub>
+    <mo>)</mo>
+    </mrow>
+    <mrow>
+    <mi>avg</mi>
+    <mo>(</mo>
+    <msup>
+        <mrow>
+        <msub>
+            <mi>x</mi>
+            <mi>n</mi> 
+        </msub>
+        </mrow>
+        <mi>2</mi>
+    </msup>
+    <mo>)</mo>
+    <mo>-</mo>
+    <msup>
+    <mrow>
+    <mi>avg</mi>
+    <mo>(</mo>
+    <msup>
+        <msub>
+            <mi>x</mi>
+            <mi>n</mi> 
+        </msub>
+    </msup>
+    <mo>)</mo>
+    </mrow>
+    <mn>2</mn>
+    </mrow>
+</mfrac>
+    <mi>avg(</mi>
+    <msup>
+        <msub>
+            <mi>x</mi>
+            <mi>n</mi> 
+        </msub>
+    </msup>
+    <mn>)</mn>
+</math>
 
 <p>では、実際にx、tを代入してw0、w1を求めてみよう。</p>
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/bdeb9b5efdeb93f17ea28c3536131f2b2f26585d" title='Last modified Mar 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 26, 2020
+    </a>
+  </div>
   
 </div>
 
