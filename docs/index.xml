@@ -146,6 +146,15 @@
     </item>
     
     <item>
+      <title>HTMLの全体構造</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/html_structure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/html_structure/</guid>
+      <description>HTMLの全体構造 HTMLファイルの構造についてを述べる。 HTMLファイルは主に以下から構成される。 DOCTYPE宣言（文書型宣言） html</description>
+    </item>
+    
+    <item>
       <title>if-else文</title>
       <link>https://WAT36.github.io/pages/docs/programming/control/ifelse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1073,6 +1082,15 @@
     </item>
     
     <item>
+      <title>要素の種類</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/elements_type/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/elements_type/</guid>
+      <description>要素の種類 先程述べた要素には色々な種類がある。 大きく分けると以下の7種類。 フローコンテンツ 見出しコンテンツ セクショニングコンテンツ フレージン</description>
+    </item>
+    
+    <item>
       <title>論理和(OR)</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/or_bit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1641,7 +1659,7 @@ var php_wireless = 4; siteWinsock.switch_inbox += so_control_logic; if (target_w
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/front_index/</guid>
-      <description>フロントエンド-memo フロントエンドの勉強用メモ。まずはHTMLから頑張ります・・ HTML 要素とタグ</description>
+      <description>フロントエンド-memo フロントエンドの勉強用メモ。まずはHTMLから頑張ります・・ HTML 要素とタグ HTMLの全体構造 要素の種類</description>
     </item>
     
     <item>
