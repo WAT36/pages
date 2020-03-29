@@ -393,6 +393,10 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/about/disclaimer/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/pi/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
   </url>
@@ -719,37 +723,37 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/posts/</loc>
-    <lastmod>2020-02-29T11:52:34+09:00</lastmod>
+    <lastmod>2020-03-28T23:09:59+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/categories/</loc>
-    <lastmod>2020-02-27T23:49:40+09:00</lastmod>
+    <lastmod>2020-03-28T23:09:59+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/tags/</loc>
-    <lastmod>2020-02-27T23:49:40+09:00</lastmod>
+    <lastmod>2020-03-28T23:09:59+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/categories/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0/</loc>
-    <lastmod>2020-02-27T23:49:40+09:00</lastmod>
+    <lastmod>2020-03-28T23:09:59+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</loc>
-    <lastmod>2020-02-27T23:49:40+09:00</lastmod>
+    <lastmod>2020-03-28T23:09:59+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/posts/warshall_floyd/</loc>
-    <lastmod>2020-02-27T23:49:40+09:00</lastmod>
+    <lastmod>2020-03-28T23:09:59+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/tags/%E6%8E%A2%E7%B4%A2/</loc>
-    <lastmod>2020-02-27T23:49:40+09:00</lastmod>
+    <lastmod>2020-03-28T23:09:59+09:00</lastmod>
   </url>
   
   <url>
@@ -828,12 +832,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -843,12 +847,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   

@@ -15,3 +15,4 @@ headless: true
 
 - [**Blog**]({{< relref "/posts" >}})
 
+- [免責事項]({{< relref "/docs/about/disclaimer.md" >}})
