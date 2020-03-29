@@ -11,3 +11,4 @@ bookToc: false
  - [要素とタグ]({{< relref "/docs/front-end/element.md" >}})
  - HTMLの全体構造
  - 要素の種類
+ - グローバル属性

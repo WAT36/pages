@@ -353,6 +353,15 @@
     </item>
     
     <item>
+      <title>グローバル属性</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/global_attr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/global_attr/</guid>
+      <description>グローバル属性 グローバル属性とは全ての要素で指定できる属性のことを言う。 主に以下のものが挙げられる。 class属性 class属性は、要素に種</description>
+    </item>
+    
+    <item>
       <title>コンストラクタ(  init  )</title>
       <link>https://WAT36.github.io/pages/docs/programming/class_func/constructor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1659,7 +1668,7 @@ var php_wireless = 4; siteWinsock.switch_inbox += so_control_logic; if (target_w
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/front_index/</guid>
-      <description>フロントエンド-memo フロントエンドの勉強用メモ。まずはHTMLから頑張ります・・ HTML 要素とタグ HTMLの全体構造 要素の種類</description>
+      <description>フロントエンド-memo フロントエンドの勉強用メモ。まずはHTMLから頑張ります・・ HTML 要素とタグ HTMLの全体構造 要素の種類 グローバル属性</description>
     </item>
     
     <item>
