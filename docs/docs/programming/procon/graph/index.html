@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.be152c6ebf65e985a070a66f087ac1b639f242611d69ff05c2b178c753baebec.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.c36a1589fb3708547ca22c0c0c90d9c4a62cd3f922901627c3760be23aef9eb2.js"></script>
 
 
 
@@ -120,7 +120,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p>まずは隣接行列という方法について。</p>
 
-<p>グラフの頂点の数をVとしたときに初期値が全て0、大きさ|V|*|V|の２次元リストGを用意し、頂点iと頂点jが結ばれているときにG[i][j]、G[j][i]を1にする、という形でグラフを表現する方法である。なお、有向グラフの場合は有効な方向のみに1を設定し、重み付きグラフのときは1ではなく具体的な重みを入力する、という形で表現できる。</p>
+<p>グラフの頂点の数をVとしたときに初期値が全て0、大きさ|V|*|V|の２次元リスト(行列)Gを用意し、頂点iと頂点jが結ばれているときにG[i][j]、G[j][i]を1にする、という形でグラフを表現する方法である。なお、有向グラフの場合は有効な方向のみに1を設定し、重み付きグラフのときは1ではなく具体的な重みの値を入力する、という形で表現できる。</p>
 
 <p><img src="https://WAT36.github.io/pages/img/procon/graph1.png" alt="無向グラフと隣接行列" /></p>
 
@@ -128,7 +128,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p><img src="https://WAT36.github.io/pages/img/procon/graph2.png" alt="有向グラフと隣接行列" /></p>
 
-<p>隣接行列はある2頂点が辺で結ばれているかがすぐわかるという利点があるが、|V|*|V|のリストを作るため頂点の数が多いとリストがかなり大きくなり、かつ辺の数が少ないとほとんどが使われない領域となってしまい、無駄にメモリ量を食ってしまうという欠点がある。</p>
+<p>隣接行列はある2頂点が辺で結ばれているかがすぐわかるという利点があるが、|V|*|V|のリストを作るため、頂点の数が多く辺の数が少ないとリストの大きさや使われない領域がかなり大きくなってしまい、無駄にメモリを利用してしまうという欠点がある。</p>
 
 <h2 id="隣接リスト">隣接リスト</h2>
 
@@ -147,7 +147,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/fb5918be866e6fac86d03168041faad1deea6960" title='Last modified Mar 28, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/f13b7aeefa695f2b6776809b4f8e8d9e349874f3" title='Last modified Mar 28, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 28, 2020
     </a>
   </div>
