@@ -108,6 +108,30 @@ None
 >>> 
 ```
 
+## 正規表現を使って文字列を置換する
+
+文字列中の正規表現に該当する箇所を別の文字列に置換するにはreモジュールの関数**sub**を使う。  
+
+`re.sub(pattern, repl, string, count=0, flags=0)`
+
+この関数を使うと文字列stringの中で正規表現patternに該当する最も左の箇所をreplに置換した文字列を出力する。
+引数のcountには置換を行う最大回数(非負整数)を入力する。デフォルトは0だが、0の場合は回数制限なしに全てを置換する。
+
+```python
+>>> import re
+>>> s="aaabbbcccdddeeefff" 
+>>> 
+>>> re.sub(r'a+','A',s)   
+'Abbbcccdddeeefff'
+>>> 
+>>> re.sub(r'a','A',s)  
+'AAAbbbcccdddeeefff'
+>>>
+>>> re.sub(r'aa','A',s) 
+'Aabbbcccdddeeefff'
+>>> 
+```
+
 {{< /tab >}}
 {{< /tabs >}}
 

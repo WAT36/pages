@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.d0a375755483c97a726bd41f3908077f3d3228e6015f420ad2bf5ea652e98e32.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.a8cad1ba87186192f97e21a3da45114271a479897a0f2e48cd46e14742c22d52.js"></script>
 
 
 
@@ -218,6 +218,26 @@ None
 <span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div></li>
 </ul>
 
+<h2 id="正規表現を使って文字列を置換する">正規表現を使って文字列を置換する</h2>
+
+<p>文字列中の正規表現に該当する箇所を別の文字列に置換するにはreモジュールの関数<strong>sub</strong>を使う。</p>
+
+<p><code>re.sub(pattern, repl, string, count=0, flags=0)</code></p>
+
+<p>この関数を使うと文字列stringの中で正規表現patternに該当する最も左の箇所をreplに置換した文字列を出力する。
+引数のcountには置換を行う最大回数(非負整数)を入力する。デフォルトは0だが、0の場合は回数制限なしに全てを置換する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> re
+<span style="color:#f92672">&gt;&gt;&gt;</span> s<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;aaabbbcccdddeeefff&#34;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;a+&#39;</span>,<span style="color:#e6db74">&#39;A&#39;</span>,s)   
+<span style="color:#e6db74">&#39;Abbbcccdddeeefff&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;a&#39;</span>,<span style="color:#e6db74">&#39;A&#39;</span>,s)  
+<span style="color:#e6db74">&#39;AAAbbbcccdddeeefff&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;aa&#39;</span>,<span style="color:#e6db74">&#39;A&#39;</span>,s) 
+<span style="color:#e6db74">&#39;Aabbbcccdddeeefff&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
   </div>
 
 </div>
@@ -229,8 +249,8 @@ None
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/803796339e44cf24520b70eb873096bf58d8dabd" title='Last modified Mar 24, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 24, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/9ea912b45baf9ff2af965e184275b61bed71f8d9" title='Last modified Mar 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 26, 2020
     </a>
   </div>
   
