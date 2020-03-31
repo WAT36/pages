@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.eb2f8df6e0e1e445136363c56dc4b8a5534df96f1584c5f21afac7aa7f7e96d4.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.74728d7d162029dfc3bae6516ba6701f1aa33b4d61f6d8d75ec8797d1c70b30a.js"></script>
 
 
 
@@ -61,13 +61,26 @@ https://github.com/alex-shpak/hugo-book
 
 <ul>
 <li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
-<li>Notes
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
 
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 </ul></li>
-<li><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
 </ul>
 
 
@@ -164,18 +177,22 @@ C:\Users\Downloads
 <p>実際に正規表現を使って文字列から該当する部分を検索・抽出するにはどうすればよいのか？
 それにはreモジュールの以下諸関数を利用する。</p>
 
-<table>
+<table >
 <tr>
-<td> re.**search**(pattern, string, flags=0) </td><td>#stringで正規表現patternに最初にマッチした部分を返す</td>
+<td style="border-style: none;">・re.<b>search</b>(pattern, string, flags=0) </td>
+<td style="border-style: none;">#stringで正規表現patternに最初にマッチした部分を返す</td>
 </tr>
 <tr>
-<td> re.**match**(pattern, string, flags=0) </td><td>#stringの先頭が正規表現patternにマッチしていたらそれを返す</td>
+<td style="border-style: none;">・re.<b>match</b>(pattern, string, flags=0) </td>
+<td style="border-style: none;">#stringの先頭が正規表現patternにマッチしていたらそれを返す</td>
 </tr>
 <tr>
-<td> re.**fullmatch**(pattern, string, flags=0) </td><td>#string全体が正規表現patternにマッチしていたらそれを返す</td>
+<td style="border-style: none;">・re.<b>fullmatch</b>(pattern, string, flags=0) </td>
+<td style="border-style: none;">#string全体が正規表現patternにマッチしていたらそれを返す</td>
 </tr>
 <tr>
-<td> re.**findall**(pattern, string, flags=0) </td><td>#string中で正規表現patternにマッチしているものをリストにして全て返す</td>
+<td style="border-style: none;">・re.<b>findall</b>(pattern, string, flags=0) </td>
+<td style="border-style: none;">#string中で正規表現patternにマッチしているものをリストにして全て返す</td>
 </tr>
 </table>
 
@@ -183,12 +200,24 @@ C:\Users\Downloads
 また、これら諸関数の返り値は文字列ではなく、マッチオブジェクトと呼ばれる型のデータを返す(findallはリストを返す)。
 マッチオブジェクトから結果を取得したい場合は、以下の諸関数をさらに利用する。</p>
 
-<ul>
-<li>Match.<strong>start</strong>()   #マッチした文字列の文字列中での最初のインデックスを返す</li>
-<li>Match.<strong>end</strong>()     #マッチした文字列の文字列中での最後のインデックスを返す</li>
-<li>Match.<strong>span</strong>()    #マッチした文字列が文字列中でどこからどこまでのインデックスなのかを返す</li>
-
-<li><p>Match.<strong>group</strong>()   #マッチした文字列を返す</p>
+<table>
+<tr>
+<td style="border-style: none;">・Match.<b>start</b>()</td>
+<td style="border-style: none;">#マッチした文字列の文字列中での最初のインデックスを返す</td>
+</tr>
+<tr>
+<td style="border-style: none;">・Match.<b>end</b>()</td>
+<td style="border-style: none;">#マッチした文字列の文字列中での最後のインデックスを返す</td>
+</tr>
+<tr>
+<td style="border-style: none;">・Match.<b>span</b>()</td>
+<td style="border-style: none;">#マッチした文字列が文字列中でどこからどこまでのインデックスなのかを返す</td>
+</tr>
+<tr>
+<td style="border-style: none;">・Match.<b>group</b>()</td>
+<td style="border-style: none;">#マッチした文字列を返す</td>
+</tr>
+</table>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> re
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
 <span style="color:#f92672">&gt;&gt;&gt;</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnnoooppp&#34;</span>
@@ -223,9 +252,7 @@ None
 <span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(pattern,s)   
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(m)
 [<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>]
-<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div></li>
-</ul>
-
+<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
 <h2 id="正規表現を使って文字列を置換する">正規表現を使って文字列を置換する</h2>
 
 <p>文字列中の正規表現に該当する箇所を別の文字列に置換するにはreモジュールの関数<strong>sub</strong>を使う。</p>
@@ -257,7 +284,7 @@ None
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/5ae20bf082c101375ea9d6f1fb2e7e7e8969682d" title='Last modified Mar 31, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/654420d361ba174bae745d8d4a2dd465c55199f9" title='Last modified Mar 31, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 31, 2020
     </a>
   </div>
@@ -276,6 +303,17 @@ None
 
   
   
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
 </body>
 
 </html>
