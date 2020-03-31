@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.a8cad1ba87186192f97e21a3da45114271a479897a0f2e48cd46e14742c22d52.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.eb2f8df6e0e1e445136363c56dc4b8a5534df96f1584c5f21afac7aa7f7e96d4.js"></script>
 
 
 
@@ -164,12 +164,20 @@ C:\Users\Downloads
 <p>実際に正規表現を使って文字列から該当する部分を検索・抽出するにはどうすればよいのか？
 それにはreモジュールの以下諸関数を利用する。</p>
 
-<ul>
-<li>re.<strong>search</strong>(pattern, string, flags=0)     #stringで正規表現patternに最初にマッチした部分を返す</li>
-<li>re.<strong>match</strong>(pattern, string, flags=0)      #stringの先頭が正規表現patternにマッチしていたらそれを返す</li>
-<li>re.<strong>fullmatch</strong>(pattern, string, flags=0)  #string全体が正規表現patternにマッチしていたらそれを返す</li>
-<li>re.<strong>findall</strong>(pattern, string, flags=0)    #string中で正規表現patternにマッチしているものをリストにして全て返す</li>
-</ul>
+<table>
+<tr>
+<td> re.**search**(pattern, string, flags=0) </td><td>#stringで正規表現patternに最初にマッチした部分を返す</td>
+</tr>
+<tr>
+<td> re.**match**(pattern, string, flags=0) </td><td>#stringの先頭が正規表現patternにマッチしていたらそれを返す</td>
+</tr>
+<tr>
+<td> re.**fullmatch**(pattern, string, flags=0) </td><td>#string全体が正規表現patternにマッチしていたらそれを返す</td>
+</tr>
+<tr>
+<td> re.**findall**(pattern, string, flags=0) </td><td>#string中で正規表現patternにマッチしているものをリストにして全て返す</td>
+</tr>
+</table>
 
 <p>いずれの関数も、もし該当する部分がない場合はNoneが返される。
 また、これら諸関数の返り値は文字列ではなく、マッチオブジェクトと呼ばれる型のデータを返す(findallはリストを返す)。
@@ -178,7 +186,7 @@ C:\Users\Downloads
 <ul>
 <li>Match.<strong>start</strong>()   #マッチした文字列の文字列中での最初のインデックスを返す</li>
 <li>Match.<strong>end</strong>()     #マッチした文字列の文字列中での最後のインデックスを返す</li>
-<li>Match.<strong>span</strong>()    #マッチした文字列が文字列中でどこからどこまでのインデックスにあるのか返す</li>
+<li>Match.<strong>span</strong>()    #マッチした文字列が文字列中でどこからどこまでのインデックスなのかを返す</li>
 
 <li><p>Match.<strong>group</strong>()   #マッチした文字列を返す</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> re
@@ -249,8 +257,8 @@ None
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/9ea912b45baf9ff2af965e184275b61bed71f8d9" title='Last modified Mar 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 26, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/5ae20bf082c101375ea9d6f1fb2e7e7e8969682d" title='Last modified Mar 31, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 31, 2020
     </a>
   </div>
   

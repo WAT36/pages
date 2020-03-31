@@ -56,19 +56,48 @@ re.compile(pattern, flags=0)
 実際に正規表現を使って文字列から該当する部分を検索・抽出するにはどうすればよいのか？
 それにはreモジュールの以下諸関数を利用する。
 
-- re.**search**(pattern, string, flags=0)     #stringで正規表現patternに最初にマッチした部分を返す
-- re.**match**(pattern, string, flags=0)      #stringの先頭が正規表現patternにマッチしていたらそれを返す
-- re.**fullmatch**(pattern, string, flags=0)  #string全体が正規表現patternにマッチしていたらそれを返す
-- re.**findall**(pattern, string, flags=0)    #string中で正規表現patternにマッチしているものをリストにして全て返す
+<table >
+<tr>
+<td style="border-style: none;">・re.<b>search</b>(pattern, string, flags=0) </td>
+<td style="border-style: none;">#stringで正規表現patternに最初にマッチした部分を返す</td>
+</tr>
+<tr>
+<td style="border-style: none;">・re.<b>match</b>(pattern, string, flags=0) </td>
+<td style="border-style: none;">#stringの先頭が正規表現patternにマッチしていたらそれを返す</td>
+</tr>
+<tr>
+<td style="border-style: none;">・re.<b>fullmatch</b>(pattern, string, flags=0) </td>
+<td style="border-style: none;">#string全体が正規表現patternにマッチしていたらそれを返す</td>
+</tr>
+<tr>
+<td style="border-style: none;">・re.<b>findall</b>(pattern, string, flags=0) </td>
+<td style="border-style: none;">#string中で正規表現patternにマッチしているものをリストにして全て返す</td>
+</tr>
+</table>
 
 いずれの関数も、もし該当する部分がない場合はNoneが返される。
 また、これら諸関数の返り値は文字列ではなく、マッチオブジェクトと呼ばれる型のデータを返す(findallはリストを返す)。
 マッチオブジェクトから結果を取得したい場合は、以下の諸関数をさらに利用する。
 
-- Match.**start**()   #マッチした文字列の文字列中での最初のインデックスを返す
-- Match.**end**()     #マッチした文字列の文字列中での最後のインデックスを返す
-- Match.**span**()    #マッチした文字列が文字列中でどこからどこまでのインデックスにあるのか返す
-- Match.**group**()   #マッチした文字列を返す
+
+<table>
+<tr>
+<td style="border-style: none;">・Match.<b>start</b>()</td>
+<td style="border-style: none;">#マッチした文字列の文字列中での最初のインデックスを返す</td>
+</tr>
+<tr>
+<td style="border-style: none;">・Match.<b>end</b>()</td>
+<td style="border-style: none;">#マッチした文字列の文字列中での最後のインデックスを返す</td>
+</tr>
+<tr>
+<td style="border-style: none;">・Match.<b>span</b>()</td>
+<td style="border-style: none;">#マッチした文字列が文字列中でどこからどこまでのインデックスなのかを返す</td>
+</tr>
+<tr>
+<td style="border-style: none;">・Match.<b>group</b>()</td>
+<td style="border-style: none;">#マッチした文字列を返す</td>
+</tr>
+</table>
 
 ```python
 >>> import re
