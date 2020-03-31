@@ -187,7 +187,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/other/other_index/</guid>
-      <description>その他 その他、括れてない手法などをまとめる。 変数 変数の型を調べる 関数、メソッドのヘルプを見る(Python) コメントアウト</description>
+      <description>その他 その他、括れてない手法などをまとめる。 変数 変数の型を調べる 関数、メソッドのヘルプを見る(Python) コメントアウト 正規表現</description>
     </item>
     
     <item>
@@ -962,6 +962,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</guid>
       <description>機械学習 機械学習の手法についてをまとめる。 教師あり学習 直線モデル(線形回帰) 平均二乗誤差</description>
+    </item>
+    
+    <item>
+      <title>正規表現</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/re/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/re/</guid>
+      <description>正規表現 文字列に正規表現を適用してある文字列パターンを抽出・検索したいという場合があると思う。 その場合に利用する方法を示す。 ちなみに正規表現</description>
     </item>
     
     <item>
