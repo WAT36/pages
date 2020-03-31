@@ -19,7 +19,7 @@ bookToc: false
 
 平均二乗誤差Jの(w<sub>0</sub>,w<sub>1</sub>)での傾きは以下のように表される。  
 
-<math>
+<math style="display:block">
 <mi>∇</mi>
 <mi>J</mi>
 <mo>=</mo>
@@ -52,7 +52,7 @@ bookToc: false
         <mi>N</mi>
     </mfrac>
     <munderover> 
-        <mo>&Sum;</mo> 
+        <mi>&Sum;</mi> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
@@ -60,7 +60,7 @@ bookToc: false
             </mrow>
             <mi>N-1</mi> 
     </munderover> 
-    <mo>(</mo>
+    <mn>(</mn>
     <msub>
         <mi>y</mi>
         <mi>n</mi> 
@@ -70,7 +70,7 @@ bookToc: false
         <mi>t</mi>
         <mi>n</mi> 
     </msub>
-    <mo>)</mo>
+    <mn>)</mn>
     <msub>
         <mi>x</mi>
         <mi>n</mi> 
@@ -84,7 +84,7 @@ bookToc: false
         <mi>N</mi>
     </mfrac>
     <munderover> 
-        <mo>&Sum;</mo> 
+        <mi>&Sum;</mi> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
@@ -92,7 +92,7 @@ bookToc: false
             </mrow>
         <mi>N-1</mi> 
     </munderover> 
-    <mo>(</mo>
+    <mn>(</mn>
     <msub>
         <mi>y</mi>
         <mi>n</mi> 
@@ -102,7 +102,7 @@ bookToc: false
         <mi>t</mi>
         <mi>n</mi> 
     </msub>
-    <mo>)</mo>
+    <mn>)</mn>
     </mtd>
 </mtr>
 </mtable> 
@@ -154,19 +154,19 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
 <mi>w</mi>
 <mn>0</mn>
 </msub>
-<mo>(</mo>
+<mn>(</mn>
 <mi>t</mi>
 <mo>+</mo>
 <mn>1</mn>
-<mo>)</mo>
+<mn>)</mn>
 <mo>=</mo>
 <msub>
 <mi>w</mi>
 <mn>0</mn>
 </msub>
-<mo>(</mo>
+<mn>(</mn>
 <mi>t</mi>
-<mo>)</mo>
+<mn>)</mn>
 <mo>-</mo>
 <mi>α</mi>
     <mfrac> 
@@ -198,24 +198,25 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
 </msub>
 </math>
 <br>
+<br>
 <math>
 <msub>
 <mi>w</mi>
 <mn>1</mn>
 </msub>
-<mo>(</mo>
+<mn>(</mn>
 <mi>t</mi>
 <mo>+</mo>
 <mn>1</mn>
-<mo>)</mo>
+<mn>)</mn>
 <mo>=</mo>
 <msub>
 <mi>w</mi>
 <mn>1</mn>
 </msub>
-<mo>(</mo>
+<mn>(</mn>
 <mi>t</mi>
-<mo>)</mo>
+<mn>)</mn>
 <mo>-</mo>
 <mi>α</mi>
     <mfrac> 
@@ -259,7 +260,7 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
         <mi>N</mi>
     </mfrac>
     <munderover> 
-        <mo>&Sum;</mo> 
+        <mi>&Sum;</mi> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
@@ -314,7 +315,7 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
         <mi>N</mi>
     </mfrac>
     <munderover> 
-        <mo>&Sum;</mo> 
+        <mi>&Sum;</mi> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
@@ -362,7 +363,7 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
         <mi>N</mi>
     </mfrac>
     <munderover> 
-        <mo>&Sum;</mo> 
+        <mi>&Sum;</mi> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
@@ -370,7 +371,7 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
             </mrow>
             <mi>N-1</mi> 
     </munderover> 
-            <mo>(</mo>
+            <mn>(</mn>
             <msub>
                 <mi>w</mi>
                 <mn>0</mn> 
@@ -389,7 +390,7 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
                 <mi>t</mi>
                 <mi>n</mi> 
             </msub>
-            <mo>)</mo>
+            <mn>)</mn>
             <msub>
                 <mi>x</mi>
                 <mi>n</mi> 
@@ -400,7 +401,7 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
         <mi>N</mi>
     </mfrac>
     <munderover> 
-        <mo>&Sum;</mo> 
+        <mi>&Sum;</mi> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
@@ -408,7 +409,7 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
             </mrow>
             <mi>N-1</mi> 
     </munderover> 
-            <mo>(</mo>
+            <mn>(</mn>
             <msub>
                 <mi>y</mi>
                 <mi>n</mi> 
@@ -418,7 +419,7 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
                 <mi>t</mi>
                 <mi>n</mi> 
             </msub>
-            <mo>)</mo>
+            <mn>)</mn>
             <msub>
                 <mi>x</mi>
                 <mi>n</mi> 
@@ -436,7 +437,7 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
         <mi>N</mi>
     </mfrac>
     <munderover> 
-        <mo>&Sum;</mo> 
+        <mi>&Sum;</mi> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
@@ -444,7 +445,7 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
             </mrow>
             <mi>N-1</mi> 
     </munderover> 
-            <mo>(</mo>
+            <mn>(</mn>
             <msub>
                 <mi>w</mi>
                 <mn>0</mn> 
@@ -463,14 +464,14 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
                 <mi>t</mi>
                 <mi>n</mi> 
             </msub>
-            <mo>)</mo>
+            <mn>)</mn>
 <mo>=</mo>
     <mfrac> 
         <mn>2</mn> 
         <mi>N</mi>
     </mfrac>
     <munderover> 
-        <mo>&Sum;</mo> 
+        <mi>&Sum;</mi> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
@@ -478,7 +479,7 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
             </mrow>
             <mi>N-1</mi> 
     </munderover> 
-            <mo>(</mo>
+            <mn>(</mn>
             <msub>
                 <mi>y</mi>
                 <mi>n</mi> 
@@ -488,7 +489,7 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
                 <mi>t</mi>
                 <mi>n</mi> 
             </msub>
-            <mo>)</mo>
+            <mn>)</mn>
 </math>
 
 
@@ -499,19 +500,19 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
     <mi>w</mi>
     <mn>0</mn> 
 </msub>
-<mo>(</mo>
+<mn>(</mn>
 <mi>t</mi>
 <mo>+</mo>
 <mn>1</mn>
-<mo>)</mo>
+<mn>)</mn>
 <mo>=</mo>
 <msub>
     <mi>w</mi>
     <mn>0</mn> 
 </msub>
-<mo>(</mo>
+<mn>(</mn>
 <mi>t</mi>
-<mo>)</mo>
+<mn>)</mn>
 <mo>-</mo>
 <mn>α</mn>
     <mfrac> 
@@ -519,7 +520,7 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
         <mi>N</mi>
     </mfrac>
     <munderover> 
-        <mo>&Sum;</mo> 
+        <mi>&Sum;</mi> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
@@ -527,7 +528,7 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
             </mrow>
             <mi>N-1</mi> 
     </munderover> 
-            <mo>(</mo>
+            <mn>(</mn>
             <msub>
                 <mi>y</mi>
                 <mi>n</mi> 
@@ -537,7 +538,7 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
                 <mi>t</mi>
                 <mi>n</mi> 
             </msub>
-            <mo>)</mo>
+            <mn>)</mn>
             <msub>
                 <mi>x</mi>
                 <mi>n</mi> 
@@ -549,19 +550,19 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
     <mi>w</mi>
     <mn>1</mn> 
 </msub>
-<mo>(</mo>
+<mn>(</mn>
 <mi>t</mi>
 <mo>+</mo>
 <mn>1</mn>
-<mo>)</mo>
+<mn>)</mn>
 <mo>=</mo>
 <msub>
     <mi>w</mi>
     <mn>1</mn> 
 </msub>
-<mo>(</mo>
+<mn>(</mn>
 <mi>t</mi>
-<mo>)</mo>
+<mn>)</mn>
 <mo>-</mo>
 <mn>α</mn>
     <mfrac> 
@@ -569,7 +570,7 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
         <mi>N</mi>
     </mfrac>
     <munderover> 
-        <mo>&Sum;</mo> 
+        <mi>&Sum;</mi> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
@@ -577,7 +578,7 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
             </mrow>
             <mi>N-1</mi> 
     </munderover> 
-            <mo>(</mo>
+            <mn>(</mn>
             <msub>
                 <mi>y</mi>
                 <mi>n</mi> 
@@ -587,7 +588,7 @@ w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。
                 <mi>t</mi>
                 <mi>n</mi> 
             </msub>
-            <mo>)</mo>
+            <mn>)</mn>
             <msub>
                 <mi>x</mi>
                 <mi>n</mi> 
