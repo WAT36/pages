@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.36a7d8c6b33523ee7f716535c40eb1f13e8909cda1af27fc44a76a3d20964625.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.1f19eb7da960f60090b0cd55daff79bbee0d55783d1cc30fef98c26894c393f9.js"></script>
 
 
 
@@ -123,15 +123,62 @@ https://github.com/alex-shpak/hugo-book
 
 <p>複数の別の要素に同じ名前を指定することができ、そのクラス名を指定するとそれがclass属性に指定されている要素全てが該当されることになる。</p>
 
-<p>CSSなどを使うときによく利用される。</p>
+<p>スペースで区切れば複数のクラス名を指定することもできる。</p>
+
+<p>CSSなどを使うときに、指定した要素全てにcssを適用させたい時などによく利用される。</p>
 
 <p><code>
 &lt;p class=&quot;class1&quot;&gt;
+&lt;p class=&quot;class class2 class3&quot;&gt;
 </code></p>
+
+<h2 id="id属性">id属性</h2>
+
+<p>id属性は、それを指定した要素に一意の名前をつける属性である。</p>
+
+<p>一意の名前なので、同じページ内の他の要素のid属性に同じ名前をつけることはできない。class属性とはここが異なる。</p>
+
+<p>id属性は、ページ内の特定の要素にリンクさせたい場合、また先程のCSS等で特定の要素にのみCSSを適用したい場合に用いられる。</p>
+
+<p><code>
+&lt;p id=&quot;id1&quot;&gt;
+&lt;p id=&quot;id2&quot;&gt;
+</code></p>
+
+<h2 id="lang属性">lang属性</h2>
+
+<p>lang属性は要素、属性の言語が何であるかを示す属性である。具体的には、RFC5646（BCP47）で定められた言語コードを入力する。</p>
+
+<p>例えば日本語だと「&rdquo;ja&rdquo;」、英語であれば「&rdquo;en&rdquo;」、アメリカ英語なら「&rdquo;en-US&rdquo;」と指定する。（日本語には、日本での日本語という意味で「&rdquo;ja-JP&rdquo;」という値も用意されている。）</p>
+
+<p>lang属性はHTML文書全体に適用されるように、htmlタグに描かれることが多い。</p>
+
+<p><code>
+&lt;html lang=&quot;ja&quot;&gt;
+</code></p>
+
+<h2 id="title属性">title属性</h2>
+
+<p>title属性は、その要素の補足的な内容を提供するための属性である。</p>
+
+<p>一般的には、ブラウザでカーソルを要素の上に乗せた時にツールチップで表示されるものである。(下図例)</p>
+
+<p><code>
+&lt;h1 title=&quot;title属性に書かれた内容はここに出る&quot;&gt;テスト&lt;/h1&gt;
+</code></p>
+
+<p><img src="https://WAT36.github.io/pages/img/front-end/html_title.png" alt="title属性" /></p>
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/a5120e21c122fedeb26bd3a5bb0077b993cba335" title='Last modified Mar 30, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 30, 2020
+    </a>
+  </div>
   
 </div>
 
@@ -147,6 +194,9 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#グローバル属性">グローバル属性</a>
 <ul>
 <li><a href="#class属性">class属性</a></li>
+<li><a href="#id属性">id属性</a></li>
+<li><a href="#lang属性">lang属性</a></li>
+<li><a href="#title属性">title属性</a></li>
 </ul></li>
 </ul>
 </nav>
