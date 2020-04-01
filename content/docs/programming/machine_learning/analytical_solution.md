@@ -334,12 +334,19 @@ bookToc: false
 
 これらの式をw0、w1についてそれぞれ解くと、w0、w1は以下のように表される。
 
-<math>
+<math style="display: block;"> 
+<mtable columnalign="right center left"> 
+<mtr>
+<mtd>
 <msub>
     <mi>w</mi>
     <mn>0</mn> 
 </msub>
+</mtd>
+<mtd>
 <mo>=</mo>
+</mtd>
+<mtd>
 <mfrac> 
     <mrow>
     <mi>avg</mi>
@@ -398,15 +405,23 @@ bookToc: false
     <mn>2</mn>
     </mrow>
 </mfrac>
+</mtd>
 </math>
 <br>
 <br>
-<math>
+<math style="display: block;"> 
+<mtable columnalign="right center left"> 
+<mtr> 
+<mtd>
 <msub>
     <mi>w</mi>
     <mn>1</mn> 
 </msub>
+</mtd>
+<mtd>
 <mo>=</mo>
+</mtd>
+<mtd>
     <mi>avg</mi>
     <mn>(</mn>
     <msup>
@@ -429,7 +444,15 @@ bookToc: false
         </msub>
     </msup>
     <mn>)</mn>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+</mtd>
+<mtd>
 <mo>=</mo>
+</mtd>
+<mtd>
     <mi>avg</mi>
     <mn>(</mn>
     <msup>
@@ -506,15 +529,16 @@ bookToc: false
         </msub>
     </msup>
     <mn>)</mn>
+</mtd>
+</mtr>
+</mtable>
 </math>
 
-では、実際にx、tを代入してw0、w1を求めてみよう。
-
-(analytical.py)
+では、実際にx、tを代入してw0、w1を求めてみよう。(x,tは前章のnpyファイルから取得)
 
 ```python
 import numpy as np
-
+  
 def d_mse(w,x,t):
     y = w[0] * x + w[1]
     d_w0 = 2 * np.mean((y-t)*x)
@@ -522,9 +546,10 @@ def d_mse(w,x,t):
     return d_w0,d_w1
 
 #入力値
-x = np.array([167.9,164.3,171.6,172.7,162.8,170.2,172.3,163.8,168.8,167.2,172.3,166.4,173.1,176.9,178.4,167.1,177.4,173.7,172.0,174.1])
+x = np.load('x.npy')
 #実測値
-t  = np.array([58.0,58.2,60.1,65.2,55.0,60.9,61.9,56.4,62.9,57.0,64.9,55.9,68.0,67.9,69.1,60.8,65.6,66.1,59.9,69.5])
+t = np.load('t.npy')
+
 #t*x
 tx = [t[i]*x[i] for i in range(len(x))]
 #x^2
@@ -545,7 +570,6 @@ print("dJ(w0,w1) = [{0:.9f} {1:.9f}]".format(dJ[0],dJ[1]))
 実行結果
 
 ```
-$ python analytical.py 
 w0 = 0.906006875
 w1 = -92.445073277
 dJ(w0,w1) = [-0.000000000 -0.000000000]
@@ -560,8 +584,8 @@ dJ(w0,w1) = [-0.000000000 -0.000000000]
 import numpy as np
 import matplotlib.pyplot as plt
 
-x = np.array([167.9,164.3,171.6,172.7,162.8,170.2,172.3,163.8,168.8,167.2,172.3,166.4,173.1,176.9,178.4,167.1,177.4,173.7,172.0,174.1])
-t = np.array([58.0,58.2,60.1,65.2,55.0,60.9,61.9,56.4,62.9,57.0,64.9,55.9,68.0,67.9,69.1,60.8,65.6,66.1,59.9,69.5])
+x = np.load('x.npy')
+t = np.load('t.npy')
 
 def f(x):
     return (0.906006875 * x) - 92.445073277
@@ -586,4 +610,6 @@ plt.show()
 
 <img src="/img/datascience/Figure_19.png" width=50%>
 
-(最初になんとなく求めたのとそんな変わらない気がするが)とりあえずこのデータにおいて、直線モデルでの最も誤差が少ない最適な式が求められた。
+<font color="#dcdcdc">(最初になんとなく求めたのとそこまで変わらない気がするが、)</font>
+
+これでこの入力データにおいて、直線モデルでの最も誤差が少ない最適な式が求められた。
