@@ -25,7 +25,7 @@ bookToc: false
         <mi>N</mi>
     </mfrac>
     <munderover> 
-        <mo>&Sum;</mo> 
+        <mi>&Sum;</mi> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
@@ -33,7 +33,7 @@ bookToc: false
             </mrow>
             <mi>N-1</mi> 
     </munderover> 
-            <mo>(</mo>
+            <mn>(</mn>
             <msub>
                 <mi>w</mi>
                 <mn>0</mn> 
@@ -52,7 +52,7 @@ bookToc: false
                 <mi>t</mi>
                 <mi>n</mi> 
             </msub>
-            <mo>)</mo>
+            <mn>)</mn>
             <msub>
                 <mi>x</mi>
                 <mi>n</mi> 
@@ -72,7 +72,7 @@ bookToc: false
         <mi>N</mi>
     </mfrac>
     <munderover> 
-        <mo>&Sum;</mo> 
+        <mi>&Sum;</mi> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
@@ -80,7 +80,7 @@ bookToc: false
             </mrow>
             <mi>N-1</mi> 
     </munderover> 
-            <mo>(</mo>
+            <mn>(</mn>
             <msub>
                 <mi>w</mi>
                 <mn>0</mn> 
@@ -99,7 +99,7 @@ bookToc: false
                 <mi>t</mi>
                 <mi>n</mi> 
             </msub>
-            <mo>)</mo>
+            <mn>)</mn>
 <mo>=</mo>
 <mn>0</mn>
 </math>
@@ -117,7 +117,7 @@ bookToc: false
         <mi>N</mi>
     </mfrac>
     <munderover> 
-        <mo>&Sum;</mo> 
+        <mi>&Sum;</mi> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
@@ -144,7 +144,7 @@ bookToc: false
         <mi>N</mi>
     </mfrac>
     <munderover> 
-        <mo>&Sum;</mo> 
+        <mi>&Sum;</mi> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
@@ -162,7 +162,7 @@ bookToc: false
         <mi>N</mi>
     </mfrac>
     <munderover> 
-        <mo>&Sum;</mo> 
+        <mi>&Sum;</mi> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
@@ -193,7 +193,7 @@ bookToc: false
         <mi>N</mi>
     </mfrac>
     <munderover> 
-        <mo>&Sum;</mo> 
+        <mi>&Sum;</mi> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
@@ -216,7 +216,7 @@ bookToc: false
         <mi>N</mi>
     </mfrac>
     <munderover> 
-        <mo>&Sum;</mo> 
+        <mi>&Sum;</mi> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
@@ -240,7 +240,7 @@ bookToc: false
         <mi>N</mi>
     </mfrac>
     <munderover> 
-        <mo>&Sum;</mo> 
+        <mi>&Sum;</mi> 
             <mrow>
                 <mi>n</mi>
                 <mo>=</mo>
@@ -371,7 +371,7 @@ bookToc: false
     </mrow>
     <mrow>
     <mi>avg</mi>
-    <mo>(</mo>
+    <mn>(</mn>
     <msup>
         <mrow>
         <msub>
@@ -381,7 +381,7 @@ bookToc: false
         </mrow>
         <mi>2</mi>
     </msup>
-    <mo>)</mo>
+    <mn>)</mn>
     <mo>-</mo>
     <msup>
     <mrow>
@@ -471,7 +471,7 @@ bookToc: false
     </mrow>
     <mrow>
     <mi>avg</mi>
-    <mo>(</mo>
+    <mn>(</mn>
     <msup>
         <mrow>
         <msub>
@@ -481,7 +481,7 @@ bookToc: false
         </mrow>
         <mi>2</mi>
     </msup>
-    <mo>)</mo>
+    <mn>)</mn>
     <mo>-</mo>
     <msup>
     <mrow>
