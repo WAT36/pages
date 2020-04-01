@@ -101,15 +101,6 @@
     </item>
     
     <item>
-      <title>About me</title>
-      <link>https://WAT36.github.io/pages/docs/about/aboutme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/about/aboutme/</guid>
-      <description>About Me ・・工事中。。Sorry</description>
-    </item>
-    
-    <item>
       <title>AND演算</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/and/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -143,6 +134,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/control/continue/</guid>
       <description>continue文 continue文はfor文、while文のループ処理において、そのループ1回分の処理をそこで終了し、 条件式の判定（for</description>
+    </item>
+    
+    <item>
+      <title>Exception Index</title>
+      <link>https://WAT36.github.io/pages/docs/programming/exception/exception_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/exception/exception_index/</guid>
+      <description>例外処理 プログラミングをする上で誰もが経験するのはエラー（例外）だろう。 コンパイルエラーに関しては文法上の問題なので、ここでは主に実行時エラ</description>
     </item>
     
     <item>
@@ -187,7 +187,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/other/other_index/</guid>
-      <description>その他 その他、括れてない手法などをまとめる。 変数 変数の型を調べる 関数、メソッドのヘルプを見る(Python) コメントアウト 正規表現</description>
+      <description>その他 その他、括れてない手法などをまとめる。 変数 変数の型を調べる 関数、メソッドのヘルプを見る(Python) コメントアウト</description>
     </item>
     
     <item>
@@ -686,39 +686,12 @@
     </item>
     
     <item>
-      <title>例外の明示的な発生</title>
-      <link>https://WAT36.github.io/pages/docs/programming/exception/throw/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/exception/throw/</guid>
-      <description>例外の明示的な発生 例外(エラー)は実行時にコードの不備によりに起こるのみではなく、（コード中で）自分で意図的に発生させることもできる。ここで</description>
-    </item>
-    
-    <item>
-      <title>例外処理</title>
-      <link>https://WAT36.github.io/pages/docs/programming/exception/exception_index/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/exception/exception_index/</guid>
-      <description>例外処理 プログラミングをする上で誰もが経験するのはエラー（例外）だろう。 コンパイルエラーに関しては文法上の問題なので、ここでは主に実行時エラ</description>
-    </item>
-    
-    <item>
       <title>例外処理(try文)</title>
       <link>https://WAT36.github.io/pages/docs/programming/exception/try/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/exception/try/</guid>
       <description>例外処理(try文) 実行時エラー(例外)のハンドリングを行うtry文についてを示す。 言語により微妙に呼び名が違うところがあるので注意。 Java Ja</description>
-    </item>
-    
-    <item>
-      <title>免責事項</title>
-      <link>https://WAT36.github.io/pages/docs/about/disclaimer/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/about/disclaimer/</guid>
-      <description>免責事項 本ブログにおける免責事項は、下記の通りです。 本ブログの情報の正確性について 本ブログのコンテンツや情報において、可能な限り正確な情報を</description>
     </item>
     
     <item>
@@ -740,12 +713,12 @@
     </item>
     
     <item>
-      <title>動的計画法</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/dynamic_planning/</link>
+      <title>勾配法(最急降下法)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/steepest_descent_method/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/dynamic_planning/</guid>
-      <description>動的計画法 動的計画法について。 動的計画法とはアルゴリズム設計手法の一つで、配列やリストの要素をそれ以前に算出した別の要素を使って算出する手法</description>
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/steepest_descent_method/</guid>
+      <description>勾配法(最急降下法) 前述の平均二乗誤差で最も誤差が小さくなるw0,w1を正確に求めるにはどうすればよいのか？ その一例として、ここでは勾配法と</description>
     </item>
     
     <item>
@@ -961,16 +934,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</guid>
-      <description>機械学習 機械学習の手法についてをまとめる。 教師あり学習 直線モデル(線形回帰) 平均二乗誤差</description>
-    </item>
-    
-    <item>
-      <title>正規表現</title>
-      <link>https://WAT36.github.io/pages/docs/programming/other/re/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/other/re/</guid>
-      <description>正規表現 文字列に正規表現を適用してある文字列パターンを抽出・検索したいという場合があると思う。 その場合に利用する方法を示す。 ちなみに正規表現</description>
+      <description>機械学習 機械学習の手法についてをまとめる。 教師あり学習 直線モデル(線形回帰) 平均二乗誤差 勾配法(最急降下法) 解析解</description>
     </item>
     
     <item>
@@ -998,15 +962,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/class_func/inheritance/</guid>
       <description>継承 クラスを実装できる言語の大半は、他のクラスの構造を受け継ぎ、そこから新しい変数やメソッド(関数)等を付け足す形でクラスを定義することがで</description>
-    </item>
-    
-    <item>
-      <title>自分で例外クラスを定義する</title>
-      <link>https://WAT36.github.io/pages/docs/programming/exception/myexception/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/exception/myexception/</guid>
-      <description>自分で例外クラスを定義する 基本、例外(エラー)はあらかじめ定義されている、対応する例外を示すクラスが投げられるという形で例外の発生を示すが、</description>
     </item>
     
     <item>
@@ -1088,6 +1043,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/arange/</guid>
       <description>要素が等間隔になるベクトル 指定した範囲内で、全ての要素の感覚が等しくなるようなベクトルを生成する方法についてを示す。 Python 主に方法は二つある。 numpy.arange()</description>
+    </item>
+    
+    <item>
+      <title>解析解</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/analytical_solution/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/analytical_solution/</guid>
+      <description>解析解 先程の直線モデルの例では勾配法を用いてw0、w1の値を求めたが、実は勾配法を用いなくても数式を計算していけば最適なw0、w1が求められ</description>
     </item>
     
     <item>
