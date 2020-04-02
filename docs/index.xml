@@ -344,6 +344,15 @@
     </item>
     
     <item>
+      <title>グラフの表現方法</title>
+      <link>https://WAT36.github.io/pages/docs/programming/procon/graph/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/procon/graph/</guid>
+      <description>グラフの表現方法 グラフはコード上でどのように表現して作ればよいのか？ ここではいくつか方法を示す。 隣接行列 まずは隣接行列という方法について。 グ</description>
+    </item>
+    
+    <item>
       <title>グラフを複数表示させる</title>
       <link>https://WAT36.github.io/pages/docs/programming/graph/subplot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
