@@ -6,10 +6,19 @@
     <description>Recent content in Posts on WAT Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Wed, 01 Apr 2020 20:37:10 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 02 Apr 2020 22:50:12 +0900</lastBuildDate>
     
 	<atom:link href="https://WAT36.github.io/pages/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DynamoDBテーブルの作成方法(AWS)</title>
+      <link>https://WAT36.github.io/pages/posts/aws_create_dynamo_table/</link>
+      <pubDate>Thu, 02 Apr 2020 22:50:12 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/aws_create_dynamo_table/</guid>
+      <description>AWSでDynamoDBのテーブルを作る方法について、備忘がてら手順をのせる。 1. AWSマネジメントコンソールにログインする AWSマネジメント</description>
+    </item>
     
     <item>
       <title>2020年03月の活動</title>
