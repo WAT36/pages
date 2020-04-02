@@ -97,3 +97,44 @@ dir属性は、要素のテキストを表示する方向を定義する属性�
 
 <h3 dir="rtl">アラビア語</h3>
 <hr>
+
+
+
+## tabindex属性
+
+tabindex属性は、Tabキーを押した時のフォーカスの移動順序を示す属性である。tabindex属性を指定した要素はフォーカスによる移動が可能になる。
+
+1以上の値を指定した場合はその値の順番通りに移動し、０を指定した場合は要素が出現する順番通りに移動する。
+
+(入力例)
+
+```
+３：<input type="text" tabindex="3">
+<br>
+１：<input type="text" tabindex="1">
+<br>
+２：<input type="text" tabindex="2">
+<br>
+４：<input type="text" tabindex="4">
+```
+
+(出力例、Tabを押すと数字の順番通りに移動する)
+
+<hr>
+３：<input type="text" tabindex="3">
+<br>
+１：<input type="text" tabindex="1">
+<br>
+２：<input type="text" tabindex="2">
+<br>
+４：<input type="text" tabindex="4">
+<hr>
+
+
+## dropzone属性
+
+dropzone属性は、その要素にファイルなどをドロップすることが可能な領域であることを示す。
+
+指定する値には"copy"(コピーされる)、"move"(移動する)、"link"(リンクが作成される)がある。ドロップされたデータの処理方法に応じ使い分ける。
+
+

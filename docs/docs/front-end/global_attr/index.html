@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.1f19eb7da960f60090b0cd55daff79bbee0d55783d1cc30fef98c26894c393f9.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.94bec7a399f72675070a29c02701646a722d3dd49baccf9a9df2bfd9b0810c6d.js"></script>
 
 
 
@@ -161,13 +161,79 @@ https://github.com/alex-shpak/hugo-book
 
 <p>title属性は、その要素の補足的な内容を提供するための属性である。</p>
 
-<p>一般的には、ブラウザでカーソルを要素の上に乗せた時にツールチップで表示されるものである。(下図例)</p>
+<p>一般的には、ブラウザでカーソルを要素の上に乗せた時にツールチップで表示されるものである。</p>
+
+<p>(入力例)</p>
 
 <p><code>
-&lt;h1 title=&quot;title属性に書かれた内容はここに出る&quot;&gt;テスト&lt;/h1&gt;
+&lt;h3 title=&quot;title属性に書かれた内容はここに出る&quot;&gt;テスト&lt;/h3&gt;
 </code></p>
 
-<p><img src="https://WAT36.github.io/pages/img/front-end/html_title.png" alt="title属性" /></p>
+<p>(出力例、要素の上にカーソルを置いてみると・・)</p>
+
+<hr>
+
+<h3 title="title属性に書かれた内容はここに出る">テスト</h3>
+
+<hr>
+
+<h2 id="dir属性">dir属性</h2>
+
+<p>dir属性は、要素のテキストを表示する方向を定義する属性である。設定する値は &ldquo;ltr&rdquo;(左から右)、&rdquo;rtl&rdquo;(右から左)、&rdquo;auto&rdquo;(自動)のいずれかである。</p>
+
+<p>要素をドラッグして範囲選択すると、選択した時の方向が異なる。</p>
+
+<p>(入力例)</p>
+
+<pre><code>&lt;h3 dir=&quot;ltr&quot;&gt;日本語&lt;/h3&gt;
+
+&lt;h3 dir=&quot;rtl&quot;&gt;アラビア語&lt;/h3&gt;
+</code></pre>
+
+<p>(出力例)</p>
+
+<hr>
+
+<h3 dir="ltr">日本語</h3>
+
+<p><h3 dir="rtl">アラビア語</h3>
+<hr></p>
+
+<h2 id="tabindex属性">tabindex属性</h2>
+
+<p>tabindex属性は、Tabキーを押した時のフォーカスの移動順序を示す属性である。tabindex属性を指定した要素はフォーカスによる移動が可能になる。</p>
+
+<p>1以上の値を指定した場合はその値の順番通りに移動し、０を指定した場合は要素が出現する順番通りに移動する。</p>
+
+<p>(入力例)</p>
+
+<pre><code>３：&lt;input type=&quot;text&quot; tabindex=&quot;3&quot;&gt;
+&lt;br&gt;
+１：&lt;input type=&quot;text&quot; tabindex=&quot;1&quot;&gt;
+&lt;br&gt;
+２：&lt;input type=&quot;text&quot; tabindex=&quot;2&quot;&gt;
+&lt;br&gt;
+４：&lt;input type=&quot;text&quot; tabindex=&quot;4&quot;&gt;
+</code></pre>
+
+<p>(出力例、Tabを押すと数字の順番通りに移動する)</p>
+
+<hr>
+
+<p>３：<input type="text" tabindex="3">
+<br>
+１：<input type="text" tabindex="1">
+<br>
+２：<input type="text" tabindex="2">
+<br>
+４：<input type="text" tabindex="4">
+<hr></p>
+
+<h2 id="dropzone属性">dropzone属性</h2>
+
+<p>dropzone属性は、その要素にファイルなどをドロップすることが可能な領域であることを示す。</p>
+
+<p>指定する値には&rdquo;copy&rdquo;(コピーされる)、&rdquo;move&rdquo;(移動する)、&rdquo;link&rdquo;(リンクが作成される)がある。ドロップされたデータの処理方法に応じ使い分ける。</p>
 </article>
 
       
@@ -175,8 +241,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/a5120e21c122fedeb26bd3a5bb0077b993cba335" title='Last modified Mar 30, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 30, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/629f98355e41d8131ce540f077abf92ecc51de39" title='Last modified Apr 1, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 1, 2020
     </a>
   </div>
   
@@ -197,6 +263,9 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#id属性">id属性</a></li>
 <li><a href="#lang属性">lang属性</a></li>
 <li><a href="#title属性">title属性</a></li>
+<li><a href="#dir属性">dir属性</a></li>
+<li><a href="#tabindex属性">tabindex属性</a></li>
+<li><a href="#dropzone属性">dropzone属性</a></li>
 </ul></li>
 </ul>
 </nav>
