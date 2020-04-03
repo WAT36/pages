@@ -12,7 +12,7 @@ bookToc: false
 
 - binary
  - シェルコード
-- (難解プログラミング言語)
+- [難解プログラミング言語]({{< relref "/docs/ctf/esolang.md" >}})
 
 ## writeup
 
