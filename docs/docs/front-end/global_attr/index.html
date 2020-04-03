@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.94bec7a399f72675070a29c02701646a722d3dd49baccf9a9df2bfd9b0810c6d.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.71c9feda5689b302ae5bbcd8398ad1ea3effb63e790e82fade2d5466455e37a6.js"></script>
 
 
 
@@ -169,7 +169,7 @@ https://github.com/alex-shpak/hugo-book
 &lt;h3 title=&quot;title属性に書かれた内容はここに出る&quot;&gt;テスト&lt;/h3&gt;
 </code></p>
 
-<p>(出力例、要素の上にカーソルを置いてみると・・)</p>
+<p>(出力例、&rdquo;テスト&rdquo;の上にカーソルを置いてみると・・)</p>
 
 <hr>
 
@@ -234,6 +234,18 @@ https://github.com/alex-shpak/hugo-book
 <p>dropzone属性は、その要素にファイルなどをドロップすることが可能な領域であることを示す。</p>
 
 <p>指定する値には&rdquo;copy&rdquo;(コピーされる)、&rdquo;move&rdquo;(移動する)、&rdquo;link&rdquo;(リンクが作成される)がある。ドロップされたデータの処理方法に応じ使い分ける。</p>
+
+<h2 id="カスタムデータ属性">カスタムデータ属性</h2>
+
+<p>カスタムデータ属性とは、自分独自に設定できるオリジナルの属性である。使用するのに良い属性などがない場合に利用する、</p>
+
+<p>ただし制約があり、属性名は必ず「data-」という文字列から始まるようにしないといけない。</p>
+
+<p>主にCSSやJavaScriptで値を取得するときなどに使われる。</p>
+
+<pre><code>&lt;p data-id=&quot;1&quot;&gt;その１&lt;/p&gt;
+&lt;p data-id=&quot;2&quot;&gt;その２&lt;/p&gt;
+</code></pre>
 </article>
 
       
@@ -241,8 +253,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/629f98355e41d8131ce540f077abf92ecc51de39" title='Last modified Apr 1, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 1, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/6c0550ccdd552df1fdf780f7066e998c58522da3" title='Last modified Apr 2, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 2, 2020
     </a>
   </div>
   
@@ -266,6 +278,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#dir属性">dir属性</a></li>
 <li><a href="#tabindex属性">tabindex属性</a></li>
 <li><a href="#dropzone属性">dropzone属性</a></li>
+<li><a href="#カスタムデータ属性">カスタムデータ属性</a></li>
 </ul></li>
 </ul>
 </nav>
