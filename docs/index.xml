@@ -101,6 +101,15 @@
     </item>
     
     <item>
+      <title>About me</title>
+      <link>https://WAT36.github.io/pages/docs/about/aboutme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/about/aboutme/</guid>
+      <description>About Me ・・工事中。。Sorry</description>
+    </item>
+    
+    <item>
       <title>AND演算</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/and/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -187,7 +196,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/other/other_index/</guid>
-      <description>その他 その他、括れてない手法などをまとめる。 変数 変数の型を調べる 関数、メソッドのヘルプを見る(Python) コメントアウト</description>
+      <description>その他 その他、括れてない手法などをまとめる。 変数 変数の型を調べる 関数、メソッドのヘルプを見る(Python) コメントアウト 正規表現</description>
     </item>
     
     <item>
@@ -341,6 +350,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/graph/legend/</guid>
       <description>グラフの凡例を表示する Python グラフに凡例を表示させるには、まずグラフを表示するときに使ったpyplotの関数plotの引数にlabelというパラ</description>
+    </item>
+    
+    <item>
+      <title>グラフの表現方法</title>
+      <link>https://WAT36.github.io/pages/docs/programming/procon/graph/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/procon/graph/</guid>
+      <description>グラフの表現方法 グラフはコード上でどのように表現して作ればよいのか？ ここではいくつか方法を示す。 隣接行列 まずは隣接行列という方法について。 グ</description>
     </item>
     
     <item>
@@ -722,6 +740,15 @@
     </item>
     
     <item>
+      <title>免責事項</title>
+      <link>https://WAT36.github.io/pages/docs/about/disclaimer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/about/disclaimer/</guid>
+      <description>免責事項 本ブログにおける免責事項は、下記の通りです。 本ブログの情報の正確性について 本ブログのコンテンツや情報において、可能な限り正確な情報を</description>
+    </item>
+    
+    <item>
       <title>円周率(π)</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/pi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -746,6 +773,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/procon/dynamic_planning/</guid>
       <description>動的計画法 動的計画法について。 動的計画法とはアルゴリズム設計手法の一つで、配列やリストの要素をそれ以前に算出した別の要素を使って算出する手法</description>
+    </item>
+    
+    <item>
+      <title>勾配法(最急降下法)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/steepest_descent_method/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/steepest_descent_method/</guid>
+      <description>勾配法(最急降下法) 前述の平均二乗誤差で最も誤差が小さくなるw0,w1を正確に求めるにはどうすればよいのか？ その一例として、ここでは勾配法と</description>
     </item>
     
     <item>
@@ -961,7 +997,16 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</guid>
-      <description>機械学習 機械学習の手法についてをまとめる。 教師あり学習 直線モデル(線形回帰) 平均二乗誤差</description>
+      <description>機械学習 機械学習の手法についてをまとめる。 教師あり学習 直線モデル(線形回帰) 平均二乗誤差 勾配法(最急降下法) 解析解</description>
+    </item>
+    
+    <item>
+      <title>正規表現</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/re/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/re/</guid>
+      <description>正規表現 文字列に正規表現を適用してある文字列パターンを抽出・検索したいという場合があると思う。 その場合に利用する方法を示す。 ちなみに正規表現</description>
     </item>
     
     <item>
@@ -1097,6 +1142,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/front-end/elements_type/</guid>
       <description>要素の種類 先程述べた要素には色々な種類がある。 大きく分けると以下の7種類。 フローコンテンツ 見出しコンテンツ セクショニングコンテンツ フレージン</description>
+    </item>
+    
+    <item>
+      <title>解析解</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/analytical_solution/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/analytical_solution/</guid>
+      <description>解析解 先程の直線モデルの例では勾配法を用いてw0、w1の値を求めたが、実は勾配法を用いなくても数式を計算していけば最適なw0、w1が求められ</description>
     </item>
     
     <item>
@@ -1316,6 +1370,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>2020年03月の活動</title>
+      <link>https://WAT36.github.io/pages/posts/202003/</link>
+      <pubDate>Wed, 01 Apr 2020 20:37:10 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/202003/</guid>
+      <description>3月も終わり、同時に私も社会人4年目に突入しようとしている時期。 色々将来について考えたい時だが、コロナウイルスの爆発的流行により行動範囲がよ</description>
     </item>
     
     <item>

@@ -53,6 +53,11 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/about/aboutme/</loc>
+    <lastmod>2020-03-26T22:25:31+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/and/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
   </url>
@@ -99,7 +104,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/other/other_index/</loc>
-    <lastmod>2020-02-02T13:42:06+09:00</lastmod>
+    <lastmod>2020-03-24T00:11:26+09:00</lastmod>
   </url>
   
   <url>
@@ -185,6 +190,11 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/graph/legend/</loc>
     <lastmod>2020-01-20T22:45:17+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/procon/graph/</loc>
+    <lastmod>2020-04-02T20:47:39+09:00</lastmod>
   </url>
   
   <url>
@@ -398,6 +408,11 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/about/disclaimer/</loc>
+    <lastmod>2020-03-29T14:23:16+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/pi/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
   </url>
@@ -410,6 +425,11 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/procon/dynamic_planning/</loc>
     <lastmod>2020-03-19T23:44:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/steepest_descent_method/</loc>
+    <lastmod>2020-04-01T19:33:43+09:00</lastmod>
   </url>
   
   <url>
@@ -529,7 +549,12 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</loc>
-    <lastmod>2020-03-04T22:47:10+09:00</lastmod>
+    <lastmod>2020-03-26T21:31:20+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/other/re/</loc>
+    <lastmod>2020-03-31T23:28:17+09:00</lastmod>
   </url>
   
   <url>
@@ -539,7 +564,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/procon/procon_index/</loc>
-    <lastmod>2020-03-08T12:38:47+09:00</lastmod>
+    <lastmod>2020-03-24T23:05:52+09:00</lastmod>
   </url>
   
   <url>
@@ -605,6 +630,11 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/elements_type/</loc>
     <lastmod>2020-03-29T23:33:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/analytical_solution/</loc>
+    <lastmod>2020-04-01T20:14:06+09:00</lastmod>
   </url>
   
   <url>
@@ -728,43 +758,48 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/posts/202003/</loc>
+    <lastmod>2020-04-02T21:15:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/posts/</loc>
+    <lastmod>2020-04-02T21:15:10+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/posts/202002/</loc>
     <lastmod>2020-02-29T11:52:34+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/posts/</loc>
-    <lastmod>2020-02-29T11:52:34+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/categories/</loc>
-    <lastmod>2020-02-27T23:49:40+09:00</lastmod>
+    <lastmod>2020-03-28T23:09:59+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/tags/</loc>
-    <lastmod>2020-02-27T23:49:40+09:00</lastmod>
+    <lastmod>2020-03-28T23:09:59+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/categories/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0/</loc>
-    <lastmod>2020-02-27T23:49:40+09:00</lastmod>
+    <lastmod>2020-03-28T23:09:59+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</loc>
-    <lastmod>2020-02-27T23:49:40+09:00</lastmod>
+    <lastmod>2020-03-28T23:09:59+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/posts/warshall_floyd/</loc>
-    <lastmod>2020-02-27T23:49:40+09:00</lastmod>
+    <lastmod>2020-03-28T23:09:59+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/tags/%E6%8E%A2%E7%B4%A2/</loc>
-    <lastmod>2020-02-27T23:49:40+09:00</lastmod>
+    <lastmod>2020-03-28T23:09:59+09:00</lastmod>
   </url>
   
   <url>
@@ -843,12 +878,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
