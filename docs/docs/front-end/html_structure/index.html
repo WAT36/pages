@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.67f383bc9eb4630e1824a48c74749b75a5473ae03a1a332b1e7b578044901272.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.1c5012cd83461e87acc471203ad385347087587e5a5c4fb09dcb87dd1c12a4e5.js"></script>
 
 
 
@@ -175,6 +175,38 @@ https://github.com/alex-shpak/hugo-book
     ・・・
 &lt;/html&gt;
 </code></pre>
+
+<h2 id="head要素">head要素</h2>
+
+<p>head要素は、HTML文書のメタデータを入れるための要素である。</p>
+
+<p>大体は文書のタイトル(title要素)、また文書の文字コード(meta要素)をここで指定する。</p>
+
+<h3 id="title要素">title要素</h3>
+
+<p>title要素は、HTML文書のタイトル(名前)を示す要素である。この要素は、必ずhead要素の中で指定する。</p>
+
+<pre><code>・・・
+&lt;head&gt;
+    &lt;title&gt;XXXのページ&lt;/title&gt;
+&lt;/head&gt;
+・・・
+</code></pre>
+
+<h3 id="meta要素">meta要素</h3>
+
+<p>meta要素は、HTML文書の様々なメタデータを指定できる空要素である。</p>
+
+<p>属性が色々あり、例えばcharset属性は文字コードを、name,content属性で指定したメタデータ名とそれに対する値を指定できる。</p>
+
+<pre><code>・・・
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;T.Wakasugi&quot;&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;HTML programming meta&quot;&gt;
+&lt;/head&gt;
+・・・
+</code></pre>
 </article>
 
       
@@ -182,8 +214,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/40924a166c0630d645ca729b692b3c65a2ddccf0" title='Last modified Mar 29, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 29, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/b0851bad06402e918ac6c308d8124e2b136badea" title='Last modified Apr 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 4, 2020
     </a>
   </div>
   
@@ -202,6 +234,11 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#doctype宣言">DOCTYPE宣言</a></li>
 <li><a href="#html要素">html要素</a></li>
+<li><a href="#head要素">head要素</a>
+<ul>
+<li><a href="#title要素">title要素</a></li>
+<li><a href="#meta要素">meta要素</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
