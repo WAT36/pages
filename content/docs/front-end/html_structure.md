@@ -3,7 +3,6 @@ title: "HTMLの全体構造"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
-bookToc: false
 ---
 
 # HTMLの全体構造
@@ -19,7 +18,7 @@ HTMLファイルは主に以下から構成される。
 
 大まかな記載は以下の通り。
 
-```html
+```
 <!DOCTYPE html>
 <html>
     <head>
@@ -41,4 +40,17 @@ HTML5では実は必要なものではないそうだが、ブラウザの表示
 <!DOCTYPE HTML>
 ```
 
+## html要素
 
+html要素は、HTML文書のルートとなる要素である。
+
+他の全ての要素は、この要素内に記述しなければならない。
+
+また、グローバル属性であるlang属性を指定して、その文書で使用されている言語の種類を示すことが推奨されている。
+
+```
+<!DOCTYPE html>
+<html lang="ja>
+    ・・・
+</html>
+```
