@@ -1,5 +1,6 @@
 ---
 title: "CTF"
+bookToc: false
 ---
 
 # CTFメモ
@@ -11,7 +12,7 @@ title: "CTF"
 
 - binary
  - シェルコード
-
+- [難解プログラミング言語]({{< relref "/docs/ctf/esolang.md" >}})
 
 ## writeup
 
