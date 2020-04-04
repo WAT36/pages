@@ -157,6 +157,15 @@
     
     <item>
       <title>HTMLの全体構造</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/html_structure-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/html_structure-2/</guid>
+      <description>HTMLの全体構造 HTMLファイルの構造についてを述べる。 HTMLファイルは主に以下から構成される。 DOCTYPE宣言（文書型宣言） html</description>
+    </item>
+    
+    <item>
+      <title>HTMLの全体構造</title>
       <link>https://WAT36.github.io/pages/docs/front-end/html_structure/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -369,6 +378,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/graph/subplot/</guid>
       <description>グラフを複数表示させる Python グラフを複数表示するにはpyplotの関数subplotを使う。 subplot(nrows, ncols, index) subplotを使うと縦nrows×横ncol</description>
+    </item>
+    
+    <item>
+      <title>グローバル属性</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/global_attr-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/global_attr-2/</guid>
+      <description>グローバル属性 グローバル属性とは全ての要素で指定できる属性のことを言う。 主に以下のものが挙げられる。 class属性 class属性は、要素に種</description>
     </item>
     
     <item>
@@ -1129,11 +1147,29 @@
     
     <item>
       <title>要素とタグ</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/element-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/element-2/</guid>
+      <description>要素とタグ HTMLは、各コンテンツの内容をタグで囲い、それが文書の内の何であるかを示す言語である。 HTML文書内の各構成要素の事を要素(el</description>
+    </item>
+    
+    <item>
+      <title>要素とタグ</title>
       <link>https://WAT36.github.io/pages/docs/front-end/element/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/element/</guid>
       <description>要素とタグ HTMLは、各コンテンツの内容をタグで囲い、それが文書の内の何であるかを示す言語である。 HTML文書内の各構成要素の事を要素(el</description>
+    </item>
+    
+    <item>
+      <title>要素の種類</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/elements_type-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/elements_type-2/</guid>
+      <description>要素の種類 先程述べた要素には色々な種類がある。 大きく分けると以下の7種類。 フローコンテンツ 見出しコンテンツ セクショニングコンテンツ フレージン</description>
     </item>
     
     <item>
@@ -1332,6 +1368,24 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/factorial/</guid>
       <description>階乗 階乗計算についてを示す。 基本、階乗計算はn * n-1 * n-2 * &amp;hellip; * 1を地道にやっていく計算量O(n)の計算を行うので、時間がかかりやすいという特徴</description>
+    </item>
+    
+    <item>
+      <title>難解プログラミング言語</title>
+      <link>https://WAT36.github.io/pages/docs/ctf/esolang-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/ctf/esolang-2/</guid>
+      <description>難解プログラミング言語 難解プログラミング言語とは、意図的に解読が困難になるように設計されたプログラミング言語である。 実用性を考慮して作られた</description>
+    </item>
+    
+    <item>
+      <title>難解プログラミング言語</title>
+      <link>https://WAT36.github.io/pages/docs/ctf/esolang-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/ctf/esolang-3/</guid>
+      <description>難解プログラミング言語 難解プログラミング言語とは、意図的に解読が困難になるように設計されたプログラミング言語である。 実用性を考慮して作られた</description>
     </item>
     
     <item>
@@ -1634,6 +1688,15 @@ Fervens esse et tenet cinisque per: et vir equus formaque superorum tollit, vire
       
       <guid>https://WAT36.github.io/pages/docs/ctf/ctf_index/</guid>
       <description>CTFメモ 最近CTFにも興味が出て参加しているが、なかなかテクニックが覚えられないため、備忘のために覚えたことを書き記しておくためのページで</description>
+    </item>
+    
+    <item>
+      <title>フロントエンド</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/front_index-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/front_index-2/</guid>
+      <description>フロントエンド-memo フロントエンドの勉強用メモ。まずはHTMLから頑張ります・・ HTML 要素とタグ HTMLの全体構造 要素の種類 グローバル属性</description>
     </item>
     
     <item>
