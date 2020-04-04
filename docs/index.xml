@@ -394,7 +394,16 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/container/container_index/</guid>
-      <description>コンテナ系 メモ コンテナについて何か勉強したいなって、とりあえず立てたけど頻度は低めかも （作成中）</description>
+      <description>コンテナ系 メモ コンテナについて何か勉強したいなって、とりあえず立てた まずはDockerについて書いて見ます コンテナとは？ Docker</description>
+    </item>
+    
+    <item>
+      <title>コンテナとは？</title>
+      <link>https://WAT36.github.io/pages/docs/container/container/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/container/container/</guid>
+      <description>コンテナとは？ 最近よく聞くコンテナ技術とは何なのか？ コンテナとは、OS上に論理的な区画(コンテナ)を作り、そこにアプリケーションやアプリケー</description>
     </item>
     
     <item>
