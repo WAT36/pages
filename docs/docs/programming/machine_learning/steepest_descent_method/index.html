@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>勾配法(最急降下法) | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.b34bd0609aa66d0c991942c0583846e3bff00f52e34f2e6376f65dd51e1f167f.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2fsteepest_descent_method\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>勾配法(最急降下法)</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="勾配法-最急降下法">勾配法(最急降下法)</h1>
+
+<p>前述の平均二乗誤差で最も誤差が小さくなるw<sub>0</sub>,w<sub>1</sub>を正確に求めるにはどうすればよいのか？</p>
+
+<p>その一例として、ここでは<strong>勾配法</strong>という方法についてを述べる。</p>
+
+<p>勾配法とは曲面(2変数関数のグラフ)において、最初にある座標を定めて曲面の傾きを求め、そこから傾きの方向(=曲面の座標が低くなる方向)へ座標を移していく、という動作を繰り返し、最終的に傾き0の座標にたどり着くことで曲面が最も小さくなる座標を求めるという方法である。</p>
+
+<p>前述の平均二乗誤差Jにおいて、この勾配法を利用し最もJが小さくなるw<sub>0</sub>,w<sub>1</sub>の組み合わせを求めることを考える。</p>
+
+<p>平均二乗誤差Jの(w<sub>0</sub>,w<sub>1</sub>)での傾きは以下のように表される。</p>
+
+<math style="display:block">
+<mi>∇</mi>
+<mi>J</mi>
+<mo>=</mo>
+<mfenced open="[" close="]"> <mtable>
+<mtr> 
+    <mtd>
+    <mfrac> 
+        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
+        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>0</mn></msub></mrow>
+    </mfrac>
+    </mtd>
+</mtr> 
+<mtr>
+    <mtd>
+    <mfrac> 
+        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
+        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>1</mn></msub></mrow>
+    </mfrac>
+    </mtd>
+</mtr>
+</mtable> 
+</mfenced>
+<mo>=</mo>
+<mfenced open="[" close="]"> 
+<mtable>
+<mtr> 
+    <mtd>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mi>&Sum;</mi> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+    <mn>(</mn>
+    <msub>
+        <mi>y</mi>
+        <mi>n</mi> 
+    </msub>
+    <mo>-</mo>
+    <msub>
+        <mi>t</mi>
+        <mi>n</mi> 
+    </msub>
+    <mn>)</mn>
+    <msub>
+        <mi>x</mi>
+        <mi>n</mi> 
+    </msub>
+    </mtd>
+</mtr> 
+<mtr>
+    <mtd>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mi>&Sum;</mi> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+        <mi>N-1</mi> 
+    </munderover> 
+    <mn>(</mn>
+    <msub>
+        <mi>y</mi>
+        <mi>n</mi> 
+    </msub>
+    <mo>-</mo>
+    <msub>
+        <mi>t</mi>
+        <mi>n</mi> 
+    </msub>
+    <mn>)</mn>
+    </mtd>
+</mtr>
+</mtable> 
+</mfenced>
+</math>
+
+<p>この値はそれぞれJのw<sub>0</sub>,w<sub>1</sub>に関する傾きを示している。</p>
+
+<p>これを利用し、w<sub>0</sub>,w<sub>1</sub>の座標を移動させることで、傾きが0かつJの値が低くなる方向へと近づけていく。</p>
+
+<p><b>w</b> = [w<sub>0</sub>,w<sub>1</sub>] とし、t回移動させた後の<b>w</b>を<b>w</b>(t)とすると、以下の漸化式が成り立つ。</p>
+
+<math>
+<mi mathvariant="bold-italic">w</mi>
+<mo>(</mo>
+<mi>t</mi>
+<mo>+</mo>
+<mn>1</mn>
+<mo>)</mo>
+<mo>=</mo>
+<mi mathvariant="bold-italic">w</mi>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+<mo>=</mo>
+<mi>α</mi>
+<mi>∇</mi>
+<mi>J</mi>
+<mfenced open="|" close=""> <mi></mi>
+</mfenced>
+<msub>
+<mi></mi>
+<mrow>
+    <mi mathvariant="bold-italic">w</mi>
+    <mo>(</mo>
+    <mi>t</mi>
+    <mo>)</mo>
+</mrow>
+</msub>
+
+</math>
+
+<p>ここでαは<strong>学習率</strong>と呼ばれるパラメータで、1回の移動で<b>w</b>をどれだけ移動させるかの度合を示す。</p>
+
+<p>w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。</p>
+
+<math>
+<msub>
+<mi>w</mi>
+<mn>0</mn>
+</msub>
+<mn>(</mn>
+<mi>t</mi>
+<mo>+</mo>
+<mn>1</mn>
+<mn>)</mn>
+<mo>=</mo>
+<msub>
+<mi>w</mi>
+<mn>0</mn>
+</msub>
+<mn>(</mn>
+<mi>t</mi>
+<mn>)</mn>
+<mo>-</mo>
+<mi>α</mi>
+    <mfrac> 
+        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
+        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>0</mn></msub></mrow>
+    </mfrac>
+<mfenced open="|" close=""> 
+<mi></mi>
+</mfenced>
+<msub>
+<mi></mi>
+<mrow>
+<msub>
+<mi>w</mi>
+<mn>0</mn>
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+<mo>,</mo>
+<msub>
+<mi>w</mi>
+<mn>1</mn>
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+</mrow>
+</msub>
+</math>
+<br>
+<br>
+<math>
+<msub>
+<mi>w</mi>
+<mn>1</mn>
+</msub>
+<mn>(</mn>
+<mi>t</mi>
+<mo>+</mo>
+<mn>1</mn>
+<mn>)</mn>
+<mo>=</mo>
+<msub>
+<mi>w</mi>
+<mn>1</mn>
+</msub>
+<mn>(</mn>
+<mi>t</mi>
+<mn>)</mn>
+<mo>-</mo>
+<mi>α</mi>
+    <mfrac> 
+        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
+        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>1</mn></msub></mrow>
+    </mfrac>
+<mfenced open="|" close=""> 
+<mi></mi>
+</mfenced>
+<msub>
+<mi></mi>
+<mrow>
+<msub>
+<mi>w</mi>
+<mn>0</mn>
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+<mo>,</mo>
+<msub>
+<mi>w</mi>
+<mn>1</mn>
+</msub>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+</mrow>
+</msub>
+</math>
+
+<p>それではこの式を利用するために、この式に出てくるJをw<sub>0</sub>,w<sub>1</sub>で偏微分した値を求めてみよう。</p>
+
+<p>まずJは前述の平均二乗誤差の定義から以下のような式である。</p>
+
+<math>
+<mi>J</mi>
+<mo>=</mo>
+    <mfrac> 
+        <mn>1</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mi>&Sum;</mi> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+    <msup>
+        <mrow>
+            <mo>(</mo>
+            <msub>
+                <mi>y</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>)</mo>
+        </mrow>
+        <mn>2</mn> 
+    </msup>
+
+</math>
+
+<p>ここで
+<math>
+<msub>
+<mn>y</mn>
+<mn>n</mn>
+</msub>
+<mo>=</mo>
+<msub>
+<mn>w</mn>
+<mn>0</mn>
+</msub>
+<mn>x</mn>
+<mo>+</mo>
+<msub>
+<mn>w</mn>
+<mn>1</mn>
+</msub>
+</math>
+より</p>
+
+<math>
+<mi>J</mi>
+<mo>=</mo>
+    <mfrac> 
+        <mn>1</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mi>&Sum;</mi> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+    <msup>
+        <mrow>
+            <mo>(</mo>
+            <msub>
+                <mi>w</mi>
+                <mn>0</mn> 
+            </msub>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>+</mo>
+            <msub>
+                <mi>w</mi>
+                <mn>1</mn> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>)</mo>
+        </mrow>
+        <mn>2</mn> 
+    </msup>
+</math>
+
+<p>これをw<sub>0</sub>,w<sub>1</sub>でそれぞれ偏微分すると</p>
+
+<math>
+    <mfrac> 
+        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
+        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>0</mn></msub></mrow>
+    </mfrac>
+<mo>=</mo>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mi>&Sum;</mi> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+            <mn>(</mn>
+            <msub>
+                <mi>w</mi>
+                <mn>0</mn> 
+            </msub>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>+</mo>
+            <msub>
+                <mi>w</mi>
+                <mn>1</mn> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mn>)</mn>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+<mo>=</mo>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mi>&Sum;</mi> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+            <mn>(</mn>
+            <msub>
+                <mi>y</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mn>)</mn>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+</math>
+<br>
+<math>
+    <mfrac> 
+        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
+        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>1</mn></msub></mrow>
+    </mfrac>
+<mo>=</mo>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mi>&Sum;</mi> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+            <mn>(</mn>
+            <msub>
+                <mi>w</mi>
+                <mn>0</mn> 
+            </msub>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>+</mo>
+            <msub>
+                <mi>w</mi>
+                <mn>1</mn> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mn>)</mn>
+<mo>=</mo>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mi>&Sum;</mi> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+            <mn>(</mn>
+            <msub>
+                <mi>y</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mn>)</mn>
+</math>
+
+<p>になる。これより、上式は</p>
+
+<math>
+<msub>
+    <mi>w</mi>
+    <mn>0</mn> 
+</msub>
+<mn>(</mn>
+<mi>t</mi>
+<mo>+</mo>
+<mn>1</mn>
+<mn>)</mn>
+<mo>=</mo>
+<msub>
+    <mi>w</mi>
+    <mn>0</mn> 
+</msub>
+<mn>(</mn>
+<mi>t</mi>
+<mn>)</mn>
+<mo>-</mo>
+<mn>α</mn>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mi>&Sum;</mi> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+            <mn>(</mn>
+            <msub>
+                <mi>y</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mn>)</mn>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+</math>
+<br>
+<math>
+<msub>
+    <mi>w</mi>
+    <mn>1</mn> 
+</msub>
+<mn>(</mn>
+<mi>t</mi>
+<mo>+</mo>
+<mn>1</mn>
+<mn>)</mn>
+<mo>=</mo>
+<msub>
+    <mi>w</mi>
+    <mn>1</mn> 
+</msub>
+<mn>(</mn>
+<mi>t</mi>
+<mn>)</mn>
+<mo>-</mo>
+<mn>α</mn>
+    <mfrac> 
+        <mn>2</mn> 
+        <mi>N</mi>
+    </mfrac>
+    <munderover> 
+        <mi>&Sum;</mi> 
+            <mrow>
+                <mi>n</mi>
+                <mo>=</mo>
+                <mn>0</mn> 
+            </mrow>
+            <mi>N-1</mi> 
+    </munderover> 
+            <mn>(</mn>
+            <msub>
+                <mi>y</mi>
+                <mi>n</mi> 
+            </msub>
+            <mo>-</mo>
+            <msub>
+                <mi>t</mi>
+                <mi>n</mi> 
+            </msub>
+            <mn>)</mn>
+            <msub>
+                <mi>x</mi>
+                <mi>n</mi> 
+            </msub>
+</math>
+
+<p>となる。これを利用して求めてみよう。</p>
+
+<p>コード例を以下に記載する。</p>
+
+<p>まずは平均二乗誤差Jのw<sub>0</sub>,<sub>1</sub>における勾配を求める関数をd_mseとおくと以下のようになる。(w,x,tを入力とする)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">d_mse</span>(w,x,t):
+    y <span style="color:#f92672">=</span> w[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> x <span style="color:#f92672">+</span> w[<span style="color:#ae81ff">1</span>]
+    d_w0 <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>mean((y<span style="color:#f92672">-</span>t)<span style="color:#f92672">*</span>x)
+    d_w1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>mean(y<span style="color:#f92672">-</span>t)
+    <span style="color:#66d9ef">return</span> d_w0,d_w1</code></pre></div>
+<p>試しに、w=[10,10]での平均二乗誤差を算出してみる。データは前章で使ったデータを利用する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#75715e">#入力値  </span>
+x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">167.9</span>,<span style="color:#ae81ff">164.3</span>,<span style="color:#ae81ff">171.6</span>,<span style="color:#ae81ff">172.7</span>,<span style="color:#ae81ff">162.8</span>,<span style="color:#ae81ff">170.2</span>,<span style="color:#ae81ff">172.3</span>,<span style="color:#ae81ff">163.8</span>,<span style="color:#ae81ff">168.8</span>,<span style="color:#ae81ff">167.2</span>,<span style="color:#ae81ff">172.3</span>,<span style="color:#ae81ff">166.4</span>,<span style="color:#ae81ff">173.1</span>,<span style="color:#ae81ff">176.9</span>,<span style="color:#ae81ff">178.4</span>,<span style="color:#ae81ff">167.1</span>,<span style="color:#ae81ff">177.4</span>,<span style="color:#ae81ff">173.7</span>,<span style="color:#ae81ff">172.0</span>,<span style="color:#ae81ff">174.1</span>])
+<span style="color:#75715e">#実測値  </span>
+t  <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">58.0</span>,<span style="color:#ae81ff">58.2</span>,<span style="color:#ae81ff">60.1</span>,<span style="color:#ae81ff">65.2</span>,<span style="color:#ae81ff">55.0</span>,<span style="color:#ae81ff">60.9</span>,<span style="color:#ae81ff">61.9</span>,<span style="color:#ae81ff">56.4</span>,<span style="color:#ae81ff">62.9</span>,<span style="color:#ae81ff">57.0</span>,<span style="color:#ae81ff">64.9</span>,<span style="color:#ae81ff">55.9</span>,<span style="color:#ae81ff">68.0</span>,<span style="color:#ae81ff">67.9</span>,<span style="color:#ae81ff">69.1</span>,<span style="color:#ae81ff">60.8</span>,<span style="color:#ae81ff">65.6</span>,<span style="color:#ae81ff">66.1</span>,<span style="color:#ae81ff">59.9</span>,<span style="color:#ae81ff">69.5</span>])
+ 
+<span style="color:#75715e">#x,tをnpyファイルに保存</span>
+np<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#39;x.npy&#39;</span>,x)
+np<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#39;t.npy&#39;</span>,t)
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">d_mse</span>(w,x,t):
+    <span style="color:#75715e"># 略</span>
+ 
+d_w <span style="color:#f92672">=</span> d_mse([<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">10</span>],x,t)
+ 
+<span style="color:#66d9ef">print</span>(d_w)</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>(564976.373, 3308.6699999999996)
+</code></pre>
+
+<p>w=[10,10]ではw<sub>0</sub>方向への勾配が大きいことがわかる。</p>
+
+<p>ではこのJの勾配を算出する関数d_mseを利用した勾配法を行う関数steepest_descent_method(x,t)を実装してみよう。
+wは先ほどの[10,10]から始めるものとし、学習率αは今回は0.000034として行う。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">steepest_descent_method</span>(x,t,a,n):
+    w<span style="color:#f92672">=</span>[<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">10</span>]           <span style="color:#75715e">#wの初期値</span>
+    alpha<span style="color:#f92672">=</span>a             <span style="color:#75715e">#学習率</span>
+    N<span style="color:#f92672">=</span>n                 <span style="color:#75715e">#繰り返し回数</span>
+    min_dJ<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>          <span style="color:#75715e">#勾配法をやめる勾配の絶対値の閾値</span>
+    w_i<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros([N,<span style="color:#ae81ff">2</span>]) <span style="color:#75715e">#w_i[j]にはj回の勾配法で算出したwの値が入る</span>
+    w_i[<span style="color:#ae81ff">0</span>,:]<span style="color:#f92672">=</span>w          <span style="color:#75715e">#w_iの最初の1行をwにする</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,N):
+        dJ<span style="color:#f92672">=</span>d_mse(w_i[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],x,t)
+        w_i[i,<span style="color:#ae81ff">0</span>]<span style="color:#f92672">=</span>w_i[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>]<span style="color:#f92672">-</span>alpha<span style="color:#f92672">*</span>dJ[<span style="color:#ae81ff">0</span>] <span style="color:#75715e">#w0(t+1)=w0(t)-α*∂J/∂w0</span>
+        w_i[i,<span style="color:#ae81ff">1</span>]<span style="color:#f92672">=</span>w_i[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span>alpha<span style="color:#f92672">*</span>dJ[<span style="color:#ae81ff">1</span>] <span style="color:#75715e">#w1(t+1)=w1(t)-α*∂J/∂w1</span>
+        <span style="color:#66d9ef">if</span>( max(np<span style="color:#f92672">.</span>absolute(dJ)) <span style="color:#f92672">&lt;</span> min_dJ):
+            <span style="color:#66d9ef">break</span>
+    w0<span style="color:#f92672">=</span>w_i[i,<span style="color:#ae81ff">0</span>]     
+    w1<span style="color:#f92672">=</span>w_i[i,<span style="color:#ae81ff">1</span>]     
+    w_i<span style="color:#f92672">=</span>w_i[:i,:]   
+    <span style="color:#66d9ef">return</span> w0,w1,dJ,w_i</code></pre></div>
+<p>これを利用し、平均二乗誤差Jの最小値を勾配法を用いて求めて見る。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">d_mse</span>(w,x,t):
+    <span style="color:#75715e">#(略)</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">steepest_descent_method</span>(x,t,a,n):
+    <span style="color:#75715e">#(略)</span>
+
+<span style="color:#75715e">#入力値</span>
+x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;x.npy&#39;</span>)
+<span style="color:#75715e">#実測値</span>
+t <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;t.npy&#39;</span>)
+
+w0,w1,dJ,w_history <span style="color:#f92672">=</span> steepest_descent_method(x,t,<span style="color:#ae81ff">0.000034</span>,<span style="color:#ae81ff">10000000</span>)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;繰り返し回数:&#34;</span><span style="color:#f92672">+</span>str(w_history<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]))
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;w0:{0:.9f} ,w1:{1:.9f}&#34;</span><span style="color:#f92672">.</span>format(w0,w1))
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;dJ:&#34;</span><span style="color:#f92672">+</span>str(dJ))</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>繰り返し回数:6800910
+w0:0.464910324 ,w1:-17.121946810
+dJ:(-0.0005856056965058088, 0.09999999786601492)
+</code></pre>
+
+<p>となるように、一回ずつシミュレーションを行っていくことで、より最適な値を求めることが可能となる。</p>
+
+<p>しかし、実は勾配法のようなシミュレーションをせずとも、式の計算だけで最適なw0,w1が求められてしまうパターンもある。<br />
+それについては次章で解説する。</p>
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/977787a5c92efb7f067f8a8d8ee44e103b7364b1" title='Last modified Apr 1, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 1, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>
