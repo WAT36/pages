@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>面彩色 | WAT Notes</title>
+<title>2次元入力の面モデル | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -19,7 +19,6 @@
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 
 
-<link rel="alternate" type="application/rss+xml" href="https://WAT36.github.io/pages/tags/%E9%9D%A2%E5%BD%A9%E8%89%B2/index.xml" title="WAT Notes" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -55,7 +54,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2ftags\2f%E9%9D%A2%E5%BD%A9%E8%89%B2\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2f 2dmodel\2f "] {
       color: #004ed0;
   }
   </style>
@@ -113,30 +112,67 @@ https://github.com/alex-shpak/hugo-book
 </script>
 
     </aside>
+
     <div class="book-page">
       <header class="flex align-center justify-between book-header">
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>面彩色</strong>
+  <strong>2次元入力の面モデル</strong>
 </header>
 
+      
+<article class="markdown">
 
-<section id="main">
-    <div class="tags_list">
-    <div class="tags_title"><span>面彩色</span></div>
-    </div>
-    <ul id="list">
-        
-        <li>
-            2019-11-30
-             <a href="https://WAT36.github.io/pages/posts/graph_coloring/">グラフの彩色問題 ～Welsh・Powellのアルゴリズム～</a>
-         </li>
-         
-     </ul>
-     <hr>
-     <a href="https://WAT36.github.io/pages/tags">Tags</a>
- </section>
+<h1 id="2次元入力の面モデル">2次元入力の面モデル</h1>
+
+<p>先程の勾配法の例では入力データは1次元であったが、2次元であった場合はどうだろうか。</p>
+
+<p>例として、以下のようなデータを用意する。</p>
+
+<p>(入力が2次元のデータを用意する)</p>
+
+<p>これらに対して、2次元の入力値が与えられたときに予測値を返すような簡単な面を予測してみよう。</p>
+
+<p>まず面の式についてだが、一般的に3次元において座標(x,y,z)を通る面の式は</p>
+
+<p>ax+by+cz+d=0 (a,b,c,dは実数)</p>
+
+<p>となっているが、これを変形することにより、(x0,x1)を入力したときに予測値tを返すような面の式は以下のように表される。</p>
+
+<p>y=w0x0+w1x1+w2. (w0,w1,w2は実数)</p>
+
+<p>この式を利用し、予測値と正解値の差の合計が最も小さくなるようなw0,w1,w2を算出することを考える。</p>
+
+<p>先程の1次元の時と同様に、平均二乗誤差を算出し、解析解を求めてみる。</p>
+
+<p>まず、平均二乗誤差Jは</p>
+
+<p>J= 1/N Σ (y-t)^2
+ = 1/N Σ (w0x0+w1x1+w2-t)^2</p>
+
+<p>となり、このJが最も小さくなるようなw0,w1,w2を求めれば良い。</p>
+
+<p>そうなるようなw0,w1,w2の値は、Jをw0,w1,w2でそれぞれ偏微分した時の値が０になる時である。</p>
+
+<p>Jをw0,w1,w2でそれぞれ偏微分、また先ほどと同様に、avg(x)をxの平均値を算出する関数とおくと、各式は以下のように整理される。</p>
+
+<p>(Jをw0,w1,w2でそれぞれ偏微分した結果を表示する)</p>
+
+<p>この３式をそれぞれw0,w1,w2について解くと、w0,w1,w2は以下のように表される。</p>
+
+<p>(w0,w1,w2の式を書く)</p>
+
+<p>ここで、</p>
+
+<p>var(a) = avg(a^2) - avg(a)^2</p>
+
+<p>cov(a,b) = avg(ab)-avg(a)avg(b)</p>
+
+<p>とする。var(a)はaの分散と呼ばれ、aのばらつき具合を示す値である。</p>
+
+<p>cov(a,b)はa,bの共分散と呼ばれる値で、a,bがどれぐらい影響しあっているかを示す。</p>
+</article>
 
       
 <div class="book-footer justify-end">
@@ -147,6 +183,8 @@ https://github.com/alex-shpak/hugo-book
       
     </div>
     
+  
+
 
 
   </main>
@@ -165,4 +203,5 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
 </body>
+
 </html>

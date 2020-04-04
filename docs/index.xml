@@ -92,6 +92,15 @@
     </item>
     
     <item>
+      <title>2次元入力の面モデル</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/2dmodel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/2dmodel/</guid>
+      <description>2次元入力の面モデル 先程の勾配法の例では入力データは1次元であったが、2次元であった場合はどうだろうか。 例として、以下のようなデータを用意す</description>
+    </item>
+    
+    <item>
       <title>8進数に変換して表示</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/oct/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -997,7 +1006,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</guid>
-      <description>機械学習 機械学習の手法についてをまとめる。 教師あり学習 直線モデル(線形回帰) 平均二乗誤差 勾配法(最急降下法) 解析解</description>
+      <description>機械学習 機械学習の手法についてをまとめる。 教師あり学習 直線モデル(線形回帰) 平均二乗誤差 勾配法(最急降下法) 解析解 2次元入力の面モデル</description>
     </item>
     
     <item>

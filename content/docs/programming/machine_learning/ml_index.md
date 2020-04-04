@@ -15,3 +15,4 @@ bookToc: false
  - [平均二乗誤差]({{< relref "/docs/programming/machine_learning/mse.md" >}})
  - [勾配法(最急降下法)]({{< relref "/docs/programming/machine_learning/steepest_descent_method.md" >}})
  - [解析解]({{< relref "/docs/programming/machine_learning/analytical_solution.md" >}})
+ - [2次元入力の面モデル]({{< relref "/docs/programming/machine_learning/2dmodel.md" >}})
