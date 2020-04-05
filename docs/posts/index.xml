@@ -6,10 +6,19 @@
     <description>Recent content in Posts on WAT Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Thu, 02 Apr 2020 22:50:12 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2020 20:04:12 +0900</lastBuildDate>
     
 	<atom:link href="https://WAT36.github.io/pages/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Lambda関数の作成方法(AWS)</title>
+      <link>https://WAT36.github.io/pages/posts/aws_create_lambda/</link>
+      <pubDate>Sun, 05 Apr 2020 20:04:12 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/aws_create_lambda/</guid>
+      <description>AWSでLambdaの関数を作る方法について、またまた備忘がてら手順をのせておく。 1. AWSマネジメントコンソールにログインする AWSマネジメ</description>
+    </item>
     
     <item>
       <title>DynamoDBテーブルの作成方法(AWS)</title>

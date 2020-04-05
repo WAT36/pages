@@ -156,15 +156,6 @@
     
     <item>
       <title>HTMLの全体構造</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/html_structure-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/html_structure-2/</guid>
-      <description>HTMLの全体構造 HTMLファイルの構造についてを述べる。 HTMLファイルは主に以下から構成される。 DOCTYPE宣言（文書型宣言） html</description>
-    </item>
-    
-    <item>
-      <title>HTMLの全体構造</title>
       <link>https://WAT36.github.io/pages/docs/front-end/html_structure/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -377,15 +368,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/graph/subplot/</guid>
       <description>グラフを複数表示させる Python グラフを複数表示するにはpyplotの関数subplotを使う。 subplot(nrows, ncols, index) subplotを使うと縦nrows×横ncol</description>
-    </item>
-    
-    <item>
-      <title>グローバル属性</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/global_attr-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/global_attr-2/</guid>
-      <description>グローバル属性 グローバル属性とは全ての要素で指定できる属性のことを言う。 主に以下のものが挙げられる。 class属性 class属性は、要素に種</description>
     </item>
     
     <item>
@@ -1146,29 +1128,11 @@
     
     <item>
       <title>要素とタグ</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/element-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/element-2/</guid>
-      <description>要素とタグ HTMLは、各コンテンツの内容をタグで囲い、それが文書の内の何であるかを示す言語である。 HTML文書内の各構成要素の事を要素(el</description>
-    </item>
-    
-    <item>
-      <title>要素とタグ</title>
       <link>https://WAT36.github.io/pages/docs/front-end/element/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/element/</guid>
       <description>要素とタグ HTMLは、各コンテンツの内容をタグで囲い、それが文書の内の何であるかを示す言語である。 HTML文書内の各構成要素の事を要素(el</description>
-    </item>
-    
-    <item>
-      <title>要素の種類</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/elements_type-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/elements_type-2/</guid>
-      <description>要素の種類 先程述べた要素には色々な種類がある。 大きく分けると以下の7種類。 フローコンテンツ 見出しコンテンツ セクショニングコンテンツ フレージン</description>
     </item>
     
     <item>
@@ -1371,24 +1335,6 @@
     
     <item>
       <title>難解プログラミング言語</title>
-      <link>https://WAT36.github.io/pages/docs/ctf/esolang-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/ctf/esolang-2/</guid>
-      <description>難解プログラミング言語 難解プログラミング言語とは、意図的に解読が困難になるように設計されたプログラミング言語である。 実用性を考慮して作られた</description>
-    </item>
-    
-    <item>
-      <title>難解プログラミング言語</title>
-      <link>https://WAT36.github.io/pages/docs/ctf/esolang-3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/ctf/esolang-3/</guid>
-      <description>難解プログラミング言語 難解プログラミング言語とは、意図的に解読が困難になるように設計されたプログラミング言語である。 実用性を考慮して作られた</description>
-    </item>
-    
-    <item>
-      <title>難解プログラミング言語</title>
       <link>https://WAT36.github.io/pages/docs/ctf/esolang/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1433,6 +1379,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>Lambda関数の作成方法(AWS)</title>
+      <link>https://WAT36.github.io/pages/posts/aws_create_lambda/</link>
+      <pubDate>Sun, 05 Apr 2020 20:04:12 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/aws_create_lambda/</guid>
+      <description>AWSでLambdaの関数を作る方法について、またまた備忘がてら手順をのせておく。 1. AWSマネジメントコンソールにログインする AWSマネジメ</description>
     </item>
     
     <item>
@@ -1795,15 +1750,6 @@ var php_wireless = 4; siteWinsock.switch_inbox += so_control_logic; if (target_w
       
       <guid>https://WAT36.github.io/pages/docs/ctf/ctf_index/</guid>
       <description>CTFメモ 最近CTFにも興味が出て参加しているが、なかなかテクニックが覚えられないため、備忘のために覚えたことを書き記しておくためのページで</description>
-    </item>
-    
-    <item>
-      <title>フロントエンド</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/front_index-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/front_index-2/</guid>
-      <description>フロントエンド-memo フロントエンドの勉強用メモ。まずはHTMLから頑張ります・・ HTML 要素とタグ HTMLの全体構造 要素の種類 グローバル属性</description>
     </item>
     
     <item>
