@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.ed58568fcf63906cf8127ffeca7d3f44da694dd1c0e4784d4332fc493e79a87c.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.ae184afd60ce479949bf588d5399b6897bd0548e714e96032a1291c69ad0cb13.js"></script>
 
 
 
@@ -346,15 +346,42 @@ J &= \frac{1}{N} \sum_{n=0}^{N-1} (y(x_{n}) - t_{n})^2 \\
 
 <p>Jをw<sub>0</sub>,w<sub>1</sub>,w<sub>2</sub>でそれぞれ偏微分、また先ほどと同様に、avg(x)をxの平均値を算出する関数とおくと、各式は以下のように整理される。</p>
 
-<p>(Jをw<sub>0</sub>,w<sub>1</sub>,w<sub>2</sub>でそれぞれ偏微分した結果を表示する)</p>
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+ \frac{\partial J}{\partial w_{0} } &= \frac{2}{N} \sum_{n=0}^{N-1} (w_{0} x_{n,0} + w_{1} x_{n,1} + w_{2} - t_{n}) x_{n,0}  \\
+  &= 2( w_{0} avg((x_{0})^2) + w_{1} avg(x_{0} x_{1}) + w_{2} avg(x_{0}) - avg(t x_{0} ) )  = 0 \\
+ \frac{\partial J}{\partial w_{1} } &= \frac{2}{N} \sum_{n=0}^{N-1} (w_{0} x_{n,0} + w_{1} x_{n,1} + w_{2} - t_{n}) x_{n,1}  \\
+  &= 2( w_{0} avg(x_{0} x_{1}) + w_{1} avg( (x_{1})^2 ) + w_{2} avg(x_{1}) - avg(t x_{1} ) )  = 0 \\
+ \frac{\partial J}{\partial w_{0} } &= \frac{2}{N} \sum_{n=0}^{N-1} (w_{0} x_{n,0} + w_{1} x_{n,1} + w_{2} - t_{n}) x_{n,0}  \\
+  &= 2( w_{0} avg(x_{0}) + w_{1} avg(x_{0} x_{1}) + w_{2} avg(x_{0}) - avg(t x_{0} ) )  = 0 
+\end{aligned}
+ $$
+</p>
+
+
 
 <p>この３式をそれぞれw<sub>0</sub>,w<sub>1</sub>,w<sub>2</sub>について解くと、w<sub>0</sub>,w<sub>1</sub>,w<sub>2</sub>は以下のように表される。</p>
 
-<p>(w<sub>0</sub>,w<sub>1</sub>,w<sub>2</sub>の式を書く)</p>
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+ w_{0} &= \frac{cov(t,x_{1}) cov(x_{0},x_{1}) - var(x_{1}) cov(t,x_{0})}{ cov(x_{0},x_{1})^2 - var(x_{0}) var(x_{1})}   \\
+ w_{1} &= \frac{cov(t,x_{0}) cov(x_{0},x_{1}) - var(x_{0}) cov(t,x_{1})}{ cov(x_{0},x_{1})^2 - var(x_{0}) var(x_{1})}  \\
+ w_{2} &= - w_{0} avg(x_{0}) - w_{1} avg(x_{1}) + avg(t)
+\end{aligned}
+ $$
+</p>
+
+
 
 <p>ここで、</p>
 
-<p>var(a) = avg(a^2) - avg(a)^2</p>
+<p>var(a) = avg(a<sup>2</sup>) - avg(a)<sup>2</sup></p>
 
 <p>cov(a,b) = avg(ab)-avg(a)avg(b)</p>
 
@@ -368,8 +395,8 @@ J &= \frac{1}{N} \sum_{n=0}^{N-1} (y(x_{n}) - t_{n})^2 \\
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/59afeab19bc418470a99660ed217e67f3a4ff8eb" title='Last modified Apr 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 5, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/9b94559602d1221c347eb42f5819a811517f391b" title='Last modified Apr 6, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 6, 2020
     </a>
   </div>
   

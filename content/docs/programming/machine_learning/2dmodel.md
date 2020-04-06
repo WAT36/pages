@@ -103,15 +103,31 @@ J &= \frac{1}{N} \sum_{n=0}^{N-1} (y(x_{n}) - t_{n})^2 \\
 
 Jをw<sub>0</sub>,w<sub>1</sub>,w<sub>2</sub>でそれぞれ偏微分、また先ほどと同様に、avg(x)をxの平均値を算出する関数とおくと、各式は以下のように整理される。
 
-(Jをw<sub>0</sub>,w<sub>1</sub>,w<sub>2</sub>でそれぞれ偏微分した結果を表示する)
+
+{{< katex  >}}
+\begin{aligned}
+ \frac{\partial J}{\partial w_{0} } &= \frac{2}{N} \sum_{n=0}^{N-1} (w_{0} x_{n,0} + w_{1} x_{n,1} + w_{2} - t_{n}) x_{n,0}  \\
+  &= 2( w_{0} avg((x_{0})^2) + w_{1} avg(x_{0} x_{1}) + w_{2} avg(x_{0}) - avg(t x_{0} ) )  = 0 \\
+ \frac{\partial J}{\partial w_{1} } &= \frac{2}{N} \sum_{n=0}^{N-1} (w_{0} x_{n,0} + w_{1} x_{n,1} + w_{2} - t_{n}) x_{n,1}  \\
+  &= 2( w_{0} avg(x_{0} x_{1}) + w_{1} avg( (x_{1})^2 ) + w_{2} avg(x_{1}) - avg(t x_{1} ) )  = 0 \\
+ \frac{\partial J}{\partial w_{0} } &= \frac{2}{N} \sum_{n=0}^{N-1} (w_{0} x_{n,0} + w_{1} x_{n,1} + w_{2} - t_{n}) x_{n,0}  \\
+  &= 2( w_{0} avg(x_{0}) + w_{1} avg(x_{0} x_{1}) + w_{2} avg(x_{0}) - avg(t x_{0} ) )  = 0 
+\end{aligned}
+{{< /katex >}}
 
 この３式をそれぞれw<sub>0</sub>,w<sub>1</sub>,w<sub>2</sub>について解くと、w<sub>0</sub>,w<sub>1</sub>,w<sub>2</sub>は以下のように表される。
 
-(w<sub>0</sub>,w<sub>1</sub>,w<sub>2</sub>の式を書く)
+{{< katex  >}}
+\begin{aligned}
+ w_{0} &= \frac{cov(t,x_{1}) cov(x_{0},x_{1}) - var(x_{1}) cov(t,x_{0})}{ cov(x_{0},x_{1})^2 - var(x_{0}) var(x_{1})}   \\
+ w_{1} &= \frac{cov(t,x_{0}) cov(x_{0},x_{1}) - var(x_{0}) cov(t,x_{1})}{ cov(x_{0},x_{1})^2 - var(x_{0}) var(x_{1})}  \\
+ w_{2} &= - w_{0} avg(x_{0}) - w_{1} avg(x_{1}) + avg(t)
+\end{aligned}
+{{< /katex >}}
 
 ここで、
 
-var(a) = avg(a^2) - avg(a)^2
+var(a) = avg(a<sup>2</sup>) - avg(a)<sup>2</sup>
 
 cov(a,b) = avg(ab)-avg(a)avg(b)
 
