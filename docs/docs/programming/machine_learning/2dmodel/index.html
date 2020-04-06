@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.c44f2460e70f1c155d122e7d2fa8b6523564dad4cb4b49a2b98cb16d6d54deeb.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.ed58568fcf63906cf8127ffeca7d3f44da694dd1c0e4784d4332fc493e79a87c.js"></script>
 
 
 
@@ -130,9 +130,166 @@ https://github.com/alex-shpak/hugo-book
 
 <p>例として、以下のようなデータを用意する。</p>
 
-<p>(入力が2次元のデータを用意する)</p>
+<table>
+<thead>
+<tr>
+<th align="left">年齢</th>
+<th align="left">身長</th>
+<th align="left">体重</th>
+</tr>
+</thead>
 
-<p>これらに対して、2次元の入力値が与えられたときに予測値を返すような簡単な面を予測してみよう。</p>
+<tbody>
+<tr>
+<td align="left">6</td>
+<td align="left">117.9</td>
+<td align="left">28.0</td>
+</tr>
+
+<tr>
+<td align="left">16</td>
+<td align="left">164.3</td>
+<td align="left">58.2</td>
+</tr>
+
+<tr>
+<td align="left">19</td>
+<td align="left">171.6</td>
+<td align="left">60.1</td>
+</tr>
+
+<tr>
+<td align="left">18</td>
+<td align="left">172.7</td>
+<td align="left">65.2</td>
+</tr>
+
+<tr>
+<td align="left">9</td>
+<td align="left">132.8</td>
+<td align="left">35.0</td>
+</tr>
+
+<tr>
+<td align="left">16</td>
+<td align="left">170.2</td>
+<td align="left">60.9</td>
+</tr>
+
+<tr>
+<td align="left">12</td>
+<td align="left">152.3</td>
+<td align="left">51.9</td>
+</tr>
+
+<tr>
+<td align="left">14</td>
+<td align="left">163.8</td>
+<td align="left">56.4</td>
+</tr>
+
+<tr>
+<td align="left">15</td>
+<td align="left">168.8</td>
+<td align="left">62.9</td>
+</tr>
+
+<tr>
+<td align="left">7</td>
+<td align="left">127.2</td>
+<td align="left">27.0</td>
+</tr>
+
+<tr>
+<td align="left">10</td>
+<td align="left">142.3</td>
+<td align="left">44.9</td>
+</tr>
+
+<tr>
+<td align="left">12</td>
+<td align="left">156.4</td>
+<td align="left">45.9</td>
+</tr>
+
+<tr>
+<td align="left">17</td>
+<td align="left">173.1</td>
+<td align="left">68.0</td>
+</tr>
+
+<tr>
+<td align="left">18</td>
+<td align="left">176.9</td>
+<td align="left">67.9</td>
+</tr>
+
+<tr>
+<td align="left">15</td>
+<td align="left">158.4</td>
+<td align="left">59.1</td>
+</tr>
+
+<tr>
+<td align="left">8</td>
+<td align="left">127.1</td>
+<td align="left">30.8</td>
+</tr>
+
+<tr>
+<td align="left">11</td>
+<td align="left">147.4</td>
+<td align="left">45.6</td>
+</tr>
+
+<tr>
+<td align="left">7</td>
+<td align="left">123.7</td>
+<td align="left">36.1</td>
+</tr>
+
+<tr>
+<td align="left">11</td>
+<td align="left">152.0</td>
+<td align="left">39.9</td>
+</tr>
+
+<tr>
+<td align="left">19</td>
+<td align="left">174.1</td>
+<td align="left">69.5</td>
+</tr>
+</tbody>
+</table>
+
+<p>念のため、上記のデータをグラフに表す。</p>
+
+<p>コードは以下の通り。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">from</span> mpl_toolkits.mplot3d <span style="color:#f92672">import</span> Axes3D
+
+x0 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">117.9</span>,<span style="color:#ae81ff">164.3</span>,<span style="color:#ae81ff">171.6</span>,<span style="color:#ae81ff">172.7</span>,<span style="color:#ae81ff">132.8</span>,<span style="color:#ae81ff">170.2</span>,<span style="color:#ae81ff">152.3</span>,<span style="color:#ae81ff">163.8</span>,<span style="color:#ae81ff">168.8</span>,<span style="color:#ae81ff">127.2</span>,<span style="color:#ae81ff">142.3</span>,<span style="color:#ae81ff">156.4</span>,<span style="color:#ae81ff">173.1</span>,<span style="color:#ae81ff">176.9</span>,<span style="color:#ae81ff">158.4</span>,<span style="color:#ae81ff">127.1</span>,<span style="color:#ae81ff">147.4</span>,<span style="color:#ae81ff">123.7</span>,<span style="color:#ae81ff">152.0</span>,<span style="color:#ae81ff">174.1</span>])
+x1 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">28.0</span>,<span style="color:#ae81ff">58.2</span>,<span style="color:#ae81ff">60.1</span>,<span style="color:#ae81ff">65.2</span>,<span style="color:#ae81ff">35.0</span>,<span style="color:#ae81ff">60.9</span>,<span style="color:#ae81ff">51.9</span>,<span style="color:#ae81ff">56.4</span>,<span style="color:#ae81ff">62.9</span>,<span style="color:#ae81ff">27.0</span>,<span style="color:#ae81ff">44.9</span>,<span style="color:#ae81ff">45.9</span>,<span style="color:#ae81ff">68.0</span>,<span style="color:#ae81ff">67.9</span>,<span style="color:#ae81ff">59.1</span>,<span style="color:#ae81ff">30.8</span>,<span style="color:#ae81ff">45.6</span>,<span style="color:#ae81ff">36.1</span>,<span style="color:#ae81ff">39.9</span>,<span style="color:#ae81ff">69.5</span>])
+y <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">16</span>,<span style="color:#ae81ff">19</span>,<span style="color:#ae81ff">18</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">16</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">17</span>,<span style="color:#ae81ff">18</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">19</span>])
+
+x01,x10<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>meshgrid(x0,x1)
+
+fig<span style="color:#f92672">=</span>plt<span style="color:#f92672">.</span>figure()
+ax <span style="color:#f92672">=</span> Axes3D(fig)
+
+ax<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#34;height&#34;</span>)
+ax<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#34;weight&#34;</span>)
+ax<span style="color:#f92672">.</span>set_zlabel(<span style="color:#e6db74">&#34;old&#34;</span>)
+
+ax<span style="color:#f92672">.</span>plot(x0,x1,y,marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;o&#34;</span>,linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;None&#39;</span>)
+
+plt<span style="color:#f92672">.</span>show()</code></pre></div>
+<p>グラフを以下の図に示す。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_20.png" width=50%></p>
+
+<p>これらに対して、身長と体重が与えられたときに年齢を予測するような面を予測してみよう。</p>
 
 <p>まず面の式についてだが、一般的に3次元において座標(x,y,z)を通る面の式は</p>
 
@@ -211,8 +368,8 @@ J &= \frac{1}{N} \sum_{n=0}^{N-1} (y(x_{n}) - t_{n})^2 \\
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/844b48918848b07ac5d933c6fb5ddcc28a7d3885" title='Last modified Apr 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 4, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/59afeab19bc418470a99660ed217e67f3a4ff8eb" title='Last modified Apr 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 5, 2020
     </a>
   </div>
   
