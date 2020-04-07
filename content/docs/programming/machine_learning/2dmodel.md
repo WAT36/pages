@@ -49,8 +49,6 @@ x0 = np.array([117.9,164.3,171.6,172.7,132.8,170.2,152.3,163.8,168.8,127.2,142.3
 x1 = np.array([28.0,58.2,60.1,65.2,35.0,60.9,51.9,56.4,62.9,27.0,44.9,45.9,68.0,67.9,59.1,30.8,45.6,36.1,39.9,69.5])
 t = np.array([6,16,19,18,9,16,12,14,15,7,10,12,17,18,15,8,11,7,11,19])
 
-x01,x10=np.meshgrid(x0,x1)
-
 fig=plt.figure()
 ax = Axes3D(fig)
 
@@ -148,8 +146,6 @@ x0 = np.array([117.9,164.3,171.6,172.7,132.8,170.2,152.3,163.8,168.8,127.2,142.3
 x1 = np.array([28.0,58.2,60.1,65.2,35.0,60.9,51.9,56.4,62.9,27.0,44.9,45.9,68.0,67.9,59.1,30.8,45.6,36.1,39.9,69.5])
 t = np.array([6,16,19,18,9,16,12,14,15,7,10,12,17,18,15,8,11,7,11,19])
 
-x01,x10=np.meshgrid(x0,x1)
-
 fig=plt.figure()
 ax = Axes3D(fig)
 
@@ -161,9 +157,11 @@ ax.plot(x0,x1,t,marker="o",linestyle='None')
 
 ###
 
+#t,x0の共分散をcov_tx0とする。以下同様
 cov_tx0 = np.mean(t*x0) - np.mean(t)*np.mean(x0)
 cov_tx1 = np.mean(t*x1) - np.mean(t)*np.mean(x1)
 cov_x0x1 = np.mean(x0*x1) - np.mean(x0)*np.mean(x1)
+
 w0 = (cov_tx1*cov_x0x1 - np.var(x1)*cov_tx0)/(cov_x0x1*cov_x0x1 - np.var(x0)*np.var(x1))
 w1 = (cov_tx0*cov_x0x1 - np.var(x0)*cov_tx1)/(cov_x0x1*cov_x0x1 - np.var(x0)*np.var(x1))
 w2 = -1 * w0 * np.mean(x0) - w1 * np.mean(x1) + np.mean(t)
@@ -195,5 +193,12 @@ plt.show()
 
 実行結果
 
+```
+w0:0.1338551780532153
+w1:0.11625116831025058
+w2:-13.456713550315381
+```
+
 <img src="/img/datascience/Figure_21.png" width=75%>
 
+となり、入力データにおいて面モデルでの最も誤差が少ない最適な面が求められる。

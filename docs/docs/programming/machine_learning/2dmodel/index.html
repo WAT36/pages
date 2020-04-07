@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.c8b234f30e4cc42d42abb122c2360c326d6953b565b42ec98168632221f5cfb3.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.972d8cfc342b2499cc0056168d81b9b3f990dfa79395120b073b67719c0e2218.js"></script>
 
 
 
@@ -273,8 +273,6 @@ x0 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>ar
 x1 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">28.0</span>,<span style="color:#ae81ff">58.2</span>,<span style="color:#ae81ff">60.1</span>,<span style="color:#ae81ff">65.2</span>,<span style="color:#ae81ff">35.0</span>,<span style="color:#ae81ff">60.9</span>,<span style="color:#ae81ff">51.9</span>,<span style="color:#ae81ff">56.4</span>,<span style="color:#ae81ff">62.9</span>,<span style="color:#ae81ff">27.0</span>,<span style="color:#ae81ff">44.9</span>,<span style="color:#ae81ff">45.9</span>,<span style="color:#ae81ff">68.0</span>,<span style="color:#ae81ff">67.9</span>,<span style="color:#ae81ff">59.1</span>,<span style="color:#ae81ff">30.8</span>,<span style="color:#ae81ff">45.6</span>,<span style="color:#ae81ff">36.1</span>,<span style="color:#ae81ff">39.9</span>,<span style="color:#ae81ff">69.5</span>])
 t <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">16</span>,<span style="color:#ae81ff">19</span>,<span style="color:#ae81ff">18</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">16</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">17</span>,<span style="color:#ae81ff">18</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">19</span>])
 
-x01,x10<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>meshgrid(x0,x1)
-
 fig<span style="color:#f92672">=</span>plt<span style="color:#f92672">.</span>figure()
 ax <span style="color:#f92672">=</span> Axes3D(fig)
 
@@ -400,8 +398,6 @@ x0 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>ar
 x1 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">28.0</span>,<span style="color:#ae81ff">58.2</span>,<span style="color:#ae81ff">60.1</span>,<span style="color:#ae81ff">65.2</span>,<span style="color:#ae81ff">35.0</span>,<span style="color:#ae81ff">60.9</span>,<span style="color:#ae81ff">51.9</span>,<span style="color:#ae81ff">56.4</span>,<span style="color:#ae81ff">62.9</span>,<span style="color:#ae81ff">27.0</span>,<span style="color:#ae81ff">44.9</span>,<span style="color:#ae81ff">45.9</span>,<span style="color:#ae81ff">68.0</span>,<span style="color:#ae81ff">67.9</span>,<span style="color:#ae81ff">59.1</span>,<span style="color:#ae81ff">30.8</span>,<span style="color:#ae81ff">45.6</span>,<span style="color:#ae81ff">36.1</span>,<span style="color:#ae81ff">39.9</span>,<span style="color:#ae81ff">69.5</span>])
 t <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">16</span>,<span style="color:#ae81ff">19</span>,<span style="color:#ae81ff">18</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">16</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">17</span>,<span style="color:#ae81ff">18</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">19</span>])
 
-x01,x10<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>meshgrid(x0,x1)
-
 fig<span style="color:#f92672">=</span>plt<span style="color:#f92672">.</span>figure()
 ax <span style="color:#f92672">=</span> Axes3D(fig)
 
@@ -413,9 +409,11 @@ ax<span style="color:#f92672">.</span>plot(x0,x1,t,marker<span style="color:#f92
 
 <span style="color:#75715e">###</span>
 
+<span style="color:#75715e">#t,x0の共分散をcov_tx0とする。以下同様</span>
 cov_tx0 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>mean(t<span style="color:#f92672">*</span>x0) <span style="color:#f92672">-</span> np<span style="color:#f92672">.</span>mean(t)<span style="color:#f92672">*</span>np<span style="color:#f92672">.</span>mean(x0)
 cov_tx1 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>mean(t<span style="color:#f92672">*</span>x1) <span style="color:#f92672">-</span> np<span style="color:#f92672">.</span>mean(t)<span style="color:#f92672">*</span>np<span style="color:#f92672">.</span>mean(x1)
 cov_x0x1 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>mean(x0<span style="color:#f92672">*</span>x1) <span style="color:#f92672">-</span> np<span style="color:#f92672">.</span>mean(x0)<span style="color:#f92672">*</span>np<span style="color:#f92672">.</span>mean(x1)
+
 w0 <span style="color:#f92672">=</span> (cov_tx1<span style="color:#f92672">*</span>cov_x0x1 <span style="color:#f92672">-</span> np<span style="color:#f92672">.</span>var(x1)<span style="color:#f92672">*</span>cov_tx0)<span style="color:#f92672">/</span>(cov_x0x1<span style="color:#f92672">*</span>cov_x0x1 <span style="color:#f92672">-</span> np<span style="color:#f92672">.</span>var(x0)<span style="color:#f92672">*</span>np<span style="color:#f92672">.</span>var(x1))
 w1 <span style="color:#f92672">=</span> (cov_tx0<span style="color:#f92672">*</span>cov_x0x1 <span style="color:#f92672">-</span> np<span style="color:#f92672">.</span>var(x0)<span style="color:#f92672">*</span>cov_tx1)<span style="color:#f92672">/</span>(cov_x0x1<span style="color:#f92672">*</span>cov_x0x1 <span style="color:#f92672">-</span> np<span style="color:#f92672">.</span>var(x0)<span style="color:#f92672">*</span>np<span style="color:#f92672">.</span>var(x1))
 w2 <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">*</span> w0 <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>mean(x0) <span style="color:#f92672">-</span> w1 <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>mean(x1) <span style="color:#f92672">+</span> np<span style="color:#f92672">.</span>mean(t)
@@ -444,7 +442,14 @@ ax<span style="color:#f92672">.</span>plot_surface(hh,ww,old,rstride<span style=
 plt<span style="color:#f92672">.</span>show()</code></pre></div>
 <p>実行結果</p>
 
+<pre><code>w0:0.1338551780532153
+w1:0.11625116831025058
+w2:-13.456713550315381
+</code></pre>
+
 <p><img src="https://WAT36.github.io/pages/img/datascience/Figure_21.png" width=75%></p>
+
+<p>となり、入力データにおいて面モデルでの最も誤差が少ない最適な面が求められる。</p>
 </article>
 
       
@@ -452,7 +457,7 @@ plt<span style="color:#f92672">.</span>show()</code></pre></div>
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/b3bc5d03ad141ca9ec6da6a8f7cd6da73a1e382a" title='Last modified Apr 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/a0eb3498b609f4bb6bb53247e95fb854cb71eac8" title='Last modified Apr 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 7, 2020
     </a>
   </div>
