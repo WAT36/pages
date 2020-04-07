@@ -47,7 +47,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 x0 = np.array([117.9,164.3,171.6,172.7,132.8,170.2,152.3,163.8,168.8,127.2,142.3,156.4,173.1,176.9,158.4,127.1,147.4,123.7,152.0,174.1])
 x1 = np.array([28.0,58.2,60.1,65.2,35.0,60.9,51.9,56.4,62.9,27.0,44.9,45.9,68.0,67.9,59.1,30.8,45.6,36.1,39.9,69.5])
-y = np.array([6,16,19,18,9,16,12,14,15,7,10,12,17,18,15,8,11,7,11,19])
+t = np.array([6,16,19,18,9,16,12,14,15,7,10,12,17,18,15,8,11,7,11,19])
 
 x01,x10=np.meshgrid(x0,x1)
 
@@ -58,7 +58,7 @@ ax.set_xlabel("height")
 ax.set_ylabel("weight")
 ax.set_zlabel("old")
 
-ax.plot(x0,x1,y,marker="o",linestyle='None')
+ax.plot(x0,x1,t,marker="o",linestyle='None')
 
 plt.show()
 ```
@@ -70,7 +70,7 @@ plt.show()
 
 
 
-これらに対して、身長と体重が与えられたときに年齢を予測するような面を予測してみよう。
+これらに対して、身長と体重が与えられたときに年齢を予測するような面を作ることを考えてみよう。
 
 まず面の式についてだが、一般的に3次元において座標(x,y,z)を通る面の式は
 
@@ -78,7 +78,7 @@ plt.show()
 ax+by+cz+d=0    (a,b,c,dは実数)
 {{< /katex >}}
 
-となっているが、これを変形することにより、(x<sub>0</sub>,x<sub>1</sub>)を入力したときに予測値tを返すような面の式は以下のように表される。
+となっているが、これを変形することにより、(x<sub>0</sub>,x<sub>1</sub>)を入力したときに予測値yを返すような面の式は以下のように表される。
 
 {{< katex  >}}
 y=w_{0} x_{0} + w_{1} x_{1} + w_{2} (w0,w1,w2は実数)
@@ -88,7 +88,7 @@ y=w_{0} x_{0} + w_{1} x_{1} + w_{2} (w0,w1,w2は実数)
 
 先程の1次元の時と同様に、平均二乗誤差を算出し、解析解を求めてみる。
 
-まず、平均二乗誤差Jは
+正解値をtとおくと、まず平均二乗誤差Jは
 
 {{< katex  >}}
 \begin{aligned}
@@ -134,4 +134,66 @@ cov(a,b) = avg(ab)-avg(a)avg(b)
 とする。var(a)はaの分散と呼ばれ、aのばらつき具合を示す値である。
 
 cov(a,b)はa,bの共分散と呼ばれる値で、a,bがどれぐらい影響しあっているかを示す。
+
+では、これらより求める面を実装し、図示してみよう。
+
+コードを以下に示す。
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+x0 = np.array([117.9,164.3,171.6,172.7,132.8,170.2,152.3,163.8,168.8,127.2,142.3,156.4,173.1,176.9,158.4,127.1,147.4,123.7,152.0,174.1])
+x1 = np.array([28.0,58.2,60.1,65.2,35.0,60.9,51.9,56.4,62.9,27.0,44.9,45.9,68.0,67.9,59.1,30.8,45.6,36.1,39.9,69.5])
+t = np.array([6,16,19,18,9,16,12,14,15,7,10,12,17,18,15,8,11,7,11,19])
+
+x01,x10=np.meshgrid(x0,x1)
+
+fig=plt.figure()
+ax = Axes3D(fig)
+
+ax.set_xlabel("height")
+ax.set_ylabel("weight")
+ax.set_zlabel("old")
+
+ax.plot(x0,x1,t,marker="o",linestyle='None')
+
+###
+
+cov_tx0 = np.mean(t*x0) - np.mean(t)*np.mean(x0)
+cov_tx1 = np.mean(t*x1) - np.mean(t)*np.mean(x1)
+cov_x0x1 = np.mean(x0*x1) - np.mean(x0)*np.mean(x1)
+w0 = (cov_tx1*cov_x0x1 - np.var(x1)*cov_tx0)/(cov_x0x1*cov_x0x1 - np.var(x0)*np.var(x1))
+w1 = (cov_tx0*cov_x0x1 - np.var(x0)*cov_tx1)/(cov_x0x1*cov_x0x1 - np.var(x0)*np.var(x1))
+w2 = -1 * w0 * np.mean(x0) - w1 * np.mean(x1) + np.mean(t)
+
+print("w0:{0}".format(w0))
+print("w1:{0}".format(w1))
+print("w2:{0}".format(w2))
+
+def plane(x0,x1):
+    return w0*x0 + w1*x1 + w2
+
+
+h = np.linspace(110,180,71)
+w = np.linspace(25,75,71)
+
+old=np.zeros((len(w),len(h)))
+
+for hi in range(len(h)):
+     for wi in range(len(w)):
+             old[wi,hi] = plane(h[hi],w[wi])
+
+hh,ww = np.meshgrid(h,w)
+
+ax.plot_surface(hh,ww,old,rstride=1,cstride=1,alpha=0.3,color='red',edgecolor='black')
+
+plt.show()
+
+```
+
+実行結果
+
+<img src="/img/datascience/Figure_21.png" width=75%>
 
