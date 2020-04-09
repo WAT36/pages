@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.065bcf1925f33bc8b824827e3221d644e87144d29e376ffe1975e8a48751b2d0.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.c4c291ef33c1787c371a6742d326ab8449a30edb3ffd8e0b51a5e97d15454add.js"></script>
 
 
 
@@ -153,6 +153,8 @@ https://github.com/alex-shpak/hugo-book
 &lt;/html&gt;
 </code></pre>
 
+<hr>
+
 <h2 id="doctype宣言">DOCTYPE宣言</h2>
 
 <p>HTML5では実は必要なものではないそうだが、ブラウザの表示モードを「標準モード」にする目的で指定することになっている。</p>
@@ -161,6 +163,8 @@ https://github.com/alex-shpak/hugo-book
 
 <pre><code>&lt;!DOCTYPE HTML&gt;
 </code></pre>
+
+<hr>
 
 <h2 id="html要素">html要素</h2>
 
@@ -175,6 +179,8 @@ https://github.com/alex-shpak/hugo-book
     ・・・
 &lt;/html&gt;
 </code></pre>
+
+<hr>
 
 <h2 id="head要素">head要素</h2>
 
@@ -193,6 +199,8 @@ https://github.com/alex-shpak/hugo-book
 ・・・
 </code></pre>
 
+<hr>
+
 <h3 id="meta要素">meta要素</h3>
 
 <p>meta要素は、HTML文書の様々なメタデータを指定できる空要素である。</p>
@@ -207,6 +215,8 @@ https://github.com/alex-shpak/hugo-book
 &lt;/head&gt;
 ・・・
 </code></pre>
+
+<hr>
 
 <h3 id="link要素">link要素</h3>
 
@@ -294,6 +304,26 @@ https://github.com/alex-shpak/hugo-book
 </tr>
 </tbody>
 </table>
+
+<hr>
+
+<h3 id="base要素">base要素</h3>
+
+<p>base要素は、そのHTML文書で使われている相対URL(パス)の基準となるURLを書く要素である。</p>
+
+<p>基準となるURLはhref属性に指定する。</p>
+
+<p>例</p>
+
+<pre><code>・・・
+&lt;head&gt;
+    &lt;base href=&quot;https://wat36.github.io/pages/&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;&lt;a href=&quot;docs/front-end/front_index/&quot;&gt;フロントエンドのトップ&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+・・・
+</code></pre>
 </article>
 
       
@@ -301,8 +331,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/865d5d9dced571881c73a1e3d7a07666dfae240d" title='Last modified Apr 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 5, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/1c7ae8d505442cbeb29cb550a99c013feb7d0cfd" title='Last modified Apr 9, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 9, 2020
     </a>
   </div>
   
@@ -326,6 +356,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#title要素">title要素</a></li>
 <li><a href="#meta要素">meta要素</a></li>
 <li><a href="#link要素">link要素</a></li>
+<li><a href="#base要素">base要素</a></li>
 </ul></li>
 </ul></li>
 </ul>
