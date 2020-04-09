@@ -14,223 +14,26 @@ bookToc: false
 
 先程の勾配法の章において、平均二乗誤差Jが極小になる時がw<sub>0</sub>、w<sub>1</sub>の求める値なので、この条件式からw0、w1の解析解を求めていく。
 
-<math>
-    <mfrac> 
-        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
-        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>0</mn></msub></mrow>
-    </mfrac>
-<mo>=</mo>
-    <mfrac> 
-        <mn>2</mn> 
-        <mi>N</mi>
-    </mfrac>
-    <munderover> 
-        <mi>&Sum;</mi> 
-            <mrow>
-                <mi>n</mi>
-                <mo>=</mo>
-                <mn>0</mn> 
-            </mrow>
-            <mi>N-1</mi> 
-    </munderover> 
-            <mn>(</mn>
-            <msub>
-                <mi>w</mi>
-                <mn>0</mn> 
-            </msub>
-            <msub>
-                <mi>x</mi>
-                <mi>n</mi> 
-            </msub>
-            <mo>+</mo>
-            <msub>
-                <mi>w</mi>
-                <mn>1</mn> 
-            </msub>
-            <mo>-</mo>
-            <msub>
-                <mi>t</mi>
-                <mi>n</mi> 
-            </msub>
-            <mn>)</mn>
-            <msub>
-                <mi>x</mi>
-                <mi>n</mi> 
-            </msub>
-<mo>=</mo>
-<mn>0</mn>
-</math>
-<br>
-<math>
-    <mfrac> 
-        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
-        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>1</mn></msub></mrow>
-    </mfrac>
-<mo>=</mo>
-    <mfrac> 
-        <mn>2</mn> 
-        <mi>N</mi>
-    </mfrac>
-    <munderover> 
-        <mi>&Sum;</mi> 
-            <mrow>
-                <mi>n</mi>
-                <mo>=</mo>
-                <mn>0</mn> 
-            </mrow>
-            <mi>N-1</mi> 
-    </munderover> 
-            <mn>(</mn>
-            <msub>
-                <mi>w</mi>
-                <mn>0</mn> 
-            </msub>
-            <msub>
-                <mi>x</mi>
-                <mi>n</mi> 
-            </msub>
-            <mo>+</mo>
-            <msub>
-                <mi>w</mi>
-                <mn>1</mn> 
-            </msub>
-            <mo>-</mo>
-            <msub>
-                <mi>t</mi>
-                <mi>n</mi> 
-            </msub>
-            <mn>)</mn>
-<mo>=</mo>
-<mn>0</mn>
-</math>
+{{< katex  >}}
+\begin{aligned}
+ \frac{\partial J}{\partial w_{0} } &= \frac{2}{N} \sum_{n=0}^{N-1} (w_{0} x_{n} + w_{1} - t_{n}) x_{n} 
+  &= 0 \\
+ \frac{\partial J}{\partial w_{1} } &= \frac{2}{N} \sum_{n=0}^{N-1} (w_{0} x_{n} + w_{1} - t_{n})  
+  &= 0 
+\end{aligned}
+{{< /katex >}}
 
 
 この2式は以下のように展開できる。
 
-<math>
-    <msub>
-        <mi>w</mi>
-        <mn>0</mn> 
-    </msub>
-    <mfrac> 
-        <mn>1</mn> 
-        <mi>N</mi>
-    </mfrac>
-    <munderover> 
-        <mi>&Sum;</mi> 
-            <mrow>
-                <mi>n</mi>
-                <mo>=</mo>
-                <mn>0</mn> 
-            </mrow>
-            <mi>N-1</mi> 
-    </munderover> 
-    <msup>
-        <mrow>
-        <msub>
-            <mi>x</mi>
-            <mi>n</mi> 
-        </msub>
-        </mrow>
-        <mi>2</mi>
-    </msup>
-<mo>+</mo>
-    <msub>
-        <mi>w</mi>
-        <mn>1</mn> 
-    </msub>
-    <mfrac> 
-        <mn>1</mn> 
-        <mi>N</mi>
-    </mfrac>
-    <munderover> 
-        <mi>&Sum;</mi> 
-            <mrow>
-                <mi>n</mi>
-                <mo>=</mo>
-                <mn>0</mn> 
-            </mrow>
-            <mi>N-1</mi> 
-    </munderover> 
-    <msub>
-        <mi>x</mi>
-        <mi>n</mi> 
-    </msub>
-<mo>-</mo>
-    <mfrac> 
-        <mn>1</mn> 
-        <mi>N</mi>
-    </mfrac>
-    <munderover> 
-        <mi>&Sum;</mi> 
-            <mrow>
-                <mi>n</mi>
-                <mo>=</mo>
-                <mn>0</mn> 
-            </mrow>
-            <mi>N-1</mi> 
-    </munderover> 
-    <msub>
-        <mi>t</mi>
-        <mi>n</mi> 
-    </msub>
-    <msub>
-        <mi>x</mi>
-        <mi>n</mi> 
-    </msub>
-<mo>=</mo>
-<mn>0</mn>
-</math>
-<br>
-<br>
-<math>
-    <msub>
-        <mi>w</mi>
-        <mn>0</mn> 
-    </msub>
-    <mfrac> 
-        <mn>1</mn> 
-        <mi>N</mi>
-    </mfrac>
-    <munderover> 
-        <mi>&Sum;</mi> 
-            <mrow>
-                <mi>n</mi>
-                <mo>=</mo>
-                <mn>0</mn> 
-            </mrow>
-            <mi>N-1</mi> 
-    </munderover> 
-    <msub>
-        <mi>x</mi>
-        <mi>n</mi> 
-    </msub>
-<mo>+</mo>
-    <msub>
-        <mi>w</mi>
-        <mn>1</mn> 
-    </msub>
-<mo>-</mo>
-    <mfrac> 
-        <mn>1</mn> 
-        <mi>N</mi>
-    </mfrac>
-    <munderover> 
-        <mi>&Sum;</mi> 
-            <mrow>
-                <mi>n</mi>
-                <mo>=</mo>
-                <mn>0</mn> 
-            </mrow>
-            <mi>N-1</mi> 
-    </munderover> 
-    <msub>
-        <mi>t</mi>
-        <mi>n</mi> 
-    </msub>
-<mo>=</mo>
-<mn>0</mn>
-</math>
+{{< katex  >}}
+\begin{aligned}
+ &w_{0} \frac{1}{N} \sum_{n=0}^{N-1} x_{n}^2  + w_{1} \frac{1}{N} \sum_{n=0}^{N-1} x_{n} - \frac{1}{N} \sum_{n=0}^{N-1} t_{n} x_{n}
+  = 0 \\
+ &w_{0} \frac{1}{N} \sum_{n=0}^{N-1} x_{n}  + w_{1} - \frac{1}{N} \sum_{n=0}^{N-1} t_{n}
+  = 0 
+\end{aligned}
+{{< /katex >}}
 
 
 この時、
