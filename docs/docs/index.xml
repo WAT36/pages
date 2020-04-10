@@ -408,6 +408,15 @@
     </item>
     
     <item>
+      <title>シーザー暗号</title>
+      <link>https://WAT36.github.io/pages/docs/ctf/caesar_cipher/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/ctf/caesar_cipher/</guid>
+      <description>シーザー暗号 暗号の一つであるシーザー暗号についてを述べる。 シーザー暗号は元の文(平文)の各文字を、辞書順にx字ずらしてできる暗号のことである</description>
+    </item>
+    
+    <item>
       <title>スカラー*行列</title>
       <link>https://WAT36.github.io/pages/docs/programming/math/scalar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
