@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.4f8418a991ffe296f8578fa194964fafbb691d94044e449e4348d23a9dfaf95b.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.80f575dfe476168e4d03ba42c203aea92e6a6e896efa8a944f663dba54fb2572.js"></script>
 
 
 
@@ -194,282 +194,36 @@ https://github.com/alex-shpak/hugo-book
 
 <p>ここで、avg(x)をxの平均値を算出する関数とおくと、上式は以下のように置き換えられる。</p>
 
-<math>
-<msub>
-    <mi>w</mi>
-    <mn>0</mn> 
-</msub>
-<mi>avg</mi>
-<mo>(</mo>
-<msup>
-    <mrow>
-    <msub>
-        <mi>x</mi>
-        <mi>n</mi> 
-    </msub>
-    </mrow>
-    <mi>2</mi>
-</msup>
-<mo>)</mo>
-<mo>+</mo>
-<msub>
-    <mi>w</mi>
-    <mn>1</mn> 
-</msub>
-<mi>avg</mi>
-<mo>(</mo>
-<msub>
-    <mi>x</mi>
-    <mi>n</mi> 
-</msub>
-<mo>)</mo>
-<mo>-</mo>
-<mi>avg</mi>
-<mo>(</mo>
-<msub>
-    <mi>t</mi>
-    <mi>n</mi> 
-</msub>
-<msub>
-    <mi>x</mi>
-    <mi>n</mi> 
-</msub>
-<mo>)</mo>
-<mo>=</mo>
-<mn>0</mn>
-</math>
-<br>
-<br>
-<math>
-<msub>
-    <mi>w</mi>
-    <mn>0</mn> 
-</msub>
-<mi>avg</mi>
-<mo>(</mo>
-<msub>
-    <mi>x</mi>
-    <mi>n</mi> 
-</msub>
-<mo>)</mo>
-<mo>+</mo>
-<msub>
-    <mi>w</mi>
-    <mn>1</mn> 
-</msub>
-<mo>-</mo>
-<mi>avg</mi>
-<mo>(</mo>
-<msub>
-    <mi>t</mi>
-    <mi>n</mi> 
-</msub>
-<mo>)</mo>
-<mo>=</mo>
-<mn>0</mn>
-</math>
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+ &w_{0} avg(x_{n} ^2) + w_{1} avg(x_{n}) - avg(t_{n} x_{n})
+  = 0 \\
+ &w_{0} avg(x_{n}) + w_{1} - avg(t_{n})
+  = 0 
+\end{aligned}
+ $$
+</p>
+
+
 
 <p>これらの式をw0、w1についてそれぞれ解くと、w0、w1は以下のように表される。</p>
 
-<math style="display: block;"> 
-<mtable columnalign="right center left"> 
-<mtr>
-<mtd>
-<msub>
-    <mi>w</mi>
-    <mn>0</mn> 
-</msub>
-</mtd>
-<mtd>
-<mo>=</mo>
-</mtd>
-<mtd>
-<mfrac> 
-    <mrow>
-    <mi>avg</mi>
-    <mo>(</mo>
-    <msub>
-        <mi>t</mi>
-        <mi>n</mi> 
-    </msub>
-    <msub>
-        <mi>x</mi>
-        <mi>n</mi> 
-    </msub>
-    <mo>)</mo>
-    <mo>-</mo>
-    <mi>avg</mi>
-    <mo>(</mo>
-    <msub>
-        <mi>t</mi>
-        <mi>n</mi> 
-    </msub>
-    <mo>)</mo>
-    <mi>avg</mi>
-    <mo>(</mo>
-    <msub>
-        <mi>x</mi>
-        <mi>n</mi> 
-    </msub>
-    <mo>)</mo>
-    </mrow>
-    <mrow>
-    <mi>avg</mi>
-    <mn>(</mn>
-    <msup>
-        <mrow>
-        <msub>
-            <mi>x</mi>
-            <mi>n</mi> 
-        </msub>
-        </mrow>
-        <mi>2</mi>
-    </msup>
-    <mn>)</mn>
-    <mo>-</mo>
-    <msup>
-    <mrow>
-    <mi>avg</mi>
-    <mo>(</mo>
-    <msup>
-        <msub>
-            <mi>x</mi>
-            <mi>n</mi> 
-        </msub>
-    </msup>
-    <mo>)</mo>
-    </mrow>
-    <mn>2</mn>
-    </mrow>
-</mfrac>
-</mtd>
-</math>
-<br>
-<br>
-<math style="display: block;"> 
-<mtable columnalign="right center left"> 
-<mtr> 
-<mtd>
-<msub>
-    <mi>w</mi>
-    <mn>1</mn> 
-</msub>
-</mtd>
-<mtd>
-<mo>=</mo>
-</mtd>
-<mtd>
-    <mi>avg</mi>
-    <mn>(</mn>
-    <msup>
-        <msub>
-            <mi>t</mi>
-            <mi>n</mi> 
-        </msub>
-    </msup>
-    <mn>)</mn>
-<mo>-</mo>
-<msub>
-    <mi>w</mi>
-    <mn>0</mn> 
-</msub>
-    <mi>avg(</mi>
-    <msup>
-        <msub>
-            <mi>x</mi>
-            <mi>n</mi> 
-        </msub>
-    </msup>
-    <mn>)</mn>
-</mtd>
-</mtr>
-<mtr>
-<mtd>
-</mtd>
-<mtd>
-<mo>=</mo>
-</mtd>
-<mtd>
-    <mi>avg</mi>
-    <mn>(</mn>
-    <msup>
-        <msub>
-            <mi>t</mi>
-            <mi>n</mi> 
-        </msub>
-    </msup>
-    <mn>)</mn>
-<mo>-</mo>
-<mfrac> 
-    <mrow>
-    <mi>avg</mi>
-    <mo>(</mo>
-    <msub>
-        <mi>t</mi>
-        <mi>n</mi> 
-    </msub>
-    <msub>
-        <mi>x</mi>
-        <mi>n</mi> 
-    </msub>
-    <mo>)</mo>
-    <mo>-</mo>
-    <mi>avg</mi>
-    <mo>(</mo>
-    <msub>
-        <mi>t</mi>
-        <mi>n</mi> 
-    </msub>
-    <mo>)</mo>
-    <mi>avg</mi>
-    <mo>(</mo>
-    <msub>
-        <mi>x</mi>
-        <mi>n</mi> 
-    </msub>
-    <mo>)</mo>
-    </mrow>
-    <mrow>
-    <mi>avg</mi>
-    <mn>(</mn>
-    <msup>
-        <mrow>
-        <msub>
-            <mi>x</mi>
-            <mi>n</mi> 
-        </msub>
-        </mrow>
-        <mi>2</mi>
-    </msup>
-    <mn>)</mn>
-    <mo>-</mo>
-    <msup>
-    <mrow>
-    <mi>avg</mi>
-    <mo>(</mo>
-    <msup>
-        <msub>
-            <mi>x</mi>
-            <mi>n</mi> 
-        </msub>
-    </msup>
-    <mo>)</mo>
-    </mrow>
-    <mn>2</mn>
-    </mrow>
-</mfrac>
-    <mi>avg(</mi>
-    <msup>
-        <msub>
-            <mi>x</mi>
-            <mi>n</mi> 
-        </msub>
-    </msup>
-    <mn>)</mn>
-</mtd>
-</mtr>
-</mtable>
-</math>
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+ w_{0} &= \frac{ avg(t_{n} x_{n}) - avg(t_{n}) avg(x_{n}) }{avg(x_{n} ^2) - avg(x_{n})^2} \\
+ w_{1} &= avg(t_{n}) - w_{0} avg(x_{n}) \\
+       &= avg(t_{n}) - \frac{ avg(t_{n} x_{n}) - avg(t_{n}) avg(x_{n}) }{avg(x_{n} ^2) - avg(x_{n})^2} avg(x_{n})
+\end{aligned}
+ $$
+</p>
+
+
 
 <p>では、実際にx、tを代入してw0、w1を求めてみよう。(x,tは前章のnpyファイルから取得)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
@@ -547,8 +301,8 @@ plt<span style="color:#f92672">.</span>show()</code></pre></div>
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/b8752812d0a93a036c6cb5a0efe68081bc5c137d" title='Last modified Apr 1, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 1, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/49b4ab553b1083587c3154d866c29a31030e39b2" title='Last modified Apr 9, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 9, 2020
     </a>
   </div>
   
