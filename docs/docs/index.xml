@@ -94,6 +94,15 @@
     
     <item>
       <title>2次元入力の面モデル</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/2dmodel-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/2dmodel-2/</guid>
+      <description>2次元入力の面モデル 先程の勾配法の例では入力データは1次元であったが、2次元であった場合はどうだろうか。 例として、以下のようなデータを用意す</description>
+    </item>
+    
+    <item>
+      <title>2次元入力の面モデル</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/2dmodel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -423,6 +432,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/scalar/</guid>
       <description>スカラー*行列 スカラーと行列を書ける方法についてを示す。 Python スカラーと行列をかけたいときは、普通にスカラーとnumpy.ndarray型の変数</description>
+    </item>
+    
+    <item>
+      <title>セクション</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/section/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/section/</guid>
+      <description>セクション セクションとは章や節といった様なもの、HTMLでは見出しとそれに対応する文書の部分(セクショニングコンテンツ)といった様なものであ</description>
     </item>
     
     <item>
@@ -1651,7 +1669,7 @@ Fervens esse et tenet cinisque per: et vir equus formaque superorum tollit, vire
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/front_index/</guid>
-      <description>フロントエンド-memo フロントエンドの勉強用メモ。まずはHTMLから頑張ります・・ HTML 要素とタグ HTMLの全体構造 要素の種類 グローバル属性</description>
+      <description>フロントエンド-memo フロントエンドの勉強用メモ。まずはHTMLから頑張ります・・ HTML 要素とタグ HTMLの全体構造 要素の種類 グローバル属性 セ</description>
     </item>
     
     <item>
