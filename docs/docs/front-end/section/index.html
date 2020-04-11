@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.96ca94e7b2e4b7f1dd5d699421df0eb2fd15c6b3e12dfc1e7f7ad545d5c4e419.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.164a0c069b7cb1357aeb5230656fc1c73272e5cabca97befb47f1a113d655ced.js"></script>
 
 
 
@@ -130,13 +130,61 @@ https://github.com/alex-shpak/hugo-book
 
 <p>HTMLには種類は様々だが、セクションを構成するための要素がいくつか存在する。</p>
 
-<h2 id="見出し">見出し</h2>
+<h2 id="h1-h6要素">h1~h6要素</h2>
 
-<p>見出しを構成する要素についてを述べる。</p>
+<p>h1,h2,h3,h4,h5,h6は、見出しを構成する要素である。</p>
 
-<p>（## h1~h6　見出しの要素について記載）</p>
+<p>h1が一番上の階層で、その次に大きいのがh2、その次がh3、、というように続く。</p>
 
-<h3 id="アウトライン">アウトライン</h3>
+<p>記法例</p>
+
+<pre><code>&lt;h1&gt;見出し１&lt;/h1&gt;
+&lt;h2&gt;見出し２&lt;/h2&gt;
+&lt;h3&gt;見出し３&lt;/h3&gt;
+</code></pre>
+
+<h2 id="article要素">article要素</h2>
+
+<p>article要素は独立したセクションを表す要素である。</p>
+
+<p>そのため、他のセクションの一部となっている要素は含むことはできない。</p>
+
+<p>適用例としては、雑誌や新聞の記事、ブログのコメントなどがある。</p>
+
+<p>記法例</p>
+
+<pre><code>&lt;h1&gt;MYブログ&lt;/h1&gt;
+
+&lt;article&gt;
+    &lt;h2&gt;3/9 その１&lt;/h2&gt;
+    &lt;p&gt;(3/9の内容・・)&lt;/p&gt;
+&lt;/article&gt;
+
+&lt;article&gt;
+    &lt;h2&gt;3/10 その１&lt;/h2&gt;
+    &lt;p&gt;(3/10の内容・・)&lt;/p&gt;
+&lt;/article&gt;
+
+</code></pre>
+
+<p>実行例</p>
+
+<hr>
+
+<h1>MYブログ</h1>
+
+<article>
+    <h2>3/9 その１</h2>
+    <p>(3/9の内容・・)</p>
+</article>
+
+<p><article>
+    <h2><sup>3</sup>&frasl;<sub>10</sub> その１</h2>
+    <p>(3/10の内容・・)</p>
+</article>
+<hr></p>
+
+<h2 id="アウトライン">アウトライン</h2>
 
 <p>HTML文書から見出しの要素だけを抜き出し、文書内のセクションが一目でわかる様にしたものを<strong>アウトライン</strong>という。</p>
 
@@ -148,7 +196,14 @@ https://github.com/alex-shpak/hugo-book
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/d343e17600ac2fd344e484790219ab04e7cd9a0f" title='Last modified Apr 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 11, 2020
+    </a>
+  </div>
   
 </div>
 
@@ -163,10 +218,9 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#セクション">セクション</a>
 <ul>
-<li><a href="#見出し">見出し</a>
-<ul>
+<li><a href="#h1-h6要素">h1~h6要素</a></li>
+<li><a href="#article要素">article要素</a></li>
 <li><a href="#アウトライン">アウトライン</a></li>
-</ul></li>
 </ul></li>
 </ul>
 </nav>
