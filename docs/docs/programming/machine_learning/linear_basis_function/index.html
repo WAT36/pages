@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ファイル | WAT Notes</title>
+<title>線形基底関数モデル | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -54,7 +54,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2f file_io\2f file_index\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2flinear_basis_function\2f "] {
       color: #004ed0;
   }
   </style>
@@ -118,40 +118,23 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>ファイル</strong>
+  <strong>線形基底関数モデル</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="ファイル">ファイル</h1>
+<h1 id="線形基底関数モデル">線形基底関数モデル</h1>
 
-<p>ファイルを扱う手法についてをまとめる。</p>
+<p>先ほどまでの章では、データの予測に直線モデルを利用していたが、勿論直線モデルを利用するのが必ずしも最適ではないという場合もある。</p>
 
-<ul>
-<li>ファイル入出力
+<p>直線ではなく、曲線となるような関数をモデルにしてみるのはどうだろうか？ここではそれについて述べる。</p>
 
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/programming/file_io/fileopen/">ファイル読み込み</a></li>
-<li><a href="https://WAT36.github.io/pages/docs/programming/file_io/filewrite/">ファイル書き込み</a></li>
-</ul></li>
-<li>外部ライブラリの使用
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/programming/file_io/import/">外部ファイルのインポート</a></li>
-</ul></li>
-</ul>
+<p>と言っても曲線となる関数は色々あるが、今回はその中でも汎用性が高いと言われている<strong>線形基底関数モデル</strong>を利用する。</p>
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/717b2dec08bf614cdbe94c4720790f3f612491b8" title='Last modified Feb 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Feb 27, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
