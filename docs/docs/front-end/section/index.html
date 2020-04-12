@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.164a0c069b7cb1357aeb5230656fc1c73272e5cabca97befb47f1a113d655ced.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.5cfb1ba0ac76561f2fef646799ccb1bd6157cb7e1011dd42f4eb1b362be246fd.js"></script>
 
 
 
@@ -130,7 +130,9 @@ https://github.com/alex-shpak/hugo-book
 
 <p>HTMLには種類は様々だが、セクションを構成するための要素がいくつか存在する。</p>
 
-<h2 id="h1-h6要素">h1~h6要素</h2>
+<h2 id="見出し">見出し</h2>
+
+<h3 id="h1-h6要素">h1~h6要素</h3>
 
 <p>h1,h2,h3,h4,h5,h6は、見出しを構成する要素である。</p>
 
@@ -143,7 +145,19 @@ https://github.com/alex-shpak/hugo-book
 &lt;h3&gt;見出し３&lt;/h3&gt;
 </code></pre>
 
-<h2 id="article要素">article要素</h2>
+<h3 id="アウトライン">アウトライン</h3>
+
+<p>HTML文書から見出しの要素だけを抜き出し、文書内のセクションが一目でわかる様にしたものを<strong>アウトライン</strong>という。</p>
+
+<p>例えばこのHUGOで書いているブログでは、ページ右の部分に見出しの部分だけが表示される様になっている。これもアウトラインだと思ってくれれば良い。</p>
+
+<p>(ちなみに当ブログでは全ての記事にアウトラインが表示される様には設定していない。必要に応じてアウトラインを表示する必要がないと判断した記事は表示させてはいない)</p>
+
+<h2 id="セクションを表す要素">セクションを表す要素</h2>
+
+<p>以下にセクションを表す際に利用する要素を記載する。</p>
+
+<h3 id="article要素">article要素</h3>
 
 <p>article要素は独立したセクションを表す要素である。</p>
 
@@ -184,13 +198,31 @@ https://github.com/alex-shpak/hugo-book
 </article>
 <hr></p>
 
-<h2 id="アウトライン">アウトライン</h2>
+<h3 id="aside要素">aside要素</h3>
 
-<p>HTML文書から見出しの要素だけを抜き出し、文書内のセクションが一目でわかる様にしたものを<strong>アウトライン</strong>という。</p>
+<p>aside要素は補足や脚注のような、そのセクションの内容からは別扱いのしたほうが良さそうなセクションを表す場合に利用する。</p>
 
-<p>例えばこのHUGOで書いているブログでは、ページ右の部分に見出しの部分だけが表示される様になっている。これもアウトラインだと思ってくれれば良い。</p>
+<p>記法例</p>
 
-<p>(ちなみに当ブログでは全ての記事にアウトラインが表示される様には設定していない。必要に応じてアウトラインを表示する必要がないと判断した記事は表示させてはいない)</p>
+<pre><code>&lt;aside&gt;
+    &lt;h3&gt;補足&lt;/h3&gt;
+    &lt;p&gt;aside要素で&lt;/p&gt;
+    &lt;p&gt;補足を表す&lt;/p&gt;
+&lt;/aside&gt;
+</code></pre>
+
+<p>実行例
+<hr>
+<aside>
+    <h3>補足</h3>
+    <p>aside要素で</p>
+    <p>補足を表す</p>
+</aside>
+<hr></p>
+
+<h3 id="section要素">section要素</h3>
+
+<p>(section要素は後回しにする)</p>
 
 <p>（## セクショニング・ルート　を記載）</p>
 </article>
@@ -200,7 +232,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/d343e17600ac2fd344e484790219ab04e7cd9a0f" title='Last modified Apr 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/fcb8205dfb94fd8ba13d0cc306e27eadd2f19a75" title='Last modified Apr 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 11, 2020
     </a>
   </div>
@@ -218,9 +250,17 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#セクション">セクション</a>
 <ul>
+<li><a href="#見出し">見出し</a>
+<ul>
 <li><a href="#h1-h6要素">h1~h6要素</a></li>
-<li><a href="#article要素">article要素</a></li>
 <li><a href="#アウトライン">アウトライン</a></li>
+</ul></li>
+<li><a href="#セクションを表す要素">セクションを表す要素</a>
+<ul>
+<li><a href="#article要素">article要素</a></li>
+<li><a href="#aside要素">aside要素</a></li>
+<li><a href="#section要素">section要素</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
