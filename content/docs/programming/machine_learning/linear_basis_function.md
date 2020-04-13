@@ -21,7 +21,7 @@ bookToc: false
 その場合の線形基底関数モデルの式は以下のようになる。
 
 {{< katex  >}}
-y = w_{0} \phi_{0} (x) + w_{1} \phi_{1} (x) + w_{2} \phi_{2} (x) + \cdots + w_{n}
+\tag{1}  y(x, {\bf w} ) = w_{0} \phi_{0} (x) + w_{1} \phi_{1} (x) + w_{2} \phi_{2} (x) + \cdots + w_{n}
 {{< /katex >}}
 
 ここでφ<sub>j</sub>(x)はガウス関数で、以下のように表される。
@@ -31,3 +31,40 @@ y = w_{0} \phi_{0} (x) + w_{1} \phi_{1} (x) + w_{2} \phi_{2} (x) + \cdots + w_{n
 {{< /katex >}}
 
 μ<sub>j</sub>はガウス関数φ<sub>j</sub>(x)の中心位置で、vは関数の広がりの程度を示す。
+
+次に、この線形基底関数モデルの式を行列を用い表現することを考えてみる。
+
+式(1)において、
+
+{{< katex  >}}
+  {\bf w} = \left[
+    \begin{array}{cccc}
+      w_{0} \\
+      w_{1} \\
+      \vdots \\
+      w_{n}
+    \end{array}
+  \right]
+  ,
+    {\bf \Phi} = \left[
+    \begin{array}{cccc}
+      \phi_{0} \\
+      \phi_{1} \\
+      \vdots \\
+      \phi_{n}
+    \end{array}
+  \right]
+{{< /katex >}}
+
+とおくと、式(1)は以下のように表される。
+
+{{< katex  >}}
+\tag{2}  y(x, {\bf w} ) = \sum_{i=0}^{N} w_{i} \phi_{i} (x) = {\bf w} ^\mathrm{T} {\bf \Phi} ( {\bf x} )
+{{< /katex >}}
+
+ここで、式(1)を見ても分かるように、第n項目はw<sub>n</sub>のみであり、　φ<sub>n</sub>(x) は実は存在しない。
+
+φ<sub>n</sub>(x)は、式(2)での行列計算のために入れているダミーの基底関数であり、w<sub>n</sub>φ<sub>n</sub>(x) が w<sub>n</sub>になる様にφ<sub>n</sub>(x) = 1　とする。
+
+
+

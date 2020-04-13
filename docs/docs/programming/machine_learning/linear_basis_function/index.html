@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.09d9ece2953e9de5f671e45a8c36b952a0d3c35bee117b4ed208826e71fa984d.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.007b1db8cf376c81c17abb7046593e8fe4215901213f360b5ba271fe4bce8396.js"></script>
 
 
 
@@ -148,7 +148,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p class="katex">
   $$ 
-y = w_{0} \phi_{0} (x) + w_{1} \phi_{1} (x) + w_{2} \phi_{2} (x) + \cdots + w_{n}
+\tag{1}  y(x, {\bf w} ) = w_{0} \phi_{0} (x) + w_{1} \phi_{1} (x) + w_{2} \phi_{2} (x) + \cdots + w_{n}
  $$
 </p>
 
@@ -167,6 +167,52 @@ y = w_{0} \phi_{0} (x) + w_{1} \phi_{1} (x) + w_{2} \phi_{2} (x) + \cdots + w_{n
 
 
 <p>μ<sub>j</sub>はガウス関数φ<sub>j</sub>(x)の中心位置で、vは関数の広がりの程度を示す。</p>
+
+<p>次に、この線形基底関数モデルの式を行列を用い表現することを考えてみる。</p>
+
+<p>式(1)において、</p>
+
+
+
+<p class="katex">
+  $$ 
+  {\bf w} = \left[
+    \begin{array}{cccc}
+      w_{0} \\
+      w_{1} \\
+      \vdots \\
+      w_{n}
+    \end{array}
+  \right]
+  ,
+    {\bf \Phi} = \left[
+    \begin{array}{cccc}
+      \phi_{0} \\
+      \phi_{1} \\
+      \vdots \\
+      \phi_{n}
+    \end{array}
+  \right]
+ $$
+</p>
+
+
+
+<p>とおくと、式(1)は以下のように表される。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{2}  y(x, {\bf w} ) = \sum_{i=0}^{N} w_{i} \phi_{i} (x) = {\bf w} ^\mathrm{T} {\bf \Phi} ( {\bf x} )
+ $$
+</p>
+
+
+
+<p>ここで、式(1)を見ても分かるように、第n項目はw<sub>n</sub>のみであり、　φ<sub>n</sub>(x) は実は存在しない。</p>
+
+<p>φ<sub>n</sub>(x)は、式(2)での行列計算のために入れているダミーの基底関数であり、w<sub>n</sub>φ<sub>n</sub>(x) が w<sub>n</sub>になる様にφ<sub>n</sub>(x) = 1　とする。</p>
 </article>
 
       
@@ -174,8 +220,8 @@ y = w_{0} \phi_{0} (x) + w_{1} \phi_{1} (x) + w_{2} \phi_{2} (x) + \cdots + w_{n
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/d75e495c78b6e6b1939e6dac100c8b5dac13454c" title='Last modified Apr 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 11, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/ed9b449b5c472fbd6f1e6f097b61625e93965b0a" title='Last modified Apr 12, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 12, 2020
     </a>
   </div>
   
