@@ -67,4 +67,10 @@ bookToc: false
 φ<sub>n</sub>(x)は、式(2)での行列計算のために入れているダミーの基底関数であり、w<sub>n</sub>φ<sub>n</sub>(x) が w<sub>n</sub>になる様にφ<sub>n</sub>(x) = 1　とする。
 
 
+それでは、この式(2)を用い、これまでと同様にして平均二乗誤差Jを求めてみよう。
 
+実測値を{t<sub>n</sub>}とおくと、平均二乗誤差Jは次の式(3)で表される。
+
+{{< katex  >}}
+\tag{3}  J( {\bf w} ) = \frac{1}{N} \sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf \Phi} ( x_{n} ) - t_{n} ) ^2
+{{< /katex >}}
