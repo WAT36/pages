@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.366c6dc7d15da214439a513024bdfbfbb0915e51b6cfba76200ab388ba59a50a.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.caaef2cff791f8b02a55274c2ebe7b1af2196a693b130f9ac88a14880f5f2d48.js"></script>
 
 
 
@@ -136,7 +136,53 @@ https://github.com/alex-shpak/hugo-book
 
 <p><img src="https://WAT36.github.io/pages/img/procon/dfs1.png" width=50%></p>
 
-<p>（樹形図とかで表される問題を例として出し、図も載せて解説する様な感じがいいかも）</p>
+<p>例として、以下の様な問題を考えてみる。</p>
+
+<blockquote>
+<p>1,5,10,50,100,500円玉を１枚ずつ持っている時、k円をちょうど支払う事が可能かを判定しなさい。</p>
+</blockquote>
+
+<p>深さ優先探索を用いて考えると、全ての硬貨において使う/使わないで場合分けし、使った硬貨の金額の和がk円に等しくなればOK、その様なパターンが１つもなければ払えないという事になる。</p>
+
+<p>コードでの実装例は以下の通り。(python)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python:coin_dfs.py" data-lang="python:coin_dfs.py"><span style="color:#75715e">#coin_dfs.py</span>
+
+<span style="color:#75715e">#k円、標準入力から</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;k:&#34;</span>,end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+k<span style="color:#f92672">=</span>int(input())
+
+coin<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">100</span>,<span style="color:#ae81ff">500</span>]
+
+<span style="color:#75715e">#硬貨の場合分けを深さ優先探索で調べる、iが場合分けした硬貨の枚数、nが現在の金額</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfs</span>(i,n):
+
+    <span style="color:#75715e">#全て調べ終わったら判定</span>
+    <span style="color:#66d9ef">if</span>(i<span style="color:#f92672">==</span><span style="color:#ae81ff">6</span>):
+        <span style="color:#66d9ef">return</span> n<span style="color:#f92672">==</span>k
+    
+    <span style="color:#75715e">#coin[i]を使わない場合</span>
+    <span style="color:#66d9ef">if</span>( dfs(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,n) ):
+        <span style="color:#66d9ef">return</span> True
+    
+    <span style="color:#75715e">#coin[i]を使う場合</span>
+    <span style="color:#66d9ef">if</span>( dfs(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,n<span style="color:#f92672">+</span>coin[i])):
+        <span style="color:#66d9ef">return</span> True
+
+    <span style="color:#75715e">#どの場合もTrueにならなかった → 払えないのでFalse</span>
+    <span style="color:#66d9ef">return</span> False
+
+<span style="color:#66d9ef">print</span>(dfs(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>))</code></pre></div>
+<p>実行例</p>
+
+<pre><code>$ python coin_dfs.py 
+k:3
+False
+$ python coin_dfs.py 
+k:50
+True
+</code></pre>
+
+<p>(一応　図で表したものも載せる)</p>
 </article>
 
       
@@ -144,7 +190,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/6a1629a90d3afcfd4da199db9b05364fdfeda1c7" title='Last modified Apr 10, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/a2c957325d71bc557cf65d9d68894055c9cd8304" title='Last modified Apr 10, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 10, 2020
     </a>
   </div>
