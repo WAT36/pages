@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.9a172d8aaec818632ec511ad60a671fd0806a91c352cac0e35edb5d52613c874.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.e745e336a15ba45d7edfc528d1672584dd379c47f1c1bdcecb2565c4a174c784.js"></script>
 
 
 
@@ -243,7 +243,44 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="その他-セクションに関する要素">その他、セクションに関する要素</h2>
 
-<p>(### header)</p>
+<h3 id="header要素">header要素</h3>
+
+<p>header要素は、セクションまたはセクショニング・ルートのヘッダーであることを示す要素である。</p>
+
+<p>body要素のヘッダーとなる場合、ページ全体のヘッダーになる。</p>
+
+<p>一般的にヘッダーには見出し、ナビゲーションなどを含む。（必須ではない）</p>
+
+<pre><code>&lt;body&gt;
+&lt;header&gt;
+    &lt;h1&gt;ヘッダー&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;ホーム&lt;/li&gt;
+            &lt;li&gt;お知らせ&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h3 id="footer要素">footer要素</h3>
+
+<p>footer要素はheader要素と逆で、セクションまたはセクショニング・ルートのフッターであることを示す要素である。</p>
+
+<p>header要素の時と同様に、body要素のフッターとなる場合はページ全体のフッターになる。</p>
+
+<p>一般的にフッターには問い合わせ先や著作権情報についてを記載する。（必須ではない）</p>
+
+<pre><code>・・・
+    &lt;footer&gt;
+        &lt;ul&gt;
+            &lt;li&gt;著作権情報&lt;/li&gt;
+            &lt;li&gt;お問い合わせ&lt;/li&gt;
+        &lt;/ul&gt;        
+    &lt;/footer&gt;
+&lt;/body&gt;
+</code></pre>
 </article>
 
       
@@ -251,8 +288,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f5436fe5770f18a18deb02168b5dffb7d7952395" title='Last modified Apr 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 13, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/0c3bafbbf071997e64ee5a89780b4afa8766ea98" title='Last modified Apr 14, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 14, 2020
     </a>
   </div>
   
@@ -282,7 +319,11 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#section要素">section要素</a></li>
 </ul></li>
 <li><a href="#セクショニング-ルート">セクショニング・ルート</a></li>
-<li><a href="#その他-セクションに関する要素">その他、セクションに関する要素</a></li>
+<li><a href="#その他-セクションに関する要素">その他、セクションに関する要素</a>
+<ul>
+<li><a href="#header要素">header要素</a></li>
+<li><a href="#footer要素">footer要素</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
