@@ -1020,6 +1020,15 @@
     </item>
     
     <item>
+      <title>深さ優先探索</title>
+      <link>https://WAT36.github.io/pages/docs/programming/procon/dfs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/procon/dfs/</guid>
+      <description>深さ優先探索 探索の手法の一つである深さ優先探索についてを述べる。 深さ優先探索とは、ある状態から始めてそこから遷移出来なくなるまで状態を進めて</description>
+    </item>
+    
+    <item>
       <title>直線モデル(線形回帰)</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/linear_model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1034,7 +1043,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/procon/procon_index/</guid>
-      <description>競プロテク 競技プログラミングでよく使う手法についてまとめる。 個人的に学びながらなので進度遅めかも 二分探索(Pythonで二分探索を行うライブ</description>
+      <description>競プロテク 競技プログラミングでよく使う手法についてまとめる。 個人的に学びながらなので進度遅めかも 探索 深さ優先探索 キュー(Pythonでの実装</description>
     </item>
     
     <item>
