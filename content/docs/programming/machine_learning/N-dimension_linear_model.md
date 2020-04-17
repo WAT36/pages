@@ -109,3 +109,54 @@ Jを最小にする<b>w</b>では、全てのw<sub>i</sub>について傾き0、
 \end{aligned}
 {{< /katex >}}
 
+式(6)は全てのi (0≦i≦N-1) で成り立つ。つまり以下の式が成り立つ。
+
+{{< katex  >}}
+\begin{aligned}
+\tag{7} \sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf x}_{n} - t_{n} ) x_{n,0} &= 0 \\
+        \sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf x}_{n} - t_{n} ) x_{n,1} &= 0 \\
+        \vdots \\
+        \sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf x}_{n} - t_{n} ) x_{n,N-1} &= 0 
+\end{aligned}
+{{< /katex >}}
+
+この式をベクトルを使って書き換えると以下の式の様になる。
+
+{{< katex  >}}
+\begin{aligned}
+\tag{8} &\sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf x}_{n} - t_{n} ) [ x_{n,0}, x_{n,1}, \cdots , x_{n,N-1} ] 
+        = 
+                \left[
+                    \begin{array}{ccc}
+                    0 & 0 & \cdots & 0 
+                    \end{array}
+                \right]  \\
+        \Leftrightarrow 
+        &\sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf x}_{n} - t_{n} ) {\bf x}_{n} ^\mathrm{T}
+        = 
+                \left[
+                    \begin{array}{ccc}
+                    0 & 0 & \cdots & 0 
+                    \end{array}
+                \right] \\
+        \Leftrightarrow 
+        &\sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf x}_{n} {\bf x}_{n} ^\mathrm{T} 
+                          - t_{n} {\bf x}_{n} ^\mathrm{T} ) 
+        = 
+                \left[
+                    \begin{array}{ccc}
+                    0 & 0 & \cdots & 0 
+                    \end{array}
+                \right] \\
+        \Leftrightarrow 
+        & {\bf w} ^\mathrm{T} \sum_{n=0}^{N-1} {\bf x}_{n} {\bf x}_{n} ^\mathrm{T} 
+          -  \sum_{n=0}^{N-1} t_{n} {\bf x}_{n} ^\mathrm{T}  
+        = 
+                \left[
+                    \begin{array}{ccc}
+                    0 & 0 & \cdots & 0 
+                    \end{array}
+                \right]
+\end{aligned}
+{{< /katex >}}
+

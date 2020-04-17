@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.3fe99a9f687e738a5339df3ccd72ab004bbe885b037336fc549beb4c17167c53.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.27b0935583b8b480d5d65228d6b40384faa600b8bc627c75783eea54a2bee0e5.js"></script>
 
 
 
@@ -274,6 +274,69 @@ https://github.com/alex-shpak/hugo-book
 </p>
 
 
+
+<p>式(6)は全てのi (0≦i≦N-1) で成り立つ。つまり以下の式が成り立つ。</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{7} \sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf x}_{n} - t_{n} ) x_{n,0} &= 0 \\
+        \sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf x}_{n} - t_{n} ) x_{n,1} &= 0 \\
+        \vdots \\
+        \sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf x}_{n} - t_{n} ) x_{n,N-1} &= 0 
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>この式をベクトルを使って書き換えると以下の式の様になる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{8} &\sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf x}_{n} - t_{n} ) [ x_{n,0}, x_{n,1}, \cdots , x_{n,N-1} ] 
+        = 
+                \left[
+                    \begin{array}{ccc}
+                    0 & 0 & \cdots & 0 
+                    \end{array}
+                \right]  \\
+        \Leftrightarrow 
+        &\sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf x}_{n} - t_{n} ) {\bf x}_{n} ^\mathrm{T}
+        = 
+                \left[
+                    \begin{array}{ccc}
+                    0 & 0 & \cdots & 0 
+                    \end{array}
+                \right] \\
+        \Leftrightarrow 
+        &\sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf x}_{n} {\bf x}_{n} ^\mathrm{T} 
+                          - t_{n} {\bf x}_{n} ^\mathrm{T} ) 
+        = 
+                \left[
+                    \begin{array}{ccc}
+                    0 & 0 & \cdots & 0 
+                    \end{array}
+                \right] \\
+        \Leftrightarrow 
+        & {\bf w} ^\mathrm{T} \sum_{n=0}^{N-1} {\bf x}_{n} {\bf x}_{n} ^\mathrm{T} 
+          -  \sum_{n=0}^{N-1} t_{n} {\bf x}_{n} ^\mathrm{T}  
+        = 
+                \left[
+                    \begin{array}{ccc}
+                    0 & 0 & \cdots & 0 
+                    \end{array}
+                \right]
+\end{aligned}
+ $$
+</p>
+
+
 </article>
 
       
@@ -281,8 +344,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/5c010658811ee2d1edc988b4320404c15d8b61bc" title='Last modified Apr 15, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 15, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/c527f9846e7cbddeb3f8926e67243846aa25d5ba" title='Last modified Apr 17, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 17, 2020
     </a>
   </div>
   
