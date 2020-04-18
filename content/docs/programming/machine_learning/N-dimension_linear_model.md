@@ -160,3 +160,139 @@ Jを最小にする<b>w</b>では、全てのw<sub>i</sub>について傾き0、
 \end{aligned}
 {{< /katex >}}
 
+ここで
+
+{{< katex  >}}
+\begin{aligned}
+\tag{9} 
+         \sum_{n=0}^{N-1} {\bf x}_{n} {\bf x}_{n} ^\mathrm{T} 
+        &= 
+         \sum_{n=0}^{N-1}
+                \left[
+                    \begin{array}{cccc}
+                    x_{n,0} \\
+                    x_{n,1} \\
+                    \vdots \\
+                    x_{n,N-1}
+                    \end{array}
+                \right]
+                \left[
+                    \begin{array}{ccc}
+                    x_{n,0} & x_{n,1} & \cdots & x_{n,N-1} 
+                    \end{array}
+                \right] \\
+        &= 
+          \sum_{n=0}^{N-1}
+                \left[
+                    \begin{array}{cccc}
+                    x_{n,0}^2 & x_{n,0} x_{n,1} & \cdots & x_{n,0} x_{n,N-1} \\
+                    x_{n,1} x_{n,0} & x_{n,1}^2 & \cdots & x_{n,1} x_{n,N-1} \\
+                    \vdots & \vdots & \ddots & \vdots \\
+                    x_{n,N-1} x_{n,0} & x_{n,N-1} x_{n,1} & \cdots & x_{n,N-1}^2
+                    \end{array}
+                \right] \\
+        &=
+                \left[
+                    \begin{array}{llll}
+                    \displaystyle \sum_{n=0}^{N-1} x_{n,0}^2 & \displaystyle \sum_{n=0}^{N-1} x_{n,0} x_{n,1} & \cdots & \displaystyle \sum_{n=0}^{N-1} x_{n,0} x_{n,N-1} \\
+                    \displaystyle \sum_{n=0}^{N-1} x_{n,1} x_{n,0} & \displaystyle \sum_{n=0}^{N-1} x_{n,1}^2 & \cdots & \displaystyle \sum_{n=0}^{N-1} x_{n,1} x_{n,N-1} \\
+                    \vdots & \vdots & \ddots & \vdots \\
+                    \displaystyle \sum_{n=0}^{N-1} x_{n,N-1} x_{n,0} & \displaystyle \sum_{n=0}^{N-1} x_{n,N-1} x_{n,1} & \cdots & \displaystyle \sum_{n=0}^{N-1} x_{n,N-1}^2
+                    \end{array}
+                \right] \\
+        &=
+                \left[
+                    \begin{array}{llll}
+                    x_{0,0} & x_{1,0} & \cdots & x_{N-1,0} \\
+                    x_{0,1} & x_{1,1} & \cdots & x_{N-1,1} \\
+                    \vdots & \vdots & \ddots & \vdots \\
+                    x_{0,N-1} & x_{1,N-1} & \cdots & x_{N-1,N-1}
+                    \end{array}
+                \right] 
+                \left[
+                    \begin{array}{llll}
+                    x_{0,0} & x_{0,1} & \cdots & x_{0,N-1} \\
+                    x_{1,0} & x_{1,1} & \cdots & x_{1,N-1} \\
+                    \vdots & \vdots & \ddots & \vdots \\
+                    x_{N-1,0} & x_{N-1,1} & \cdots & x_{N-1,N-1}
+                    \end{array}
+                \right] \\
+        &= {\bf X} ^\mathrm{T} {\bf X}
+
+
+\end{aligned}
+{{< /katex >}}
+
+
+{{< katex  >}}
+\begin{aligned}
+\tag{10} 
+         \sum_{n=0}^{N-1} t_{n} {\bf x}_{n} ^\mathrm{T} 
+        &= 
+         \sum_{n=0}^{N-1}
+                t_{n}
+                \left[
+                    \begin{array}{ccc}
+                    x_{n,0} & x_{n,1} & \cdots & x_{n,N-1} 
+                    \end{array}
+                \right] \\
+        &= 
+          \sum_{n=0}^{N-1}
+                \left[
+                    \begin{array}{ccc}
+                    t_{n} x_{n,0} & t_{n} x_{n,1} & \cdots & t_{n} x_{n,N-1} 
+                    \end{array}
+                \right] \\
+        &=
+                \left[
+                    \begin{array}{llll}
+                    \displaystyle \sum_{n=0}^{N-1} t_{n} x_{n,0} & \displaystyle \sum_{n=0}^{N-1} t_{n} x_{n,1} & \cdots & \displaystyle \sum_{n=0}^{N-1} t_{n} x_{n,N-1} 
+                    \end{array}
+                \right] \\
+        &=
+                \left[
+                    \begin{array}{ccc}
+                    t_{0} & t_{1} & \cdots & t_{N-1} 
+                    \end{array}
+                \right]
+                \left[
+                    \begin{array}{llll}
+                    x_{0,0} & x_{0,1} & \cdots & x_{0,N-1} \\
+                    x_{1,0} & x_{1,1} & \cdots & x_{1,N-1} \\
+                    \vdots & \vdots & \ddots & \vdots \\
+                    x_{N-1,0} & x_{N-1,1} & \cdots & x_{N-1,N-1}
+                    \end{array}
+                \right] \\
+        &= {\bf t} ^\mathrm{T} {\bf X}
+\end{aligned}
+{{< /katex >}}
+
+とおく、ここで
+
+{{< katex  >}}
+\tag{11} 
+        {\bf t}
+        = 
+                \left[
+                    \begin{array}{cccc}
+                    t_{0} \\
+                    t_{1} \\
+                    \vdots \\
+                    t_{N-1}
+                    \end{array}
+                \right]
+        ,
+        {\bf X}
+        = 
+                \left[
+                    \begin{array}{cccc}
+                    x_{0,0} & x_{0,1} & \cdots & x_{0,N-1} \\
+                    x_{1,0} & x_{1,1} & \cdots & x_{1,N-1} \\
+                    \vdots & \vdots & \ddots & \vdots \\
+                    x_{N-1,0} & x_{N-1,1} & \cdots & x_{N-1,N-1}
+                    \end{array}
+                \right]
+{{< /katex >}}
+
+とおく事とする。
+

@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.27b0935583b8b480d5d65228d6b40384faa600b8bc627c75783eea54a2bee0e5.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.43af695b5a144cb795a5248c69debea809ab2520678744d695be9b162e6feb8c.js"></script>
 
 
 
@@ -337,6 +337,159 @@ https://github.com/alex-shpak/hugo-book
 </p>
 
 
+
+<p>ここで</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{9} 
+         \sum_{n=0}^{N-1} {\bf x}_{n} {\bf x}_{n} ^\mathrm{T} 
+        &= 
+         \sum_{n=0}^{N-1}
+                \left[
+                    \begin{array}{cccc}
+                    x_{n,0} \\
+                    x_{n,1} \\
+                    \vdots \\
+                    x_{n,N-1}
+                    \end{array}
+                \right]
+                \left[
+                    \begin{array}{ccc}
+                    x_{n,0} & x_{n,1} & \cdots & x_{n,N-1} 
+                    \end{array}
+                \right] \\
+        &= 
+          \sum_{n=0}^{N-1}
+                \left[
+                    \begin{array}{cccc}
+                    x_{n,0}^2 & x_{n,0} x_{n,1} & \cdots & x_{n,0} x_{n,N-1} \\
+                    x_{n,1} x_{n,0} & x_{n,1}^2 & \cdots & x_{n,1} x_{n,N-1} \\
+                    \vdots & \vdots & \ddots & \vdots \\
+                    x_{n,N-1} x_{n,0} & x_{n,N-1} x_{n,1} & \cdots & x_{n,N-1}^2
+                    \end{array}
+                \right] \\
+        &=
+                \left[
+                    \begin{array}{llll}
+                    \displaystyle \sum_{n=0}^{N-1} x_{n,0}^2 & \displaystyle \sum_{n=0}^{N-1} x_{n,0} x_{n,1} & \cdots & \displaystyle \sum_{n=0}^{N-1} x_{n,0} x_{n,N-1} \\
+                    \displaystyle \sum_{n=0}^{N-1} x_{n,1} x_{n,0} & \displaystyle \sum_{n=0}^{N-1} x_{n,1}^2 & \cdots & \displaystyle \sum_{n=0}^{N-1} x_{n,1} x_{n,N-1} \\
+                    \vdots & \vdots & \ddots & \vdots \\
+                    \displaystyle \sum_{n=0}^{N-1} x_{n,N-1} x_{n,0} & \displaystyle \sum_{n=0}^{N-1} x_{n,N-1} x_{n,1} & \cdots & \displaystyle \sum_{n=0}^{N-1} x_{n,N-1}^2
+                    \end{array}
+                \right] \\
+        &=
+                \left[
+                    \begin{array}{llll}
+                    x_{0,0} & x_{1,0} & \cdots & x_{N-1,0} \\
+                    x_{0,1} & x_{1,1} & \cdots & x_{N-1,1} \\
+                    \vdots & \vdots & \ddots & \vdots \\
+                    x_{0,N-1} & x_{1,N-1} & \cdots & x_{N-1,N-1}
+                    \end{array}
+                \right] 
+                \left[
+                    \begin{array}{llll}
+                    x_{0,0} & x_{0,1} & \cdots & x_{0,N-1} \\
+                    x_{1,0} & x_{1,1} & \cdots & x_{1,N-1} \\
+                    \vdots & \vdots & \ddots & \vdots \\
+                    x_{N-1,0} & x_{N-1,1} & \cdots & x_{N-1,N-1}
+                    \end{array}
+                \right] \\
+        &= {\bf X} ^\mathrm{T} {\bf X}
+
+
+\end{aligned}
+ $$
+</p>
+
+
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{10} 
+         \sum_{n=0}^{N-1} t_{n} {\bf x}_{n} ^\mathrm{T} 
+        &= 
+         \sum_{n=0}^{N-1}
+                t_{n}
+                \left[
+                    \begin{array}{ccc}
+                    x_{n,0} & x_{n,1} & \cdots & x_{n,N-1} 
+                    \end{array}
+                \right] \\
+        &= 
+          \sum_{n=0}^{N-1}
+                \left[
+                    \begin{array}{ccc}
+                    t_{n} x_{n,0} & t_{n} x_{n,1} & \cdots & t_{n} x_{n,N-1} 
+                    \end{array}
+                \right] \\
+        &=
+                \left[
+                    \begin{array}{llll}
+                    \displaystyle \sum_{n=0}^{N-1} t_{n} x_{n,0} & \displaystyle \sum_{n=0}^{N-1} t_{n} x_{n,1} & \cdots & \displaystyle \sum_{n=0}^{N-1} t_{n} x_{n,N-1} 
+                    \end{array}
+                \right] \\
+        &=
+                \left[
+                    \begin{array}{ccc}
+                    t_{0} & t_{1} & \cdots & t_{N-1} 
+                    \end{array}
+                \right]
+                \left[
+                    \begin{array}{llll}
+                    x_{0,0} & x_{0,1} & \cdots & x_{0,N-1} \\
+                    x_{1,0} & x_{1,1} & \cdots & x_{1,N-1} \\
+                    \vdots & \vdots & \ddots & \vdots \\
+                    x_{N-1,0} & x_{N-1,1} & \cdots & x_{N-1,N-1}
+                    \end{array}
+                \right] \\
+        &= {\bf t} ^\mathrm{T} {\bf X}
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>とおく、ここで</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{11} 
+        {\bf t}
+        = 
+                \left[
+                    \begin{array}{cccc}
+                    t_{0} \\
+                    t_{1} \\
+                    \vdots \\
+                    t_{N-1}
+                    \end{array}
+                \right]
+        ,
+        {\bf X}
+        = 
+                \left[
+                    \begin{array}{cccc}
+                    x_{0,0} & x_{0,1} & \cdots & x_{0,N-1} \\
+                    x_{1,0} & x_{1,1} & \cdots & x_{1,N-1} \\
+                    \vdots & \vdots & \ddots & \vdots \\
+                    x_{N-1,0} & x_{N-1,1} & \cdots & x_{N-1,N-1}
+                    \end{array}
+                \right]
+ $$
+</p>
+
+
+
+<p>とおく事とする。</p>
 </article>
 
       
@@ -344,7 +497,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/c527f9846e7cbddeb3f8926e67243846aa25d5ba" title='Last modified Apr 17, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/a17e98b50838382d05587b28b89149ada8c96b80" title='Last modified Apr 17, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 17, 2020
     </a>
   </div>
