@@ -224,3 +224,17 @@ div要素はこれまでに述べた要素とは違い、決められた役割�
     <div class="answer">答え</div>
 </body>
 ```
+
+
+### span要素
+
+span要素もdiv要素と同じく、決められた役割や意味を持たない要素である。
+
+div要素と違う点は、div要素はブロックレベルの要素、span要素はインライン要素という点。(詳しい意味はCSSの所で)
+
+```
+<body>
+    <span class="question">問題</div>
+    <span class="answer">答え</div>
+</body>
+```
