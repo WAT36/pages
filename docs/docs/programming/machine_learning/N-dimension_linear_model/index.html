@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.43af695b5a144cb795a5248c69debea809ab2520678744d695be9b162e6feb8c.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.3ea11012081498fca7cb1c3bb4617b0d9e283abf1236aead4f86af57d19409a5.js"></script>
 
 
 
@@ -489,7 +489,82 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-<p>とおく事とする。</p>
+<p>である。</p>
+
+<p>これより、式(8)は以下式(12)の様に書き換えられる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{12}  & {\bf w} ^\mathrm{T} \sum_{n=0}^{N-1} {\bf x}_{n} {\bf x}_{n} ^\mathrm{T} 
+          -  \sum_{n=0}^{N-1} t_{n} {\bf x}_{n} ^\mathrm{T}  
+        &= 
+                \left[
+                    \begin{array}{ccc}
+                    0 & 0 & \cdots & 0 
+                    \end{array}
+                \right] \\
+        \Leftrightarrow 
+        & {\bf w} ^\mathrm{T} {\bf X} ^\mathrm{T} {\bf X} -  {\bf t} ^\mathrm{T} {\bf X}
+        &= 
+                \left[
+                    \begin{array}{ccc}
+                    0 & 0 & \cdots & 0 
+                    \end{array}
+                \right] 
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>式(12)で<b>t</b><sup>T</sup><b>X</b>を右辺に移項すると</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{13}  {\bf w} ^\mathrm{T}  {\bf X} ^\mathrm{T} {\bf X} 
+        = {\bf t} ^\mathrm{T}  {\bf X} 
+ $$
+</p>
+
+
+
+<p>ここで両辺を転置すると、(<b>AB</b>)<sup>T</sup> = <b>B</b><sup>T</sup><b>A</b><sup>T</sup>より式(13)は</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{14}   ( {\bf w} ^\mathrm{T}  {\bf X} ^\mathrm{T} {\bf X} )^\mathrm{T}
+        &= ( {\bf t} ^\mathrm{T}  {\bf X} )^\mathrm{T} \\
+           ( {\bf X} ^\mathrm{T} {\bf X} )^\mathrm{T} ({\bf w} ^\mathrm{T}) ^\mathrm{T}
+        &= {\bf X} ^\mathrm{T}  {\bf t} \\
+           ( {\bf X} ^\mathrm{T} {\bf X} ) {\bf w}
+        &= {\bf X} ^\mathrm{T}  {\bf t}
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>となり、この式(14)に左から(<b>X</b><sup>T</sup><b>X</b>)<sup>-1</sup>をかける事により、<b>w</b>は以下の式(15)の様に表される。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{15}   {\bf w} = ( {\bf X} ^\mathrm{T}  {\bf X} )^{-1} {\bf X} ^\mathrm{T} {\bf t}
+ $$
+</p>
+
+
+
+<p>よって、長くなったが式(15)により<b>w</b>の値が導出された。またこれがN次元線形回帰モデルの解となる。</p>
 </article>
 
       
@@ -497,8 +572,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/a17e98b50838382d05587b28b89149ada8c96b80" title='Last modified Apr 17, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 17, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/01efe21497fc7c6a3e5cfbc951ebeaf04b070db4" title='Last modified Apr 18, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 18, 2020
     </a>
   </div>
   

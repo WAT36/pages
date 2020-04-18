@@ -294,5 +294,55 @@ Jを最小にする<b>w</b>では、全てのw<sub>i</sub>について傾き0、
                 \right]
 {{< /katex >}}
 
-とおく事とする。
+である。
 
+これより、式(8)は以下式(12)の様に書き換えられる。
+
+{{< katex  >}}
+\begin{aligned}
+\tag{12}  & {\bf w} ^\mathrm{T} \sum_{n=0}^{N-1} {\bf x}_{n} {\bf x}_{n} ^\mathrm{T} 
+          -  \sum_{n=0}^{N-1} t_{n} {\bf x}_{n} ^\mathrm{T}  
+        &= 
+                \left[
+                    \begin{array}{ccc}
+                    0 & 0 & \cdots & 0 
+                    \end{array}
+                \right] \\
+        \Leftrightarrow 
+        & {\bf w} ^\mathrm{T} {\bf X} ^\mathrm{T} {\bf X} -  {\bf t} ^\mathrm{T} {\bf X}
+        &= 
+                \left[
+                    \begin{array}{ccc}
+                    0 & 0 & \cdots & 0 
+                    \end{array}
+                \right] 
+\end{aligned}
+{{< /katex >}}
+
+式(12)で<b>t</b><sup>T</sup><b>X</b>を右辺に移項すると
+
+{{< katex  >}}
+\tag{13}  {\bf w} ^\mathrm{T}  {\bf X} ^\mathrm{T} {\bf X} 
+        = {\bf t} ^\mathrm{T}  {\bf X} 
+{{< /katex >}}
+
+ここで両辺を転置すると、(<b>AB</b>)<sup>T</sup> = <b>B</b><sup>T</sup><b>A</b><sup>T</sup>より式(13)は
+
+{{< katex  >}}
+\begin{aligned}
+\tag{14}   ( {\bf w} ^\mathrm{T}  {\bf X} ^\mathrm{T} {\bf X} )^\mathrm{T}
+        &= ( {\bf t} ^\mathrm{T}  {\bf X} )^\mathrm{T} \\
+           ( {\bf X} ^\mathrm{T} {\bf X} )^\mathrm{T} ({\bf w} ^\mathrm{T}) ^\mathrm{T}
+        &= {\bf X} ^\mathrm{T}  {\bf t} \\
+           ( {\bf X} ^\mathrm{T} {\bf X} ) {\bf w}
+        &= {\bf X} ^\mathrm{T}  {\bf t}
+\end{aligned}
+{{< /katex >}}
+
+となり、この式(14)に左から(<b>X</b><sup>T</sup><b>X</b>)<sup>-1</sup>をかける事により、<b>w</b>は以下の式(15)の様に表される。
+
+{{< katex  >}}
+\tag{15}   {\bf w} = ( {\bf X} ^\mathrm{T}  {\bf X} )^{-1} {\bf X} ^\mathrm{T} {\bf t}
+{{< /katex >}}
+
+よって、長くなったが式(15)により<b>w</b>の値が導出された。またこれがN次元線形回帰モデルの解となる。
