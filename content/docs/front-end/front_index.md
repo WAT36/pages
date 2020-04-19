@@ -13,3 +13,6 @@ bookToc: false
  - 要素の種類
  - [グローバル属性]({{< relref "/docs/front-end/global_attr.md" >}})
  - [セクション]({{< relref "/docs/front-end/section.md" >}})
+ - [テキスト]({{< relref "/docs/front-end/text.md" >}})
+
+
