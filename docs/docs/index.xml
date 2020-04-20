@@ -206,7 +206,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/other/other_index/</guid>
-      <description>その他 その他、括れてない手法などをまとめる。 変数 変数の型を調べる 関数、メソッドのヘルプを見る(Python) コメントアウト 正規表現</description>
+      <description>その他 その他、括れてない手法などをまとめる。 変数 変数を設定する 変数の型を調べる 関数、メソッドのヘルプを見る(Python) コメントアウト 正規</description>
     </item>
     
     <item>
@@ -819,6 +819,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/increment/</guid>
       <description>変数の値を1増やす・減らす（インクリメント・デクリメント） Java Javaではインクリメント・デクリメントの演算子（ ++、&amp;ndash; ）がそれぞ</description>
+    </item>
+    
+    <item>
+      <title>変数を設定する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/var/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/var/</guid>
+      <description>変数を設定する 変数を設定する方法についてを述べる。 Java javaには Python Pythonでは Swift Swiftではvarキーワードを用いて以下の様に表現する</description>
     </item>
     
     <item>

@@ -453,6 +453,10 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/other/var/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/file_io/import/</loc>
     <lastmod>2020-02-27T21:42:34+09:00</lastmod>
   </url>
@@ -898,12 +902,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -913,12 +917,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -1080,6 +1084,18 @@
   <url>
     <loc>https://WAT36.github.io/pages/</loc>
     <lastmod>2019-09-11T22:14:59+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/categories/Java/</loc>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/categories/Python/</loc>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/categories/Swift/</loc>
   </url>
   
   <url>
