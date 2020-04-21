@@ -6,6 +6,7 @@ bookToc: false
 # フロントエンド-memo
 
 フロントエンドの勉強用メモ。まずはHTMLから頑張ります・・
+(初心者なので奥深くは書ききれておりません。悪しからず。)
 
 - HTML
  - [要素とタグ]({{< relref "/docs/front-end/element.md" >}})
