@@ -89,6 +89,8 @@ bookToc: false
 \tag{4}   {\bf w} = ( {\bf \Phi} ^\mathrm{T}  {\bf \Phi} )^{-1} {\bf \Phi} ^\mathrm{T} {\bf t}
 {{< /katex >}}
 
+ただし
+
 {{< katex  >}}
 \tag{5}   
         {\bf \Phi}
@@ -103,3 +105,20 @@ bookToc: false
                 \right]
 {{< /katex >}}
 
+である。この式(5)で表される行列を**計画行列**と言う。
+
+基底関数としているガウス関数を多次元入力に対応させると、以下のようになる。
+
+{{< katex  >}}
+\tag{6}   
+        {\bf \Phi}
+        = 
+                \left[
+                    \begin{array}{cccc}
+                    \phi_{0} ({\bf x}_{0}) & \phi_{1} ({\bf x}_{0}) & \cdots & \phi_{M} ({\bf x}_{0}) \\
+                    \phi_{0} ({\bf x}_{1}) & \phi_{1} ({\bf x}_{1}) & \cdots & \phi_{M} ({\bf x}_{1}) \\
+                    \vdots & \vdots & \ddots & \vdots \\
+                    \phi_{0} ({\bf x}_{N-1}) & \phi_{1} ({\bf x}_{N-1}) & \cdots & \phi_{M} ({\bf x}_{N-1})
+                    \end{array}
+                \right]
+{{< /katex >}}
