@@ -27,7 +27,7 @@ bookToc: false
 ここでφ<sub>j</sub>(x)はガウス関数で、以下のように表される。
 
 {{< katex  >}}
-\phi_{j} (x) = \exp( - \frac{ ( x - \mu_{j} )^2 }{ 2 v^2} )
+\tag{2} \phi_{j} (x) = \exp( - \frac{ ( x - \mu_{j} )^2 }{ 2 v^2} )
 {{< /katex >}}
 
 μ<sub>j</sub>はガウス関数φ<sub>j</sub>(x)の中心位置で、vは関数の広がりの程度を示す。
@@ -59,23 +59,23 @@ bookToc: false
 とおくと、式(1)は以下のように表される。
 
 {{< katex  >}}
-\tag{2}  y({\bf x}, {\bf w} ) = \sum_{i=0}^{M} w_{i} \phi_{i} (x) = {\bf w} ^\mathrm{T} {\bf \Phi} ( {\bf x} )
+\tag{3}  y({\bf x}, {\bf w} ) = \sum_{i=0}^{M} w_{i} \phi_{i} (x) = {\bf w} ^\mathrm{T} {\bf \Phi} ( {\bf x} )
 {{< /katex >}}
 
 ここで、式(1)を見ても分かるように、第M項目はw<sub>M</sub>のみであり、　φ<sub>M</sub>(x) は実は存在しない。
 
-実はφ<sub>M</sub>(x)は先述の[N次元線形回帰モデル]({{< relref "/docs/programming/machine_learning/N-dimension_linear_model.md" >}})のところでもあったように、φ<sub>M</sub>(x)は式(2)での行列計算のために入れているダミーの基底関数であり、w<sub>M</sub>φ<sub>M</sub>(x) が w<sub>M</sub>になる様にφ<sub>M</sub>(x) = 1　とする。
+実はφ<sub>M</sub>(x)は先述の[N次元線形回帰モデル]({{< relref "/docs/programming/machine_learning/N-dimension_linear_model.md" >}})のところでもあったように、φ<sub>M</sub>(x)は式(3)での行列計算のために入れているダミーの基底関数であり、w<sub>M</sub>φ<sub>M</sub>(x) が w<sub>M</sub>になる様にφ<sub>M</sub>(x) = 1　とする。
 
 
-この式(2)を用い、これまでと同様にして平均二乗誤差Jを求めてみよう。
+この式(3)を用い、これまでと同様にして平均二乗誤差Jを求めてみよう。
 
-実測値を{t<sub>n</sub>}とおくと、平均二乗誤差Jは次の式(3)で表される。
+実測値を{t<sub>n</sub>}とおくと、平均二乗誤差Jは次の式(4)で表される。
 
 {{< katex  >}}
-\tag{3}  J( {\bf w} ) = \frac{1}{N} \sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf \Phi} ( x_{n} ) - t_{n} ) ^2
+\tag{4}  J( {\bf w} ) = \frac{1}{N} \sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf \Phi} ( x_{n} ) - t_{n} ) ^2
 {{< /katex >}}
 
-この式(3)だが、先述の[N次元線形回帰モデル]({{< relref "/docs/programming/machine_learning/N-dimension_linear_model.md" >}})の式(4)に類似している。
+この式(4)だが、先述の[N次元線形回帰モデル]({{< relref "/docs/programming/machine_learning/N-dimension_linear_model.md" >}})の式(4)に類似している。
 
 {{< katex  >}}
   J( {\bf w} ) = \frac{1}{N} \sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf x}_{n} - t_{n} )^2
@@ -86,13 +86,13 @@ bookToc: false
 よって、Jを最小化する<b>w</b>は以下の式のようになる。
 
 {{< katex  >}}
-\tag{4}   {\bf w} = ( {\bf \Phi} ^\mathrm{T}  {\bf \Phi} )^{-1} {\bf \Phi} ^\mathrm{T} {\bf t}
+\tag{5}   {\bf w} = ( {\bf \Phi} ^\mathrm{T}  {\bf \Phi} )^{-1} {\bf \Phi} ^\mathrm{T} {\bf t}
 {{< /katex >}}
 
 ただし
 
 {{< katex  >}}
-\tag{5}   
+\tag{6}   
         {\bf \Phi}
         = 
                 \left[
@@ -105,12 +105,12 @@ bookToc: false
                 \right]
 {{< /katex >}}
 
-である。この式(5)で表される行列を**計画行列**と言う。
+である。この式(6)で表される行列を**計画行列**と言う。
 
 基底関数としているガウス関数を多次元入力に対応させると、以下のようになる。
 
 {{< katex  >}}
-\tag{6}   
+\tag{7}   
         {\bf \Phi}
         = 
                 \left[
@@ -122,3 +122,29 @@ bookToc: false
                     \end{array}
                 \right]
 {{< /katex >}}
+
+
+では、以上の式をコードで実装してみよう。
+
+まず、ガウス関数とそれを利用した線形基底関数モデルは以下のようになる。
+
+```python
+import numpy as np
+#ガウス関数 (式(2))
+def gauss(x,mu,v):
+    return np.exp(-(x-mu)**2/(2* v**2))
+
+
+#線形基底関数モデル (式(1))
+def linear_basis_func(w,x,mu,v):
+    y=np.zeros_like(x) #xと同じ次元の零行列をyの初期値とする
+    for i in range(len(w)-1):
+        y = y + w[i]*gauss(x,mu[i],v)
+    y = y + w[len(w)-1]
+    return y
+
+
+#平均二乗誤差MSE (式(4))
+def mse(y,t):
+    return np.mean((y-t)**2)
+```
