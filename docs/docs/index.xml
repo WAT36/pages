@@ -192,6 +192,15 @@
     </item>
     
     <item>
+      <title>N次元線形回帰モデル</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/N-dimension_linear_model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/N-dimension_linear_model/</guid>
+      <description>N次元線形回帰モデル 先程までの章では1次元(直線モデル)、2次元(面モデル)の入力データを扱ってきたが、そこから更に次元を広げたN次元の入力</description>
+    </item>
+    
+    <item>
       <title>OR演算</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/or/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1025,7 +1034,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</guid>
-      <description>機械学習 機械学習の手法についてをまとめる。 教師あり学習 直線モデル(線形回帰) 平均二乗誤差 勾配法(最急降下法) 解析解 2次元入力の面モデル</description>
+      <description>機械学習 機械学習の手法についてをまとめる。 教師あり学習 直線モデル(線形回帰) 平均二乗誤差 勾配法(最急降下法) 解析解 2次元入力の面モデル N次元</description>
     </item>
     
     <item>
@@ -1071,6 +1080,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/class_func/inheritance/</guid>
       <description>継承 クラスを実装できる言語の大半は、他のクラスの構造を受け継ぎ、そこから新しい変数やメソッド(関数)等を付け足す形でクラスを定義することがで</description>
+    </item>
+    
+    <item>
+      <title>線形基底関数モデル</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/linear_basis_function/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/linear_basis_function/</guid>
+      <description>線形基底関数モデル 先ほどまでの章では、データの予測に直線モデルを利用していたが、勿論直線モデルを利用するのが必ずしも最適ではないという場合も</description>
     </item>
     
     <item>

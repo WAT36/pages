@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.96f17740241a4521878a2c460ee0306028b30c5e6c578f52955a142ba44628d0.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.76acd7e77b902d29d1ab922b98b4775aabef2c3abf260e40a286e9c9377a615b.js"></script>
 
 
 
@@ -132,222 +132,43 @@ https://github.com/alex-shpak/hugo-book
 
 <p>先程の勾配法の章において、平均二乗誤差Jが極小になる時がw<sub>0</sub>、w<sub>1</sub>の求める値なので、この条件式からw0、w1の解析解を求めていく。</p>
 
-<math>
-    <mfrac> 
-        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
-        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>0</mn></msub></mrow>
-    </mfrac>
-<mo>=</mo>
-    <mfrac> 
-        <mn>2</mn> 
-        <mi>N</mi>
-    </mfrac>
-    <munderover> 
-        <mi>&Sum;</mi> 
-            <mrow>
-                <mi>n</mi>
-                <mo>=</mo>
-                <mn>0</mn> 
-            </mrow>
-            <mi>N-1</mi> 
-    </munderover> 
-            <mn>(</mn>
-            <msub>
-                <mi>w</mi>
-                <mn>0</mn> 
-            </msub>
-            <msub>
-                <mi>x</mi>
-                <mi>n</mi> 
-            </msub>
-            <mo>+</mo>
-            <msub>
-                <mi>w</mi>
-                <mn>1</mn> 
-            </msub>
-            <mo>-</mo>
-            <msub>
-                <mi>t</mi>
-                <mi>n</mi> 
-            </msub>
-            <mn>)</mn>
-            <msub>
-                <mi>x</mi>
-                <mi>n</mi> 
-            </msub>
-<mo>=</mo>
-<mn>0</mn>
-</math>
-<br>
-<math>
-    <mfrac> 
-        <mrow><mo>&part;</mo><mi>J</mi></mrow> 
-        <mrow><mo>&part;</mo><msub><mi>w</mi><mn>1</mn></msub></mrow>
-    </mfrac>
-<mo>=</mo>
-    <mfrac> 
-        <mn>2</mn> 
-        <mi>N</mi>
-    </mfrac>
-    <munderover> 
-        <mi>&Sum;</mi> 
-            <mrow>
-                <mi>n</mi>
-                <mo>=</mo>
-                <mn>0</mn> 
-            </mrow>
-            <mi>N-1</mi> 
-    </munderover> 
-            <mn>(</mn>
-            <msub>
-                <mi>w</mi>
-                <mn>0</mn> 
-            </msub>
-            <msub>
-                <mi>x</mi>
-                <mi>n</mi> 
-            </msub>
-            <mo>+</mo>
-            <msub>
-                <mi>w</mi>
-                <mn>1</mn> 
-            </msub>
-            <mo>-</mo>
-            <msub>
-                <mi>t</mi>
-                <mi>n</mi> 
-            </msub>
-            <mn>)</mn>
-<mo>=</mo>
-<mn>0</mn>
-</math>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+ \frac{\partial J}{\partial w_{0} } &= \frac{2}{N} \sum_{n=0}^{N-1} (w_{0} x_{n} + w_{1} - t_{n}) x_{n} 
+  &= 0 \\
+ \frac{\partial J}{\partial w_{1} } &= \frac{2}{N} \sum_{n=0}^{N-1} (w_{0} x_{n} + w_{1} - t_{n})  
+  &= 0 
+\end{aligned}
+ $$
+</p>
+
+
 
 <p>この2式は以下のように展開できる。</p>
 
-<math>
-    <msub>
-        <mi>w</mi>
-        <mn>0</mn> 
-    </msub>
-    <mfrac> 
-        <mn>1</mn> 
-        <mi>N</mi>
-    </mfrac>
-    <munderover> 
-        <mi>&Sum;</mi> 
-            <mrow>
-                <mi>n</mi>
-                <mo>=</mo>
-                <mn>0</mn> 
-            </mrow>
-            <mi>N-1</mi> 
-    </munderover> 
-    <msup>
-        <mrow>
-        <msub>
-            <mi>x</mi>
-            <mi>n</mi> 
-        </msub>
-        </mrow>
-        <mi>2</mi>
-    </msup>
-<mo>+</mo>
-    <msub>
-        <mi>w</mi>
-        <mn>1</mn> 
-    </msub>
-    <mfrac> 
-        <mn>1</mn> 
-        <mi>N</mi>
-    </mfrac>
-    <munderover> 
-        <mi>&Sum;</mi> 
-            <mrow>
-                <mi>n</mi>
-                <mo>=</mo>
-                <mn>0</mn> 
-            </mrow>
-            <mi>N-1</mi> 
-    </munderover> 
-    <msub>
-        <mi>x</mi>
-        <mi>n</mi> 
-    </msub>
-<mo>-</mo>
-    <mfrac> 
-        <mn>1</mn> 
-        <mi>N</mi>
-    </mfrac>
-    <munderover> 
-        <mi>&Sum;</mi> 
-            <mrow>
-                <mi>n</mi>
-                <mo>=</mo>
-                <mn>0</mn> 
-            </mrow>
-            <mi>N-1</mi> 
-    </munderover> 
-    <msub>
-        <mi>t</mi>
-        <mi>n</mi> 
-    </msub>
-    <msub>
-        <mi>x</mi>
-        <mi>n</mi> 
-    </msub>
-<mo>=</mo>
-<mn>0</mn>
-</math>
-<br>
-<br>
-<math>
-    <msub>
-        <mi>w</mi>
-        <mn>0</mn> 
-    </msub>
-    <mfrac> 
-        <mn>1</mn> 
-        <mi>N</mi>
-    </mfrac>
-    <munderover> 
-        <mi>&Sum;</mi> 
-            <mrow>
-                <mi>n</mi>
-                <mo>=</mo>
-                <mn>0</mn> 
-            </mrow>
-            <mi>N-1</mi> 
-    </munderover> 
-    <msub>
-        <mi>x</mi>
-        <mi>n</mi> 
-    </msub>
-<mo>+</mo>
-    <msub>
-        <mi>w</mi>
-        <mn>1</mn> 
-    </msub>
-<mo>-</mo>
-    <mfrac> 
-        <mn>1</mn> 
-        <mi>N</mi>
-    </mfrac>
-    <munderover> 
-        <mi>&Sum;</mi> 
-            <mrow>
-                <mi>n</mi>
-                <mo>=</mo>
-                <mn>0</mn> 
-            </mrow>
-            <mi>N-1</mi> 
-    </munderover> 
-    <msub>
-        <mi>t</mi>
-        <mi>n</mi> 
-    </msub>
-<mo>=</mo>
-<mn>0</mn>
-</math>
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+ &w_{0} \frac{1}{N} \sum_{n=0}^{N-1} x_{n}^2  + w_{1} \frac{1}{N} \sum_{n=0}^{N-1} x_{n} - \frac{1}{N} \sum_{n=0}^{N-1} t_{n} x_{n}
+  = 0 \\
+ &w_{0} \frac{1}{N} \sum_{n=0}^{N-1} x_{n}  + w_{1} - \frac{1}{N} \sum_{n=0}^{N-1} t_{n}
+  = 0 
+\end{aligned}
+ $$
+</p>
+
+
 
 <p>この時、
 <math>
@@ -373,282 +194,36 @@ https://github.com/alex-shpak/hugo-book
 
 <p>ここで、avg(x)をxの平均値を算出する関数とおくと、上式は以下のように置き換えられる。</p>
 
-<math>
-<msub>
-    <mi>w</mi>
-    <mn>0</mn> 
-</msub>
-<mi>avg</mi>
-<mo>(</mo>
-<msup>
-    <mrow>
-    <msub>
-        <mi>x</mi>
-        <mi>n</mi> 
-    </msub>
-    </mrow>
-    <mi>2</mi>
-</msup>
-<mo>)</mo>
-<mo>+</mo>
-<msub>
-    <mi>w</mi>
-    <mn>1</mn> 
-</msub>
-<mi>avg</mi>
-<mo>(</mo>
-<msub>
-    <mi>x</mi>
-    <mi>n</mi> 
-</msub>
-<mo>)</mo>
-<mo>-</mo>
-<mi>avg</mi>
-<mo>(</mo>
-<msub>
-    <mi>t</mi>
-    <mi>n</mi> 
-</msub>
-<msub>
-    <mi>x</mi>
-    <mi>n</mi> 
-</msub>
-<mo>)</mo>
-<mo>=</mo>
-<mn>0</mn>
-</math>
-<br>
-<br>
-<math>
-<msub>
-    <mi>w</mi>
-    <mn>0</mn> 
-</msub>
-<mi>avg</mi>
-<mo>(</mo>
-<msub>
-    <mi>x</mi>
-    <mi>n</mi> 
-</msub>
-<mo>)</mo>
-<mo>+</mo>
-<msub>
-    <mi>w</mi>
-    <mn>1</mn> 
-</msub>
-<mo>-</mo>
-<mi>avg</mi>
-<mo>(</mo>
-<msub>
-    <mi>t</mi>
-    <mi>n</mi> 
-</msub>
-<mo>)</mo>
-<mo>=</mo>
-<mn>0</mn>
-</math>
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+ &w_{0} avg(x_{n} ^2) + w_{1} avg(x_{n}) - avg(t_{n} x_{n})
+  = 0 \\
+ &w_{0} avg(x_{n}) + w_{1} - avg(t_{n})
+  = 0 
+\end{aligned}
+ $$
+</p>
+
+
 
 <p>これらの式をw0、w1についてそれぞれ解くと、w0、w1は以下のように表される。</p>
 
-<math style="display: block;"> 
-<mtable columnalign="right center left"> 
-<mtr>
-<mtd>
-<msub>
-    <mi>w</mi>
-    <mn>0</mn> 
-</msub>
-</mtd>
-<mtd>
-<mo>=</mo>
-</mtd>
-<mtd>
-<mfrac> 
-    <mrow>
-    <mi>avg</mi>
-    <mo>(</mo>
-    <msub>
-        <mi>t</mi>
-        <mi>n</mi> 
-    </msub>
-    <msub>
-        <mi>x</mi>
-        <mi>n</mi> 
-    </msub>
-    <mo>)</mo>
-    <mo>-</mo>
-    <mi>avg</mi>
-    <mo>(</mo>
-    <msub>
-        <mi>t</mi>
-        <mi>n</mi> 
-    </msub>
-    <mo>)</mo>
-    <mi>avg</mi>
-    <mo>(</mo>
-    <msub>
-        <mi>x</mi>
-        <mi>n</mi> 
-    </msub>
-    <mo>)</mo>
-    </mrow>
-    <mrow>
-    <mi>avg</mi>
-    <mn>(</mn>
-    <msup>
-        <mrow>
-        <msub>
-            <mi>x</mi>
-            <mi>n</mi> 
-        </msub>
-        </mrow>
-        <mi>2</mi>
-    </msup>
-    <mn>)</mn>
-    <mo>-</mo>
-    <msup>
-    <mrow>
-    <mi>avg</mi>
-    <mo>(</mo>
-    <msup>
-        <msub>
-            <mi>x</mi>
-            <mi>n</mi> 
-        </msub>
-    </msup>
-    <mo>)</mo>
-    </mrow>
-    <mn>2</mn>
-    </mrow>
-</mfrac>
-</mtd>
-</math>
-<br>
-<br>
-<math style="display: block;"> 
-<mtable columnalign="right center left"> 
-<mtr> 
-<mtd>
-<msub>
-    <mi>w</mi>
-    <mn>1</mn> 
-</msub>
-</mtd>
-<mtd>
-<mo>=</mo>
-</mtd>
-<mtd>
-    <mi>avg</mi>
-    <mn>(</mn>
-    <msup>
-        <msub>
-            <mi>t</mi>
-            <mi>n</mi> 
-        </msub>
-    </msup>
-    <mn>)</mn>
-<mo>-</mo>
-<msub>
-    <mi>w</mi>
-    <mn>0</mn> 
-</msub>
-    <mi>avg(</mi>
-    <msup>
-        <msub>
-            <mi>x</mi>
-            <mi>n</mi> 
-        </msub>
-    </msup>
-    <mn>)</mn>
-</mtd>
-</mtr>
-<mtr>
-<mtd>
-</mtd>
-<mtd>
-<mo>=</mo>
-</mtd>
-<mtd>
-    <mi>avg</mi>
-    <mn>(</mn>
-    <msup>
-        <msub>
-            <mi>t</mi>
-            <mi>n</mi> 
-        </msub>
-    </msup>
-    <mn>)</mn>
-<mo>-</mo>
-<mfrac> 
-    <mrow>
-    <mi>avg</mi>
-    <mo>(</mo>
-    <msub>
-        <mi>t</mi>
-        <mi>n</mi> 
-    </msub>
-    <msub>
-        <mi>x</mi>
-        <mi>n</mi> 
-    </msub>
-    <mo>)</mo>
-    <mo>-</mo>
-    <mi>avg</mi>
-    <mo>(</mo>
-    <msub>
-        <mi>t</mi>
-        <mi>n</mi> 
-    </msub>
-    <mo>)</mo>
-    <mi>avg</mi>
-    <mo>(</mo>
-    <msub>
-        <mi>x</mi>
-        <mi>n</mi> 
-    </msub>
-    <mo>)</mo>
-    </mrow>
-    <mrow>
-    <mi>avg</mi>
-    <mn>(</mn>
-    <msup>
-        <mrow>
-        <msub>
-            <mi>x</mi>
-            <mi>n</mi> 
-        </msub>
-        </mrow>
-        <mi>2</mi>
-    </msup>
-    <mn>)</mn>
-    <mo>-</mo>
-    <msup>
-    <mrow>
-    <mi>avg</mi>
-    <mo>(</mo>
-    <msup>
-        <msub>
-            <mi>x</mi>
-            <mi>n</mi> 
-        </msub>
-    </msup>
-    <mo>)</mo>
-    </mrow>
-    <mn>2</mn>
-    </mrow>
-</mfrac>
-    <mi>avg(</mi>
-    <msup>
-        <msub>
-            <mi>x</mi>
-            <mi>n</mi> 
-        </msub>
-    </msup>
-    <mn>)</mn>
-</mtd>
-</mtr>
-</mtable>
-</math>
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+ w_{0} &= \frac{ avg(t_{n} x_{n}) - avg(t_{n}) avg(x_{n}) }{avg(x_{n} ^2) - avg(x_{n})^2} \\
+ w_{1} &= avg(t_{n}) - w_{0} avg(x_{n}) \\
+       &= avg(t_{n}) - \frac{ avg(t_{n} x_{n}) - avg(t_{n}) avg(x_{n}) }{avg(x_{n} ^2) - avg(x_{n})^2} avg(x_{n})
+\end{aligned}
+ $$
+</p>
+
+
 
 <p>では、実際にx、tを代入してw0、w1を求めてみよう。(x,tは前章のnpyファイルから取得)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
@@ -726,8 +301,8 @@ plt<span style="color:#f92672">.</span>show()</code></pre></div>
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/b8752812d0a93a036c6cb5a0efe68081bc5c137d" title='Last modified Apr 1, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 1, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/49aafe6f4d37606e84e41b9fb454a47ecf45a378" title='Last modified Apr 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 11, 2020
     </a>
   </div>
   

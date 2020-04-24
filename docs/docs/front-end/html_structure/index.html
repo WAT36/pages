@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.96f17740241a4521878a2c460ee0306028b30c5e6c578f52955a142ba44628d0.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.76acd7e77b902d29d1ab922b98b4775aabef2c3abf260e40a286e9c9377a615b.js"></script>
 
 
 
@@ -141,20 +141,15 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 
 <p>大まかな記載は以下の通り。</p>
-
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;!-- 文書に関する情報 --&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;!-- 表示させるコンテンツの情報 --&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-<hr>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+    &lt;<span style="color:#f92672">head</span>&gt;
+        <span style="color:#75715e">&lt;!-- 文書に関する情報 --&gt;</span>
+    &lt;/<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">body</span>&gt;
+        <span style="color:#75715e">&lt;!-- 表示させるコンテンツの情報 --&gt;</span>
+    &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
 <h2 id="doctype宣言">DOCTYPE宣言</h2>
 
 <p>HTML5では実は必要なものではないそうだが、ブラウザの表示モードを「標準モード」にする目的で指定することになっている。</p>
@@ -163,167 +158,6 @@ https://github.com/alex-shpak/hugo-book
 
 <pre><code>&lt;!DOCTYPE HTML&gt;
 </code></pre>
-
-<hr>
-
-<h2 id="html要素">html要素</h2>
-
-<p>html要素は、HTML文書のルートとなる要素である。</p>
-
-<p>他の全ての要素は、この要素内に記述しなければならない。</p>
-
-<p>また、グローバル属性であるlang属性を指定して、その文書で使用されている言語の種類を示すことが推奨されている。</p>
-
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&gt;
-    ・・・
-&lt;/html&gt;
-</code></pre>
-
-<hr>
-
-<h2 id="head要素">head要素</h2>
-
-<p>head要素は、HTML文書のメタデータを入れるための要素である。</p>
-
-<p>大体は文書のタイトル(title要素)、また文書の文字コード(meta要素)をここで指定する。</p>
-
-<h3 id="title要素">title要素</h3>
-
-<p>title要素は、HTML文書のタイトル(名前)を示す要素である。この要素は、必ずhead要素の中で指定する。</p>
-
-<pre><code>・・・
-&lt;head&gt;
-    &lt;title&gt;XXXのページ&lt;/title&gt;
-&lt;/head&gt;
-・・・
-</code></pre>
-
-<hr>
-
-<h3 id="meta要素">meta要素</h3>
-
-<p>meta要素は、HTML文書の様々なメタデータを指定できる空要素である。</p>
-
-<p>属性が色々あり、例えばcharset属性は文字コードを、name,content属性で指定したメタデータ名とそれに対する値を指定できる。</p>
-
-<pre><code>・・・
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;author&quot; content=&quot;T.Wakasugi&quot;&gt;
-    &lt;meta name=&quot;keywords&quot; content=&quot;HTML programming meta&quot;&gt;
-&lt;/head&gt;
-・・・
-</code></pre>
-
-<hr>
-
-<h3 id="link要素">link要素</h3>
-
-<p>link要素は、このHTML文書に関連する外部ファイルやリソースを示すための要素である。</p>
-
-<p>ここでいう関連するファイルやリソースというのは、HTML,CSS,RSSファイルなどのことを言う。</p>
-
-<p>link要素にはhref属性とrel属性は必ず指定する必要がある。</p>
-
-<table>
-<thead>
-<tr>
-<th align="left">属性</th>
-<th align="left">指定する値</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="left">href</td>
-<td align="left">外部ファイルやリソースのアドレス</td>
-</tr>
-
-<tr>
-<td align="left">rel</td>
-<td align="left">当文書から見た外部ファイルやリソースの関係性を示すキーワード</td>
-</tr>
-
-<tr>
-<td align="left">rev</td>
-<td align="left">外部ファイルから見た当文書の関係性を示すキーワード</td>
-</tr>
-
-<tr>
-<td align="left">hrefflag</td>
-<td align="left">外部ファイルの言語(日本語や英語など)</td>
-</tr>
-</tbody>
-</table>
-
-<p>rel・rev属性に指定できる値としては以下の通り（一部）。</p>
-
-<table>
-<thead>
-<tr>
-<th align="left">指定する値</th>
-<th align="left">意味</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="left">author</td>
-<td align="left">執筆者</td>
-</tr>
-
-<tr>
-<td align="left">help</td>
-<td align="left">ヘルプ</td>
-</tr>
-
-<tr>
-<td align="left">icon</td>
-<td align="left">アイコン</td>
-</tr>
-
-<tr>
-<td align="left">license</td>
-<td align="left">著作権ライセンス</td>
-</tr>
-
-<tr>
-<td align="left">prev</td>
-<td align="left">前の文書</td>
-</tr>
-
-<tr>
-<td align="left">next</td>
-<td align="left">次の文書</td>
-</tr>
-
-<tr>
-<td align="left">stylesheet</td>
-<td align="left">適用するスタイルシート</td>
-</tr>
-</tbody>
-</table>
-
-<hr>
-
-<h3 id="base要素">base要素</h3>
-
-<p>base要素は、そのHTML文書で使われている相対URL(パス)の基準となるURLを書く要素である。</p>
-
-<p>基準となるURLはhref属性に指定する。</p>
-
-<p>例</p>
-
-<pre><code>・・・
-&lt;head&gt;
-    &lt;base href=&quot;https://wat36.github.io/pages/&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;p&gt;&lt;a href=&quot;docs/front-end/front_index/&quot;&gt;フロントエンドのトップ&lt;/a&gt;&lt;/p&gt;
-&lt;/body&gt;
-・・・
-</code></pre>
 </article>
 
       
@@ -331,8 +165,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/331fb45a89f3780a8a71cb3572f6c69897545ef2" title='Last modified Apr 9, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 9, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/40924a166c0630d645ca729b692b3c65a2ddccf0" title='Last modified Mar 29, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 29, 2020
     </a>
   </div>
   
@@ -343,25 +177,6 @@ https://github.com/alex-shpak/hugo-book
     </div>
     
   
-
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#htmlの全体構造">HTMLの全体構造</a>
-<ul>
-<li><a href="#doctype宣言">DOCTYPE宣言</a></li>
-<li><a href="#html要素">html要素</a></li>
-<li><a href="#head要素">head要素</a>
-<ul>
-<li><a href="#title要素">title要素</a></li>
-<li><a href="#meta要素">meta要素</a></li>
-<li><a href="#link要素">link要素</a></li>
-<li><a href="#base要素">base要素</a></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
-  </aside>
 
 
 
