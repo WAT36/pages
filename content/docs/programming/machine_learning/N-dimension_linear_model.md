@@ -91,7 +91,7 @@ N次元の時も1次元2次元の時と同様に式(1)の様な形で表され�
 {{< katex  >}}
 \begin{aligned}
 \tag{5}  \frac{\partial J}{\partial w_{i} } 
-            &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial J}{\partial w_{i} } ( {\bf w} ^\mathrm{T} {\bf x}_{n} - t_{n} )^2 \\
+            &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{i} } ( {\bf w} ^\mathrm{T} {\bf x}_{n} - t_{n} )^2 \\
             &= \frac{2}{N} \sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf x}_{n} - t_{n} ) x_{n,i} 
 \end{aligned}
 {{< /katex >}}
