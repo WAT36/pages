@@ -167,3 +167,68 @@ def design_matrix(x,t,mu,v):
     w=c.dot(t)                      #(φ^T*φ^-1)^-1*φ^T*t
     return w
 ```
+
+
+例として、[直線モデル]({{< relref "/docs/programming/machine_learning/linear_model.md" >}})の章で利用したデータに対し、この線形基底関数モデルを適用させてみよう。
+
+まず元データは以下のような図になる。
+
+<img src="/img/datascience/Figure_16.png" width=50%>
+
+例としてmを1,4,7,10,13,16で設定した時のyを算出し、標準偏差SD(平均二乗誤差の平方根)とともにそれぞれプロットして表示する。
+
+コードは以下の通り。
+
+```python
+import math
+import matplotlib.pyplot as plt
+
+#入力値
+x = np.load('x.npy')
+#実測値
+t = np.load('t.npy')
+
+#mを設定
+M=[1,4,7,10,13,16]
+
+plt.figure(figsize=(20,7.5))
+plt.subplots_adjust(wspace=0.25,hspace=0.3)
+
+for i in range(len(M)):
+    #2*3のi+1番目にプロット
+    plt.subplot(2,3,i+1)
+    m=M[i]
+
+    #ガウス関数の中心 はxの最小値〜最大値の間で設定
+    mu=np.linspace(min(x),max(x),m)
+    #w,y算出
+    w=design_matrix(x,t,mu,1)
+    y=linear_basis_func(w,x,mu,1)
+
+    #入力値xを(yを対応づけたまま)ソート
+    xy=[[x[i],y[i]] for i in range(len(x))]
+    xy.sort(key=lambda a:a[0])
+    xi,yi=zip(*xy)
+
+    #標準偏差SD
+    sd = math.sqrt(mse(y,t))
+
+    #プロット
+    plt.scatter(x,t,label='t')
+    plt.xlim(min(x)-1,max(x)+1)
+    plt.ylim(min(t)-1,max(t)+1)
+
+    plt.plot(xi,yi,'-',color='red',label='y')
+    plt.legend(loc='lower right')
+    plt.title("M={0:d}, SD={1:.2f}".format(m,sd))
+
+    plt.grid(True)
+plt.show()
+```
+
+
+実行結果
+
+<img src="/img/datascience/Figure_22.png" width=150%>
+
+となり、直線モデルよりも誤差が少なく、汎用性の高い予測式が得られる。
