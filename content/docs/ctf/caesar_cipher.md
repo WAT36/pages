@@ -17,4 +17,9 @@ bookToc: false
 特に、x=13 (13字ずらす) の時のシーザー暗号を **ROT13** という。
 
 
-（例としてx=3の時の図を載せる。）
+例として、x=3の時、以下のように変換される。
+
+<img src="/img/ctf/caesar_1.png" width=100%>
+
+この時、例えば"aabcb"は"**ddefe**"、"vwxyz"は"**yzabc**"のように変換される。
+
