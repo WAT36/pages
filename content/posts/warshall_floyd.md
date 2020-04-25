@@ -25,13 +25,13 @@ bookToc: false
 
 ```
 V = (頂点の数)
-d[V][V]     // d[i][j]は頂点iから頂点jまでにかかるコスト。最初は全て0で初期化する
+d[V][V]     // d[i][j]は頂点iから頂点jまでにかかるコスト。経路が存在しない場合はINF、i==jの時は0で初期化する
 d ← E       // dに辺Eの長さを反映させる (d[i][j]にEの長さを入れる)
 
-for(k = 0;k = V;k++){
-    for(i = 0;i < V;i++){
-        for(j = 0;j < V;j++){
-            d[i][j] = min(d[i][j], d[i][k] + d[k][j])
+for(a = 0;a = V;a++){
+    for(b = 0;b < V;b++){
+        for(c = 0;c < V;c++){
+            d[b][c] = min(d[b][c], d[b][a] + d[a][c])
         }
     }
 }
