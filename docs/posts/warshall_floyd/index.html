@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.46d9b7d09662fba51b7e97b134c4256e3e2c0565b069f510e3abd64fce670c78.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.e7a1e32a716322b842cd1e7338766d4bd0097a6fe7a3318fdc2dda6868f22041.js"></script>
 
 
 
@@ -155,13 +155,13 @@ https://github.com/alex-shpak/hugo-book
 <p>アルゴリズムは以下の通り。</p>
 
 <pre><code>V = (頂点の数)
-d[V][V]     // d[i][j]は頂点iから頂点jまでにかかるコスト。最初は全て0で初期化する
+d[V][V]     // d[i][j]は頂点iから頂点jまでにかかるコスト。経路が存在しない場合はINF、i==jの時は0で初期化する
 d ← E       // dに辺Eの長さを反映させる (d[i][j]にEの長さを入れる)
 
-for(k = 0;k = V;k++){
-    for(i = 0;i &lt; V;i++){
-        for(j = 0;j &lt; V;j++){
-            d[i][j] = min(d[i][j], d[i][k] + d[k][j])
+for(a = 0;a = V;a++){
+    for(b = 0;b &lt; V;b++){
+        for(c = 0;c &lt; V;c++){
+            d[b][c] = min(d[b][c], d[b][a] + d[a][c])
         }
     }
 }

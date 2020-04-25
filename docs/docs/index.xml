@@ -193,24 +193,6 @@
     
     <item>
       <title>N次元線形回帰モデル</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/N-dimension_linear_model-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/N-dimension_linear_model-2/</guid>
-      <description>N次元線形回帰モデル 先程までの章では1次元(直線モデル)、2次元(面モデル)の入力データを扱ってきたが、そこから更に次元を広げたN次元の入力</description>
-    </item>
-    
-    <item>
-      <title>N次元線形回帰モデル</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/N-dimension_linear_model-3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/N-dimension_linear_model-3/</guid>
-      <description>N次元線形回帰モデル 先程までの章では1次元(直線モデル)、2次元(面モデル)の入力データを扱ってきたが、そこから更に次元を広げたN次元の入力</description>
-    </item>
-    
-    <item>
-      <title>N次元線形回帰モデル</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/N-dimension_linear_model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1107,24 +1089,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/class_func/inheritance/</guid>
       <description>継承 クラスを実装できる言語の大半は、他のクラスの構造を受け継ぎ、そこから新しい変数やメソッド(関数)等を付け足す形でクラスを定義することがで</description>
-    </item>
-    
-    <item>
-      <title>線形基底関数モデル</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/linear_basis_function-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/linear_basis_function-2/</guid>
-      <description>線形基底関数モデル 先ほどまでの章では、データの予測に直線モデルを利用していたが、勿論直線モデルを利用するのが必ずしも最適ではないという場合も</description>
-    </item>
-    
-    <item>
-      <title>線形基底関数モデル</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/linear_basis_function-3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/linear_basis_function-3/</guid>
-      <description>線形基底関数モデル 先ほどまでの章では、データの予測に直線モデルを利用していたが、勿論直線モデルを利用するのが必ずしも最適ではないという場合も</description>
     </item>
     
     <item>
