@@ -158,6 +158,10 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/overfitting/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/math/gauss/</loc>
     <lastmod>2020-02-21T22:09:01+09:00</lastmod>
   </url>
@@ -918,12 +922,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
