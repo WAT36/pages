@@ -296,7 +296,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/overfitting/</guid>
-      <description>オーバーフィッティング(過学習)</description>
+      <description>オーバーフィッティング(過学習) 先述の線形基底関数モデルにおいて、Mの値を大きくすればするほど、誤差が小さくなるような予測式が得られる事が解</description>
     </item>
     
     <item>
