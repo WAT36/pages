@@ -803,13 +803,23 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/posts/202003/</loc>
-    <lastmod>2020-04-02T21:15:10+09:00</lastmod>
+    <loc>https://WAT36.github.io/pages/posts/aws_create_lambda/</loc>
+    <lastmod>2020-04-05T23:04:16+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/posts/</loc>
     <lastmod>2020-04-25T14:26:13+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/posts/aws_create_dynamo_table/</loc>
+    <lastmod>2020-04-03T00:05:28+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/posts/202003/</loc>
+    <lastmod>2020-04-02T21:15:10+09:00</lastmod>
   </url>
   
   <url>
@@ -938,12 +948,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   

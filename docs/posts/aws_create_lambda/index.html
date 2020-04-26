@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DynamoDBテーブルの作成方法(AWS) | WAT Notes</title>
+<title>Lambda関数の作成方法(AWS) | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -53,7 +53,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2fposts\2f aws_create_dynamo_table\2f "] {
+  nav ul a[href$="\2fposts\2f aws_create_lambda\2f "] {
       color: #004ed0;
   }
   </style>
@@ -117,20 +117,20 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>DynamoDBテーブルの作成方法(AWS)</strong>
+  <strong>Lambda関数の作成方法(AWS)</strong>
 </header>
 
       
 
 <header class="markdown">
-  <h1>DynamoDBテーブルの作成方法(AWS)</h1>
+  <h1>Lambda関数の作成方法(AWS)</h1>
   <h5>
-    <strong>Apr 2, 2020</strong>
+    <strong>Apr 5, 2020</strong>
   </h5>
 </header>
 <article class="markdown">
 
-<p>AWSでDynamoDBのテーブルを作る方法について、備忘がてら手順をのせる。</p>
+<p>AWSでLambdaの関数を作る方法について、またまた備忘がてら手順をのせておく。</p>
 
 <h2 id="1-awsマネジメントコンソールにログインする">1. AWSマネジメントコンソールにログインする</h2>
 
@@ -138,43 +138,74 @@ https://github.com/alex-shpak/hugo-book
 
 <p><img src="https://WAT36.github.io/pages/img/aws/aws_management_console.png" alt="AWSマネジメントコンソール" /></p>
 
-<h2 id="2-dynamodbのページを開く">2. DynamoDBのページを開く</h2>
+<h2 id="2-lambdaのページを開く">2. Lambdaのページを開く</h2>
 
-<p>マネジメントコンソールにログインしたら、サービスの検索ボックスにDynamoDBと入力し、DynamoDBのページを開く。</p>
+<p>マネジメントコンソールにログインしたら、サービスの検索ボックスにLambdaと入力し、Lambdaのページを開く。</p>
 
-<p><img src="https://WAT36.github.io/pages/img/aws/aws_management_console_dynamodb.png" alt="AWSマネジメントコンソール" /></p>
+<p><img src="https://WAT36.github.io/pages/img/aws/aws_management_console_lambda.png" alt="AWSマネジメントコンソール" /></p>
 
-<h2 id="3-テーブル名-キーを設定する">3. テーブル名・キーを設定する</h2>
+<h2 id="3-関数を作成する">3. 関数を作成する</h2>
 
-<p>DynamoDBのページから「テーブルの作成」ボタンを押すとテーブル作成の画面へ行く。</p>
+<p>Lambdaのページを開くと関数の画面になり、今ある関数の一覧が表示される。</p>
 
-<p><img src="https://WAT36.github.io/pages/img/aws/dynamodb_table.png" alt="テーブル定義" /></p>
+<p>関数を作成するには画面にある「関数の作成」ボタンを押す。</p>
 
-<p>まずは、テーブル名とプライマリーキー名をここで設定する。プライマリーキーは最大２個設定でき、２個設定したい場合は「ソートキーを追加」から追加する。</p>
+<p>すると関数の作成画面に行き、どのような方法で関数を作成するかを選ぶ。</p>
 
-<p>「デフォルト設定の適用」は外した方が良い。入力が終わったら「作成」を押す。</p>
+<p><img src="https://WAT36.github.io/pages/img/aws/aws_create_lambda_function.png" alt="Lambda関数の作成" /></p>
 
-<h2 id="4-テーブルが作成される">4. テーブルが作成される。</h2>
+<p>今回は自作のコードを元に作成したいので、「一から作成」を選択。</p>
 
-<p>「作成」ボタンを押すとテーブルの詳細ページに行き、先程のテーブルが作成されていることがわかる。</p>
+<p>下の「基本的な情報」の欄に、関数名とランタイム(言語)、また適切な実行ロールを設定する。</p>
 
-<p><img src="https://WAT36.github.io/pages/img/aws/dynamodb_table_created.png" alt="テーブル作成" /></p>
+<h3 id="3-5-iamロールの作成方法">(3.5 IAMロールの作成方法)</h3>
 
-<h2 id="5-テーブルに項目を追加する">5. テーブルに項目を追加する</h2>
+<p>Lambda関数で別のサービス等を利用するときは、用途に応じたIAMロールを作成して付与してやる必要がある。</p>
 
-<p>「項目」タブを押すとテーブル定義、入っているデータが表示される（しかし、ここでは作成したばかりなのでデータは入っていない）</p>
+<p>念のため、ここではその手順を示す。</p>
 
-<p><img src="https://WAT36.github.io/pages/img/aws/dynamodb_item.png" alt="テーブル作成" /></p>
+<p>例として、DynamoDBにアクセスが必要なLambda関数に対するIAMロールの作成方法についてを示す。</p>
 
-<p>ここで「項目の作成」ボタンを押すと項目作成のウィンドウが表示される。</p>
+<ol>
+<li><p>サービス から「IAM」を選択し、IAMのページへ行く。</p></li>
 
-<p><img src="https://WAT36.github.io/pages/img/aws/dynamodb_additem.png" alt="項目作成" /></p>
+<li><p>「ロール」＞「ロールの作成」へ行く</p></li>
 
-<p>ここで項目を追加したいときは「Append」または「Insert」、項目を削除したいときは「Remove」でできる。</p>
+<li><p>「ユースケースの選択」で、今回はLambda用のIAMロールなので「Lambda」を選択する。</p></li>
 
-<p>具体的なデータを入力したいときは「VALUE」のところに具体的な値を入れて「保存」ボタンを押すとデータが追加される。</p>
+<li><p>「次のステップ(:アクセス権限)」ボタンを押す</p></li>
 
-<p><img src="https://WAT36.github.io/pages/img/aws/dynamodb_added.png" alt="項目作成" /></p>
+<li><p>Attachアクセス権限ポリシー　で次の２つのポリシーを選択する。</p></li>
+</ol>
+
+<ul>
+<li>AmazonDynamoDBFullAccess</li>
+<li>AWSLambdaBasicExecutionRole</li>
+</ul>
+
+<ol>
+<li><p>選択したら「次のステップ(:タグ)」ボタンを押す</p></li>
+
+<li><p>「次のステップ(:確認)」を押す</p></li>
+
+<li><p>ロール名を入力して「ロールの作成」を押す</p></li>
+
+<li><p>ロールが完成される</p></li>
+</ol>
+
+<p>ロールを作成したら、Lambda関数作成時に アクセス権限＞実行ロールの選択または作成＞既存のロールを使用する　から作成したロールを選択する</p>
+
+<p>それが終わったら、「関数の作成」ボタンを押す</p>
+
+<h2 id="4-コードを設定する">4. コードを設定する</h2>
+
+<p>「関数の作成」ボタンを押すと関数の設定画面へ行き、コードなどの設定が行える。</p>
+
+<p>コードの部分に設定したいコードを入力する。</p>
+
+<p>テストをしたいときは「テスト」ボタンを押してテストする。</p>
+
+<p>以上、Lambda関数の作成方法である。</p>
 </article>
 
       
