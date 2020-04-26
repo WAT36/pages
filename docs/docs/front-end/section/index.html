@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>セクション | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.e0c28aad2d8a0237b05e200ac35d1a2da19120afc355b249ade01762554264e0.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2f front-end\2fsection\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>セクション</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="セクション">セクション</h1>
+
+<p>セクションとは章や節といった様なもの、HTMLでは見出しとそれに対応する文書の部分(セクショニングコンテンツ)といった様なものである。</p>
+
+<p>HTMLには種類は様々だが、セクションを構成するための要素がいくつか存在する。</p>
+
+<h2 id="見出し">見出し</h2>
+
+<h3 id="h1-h6要素">h1~h6要素</h3>
+
+<p>h1,h2,h3,h4,h5,h6は、見出しを構成する要素である。</p>
+
+<p>h1が一番上の階層で、その次に大きいのがh2、その次がh3、、というように続く。</p>
+
+<p>記法例</p>
+
+<pre><code>&lt;h1&gt;見出し１&lt;/h1&gt;
+&lt;h2&gt;見出し２&lt;/h2&gt;
+&lt;h3&gt;見出し３&lt;/h3&gt;
+</code></pre>
+
+<h3 id="アウトライン">アウトライン</h3>
+
+<p>HTML文書から見出しの要素だけを抜き出し、文書内のセクションが一目でわかる様にしたものを<strong>アウトライン</strong>という。</p>
+
+<p>例えばこのHUGOで書いているブログでは、ページ右の部分に見出しの部分だけが表示される様になっている。これもアウトラインだと思ってくれれば良い。</p>
+
+<p>(ちなみに当ブログでは全ての記事にアウトラインが表示される様には設定していない。必要に応じてアウトラインを表示する必要があると判断した場合、表示させる様にしている)</p>
+
+<h2 id="セクションを表す要素">セクションを表す要素</h2>
+
+<p>以下にセクションを表す際に利用する要素を記載する。</p>
+
+<h3 id="article要素">article要素</h3>
+
+<p>article要素は独立したセクションを表す要素である。</p>
+
+<p>そのため、他のセクションの一部となっている要素は含むことはできない。</p>
+
+<p>適用例としては、雑誌や新聞の記事、ブログのコメントなどがある。</p>
+
+<p>記法例</p>
+
+<pre><code>&lt;h1&gt;MYブログ&lt;/h1&gt;
+
+&lt;article&gt;
+    &lt;h2&gt;3/9 その１&lt;/h2&gt;
+    &lt;p&gt;(3/9の内容・・)&lt;/p&gt;
+&lt;/article&gt;
+
+&lt;article&gt;
+    &lt;h2&gt;3/10 その１&lt;/h2&gt;
+    &lt;p&gt;(3/10の内容・・)&lt;/p&gt;
+&lt;/article&gt;
+
+</code></pre>
+
+<h3 id="aside要素">aside要素</h3>
+
+<p>aside要素は補足や脚注のような、そのセクションの内容からは別扱いのしたほうが良さそうなセクションを表す場合に利用する。</p>
+
+<p>記法例</p>
+
+<pre><code>&lt;aside&gt;
+    &lt;h3&gt;補足&lt;/h3&gt;
+    &lt;p&gt;aside要素で&lt;/p&gt;
+    &lt;p&gt;補足を表す&lt;/p&gt;
+&lt;/aside&gt;
+</code></pre>
+
+<h3 id="nav要素">nav要素</h3>
+
+<p>nav要素は、そのページがサイト内でどこに位置するかなどといった、ナビゲーションを示すセクションを表す場合に利用する。</p>
+
+<p>記法例</p>
+
+<pre><code>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Top&lt;/li&gt;
+        &lt;li&gt;プログラミング&lt;/li&gt;
+        &lt;li&gt;フロントエンド&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+
+<h3 id="section要素">section要素</h3>
+
+<p>section要素はこれまでに述べた３つの要素のような特別な意味は持たない、一般的なセクションを表す際に用いる要素である。</p>
+
+<p>記法例</p>
+
+<pre><code>&lt;section&gt;
+    &lt;h2&gt;セクション&lt;/h2&gt;
+        &lt;p&gt;111&lt;/p&gt;
+        &lt;p&gt;222&lt;/p&gt;
+&lt;/section&gt;
+</code></pre>
+
+<h2 id="セクショニング-ルート">セクショニング・ルート</h2>
+
+<p>セクショニング・ルートとは、セクションのルートとして扱われる要素のことである。</p>
+
+<p>セクショニング・ルートの下に属するセクションはそのセクショニング・ルート独自のアウトラインを持つことができる。</p>
+
+<p>また、そのセクションやアウトラインはそのセクショニング・ルートの外のセクションには影響を及ぼさない。</p>
+
+<p>セクショニング・ルートになる要素としては、以下の要素が挙げられている。</p>
+
+<ul>
+<li>body要素</li>
+<li>blockquote要素</li>
+<li>fieldset要素</li>
+<li>figure要素</li>
+<li>td要素</li>
+<li>details要素</li>
+</ul>
+
+<h2 id="その他-セクションに関する要素">その他、セクションに関する要素</h2>
+
+<h3 id="header要素">header要素</h3>
+
+<p>header要素は、セクションまたはセクショニング・ルートのヘッダーであることを示す要素である。</p>
+
+<p>body要素のヘッダーとなる場合、ページ全体のヘッダーになる。</p>
+
+<p>一般的にヘッダーには見出し、ナビゲーションなどを含む。（必須ではない）</p>
+
+<pre><code>&lt;body&gt;
+&lt;header&gt;
+    &lt;h1&gt;ヘッダー&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;ホーム&lt;/li&gt;
+            &lt;li&gt;お知らせ&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h3 id="footer要素">footer要素</h3>
+
+<p>footer要素はheader要素と逆で、セクションまたはセクショニング・ルートのフッターであることを示す要素である。</p>
+
+<p>header要素の時と同様に、body要素のフッターとなる場合はページ全体のフッターになる。</p>
+
+<p>一般的にフッターには問い合わせ先や著作権情報についてを記載する。（必須ではない）</p>
+
+<pre><code>・・・
+    &lt;footer&gt;
+        &lt;ul&gt;
+            &lt;li&gt;著作権情報&lt;/li&gt;
+            &lt;li&gt;お問い合わせ&lt;/li&gt;
+        &lt;/ul&gt;        
+    &lt;/footer&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h3 id="main要素">main要素</h3>
+
+<p>main要素はその範囲がページにおけるメインコンテンツであることを示す要素である。</p>
+
+<p>main要素の内容には、そのページで固有の内容を記述する様にする。他のページでも共通して利用される様な要素(ナビゲーションや著作権情報など)はここには含めない様にする。</p>
+
+<pre><code>&lt;body&gt;
+
+    &lt;main&gt;
+        &lt;article&gt;
+            &lt;h2&gt;記事&lt;/h2&gt;
+            ・・・
+            ・・・
+        &lt;/article&gt;
+    &lt;/main&gt;
+
+&lt;/body&gt;
+</code></pre>
+
+<h3 id="address要素">address要素</h3>
+
+<p>address要素は、問い合わせ先を示す要素である。</p>
+
+<p>対象となるのはその要素から最も近いbodyまたはaddress要素であり、その要素の内容に対する問い合わせ先を示す。</p>
+
+<pre><code>&lt;body&gt;
+・・・
+    &lt;address&gt;
+        お問い合わせ：aaa@example.com
+    &lt;/address&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h2 id="その他の要素">その他の要素</h2>
+
+<h3 id="div要素">div要素</h3>
+
+<p>div要素はこれまでに述べた要素とは違い、決められた役割や意味を持たない要素である。</p>
+
+<p>使うのに適切な要素が無い場合に利用する要素で、class属性などを利用する事で用途を示す。</p>
+
+<pre><code>&lt;body&gt;
+    &lt;div class=&quot;question&quot;&gt;問題&lt;/div&gt;
+    &lt;div class=&quot;answer&quot;&gt;答え&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h3 id="span要素">span要素</h3>
+
+<p>span要素もdiv要素と同じく、決められた役割や意味を持たない要素である。</p>
+
+<p>div要素と違う点は、div要素はブロックレベルの要素、span要素はインライン要素という点。(詳しい意味はCSSの所で)</p>
+
+<pre><code>&lt;body&gt;
+    &lt;span class=&quot;question&quot;&gt;問題&lt;/div&gt;
+    &lt;span class=&quot;answer&quot;&gt;答え&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/742801baecbbe14c82e2d703d795ecfcf48cfc2e" title='Last modified Apr 18, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 18, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#セクション">セクション</a>
+<ul>
+<li><a href="#見出し">見出し</a>
+<ul>
+<li><a href="#h1-h6要素">h1~h6要素</a></li>
+<li><a href="#アウトライン">アウトライン</a></li>
+</ul></li>
+<li><a href="#セクションを表す要素">セクションを表す要素</a>
+<ul>
+<li><a href="#article要素">article要素</a></li>
+<li><a href="#aside要素">aside要素</a></li>
+<li><a href="#nav要素">nav要素</a></li>
+<li><a href="#section要素">section要素</a></li>
+</ul></li>
+<li><a href="#セクショニング-ルート">セクショニング・ルート</a></li>
+<li><a href="#その他-セクションに関する要素">その他、セクションに関する要素</a>
+<ul>
+<li><a href="#header要素">header要素</a></li>
+<li><a href="#footer要素">footer要素</a></li>
+<li><a href="#main要素">main要素</a></li>
+<li><a href="#address要素">address要素</a></li>
+</ul></li>
+<li><a href="#その他の要素">その他の要素</a>
+<ul>
+<li><a href="#div要素">div要素</a></li>
+<li><a href="#span要素">span要素</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>
