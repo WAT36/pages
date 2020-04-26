@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.d677361aac473f71c61dfac45e7ee095eddde5ed5e9c87ad92a94f9e8cda69c5.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.947f973f940c52592dcbb910252f75b6b1c5c939e5eab9bccfa3ad499ab66f02.js"></script>
 
 
 
@@ -125,10 +125,25 @@ https://github.com/alex-shpak/hugo-book
 <article class="markdown">
 
 <h1 id="ホールドアウト検証">ホールドアウト検証</h1>
+
+<p>先述の<a href="https://WAT36.github.io/pages/docs/programming/machine_learning/overfitting/">オーバーフィッティング(過学習)</a>の章で、Mを大きくすればするほど既存の入力データに対する精度が高くなり、未知の入力に対する予測精度が悪くなるという問題があった。最適なMはどう求めれば良いのだろうか？</p>
+
+<p>その一つの方法として、<strong>ホールドアウト検証</strong>という手法を挙げる。</p>
+
+<p>これは、今ある入力データをいくつかの集合に分割し、そのうちのいくつかを学習に使って予測式を作り、残りのデータでその予測式を使った結果の平均二乗誤差(または標準偏差SD)を算出することでMの評価基準とする、という方法である。</p>
+
+<p>ここで、予測式を作るための学習に使うデータのことを<strong>訓練データ (training data)</strong>といい、作成した予測式の評価に用いるデータを<strong>テストデータ (test data)</strong>と呼ぶ。</p>
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/db18f92f8f18196d9496ed58718c014c20b63fb1" title='Last modified Apr 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 26, 2020
+    </a>
+  </div>
   
 </div>
 

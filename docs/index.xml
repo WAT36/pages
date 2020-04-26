@@ -529,7 +529,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/</guid>
-      <description>ホールドアウト検証</description>
+      <description>ホールドアウト検証 先述のオーバーフィッティング(過学習)の章で、Mを大きくすればするほど既存の入力データに対する精度が高くなり、未知の入力に</description>
     </item>
     
     <item>
