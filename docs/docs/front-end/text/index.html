@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.1771670f555f4aa6a0fdc2aa9a57d1b7d2b8302d09cf6ecf8c36cdc0bb34a792.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.89c78ca55622e3dd4fcf3cb6fdab5b61e0b31da3f88da85a3884817e6ed8ea6d.js"></script>
 
 
 
@@ -220,6 +220,21 @@ https://github.com/alex-shpak/hugo-book
     &lt;small&gt;©️ 2020 Tatsuroh Wakasugi.&lt;/small&gt;
 &lt;/p&gt;
 </code></pre>
+
+<h2 id="data要素">data要素</h2>
+
+<p>data要素は、要素内のテキスト等に対して、「機械可読データ」を追加したい時に利用する要素である。</p>
+
+<p>要は、プログラムにテキストを読み込ませるとき、実際に表示されるテキストの内容ではなく、別の内容として読み込ませたいときに使用する。</p>
+
+<p>data要素を使うときは<strong>value</strong>属性を必須とする。value属性の値に、機械に使わせる値を入力する。</p>
+
+<pre><code>&lt;p&gt;
+    私の所持金は&lt;data value=&quot;30000&quot;&gt;三万円&lt;/data&gt;です。
+&lt;/p&gt;
+</code></pre>
+
+<p>この場合ブラウザには&rdquo;三万円&rdquo;と表示されるが、プログラムがこのページを読み込むときこの箇所は&rdquo;30000&rdquo;となる。</p>
 </article>
 
       
@@ -227,7 +242,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/8c853ca13a73c95c059fd605dc8811ccef73ef29" title='Last modified Apr 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/bd72dbcfee092465af74b3f5489fd885bfbd6329" title='Last modified Apr 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 26, 2020
     </a>
   </div>
@@ -254,6 +269,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#cite要素">cite要素</a></li>
 <li><a href="#mark要素">mark要素</a></li>
 <li><a href="#small要素">small要素</a></li>
+<li><a href="#data要素">data要素</a></li>
 </ul></li>
 </ul>
 </nav>
