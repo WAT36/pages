@@ -1,17 +1,19 @@
 ---
-title: "グラフ"
+title: "グラフ・データ処理"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
 bookToc: false
 ---
 
-# グラフ
+# グラフ・データ処理
 
-データサイエンスでは必須？  グラフ描画についてをまとめる。
+データサイエンスでは必須？  グラフ描画やcsv等のデータ前処理についてをまとめる。
 ここも都合上、現在はPythonのみ記載。  
 
 グラフ描画では**matplotlib**の**pyplot**というライブラリを利用する。
+
+データ処理では**pandas**というライブラリを利用する。
 
 - グラフ
  - 2次元グラフ
@@ -29,10 +31,6 @@ bookToc: false
       - [2変数関数のグラフ(ヒートマップ)を作成する]({{< relref "/docs/programming/graph/pcolor.md" >}})
       - [2変数関数のグラフ(３D面グラフ)を作成する]({{< relref "/docs/programming/graph/surface.md" >}})
       - [2変数関数のグラフ(等高線プロット)を作成する]({{< relref "/docs/programming/graph/contour.md" >}})
-
-
-      
-
-
+- データ処理
 
 

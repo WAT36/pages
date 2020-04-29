@@ -183,11 +183,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</loc>
-    <lastmod>2020-02-03T22:39:43+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/graph/grid/</loc>
     <lastmod>2020-01-24T00:16:08+09:00</lastmod>
   </url>
@@ -215,6 +210,11 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/graph/subplot/</loc>
     <lastmod>2020-01-26T02:28:23+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</loc>
+    <lastmod>2020-02-03T22:39:43+09:00</lastmod>
   </url>
   
   <url>
@@ -289,7 +289,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/</loc>
-    <lastmod>2020-04-28T22:21:11+09:00</lastmod>
+    <lastmod>2020-04-29T12:40:40+09:00</lastmod>
   </url>
   
   <url>
@@ -899,7 +899,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-04-28T22:21:11+09:00</lastmod>
+    <lastmod>2020-04-29T12:40:40+09:00</lastmod>
   </url>
   
   <url>
@@ -928,12 +928,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -943,12 +943,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
