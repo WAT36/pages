@@ -156,6 +156,15 @@
     </item>
     
     <item>
+      <title>csvファイルからデータを読み込む</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/read/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/read/</guid>
+      <description>csvファイルからデータを読み込む Pythonで機械学習やグラフ描画を行いたい時に、元となるデータがcsvなどのファイルに書かれている場合、</description>
+    </item>
+    
+    <item>
       <title>for文</title>
       <link>https://WAT36.github.io/pages/docs/programming/control/for/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -477,15 +486,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/file_io/file_index/</guid>
       <description>ファイル ファイルを扱う手法についてをまとめる。 ファイル入出力 ファイル読み込み ファイル書き込み 外部ライブラリの使用 外部ファイルのインポート</description>
-    </item>
-    
-    <item>
-      <title>ファイルからデータを読み込む</title>
-      <link>https://WAT36.github.io/pages/docs/programming/graph/read/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/graph/read/</guid>
-      <description>ファイルからデータを読み込む Pythonで機械学習やグラフ描画を行いたい時に、元となるデータがcsvなどのファイルに書かれている場合、Pyt</description>
     </item>
     
     <item>

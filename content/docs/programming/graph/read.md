@@ -1,12 +1,12 @@
 ---
-title: "ファイルからデータを読み込む"
+title: "csvファイルからデータを読み込む"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
 bookToc: false
 ---
 
-# ファイルからデータを読み込む
+# csvファイルからデータを読み込む
 
 Pythonで機械学習やグラフ描画を行いたい時に、元となるデータがcsvなどのファイルに書かれている場合、Pythonのライブラリである**pandas**を利用することでデータを読み込むことができる。
 
@@ -60,10 +60,40 @@ print(df)
 3      3  orange   80
 ```
 
-## 読み込まれたデータ
+## 読み込まれたデータとアクセス
 
 読み込まれたデータはpandas.**DataFrame**型のデータとなる。
 
+```python
+import pandas as pd
+df = pd.read_csv('read_sample.csv')
+
+print(type(df))
+```
+
+実行結果
+```
+<class 'pandas.core.frame.DataFrame'>
+```
+
+DataFrame型のデータの内部にある読み込んできたデータを取得したい場合は、列名と行名を指定して取得する。
+
+```python
+import pandas as pd
+df = pd.read_csv('read_sample.csv')
+
+print(df['index'][0])
+print(df['name'][1])
+print(df['yen'][2])
+```
+
+実行結果
+
+```
+1
+banana
+80
+```
 
 
 <hr>
