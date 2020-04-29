@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.a45019043821f1fa3daed0e0f440611253a539ade42075c2396a834e9499a87f.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.901f51ac5beb89696bd1ad9e8453a319de3fbced1d39a8b3cf351dc5fc706237.js"></script>
 
 
 
@@ -128,11 +128,61 @@ https://github.com/alex-shpak/hugo-book
 
 <p>グラフ探索の手法の一つ、ダイクストラ法について。</p>
 
-<p>ダイクストラ法は重み付きのグラフにおいて、ある頂点から他の全ての頂点までの最小コストを計算する効率的な手法である。</p>
+<p>ダイクストラ法は重み付きのグラフにおいて、ある頂点から他の全ての頂点までの最小コストを計算する一つの手法である。</p>
+
+<p>既に最小コストが確定している頂点から一つ一つ最小コストを決定していくので、動的計画法に少し似ているところがある。</p>
+
+<h2 id="アルゴリズム">アルゴリズム</h2>
+
+<p>入出力は以下の通り。</p>
+
+<ul>
+<li>入力
+
+<ul>
+<li>グラフ G = (V,E)</li>
+<li>W(a,b):頂点aから頂点b(a,b∈V)を結ぶ辺の重み(コスト)。辺が存在しないときはW(a,b)=∞</li>
+<li>頂点s (s∈V)</li>
+</ul></li>
+<li>出力
+
+<ul>
+<li>頂点sからの最小コストd(v) (v∈V)</li>
+<li>頂点vまでの最小コスト経路において頂点vの一つ前の頂点p(v) (v∈V)</li>
+</ul></li>
+</ul>
+
+<p>擬似的なアルゴリズムは以下の通り。</p>
+
+<ol>
+<li>X={},Y=V とする</li>
+<li>最小コストd(v)(v∈V)を用意し、全てのvにおいてd(v)=∞ と初期化、p(v) (v∈V) を用意し、全てのvにおいてp(v)=v と初期化する</li>
+<li>d(s)=0とする</li>
+<li>X=X+{s}、Y=Y-{s} とする</li>
+
+<li><p>Yの全ての点v (v∈Y) に対して以下の式の通りにコストを計算する。</p>
+
+<p>d(v) = min(d(v),d(s)+W(s,v))</p></li>
+
+<li><p>5.の式において、第２項の方が小さいならば、p(v)=sとする。</p></li>
+
+<li><p>Y={} (|Y|=0) ならば、d(v),p(v)を出力して終了する</p></li>
+
+<li><p>d(s) = min{d(v)|v∈Y} となるsを求め、4.に戻る</p></li>
+</ol>
+
+<p>計算量はn=|V|とした時、5.~8.の処理が1+2+・・・+n回行われるため、O(|V|<sup>2</sup>)となる。</p>
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/51e0891c239021e073755692f7955b6d1595d4bf" title='Last modified Apr 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 26, 2020
+    </a>
+  </div>
   
 </div>
 
