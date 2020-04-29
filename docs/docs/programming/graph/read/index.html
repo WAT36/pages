@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>クラスの定義 | WAT Notes</title>
+<title>ファイルからデータを読み込む | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -54,7 +54,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2f class_func\2f class\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fgraph\2fread\2f "] {
       color: #004ed0;
   }
   </style>
@@ -118,64 +118,70 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>クラスの定義</strong>
+  <strong>ファイルからデータを読み込む</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="クラスの定義">クラスの定義</h1>
+<h1 id="ファイルからデータを読み込む">ファイルからデータを読み込む</h1>
 
-<p>クラスを定義する方法についてを示す。</p>
+<p>Pythonで機械学習やグラフ描画を行いたい時に、元となるデータがcsvなどのファイルに書かれている場合、Pythonのライブラリである<strong>pandas</strong>を利用することでデータを読み込むことができる。</p>
 
+<h2 id="csvを読み込む">csvを読み込む</h2>
 
+<p>csvファイルを読み込むにはpandasの関数<strong>read_csv</strong>を利用する。</p>
 
+<p>試しに、以下のようなcsvファイル(read_sample.csv)を読み込んでみる。</p>
 
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-for" style="display: none;" id="tabs-for-0" checked="checked" />
-  <label for="tabs-for-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Javaでのクラス定義方法は以下の通り。</p>
-
-<pre><code>[public] class クラス名 [extends 継承元クラス名] [implements 実装先インタフェース名]{
-    //文
-}
+<pre><code>index,name,yen
+1,apple,120
+2,banana,100
+3,orange,80
 </code></pre>
 
-<p>あるクラスを継承して作りたい時はクラス名の後にextendsを、インタフェースを実装する時はその後にimplementsを書き加える。</p>
+<p>コードは以下の通り。(pandas_read.py)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;read_sample.csv&#39;</span>)
+<span style="color:#66d9ef">print</span>(df)</code></pre></div>
+<p>実行結果</p>
 
-  </div>
-
-  <input type="radio" name="tabs-for" style="display: none;" id="tabs-for-1"  />
-  <label for="tabs-for-1">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Pythonでのクラスを定義するときの記法は以下の通り。</p>
-
-<pre><code>class クラス名:
-    //文
+<pre><code>   index    name  yen
+0      1   apple  120
+1      2  banana  100
+2      3  orange   80
 </code></pre>
 
-  </div>
+<p>read_csvでcsvを読み込んだ時、デフォルトで１行目はヘッダーとして認識されて読み込まれる。</p>
 
-</div>
+<p>ヘッダーを認識させたくないときは、read_csvの引数<strong>header</strong>をNoneにして実行する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;read_sample.csv&#39;</span>,header<span style="color:#f92672">=</span>None)
+<span style="color:#66d9ef">print</span>(df)</code></pre></div>
+<p>実行結果</p>
 
+<pre><code>       0       1    2
+0  index    name  yen
+1      1   apple  120
+2      2  banana  100
+3      3  orange   80
+</code></pre>
+
+<h2 id="読み込まれたデータ">読み込まれたデータ</h2>
+
+<p>読み込まれたデータはpandas.<strong>DataFrame</strong>型のデータとなる。</p>
+
+<hr>
+
+<p>参考</p>
+
+<ul>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html">pandas.read_csv - pandas 1.0.3 documentation</a></li>
+</ul>
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/5525480917316b6441ac9e037eb1a035ad002794" title='Last modified Jan 18, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 18, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 

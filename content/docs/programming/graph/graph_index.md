@@ -32,5 +32,6 @@ bookToc: false
       - [2変数関数のグラフ(３D面グラフ)を作成する]({{< relref "/docs/programming/graph/surface.md" >}})
       - [2変数関数のグラフ(等高線プロット)を作成する]({{< relref "/docs/programming/graph/contour.md" >}})
 - データ処理
+      - [ファイルからデータを読み込む]({{< relref "/docs/programming/graph/read.md" >}})
 
 

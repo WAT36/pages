@@ -480,6 +480,15 @@
     </item>
     
     <item>
+      <title>ファイルからデータを読み込む</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/read/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/read/</guid>
+      <description>ファイルからデータを読み込む Pythonで機械学習やグラフ描画を行いたい時に、元となるデータがcsvなどのファイルに書かれている場合、Pyt</description>
+    </item>
+    
+    <item>
       <title>ファイル書き込み</title>
       <link>https://WAT36.github.io/pages/docs/programming/file_io/filewrite/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
