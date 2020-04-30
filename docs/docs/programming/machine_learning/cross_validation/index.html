@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.17134707c0c56b287df03ce426e0d23c07072dd6dba8f4421e6b120e90cf0e50.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.4f63c7722c60f094949b8abe80ccf4ca66c9ecbd9c1917e8b3cc003a792a8b7b.js"></script>
 
 
 
@@ -126,11 +126,26 @@ https://github.com/alex-shpak/hugo-book
 
 <h1 id="交差検証">交差検証</h1>
 
-<p>先述の<a href="https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/">ホールドアウト検証</a>では、訓練(テスト)データの選び方によって出力結果にばらつきがあることを話した。</p>
+<p>先述の<a href="https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/">ホールドアウト検証</a>では、訓練(テスト)データの選び方によって出力結果が変わってくることを話した。なるべく変化が少なくなるようにするにはどうすれば良いのだろうか。</p>
+
+<p>方法の一つとして、<strong>交差検証</strong>という方法を示す。</p>
+
+<p>これは簡単にいうとホールドアウト検証を分割した全パターンで行い、それぞれの出力の平均値を評価に利用するという方式である。</p>
+
+<p>データを分割した個数で<strong>K-分割交差検証</strong>とも呼ぶ。</p>
+
+<p>先ほどの<a href="https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/">ホールドアウト検証</a>において、分割したデータのうち一つをテストデータとおいた場合での実行を全パターン、行ってみる。</p>
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/cff98450e8800787111485bece183c1588b0dbde" title='Last modified Apr 30, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 30, 2020
+    </a>
+  </div>
   
 </div>
 
