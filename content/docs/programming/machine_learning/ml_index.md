@@ -20,4 +20,5 @@ bookToc: false
  - [線形基底関数モデル]({{< relref "/docs/programming/machine_learning/linear_basis_function.md" >}})
  - [オーバーフィッティング(過学習)]({{< relref "/docs/programming/machine_learning/overfitting.md" >}})
  - [ホールドアウト検証]({{< relref "/docs/programming/machine_learning/holdout_validation.md" >}})
+ - [交差検証]({{< relref "/docs/programming/machine_learning/cross_validation.md" >}})
 
