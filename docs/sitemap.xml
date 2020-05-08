@@ -48,11 +48,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/2dmodel-2/</loc>
-    <lastmod>2020-04-14T22:14:49+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/2dmodel/</loc>
     <lastmod>2020-04-09T12:41:18+09:00</lastmod>
   </url>
@@ -248,10 +243,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/ctf/caesar_cipher-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/ctf/caesar_cipher/</loc>
     <lastmod>2020-04-25T16:56:10+09:00</lastmod>
   </url>
@@ -259,10 +250,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/math/scalar/</loc>
     <lastmod>2020-01-13T09:52:52+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/front-end/section-2/</loc>
   </url>
   
   <url>
@@ -491,10 +478,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/other/var-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/other/var/</loc>
     <lastmod>2020-04-21T14:28:55+09:00</lastmod>
   </url>
@@ -612,10 +595,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/other/re/</loc>
     <lastmod>2020-03-31T23:28:17+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/procon/dfs-2/</loc>
   </url>
   
   <url>
@@ -835,12 +814,12 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/posts/aws_create_api_gateway/</loc>
-    <lastmod>2020-04-27T00:02:47+09:00</lastmod>
+    <lastmod>2020-04-27T00:45:31+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/posts/</loc>
-    <lastmod>2020-04-27T00:02:47+09:00</lastmod>
+    <lastmod>2020-04-27T00:45:31+09:00</lastmod>
   </url>
   
   <url>
@@ -969,12 +948,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -984,12 +963,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   

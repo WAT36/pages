@@ -93,15 +93,6 @@
     
     <item>
       <title>2次元入力の面モデル</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/2dmodel-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/2dmodel-2/</guid>
-      <description>2次元入力の面モデル 先程の勾配法の例では入力データは1次元であったが、2次元であった場合はどうだろうか。 例として、以下のようなデータを用意す</description>
-    </item>
-    
-    <item>
-      <title>2次元入力の面モデル</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/2dmodel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -453,15 +444,6 @@
     
     <item>
       <title>シーザー暗号</title>
-      <link>https://WAT36.github.io/pages/docs/ctf/caesar_cipher-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/ctf/caesar_cipher-2/</guid>
-      <description>シーザー暗号 暗号の一つであるシーザー暗号についてを述べる。 シーザー暗号は元の文(平文)の各文字を、辞書順にx字ずらしてできる暗号のことである</description>
-    </item>
-    
-    <item>
-      <title>シーザー暗号</title>
       <link>https://WAT36.github.io/pages/docs/ctf/caesar_cipher/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -476,15 +458,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/scalar/</guid>
       <description>スカラー*行列 スカラーと行列を書ける方法についてを示す。 Python スカラーと行列をかけたいときは、普通にスカラーとnumpy.ndarray型の変数</description>
-    </item>
-    
-    <item>
-      <title>セクション</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/section-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/section-2/</guid>
-      <description>セクション セクションとは章や節といった様なもの、HTMLでは見出しとそれに対応する文書の部分(セクショニングコンテンツ)といった様なものであ</description>
     </item>
     
     <item>
@@ -894,15 +867,6 @@
     
     <item>
       <title>変数を宣言する</title>
-      <link>https://WAT36.github.io/pages/docs/programming/other/var-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/other/var-2/</guid>
-      <description>変数を宣言する 変数を宣言する方法についてを述べる。 Java Javaでの変数の宣言は以下の通り。 (データ型) (変数名); (変数名) = (値); // または</description>
-    </item>
-    
-    <item>
-      <title>変数を宣言する</title>
       <link>https://WAT36.github.io/pages/docs/programming/other/var/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1115,15 +1079,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/other/re/</guid>
       <description>正規表現 文字列に正規表現を適用してある文字列パターンを抽出・検索したいという場合があると思う。 その場合に利用する方法を示す。 ちなみに正規表現</description>
-    </item>
-    
-    <item>
-      <title>深さ優先探索</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/dfs-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/dfs-2/</guid>
-      <description>深さ優先探索 探索の手法の一つである深さ優先探索についてを述べる。 深さ優先探索とは、ある状態から始めてそこから遷移出来なくなるまで状態を進めて</description>
     </item>
     
     <item>
