@@ -129,6 +129,15 @@
     </item>
     
     <item>
+      <title>API GatewayでLambda関数を呼び出すREST APIを作成する</title>
+      <link>https://WAT36.github.io/pages/docs/cloud/aws/rest_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/cloud/aws/rest_api/</guid>
+      <description>API GatewayでのREST API作成 API Gatewayで具体的なREST APIを作成する方法についてを示す。 なお、前述のAPI Gateway</description>
+    </item>
+    
+    <item>
       <title>break文</title>
       <link>https://WAT36.github.io/pages/docs/programming/control/break/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
