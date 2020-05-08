@@ -165,6 +165,15 @@
     </item>
     
     <item>
+      <title>csvファイルからデータを読み込む</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/read/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/read/</guid>
+      <description>csvファイルからデータを読み込む Pythonで機械学習やグラフ描画を行いたい時に、元となるデータがcsvなどのファイルに書かれている場合、</description>
+    </item>
+    
+    <item>
       <title>for文</title>
       <link>https://WAT36.github.io/pages/docs/programming/control/for/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -345,15 +354,6 @@
     </item>
     
     <item>
-      <title>グラフ</title>
-      <link>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</guid>
-      <description>グラフ データサイエンスでは必須？ グラフ描画についてをまとめる。 ここも都合上、現在はPythonのみ記載。 グラフ描画ではmatplotlibの</description>
-    </item>
-    
-    <item>
       <title>グラフにグリッド線を表示させる</title>
       <link>https://WAT36.github.io/pages/docs/programming/graph/grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -405,6 +405,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/graph/subplot/</guid>
       <description>グラフを複数表示させる Python グラフを複数表示するにはpyplotの関数subplotを使う。 subplot(nrows, ncols, index) subplotを使うと縦nrows×横ncol</description>
+    </item>
+    
+    <item>
+      <title>グラフ・データ処理</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</guid>
+      <description>グラフ・データ処理 データサイエンスでは必須？ グラフ描画やcsv等のデータ前処理についてをまとめる。 ここも都合上、現在はPythonのみ記載。</description>
     </item>
     
     <item>
@@ -549,6 +558,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/norm/</guid>
       <description>ベクトルの大きさ(ノルム) Python ベクトルの大きさ(ノルム)を算出したいときは、numpy.linalgモジュールにある関数normを使用する。 n</description>
+    </item>
+    
+    <item>
+      <title>ホールドアウト検証</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/</guid>
+      <description>ホールドアウト検証 先述のオーバーフィッティング(過学習)の章で、Mを大きくすればするほど既存の入力データに対する精度が高くなり、未知の入力に</description>
     </item>
     
     <item>

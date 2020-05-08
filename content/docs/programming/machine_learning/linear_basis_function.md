@@ -126,7 +126,7 @@ bookToc: false
 
 では、以上の式をコードで実装してみよう。
 
-まず、ガウス関数とそれを利用した線形基底関数モデルは以下のようになる。
+まず、ガウス関数とそれを利用した線形基底関数モデルは以下のようになる。(linear_basis_function.py)
 
 ```python
 import numpy as np
@@ -149,7 +149,7 @@ def mse(y,t):
     return np.mean((y-t)**2)
 ```
 
-次に、計画行列を算出するコードを記載する。
+次に、計画行列を算出するコードを記載する。(linear_basis_function.py)
 
 ```python
 import numpy as np
@@ -177,11 +177,15 @@ def design_matrix(x,t,mu,v):
 
 例としてmを1,4,7,10,13,16で設定した時のyを算出し、標準偏差SD(平均二乗誤差の平方根)とともにそれぞれプロットして表示する。
 
-コードは以下の通り。
+コードは以下の通り。(linear_basis_function_plot.py)
 
 ```python
 import math
 import matplotlib.pyplot as plt
+import numpy as np
+from linear_basis_function import mse
+from linear_basis_function import design_matrix
+from linear_basis_function import linear_basis_func
 
 #入力値
 x = np.load('x.npy')
@@ -189,14 +193,14 @@ x = np.load('x.npy')
 t = np.load('t.npy')
 
 #mを設定
-M=[1,4,7,10,13,16]
+M=[1,5,9,13]
 
 plt.figure(figsize=(20,7.5))
 plt.subplots_adjust(wspace=0.25,hspace=0.3)
 
 for i in range(len(M)):
-    #2*3のi+1番目にプロット
-    plt.subplot(2,3,i+1)
+    #2*2のi+1番目にプロット
+    plt.subplot(2,2,i+1)
     m=M[i]
 
     #ガウス関数の中心 はxの最小値〜最大値の間で設定

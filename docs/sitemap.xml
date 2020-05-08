@@ -88,6 +88,11 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/graph/read/</loc>
+    <lastmod>2020-04-29T22:43:04+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/control/for/</loc>
     <lastmod>2020-01-17T22:14:37+09:00</lastmod>
   </url>
@@ -188,11 +193,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</loc>
-    <lastmod>2020-02-03T22:39:43+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/graph/grid/</loc>
     <lastmod>2020-01-24T00:16:08+09:00</lastmod>
   </url>
@@ -220,6 +220,11 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/graph/subplot/</loc>
     <lastmod>2020-01-26T02:28:23+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</loc>
+    <lastmod>2020-04-29T22:43:04+09:00</lastmod>
   </url>
   
   <url>
@@ -298,6 +303,11 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/math/norm/</loc>
     <lastmod>2020-02-05T08:12:58+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/</loc>
+    <lastmod>2020-04-29T12:40:40+09:00</lastmod>
   </url>
   
   <url>
@@ -596,7 +606,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</loc>
-    <lastmod>2020-04-25T21:24:10+09:00</lastmod>
+    <lastmod>2020-04-26T19:10:16+09:00</lastmod>
   </url>
   
   <url>
@@ -630,7 +640,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/linear_basis_function/</loc>
-    <lastmod>2020-04-24T21:45:33+09:00</lastmod>
+    <lastmod>2020-04-27T23:00:45+09:00</lastmod>
   </url>
   
   <url>
@@ -930,7 +940,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-04-25T22:15:24+09:00</lastmod>
+    <lastmod>2020-04-29T22:43:04+09:00</lastmod>
   </url>
   
   <url>
@@ -974,12 +984,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -1165,7 +1175,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/jp_index/</loc>
-    <lastmod>2020-03-03T21:56:58+09:00</lastmod>
+    <lastmod>2020-04-29T13:52:21+09:00</lastmod>
   </url>
   
 </urlset>
