@@ -10,7 +10,7 @@ bookToc: false
 
 API Gatewayで具体的なREST APIを作成する方法についてを示す。
 
-なお、前述の[API GatewayでのAPI作成方法]({{< relref "/posts/aws_create_api_gateway.md" >}})が終わっていることが前提である。
+なお、前述の[API GatewayでのAPI作成方法]({{< relref "/posts/aws_create_api_gateway.md" >}})が終わっていることを前提とする。
 
 ## 1. API GatewayのページからREST APIを作成したいAPIをクリックする
 
@@ -131,9 +131,9 @@ APIが実行された時に渡されたデータを整形してJSONデータに�
 }
 ```
 
-### 6.3 Lambda->API 上の 「統合リクエスト」を設定する
+### 6.3 Lambda->API 上の 「統合レスポンス」を設定する
 
-右下にある「統合リクエスト」をクリックする。
+右下にある「統合レスポンス」をクリックする。
 
 ![AWSマネジメントコンソール](/img/aws/rest_api_methodtest.png)
 
