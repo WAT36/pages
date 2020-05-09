@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.003552c54cc84161e76b697ab336b63143b9457ff8f369bc4a87b474752cd52b.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.e3eaff7cdca46d6d5fd9be35ab535becff82a6111341309f2dfe485031be7aef.js"></script>
 
 
 
@@ -137,6 +137,38 @@ https://github.com/alex-shpak/hugo-book
 <p>データがN個あるとき、Kは1≦K≦Nの範囲で分割を行える。最大の分割数はK=Nで、このときテストデータの個数は１個になる。この場合の交差検証のことを特別に<strong>リーブワンアウト交差検定</strong>と呼ぶ。</p>
 
 <p>先ほどの<a href="https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/">ホールドアウト検証</a>において、分割したデータのうち一つをテストデータとおいた場合での実行を全パターン、行ってみる。</p>
+
+<p>k分割交差検証を行うコードは以下の通り。(k_hold_cross_validation.py)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">from</span> linear_basis_function <span style="color:#f92672">import</span> mse
+<span style="color:#f92672">from</span> linear_basis_function <span style="color:#f92672">import</span> design_matrix
+<span style="color:#f92672">from</span> linear_basis_function <span style="color:#f92672">import</span> linear_basis_func
+
+<span style="color:#75715e">#k分割交差検証 x:入力データ、t:実測値、m:線形基底関数モデルの数、k:分割する個数</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">k_hold_cross_validation</span>(x,t,m,k):
+    x<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>array(x)
+    t<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>array(t)
+    n<span style="color:#f92672">=</span>x<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]
+    mse_train<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros(k)
+    mse_test<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros(k)
+    mu<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>linspace(min(x),max(x),m)
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(k):
+        x_train <span style="color:#f92672">=</span> x[np<span style="color:#f92672">.</span>fmod(range(n),k) <span style="color:#f92672">!=</span> i]
+        t_train <span style="color:#f92672">=</span> t[np<span style="color:#f92672">.</span>fmod(range(n),k) <span style="color:#f92672">!=</span> i]
+        x_test <span style="color:#f92672">=</span> x[np<span style="color:#f92672">.</span>fmod(range(n),k) <span style="color:#f92672">==</span> i]
+        t_test <span style="color:#f92672">=</span> t[np<span style="color:#f92672">.</span>fmod(range(n),k) <span style="color:#f92672">==</span> i]
+        w_train <span style="color:#f92672">=</span> design_matrix(x_train,t_train,mu,<span style="color:#ae81ff">1</span>)
+
+        y_train <span style="color:#f92672">=</span> linear_basis_func(w_train,x_train,mu,<span style="color:#ae81ff">1</span>)
+        mse_train[i] <span style="color:#f92672">=</span> mse(y_train,t_train)
+
+        y_test <span style="color:#f92672">=</span> linear_basis_func(w_train,x_test,mu,<span style="color:#ae81ff">1</span>)
+        mse_test[i] <span style="color:#f92672">=</span> mse(y_test,t_test)
+
+    <span style="color:#66d9ef">return</span> mse_train,mse_test</code></pre></div>
+<p>このコードを利用し、M:の範囲で、分割数を最大にしたリーブワンアウト検証を利用して最適なMを求めてみることを考える。</p>
+
+<p>リーブワンアウト検証を利用したMを求めるコードは以下の通り。</p>
 </article>
 
       
@@ -144,8 +176,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/1fa49eb7749ed4c33bbcde3b0671b27885de6a11" title='Last modified Apr 30, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 30, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/b649e6e414728412fc68b827c9aab13c2a7e4705" title='Last modified May 1, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 1, 2020
     </a>
   </div>
   
