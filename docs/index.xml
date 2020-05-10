@@ -1472,6 +1472,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>指定URLにWebリクエストを送るSlack Appの作成</title>
+      <link>https://WAT36.github.io/pages/posts/slack_request/</link>
+      <pubDate>Sat, 09 May 2020 15:13:17 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/slack_request/</guid>
+      <description>Slackには自作のアプリを作成でき、またコマンドを指定することで指定した動作を行える。 今回はSlackアプリの作成方法、及びコマンドの作成</description>
+    </item>
+    
+    <item>
       <title>2020年03月の活動</title>
       <link>https://WAT36.github.io/pages/posts/202003/</link>
       <pubDate>Wed, 01 Apr 2020 20:37:10 +0900</pubDate>

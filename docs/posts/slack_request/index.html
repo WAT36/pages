@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>指定URLにWebリクエストを送るSlack Appの作成 | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.83a84d8dd93594c1adaa629a348c26d5ace79da0e3d1670bceda65a09cb6426f.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2fposts\2fslack_request\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-posts">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>指定URLにWebリクエストを送るSlack Appの作成</strong>
+</header>
+
+      
+
+<header class="markdown">
+  <h1>指定URLにWebリクエストを送るSlack Appの作成</h1>
+  <h5>
+    <strong>May 9, 2020</strong>
+  </h5>
+</header>
+<article class="markdown">
+
+<p>Slackには自作のアプリを作成でき、またコマンドを指定することで指定した動作を行える。</p>
+
+<p>今回はSlackアプリの作成方法、及びコマンドの作成方法、コマンド実行時に指定URLへWebリクエストを送信する方法をまとめる。</p>
+
+<h2 id="1-slack-appを作成する">1. Slack Appを作成する</h2>
+
+<ul>
+<li><a href="https://api.slack.com/apps">https://api.slack.com/apps</a>のページに行く。</li>
+</ul>
+
+<h2 id="2-指定urlへwebリクエストを送る-コマンドを作成する">2. (指定URLへWebリクエストを送る)コマンドを作成する</h2>
+
+<p>Slackアプリのコマンドはスラッシュコマンドと言われる（スラッシュから始まるので）</p>
+
+<p>ここではこの作成方法についてを示す。</p>
+
+<h3 id="2-1-slack-appのトップページへ行く">2.1 Slack Appのトップページへ行く</h3>
+
+<p>スラッシュコマンドを作りたいSlack Appのページに行く。</p>
+
+<p>具体的には、<a href="https://api.slack.com/apps">https://api.slack.com/apps</a>のページに行くと、作成したSlack Appが表示されるので、そのアプリ名をクリックする。</p>
+
+<h3 id="2-2-slash-commandを作成する">2.2 Slash Commandを作成する</h3>
+
+<p>ページ左側にある「Slash Command」をクリックする。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/slackapp_config.png" alt="Slack App" /></p>
+
+<p>その後、「Create New Command」をクリックする。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/slack_slashcommand.png" alt="Slack App" /></p>
+
+<p>するとコマンド名、リクエスト先のURL等の入力を求められるので、入力する。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/slack_createnewcommand.png" alt="Slack App" /></p>
+
+<p>入力後、右下の「Save」を押すとコマンドが作成される。</p>
+
+<p>なお、この形式で作ったSlash Commandは、指定URLにJSON形式のデータをPOSTで送る。</p>
+
+<p>コマンド実行時に引数も指定できるが、引数に指定したデータはJSONの&rdquo;text&rdquo;というキーに渡されて送られる。</p>
+</article>
+
+      
+    </div>
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>
