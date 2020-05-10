@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.e3eaff7cdca46d6d5fd9be35ab535becff82a6111341309f2dfe485031be7aef.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.5cdbe8d8a52d14bb9b8b98dcfa922008621ae0da1c9bbbedc0694c014979712e.js"></script>
 
 
 
@@ -166,7 +166,34 @@ https://github.com/alex-shpak/hugo-book
         mse_test[i] <span style="color:#f92672">=</span> mse(y_test,t_test)
 
     <span style="color:#66d9ef">return</span> mse_train,mse_test</code></pre></div>
-<p>このコードを利用し、M:の範囲で、分割数を最大にしたリーブワンアウト検証を利用して最適なMを求めてみることを考える。</p>
+<p>例として、M=3,k=4とした時の実行結果は以下の通り。(k_hold_cross_validation_example.py)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">from</span> k_hold_cross_validation <span style="color:#f92672">import</span> k_hold_cross_validation
+
+<span style="color:#75715e">#入力値</span>
+x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;x.npy&#39;</span>)
+<span style="color:#75715e">#実測値</span>
+t <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;t.npy&#39;</span>)
+
+mse_train,mse_test<span style="color:#f92672">=</span>k_hold_cross_validation(x,t,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>)
+<span style="color:#66d9ef">print</span>(mse_train)
+<span style="color:#66d9ef">print</span>(mse_test)
+<span style="color:#75715e">#標準偏差(mseの平均の平方根)の算出</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;train:{0}&#34;</span><span style="color:#f92672">.</span>format(np<span style="color:#f92672">.</span>sqrt(np<span style="color:#f92672">.</span>mean(mse_train))))
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;test :{0}&#34;</span><span style="color:#f92672">.</span>format(np<span style="color:#f92672">.</span>sqrt(np<span style="color:#f92672">.</span>mean(mse_test))))</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>[11.34746956 11.29719213 14.20404757  8.14992362]
+[13.17632534 12.04601311  3.21443304 21.05860186]
+train:3.354051016302551
+test :3.5176474150746544
+</code></pre>
+
+<p>実行結果において、最初のarrayは訓練データの平均二乗誤差、その次のarrayはテストデータの平均二乗誤差を示している。
+k=4のため、データを４分割し、そのうちの一つをテストデータとして利用し、残りを訓練データとして利用するのを４パターン行うため、結果として配列の長さは４になる。
+一つのMに対する評価指標としては、この算出した訓練データ及びテストデータの平均二乗誤差の標準偏差とする。</p>
+
+<p>このコードを利用し、M:1~10の範囲で、分割数を最大にしたリーブワンアウト検証を利用して最適なMを求めてみることを考える。</p>
 
 <p>リーブワンアウト検証を利用したMを求めるコードは以下の通り。</p>
 </article>
@@ -176,8 +203,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/b649e6e414728412fc68b827c9aab13c2a7e4705" title='Last modified May 1, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 1, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/c8fcfbf41c81296cbc0ecf5da1b00284d4b93798" title='Last modified May 9, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 9, 2020
     </a>
   </div>
   

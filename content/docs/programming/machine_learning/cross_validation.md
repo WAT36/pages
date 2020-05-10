@@ -52,6 +52,38 @@ def k_hold_cross_validation(x,t,m,k):
     return mse_train,mse_test
 ```
 
-このコードを利用し、M:の範囲で、分割数を最大にしたリーブワンアウト検証を利用して最適なMを求めてみることを考える。
+例として、M=3,k=4とした時の実行結果は以下の通り。(k_hold_cross_validation_example.py)
+
+```python
+import numpy as np
+from k_hold_cross_validation import k_hold_cross_validation
+
+#入力値
+x = np.load('x.npy')
+#実測値
+t = np.load('t.npy')
+
+mse_train,mse_test=k_hold_cross_validation(x,t,3,4)
+print(mse_train)
+print(mse_test)
+#標準偏差(mseの平均の平方根)の算出
+print("train:{0}".format(np.sqrt(np.mean(mse_train))))
+print("test :{0}".format(np.sqrt(np.mean(mse_test))))
+```
+
+実行結果
+
+```
+[11.34746956 11.29719213 14.20404757  8.14992362]
+[13.17632534 12.04601311  3.21443304 21.05860186]
+train:3.354051016302551
+test :3.5176474150746544
+```
+
+実行結果において、最初のarrayは訓練データの平均二乗誤差、その次のarrayはテストデータの平均二乗誤差を示している。
+k=4のため、データを４分割し、そのうちの一つをテストデータとして利用し、残りを訓練データとして利用するのを４パターン行うため、結果として配列の長さは４になる。
+一つのMに対する評価指標としては、この算出した訓練データ及びテストデータの平均二乗誤差の標準偏差とする。
+
+このコードを利用し、M:1~10の範囲で、分割数を最大にしたリーブワンアウト検証を利用して最適なMを求めてみることを考える。
 
 リーブワンアウト検証を利用したMを求めるコードは以下の通り。
