@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.5cdbe8d8a52d14bb9b8b98dcfa922008621ae0da1c9bbbedc0694c014979712e.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.26816e2e4b7ad069194744b5e4da0b8d35be8e4e093363e1e964f188007b13e8.js"></script>
 
 
 
@@ -195,7 +195,44 @@ k=4のため、データを４分割し、そのうちの一つをテストデ�
 
 <p>このコードを利用し、M:1~10の範囲で、分割数を最大にしたリーブワンアウト検証を利用して最適なMを求めてみることを考える。</p>
 
-<p>リーブワンアウト検証を利用したMを求めるコードは以下の通り。</p>
+<p>リーブワンアウト検証を利用したMを求めるコードは以下の通り。(k_hold_cross_valisation_plot.py)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">from</span> k_hold_cross_validation <span style="color:#f92672">import</span> k_hold_cross_validation
+
+<span style="color:#75715e">#入力値</span>
+x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;x.npy&#39;</span>)
+<span style="color:#75715e">#実測値</span>
+t <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;t.npy&#39;</span>)
+
+<span style="color:#75715e">#分割数</span>
+k <span style="color:#f92672">=</span> len(x)
+<span style="color:#75715e">#m</span>
+M <span style="color:#f92672">=</span> range(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">10</span>)
+
+mse_train<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros(len(M))
+mse_test<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros(len(M))
+
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(M)):
+    train_i,test_i<span style="color:#f92672">=</span>k_hold_cross_validation(x,t,M[i],k)
+    mse_train[i]<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>sqrt(np<span style="color:#f92672">.</span>mean(train_i))
+    mse_test[i]<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>sqrt(np<span style="color:#f92672">.</span>mean(test_i))
+
+
+plt<span style="color:#f92672">.</span>xlim(min(M)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,max(M)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+plt<span style="color:#f92672">.</span>ylim(min(min(mse_train),min(mse_test))<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,max(max(mse_train),max(mse_test))<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+
+plt<span style="color:#f92672">.</span>plot(M,mse_test,color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>,label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;test&#39;</span>)
+plt<span style="color:#f92672">.</span>plot(M,mse_train,color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;blue&#39;</span>,label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;train&#39;</span>)
+plt<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lower left&#39;</span>)
+
+plt<span style="color:#f92672">.</span>grid(True)
+plt<span style="color:#f92672">.</span>show()</code></pre></div>
+<p>実行結果</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_25.png" width=50%></p>
+
+<p>となり、リーブワンアウト検証によりM=5の時にテストデータの誤差が最も小さくなり、最適ということになる。</p>
 </article>
 
       
@@ -203,8 +240,8 @@ k=4のため、データを４分割し、そのうちの一つをテストデ�
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/c8fcfbf41c81296cbc0ecf5da1b00284d4b93798" title='Last modified May 9, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 9, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/12af65ac1d62de8c64f1571e555d41391e13f185" title='Last modified May 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 11, 2020
     </a>
   </div>
   

@@ -86,4 +86,46 @@ k=4のため、データを４分割し、そのうちの一つをテストデ�
 
 このコードを利用し、M:1~10の範囲で、分割数を最大にしたリーブワンアウト検証を利用して最適なMを求めてみることを考える。
 
-リーブワンアウト検証を利用したMを求めるコードは以下の通り。
+リーブワンアウト検証を利用したMを求めるコードは以下の通り。(k_hold_cross_valisation_plot.py)
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from k_hold_cross_validation import k_hold_cross_validation
+
+#入力値
+x = np.load('x.npy')
+#実測値
+t = np.load('t.npy')
+
+#分割数
+k = len(x)
+#m
+M = range(1,10)
+
+mse_train=np.zeros(len(M))
+mse_test=np.zeros(len(M))
+
+for i in range(len(M)):
+    train_i,test_i=k_hold_cross_validation(x,t,M[i],k)
+    mse_train[i]=np.sqrt(np.mean(train_i))
+    mse_test[i]=np.sqrt(np.mean(test_i))
+
+
+plt.xlim(min(M)-1,max(M)+1)
+plt.ylim(min(min(mse_train),min(mse_test))-1,max(max(mse_train),max(mse_test))+1)
+
+plt.plot(M,mse_test,color='red',label='test')
+plt.plot(M,mse_train,color='blue',label='train')
+plt.legend(loc='lower left')
+
+plt.grid(True)
+plt.show()
+```
+
+実行結果
+
+<img src="/img/datascience/Figure_25.png" width=50%>
+
+となり、リーブワンアウト検証によりM=5の時にテストデータの誤差が最も小さくなり、最適ということになる。
+
