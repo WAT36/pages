@@ -318,3 +318,18 @@ print("Hello! World!")
 print("Hello! World!")
 </code>
 <hr>
+
+
+## kbd要素
+
+kbd要素は、その部分がユーザーが入力する内容であることを示す要素である。具体的にはキー名を指定する。
+
+```
+次に<kbd>Shift</kbd>キーを押してください。
+```
+
+実行例
+
+<hr>
+次に<kbd>Shift</kbd>キーを押してください。
+<hr>
