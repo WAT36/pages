@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.26816e2e4b7ad069194744b5e4da0b8d35be8e4e093363e1e964f188007b13e8.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.c768c906a7cac2a1711a9cb3fffef040c1d6c34f091163428e347aeb4ee69c9f.js"></script>
 
 
 
@@ -210,20 +210,20 @@ k <span style="color:#f92672">=</span> len(x)
 <span style="color:#75715e">#m</span>
 M <span style="color:#f92672">=</span> range(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">10</span>)
 
-mse_train<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros(len(M))
-mse_test<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros(len(M))
+train<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros(len(M))
+test<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros(len(M))
 
 <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(M)):
     train_i,test_i<span style="color:#f92672">=</span>k_hold_cross_validation(x,t,M[i],k)
-    mse_train[i]<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>sqrt(np<span style="color:#f92672">.</span>mean(train_i))
-    mse_test[i]<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>sqrt(np<span style="color:#f92672">.</span>mean(test_i))
+    train[i]<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>sqrt(np<span style="color:#f92672">.</span>mean(train_i))
+    test[i]<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>sqrt(np<span style="color:#f92672">.</span>mean(test_i))
 
 
 plt<span style="color:#f92672">.</span>xlim(min(M)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,max(M)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
-plt<span style="color:#f92672">.</span>ylim(min(min(mse_train),min(mse_test))<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,max(max(mse_train),max(mse_test))<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+plt<span style="color:#f92672">.</span>ylim(min(min(train),min(test))<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,max(max(train),max(test))<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
 
-plt<span style="color:#f92672">.</span>plot(M,mse_test,color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>,label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;test&#39;</span>)
-plt<span style="color:#f92672">.</span>plot(M,mse_train,color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;blue&#39;</span>,label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;train&#39;</span>)
+plt<span style="color:#f92672">.</span>plot(M,test,color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>,label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;test&#39;</span>)
+plt<span style="color:#f92672">.</span>plot(M,train,color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;blue&#39;</span>,label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;train&#39;</span>)
 plt<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lower left&#39;</span>)
 
 plt<span style="color:#f92672">.</span>grid(True)
@@ -240,8 +240,8 @@ plt<span style="color:#f92672">.</span>show()</code></pre></div>
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/12af65ac1d62de8c64f1571e555d41391e13f185" title='Last modified May 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 11, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/cb7d5acbec529f22d08d418e7d552d79181dc06f" title='Last modified May 12, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 12, 2020
     </a>
   </div>
   
