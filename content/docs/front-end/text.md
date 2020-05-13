@@ -389,3 +389,21 @@ sup要素は、上付き文字であることを示す要素である。
     <var>y</var> = 2<var>x</var><sup>2</sup>+1
 </p>
 <hr>
+
+## sub要素
+
+sub要素は、下付き文字であることを示す要素である。
+
+```
+<p>
+    a<sub>n+1</sub> = a<sub>n</sub>+1
+</p>
+```
+
+表示例
+
+<hr>
+<p>
+    a<sub>n+1</sub> = a<sub>n</sub>+1
+</p>
+<hr>
