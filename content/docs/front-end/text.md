@@ -371,3 +371,21 @@ var要素は、それが数式やプログラム内などの変数であるこ�
     <var>y</var> = 2<var>x</var>+1
 </p>
 <hr>
+
+## sup要素
+
+sup要素は、上付き文字であることを示す要素である。
+
+```
+<p>
+    <var>y</var> = 2<var>x</var><sup>2</sup>+1
+</p>
+```
+
+表示例
+
+<hr>
+<p>
+    <var>y</var> = 2<var>x</var><sup>2</sup>+1
+</p>
+<hr>
