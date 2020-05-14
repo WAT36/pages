@@ -434,3 +434,25 @@ br要素は、改行を表す空要素である。１つ書くたびに１回改
 ２２２<br>
 ３３３<br>
 <hr>
+
+
+## wbr要素
+
+wbr要素は、英文のテキストをその箇所で折り返して表示させるための空要素である。
+
+通常、英文やURLなどの半角英字で書かれた文は、途中で改行されないようにブラウザが調整して表示してくれるが、このwbr要素を使うとその箇所で改行されて表示してくれる。
+
+
+```
+This is aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+That is aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<wbr>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+```
+
+表示例
+
+<hr>
+This is aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+That is aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<wbr>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+<hr>
+
+
