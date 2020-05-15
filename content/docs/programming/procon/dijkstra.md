@@ -68,4 +68,33 @@ bookToc: false
 
 コードによる実装例は以下の通り。
 
+```python
+#始点,頂点の数,辺(頂点ごとの隣接行列)
+def dijkstra(start,v,e):
+    pre=[-1 for _ in range(v)]
+    x=set([])
+    y=set([i for i in range(v)])
+    dist=[float("inf") for _ in range(v)]
 
+    dist[start]=0
+
+    s=start
+    while(len(y)>0):
+        x.add(s)
+        y.remove(s)
+
+        min_y=-1
+        min_dy=float("inf")
+        for yi in y:
+            if(dist[yi]>dist[s]+e[s][yi]):
+                dist[yi]=dist[s]+e[s][yi]
+                pre[yi]=s
+
+            if(min_dy>dist[yi]):
+                min_dy=dist[yi]
+                min_y=yi
+
+        s=min_y
+
+    return dist,pre
+```
