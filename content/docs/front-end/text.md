@@ -456,3 +456,18 @@ That is aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<wbr>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 <hr>
 
 
+## ins要素
+
+ins要素は、文章に追加された部分であることを示す要素である。
+
+```
+<p>締め切りは木曜日 午後5:00です。</p>
+<ins><p>(追記) 金曜日 午後5:00まで延長します</p></ins>
+```
+
+表示例
+
+<hr>
+<p>締め切りは木曜日 午後5:00です。</p>
+<ins><p>(追記) 金曜日 午後5:00まで延長します</p></ins>
+<hr>
