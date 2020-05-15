@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.901f51ac5beb89696bd1ad9e8453a319de3fbced1d39a8b3cf351dc5fc706237.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.684b497b6fb4c799b919c3dee5b7cc3c09fd2ad5a97a708da4da1a193ebea832.js"></script>
 
 
 
@@ -172,6 +172,32 @@ https://github.com/alex-shpak/hugo-book
 </ol>
 
 <p>計算量はn=|V|とした時、5.~8.の処理が1+2+・・・+n回行われるため、O(|V|<sup>2</sup>)となる。</p>
+
+<p>例として以下のグラフで、頂点Aから他の全ての点までの最短経路を求めてみる。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/dijkstra1.png" alt="ダイクストラ例1" /></p>
+
+<p>まずは始点となるAのコストを0、その他の頂点のコストを∞とする。また、Aをコスト確定済みとしてXに加える。</p>
+
+<p>(図中、頂点内の左にその頂点のコスト、右にその頂点までの最小コスト経路における直前の頂点を記載する。またコスト確定した頂点(Xに加えた)を黄色く、コストが確定していない頂点を白く表示する。)</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/dijkstra2.png" alt="ダイクストラ例2" /></p>
+
+<p>次に、Aから各頂点のコスト及び直前の頂点を計算する。この時、Aに隣接する頂点はコストが下図のように定まる。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/dijkstra3.png" alt="ダイクストラ例3" /></p>
+
+<p>次に、コストが確定していない頂点(上図で白の頂点)からコストが最も小さい頂点を選び、その頂点をコスト確定とする。</p>
+
+<p>この場合は頂点Bが該当する。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/dijkstra4.png" alt="ダイクストラ例4" /></p>
+
+<p>ここから頂点Bに隣接しコスト確定していない頂点に対してコストを計算する、という一連の動作を全ての頂点のコストが確定するまで行っていくと、最終的には以下の図のようになり、始点Aから全ての頂点までの最小コスト及び経路が求められる。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/dijkstra5.png" alt="ダイクストラ例5" /></p>
+
+<p>コードによる実装例は以下の通り。</p>
 </article>
 
       
@@ -179,8 +205,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/51e0891c239021e073755692f7955b6d1595d4bf" title='Last modified Apr 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 26, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/44ed38c02d11d886379259c509a7607bb354b7d5" title='Last modified Apr 29, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 29, 2020
     </a>
   </div>
   
