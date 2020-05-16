@@ -20,6 +20,7 @@ bookToc: false
  - [グラフの表現方法]({{< relref "/docs/programming/procon/graph.md" >}})
  - [グラフの頂点彩色・面彩色・辺彩色(Welsh・Powellのアルゴリズム)]({{< relref "/posts/graph_coloring.md" >}})
  - [ワーシャル・フロイド法]({{< relref "/posts/warshall_floyd.md" >}})
+ - [ダイクストラ法]({{< relref "/docs/programming/procon/dijkstra.md" >}})
 - 木
  - [Union-Find木]({{< relref "/docs/programming/procon/union-find.md" >}})
 - [動的計画法]({{< relref "/docs/programming/procon/dynamic_planning.md" >}})
