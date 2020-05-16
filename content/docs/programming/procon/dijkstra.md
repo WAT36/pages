@@ -8,7 +8,7 @@ bookToc: false
 
 # ダイクストラ法
 
-グラフ探索の手法の一つ、ダイクストラ法について。
+グラフ探索の手法の一つ、ダイクストラ法についてを述べる。
 
 ダイクストラ法は重み付きのグラフにおいて、ある頂点から他の全ての頂点までの最小コストを計算する一つの手法である。
 
@@ -23,21 +23,21 @@ bookToc: false
  - W(a,b):頂点aから頂点b(a,b∈V)を結ぶ辺の重み(コスト)。辺が存在しないときはW(a,b)=∞
  - 頂点s (s∈V)
 - 出力
- - 頂点sからの最小コストd(v) (v∈V)
- - 頂点vまでの最小コスト経路において頂点vの一つ前の頂点p(v) (v∈V)
+ - 頂点sから頂点vまでの最小コストd(v) (v∈V)
+ - 頂点sから頂点vまでの最小コスト経路において、頂点vの一つ前の頂点p(v) (v∈V)
 
 擬似的なアルゴリズムは以下の通り。
 
-1. X={},Y=V とする 
+1. X=V とする 
 2. 最小コストd(v)(v∈V)を用意し、全てのvにおいてd(v)=∞ と初期化、p(v) (v∈V) を用意し、全てのvにおいてp(v)=v と初期化する
 3. d(s)=0とする
-4. X=X+{s}、Y=Y-{s} とする
-5. Yの全ての点v (v∈Y) に対して以下の式の通りにコストを計算する。
+4. X=X-{s} とする
+5. Xの全ての点v (v∈X) に対して以下の式の通りにコストを計算する。
 
     d(v) = min(d(v),d(s)+W(s,v))
 6. 5.の式において、第２項の方が小さいならば、p(v)=sとする。
-7. Y={} (|Y|=0) ならば、d(v),p(v)を出力して終了する
-8. d(s) = min{d(v)|v∈Y} となるsを求め、4.に戻る
+7. X={} (|X|=0) ならば、d(v),p(v)を出力して終了する
+8. d(s) = min{d(v)|v∈X} となるsを求め、4.に戻る
 
 計算量はn=|V|とした時、5.~8.の処理が1+2+・・・+n回行われるため、O(|V|<sup>2</sup>)となる。
 
@@ -47,7 +47,7 @@ bookToc: false
 
 まずは始点となるAのコストを0、その他の頂点のコストを∞とする。また、Aをコスト確定済みとしてXに加える。
 
-(図中、頂点内の左にその頂点のコスト、右にその頂点までの最小コスト経路における直前の頂点を記載する。またコスト確定した頂点(Xに加えた)を黄色く、コストが確定していない頂点を白く表示する。)
+(図中、頂点内の左にその頂点のコスト、右にその頂点までの最小コスト経路における直前の頂点を記載する。またコスト確定した頂点(Xから除いた頂点)を黄色く、コストが確定していない頂点を白く表示する。)
 
 ![ダイクストラ例2](/img/procon/dijkstra2.png)
 
@@ -66,35 +66,49 @@ bookToc: false
 ![ダイクストラ例5](/img/procon/dijkstra5.png)
 
 
-コードによる実装例は以下の通り。
+コードによる実装例は以下の通り。(Python)
 
 ```python
+INF=float("inf")
+
 #始点,頂点の数,辺(頂点ごとの隣接行列)
 def dijkstra(start,v,e):
-    pre=[-1 for _ in range(v)]
-    x=set([])
-    y=set([i for i in range(v)])
-    dist=[float("inf") for _ in range(v)]
+    pre=[i for i in range(v)]
+    x=set([i for i in range(v)])
+    dist=[INF for _ in range(v)]
 
     dist[start]=0
 
     s=start
-    while(len(y)>0):
-        x.add(s)
-        y.remove(s)
+    while(len(x)>0):
+        x.remove(s)
 
-        min_y=-1
-        min_dy=float("inf")
-        for yi in y:
-            if(dist[yi]>dist[s]+e[s][yi]):
-                dist[yi]=dist[s]+e[s][yi]
-                pre[yi]=s
+        min_x=-1
+        min_dx=float("inf")
+        for xi in x:
+            if(dist[xi]>dist[s]+e[s][xi]):
+                dist[xi]=dist[s]+e[s][xi]
+                pre[xi]=s
 
-            if(min_dy>dist[yi]):
-                min_dy=dist[yi]
-                min_y=yi
+            if(min_dx>dist[xi]):
+                min_dx=dist[xi]
+                min_x=xi
 
-        s=min_y
+        s=min_x
 
     return dist,pre
+
+#例題のデータ
+edge=[[INF,2  ,5  ,6  ,INF],
+      [2  ,INF,1  ,INF,9  ],
+      [5  ,1  ,INF,INF,10 ],
+      [6  ,INF,INF,INF,4  ],
+      [INF,9  ,10 ,4  ,INF]]
+print(dijkstra(0, 5, edge))
+```
+
+実行結果
+
+```
+([0, 2, 3, 6, 10], [0, 0, 1, 0, 3])
 ```
