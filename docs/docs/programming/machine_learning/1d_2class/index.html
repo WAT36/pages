@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.abc8ccb468a22bd43024beb2bb6dfc96fb5b30e6be2aab2333ed6f7e6e3812d6.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.89d5fcf99f1e4b954dd60c803d8bc76e174bf57732bec557bff63efbca6aa97e.js"></script>
 
 
 
@@ -137,10 +137,170 @@ https://github.com/alex-shpak/hugo-book
 <p>今回は２クラスへの分類なので、t<sub>n</sub>は0か1のみをとる。</p>
 
 <p>t<sub>n</sub>=0の時はクラスA、1の時はクラスBを指すものとする。分類問題の時、このt<sub>n</sub>をクラス、カテゴリ、またはラベルと呼ぶ。</p>
+
+<p>入力データx、目標データtを行列で表すと以下のようになる。</p>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+<p class="katex">
+  $$ 
+  {\bf x} = \left[
+    \begin{array}{cccc}
+      x_{0} \\
+      x_{1} \\
+      \vdots \\
+      x_{N-1}
+    \end{array}
+  \right]
+  ,
+    {\bf t} = \left[
+    \begin{array}{cccc}
+      t_{0} \\
+      t_{1} \\
+      \vdots \\
+      t_{N-1}
+    \end{array}
+  \right]
+ $$
+</p>
+
+
+
+<p>例として、以下の温泉の温度とお客さんがいい湯と感じたか否かを答えた回答データ　を考えてみる。</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">温泉の温度</th>
+<th align="left">いい湯(=1)か否(=0)か</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">35.9</td>
+<td align="left">0</td>
+</tr>
+
+<tr>
+<td align="left">42.3</td>
+<td align="left">1</td>
+</tr>
+
+<tr>
+<td align="left">36.6</td>
+<td align="left">0</td>
+</tr>
+
+<tr>
+<td align="left">40.0</td>
+<td align="left">1</td>
+</tr>
+
+<tr>
+<td align="left">42.1</td>
+<td align="left">1</td>
+</tr>
+
+<tr>
+<td align="left">37.8</td>
+<td align="left">1</td>
+</tr>
+
+<tr>
+<td align="left">38.9</td>
+<td align="left">0</td>
+</tr>
+
+<tr>
+<td align="left">41.1</td>
+<td align="left">1</td>
+</tr>
+
+<tr>
+<td align="left">39.2</td>
+<td align="left">1</td>
+</tr>
+
+<tr>
+<td align="left">40.2</td>
+<td align="left">0</td>
+</tr>
+
+<tr>
+<td align="left">43.3</td>
+<td align="left">1</td>
+</tr>
+
+<tr>
+<td align="left">39.3</td>
+<td align="left">1</td>
+</tr>
+
+<tr>
+<td align="left">37.2</td>
+<td align="left">0</td>
+</tr>
+
+<tr>
+<td align="left">39.5</td>
+<td align="left">1</td>
+</tr>
+
+<tr>
+<td align="left">40.4</td>
+<td align="left">1</td>
+</tr>
+
+<tr>
+<td align="left">41.5</td>
+<td align="left">0</td>
+</tr>
+
+<tr>
+<td align="left">35.1</td>
+<td align="left">0</td>
+</tr>
+
+<tr>
+<td align="left">44.1</td>
+<td align="left">1</td>
+</tr>
+
+<tr>
+<td align="left">43.7</td>
+<td align="left">1</td>
+</tr>
+
+<tr>
+<td align="left">39.4</td>
+<td align="left">0</td>
+</tr>
+</tbody>
+</table>
+
+<p>このデータから何度を境にいい湯か否かが分かれるかを求めてみよう。</p>
+
+<p>念のため、上記データをプロットすると以下のようになる（コードはこちら）</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_26.png" width=50%></p>
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/3b72d04b93795099cfa89793523d5946960c23e9" title='Last modified May 15, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 15, 2020
+    </a>
+  </div>
   
 </div>
 
