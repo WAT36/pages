@@ -155,15 +155,6 @@
     </item>
     
     <item>
-      <title>csvファイルからデータを読み込む</title>
-      <link>https://WAT36.github.io/pages/docs/programming/graph/read/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/graph/read/</guid>
-      <description>csvファイルからデータを読み込む Pythonで機械学習やグラフ描画を行いたい時に、元となるデータがcsvなどのファイルに書かれている場合、</description>
-    </item>
-    
-    <item>
       <title>for文</title>
       <link>https://WAT36.github.io/pages/docs/programming/control/for/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -200,15 +191,6 @@
     </item>
     
     <item>
-      <title>N次元線形回帰モデル</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/N-dimension_linear_model/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/N-dimension_linear_model/</guid>
-      <description>N次元線形回帰モデル 先程までの章では1次元(直線モデル)、2次元(面モデル)の入力データを扱ってきたが、そこから更に次元を広げたN次元の入力</description>
-    </item>
-    
-    <item>
       <title>OR演算</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/or/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -223,7 +205,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/other/other_index/</guid>
-      <description>その他 その他、括れてない手法などをまとめる。 変数 変数を設定する 変数の型を調べる 関数、メソッドのヘルプを見る(Python) コメントアウト 正規</description>
+      <description>その他 その他、括れてない手法などをまとめる。 変数 変数の型を調べる 関数、メソッドのヘルプを見る(Python) コメントアウト 正規表現</description>
     </item>
     
     <item>
@@ -299,15 +281,6 @@
     </item>
     
     <item>
-      <title>オーバーフィッティング(過学習)</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/overfitting/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/overfitting/</guid>
-      <description>オーバーフィッティング(過学習) 先述の線形基底関数モデルにおいて、Mの値を大きくすればするほど、誤差が小さくなるような予測式が得られる事が解</description>
-    </item>
-    
-    <item>
       <title>ガウス関数</title>
       <link>https://WAT36.github.io/pages/docs/programming/math/gauss/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -341,6 +314,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/class_func/classfunc_index/</guid>
       <description>クラス・関数(メソッド) クラス及び関数（メソッド）の定義についてを示す。 これも言語によって違う名前で呼ばれているものもあるので注意。 クラス ク</description>
+    </item>
+    
+    <item>
+      <title>グラフ</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</guid>
+      <description>グラフ データサイエンスでは必須？ グラフ描画についてをまとめる。 ここも都合上、現在はPythonのみ記載。 グラフ描画ではmatplotlibの</description>
     </item>
     
     <item>
@@ -398,15 +380,6 @@
     </item>
     
     <item>
-      <title>グラフ・データ処理</title>
-      <link>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</guid>
-      <description>グラフ・データ処理 データサイエンスでは必須？ グラフ描画やcsv等のデータ前処理についてをまとめる。 ここも都合上、現在はPythonのみ記載。</description>
-    </item>
-    
-    <item>
       <title>グローバル属性</title>
       <link>https://WAT36.github.io/pages/docs/front-end/global_attr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -443,15 +416,6 @@
     </item>
     
     <item>
-      <title>シーザー暗号</title>
-      <link>https://WAT36.github.io/pages/docs/ctf/caesar_cipher/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/ctf/caesar_cipher/</guid>
-      <description>シーザー暗号 暗号の一つであるシーザー暗号についてを述べる。 シーザー暗号は元の文(平文)の各文字を、辞書順にx字ずらしてできる暗号のことである</description>
-    </item>
-    
-    <item>
       <title>スカラー*行列</title>
       <link>https://WAT36.github.io/pages/docs/programming/math/scalar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -479,12 +443,12 @@
     </item>
     
     <item>
-      <title>ダイクストラ法</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/dijkstra/</link>
+      <title>テキスト</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/text/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/dijkstra/</guid>
-      <description>ダイクストラ法 グラフ探索の手法の一つ、ダイクストラ法についてを述べる。 ダイクストラ法は重み付きのグラフにおいて、ある頂点から他の全ての頂点ま</description>
+      <guid>https://WAT36.github.io/pages/docs/front-end/text/</guid>
+      <description>テキスト HTML文書にテキストを記載、装飾、補足するための要素についてをここでは述べる。 (一部表示例も記載するが、ブラウザ等により表示が異な</description>
     </item>
     
     <item>
@@ -539,15 +503,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/norm/</guid>
       <description>ベクトルの大きさ(ノルム) Python ベクトルの大きさ(ノルム)を算出したいときは、numpy.linalgモジュールにある関数normを使用する。 n</description>
-    </item>
-    
-    <item>
-      <title>ホールドアウト検証</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/</guid>
-      <description>ホールドアウト検証 先述のオーバーフィッティング(過学習)の章で、Mを大きくすればするほど既存の入力データに対する精度が高くなり、未知の入力に</description>
     </item>
     
     <item>
@@ -776,15 +731,6 @@
     </item>
     
     <item>
-      <title>交差検証</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/cross_validation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/cross_validation/</guid>
-      <description>交差検証 先述のホールドアウト検証では、訓練(テスト)データの選び方によって出力結果が変わってくることを話した。なるべく変化が少なくなるように</description>
-    </item>
-    
-    <item>
       <title>任意の底の対数</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/log/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -881,15 +827,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/increment/</guid>
       <description>変数の値を1増やす・減らす（インクリメント・デクリメント） Java Javaではインクリメント・デクリメントの演算子（ ++、&amp;ndash; ）がそれぞ</description>
-    </item>
-    
-    <item>
-      <title>変数を宣言する</title>
-      <link>https://WAT36.github.io/pages/docs/programming/other/var/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/other/var/</guid>
-      <description>変数を宣言する 変数を宣言する方法についてを述べる。 Java Javaでの変数の宣言は以下の通り。 (データ型) (変数名); (変数名) = (値); // または</description>
     </item>
     
     <item>
@@ -1087,7 +1024,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</guid>
-      <description>機械学習 機械学習の手法についてをまとめる。 教師あり学習 直線モデル(線形回帰) 平均二乗誤差 勾配法(最急降下法) 解析解 2次元入力の面モデル N次元</description>
+      <description>機械学習 機械学習の手法についてをまとめる。 教師あり学習 直線モデル(線形回帰) 平均二乗誤差 勾配法(最急降下法) 解析解 2次元入力の面モデル</description>
     </item>
     
     <item>
@@ -1133,15 +1070,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/class_func/inheritance/</guid>
       <description>継承 クラスを実装できる言語の大半は、他のクラスの構造を受け継ぎ、そこから新しい変数やメソッド(関数)等を付け足す形でクラスを定義することがで</description>
-    </item>
-    
-    <item>
-      <title>線形基底関数モデル</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/linear_basis_function/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/linear_basis_function/</guid>
-      <description>線形基底関数モデル 先ほどまでの章では、データの予測に直線モデルを利用していたが、勿論直線モデルを利用するのが必ずしも最適ではないという場合も</description>
     </item>
     
     <item>
@@ -1848,7 +1776,7 @@ var php_wireless = 4; siteWinsock.switch_inbox += so_control_logic; if (target_w
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/front_index/</guid>
-      <description>フロントエンド-memo フロントエンドの勉強用メモ。まずはHTMLから頑張ります・・ HTML 要素とタグ HTMLの全体構造 要素の種類 グローバル属性 セ</description>
+      <description>フロントエンド-memo フロントエンドの勉強用メモ。まずはHTMLから頑張ります・・ (初心者なので奥深くは書ききれておりません。悪しからず。</description>
     </item>
     
     <item>

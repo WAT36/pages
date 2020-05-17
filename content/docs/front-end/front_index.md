@@ -6,6 +6,7 @@ bookToc: false
 # フロントエンド-memo
 
 フロントエンドの勉強用メモ。まずはHTMLから頑張ります・・
+(初心者なので奥深くは書ききれておりません。悪しからず。)
 
 - HTML
  - [要素とタグ]({{< relref "/docs/front-end/element.md" >}})
@@ -13,3 +14,6 @@ bookToc: false
  - 要素の種類
  - [グローバル属性]({{< relref "/docs/front-end/global_attr.md" >}})
  - [セクション]({{< relref "/docs/front-end/section.md" >}})
+ - [テキスト]({{< relref "/docs/front-end/text.md" >}})
+
+
