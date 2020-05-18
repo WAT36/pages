@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.89d5fcf99f1e4b954dd60c803d8bc76e174bf57732bec557bff63efbca6aa97e.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.eebbad5e1abf002ef869c1cfff6d269118dc08b64cdf54cf5cfc5f7cfa53c98e.js"></script>
 
 
 
@@ -285,11 +285,27 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 
-<p>このデータから何度を境にいい湯か否かが分かれるかを求めてみよう。</p>
-
-<p>念のため、上記データをプロットすると以下のようになる（コードはこちら）</p>
+<p>念のため、上記データをプロットすると以下のようになる。（コードは<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/1d2class.py">こちら</a>）</p>
 
 <p><img src="https://WAT36.github.io/pages/img/datascience/Figure_26.png" width=50%></p>
+
+<p>このデータと図より、いい湯か否かが分けるには何度を境界にすれば良いかを考えてみよう。</p>
+
+<h2 id="直線モデルで分類できる">直線モデルで分類できる？</h2>
+
+<p>まずは前章まで行なっていた回帰分析として、直線モデルを使えないか？と考えてみる。</p>
+
+<p>データを直線モデルにフィットさせ、ちょうど中間であるt=0.5の時のxを境界としてみなせないだろうか、と想定してみる。</p>
+
+<p>直線モデルを適用してみると下図の通り。(コードはこちら)</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_27.png" width=50%></p>
+
+<p>上図において黒線がデータをフィットさせた直線モデル、赤点線が直線モデルからt=0.5の時のxを元に作成した決定境界である。</p>
+
+<p>これにより決定境界を定められないか？と考えるが、データの分散が大きい場合（極端に大きい値や小さい値を持つデータなどがあった場合）、この方法を適用すると決定境界も大幅に偏ってしまうという懸念点があり、あまり望ましくないと考える。</p>
+
+<p>では、どのような方法を用いるのが良いのだろうか。</p>
 </article>
 
       
@@ -297,8 +313,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/3b72d04b93795099cfa89793523d5946960c23e9" title='Last modified May 15, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 15, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/8b32dc6303d5e2920cb6b9e87e2f56b3385d1c9d" title='Last modified May 17, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 17, 2020
     </a>
   </div>
   
