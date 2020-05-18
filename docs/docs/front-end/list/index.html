@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Union-Find木 | WAT Notes</title>
+<title>リスト | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -54,7 +54,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fprocon\2funion-find\2f "] {
+  nav ul a[href$="\2f docs\2f front-end\2flist\2f "] {
       color: #004ed0;
   }
   </style>
@@ -118,59 +118,43 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>Union-Find木</strong>
+  <strong>リスト</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="union-find木">Union-Find木</h1>
+<h1 id="リスト">リスト</h1>
 
-<p>Union-Find木について。</p>
+<p>HTML文書にリストを記載するための要素についてをここでは述べる。</p>
 
-<p>Union-Find木は要素のグループ分けを管理するデータ構造である。
-1つ以上の要素を含むグループが何個かあった時、次の事が行える。</p>
+<h2 id="ul要素">ul要素</h2>
 
+<p>ul要素は、箇条書きリストを作成するための要素である。一つの箇条書きリストをul要素で表し、リスト内の項目一つを<strong>li要素</strong>で表す。</p>
+
+<pre><code>&lt;p&gt;やることリスト&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;部屋の掃除&lt;/li&gt;
+    &lt;li&gt;ゴミ出し&lt;/li&gt;
+    &lt;li&gt;ジョギング&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p>やることリスト</p>
 <ul>
-<li>2つのグループをマージする</li>
-<li>2つの要素が同じグループに含まれているか判定する</li>
+    <li>部屋の掃除</li>
+    <li>ゴミ出し</li>
+    <li>ジョギング</li>
 </ul>
-
-<p>注意としては、グループを分割することはできないという事。<br />
-例としては、以下のような図になる。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/procon/union-find1.png" alt="Union-Find木 例" /></p>
-
-<p>Union-find木は特に根や次数等は決まっておらず、グループ内の要素がすべて含まれていればどのような木構造でも良い。</p>
-
-<h2 id="初期化">初期化</h2>
-
-<p>まずは要素を用意し、それぞれの要素のノードを作る。初期の状態ではこのノードがそれぞれグループを表す。この段階ではまだ要素が1つだけだが、これでも一応木を表す。以下の図にその例を示す。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/procon/union-find2.png" alt="ノード(要素)" /></p>
-
-<h2 id="2グループのマージ">2グループのマージ</h2>
-
-<p>2つのグループ(木)をマージするには、片方のグループ(木)の根の下にもう片方のグループ(木)の根を結び付ける。以下例。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/procon/union-find3.png" alt="グループ(木)のマージ例" /></p>
-
-<h2 id="2要素が同一グループにいることの判定">2要素が同一グループにいることの判定</h2>
-
-<p>ある2つの要素が同じグループにいることを判定するには、それぞれの要素がいるグループ(木)の根の要素が同じであるかで判定できる。以下がその例である。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/procon/union-find4.png" alt="要素の同一グループ判定例、２要素の根が同じなら同一グループ" /></p>
+<hr></p>
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/cc10d452d7c5a606c8591ad3816044a70427ed41" title='Last modified Mar 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 7, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
@@ -179,6 +163,17 @@ https://github.com/alex-shpak/hugo-book
     </div>
     
   
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#リスト">リスト</a>
+<ul>
+<li><a href="#ul要素">ul要素</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
 
 
 

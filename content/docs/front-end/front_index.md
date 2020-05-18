@@ -15,5 +15,6 @@ bookToc: false
  - [グローバル属性]({{< relref "/docs/front-end/global_attr.md" >}})
  - [セクション]({{< relref "/docs/front-end/section.md" >}})
  - [テキスト]({{< relref "/docs/front-end/text.md" >}})
+ - [リスト]({{< relref "/docs/front-end/list.md" >}})
 
 
