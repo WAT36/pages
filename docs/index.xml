@@ -1451,15 +1451,6 @@
     </item>
     
     <item>
-      <title>１次元入力２クラス分類</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class/</guid>
-      <description>１次元入力２クラス分類 先述までに述べた回帰問題は、入力データから具体的な連続した数値を予測するものであったが、ここからの分類問題は入力データ</description>
-    </item>
-    
-    <item>
       <title>２進数に変換して表示</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/bin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

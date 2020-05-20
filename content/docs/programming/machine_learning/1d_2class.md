@@ -4,6 +4,7 @@ weight: 1
 # bookFlatSection: false
 # bookShowToC: true
 bookToc: false
+draft: true
 ---
 
 # １次元入力２クラス分類
