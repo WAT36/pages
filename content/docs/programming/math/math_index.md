@@ -36,4 +36,4 @@ bookToc: false
  - [ガウス関数]({{< relref "/docs/programming/math/gauss.md" >}})
  - ガウス関数(2次元)
 - 確率・統計
- - 条件付き確率
+ - [条件付き確率]({{< relref "/docs/programming/math/conditional_probability.md" >}})
