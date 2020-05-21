@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.6d8de1227f4cd8c9724fa7b512e3b0938f68be197cb864a8e84ebb2d0986e5ee.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.a950862aec3d7202446864a3c9d0ab1dd170747ca9cbbdfb48f3f675b367814a.js"></script>
 
 
 
@@ -125,10 +125,45 @@ https://github.com/alex-shpak/hugo-book
 <article class="markdown">
 
 <h1 id="条件付き確率">条件付き確率</h1>
+
+<p>私は高校で条件付き確率を学んでこなかったゆとり世代なので、改めて条件付き確率において書き記していく。(プログラム的な要素は少なめの予定)</p>
+
+<p>事象A,Bにおいて、ある事象Bが起こったという条件下での事象Aが起こる確率のことを、Bを<strong>条件</strong>とするAの<strong>条件付き確率</strong>と呼び、P(A|B)と表す。</p>
+
+<p>P(A|B)の求め方は、Bが起こった中のうちAが起こりうる確率であるから、以下の式で表される。</p>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+<p class="katex">
+  $$ 
+\tag{1}  P(A|B) = \frac{ P( A \cap B ) }{ P(B) } 
+ $$
+</p>
+
+
+
+<h2 id="例題">例題</h2>
+
+<p><img src="https://WAT36.github.io/pages/img/math/conditional_probability1.png" width=20%></p>
+
+<p>袋の中に1,2,3の数字が書かれた赤玉と白玉の計６個の玉が入っている。</p>
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/b77fd021dd0816c98256a4c5609cae999123d3fa" title='Last modified May 20, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 20, 2020
+    </a>
+  </div>
   
 </div>
 
