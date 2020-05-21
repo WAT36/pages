@@ -776,6 +776,15 @@
     </item>
     
     <item>
+      <title>ルビ</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/ruby/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/ruby/</guid>
+      <description>ルビ HTML文書にルビ(ふりがな)を記載するための要素についてをここでは述べる。 ruby要素 ruby要素は文字にルビを振る要素であり、実際に</description>
+    </item>
+    
+    <item>
       <title>一変数関数f(x)をグラフに描画する</title>
       <link>https://WAT36.github.io/pages/docs/programming/graph/func_plot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -16,5 +16,6 @@ bookToc: false
  - [セクション]({{< relref "/docs/front-end/section.md" >}})
  - [テキスト]({{< relref "/docs/front-end/text.md" >}})
  - [リスト]({{< relref "/docs/front-end/list.md" >}})
+ - [ルビ]({{< relref "/docs/front-end/ruby.md" >}})
 
 
