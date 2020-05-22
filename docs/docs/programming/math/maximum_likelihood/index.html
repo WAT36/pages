@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ベクトルの大きさ(ノルム) | WAT Notes</title>
+<title>最尤推定 | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -54,7 +54,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmath\2fnorm\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fmath\2fmaximum_likelihood\2f "] {
       color: #004ed0;
   }
   </style>
@@ -118,61 +118,17 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>ベクトルの大きさ(ノルム)</strong>
+  <strong>最尤推定</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="ベクトルの大きさ-ノルム">ベクトルの大きさ(ノルム)</h1>
-
-
-
-
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-norm" style="display: none;" id="tabs-norm-0" checked="checked" />
-  <label for="tabs-norm-0">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>ベクトルの大きさ(ノルム)を算出したいときは、numpy.linalgモジュールにある関数<strong>norm</strong>を使用する。</p>
-
-<p><code>numpy.linalg.norm(ベクトル)</code></p>
-
-<p>実行例を以下に示す。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
-<span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>])
-<span style="color:#f92672">&gt;&gt;&gt;</span> a
-array([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>])
-<span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> np<span style="color:#f92672">.</span>linalg<span style="color:#f92672">.</span>norm(a)
-<span style="color:#ae81ff">2.23606797749979</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> b<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>])
-<span style="color:#f92672">&gt;&gt;&gt;</span> b
-array([<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>])
-<span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> np<span style="color:#f92672">.</span>linalg<span style="color:#f92672">.</span>norm(b)
-<span style="color:#ae81ff">5.0</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
-  </div>
-
-</div>
-
+<h1 id="最尤推定">最尤推定</h1>
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/095ad6abbab074627374431d465b89be1c18c8f0" title='Last modified Feb 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Feb 5, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
