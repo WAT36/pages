@@ -1079,7 +1079,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/maximum_likelihood/</guid>
-      <description>最尤推定 例えばコインを投げて表が出た時を１、裏が出た時を０と設定した時、n回目に投げた時の結果をTn、及び行列Tを以下のように設定する。 $$ \begin{aligned}</description>
+      <description>最尤推定 当たりとハズレがそれぞれ何個か入ったくじがあり、当たりが出た時を１、ハズレが出た時を０と設定する。 この時、n回目にくじを引いた時の結</description>
     </item>
     
     <item>
