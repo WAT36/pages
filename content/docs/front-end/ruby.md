@@ -42,8 +42,9 @@ rtc要素は複数のrt要素をグループ化してまとめる要素である
 
 ```
 <ruby>
-    <rp>(</rp><rt>ば</rt><rt>ら</rt><rp>)</rp>
-    <rb>薔</rb><rb>薇</rb>
+  <rb>薔</rb> <rp>(</rp><rt>ば</rt><rp>)</rp>
+  <rb>薇</rb> <rp>(</rp><rt>ら</rt><rp>)</rp>
+  <rtc><rp>(</rp><rt>ba</rt><rt>ra</rt><rp>)</rp></rtc>
 </ruby>
 ```
 
@@ -51,10 +52,10 @@ rtc要素は複数のrt要素をグループ化してまとめる要素である
 
 <hr>
 <ruby>
-    <rp>(</rp><rt>ば</rt><rt>ら</rt><rp>)</rp>
-    <rb>薔</rb><rb>薇</rb>
+  <rb>薔</rb> <rp>(</rp><rt>ば</rt><rp>)</rp>
+  <rb>薇</rb> <rp>(</rp><rt>ら</rt><rp>)</rp>
+  <rtc><rp>(</rp><rt>ba</rt><rt>ra</rt><rp>)</rp></rtc>
 </ruby>
 <hr>
 
-例から見てわかる通り、ルビは字の上にも下にも振ることができる。振りたい位置によって各要素の順番を変えていく。
 
