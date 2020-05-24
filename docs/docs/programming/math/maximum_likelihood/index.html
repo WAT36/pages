@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.680b1abb55a0702a4d59eb4f3cdef22e6cdd7f5b3517c339b26ee7460061b9ab.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.f46eef0b48f9c2c5b5da2f8d450eb59e6804592054d346b748da06549326f8e4.js"></script>
 
 
 
@@ -141,7 +141,7 @@ https://github.com/alex-shpak/hugo-book
 <p class="katex">
   $$ 
 \begin{aligned}
-  {\bf T}    &=  \left[
+\tag{1}  {\bf T}    &=  \left[
                             \begin{array}{ccc}
                                 T_{1} & \cdots & T_{N} 
                             \end{array}
@@ -162,7 +162,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p class="katex">
   $$ 
-L(p) = (1-p)^4  p 
+\tag{2} L(p) = (1-p)^4  p 
  $$
 </p>
 
@@ -188,7 +188,7 @@ L(p) = (1-p)^4  p
 
 <p class="katex">
   $$ 
-  \frac{dL(p)}{dp} = (1-p)^3 (1-5p)
+\tag{3}  \frac{dL(p)}{dp} = (1-p)^3 (1-5p)
  $$
 </p>
 
@@ -199,6 +199,46 @@ L(p) = (1-p)^4  p
 <p>念のため、L(p)を図で表すと以下のようになる。この図でもp=0.2の時にL(p)が最大になることは明らかである。</p>
 
 <p><img src="https://WAT36.github.io/pages/img/math/maximum_likelihood1.png" width=50%></p>
+
+<p>これより、求めるpの値は0.2である。</p>
+
+<h2 id="対数尤度">対数尤度</h2>
+
+<p>先ほどはL(p)を微分することで求めたが、対数を取ることで計算が楽になる場合もあるので、その計算方法も示す。</p>
+
+<p>式(2)において、両辺の対数を取ると以下のようになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{4}  \log L(p) = 4 \log (1-p) + \log p
+ $$
+</p>
+
+
+
+<p>この式(4)において、log L(p)を最大にするpを求めれば、そのpはL(p)を最大にするpにもなるので、ここからpを求めるのも良い。</p>
+
+<p>式(4)のように、対数をとった尤度を<strong>対数尤度</strong>という。</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{5}  \frac{d log L(p)}{dp}    
+            &=  \frac{d}{dp} [ 4 \log (1-p) + \log p ] \\
+            &=  \frac{-4}{1-p} + \frac{1}{p} \\
+            &=  \frac{1-5p}{(1-p)p} = 0 \\
+            &\Leftrightarrow  p = \frac{1}{5}
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>この方法でも、p = <sup>1</sup>&frasl;<sub>5</sub> (0.2) と求められる。</p>
 </article>
 
       
@@ -206,7 +246,7 @@ L(p) = (1-p)^4  p
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/b072e75b0b8690f3dfd6207b5994c365c227cf20" title='Last modified May 24, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/75eed0950c28390440e1bd1f6a89eda61b5769c1" title='Last modified May 24, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 24, 2020
     </a>
   </div>

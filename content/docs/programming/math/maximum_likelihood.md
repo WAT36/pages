@@ -15,7 +15,7 @@ bookToc: false
 
 {{< katex  >}}
 \begin{aligned}
-  {\bf T}    &=  \left[
+\tag{1}  {\bf T}    &=  \left[
                             \begin{array}{ccc}
                                 T_{1} & \cdots & T_{N} 
                             \end{array}
@@ -30,7 +30,7 @@ bookToc: false
 その確率をL(p)とすると、
 
 {{< katex  >}}
-L(p) = (1-p)^4  p 
+\tag{2} L(p) = (1-p)^4  p 
 {{< /katex >}}
 
 となる。
@@ -50,7 +50,7 @@ L(p) = (1-p)^4  p
 L(p)をpで微分すると以下のようになる。
 
 {{< katex  >}}
-  \frac{dL(p)}{dp} = (1-p)^3 (1-5p)
+\tag{3}  \frac{dL(p)}{dp} = (1-p)^3 (1-5p)
 {{< /katex >}}
 
 この式より、p=0.2が最尤推定値になり、およびその最尤推定量は0.08192となる。
@@ -59,4 +59,31 @@ L(p)をpで微分すると以下のようになる。
 
 <img src="/img/math/maximum_likelihood1.png" width=50%>
 
+これより、求めるpの値は0.2である。
 
+
+## 対数尤度
+
+先ほどはL(p)を微分することで求めたが、対数を取ることで計算が楽になる場合もあるので、その計算方法も示す。
+
+式(2)において、両辺の対数を取ると以下のようになる。
+
+{{< katex  >}}
+\tag{4}  \log L(p) = 4 \log (1-p) + \log p
+{{< /katex >}}
+
+この式(4)において、log L(p)を最大にするpを求めれば、そのpはL(p)を最大にするpにもなるので、ここからpを求めるのも良い。
+
+式(4)のように、対数をとった尤度を**対数尤度**という。
+
+{{< katex  >}}
+\begin{aligned}
+\tag{5}  \frac{d log L(p)}{dp}    
+            &=  \frac{d}{dp} [ 4 \log (1-p) + \log p ] \\
+            &=  \frac{-4}{1-p} + \frac{1}{p} \\
+            &=  \frac{1-5p}{(1-p)p} = 0 \\
+            &\Leftrightarrow  p = \frac{1}{5}
+\end{aligned}
+{{< /katex >}}
+
+この方法でも、p = 1/5 (0.2) と求められる。
