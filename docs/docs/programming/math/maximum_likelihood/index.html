@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.d3e0efa38d8f313815a8f8d302cb20dfd1cbb94bd939527537c566a9903c23c3.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.680b1abb55a0702a4d59eb4f3cdef22e6cdd7f5b3517c339b26ee7460061b9ab.js"></script>
 
 
 
@@ -178,9 +178,27 @@ L(p) = (1-p)^4  p
 
 <p>ここで、<strong>最尤法</strong>という方法を用いて求めることにしてみよう。これは尤度関数を最大にするものを求める推定量とするというものである。</p>
 
-<p>今回の例にあてはめてみると、L(p)を最大にするようなpを求める。</p>
-
 <p>また、このような尤度関数L(p)を最大にするようなpのことを<strong>最尤推定値</strong>、それにより得られる関数の値を<strong>最尤推定量</strong>という。</p>
+
+<p>今回の例にあてはめてみると、L(p)を最大にするような最尤推定値pを求める。では、そのようなpを求めてみよう。</p>
+
+<p>L(p)をpで微分すると以下のようになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+  \frac{dL(p)}{dp} = (1-p)^3 (1-5p)
+ $$
+</p>
+
+
+
+<p>この式より、p=0.2が最尤推定値になり、およびその最尤推定量は0.08192となる。</p>
+
+<p>念のため、L(p)を図で表すと以下のようになる。この図でもp=0.2の時にL(p)が最大になることは明らかである。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/math/maximum_likelihood1.png" width=50%></p>
 </article>
 
       
@@ -188,8 +206,8 @@ L(p) = (1-p)^4  p
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/df5196b1452c76190ed2ba4f60c436d611fa5362" title='Last modified May 22, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 22, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/b072e75b0b8690f3dfd6207b5994c365c227cf20" title='Last modified May 24, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 24, 2020
     </a>
   </div>
   
