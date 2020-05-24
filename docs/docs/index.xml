@@ -1137,6 +1137,15 @@
     </item>
     
     <item>
+      <title>画像・動画・音声</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/img/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/img/</guid>
+      <description>画像・動画・音声 画像・動画・音声についての要素を述べる。</description>
+    </item>
+    
+    <item>
       <title>直線モデル(線形回帰)</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/linear_model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -17,5 +17,6 @@ bookToc: false
  - [テキスト]({{< relref "/docs/front-end/text.md" >}})
  - [リスト]({{< relref "/docs/front-end/list.md" >}})
  - [ルビ]({{< relref "/docs/front-end/ruby.md" >}})
+ - [画像・動画・音声]({{< relref "/docs/front-end/img.md" >}})
 
 
