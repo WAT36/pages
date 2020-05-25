@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>8進数に変換して表示 | WAT Notes</title>
+<title>ロジスティック回帰モデル | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -54,7 +54,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fnumber\2foct\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2flogistic_regression\2f "] {
       color: #004ed0;
   }
   </style>
@@ -118,72 +118,17 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>8進数に変換して表示</strong>
+  <strong>ロジスティック回帰モデル</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="8進数に変換して表示">8進数に変換して表示</h1>
-
-<p>数値を8進数に変換して表示する方法についてを示す。</p>
-
-
-
-
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-oct" style="display: none;" id="tabs-oct-0" checked="checked" />
-  <label for="tabs-oct-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>JavaではラッパークラスIntegerに数値を8進数に変換するメソッド<strong>toOctalString()</strong>があるのでそれを利用する。<br />
-<code>public static String toOctalString(int i)</code><br />
-戻り値はStringであり、引数の数値を8進数に表記したものが出力される。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-        <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> 10;
-
-        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(Integer.<span style="color:#a6e22e">toOctalString</span>(a));
-    }
-}</code></pre></div>
-<p>実行結果</p>
-
-<pre><code>&gt; java Main 
-12
-</code></pre>
-
-  </div>
-
-  <input type="radio" name="tabs-oct" style="display: none;" id="tabs-oct-1"  />
-  <label for="tabs-oct-1">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>pythonに関しては、数値を8進数に変換して表示する組み込み関数<strong>oct()</strong>がある。<br />
-表示される文字はプレフィックスとして&rdquo;0o&rdquo;が頭について表示される。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> oct(a)
-<span style="color:#e6db74">&#39;0o12&#39;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
-  </div>
-
-</div>
-
+<h1 id="ロジスティック回帰モデル">ロジスティック回帰モデル</h1>
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f3dcb4ba0aed4e8c96315c519011ed407623594e" title='Last modified Jan 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 5, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 

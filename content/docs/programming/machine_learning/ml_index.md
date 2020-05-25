@@ -24,4 +24,4 @@ bookToc: false
      - [交差検証]({{< relref "/docs/programming/machine_learning/cross_validation.md" >}})
  - 分類
      - １次元入力２クラス分類
-
+     - ロジスティック回帰モデル
