@@ -26,7 +26,7 @@ img要素は画像を表示させたい時、及びそれが利用できない�
         <td style="border:none;">・</td>
         <td style="border:none;">alt</td>
         <td style="border:none;">　・・・　</td>
-        <td style="border:none;">画像が利用できない場合に代わりに使用されるテキスト</td>
+        <td style="border:none;">画像が利用できない場合に代わりに使用されるテキスト<br>(ブラウザによる)</td>
     </tr>
     <tr>
         <td style="border:none;">・</td>
@@ -41,3 +41,25 @@ img要素は画像を表示させたい時、及びそれが利用できない�
         <td style="border:none;">高さ(整数値)</td>
     </tr>
 </table>
+
+使用例
+
+```
+<img src="/img/front-end/img.jpg" width="100" height="100">
+
+<img src="/img/front-end/img.jpg" width="50" height="50">
+
+<img src="/img/front-end/img.jpg" width="100" height="100" alt="宗谷岬、青空">
+```
+
+実行例
+
+<hr>
+<img src="/img/front-end/img.jpg" width="100" height="100">
+
+<img src="/img/front-end/img.jpg" width="50" height="50">
+
+<img src="/img/front-end/img.jpg" width="100" height="100" alt="宗谷岬、青空">
+<hr>
+
+
