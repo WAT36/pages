@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.edff0d74ede4709a4573fb14b851bad2b2a2187f9dae5f82197a90dfd63154d5.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.67e14f08a281ac80d115bb7e2da19b71356de8204ebad4adf64d4cc5c3723f5b.js"></script>
 
 
 
@@ -180,6 +180,28 @@ https://github.com/alex-shpak/hugo-book
 
 <p><img src="https://WAT36.github.io/pages/img/front-end/img.jpg" width="100" height="100" alt="宗谷岬、青空">
 <hr></p>
+
+<h2 id="picture要素">picture要素</h2>
+
+<p>picture要素はHTML5以降で追加された新しい要素で、複数のsource要素(後述)と一つのimg要素を取りまとめる要素である。これにより、最適なsource要素による画像、source要素が使えないブラウザではimg要素の画像が使われ、柔軟な画像の選定が行われる。</p>
+
+<pre><code>&lt;picture&gt;
+    &lt;source media=&quot;(min-width: 200em)&quot; srcset=&quot;/img/front-end/img3.jpg&quot; title=&quot;img3.jpg&quot;&gt;
+    &lt;source media=&quot;(min-width: 100em)&quot; srcset=&quot;/img/front-end/img2.jpg&quot; title=&quot;img2.jpg&quot;&gt;
+    &lt;img src=&quot;/img/front-end/img.jpg&quot; width=&quot;50&quot; height=&quot;50&quot;&gt;
+&lt;/picture&gt;
+</code></pre>
+
+<p>実行例</p>
+
+<hr>
+
+<p><picture>
+    <source media="(min-width: 200em)" srcset="https://WAT36.github.io/pages/img/front-end/img3.jpg" title="img3.jpg">
+    <source media="(min-width: 100em)" srcset="https://WAT36.github.io/pages/img/front-end/img2.jpg" title="img2.jpg">
+    <img src="https://WAT36.github.io/pages/img/front-end/img.jpg" width="50" height="50">
+</picture>
+<hr></p>
 </article>
 
       
@@ -187,8 +209,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/1ef4427341b11ad5327888b55befce66a8a15626" title='Last modified May 24, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 24, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/ef40554ab08d31c9771d604efd3974f2077c2db1" title='Last modified May 25, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 25, 2020
     </a>
   </div>
   
@@ -206,6 +228,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#画像-動画-音声">画像・動画・音声</a>
 <ul>
 <li><a href="#img要素">img要素</a></li>
+<li><a href="#picture要素">picture要素</a></li>
 </ul></li>
 </ul>
 </nav>

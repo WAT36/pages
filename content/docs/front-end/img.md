@@ -63,3 +63,25 @@ img要素は画像を表示させたい時、及びそれが利用できない�
 <hr>
 
 
+
+## picture要素
+
+picture要素はHTML5以降で追加された新しい要素で、複数のsource要素(後述)と一つのimg要素を取りまとめる要素である。これにより、最適なsource要素による画像、source要素が使えないブラウザではimg要素の画像が使われ、柔軟な画像の選定が行われる。
+
+```
+<picture>
+    <source media="(min-width: 200em)" srcset="/img/front-end/img3.jpg" title="img3.jpg">
+    <source media="(min-width: 100em)" srcset="/img/front-end/img2.jpg" title="img2.jpg">
+    <img src="/img/front-end/img.jpg" width="50" height="50">
+</picture>
+```
+
+実行例
+
+<hr>
+<picture>
+    <source media="(min-width: 200em)" srcset="/img/front-end/img3.jpg" title="img3.jpg">
+    <source media="(min-width: 100em)" srcset="/img/front-end/img2.jpg" title="img2.jpg">
+    <img src="/img/front-end/img.jpg" width="50" height="50">
+</picture>
+<hr>
