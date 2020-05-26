@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.d6c889353682a5a513a04d2951c592e50281cd10e449b1f539af47aa523f6e91.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.e8c2b3a50c4b4116449f08703db055090e6f799abec2554ca50f249c8f890083.js"></script>
 
 
 
@@ -125,10 +125,59 @@ https://github.com/alex-shpak/hugo-book
 <article class="markdown">
 
 <h1 id="ロジスティック回帰モデル">ロジスティック回帰モデル</h1>
+
+<p>前述の１次元入力２クラス分類において、最適な決定境界を引くにはどうすれば良いのだろうか。</p>
+
+<p>方法の一つとして<strong>ロジスティック回帰モデル</strong>がある。</p>
+
+<p>ただし、これが利用できるのは入力データが<strong>ガウス分布</strong>によって生成された時である。</p>
+
+<p>なので、仮に前述の１次元入力２クラス分類で扱った入力データがガウス分布により生成されたデータであるとしよう。</p>
+
+<p>ロジスティック回帰モデルとは、以下の直線モデル(式(1))が与えられた時に、式(2)で表されるモデルである。</p>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{1}  y  &=  w_{0} x + w_{1} \\
+\tag{2}  y  &=  \sigma ( w_{0} x + w_{1} ) \\
+            &=  \frac{1}{1 + exp(-(w_{0} x + w_{1}))}
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>ここで,σ(x)はシグモイド関数であり、以下の式(3)で表される関数である。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{3}  y  =  \frac{1}{1+exp( x )}
+ $$
+</p>
+
+
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/26f712966f1f7494483b48fb14415a38cb3a317a" title='Last modified May 25, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 25, 2020
+    </a>
+  </div>
   
 </div>
 
