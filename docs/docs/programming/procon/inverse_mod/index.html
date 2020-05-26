@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>python | WAT Notes</title>
+<title>合同式(mod)・逆元 | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -19,7 +19,6 @@
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 
 
-<link rel="alternate" type="application/rss+xml" href="https://WAT36.github.io/pages/tags/python/index.xml" title="WAT Notes" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -55,7 +54,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2ftags\2fpython\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fprocon\2finverse_mod\2f "] {
       color: #004ed0;
   }
   </style>
@@ -113,40 +112,81 @@ https://github.com/alex-shpak/hugo-book
 </script>
 
     </aside>
+
     <div class="book-page">
       <header class="flex align-center justify-between book-header">
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>python</strong>
+  <strong>合同式(mod)・逆元</strong>
 </header>
 
+      
+<article class="markdown">
 
-<section id="main">
-    <div class="tags_list">
-    <div class="tags_title"><span>python</span></div>
-    </div>
-    <ul id="list">
-        
-        <li>
-            2019-11-04
-             <a href="https://WAT36.github.io/pages/posts/queue_py/">キューとPythonでの実装モジュール「deque」</a>
-         </li>
-         
-        <li>
-            2019-09-28
-             <a href="https://WAT36.github.io/pages/posts/heapq/">優先度付きキュー（ヒープ）とPythonで実装するライブラリ「heapq」について</a>
-         </li>
-         
-        <li>
-            2019-09-14
-             <a href="https://WAT36.github.io/pages/posts/bisect/">Pythonで二分探索を行うライブラリ「bisect」</a>
-         </li>
-         
-     </ul>
-     <hr>
-     <a href="https://WAT36.github.io/pages/tags">Tags</a>
- </section>
+<h1 id="合同式-mod-逆元">合同式(mod)・逆元</h1>
+
+<p>最近知ったのだが、今は高校数学の課程に合同式が入っているそうだ。</p>
+
+<p>自分はゆとり世代ゆえ正式には学んでない（予備校で少し出てきたことはあったが曖昧）ので、改めて学び直してみた。</p>
+
+<p>同時に、競プロに関係する事項も。</p>
+
+<h2 id="合同式-mod">合同式(mod)</h2>
+
+<p>合同式とは以下の定義。</p>
+
+<hr>
+
+<p>a,bを整数、mを自然数とした時、</p>
+
+<p>「aをmで割った余り」と「bをmで割った余り」が等しいことを以下の式で表す。</p>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+<p class="katex">
+  $$ 
+a  \equiv b \pmod{m}
+ $$
+</p>
+
+
+
+<p>この式を<strong>合同式</strong>という。</p>
+
+<hr>
+
+<p>プログラム的に書くなら</p>
+
+<pre><code>a%m == b%m
+</code></pre>
+
+<p>である。</p>
+
+<h2 id="合同式の定理">合同式の定理</h2>
+
+<p>合同式には定理がいくつかある。</p>
+
+<h3 id="合同式の和">合同式の和</h3>
+
+<p>整数a,b,c,d、自然数mにおいて　a≡b (mod m) ,c≡d (mod m) の時、以下の式が成立する。</p>
+
+
+
+<p class="katex">
+  $$ 
+a+c  \equiv b+d \pmod{m}
+ $$
+</p>
+
+
+</article>
 
       
 <div class="book-footer justify-end">
@@ -157,6 +197,8 @@ https://github.com/alex-shpak/hugo-book
       
     </div>
     
+  
+
 
 
   </main>
@@ -175,4 +217,5 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
 </body>
+
 </html>
