@@ -32,7 +32,7 @@ a  \equiv b \pmod{m}
 
 <hr>
 
-プログラム的に書くなら 
+プログラムで表現するなら 
 
 ```
 a%m == b%m
@@ -52,5 +52,26 @@ a%m == b%m
 a+c  \equiv b+d \pmod{m}
 {{< /katex >}}
 
+### 合同式の差
 
+同様に、整数a,b,c,d、自然数mにおいて　a≡b (mod m) ,c≡d (mod m) の時、以下の式が成立する。
 
+{{< katex  >}}
+a-c  \equiv b-d \pmod{m}
+{{< /katex >}}
+
+### 合同式の積
+
+同様に、整数a,b,c,d、自然数mにおいて　a≡b (mod m) ,c≡d (mod m) の時、以下の式が成立する。
+
+{{< katex  >}}
+ac  \equiv bd \pmod{m}
+{{< /katex >}}
+
+特に、
+
+{{< katex  >}}
+ac  \equiv bc \pmod{m}
+{{< /katex >}}
+
+である。
