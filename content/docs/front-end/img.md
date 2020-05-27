@@ -85,3 +85,33 @@ picture要素はHTML5以降で追加された新しい要素で、複数のsourc
     <img src="/img/front-end/img.jpg" width="50" height="50">
 </picture>
 <hr>
+
+
+## source要素
+
+source要素は、picture要素・video要素・audio要素の子要素として使用する要素で、複数記述、及び使用条件を指定することで、ブラウザに適した形で画像等を表示できる。
+
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">media</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">画像の使用条件</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">srcset</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">候補画像等のパス</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">sizes</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">使用条件と画像の表示幅</td>
+    </tr>
+</table>
+
+
+（使用例はpicture要素のところを参照）
