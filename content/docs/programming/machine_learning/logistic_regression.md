@@ -19,20 +19,24 @@ bookToc: false
 ロジスティック回帰モデルとは、以下の直線モデル(式(1))が与えられた時に、式(2)で表されるモデルである。
 
 {{< katex  >}}
+\tag{1}  y  =  w_{0} x + w_{1} \\
+{{< /katex >}}
+
+{{< katex  >}}
 \begin{aligned}
-\tag{1}  y  &=  w_{0} x + w_{1} \\
 \tag{2}  y  &=  \sigma ( w_{0} x + w_{1} ) \\
-            &=  \frac{1}{1 + exp(-(w_{0} x + w_{1}))}
+            &=  \frac{1}{1 + \exp(-(w_{0} x + w_{1}))}
 \end{aligned}
 {{< /katex >}}
 
 ここで,σ(x)はシグモイド関数であり、以下の式(3)で表される関数である。
 
 {{< katex  >}}
-\tag{3}  y  =  \frac{1}{1+exp( x )}
+\tag{3}  y  =  \frac{1}{ 1 + \exp( -x )}
 {{< /katex >}}
 
 ロジスティック回帰モデルにより、出力は0~1の間に限定される。
 
 例として、y=x,y=2x+2,y=-x+1のロジスティック回帰モデルは以下のようになる。
 
+<img src="/img/datascience/Figure_28.png" width=100%>

@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.0800f08f80f4c60d7cafd079673c65ac687cce5df63c744a168b7aae4bd2697e.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.c3a52f4eb8dead48ba6c5a734146d3b546e36a1297764f496438aa54b1374790.js"></script>
 
 
 
@@ -146,10 +146,19 @@ https://github.com/alex-shpak/hugo-book
 
 <p class="katex">
   $$ 
+\tag{1}  y  =  w_{0} x + w_{1} \\
+ $$
+</p>
+
+
+
+
+
+<p class="katex">
+  $$ 
 \begin{aligned}
-\tag{1}  y  &=  w_{0} x + w_{1} \\
 \tag{2}  y  &=  \sigma ( w_{0} x + w_{1} ) \\
-            &=  \frac{1}{1 + exp(-(w_{0} x + w_{1}))}
+            &=  \frac{1}{1 + \exp(-(w_{0} x + w_{1}))}
 \end{aligned}
  $$
 </p>
@@ -162,7 +171,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p class="katex">
   $$ 
-\tag{3}  y  =  \frac{1}{1+exp( x )}
+\tag{3}  y  =  \frac{1}{ 1 + \exp( -x )}
  $$
 </p>
 
@@ -171,6 +180,8 @@ https://github.com/alex-shpak/hugo-book
 <p>ロジスティック回帰モデルにより、出力は0~1の間に限定される。</p>
 
 <p>例として、y=x,y=2x+2,y=-x+1のロジスティック回帰モデルは以下のようになる。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_28.png" width=100%></p>
 </article>
 
       
@@ -178,7 +189,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/0c971b85f00986d7ec48a82b334494212f5914ad" title='Last modified May 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/2c81fd8bfebc931587a96a9b8e4c15fc1fb12094" title='Last modified May 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 26, 2020
     </a>
   </div>
