@@ -115,3 +115,71 @@ source要素は、picture要素・video要素・audio要素の子要素として
 
 
 （使用例はpicture要素のところを参照）
+
+
+## video要素
+
+video要素は、動画を再生するための要素である。
+
+指定する属性は以下の通り。
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">src</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ファイルのアドレス・パス</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">controls</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">再生・停止ボタンを表示させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">autoplay</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">再生を自動で開始させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">loop</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">再生を繰り返す(ループ)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">muted</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">デフォルトでミュート(音量0)にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">width</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">幅を指定する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">height</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">高さを指定する</td>
+    </tr>
+</table>
+
+
+例を以下に示す。
+
+```
+<video src="/img/front-end/IMG_3279.MOV.mp4" controls muted width="500" height="200" />
+```
+
+実行例
+
+<hr>
+<video src="/img/front-end/IMG_3279.MOV.mp4" controls muted width="500" height="200" />
+<hr>
+
+(ちなみにこの動画は私が学生時代に研究室の窓から外の吹雪を撮ったものである)
+

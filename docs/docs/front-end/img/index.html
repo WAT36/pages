@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.f9bacf47fb37c4721a7e711ff7a1ecdb02f6c91940636805e64127062f03f9c6.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.c021a6cfa89323dec83aedfad269b73bb30c609a8f277349b3dfbc0d761968ed.js"></script>
 
 
 
@@ -229,6 +229,71 @@ https://github.com/alex-shpak/hugo-book
 </table>
 
 <p>（使用例はpicture要素のところを参照）</p>
+
+<h2 id="video要素">video要素</h2>
+
+<p>video要素は、動画を再生するための要素である。</p>
+
+<p>指定する属性は以下の通り。</p>
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">src</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ファイルのアドレス・パス</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">controls</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">再生・停止ボタンを表示させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">autoplay</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">再生を自動で開始させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">loop</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">再生を繰り返す(ループ)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">muted</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">デフォルトでミュート(音量0)にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">width</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">幅を指定する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">height</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">高さを指定する</td>
+    </tr>
+</table>
+
+<p>例を以下に示す。</p>
+
+<pre><code>&lt;video src=&quot;/img/front-end/IMG_3279.MOV.mp4&quot; controls muted width=&quot;500&quot; height=&quot;200&quot; /&gt;
+</code></pre>
+
+<p>実行例</p>
+
+<hr>
+
+<p><video src="https://WAT36.github.io/pages/img/front-end/IMG_3279.MOV.mp4" controls muted width="500" height="200" />
+<hr></p>
+
+<p>(ちなみにこの動画は私が学生時代に研究室の窓から外の吹雪を撮ったものである)</p>
 </article>
 
       
@@ -236,8 +301,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/394ab7b61f0017bc1c5c2c7fa7ffcef25099898f" title='Last modified May 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 26, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/732d073abadb0df45760a3656d907d9c60517c76" title='Last modified May 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 27, 2020
     </a>
   </div>
   
@@ -257,6 +322,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#img要素">img要素</a></li>
 <li><a href="#picture要素">picture要素</a></li>
 <li><a href="#source要素">source要素</a></li>
+<li><a href="#video要素">video要素</a></li>
 </ul></li>
 </ul>
 </nav>
