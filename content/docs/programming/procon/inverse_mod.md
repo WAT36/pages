@@ -75,3 +75,64 @@ ac  \equiv bc \pmod{m}
 {{< /katex >}}
 
 である。
+
+### 合同式のべき乗
+
+整数a,b、自然数mにおいて　a≡b (mod m) の時、以下の式が成立する。
+
+{{< katex  >}}
+a^n  \equiv b^n \pmod{m}
+{{< /katex >}}
+
+
+(証明)
+
+整数a,b,c,dを、自然数mと整数p,q,r,s,t,uを用い、以下のように定義する。
+
+{{< katex  >}}
+a = pm + t \\
+b = qm + t \\
+c = rm + u \\
+d = sm + u 
+{{< /katex >}}
+
+この時、
+
+{{< katex  >}}
+a  \equiv b \pmod{m} \\
+c  \equiv d \pmod{m}
+{{< /katex >}}
+
+である。この時、
+
+{{< katex  >}}
+a  \equiv b \pmod{m} \\
+c  \equiv d \pmod{m}
+{{< /katex >}}
+
+であり、また
+
+{{< katex  >}}
+\begin{aligned}
+a+c  &= (p+r)m + (t+u) \\
+b+d  &= (q+s)m + (t+u) \\
+a-c  &= (p-r)m + (t-u) \\
+b-d  &= (q-s)m + (t-u) \\
+ac   &= (prm + pu+tr)m + tu \\
+bd   &= (qsm + qu+st)m + tu \\
+a^n  &= (p^{n} m^{n-1} + {}_n \mathrm{C} _1 p^{n-1} m^{n-2} t + \cdots + {}_n \mathrm{C} _{n-1} p t^{n-1})m + t^n \\
+b^n  &= (q^{n} m^{n-1} + {}_n \mathrm{C} _1 p^{n-1} m^{n-2} t + \cdots + {}_n \mathrm{C} _{n-1} p t^{n-1})m + t^n
+\end{aligned}
+{{< /katex >}}
+
+である。これらより、
+
+{{< katex  >}}
+a+c  \equiv b+d \pmod{m} \\
+a-c  \equiv b-d \pmod{m} \\
+ac  \equiv bd \pmod{m} \\
+a^n  \equiv b^n \pmod{m}
+{{< /katex >}}
+
+が成立する。
+

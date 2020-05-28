@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.17ab72355bddcf291ca27015350a60cfb9b11e62584f393cf9af5d6adfad80ad.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.ce7db7fc5c8bb047cfd83871dab7e9beca845efda473d5b0d07b5baf1e753d4c.js"></script>
 
 
 
@@ -228,6 +228,101 @@ ac  \equiv bc \pmod{m}
 
 
 <p>である。</p>
+
+<h3 id="合同式のべき乗">合同式のべき乗</h3>
+
+<p>整数a,b、自然数mにおいて　a≡b (mod m) の時、以下の式が成立する。</p>
+
+
+
+<p class="katex">
+  $$ 
+a^n  \equiv b^n \pmod{m}
+ $$
+</p>
+
+
+
+<p>(証明)</p>
+
+<p>整数a,b,c,dを、自然数mと整数p,q,r,s,t,uを用い、以下のように定義する。</p>
+
+
+
+<p class="katex">
+  $$ 
+a = pm + t \\
+b = qm + t \\
+c = rm + u \\
+d = sm + u 
+ $$
+</p>
+
+
+
+<p>この時、</p>
+
+
+
+<p class="katex">
+  $$ 
+a  \equiv b \pmod{m} \\
+c  \equiv d \pmod{m}
+ $$
+</p>
+
+
+
+<p>である。この時、</p>
+
+
+
+<p class="katex">
+  $$ 
+a  \equiv b \pmod{m} \\
+c  \equiv d \pmod{m}
+ $$
+</p>
+
+
+
+<p>であり、また</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+a+c  &= (p+r)m + (t+u) \\
+b+d  &= (q+s)m + (t+u) \\
+a-c  &= (p-r)m + (t-u) \\
+b-d  &= (q-s)m + (t-u) \\
+ac   &= (prm + pu+tr)m + tu \\
+bd   &= (qsm + qu+st)m + tu \\
+a^n  &= (p^{n} m^{n-1} + {}_n \mathrm{C} _1 p^{n-1} m^{n-2} t + \cdots + {}_n \mathrm{C} _{n-1} p t^{n-1})m + t^n \\
+b^n  &= (q^{n} m^{n-1} + {}_n \mathrm{C} _1 p^{n-1} m^{n-2} t + \cdots + {}_n \mathrm{C} _{n-1} p t^{n-1})m + t^n
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>である。これらより、</p>
+
+
+
+<p class="katex">
+  $$ 
+a+c  \equiv b+d \pmod{m} \\
+a-c  \equiv b-d \pmod{m} \\
+ac  \equiv bd \pmod{m} \\
+a^n  \equiv b^n \pmod{m}
+ $$
+</p>
+
+
+
+<p>が成立する。</p>
 </article>
 
       
@@ -235,7 +330,7 @@ ac  \equiv bc \pmod{m}
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/ed3df2932cee3db98fb58e8995603dfebd7bc6dc" title='Last modified May 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/13b9da42f2d3f249d90028268795afdb42b0ed26" title='Last modified May 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 27, 2020
     </a>
   </div>
