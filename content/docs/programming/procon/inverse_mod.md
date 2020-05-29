@@ -3,7 +3,7 @@ title: "合同式(mod)・逆元"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
-bookToc: false
+# bookToc: false
 ---
 
 # 合同式(mod)・逆元
@@ -68,15 +68,18 @@ a-c  \equiv b-d \pmod{m}
 ac  \equiv bd \pmod{m}
 {{< /katex >}}
 
-特に、
+以上の式より、
 
 {{< katex  >}}
-ac  \equiv bc \pmod{m}
+a+c  \equiv b+c \pmod{m} \\
+a-c  \equiv b-c \pmod{m} \\
+ac  \equiv bc \pmod{m} 
 {{< /katex >}}
 
-である。
+も成立し、これらの式から、合同式は移項・乗法も可能である。
 
 ### 合同式のべき乗
+
 
 整数a,b、自然数mにおいて　a≡b (mod m) の時、以下の式が成立する。
 
@@ -85,7 +88,7 @@ a^n  \equiv b^n \pmod{m}
 {{< /katex >}}
 
 
-(証明)
+#### (証明)
 
 整数a,b,c,dを、自然数mと整数p,q,r,s,t,uを用い、以下のように定義する。
 
@@ -128,11 +131,55 @@ b^n  &= (q^{n} m^{n-1} + {}_n \mathrm{C} _1 p^{n-1} m^{n-2} t + \cdots + {}_n \m
 である。これらより、
 
 {{< katex  >}}
-a+c  \equiv b+d \pmod{m} \\
-a-c  \equiv b-d \pmod{m} \\
-ac  \equiv bd \pmod{m} \\
-a^n  \equiv b^n \pmod{m}
+\begin{aligned}
+a+c  & \equiv b+d & \pmod{m} \\
+a-c  & \equiv b-d & \pmod{m} \\
+ac   & \equiv bd  & \pmod{m} \\
+a^n  & \equiv b^n & \pmod{m}
+\end{aligned}
 {{< /katex >}}
 
 が成立する。
 
+
+
+### 合同式の除法
+
+整数a,b,c、 自然数mにおいて　ab≡ac (mod m) の時でかつ**aとmが互いに素**の時、以下の式が成立する。
+
+{{< katex  >}}
+\begin{aligned}
+ab  & \equiv ac & \pmod{m} \\
+\Leftrightarrow　b  & \equiv c & \pmod{m}
+\end{aligned}
+{{< /katex >}}
+
+
+#### (証明)
+
+ab≡ac (mod m)　、かつaとmが互いに素の時において
+
+{{< katex  >}}
+\begin{aligned}
+ab  & \equiv ac & \pmod{m} \\
+\Leftrightarrow　ab-ac   & \equiv 0 & \pmod{m} \\
+\Leftrightarrow　a(b-c)  & \equiv 0 & \pmod{m}
+\end{aligned}
+{{< /katex >}}
+
+となり、この式において、a(b-c)と0はmで割った余りが同じであり、0をmで割った余りは0なので、a(b-c)をmで割った余りも0、つまりa(b-c)はmで割り切れる(=mの倍数)ということになる。
+
+aとmは互いに素なので、b-cがmの倍数という事になる。
+
+これより、(b-c)≡0 (mod m)が成立するので、
+
+{{< katex  >}}
+\begin{aligned}
+(b-c)  & \equiv 0 & \pmod{m} \\
+\Leftrightarrow　b   & \equiv c & \pmod{m} 
+\end{aligned}
+{{< /katex >}}
+
+となり、aとmが互いに素でab≡ac (mod m)の時、b≡c (mod m)が成立する。
+
+ちなみに、aとmが互いに素ではない時、(b-c)がmの倍数でない場合があるため、これは成立しない。

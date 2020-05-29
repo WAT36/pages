@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.ce7db7fc5c8bb047cfd83871dab7e9beca845efda473d5b0d07b5baf1e753d4c.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.1ff101b305660008c90f3dbfb6932f2b9d6b6e58d60b8a41d5942f49eb4c6e1c.js"></script>
 
 
 
@@ -215,19 +215,21 @@ ac  \equiv bd \pmod{m}
 
 
 
-<p>特に、</p>
+<p>以上の式より、</p>
 
 
 
 <p class="katex">
   $$ 
-ac  \equiv bc \pmod{m}
+a+c  \equiv b+c \pmod{m} \\
+a-c  \equiv b-c \pmod{m} \\
+ac  \equiv bc \pmod{m} 
  $$
 </p>
 
 
 
-<p>である。</p>
+<p>も成立し、これらの式から、合同式は移項・乗法も可能である。</p>
 
 <h3 id="合同式のべき乗">合同式のべき乗</h3>
 
@@ -243,7 +245,7 @@ a^n  \equiv b^n \pmod{m}
 
 
 
-<p>(証明)</p>
+<h4 id="証明">(証明)</h4>
 
 <p>整数a,b,c,dを、自然数mと整数p,q,r,s,t,uを用い、以下のように定義する。</p>
 
@@ -313,16 +315,76 @@ b^n  &= (q^{n} m^{n-1} + {}_n \mathrm{C} _1 p^{n-1} m^{n-2} t + \cdots + {}_n \m
 
 <p class="katex">
   $$ 
-a+c  \equiv b+d \pmod{m} \\
-a-c  \equiv b-d \pmod{m} \\
-ac  \equiv bd \pmod{m} \\
-a^n  \equiv b^n \pmod{m}
+\begin{aligned}
+a+c  & \equiv b+d & \pmod{m} \\
+a-c  & \equiv b-d & \pmod{m} \\
+ac   & \equiv bd  & \pmod{m} \\
+a^n  & \equiv b^n & \pmod{m}
+\end{aligned}
  $$
 </p>
 
 
 
 <p>が成立する。</p>
+
+<h3 id="合同式の除法">合同式の除法</h3>
+
+<p>整数a,b,c、 自然数mにおいて　ab≡ac (mod m) の時でかつ<strong>aとmが互いに素</strong>の時、以下の式が成立する。</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+ab  & \equiv ac & \pmod{m} \\
+\Leftrightarrow　b  & \equiv c & \pmod{m}
+\end{aligned}
+ $$
+</p>
+
+
+
+<h4 id="証明-1">(証明)</h4>
+
+<p>ab≡ac (mod m)　、かつaとmが互いに素の時において</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+ab  & \equiv ac & \pmod{m} \\
+\Leftrightarrow　ab-ac   & \equiv 0 & \pmod{m} \\
+\Leftrightarrow　a(b-c)  & \equiv 0 & \pmod{m}
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>となり、この式において、a(b-c)と0はmで割った余りが同じであり、0をmで割った余りは0なので、a(b-c)をmで割った余りも0、つまりa(b-c)はmで割り切れる(=mの倍数)ということになる。</p>
+
+<p>aとmは互いに素なので、b-cがmの倍数という事になる。</p>
+
+<p>これより、(b-c)≡0 (mod m)が成立するので、</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+(b-c)  & \equiv 0 & \pmod{m} \\
+\Leftrightarrow　b   & \equiv c & \pmod{m} 
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>となり、aとmが互いに素でab≡ac (mod m)の時、b≡c (mod m)が成立する。</p>
+
+<p>ちなみに、aとmが互いに素ではない時、(b-c)がmの倍数でない場合があるため、これは成立しない。</p>
 </article>
 
       
@@ -330,8 +392,8 @@ a^n  \equiv b^n \pmod{m}
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/13b9da42f2d3f249d90028268795afdb42b0ed26" title='Last modified May 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 27, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/089fd610834f591de283d8969529e2203d0f8dba" title='Last modified May 28, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 28, 2020
     </a>
   </div>
   
@@ -342,6 +404,31 @@ a^n  \equiv b^n \pmod{m}
     </div>
     
   
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#合同式-mod-逆元">合同式(mod)・逆元</a>
+<ul>
+<li><a href="#合同式-mod">合同式(mod)</a></li>
+<li><a href="#合同式の定理">合同式の定理</a>
+<ul>
+<li><a href="#合同式の和">合同式の和</a></li>
+<li><a href="#合同式の差">合同式の差</a></li>
+<li><a href="#合同式の積">合同式の積</a></li>
+<li><a href="#合同式のべき乗">合同式のべき乗</a>
+<ul>
+<li><a href="#証明">(証明)</a></li>
+</ul></li>
+<li><a href="#合同式の除法">合同式の除法</a>
+<ul>
+<li><a href="#証明-1">(証明)</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
 
 
 
