@@ -183,3 +183,55 @@ video要素は、動画を再生するための要素である。
 
 (ちなみにこの動画は私が学生時代に研究室の窓から外の吹雪を撮ったものである)
 
+
+## audio要素
+
+audio要素は音声を再生するための要素である。
+
+基本的には、video要素から視覚的な内容を排除したものであり、使う属性もvideo要素とほとんど同じ。
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">src</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ファイルのアドレス・パス</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">controls</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">再生・停止ボタンを表示させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">autoplay</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">再生を自動で開始させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">loop</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">再生を繰り返す(ループ)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">muted</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">デフォルトでミュート(音量0)にする</td>
+    </tr>
+</table>
+
+先程の動画ファイルをaudio要素で表示させてみよう。
+
+```
+<audio src="/img/front-end/IMG_3279.MOV.mp4" controls />
+```
+
+実行例は以下の通り。
+
+<hr>
+<audio src="/img/front-end/IMG_3279.MOV.mp4" controls />
+<hr>
+

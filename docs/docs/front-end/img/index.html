@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.c021a6cfa89323dec83aedfad269b73bb30c609a8f277349b3dfbc0d761968ed.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.47e7df49954209f5fb5eb83ba3c26981ea6f82c09f4b826cb75004372c9d8213.js"></script>
 
 
 
@@ -294,6 +294,57 @@ https://github.com/alex-shpak/hugo-book
 <hr></p>
 
 <p>(ちなみにこの動画は私が学生時代に研究室の窓から外の吹雪を撮ったものである)</p>
+
+<h2 id="audio要素">audio要素</h2>
+
+<p>audio要素は音声を再生するための要素である。</p>
+
+<p>基本的には、video要素から視覚的な内容を排除したものであり、使う属性もvideo要素とほとんど同じ。</p>
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">src</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ファイルのアドレス・パス</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">controls</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">再生・停止ボタンを表示させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">autoplay</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">再生を自動で開始させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">loop</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">再生を繰り返す(ループ)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">muted</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">デフォルトでミュート(音量0)にする</td>
+    </tr>
+</table>
+
+<p>先程の動画ファイルをaudio要素で表示させてみよう。</p>
+
+<pre><code>&lt;audio src=&quot;/img/front-end/IMG_3279.MOV.mp4&quot; controls /&gt;
+</code></pre>
+
+<p>実行例は以下の通り。</p>
+
+<hr>
+
+<p><audio src="https://WAT36.github.io/pages/img/front-end/IMG_3279.MOV.mp4" controls />
+<hr></p>
 </article>
 
       
@@ -301,8 +352,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/732d073abadb0df45760a3656d907d9c60517c76" title='Last modified May 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 27, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/288d56cd1208bc18978b713e40bcf9e6b6f3317f" title='Last modified May 28, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 28, 2020
     </a>
   </div>
   
@@ -323,6 +374,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#picture要素">picture要素</a></li>
 <li><a href="#source要素">source要素</a></li>
 <li><a href="#video要素">video要素</a></li>
+<li><a href="#audio要素">audio要素</a></li>
 </ul></li>
 </ul>
 </nav>
