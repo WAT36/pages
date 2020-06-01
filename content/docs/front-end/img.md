@@ -235,3 +235,99 @@ audio要素は音声を再生するための要素である。
 <audio src="/img/front-end/IMG_3279.MOV.mp4" controls />
 <hr>
 
+
+## track要素
+
+track要素はvideo要素やaudio要素の子要素として利用する要素で、字幕などの外部テキストトラックファイルを指定する場合に使用する要素である。
+
+使用するテキストトラックファイルは、WebVTT形式(.vtt形式)またはTTML形式ファイルである。
+
+指定する主な属性は以下の通り。
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">src</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ファイルのアドレス・パス</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">srclang</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">外部テキストファイルの言語</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">kind</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">外部テキストファイルをどのように使用するかの指定</td>
+    </tr>
+</table>
+
+また、kind属性には以下の値を指定する。
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">subtitles</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">音は聞こえるが理解できない人向けの字幕、映像に重ねて表示</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">captions</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">音が（明瞭に）聞こえない人向けの字幕、映像に重ねて表示</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">descriptions</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">映像が（明瞭には）見えない場合向けの解説、合成音声で読み上げる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">chapters</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">映像のチャプターのタイトル、操作により一覧を表示</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">metadata</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">スクリプトから利用する事を想定したメタデータ</td>
+    </tr>
+</table>
+
+先程の動画ファイルを利用して実行例を示す。
+
+```
+<video src="/img/front-end/IMG_3279.MOV.mp4" controls muted width="500" height="200" >
+    <track default kind="captions"
+           srclang="ja"
+           src="/img/front-end/track.vtt">
+</video>
+```
+
+ちなみに字幕として利用するvttファイル(track.vtt)は以下の通り。
+
+```
+WEBVTT
+
+00:00:00.000 --> 00:00:15.000
+これは字幕です。15秒まで表示されます。
+
+00:00:15.000 --> 00:00:30.000
+雪が降ってます。
+```
+
+表示例
+
+<hr>
+<video src="/img/front-end/IMG_3279.MOV.mp4" controls muted width="500" height="200" >
+    <track default kind="captions"
+           srclang="ja"
+           src="/img/front-end/track.vtt">
+</video>
+<hr>

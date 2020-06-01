@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.47e7df49954209f5fb5eb83ba3c26981ea6f82c09f4b826cb75004372c9d8213.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.e5af177b899ee9c12ea5bdf0aeb7930c8bff41477c6c927183156b561b0857ad.js"></script>
 
 
 
@@ -345,6 +345,101 @@ https://github.com/alex-shpak/hugo-book
 
 <p><audio src="https://WAT36.github.io/pages/img/front-end/IMG_3279.MOV.mp4" controls />
 <hr></p>
+
+<h2 id="track要素">track要素</h2>
+
+<p>track要素はvideo要素やaudio要素の子要素として利用する要素で、字幕などの外部テキストトラックファイルを指定する場合に使用する要素である。</p>
+
+<p>使用するテキストトラックファイルは、WebVTT形式(.vtt形式)またはTTML形式ファイルである。</p>
+
+<p>指定する主な属性は以下の通り。</p>
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">src</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ファイルのアドレス・パス</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">srclang</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">外部テキストファイルの言語</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">kind</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">外部テキストファイルをどのように使用するかの指定</td>
+    </tr>
+</table>
+
+<p>また、kind属性には以下の値を指定する。</p>
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">subtitles</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">音は聞こえるが理解できない人向けの字幕、映像に重ねて表示</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">captions</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">音が（明瞭に）聞こえない人向けの字幕、映像に重ねて表示</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">descriptions</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">映像が（明瞭には）見えない場合向けの解説、合成音声で読み上げる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">chapters</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">映像のチャプターのタイトル、操作により一覧を表示</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">metadata</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">スクリプトから利用する事を想定したメタデータ</td>
+    </tr>
+</table>
+
+<p>先程の動画ファイルを利用して実行例を示す。</p>
+
+<pre><code>&lt;video src=&quot;/img/front-end/IMG_3279.MOV.mp4&quot; controls muted width=&quot;500&quot; height=&quot;200&quot; &gt;
+    &lt;track default kind=&quot;captions&quot;
+           srclang=&quot;ja&quot;
+           src=&quot;/img/front-end/track.vtt&quot;&gt;
+&lt;/video&gt;
+</code></pre>
+
+<p>ちなみに字幕として利用するvttファイル(track.vtt)は以下の通り。</p>
+
+<pre><code>WEBVTT
+
+00:00:00.000 --&gt; 00:00:15.000
+これは字幕です。15秒まで表示されます。
+
+00:00:15.000 --&gt; 00:00:30.000
+雪が降ってます。
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><video src="https://WAT36.github.io/pages/img/front-end/IMG_3279.MOV.mp4" controls muted width="500" height="200" >
+    <track default kind="captions"
+           srclang="ja"
+           src="https://WAT36.github.io/pages/img/front-end/track.vtt">
+</video>
+<hr></p>
 </article>
 
       
@@ -352,8 +447,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/288d56cd1208bc18978b713e40bcf9e6b6f3317f" title='Last modified May 28, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 28, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/fc0c38310d31081d00dd32319702f1490cfa75f7" title='Last modified May 29, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 29, 2020
     </a>
   </div>
   
@@ -375,6 +470,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#source要素">source要素</a></li>
 <li><a href="#video要素">video要素</a></li>
 <li><a href="#audio要素">audio要素</a></li>
+<li><a href="#track要素">track要素</a></li>
 </ul></li>
 </ul>
 </nav>
