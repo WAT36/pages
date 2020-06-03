@@ -776,6 +776,15 @@
     </item>
     
     <item>
+      <title>交差エントロピー誤差</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/cross_entropy_error/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/cross_entropy_error/</guid>
+      <description>交差エントロピー誤差 前述のロジスティック回帰モデルにおいて、入力xがt＝1となる確率を次のように表す。 $$ y = \sigma ( w_{0} x + w_{1} ) = P(t=1 \mid x) $$ ここから</description>
+    </item>
+    
+    <item>
       <title>交差検証</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/cross_validation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1475,6 +1484,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/zero/</guid>
       <description>零行列 零行列を生成する方法についてを示す。 Python 零行列はnumpyの関数zerosで生成できる。 引数に１つの整数を渡した場合は1次元(ベクトル)</description>
+    </item>
+    
+    <item>
+      <title>１次元入力２クラス分類</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class/</guid>
+      <description>１次元入力２クラス分類 先述までに述べた回帰問題は、入力データから具体的な連続した数値を予測するものであったが、ここからの分類問題は入力データ</description>
     </item>
     
     <item>

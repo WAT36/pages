@@ -23,5 +23,6 @@ bookToc: false
      - [ホールドアウト検証]({{< relref "/docs/programming/machine_learning/holdout_validation.md" >}})
      - [交差検証]({{< relref "/docs/programming/machine_learning/cross_validation.md" >}})
  - 分類
-     - １次元入力２クラス分類
+     - [１次元入力２クラス分類]({{< relref "/docs/programming/machine_learning/1d_2class.md" >}})
      - [ロジスティック回帰モデル]({{< relref "/docs/programming/machine_learning/logistic_regression.md" >}})
+     - [交差エントロピー誤差]({{< relref "/docs/programming/machine_learning/cross_entropy_error.md" >}})
