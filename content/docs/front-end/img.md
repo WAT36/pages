@@ -331,3 +331,40 @@ WEBVTT
            src="/img/front-end/track.vtt">
 </video>
 <hr>
+
+
+## embed要素
+
+embed要素は、動画や音声などをプラグインを使って組み込む際に使う要素である。
+
+src属性で外部コンテンツを読み込み、ブラウザに追加インストールされたプラグインでコンテンツを利用する。
+
+よく使われるものとしては、.swfファイル(Flash)、.mpgファイル(MPEG)など。
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">src</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">組み込むファイルのパス</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">type</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">組み込むデータの種類</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">width</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">幅</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">height</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">高さ</td>
+    </tr>
+</table>
+
