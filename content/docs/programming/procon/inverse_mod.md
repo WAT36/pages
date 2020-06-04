@@ -202,4 +202,36 @@ ax  \equiv b \pmod{m}
 
 この式でxを求めるにはどのようにすれば良いのだろうか。
 
+この時、
 
+{{< katex  >}}
+ay \equiv 1 \pmod{m}
+{{< /katex >}}
+
+となるような整数yが存在した場合、合同式の積の定理から、
+
+{{< katex  >}}
+\begin{aligned}
+x & \equiv x & \pmod{m} \\
+\Leftrightarrow 1 \times x & \equiv ay \times x & \pmod{m} \\
+\Leftrightarrow x & \equiv y \times ax & \pmod{m} 
+\end{aligned}
+{{< /katex >}}
+
+{{< katex  >}}
+\begin{aligned}
+ax & \equiv b & \pmod{m} \\
+\Leftrightarrow y \times ax & \equiv y \times b & \pmod{m}
+\end{aligned}
+{{< /katex >}}
+
+が成り立つ。これより、
+
+{{< katex  >}}
+\begin{aligned}
+x & \equiv y \times ax & \pmod{m} \\
+  & \equiv y \times b & \pmod{m}
+\end{aligned}
+{{< /katex >}}
+
+で求めることができる。
