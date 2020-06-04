@@ -377,3 +377,97 @@ src属性で外部コンテンツを読み込み、ブラウザに追加イン�
 
 map要素のname属性でイメージマップに名前を定義し、画像を定義しているimg要素の**usemap**属性でその名前を指定するとイメージマップを画像に適用できる。
 
+
+## area要素
+
+area要素は、イメージマップにおいて指定した領域を指定したリンク先に紐付ける要素である。
+
+使用する主な属性は以下の通り。
+
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">coords</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">領域の座標</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">shape</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">領域の形状</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">href</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">リンク先のアドレス</td>
+    </tr>
+</table>
+
+ここで、shape属性で指定できる値は決まっており、以下の通りである。また、それに応じてcoords属性で指定するあたいも変わってくる。
+
+
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;"></td>
+        <td style="border:none;"><b>値</b></td>
+        <td style="border:none;"></td>
+        <td style="border:none;"><b>図形</b></td>
+        <td style="border:none;"><b>coords属性に指定する値</b></td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">rect</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">長方形</td>
+        <td style="border:none;">左上のx座標,左上のy座標,右下のx座標,右下のy座標</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">circle</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">円</td>
+        <td style="border:none;">円の中心のx座標,円の中心のy座標,半径</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">poly</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">多角形</td>
+        <td style="border:none;">各座標をx座標、y座標の順に指定</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">default</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">画像全体</td>
+        <td style="border:none;">(指定しない)</td>
+    </tr>
+</table>
+
+
+使用例
+
+```
+<img src="/img/front-end/area.png" usemap="#top" width="100" height="100">
+
+<map name="top">
+    <area href="https://wat36.github.io/pages/" shape="rect" coords="0,0,100,50"></area>
+    <area href="https://github.com/WAT36" shape="rect" coords="0,50,100,100"></area>
+</map>
+```
+
+表示例（画像の上半分がこのブログのトップ、下半分は私のGithubへのリンク）
+
+<hr>
+<img src="/img/front-end/area.png" usemap="#top" width="100" height="100">
+
+<map name="top">
+    <area href="https://wat36.github.io/pages/" shape="rect" coords="0,0,100,50"></area>
+    <area href="https://github.com/WAT36" shape="rect" coords="0,50,100,100"></area>
+</map>
+<hr>
+

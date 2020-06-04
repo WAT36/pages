@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.8cc0f71879dd2ab56aeff3fdf9085387369eebfa187a7c6ebef765777fa3c8f0.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.e159a1dd90f791424bfaacbced71675074bc32730293f86cee70ce10165e6d77.js"></script>
 
 
 
@@ -483,6 +483,95 @@ https://github.com/alex-shpak/hugo-book
 <p>具体的に画像のどの部分をどのリンクに対応させるかは、map要素の子要素として使う後述のarea要素で指定する。</p>
 
 <p>map要素のname属性でイメージマップに名前を定義し、画像を定義しているimg要素の<strong>usemap</strong>属性でその名前を指定するとイメージマップを画像に適用できる。</p>
+
+<h2 id="area要素">area要素</h2>
+
+<p>area要素は、イメージマップにおいて指定した領域を指定したリンク先に紐付ける要素である。</p>
+
+<p>使用する主な属性は以下の通り。</p>
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">coords</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">領域の座標</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">shape</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">領域の形状</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">href</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">リンク先のアドレス</td>
+    </tr>
+</table>
+
+<p>ここで、shape属性で指定できる値は決まっており、以下の通りである。また、それに応じてcoords属性で指定するあたいも変わってくる。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;"></td>
+        <td style="border:none;"><b>値</b></td>
+        <td style="border:none;"></td>
+        <td style="border:none;"><b>図形</b></td>
+        <td style="border:none;"><b>coords属性に指定する値</b></td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">rect</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">長方形</td>
+        <td style="border:none;">左上のx座標,左上のy座標,右下のx座標,右下のy座標</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">circle</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">円</td>
+        <td style="border:none;">円の中心のx座標,円の中心のy座標,半径</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">poly</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">多角形</td>
+        <td style="border:none;">各座標をx座標、y座標の順に指定</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">default</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">画像全体</td>
+        <td style="border:none;">(指定しない)</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;img src=&quot;/img/front-end/area.png&quot; usemap=&quot;#top&quot; width=&quot;100&quot; height=&quot;100&quot;&gt;
+
+&lt;map name=&quot;top&quot;&gt;
+    &lt;area href=&quot;https://wat36.github.io/pages/&quot; shape=&quot;rect&quot; coords=&quot;0,0,100,50&quot;&gt;&lt;/area&gt;
+    &lt;area href=&quot;https://github.com/WAT36&quot; shape=&quot;rect&quot; coords=&quot;0,50,100,100&quot;&gt;&lt;/area&gt;
+&lt;/map&gt;
+</code></pre>
+
+<p>表示例（画像の上半分がこのブログのトップ、下半分は私のGithubへのリンク）</p>
+
+<hr>
+
+<p><img src="https://WAT36.github.io/pages/img/front-end/area.png" usemap="#top" width="100" height="100"></p>
+
+<p><map name="top">
+    <area href="https://wat36.github.io/pages/" shape="rect" coords="0,0,100,50"></area>
+    <area href="https://github.com/WAT36" shape="rect" coords="0,50,100,100"></area>
+</map>
+<hr></p>
 </article>
 
       
@@ -490,8 +579,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/d26ec656bcf50bf8eca08737fb66c9e3c7d01ca0" title='Last modified Jun 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 3, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/e7c4c47dcb011003445879bca3ac42a1ed4e457b" title='Last modified Jun 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 4, 2020
     </a>
   </div>
   
@@ -516,6 +605,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#track要素">track要素</a></li>
 <li><a href="#embed要素">embed要素</a></li>
 <li><a href="#map要素">map要素</a></li>
+<li><a href="#area要素">area要素</a></li>
 </ul></li>
 </ul>
 </nav>
