@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.43bcdb24a998ed24046f94888c80cd76f3339429f1e1e335f651420900d021de.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.10a14c38abc2be170d614da7e30702c1242ca000ee92f77451fd423fbe758c0c.js"></script>
 
 
 
@@ -151,10 +151,67 @@ y  =  \sigma ( w_{0} x + w_{1} )  =  P(t=1 \mid x)
 <p>まずは入力データそれぞれにおいてこのロジスティック回帰モデルから生成された確率（尤度）を求める。</p>
 
 <p>上式yは入力xに対して出力tが1となる確率なので、入力データxに対しt＝1だったら、ロジスティック回帰モデルから生成される確率はこのロジスティック回帰モデルの出力そのものなのでyとなる。逆に入力データxに対しt＝0だったら、確率は1ーyである。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{1}
+\begin{aligned}
+    P(t=1 \mid x) &= y \\
+    P(t=0 \mid x) &= 1-y
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>しかし、この式をできればもう少し一般化して、どのような入力データにも適用できる形にしたい。</p>
+
+<p>そこで、上式を以下のように書き換える。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{2}
+P(t \mid x) = y^t (1-y)^{1-t}
+ $$
+</p>
+
+
+
+<p>この式(1)と式(2)は同じ形になる。</p>
+
+<p>この式を利用し、データがN個だった場合、入力データ<b>X</b>=x<sub>0</sub>,…x<sub>N-1</sub>に対し出力データ<b>T</b>=t<sub>0</sub>,…t<sub>N-1</sub>が得られる確率は、以下の式(3)で表される。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{3}
+\begin{aligned}
+    P( { \bf T } \mid { \bf X } ) 
+        &= \prod_{n=0}^{N-1} P( t_{n} \mid x_{n} )  \\
+        &= \prod_{n=0}^{N-1} y_{n}^{t_{n}} (1-y_{n})^{1-t_{n}}
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>この式(3)が、データに対する尤度となる。</p>
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/0cb612ee3e76e0e1d1bdb4151cf42bb1055adb9e" title='Last modified Jun 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 3, 2020
+    </a>
+  </div>
   
 </div>
 
