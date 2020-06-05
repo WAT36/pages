@@ -471,3 +471,37 @@ area要素は、イメージマップにおいて指定した領域を指定し�
 </map>
 <hr>
 
+
+## object要素
+
+object要素は、画像や音声の他、様々な形式の外部データを組み込むための要素である。
+
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">data</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">組み込むデータのアドレス</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">type</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">組み込むデータの種類</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">width</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">幅</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">height</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">高さ</td>
+    </tr>
+</table>
+
+
