@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.10a14c38abc2be170d614da7e30702c1242ca000ee92f77451fd423fbe758c0c.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.68a1fded734ac5939f74c831c110c7d246e6b25b42c489db13aec107180e26cc.js"></script>
 
 
 
@@ -201,6 +201,54 @@ P(t \mid x) = y^t (1-y)^{1-t}
 
 
 <p>この式(3)が、データに対する尤度となる。</p>
+
+<p>式(3)において、対数尤度を取ることにより、最尤推定値を求めてみよう。</p>
+
+<p>式(3)の両辺の対数を取ると以下のようになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{4}
+    \log P( { \bf T } \mid { \bf X } ) 
+        = \sum_{n=0}^{N-1} ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) ) 
+ $$
+</p>
+
+
+
+<p>ここで、この両辺に-1をかけると</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{5}
+    - \log P( { \bf T } \mid { \bf X } ) 
+        = - \sum_{n=0}^{N-1} ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) ) 
+ $$
+</p>
+
+
+
+<p>となり、この式(5)において左辺の式を<strong>交差エントロピー誤差</strong>と呼び、最尤推定値はこの交差エントロピー誤差の値が最も小さくなるような値である。</p>
+
+<p>ここで、式(5)の両辺にさらに1/Nをかけると</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{6}
+    - \frac{1}{N} \log P( { \bf T } \mid { \bf X } ) 
+        = - \frac{1}{N} \sum_{n=0}^{N-1} ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) ) 
+ $$
+</p>
+
+
+
+<p>となり、この式(6)において左辺の式を<strong>平均交差エントロピー誤差</strong>と呼ぶ。実は交差エントロピー誤差よりも、この平均交差エントロピー誤差を最小にすることを考える方が、データ数に影響されにくく、都合が良い。</p>
 </article>
 
       
@@ -208,8 +256,8 @@ P(t \mid x) = y^t (1-y)^{1-t}
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/0cb612ee3e76e0e1d1bdb4151cf42bb1055adb9e" title='Last modified Jun 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 3, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/be1b56df050ea1273e538c8ce22ba8e9377bda65" title='Last modified Jun 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 4, 2020
     </a>
   </div>
   
