@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.68a1fded734ac5939f74c831c110c7d246e6b25b42c489db13aec107180e26cc.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.8fe11b49a5640529ba83f25d3996993a3e31bfdc8368213b5d64df752f885307.js"></script>
 
 
 
@@ -249,6 +249,36 @@ P(t \mid x) = y^t (1-y)^{1-t}
 
 
 <p>となり、この式(6)において左辺の式を<strong>平均交差エントロピー誤差</strong>と呼ぶ。実は交差エントロピー誤差よりも、この平均交差エントロピー誤差を最小にすることを考える方が、データ数に影響されにくく、都合が良い。</p>
+
+<p>以下、ロジスティック回帰モデルを算出する<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/logistic_regression.py">コード</a>、および平均交差エントロピー誤差を算出する<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/cross_entropy_error.py">コード</a>を示す。</p>
+
+<p>(logistic_regression.py)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">from</span> sigmoid <span style="color:#f92672">import</span> sigmoid
+
+<span style="color:#75715e">#ロジスティック回帰モデル</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">logistic_regression</span>(w,x):
+    x<span style="color:#f92672">=</span>w[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span>x <span style="color:#f92672">+</span> w[<span style="color:#ae81ff">1</span>]
+    <span style="color:#66d9ef">return</span> sigmoid(x)</code></pre></div>
+<p>(cross_entropy_error.py)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">from</span> logistic_regression <span style="color:#f92672">import</span> logistic_regression
+
+<span style="color:#75715e">#交差エントロピー誤差</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cross_entropy_error</span>(w,x,t):
+    y<span style="color:#f92672">=</span>logistic_regression(w,x)
+    cee<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> range(len(y)):
+        cee <span style="color:#f92672">+=</span> <span style="color:#f92672">-</span>(t[n]<span style="color:#f92672">*</span>np<span style="color:#f92672">.</span>log(y[n]) <span style="color:#f92672">+</span> (<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>t[n])<span style="color:#f92672">*</span>np<span style="color:#f92672">.</span>log(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>y[n]))
+    <span style="color:#66d9ef">return</span> cee
+
+
+<span style="color:#75715e">#平均交差エントロピー誤差</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">ave_cross_entropy_error</span>(w,x,t):
+    <span style="color:#66d9ef">return</span> cross_entropy_error(w,x,t)<span style="color:#f92672">/</span>len(y)</code></pre></div>
+<p>これらを利用し、平均交差エントロピー誤差を最小にするようなwを求めていけば良い。</p>
+
+<p>その方法についてを次章で述べる。</p>
 </article>
 
       
@@ -256,8 +286,8 @@ P(t \mid x) = y^t (1-y)^{1-t}
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/be1b56df050ea1273e538c8ce22ba8e9377bda65" title='Last modified Jun 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 4, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/e93029674b4f28e9232dca9c4dc67dab6d028e16" title='Last modified Jun 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 5, 2020
     </a>
   </div>
   

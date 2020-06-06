@@ -84,3 +84,42 @@ P(t \mid x) = y^t (1-y)^{1-t}
 
 となり、この式(6)において左辺の式を**平均交差エントロピー誤差**と呼ぶ。実は交差エントロピー誤差よりも、この平均交差エントロピー誤差を最小にすることを考える方が、データ数に影響されにくく、都合が良い。
 
+以下、ロジスティック回帰モデルを算出する[コード](https://github.com/WAT36/python/blob/master/machine_learning/classification/logistic_regression.py)、および平均交差エントロピー誤差を算出する[コード](https://github.com/WAT36/python/blob/master/machine_learning/classification/cross_entropy_error.py)を示す。
+
+
+(logistic_regression.py)
+
+```python
+import numpy as np
+from sigmoid import sigmoid
+
+#ロジスティック回帰モデル
+def logistic_regression(w,x):
+    x=w[0]*x + w[1]
+    return sigmoid(x)
+```
+
+
+(cross_entropy_error.py)
+
+```python
+import numpy as np
+from logistic_regression import logistic_regression
+
+#交差エントロピー誤差
+def cross_entropy_error(w,x,t):
+    y=logistic_regression(w,x)
+    cee=0
+    for n in range(len(y)):
+        cee += -(t[n]*np.log(y[n]) + (1-t[n])*np.log(1-y[n]))
+    return cee
+
+
+#平均交差エントロピー誤差
+def ave_cross_entropy_error(w,x,t):
+    return cross_entropy_error(w,x,t)/len(y)
+```
+
+これらを利用し、平均交差エントロピー誤差を最小にするようなwを求めていけば良い。
+
+その方法についてを次章で述べる。
