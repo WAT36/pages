@@ -481,29 +481,11 @@
     
     <item>
       <title>ダイクストラ法</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/dijkstra-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/dijkstra-2/</guid>
-      <description>ダイクストラ法 グラフ探索の手法の一つ、ダイクストラ法についてを述べる。 ダイクストラ法は重み付きのグラフにおいて、ある頂点から他の全ての頂点ま</description>
-    </item>
-    
-    <item>
-      <title>ダイクストラ法</title>
       <link>https://WAT36.github.io/pages/docs/programming/procon/dijkstra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/procon/dijkstra/</guid>
       <description>ダイクストラ法 グラフ探索の手法の一つ、ダイクストラ法についてを述べる。 ダイクストラ法は重み付きのグラフにおいて、ある頂点から他の全ての頂点ま</description>
-    </item>
-    
-    <item>
-      <title>テキスト</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/text-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/text-2/</guid>
-      <description>テキスト HTML文書にテキストを記載、装飾、補足するための要素についてをここでは述べる。 (一部表示例も記載するが、ブラウザ等により表示が異な</description>
     </item>
     
     <item>
@@ -585,15 +567,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/class_func/lambda/</guid>
       <description>ラムダ式（無名関数） ラムダ式（無名関数）についてを述べる。 Java Javaでは簡易的なメソッドを実装する方法としてラムダ式というのがある。 ( 実装す</description>
-    </item>
-    
-    <item>
-      <title>リスト</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/list-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/list-2/</guid>
-      <description>リスト HTML文書にリストを記載するための要素についてをここでは述べる。 ul要素 ul要素は、箇条書きリストを作成するための要素である。一つの</description>
     </item>
     
     <item>
@@ -805,15 +778,6 @@
     
     <item>
       <title>ルビ</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/ruby-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/ruby-2/</guid>
-      <description>ルビ HTML文書にルビ(ふりがな)を記載するための要素についてをここでは述べる。 ruby要素 ruby要素は文字にルビを振る要素であり、実際に</description>
-    </item>
-    
-    <item>
-      <title>ルビ</title>
       <link>https://WAT36.github.io/pages/docs/front-end/ruby/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -936,15 +900,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/identity/</guid>
       <description>単位行列 単位行列を生成する方法を述べる。 Python 単位行列を算出したいときは、numpyモジュールにある関数identityを使用する。 numpy.identity(n) 上記の式に</description>
-    </item>
-    
-    <item>
-      <title>合同式(mod)・逆元</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/inverse_mod-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/inverse_mod-2/</guid>
-      <description>合同式(mod)・逆元 最近知ったのだが、今は高校数学の課程に合同式が入っているそうだ。 自分はゆとり世代ゆえ正式には学んでない（予備校で少し出</description>
     </item>
     
     <item>

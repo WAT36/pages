@@ -197,6 +197,7 @@ aとmは互いに素なので、b-cがmの倍数という事になる。
 modを使った方程式を解いてみることを考える。例えばa,bを整数、mを自然数とした、以下のような式があったとする。
 
 {{< katex  >}}
+\tag{1}
 ax  \equiv b \pmod{m}
 {{< /katex >}}
 
@@ -228,20 +229,28 @@ ax & \equiv b & \pmod{m} \\
 が成り立つ。これより、
 
 {{< katex  >}}
+\tag{2}
 \begin{aligned}
 x & \equiv y \times ax & \pmod{m} \\
   & \equiv y \times b & \pmod{m}
 \end{aligned}
 {{< /katex >}}
 
-で求めることができる。
+と求めることができる。
 
 このように、a,mに対して
 
 {{< katex  >}}
-\tag{1}
+\tag{3}
 ay \equiv 1 \pmod{m}
 {{< /katex >}}
 
 となるような整数yのことを、aの**逆元**といい、大体はa<sup>-1</sup>と書く。
+
+{{< katex  >}}
+\tag{4}
+a \times a^{-1} \equiv 1 \pmod{m}
+{{< /katex >}}
+
+式(2),(4)より、式(1)の解は
 
