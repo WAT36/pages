@@ -26,3 +26,5 @@ bookToc: false
      - [１次元入力２クラス分類]({{< relref "/docs/programming/machine_learning/1d_2class.md" >}})
      - [ロジスティック回帰モデル]({{< relref "/docs/programming/machine_learning/logistic_regression.md" >}})
      - [交差エントロピー誤差]({{< relref "/docs/programming/machine_learning/cross_entropy_error.md" >}})
+     - [平均交差エントロピー誤差の最適解の導出]({{< relref "/docs/programming/machine_learning/cee_ans.md" >}})
+
