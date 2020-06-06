@@ -961,7 +961,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/cee_ans/</guid>
-      <description>平均交差エントロピー誤差の最適解の導出</description>
+      <description>平均交差エントロピー誤差の最適解の導出 前述の平均交差エントロピー誤差 $$ \tag{1} - \frac{1}{N} \log P( { \bf T } \mid { \bf X } ) = - \frac{1}{N} \sum_{n=0}^{N-1} ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) ) $$ が最</description>
     </item>
     
     <item>
