@@ -235,3 +235,13 @@ x & \equiv y \times ax & \pmod{m} \\
 {{< /katex >}}
 
 で求めることができる。
+
+このように、a,mに対して
+
+{{< katex  >}}
+\tag{1}
+ay \equiv 1 \pmod{m}
+{{< /katex >}}
+
+となるような整数yのことを、aの**逆元**といい、大体はa<sup>-1</sup>と書く。
+
