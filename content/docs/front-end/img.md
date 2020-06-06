@@ -505,3 +505,23 @@ object要素は、画像や音声の他、様々な形式の外部データを�
 </table>
 
 
+## param要素
+
+param要素は、object要素における任意のパラメータ(属性)を指定する要素である。
+
+object要素内では他の要素よりも前に配置させる。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">name</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">パラメータ名</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">value</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">パラメータの値</td>
+    </tr>
+</table>
