@@ -52,4 +52,15 @@ bookToc: false
 \end{aligned}
 {{< /katex >}}
 
+このE(<b>w</b>)に勾配法を適用して、最適な<b>w</b>を求めることを考える。
+
+まず、式(3)をw<sub>0</sub>で偏微分すると以下のようになる。
+
+{{< katex  >}}
+\begin{aligned}
+\tag{4} \frac{\partial }{\partial w_{0} }　E( { \bf w } )
+        &= \frac{1}{N} \frac{\partial }{\partial w_{0} } \sum_{n=0}^{N-1} E_{n} ( { \bf w } ) \\
+        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{0} } E_{n} ( { \bf w } )
+\end{aligned}
+{{< /katex >}}
 
