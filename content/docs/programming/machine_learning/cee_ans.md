@@ -22,5 +22,34 @@ bookToc: false
 
 <img src="/img/datascience/Figure_30.png" width=50%>
 
+この図より最小値はw<sub>0</sub>=0のあたりだろうと推測できる。
+
+前に述べた平均二乗誤差のところでは解析解を算出することで求められたが、今回も解析解を求めることは可能だろうか。
+
+実は、平均交差エントロピー誤差はシグモイド関数を含んでいるため、解析解を求めることは不可能である。
+
+ならばどのようにして求めるのが良いか？
+
+そこで方法として、平均二乗誤差の章でも述べた、**勾配法**を用いて求めることを考えてみる。
+
+まず、平均交差エントロピー誤差を以下のように置き換える。
+
+
+{{< katex  >}}
+\begin{aligned}
+\tag{2}
+    E_{n} ( { \bf w } )
+        &= - ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) )
+\end{aligned}
+{{< /katex >}}
+
+{{< katex  >}}
+\begin{aligned}
+\tag{3} E( { \bf w } )
+        &= - \frac{1}{N} \log P( { \bf T } \mid { \bf X } ) \\
+        &= - \frac{1}{N} \sum_{n=0}^{N-1} ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) ) \\
+        &=   \frac{1}{N} \sum_{n=0}^{N-1} E_{n} ( { \bf w } )
+\end{aligned}
+{{< /katex >}}
 
 
