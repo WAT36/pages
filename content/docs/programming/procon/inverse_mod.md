@@ -252,5 +252,24 @@ ay \equiv 1 \pmod{m}
 a \times a^{-1} \equiv 1 \pmod{m}
 {{< /katex >}}
 
-式(2),(4)より、式(1)の解は
+また、式(1)において、a,mが互いに素でない場合以下のように書き換えることもできる。
+
+{{< katex  >}}
+\tag{5}
+\frac{ax}{gcd(a,m)}  \equiv \frac{b}{gcd(a,m)} \pmod{ \frac{m}{gcd(a,m)} }
+{{< /katex >}}
+
+ここで、gcd(a,m)はaとmの最大公約数である。
+
+式(2),(4),(5)より、式(1)の解は
+
+{{< katex  >}}
+\tag{6}
+x  =  \left(\frac{a}{gcd(a,m)}\right)^{-1} \times \frac{b}{gcd(a,m)} +  k \times \frac{m}{gcd(a,m)} \pmod{ m } 
+{{< /katex >}}
+
+となる。ただしkは0 ≦ k ≦ gcd(a,m)を満たす整数である。
+
+
+
 

@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.2dce72cafdbcb29d3abf5047ebc85420ed6548561e311068f570bba4fe8ad27a.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.05fde8c5c98e5366edcf59879b6c3a2325d90b1107af9a7bacd4a50d409593af.js"></script>
 
 
 
@@ -494,7 +494,35 @@ a \times a^{-1} \equiv 1 \pmod{m}
 
 
 
-<p>式(2),(4)より、式(1)の解は</p>
+<p>また、式(1)において、a,mが互いに素でない場合以下のように書き換えることもできる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{5}
+\frac{ax}{gcd(a,m)}  \equiv \frac{b}{gcd(a,m)} \pmod{ \frac{m}{gcd(a,m)} }
+ $$
+</p>
+
+
+
+<p>ここで、gcd(a,m)はaとmの最大公約数である。</p>
+
+<p>式(2),(4),(5)より、式(1)の解は</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{6}
+x  =  \left(\frac{a}{gcd(a,m)}\right)^{-1} \times \frac{b}{gcd(a,m)} +  k \times \frac{m}{gcd(a,m)} \pmod{ m } 
+ $$
+</p>
+
+
+
+<p>となる。ただしkは0 ≦ k ≦ gcd(a,m)を満たす整数である。</p>
 </article>
 
       
@@ -502,7 +530,7 @@ a \times a^{-1} \equiv 1 \pmod{m}
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/32948f9ac8009b55abd3f6c150c31c22397a9be0" title='Last modified Jun 6, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/40f367d23190942a20f1c8bf219cef242556e7bc" title='Last modified Jun 6, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 6, 2020
     </a>
   </div>
