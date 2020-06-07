@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.cb6e613f7df0a382406aea1315a2bc3e2d8a511191e1c13b267289dd07c4dd30.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.5a55fc3afd01b05ce86a34b890b0869b7394b526083051ff243864143772a743.js"></script>
 
 
 
@@ -204,12 +204,39 @@ https://github.com/alex-shpak/hugo-book
 \begin{aligned}
 \tag{4} \frac{\partial }{\partial w_{0} }　E( { \bf w } )
         &= \frac{1}{N} \frac{\partial }{\partial w_{0} } \sum_{n=0}^{N-1} E_{n} ( { \bf w } ) \\
-        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{0} } E_{n} ( { \bf w } )
+        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{0} } E_{n} ( { \bf w } ) \\
+        &= - \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{0} } ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) )
 \end{aligned}
  $$
 </p>
 
 
+
+<p>ここで</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{5}
+   y_{n} =  \sigma ( a_{n} )  =  \frac{1}{1 + \exp(- a_{n}) } 
+ $$
+</p>
+
+
+
+
+
+<p class="katex">
+  $$ 
+\tag{6}
+   a_{n} =  w_{0} x_{n} + w_{1} 
+ $$
+</p>
+
+
+
+<p>とおくと</p>
 </article>
 
       
@@ -217,7 +244,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/79518f4195452d6820c48ccb4bb36ac1424ff845" title='Last modified Jun 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/92d5de83f66df1079abfed3d8ee887daee54974d" title='Last modified Jun 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 7, 2020
     </a>
   </div>

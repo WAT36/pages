@@ -60,7 +60,21 @@ bookToc: false
 \begin{aligned}
 \tag{4} \frac{\partial }{\partial w_{0} }　E( { \bf w } )
         &= \frac{1}{N} \frac{\partial }{\partial w_{0} } \sum_{n=0}^{N-1} E_{n} ( { \bf w } ) \\
-        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{0} } E_{n} ( { \bf w } )
+        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{0} } E_{n} ( { \bf w } ) \\
+        &= - \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{0} } ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) )
 \end{aligned}
 {{< /katex >}}
 
+ここで
+
+{{< katex  >}}
+\tag{5}
+   y_{n} =  \sigma ( a_{n} )  =  \frac{1}{1 + \exp(- a_{n}) } 
+{{< /katex >}}
+
+{{< katex  >}}
+\tag{6}
+   a_{n} =  w_{0} x_{n} + w_{1} 
+{{< /katex >}}
+
+とおくと
