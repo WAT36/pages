@@ -60,8 +60,7 @@ bookToc: false
 \begin{aligned}
 \tag{4} \frac{\partial }{\partial w_{0} }　E( { \bf w } )
         &= \frac{1}{N} \frac{\partial }{\partial w_{0} } \sum_{n=0}^{N-1} E_{n} ( { \bf w } ) \\
-        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{0} } E_{n} ( { \bf w } ) \\
-        &= - \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{0} } ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) )
+        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{0} } E_{n} ( { \bf w } )
 \end{aligned}
 {{< /katex >}}
 
@@ -77,4 +76,99 @@ bookToc: false
    a_{n} =  w_{0} x_{n} + w_{1} 
 {{< /katex >}}
 
-とおくと
+とおくと、合成関数の微分より
+
+{{< katex  >}}
+\tag{7}
+   \frac{\partial E_{n}( { \bf w } ) }{\partial w_{0} } 
+        =  \frac{\partial E_{n}( { \bf w } ) }{\partial y_{n} } \cdot
+           \frac{\partial y_{n} }{\partial a_{n} } \cdot
+           \frac{\partial a_{n} }{\partial w_{0} }
+{{< /katex >}}
+
+であり、また
+
+{{< katex  >}}
+\begin{aligned}
+\tag{8}
+   \frac{\partial E_{n}( { \bf w } ) }{\partial y_{n} } 
+        &=  \frac{\partial }{\partial y_{n} } (- ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) )) \\
+        &=  - \frac{ t_{n} }{ y_{n} } + \frac{ 1 - t_{n} }{ 1 - y_{n} } \\
+        &=  \frac{ y_{n} - t_{n} }{ (1-y_{n}) y_{n} }
+\end{aligned}
+{{< /katex >}}
+
+{{< katex  >}}
+\begin{aligned}
+\tag{9}
+   \frac{\partial y_{n} }{\partial a_{n} } 
+        &=  \frac{\partial }{\partial a_{n} }   \frac{1}{1 + \exp(- a_{n}) }  \\
+        &=  \frac{ \exp(- a_{n}) }{ (1 + \exp(- a_{n}))^2 }  \\
+        &=  \left( 1- \frac{ 1 }{ 1 + \exp(- a_{n}) } \right) \left( \frac{ 1 }{ 1 + \exp(- a_{n}) } \right) \\
+        &=  (1 - y_{n}) y_{n}
+\end{aligned}
+{{< /katex >}}
+
+{{< katex  >}}
+\begin{aligned}
+\tag{10}
+   \frac{\partial a_{n} }{\partial w_{0} } 
+        &=  \frac{\partial }{\partial w_{0} }  ( w_{0} x_{n} + w_{1} )  \\
+        &=  x_{n} 
+\end{aligned}
+{{< /katex >}}
+
+なので、式(4)は
+
+{{< katex  >}}
+\begin{aligned}
+\tag{11} \frac{\partial }{\partial w_{0} }　E( { \bf w } )
+        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{0} } E_{n} ( { \bf w } ) \\
+        &= \frac{1}{N} \sum_{n=0}^{N-1} 
+                \frac{\partial E_{n}( { \bf w } ) }{\partial y_{n} } \cdot
+                \frac{\partial y_{n} }{\partial a_{n} } \cdot
+                \frac{\partial a_{n} }{\partial w_{0} } \\
+        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{ y_{n} - t_{n} }{ (1-y_{n}) y_{n} } \cdot
+                (1 - y_{n}) y_{n} \cdot
+                x_{n} \\
+        &= \frac{1}{N} \sum_{n=0}^{N-1} ( y_{n} - t_{n} ) x_{n}
+\end{aligned}
+{{< /katex >}}
+
+となる。同様にして、w<sub>1</sub>で偏微分した時は
+
+{{< katex  >}}
+\tag{12}
+   \frac{\partial E_{n}( { \bf w } ) }{\partial w_{1} } 
+        =  \frac{\partial E_{n}( { \bf w } ) }{\partial y_{n} } \cdot
+           \frac{\partial y_{n} }{\partial a_{n} } \cdot
+           \frac{\partial a_{n} }{\partial w_{1} }
+{{< /katex >}}
+
+{{< katex  >}}
+\begin{aligned}
+\tag{13}
+   \frac{\partial a_{n} }{\partial w_{1} } 
+        &=  \frac{\partial }{\partial w_{1} }  ( w_{0} x_{n} + w_{1} )  \\
+        &=  1  \\
+\end{aligned}
+{{< /katex >}}
+
+となるから、式(12),(8),(9),(13)より
+
+{{< katex  >}}
+\begin{aligned}
+\tag{14} \frac{\partial }{\partial w_{1} }　E( { \bf w } )
+        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{1} } E_{n} ( { \bf w } ) \\
+        &= \frac{1}{N} \sum_{n=0}^{N-1} 
+                \frac{\partial E_{n}( { \bf w } ) }{\partial y_{n} } \cdot
+                \frac{\partial y_{n} }{\partial a_{n} } \cdot
+                \frac{\partial a_{n} }{\partial w_{1} } \\
+        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{ y_{n} - t_{n} }{ (1-y_{n}) y_{n} } \cdot
+                (1 - y_{n}) y_{n} \cdot
+                1 \\
+        &= \frac{1}{N} \sum_{n=0}^{N-1} ( y_{n} - t_{n} )
+\end{aligned}
+{{< /katex >}}
+
+となる。この式(11),(14)から勾配法を利用して求めていく。

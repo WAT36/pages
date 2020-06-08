@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.5a55fc3afd01b05ce86a34b890b0869b7394b526083051ff243864143772a743.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.ae2e1aab100c9f1910dc6b2d1c25a80daa0aee5ed11fe12684552ca955d78ee1.js"></script>
 
 
 
@@ -204,8 +204,7 @@ https://github.com/alex-shpak/hugo-book
 \begin{aligned}
 \tag{4} \frac{\partial }{\partial w_{0} }　E( { \bf w } )
         &= \frac{1}{N} \frac{\partial }{\partial w_{0} } \sum_{n=0}^{N-1} E_{n} ( { \bf w } ) \\
-        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{0} } E_{n} ( { \bf w } ) \\
-        &= - \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{0} } ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) )
+        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{0} } E_{n} ( { \bf w } )
 \end{aligned}
  $$
 </p>
@@ -236,7 +235,150 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-<p>とおくと</p>
+<p>とおくと、合成関数の微分より</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{7}
+   \frac{\partial E_{n}( { \bf w } ) }{\partial w_{0} } 
+        =  \frac{\partial E_{n}( { \bf w } ) }{\partial y_{n} } \cdot
+           \frac{\partial y_{n} }{\partial a_{n} } \cdot
+           \frac{\partial a_{n} }{\partial w_{0} }
+ $$
+</p>
+
+
+
+<p>であり、また</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{8}
+   \frac{\partial E_{n}( { \bf w } ) }{\partial y_{n} } 
+        &=  \frac{\partial }{\partial y_{n} } (- ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) )) \\
+        &=  - \frac{ t_{n} }{ y_{n} } + \frac{ 1 - t_{n} }{ 1 - y_{n} } \\
+        &=  \frac{ y_{n} - t_{n} }{ (1-y_{n}) y_{n} }
+\end{aligned}
+ $$
+</p>
+
+
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{9}
+   \frac{\partial y_{n} }{\partial a_{n} } 
+        &=  \frac{\partial }{\partial a_{n} }   \frac{1}{1 + \exp(- a_{n}) }  \\
+        &=  \frac{ \exp(- a_{n}) }{ (1 + \exp(- a_{n}))^2 }  \\
+        &=  \left( 1- \frac{ 1 }{ 1 + \exp(- a_{n}) } \right) \left( \frac{ 1 }{ 1 + \exp(- a_{n}) } \right) \\
+        &=  (1 - y_{n}) y_{n}
+\end{aligned}
+ $$
+</p>
+
+
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{10}
+   \frac{\partial a_{n} }{\partial w_{0} } 
+        &=  \frac{\partial }{\partial w_{0} }  ( w_{0} x_{n} + w_{1} )  \\
+        &=  x_{n} 
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>なので、式(4)は</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{11} \frac{\partial }{\partial w_{0} }　E( { \bf w } )
+        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{0} } E_{n} ( { \bf w } ) \\
+        &= \frac{1}{N} \sum_{n=0}^{N-1} 
+                \frac{\partial E_{n}( { \bf w } ) }{\partial y_{n} } \cdot
+                \frac{\partial y_{n} }{\partial a_{n} } \cdot
+                \frac{\partial a_{n} }{\partial w_{0} } \\
+        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{ y_{n} - t_{n} }{ (1-y_{n}) y_{n} } \cdot
+                (1 - y_{n}) y_{n} \cdot
+                x_{n} \\
+        &= \frac{1}{N} \sum_{n=0}^{N-1} ( y_{n} - t_{n} ) x_{n}
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>となる。同様にして、w<sub>1</sub>で偏微分した時は</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{12}
+   \frac{\partial E_{n}( { \bf w } ) }{\partial w_{1} } 
+        =  \frac{\partial E_{n}( { \bf w } ) }{\partial y_{n} } \cdot
+           \frac{\partial y_{n} }{\partial a_{n} } \cdot
+           \frac{\partial a_{n} }{\partial w_{1} }
+ $$
+</p>
+
+
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{13}
+   \frac{\partial a_{n} }{\partial w_{1} } 
+        &=  \frac{\partial }{\partial w_{1} }  ( w_{0} x_{n} + w_{1} )  \\
+        &=  1  \\
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>となるから、式(12),(8),(9),(13)より</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{14} \frac{\partial }{\partial w_{1} }　E( { \bf w } )
+        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{1} } E_{n} ( { \bf w } ) \\
+        &= \frac{1}{N} \sum_{n=0}^{N-1} 
+                \frac{\partial E_{n}( { \bf w } ) }{\partial y_{n} } \cdot
+                \frac{\partial y_{n} }{\partial a_{n} } \cdot
+                \frac{\partial a_{n} }{\partial w_{1} } \\
+        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{ y_{n} - t_{n} }{ (1-y_{n}) y_{n} } \cdot
+                (1 - y_{n}) y_{n} \cdot
+                1 \\
+        &= \frac{1}{N} \sum_{n=0}^{N-1} ( y_{n} - t_{n} )
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>となる。この式(11),(14)から勾配法を利用して求めていく。</p>
 </article>
 
       
@@ -244,7 +386,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/92d5de83f66df1079abfed3d8ee887daee54974d" title='Last modified Jun 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/bd7356c191e55104c9d56aff178f74697151c50c" title='Last modified Jun 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 7, 2020
     </a>
   </div>
