@@ -25,6 +25,7 @@ a,bを整数、mを自然数とした時、
 「aをmで割った余り」と「bをmで割った余り」が等しいことを以下の式で表す。
 
 {{< katex  >}}
+\tag{1}
 a  \equiv b \pmod{m}
 {{< /katex >}}
 
@@ -49,6 +50,7 @@ a%m == b%m
 整数a,b,c,d、自然数mにおいて　a≡b (mod m) ,c≡d (mod m) の時、以下の式が成立する。
 
 {{< katex  >}}
+\tag{2}
 a+c  \equiv b+d \pmod{m}
 {{< /katex >}}
 
@@ -57,6 +59,7 @@ a+c  \equiv b+d \pmod{m}
 同様に、整数a,b,c,d、自然数mにおいて　a≡b (mod m) ,c≡d (mod m) の時、以下の式が成立する。
 
 {{< katex  >}}
+\tag{3}
 a-c  \equiv b-d \pmod{m}
 {{< /katex >}}
 
@@ -65,12 +68,14 @@ a-c  \equiv b-d \pmod{m}
 同様に、整数a,b,c,d、自然数mにおいて　a≡b (mod m) ,c≡d (mod m) の時、以下の式が成立する。
 
 {{< katex  >}}
+\tag{4}
 ac  \equiv bd \pmod{m}
 {{< /katex >}}
 
 以上の式より、
 
 {{< katex  >}}
+\tag{5}
 a+c  \equiv b+c \pmod{m} \\
 a-c  \equiv b-c \pmod{m} \\
 ac  \equiv bc \pmod{m} 
@@ -84,6 +89,7 @@ ac  \equiv bc \pmod{m}
 整数a,b、自然数mにおいて　a≡b (mod m) の時、以下の式が成立する。
 
 {{< katex  >}}
+\tag{6}
 a^n  \equiv b^n \pmod{m}
 {{< /katex >}}
 
@@ -148,6 +154,7 @@ a^n  & \equiv b^n & \pmod{m}
 整数a,b,c、 自然数mにおいて　ab≡ac (mod m) の時でかつ**aとmが互いに素**の時、以下の式が成立する。
 
 {{< katex  >}}
+\tag{7}
 \begin{aligned}
 ab  & \equiv ac & \pmod{m} \\
 \Leftrightarrow　b  & \equiv c & \pmod{m}
@@ -160,6 +167,7 @@ ab  & \equiv ac & \pmod{m} \\
 ab≡ac (mod m)　、かつaとmが互いに素の時において
 
 {{< katex  >}}
+\tag{8}
 \begin{aligned}
 ab  & \equiv ac & \pmod{m} \\
 \Leftrightarrow　ab-ac   & \equiv 0 & \pmod{m} \\
@@ -174,6 +182,7 @@ aとmは互いに素なので、b-cがmの倍数という事になる。
 これより、(b-c)≡0 (mod m)が成立するので、
 
 {{< katex  >}}
+\tag{9}
 \begin{aligned}
 (b-c)  & \equiv 0 & \pmod{m} \\
 \Leftrightarrow　b   & \equiv c & \pmod{m} 
@@ -197,7 +206,7 @@ aとmは互いに素なので、b-cがmの倍数という事になる。
 modを使った方程式を解いてみることを考える。例えばa,bを整数、mを自然数とした、以下のような式があったとする。
 
 {{< katex  >}}
-\tag{1}
+\tag{10}
 ax  \equiv b \pmod{m}
 {{< /katex >}}
 
@@ -206,33 +215,36 @@ ax  \equiv b \pmod{m}
 この時、
 
 {{< katex  >}}
+\tag{11}
 ay \equiv 1 \pmod{m}
 {{< /katex >}}
 
 となるような整数yが存在した場合、合同式の積の定理から、
 
 {{< katex  >}}
+\tag{12}
 \begin{aligned}
 x & \equiv x & \pmod{m} \\
-\Leftrightarrow 1 \times x & \equiv ay \times x & \pmod{m} \\
-\Leftrightarrow x & \equiv y \times ax & \pmod{m} 
+\Leftrightarrow 1 \cdot x & \equiv ay \cdot x & \pmod{m} \\
+\Leftrightarrow x & \equiv y \cdot ax & \pmod{m} 
 \end{aligned}
 {{< /katex >}}
 
 {{< katex  >}}
+\tag{13}
 \begin{aligned}
 ax & \equiv b & \pmod{m} \\
-\Leftrightarrow y \times ax & \equiv y \times b & \pmod{m}
+\Leftrightarrow y \cdot ax & \equiv y \cdot b & \pmod{m}
 \end{aligned}
 {{< /katex >}}
 
 が成り立つ。これより、
 
 {{< katex  >}}
-\tag{2}
+\tag{14}
 \begin{aligned}
-x & \equiv y \times ax & \pmod{m} \\
-  & \equiv y \times b & \pmod{m}
+x & \equiv y \cdot ax & \pmod{m} \\
+  & \equiv y \cdot b & \pmod{m}
 \end{aligned}
 {{< /katex >}}
 
@@ -241,35 +253,64 @@ x & \equiv y \times ax & \pmod{m} \\
 このように、a,mに対して
 
 {{< katex  >}}
-\tag{3}
+\tag{15}
 ay \equiv 1 \pmod{m}
 {{< /katex >}}
 
 となるような整数yのことを、aの**逆元**といい、大体はa<sup>-1</sup>と書く。
 
 {{< katex  >}}
-\tag{4}
-a \times a^{-1} \equiv 1 \pmod{m}
+\tag{16}
+a \cdot a^{-1} \equiv 1 \pmod{m}
 {{< /katex >}}
 
-また、式(1)において、a,mが互いに素でない場合以下のように書き換えることもできる。
+また、式(10)において、a,mが互いに素でない場合以下のように書き換えることもできる。
 
 {{< katex  >}}
-\tag{5}
+\tag{17}
 \frac{ax}{gcd(a,m)}  \equiv \frac{b}{gcd(a,m)} \pmod{ \frac{m}{gcd(a,m)} }
 {{< /katex >}}
 
 ここで、gcd(a,m)はaとmの最大公約数である。
 
-式(2),(4),(5)より、式(1)の解は
+式(14),(16),(17)より、式(10)の解は
 
 {{< katex  >}}
-\tag{6}
-x  =  \left(\frac{a}{gcd(a,m)}\right)^{-1} \times \frac{b}{gcd(a,m)} +  k \times \frac{m}{gcd(a,m)} \pmod{ m } 
+\tag{18}
+x  =  \left(\frac{a}{gcd(a,m)}\right)^{-1} \cdot \frac{b}{gcd(a,m)} +  k \cdot \frac{m}{gcd(a,m)} \pmod{ m } 
 {{< /katex >}}
 
 となる。ただしkは0 ≦ k ≦ gcd(a,m)を満たす整数である。
 
+
+## フェルマーの小定理
+
+pが素数の時、任意の整数xに対して
+
+{{< katex  >}}
+\tag{19}
+x^p  \equiv x \pmod{p}
+{{< /katex >}}
+
+が成り立つ。
+
+特にxがpで割り切れない場合(互いに素)の時は、合同式の除法より
+
+{{< katex  >}}
+\tag{20}
+x^{p-1}  \equiv 1 \pmod{p}
+{{< /katex >}}
+
+が成り立つ。
+
+式(20)より
+
+{{< katex  >}}
+\tag{21}
+x \cdot x^{p-2}  \equiv 1 \pmod{p}
+{{< /katex >}}
+
+となるので、pが素数の時、整数xの逆元はx<sup>p-2</sup>であることもわかる。
 
 
 

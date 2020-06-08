@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.05fde8c5c98e5366edcf59879b6c3a2325d90b1107af9a7bacd4a50d409593af.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.03f997d7a2819563dbfc959ed710071ccc84abb873eb15e70066f05d8f01978f.js"></script>
 
 
 
@@ -152,6 +152,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p class="katex">
   $$ 
+\tag{1}
 a  \equiv b \pmod{m}
  $$
 </p>
@@ -181,6 +182,7 @@ a  \equiv b \pmod{m}
 
 <p class="katex">
   $$ 
+\tag{2}
 a+c  \equiv b+d \pmod{m}
  $$
 </p>
@@ -195,6 +197,7 @@ a+c  \equiv b+d \pmod{m}
 
 <p class="katex">
   $$ 
+\tag{3}
 a-c  \equiv b-d \pmod{m}
  $$
 </p>
@@ -209,6 +212,7 @@ a-c  \equiv b-d \pmod{m}
 
 <p class="katex">
   $$ 
+\tag{4}
 ac  \equiv bd \pmod{m}
  $$
 </p>
@@ -221,6 +225,7 @@ ac  \equiv bd \pmod{m}
 
 <p class="katex">
   $$ 
+\tag{5}
 a+c  \equiv b+c \pmod{m} \\
 a-c  \equiv b-c \pmod{m} \\
 ac  \equiv bc \pmod{m} 
@@ -239,6 +244,7 @@ ac  \equiv bc \pmod{m}
 
 <p class="katex">
   $$ 
+\tag{6}
 a^n  \equiv b^n \pmod{m}
  $$
 </p>
@@ -336,6 +342,7 @@ a^n  & \equiv b^n & \pmod{m}
 
 <p class="katex">
   $$ 
+\tag{7}
 \begin{aligned}
 ab  & \equiv ac & \pmod{m} \\
 \Leftrightarrow　b  & \equiv c & \pmod{m}
@@ -353,6 +360,7 @@ ab  & \equiv ac & \pmod{m} \\
 
 <p class="katex">
   $$ 
+\tag{8}
 \begin{aligned}
 ab  & \equiv ac & \pmod{m} \\
 \Leftrightarrow　ab-ac   & \equiv 0 & \pmod{m} \\
@@ -373,6 +381,7 @@ ab  & \equiv ac & \pmod{m} \\
 
 <p class="katex">
   $$ 
+\tag{9}
 \begin{aligned}
 (b-c)  & \equiv 0 & \pmod{m} \\
 \Leftrightarrow　b   & \equiv c & \pmod{m} 
@@ -400,7 +409,7 @@ ab  & \equiv ac & \pmod{m} \\
 
 <p class="katex">
   $$ 
-\tag{1}
+\tag{10}
 ax  \equiv b \pmod{m}
  $$
 </p>
@@ -415,6 +424,7 @@ ax  \equiv b \pmod{m}
 
 <p class="katex">
   $$ 
+\tag{11}
 ay \equiv 1 \pmod{m}
  $$
 </p>
@@ -427,10 +437,11 @@ ay \equiv 1 \pmod{m}
 
 <p class="katex">
   $$ 
+\tag{12}
 \begin{aligned}
 x & \equiv x & \pmod{m} \\
-\Leftrightarrow 1 \times x & \equiv ay \times x & \pmod{m} \\
-\Leftrightarrow x & \equiv y \times ax & \pmod{m} 
+\Leftrightarrow 1 \cdot x & \equiv ay \cdot x & \pmod{m} \\
+\Leftrightarrow x & \equiv y \cdot ax & \pmod{m} 
 \end{aligned}
  $$
 </p>
@@ -441,9 +452,10 @@ x & \equiv x & \pmod{m} \\
 
 <p class="katex">
   $$ 
+\tag{13}
 \begin{aligned}
 ax & \equiv b & \pmod{m} \\
-\Leftrightarrow y \times ax & \equiv y \times b & \pmod{m}
+\Leftrightarrow y \cdot ax & \equiv y \cdot b & \pmod{m}
 \end{aligned}
  $$
 </p>
@@ -456,10 +468,10 @@ ax & \equiv b & \pmod{m} \\
 
 <p class="katex">
   $$ 
-\tag{2}
+\tag{14}
 \begin{aligned}
-x & \equiv y \times ax & \pmod{m} \\
-  & \equiv y \times b & \pmod{m}
+x & \equiv y \cdot ax & \pmod{m} \\
+  & \equiv y \cdot b & \pmod{m}
 \end{aligned}
  $$
 </p>
@@ -474,7 +486,7 @@ x & \equiv y \times ax & \pmod{m} \\
 
 <p class="katex">
   $$ 
-\tag{3}
+\tag{15}
 ay \equiv 1 \pmod{m}
  $$
 </p>
@@ -487,20 +499,20 @@ ay \equiv 1 \pmod{m}
 
 <p class="katex">
   $$ 
-\tag{4}
-a \times a^{-1} \equiv 1 \pmod{m}
+\tag{16}
+a \cdot a^{-1} \equiv 1 \pmod{m}
  $$
 </p>
 
 
 
-<p>また、式(1)において、a,mが互いに素でない場合以下のように書き換えることもできる。</p>
+<p>また、式(10)において、a,mが互いに素でない場合以下のように書き換えることもできる。</p>
 
 
 
 <p class="katex">
   $$ 
-\tag{5}
+\tag{17}
 \frac{ax}{gcd(a,m)}  \equiv \frac{b}{gcd(a,m)} \pmod{ \frac{m}{gcd(a,m)} }
  $$
 </p>
@@ -509,20 +521,67 @@ a \times a^{-1} \equiv 1 \pmod{m}
 
 <p>ここで、gcd(a,m)はaとmの最大公約数である。</p>
 
-<p>式(2),(4),(5)より、式(1)の解は</p>
+<p>式(14),(16),(17)より、式(10)の解は</p>
 
 
 
 <p class="katex">
   $$ 
-\tag{6}
-x  =  \left(\frac{a}{gcd(a,m)}\right)^{-1} \times \frac{b}{gcd(a,m)} +  k \times \frac{m}{gcd(a,m)} \pmod{ m } 
+\tag{18}
+x  =  \left(\frac{a}{gcd(a,m)}\right)^{-1} \cdot \frac{b}{gcd(a,m)} +  k \cdot \frac{m}{gcd(a,m)} \pmod{ m } 
  $$
 </p>
 
 
 
 <p>となる。ただしkは0 ≦ k ≦ gcd(a,m)を満たす整数である。</p>
+
+<h2 id="フェルマーの小定理">フェルマーの小定理</h2>
+
+<p>pが素数の時、任意の整数xに対して</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{19}
+x^p  \equiv x \pmod{p}
+ $$
+</p>
+
+
+
+<p>が成り立つ。</p>
+
+<p>特にxがpで割り切れない場合(互いに素)の時は、合同式の除法より</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{20}
+x^{p-1}  \equiv 1 \pmod{p}
+ $$
+</p>
+
+
+
+<p>が成り立つ。</p>
+
+<p>式(20)より</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{21}
+x \cdot x^{p-2}  \equiv 1 \pmod{p}
+ $$
+</p>
+
+
+
+<p>となるので、pが素数の時、整数xの逆元はx<sup>p-2</sup>であることもわかる。</p>
 </article>
 
       
@@ -530,8 +589,8 @@ x  =  \left(\frac{a}{gcd(a,m)}\right)^{-1} \times \frac{b}{gcd(a,m)} +  k \times
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/40f367d23190942a20f1c8bf219cef242556e7bc" title='Last modified Jun 6, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 6, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/b95f2acff6dc6230505c7f95deb83deeb54c0d8c" title='Last modified Jun 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 7, 2020
     </a>
   </div>
   
@@ -564,6 +623,7 @@ x  =  \left(\frac{a}{gcd(a,m)}\right)^{-1} \times \frac{b}{gcd(a,m)} +  k \times
 </ul></li>
 </ul></li>
 <li><a href="#逆元">逆元</a></li>
+<li><a href="#フェルマーの小定理">フェルマーの小定理</a></li>
 </ul></li>
 </ul>
 </nav>
