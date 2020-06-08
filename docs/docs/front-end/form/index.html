@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.b547396755b69e4a2a680bf5a3c601f8e615dbae98edbac005d7d70f621e06eb.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.b6d65acc5c5b77b620ccca518ea076c2d591a8d3f099b87fece071ab777db588.js"></script>
 
 
 
@@ -174,6 +174,217 @@ https://github.com/alex-shpak/hugo-book
 </table>
 
 <p>実際の使用例は以下の要素のところで述べる。</p>
+
+<h2 id="input要素">input要素</h2>
+
+<p>input要素はform要素内で使われる要素で、フォームの入力を示すための要素である。</p>
+
+<p>フォームの入力にはいくつか種類があり、input要素で<strong>type</strong>属性の値を利用することで使い分ける。</p>
+
+<p>type属性に指定できる値は以下の通り。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">text</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">テキスト入力フィールド(デフォルト)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">password</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">パスワード入力用のテキスト入力フィールド</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">search</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">検索用入力フィールド</td>
+    </tr>
+        <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">email</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">メールアドレス用入力フィールド</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">url</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">URL入力フィールド</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">tel</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">電話番号入力フィールド</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">number</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">数値入力フィールド</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">range</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">スライダー</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">checkbox</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">チェックボックス</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">radio</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ラジオボタン</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">submit</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">送信ボタン</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">reset</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">リセットボタン</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">hidden</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">表示させずに送信するテキスト</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;form&gt;
+    &lt;table style=&quot;border:none;&quot;&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;text:&lt;/td&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;&lt;input type=&quot;text&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;password&lt;/td&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;&lt;input type=&quot;password&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;search&lt;/td&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;&lt;input type=&quot;search&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;email&lt;/td&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;&lt;input type=&quot;email&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;url&lt;/td&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;&lt;input type=&quot;url&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;tel&lt;/td&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;&lt;input type=&quot;tel&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;number&lt;/td&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;&lt;input type=&quot;number&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;range&lt;/td&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;&lt;input type=&quot;range&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;checkbox&lt;/td&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;radio&lt;/td&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;&lt;input type=&quot;radio&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;submit&lt;/td&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;&lt;input type=&quot;submit&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;reset&lt;/td&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;&lt;input type=&quot;reset&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;hidden&lt;/td&gt;
+        &lt;td style=&quot;border:none;&quot;&gt;&lt;input type=&quot;hidden&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><form>
+    <table style="border:none;">
+    <tr>
+        <td style="border:none;">text:</td>
+        <td style="border:none;"><input type="text"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">password</td>
+        <td style="border:none;"><input type="password"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">search</td>
+        <td style="border:none;"><input type="search"></td>
+    </tr>
+        <tr>
+        <td style="border:none;">email</td>
+        <td style="border:none;"><input type="email"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">url</td>
+        <td style="border:none;"><input type="url"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">tel</td>
+        <td style="border:none;"><input type="tel"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">number</td>
+        <td style="border:none;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">range</td>
+        <td style="border:none;"><input type="range"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">checkbox</td>
+        <td style="border:none;"><input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">radio</td>
+        <td style="border:none;"><input type="radio"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">submit</td>
+        <td style="border:none;"><input type="submit"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">reset</td>
+        <td style="border:none;"><input type="reset"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">hidden</td>
+        <td style="border:none;"><input type="hidden"></td>
+    </tr>
+</table>
+</form>
+<hr></p>
 </article>
 
       
@@ -181,7 +392,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/095c88b1f81294d9cfa1d42cc956104e96acf0a8" title='Last modified Jun 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/37720706c222bf5e917875a3fb06c461a8792980" title='Last modified Jun 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 7, 2020
     </a>
   </div>
@@ -200,6 +411,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#フォーム">フォーム</a>
 <ul>
 <li><a href="#form要素">form要素</a></li>
+<li><a href="#input要素">input要素</a></li>
 </ul></li>
 </ul>
 </nav>
