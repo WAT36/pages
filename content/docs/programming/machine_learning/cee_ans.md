@@ -200,6 +200,41 @@ def d_cee(w,x,t):
 
 それが**scipy.optimize**ライブラリに含まれる**minimize()**関数である。
 
+minimize関数に勾配法で最適解を求めたい関数、変数の初期値、関数の引数、関数の導関数(微分した関数)、勾配法の種類(method="CG")を指定すると、勾配法を用いて最適解を導出してくれる。
 
 
+[コード](https://github.com/WAT36/python/blob/master/machine_learning/classification/cee_solve.py)を以下に記載する。
 
+(cee_solve.py)
+
+```python
+from cross_entropy_error import ave_cross_entropy_error
+from scipy.optimize import minimize
+from d_cee import d_cee
+import numpy as np
+
+def cee_solve(w_init,x,t):
+    ans = minimize(ave_cross_entropy_error,w_init,args=(x,t),jac=d_cee,method="CG")
+    return ans.x
+
+w_init=[1,1]
+
+#入力値
+x = np.load('x.npy')
+#実測値
+t = np.load('t.npy')
+
+w_ans=cee_solve(w_init,x,t)
+print("w0:{0}".format(w_ans[0]))
+print("w1:{0}".format(w_ans[1]))
+```
+
+実行結果
+
+```
+$ python cee_solve.py 
+w0:0.7024819393205183
+w1:-27.405983513314283
+```
+
+のように、最適なw<sub>0</sub>、w<sub>1</sub>が求められる。
