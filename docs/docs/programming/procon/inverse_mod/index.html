@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.03f997d7a2819563dbfc959ed710071ccc84abb873eb15e70066f05d8f01978f.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.542de2112148cbf7652597809c6249afb0841d0ebf123a032525ed0c13452d97.js"></script>
 
 
 
@@ -582,6 +582,38 @@ x \cdot x^{p-2}  \equiv 1 \pmod{p}
 
 
 <p>となるので、pが素数の時、整数xの逆元はx<sup>p-2</sup>であることもわかる。</p>
+
+<h2 id="オイラーの定理">オイラーの定理</h2>
+
+<p>フェルマーの小定理はpが素数の時のみ使える定理であった。pが素数でない(合成数)時はどのようにすれば良いのだろうか。</p>
+
+<p>実はpが素数でない時は、<strong>オイラーの定理</strong>という定理が適用できる。</p>
+
+<p>合成数pを</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{22}
+p = p_{1}^{e_{1}} p_{2}^{e_{2}} \cdots p_{n}^{e_{n}}
+ $$
+</p>
+
+
+
+<p>と表した時、オイラー関数φ(p)を以下のように定義する。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{23}
+\phi(p) = p \prod_{i=1}^n \frac{p_{i}-1}{p_{i}}
+ $$
+</p>
+
+
 </article>
 
       
@@ -589,8 +621,8 @@ x \cdot x^{p-2}  \equiv 1 \pmod{p}
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/b95f2acff6dc6230505c7f95deb83deeb54c0d8c" title='Last modified Jun 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 7, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/3d01beee16082fceeb2c49f5e852703ec5f5e27f" title='Last modified Jun 8, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 8, 2020
     </a>
   </div>
   
@@ -624,6 +656,7 @@ x \cdot x^{p-2}  \equiv 1 \pmod{p}
 </ul></li>
 <li><a href="#逆元">逆元</a></li>
 <li><a href="#フェルマーの小定理">フェルマーの小定理</a></li>
+<li><a href="#オイラーの定理">オイラーの定理</a></li>
 </ul></li>
 </ul>
 </nav>
