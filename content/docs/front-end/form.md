@@ -268,3 +268,65 @@ type属性に指定できる値は以下の通り。
 </table>
 </form>
 <hr>
+
+
+## textarea要素
+
+textarea要素は、複数行のテキスト入力フィールドとなる要素である。
+
+使用する主な属性は以下の通り。
+
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">cols</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">１行で入力できる文字数</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">rows</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">入力できる行数</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">autocomplete</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">オートコンプリート機能のオン</td>
+    </tr>
+        <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">form</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">特定のform要素と結びつける(form要素のid属性の値を指定)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">maxlength</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">最大文字数</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">placeholder</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">プレースホルダー(入力欄に薄く表示する説明のようなもの)</td>
+    </tr>
+</table>
+
+
+使用例
+
+```
+入力：
+<textarea cols="20" rows="5" autocomplete="on" maxlength="80" placeholder="20文字/行 5列まで、最大80文字"></textarea>
+```
+
+表示例
+
+<hr>
+入力：
+<textarea cols="20" rows="5" autocomplete="on" maxlength="80" placeholder="20文字/行 5列まで、最大80文字"></textarea>
+<hr>
