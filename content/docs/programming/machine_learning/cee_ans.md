@@ -172,3 +172,34 @@ bookToc: false
 {{< /katex >}}
 
 となる。この式(11),(14)から勾配法を利用して求めていく。
+
+式(11),(14)の値を求める[コード](https://github.com/WAT36/python/blob/master/machine_learning/classification/d_cee.py)は以下の通り。
+
+
+(d_cee.py)
+
+
+```python
+import numpy as np
+from logistic_regression import logistic_regression
+
+#平均交差エントロピー誤差の微分
+def d_cee(w,x,t):
+    y = logistic_regression(w,x)
+    d_cee=np.zeros(2)
+    for n in range(len(y)):
+        #w0
+        d_cee[0]+=(y[n]-t[n])*x[n]
+        #w1
+        d_cee[1]+=y[n]-t[n]
+    d_cee /= len(y)
+    return d_cee
+```
+
+この関数を用い、勾配法で最適なwを求めていく。平均二乗誤差の章ではfor文ループで求めていたが、実はループを用いずに最適解を求める方法がある。
+
+それが**scipy.optimize**ライブラリに含まれる**minimize()**関数である。
+
+
+
+
