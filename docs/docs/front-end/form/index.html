@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.87974a4f5e6e2ff70f40337b56b60db9593cae656bd3f0014874e5d5e59b1e64.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.a4c64f1281703aba5bd257046a99701bf0a37edeb3223a76b64985c965f196ca.js"></script>
 
 
 
@@ -444,6 +444,89 @@ https://github.com/alex-shpak/hugo-book
 <p>入力：
 <textarea cols="20" rows="5" autocomplete="on" maxlength="80" placeholder="20文字/行 5列まで、最大80文字"></textarea>
 <hr></p>
+
+<h2 id="button要素">button要素</h2>
+
+<p>button要素は、ボタンを表示させる要素である。要素内の内容はラベルとして、ボタンに表示される。</p>
+
+<p>使用する主な属性は以下の通り。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">type</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ボタンの種類(submit,reset,menu,buttonのいずれか)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">menu</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">表示させるメニュー</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">form</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">特定のform要素と結びつける(form要素のid属性の値を指定)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">formaction</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">フォームの送信先のURL</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">formmethod</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">フォームのデータを送信する際のHTTPメソッド</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">name</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">フォーム部品の名前</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">value</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">フォームのデータを送信する際に使用される値</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;form id=&quot;button&quot;&gt;
+&lt;textarea cols=&quot;20&quot; rows=&quot;4&quot; placeholder=&quot;何か書いてresetボタンを押すと？&quot; form=&quot;button&quot;&gt;&lt;/textarea&gt;
+
+&lt;button type=&quot;button&quot; name=&quot;test&quot; form=&quot;button&quot;&gt;
+buttonテスト
+&lt;/button&gt;
+
+&lt;button type=&quot;reset&quot; name=&quot;resettest&quot; form=&quot;button&quot;&gt;
+resetテスト
+&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><form id="button">
+<textarea cols="20" rows="4" placeholder="何か書いてresetボタンを押すと？" form="button"></textarea></p>
+
+<p><button type="button" name="test" form="button">
+buttonテスト
+</button></p>
+
+<p><button type="reset" name="resettest" form="button">
+resetテスト
+</button>
+</form>
+<hr></p>
 </article>
 
       
@@ -451,8 +534,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/e55d1d233f321c346865437ee45fcdf7d39c99d5" title='Last modified Jun 8, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 8, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/aae855d12fa7b7981c3e424e3268aedc1b2a43d3" title='Last modified Jun 9, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 9, 2020
     </a>
   </div>
   
@@ -472,6 +555,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#form要素">form要素</a></li>
 <li><a href="#input要素">input要素</a></li>
 <li><a href="#textarea要素">textarea要素</a></li>
+<li><a href="#button要素">button要素</a></li>
 </ul></li>
 </ul>
 </nav>

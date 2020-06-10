@@ -330,3 +330,88 @@ textarea要素は、複数行のテキスト入力フィールドとなる要素
 入力：
 <textarea cols="20" rows="5" autocomplete="on" maxlength="80" placeholder="20文字/行 5列まで、最大80文字"></textarea>
 <hr>
+
+
+## button要素
+
+button要素は、ボタンを表示させる要素である。要素内の内容はラベルとして、ボタンに表示される。
+
+使用する主な属性は以下の通り。
+
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">type</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ボタンの種類(submit,reset,menu,buttonのいずれか)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">menu</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">表示させるメニュー</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">form</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">特定のform要素と結びつける(form要素のid属性の値を指定)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">formaction</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">フォームの送信先のURL</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">formmethod</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">フォームのデータを送信する際のHTTPメソッド</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">name</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">フォーム部品の名前</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">value</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">フォームのデータを送信する際に使用される値</td>
+    </tr>
+</table>
+
+使用例
+
+```
+<form id="button">
+<textarea cols="20" rows="4" placeholder="何か書いてresetボタンを押すと？" form="button"></textarea>
+
+<button type="button" name="test" form="button">
+buttonテスト
+</button>
+
+<button type="reset" name="resettest" form="button">
+resetテスト
+</button>
+</form>
+```
+
+表示例
+
+<hr>
+<form id="button">
+<textarea cols="20" rows="4" placeholder="何か書いてresetボタンを押すと？" form="button"></textarea>
+
+<button type="button" name="test" form="button">
+buttonテスト
+</button>
+
+<button type="reset" name="resettest" form="button">
+resetテスト
+</button>
+</form>
+<hr>
