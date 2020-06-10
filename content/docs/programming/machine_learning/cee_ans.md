@@ -238,3 +238,23 @@ w1:-27.405983513314283
 ```
 
 のように、最適なw<sub>0</sub>、w<sub>1</sub>が求められる。
+
+それではこの答えをもとに、[１次元入力２クラス分類]({{< relref "/docs/programming/machine_learning/1d_2class.md" >}})の章で使用したデータ、そして本章で求めたロジスティック回帰モデルおよび決定境界を図示してみよう。
+
+図示した結果を以下に示す(コードは[こちら](https://github.com/WAT36/python/blob/master/machine_learning/classification/cee_solve_plot.py))
+
+<img src="/img/datascience/Figure_31.png" width=50%>
+
+また、コードの実行結果は
+
+```
+w0:0.7024819393205183
+w1:-27.405983513314283
+決定境界：x=39.03903903903904
+```
+
+となる。
+
+
+以上より、決定境界は39.03..[℃]と決まる。
+
