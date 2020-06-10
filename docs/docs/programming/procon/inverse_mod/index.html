@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.542de2112148cbf7652597809c6249afb0841d0ebf123a032525ed0c13452d97.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.d5f2945d7a47a232ea633ba48a1a0282627582d57c5360f67122068ac0541a05.js"></script>
 
 
 
@@ -583,13 +583,14 @@ x \cdot x^{p-2}  \equiv 1 \pmod{p}
 
 <p>となるので、pが素数の時、整数xの逆元はx<sup>p-2</sup>であることもわかる。</p>
 
-<h2 id="オイラーの定理">オイラーの定理</h2>
+<!--
+## オイラーの定理
 
-<p>フェルマーの小定理はpが素数の時のみ使える定理であった。pが素数でない(合成数)時はどのようにすれば良いのだろうか。</p>
+フェルマーの小定理はpが素数の時のみ使える定理であった。pが素数でない(合成数)時はどのようにすれば良いのだろうか。
 
-<p>実はpが素数でない時は、<strong>オイラーの定理</strong>という定理が適用できる。</p>
+実はpが素数でない時は、**オイラーの定理**という定理が適用できる。
 
-<p>合成数pを</p>
+合成数pを
 
 
 
@@ -602,7 +603,7 @@ p = p_{1}^{e_{1}} p_{2}^{e_{2}} \cdots p_{n}^{e_{n}}
 
 
 
-<p>と表した時、オイラー関数φ(p)を以下のように定義する。</p>
+と表した時、オイラー関数φ(p)を以下のように定義する。
 
 
 
@@ -614,6 +615,22 @@ p = p_{1}^{e_{1}} p_{2}^{e_{2}} \cdots p_{n}^{e_{n}}
 </p>
 
 
+
+式(23)は、実はp以下のpと互いに素な自然数の個数と等しくなる。
+
+またこの時、pと互いに素な整数xについて、以下の式も成り立つ。
+
+
+
+<p class="katex">
+  $$ 
+\tag{24}
+x^{\phi(p)}  \equiv 1 \pmod{p}
+ $$
+</p>
+
+
+-->
 </article>
 
       
@@ -621,8 +638,8 @@ p = p_{1}^{e_{1}} p_{2}^{e_{2}} \cdots p_{n}^{e_{n}}
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/3d01beee16082fceeb2c49f5e852703ec5f5e27f" title='Last modified Jun 8, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 8, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/8cc4b65fae8f2098ab989ff145ce59bb6888a37a" title='Last modified Jun 9, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 9, 2020
     </a>
   </div>
   
@@ -656,7 +673,6 @@ p = p_{1}^{e_{1}} p_{2}^{e_{2}} \cdots p_{n}^{e_{n}}
 </ul></li>
 <li><a href="#逆元">逆元</a></li>
 <li><a href="#フェルマーの小定理">フェルマーの小定理</a></li>
-<li><a href="#オイラーの定理">オイラーの定理</a></li>
 </ul></li>
 </ul>
 </nav>
