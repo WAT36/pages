@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.c6b30961d170add1ac4df8fd53d11e4fed1a2ab24fa1546ed9319c63c3155ad9.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.0c4cb13fd95ad45177c2338080bcaf1dbfce35cd1dfc1b9bb74f594de2c0e209.js"></script>
 
 
 
@@ -145,10 +145,11 @@ https://github.com/alex-shpak/hugo-book
 <span style="color:#75715e">#実際やると大きすぎる数を計算しようとしてエラーになりやすい</span>
 
 <span style="color:#75715e">#実際に使うときは、MOD=10000007 などの剰余計算を組み込んで使うこと！</span>
+MOD<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span><span style="color:#f92672">**</span><span style="color:#ae81ff">9</span>)<span style="color:#f92672">+</span><span style="color:#ae81ff">7</span>
+
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">repeated_square</span>(x,n):
     <span style="color:#75715e">#nを2進数で表して順序反転</span>
     bit_n<span style="color:#f92672">=</span>bin(n)[<span style="color:#ae81ff">2</span>:][::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
-    <span style="color:#66d9ef">print</span>(bit_n)
 
     ans<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
     ni<span style="color:#f92672">=</span>x
@@ -157,12 +158,13 @@ https://github.com/alex-shpak/hugo-book
         ans<span style="color:#f92672">*=</span>ni
 
     <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,len(bit_n)):
-        ni<span style="color:#f92672">*=</span>ni
+<span style="color:#75715e">#        ni*=ni</span>
+        ni<span style="color:#f92672">=</span>((ni<span style="color:#f92672">%</span>MOD)<span style="color:#f92672">*</span>(ni<span style="color:#f92672">%</span>MOD))<span style="color:#f92672">%</span>MOD
 
         <span style="color:#75715e">#i桁目が1なら、x^(2^i)を加える</span>
         <span style="color:#66d9ef">if</span>(bit_n[i]<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;1&#34;</span>):
-            ans<span style="color:#f92672">*=</span>ni
-            <span style="color:#66d9ef">print</span>(i,ni,ans)
+<span style="color:#75715e">#            ans*=ni</span>
+            ans<span style="color:#f92672">=</span>((ans<span style="color:#f92672">%</span>MOD)<span style="color:#f92672">*</span>(ni<span style="color:#f92672">%</span>MOD))<span style="color:#f92672">%</span>MOD
 
     <span style="color:#66d9ef">return</span> ans</code></pre></div></article>
 
@@ -171,7 +173,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/51fd940d8f3a051715dcf4427273a6a368f3d8f0" title='Last modified Jun 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/61f6fb7e336ee65953d886f6bbf1a38df726a8e4" title='Last modified Jun 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 11, 2020
     </a>
   </div>
