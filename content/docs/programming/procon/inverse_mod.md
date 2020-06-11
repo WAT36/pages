@@ -112,13 +112,6 @@ a  \equiv b \pmod{m} \\
 c  \equiv d \pmod{m}
 {{< /katex >}}
 
-である。この時、
-
-{{< katex  >}}
-a  \equiv b \pmod{m} \\
-c  \equiv d \pmod{m}
-{{< /katex >}}
-
 であり、また
 
 {{< katex  >}}
