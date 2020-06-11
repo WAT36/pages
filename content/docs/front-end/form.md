@@ -296,7 +296,7 @@ textarea要素は、複数行のテキスト入力フィールドとなる要素
         <td style="border:none;">　・・・　</td>
         <td style="border:none;">オートコンプリート機能のオン</td>
     </tr>
-        <tr>
+    <tr>
         <td style="border:none;">・</td>
         <td style="border:none;">form</td>
         <td style="border:none;">　・・・　</td>
@@ -415,3 +415,50 @@ resetテスト
 </button>
 </form>
 <hr>
+
+## select要素
+
+select要素は、選択肢の中から選ぶ形式のフォーム部品を示す要素である。
+
+フォーム部品自体はselect要素で示し、中身の選択肢は後述するoption要素・optgroup要素で示す。
+
+select要素で使用する主な属性は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">multiple</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">複数の入力・選択を許可する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">size</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">表示させる項目数</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">autocomplete</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">オートコンプリート機能のオン</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">form</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">特定のform要素と結びつける(form要素のid属性の値を指定)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">name</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">フォーム部品の名前</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">required</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">入力・選択が必須であることを示す</td>
+    </tr>
+</table>
