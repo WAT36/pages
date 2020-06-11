@@ -1240,7 +1240,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/procon/repeated_square/</guid>
-      <description>繰り返し二乗法</description>
+      <description>繰り返し二乗法 例えば、210100を計算しようとした時、単純にループで１回ずつ掛け算していくと計算にかなりの時間を要してしまう。 ループで一つ</description>
     </item>
     
     <item>
