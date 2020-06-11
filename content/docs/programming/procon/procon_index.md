@@ -25,4 +25,6 @@ bookToc: false
  - [Union-Find木]({{< relref "/docs/programming/procon/union-find.md" >}})
 - [動的計画法]({{< relref "/docs/programming/procon/dynamic_planning.md" >}})
 - [合同式(mod)・逆元]({{< relref "/docs/programming/procon/inverse_mod.md" >}})
+- [繰り返し二乗法]({{< relref "/docs/programming/procon/repeated_square.md" >}})
+
 

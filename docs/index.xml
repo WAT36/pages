@@ -479,6 +479,24 @@
     </item>
     
     <item>
+      <title>ダイクストラ法</title>
+      <link>https://WAT36.github.io/pages/docs/programming/procon/dijkstra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/procon/dijkstra/</guid>
+      <description>ダイクストラ法 グラフ探索の手法の一つ、ダイクストラ法についてを述べる。 ダイクストラ法は重み付きのグラフにおいて、ある頂点から他の全ての頂点ま</description>
+    </item>
+    
+    <item>
+      <title>テキスト</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/text/</guid>
+      <description>テキスト HTML文書にテキストを記載、装飾、補足するための要素についてをここでは述べる。 (一部表示例も記載するが、ブラウザ等により表示が異な</description>
+    </item>
+    
+    <item>
       <title>ファイル</title>
       <link>https://WAT36.github.io/pages/docs/programming/file_io/file_index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -548,6 +566,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/class_func/lambda/</guid>
       <description>ラムダ式（無名関数） ラムダ式（無名関数）についてを述べる。 Java Javaでは簡易的なメソッドを実装する方法としてラムダ式というのがある。 ( 実装す</description>
+    </item>
+    
+    <item>
+      <title>リスト</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/list/</guid>
+      <description>リスト HTML文書にリストを記載するための要素についてをここでは述べる。 ul要素 ul要素は、箇条書きリストを作成するための要素である。一つの</description>
     </item>
     
     <item>
@@ -746,6 +773,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/list/comprehension/</guid>
       <description>リスト内包表記 リスト内包表記についてを示す。 Python リスト内包とは大かっこ [ ] の中に式とfor文（・if文）を書くことにより、その式によって評価さ</description>
+    </item>
+    
+    <item>
+      <title>ルビ</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/ruby/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/ruby/</guid>
+      <description>ルビ HTML文書にルビ(ふりがな)を記載するための要素についてをここでは述べる。 ruby要素 ruby要素は文字にルビを振る要素であり、実際に</description>
     </item>
     
     <item>
@@ -1154,6 +1190,15 @@
     </item>
     
     <item>
+      <title>画像・動画・音声</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/img/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/img/</guid>
+      <description>画像・動画・音声 画像・動画・音声についての要素を述べる。 img要素 img要素は画像を表示させたい時、及びそれが利用できない時に代わりに表示さ</description>
+    </item>
+    
+    <item>
       <title>直線モデル(線形回帰)</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/linear_model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1187,6 +1232,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/linear_basis_function/</guid>
       <description>線形基底関数モデル 先ほどまでの章では、データの予測に直線モデルを利用していたが、勿論直線モデルを利用するのが必ずしも最適ではないという場合も</description>
+    </item>
+    
+    <item>
+      <title>繰り返し二乗法</title>
+      <link>https://WAT36.github.io/pages/docs/programming/procon/repeated_square/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/procon/repeated_square/</guid>
+      <description>繰り返し二乗法</description>
     </item>
     
     <item>
@@ -1902,7 +1956,7 @@ var php_wireless = 4; siteWinsock.switch_inbox += so_control_logic; if (target_w
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/front_index/</guid>
-      <description>フロントエンド-memo フロントエンドの勉強用メモ。まずはHTMLから頑張ります・・ HTML 要素とタグ HTMLの全体構造 要素の種類 グローバル属性 セ</description>
+      <description>フロントエンド-memo フロントエンドの勉強用メモ。まずはHTMLから頑張ります・・ (初心者なので奥深くは書ききれておりません。悪しからず。</description>
     </item>
     
     <item>
