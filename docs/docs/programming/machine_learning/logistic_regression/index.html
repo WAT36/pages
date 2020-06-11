@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.84442259ca45f8696a176402bb2f94b147e17657c7b199d794f1c8bc1bb27052.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.3cc3da61db36f3ff50b52e43d406610ebbb6234ec52e09b738c8a717cefaf863.js"></script>
 
 
 
@@ -132,9 +132,9 @@ https://github.com/alex-shpak/hugo-book
 
 <p>ただし、これが利用できるのは入力データが<strong>ガウス分布</strong>によって生成された時である。</p>
 
-<p>入力データがガウス分布に従っているとき、この１次元入力２クラス分類の条件付き確率P(t=1|x)はロジスティック回帰モデルで表せる。</p>
+<p>実は入力データがガウス分布に従っているとき、この１次元入力２クラス分類の条件付き確率P(t=1|x)はロジスティック回帰モデルで表せることがわかっている。</p>
 
-<p>仮に前述の１次元入力２クラス分類で扱った入力データがガウス分布により生成されたデータであると仮定しよう。</p>
+<p>前述の１次元入力２クラス分類で扱った入力データがガウス分布により生成されたデータであると仮定しよう。</p>
 
 <p>ロジスティック回帰モデルとは、以下の直線モデル(式(1))が与えられた時に、式(2)で表されるモデルである。</p>
 
@@ -173,7 +173,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p class="katex">
   $$ 
-\tag{3}  y  =  \frac{1}{ 1 + \exp( -x )}
+\tag{3}  \sigma (x)  =  \frac{1}{ 1 + \exp( -x )}
  $$
 </p>
 
@@ -189,11 +189,11 @@ https://github.com/alex-shpak/hugo-book
 
 <p><img src="https://WAT36.github.io/pages/img/datascience/Figure_29.png" width=100%></p>
 
-<p>ところで、このロジスティック回帰モデルで使用した直線は何なのか？</p>
+<p>ところで、このロジスティック回帰モデルで使用した直線モデルは何なのか？</p>
 
 <p>入力データに対して、どのような直線モデルを用いれば良いのか？</p>
 
-<p>実は、この1次元入力2クラス分類において、このデータに一番合うようなロジスティック回帰モデル　をなす直線モデルを求めるのが、この分類問題を解く考え方である。</p>
+<p>実は、この1次元入力2クラス分類において、このデータに一番合うようなロジスティック回帰モデル　をなす直線モデルのパラメータ(w<sub>0</sub>,w<sub>1</sub>)を求めるのが、この分類問題を解く考え方である。</p>
 
 <p>そのための方法を次章以降で述べる。</p>
 </article>
@@ -203,8 +203,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/9ed7b5c8952ee819a8c92f3a2861b9d5990dfaa6" title='Last modified Jun 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 3, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/e702a5bcd14819f8e7ba4de2e0eaf9fb99a99fba" title='Last modified Jun 10, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 10, 2020
     </a>
   </div>
   
