@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.a0d6573897c7019bc04f675c299e7fb403be940bfae875ba5ae8f4fd15ea8961.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.21a50f501c579142ed4243e8ec7496f67d8f6a931e9a2d38e6e1e66cdf1ca287.js"></script>
 
 
 
@@ -574,6 +574,55 @@ resetテスト
         <td style="border:none;">入力・選択が必須であることを示す</td>
     </tr>
 </table>
+
+<h2 id="option要素">option要素</h2>
+
+<p>option要素は、前述のselect要素またはdatalist要素の選択肢となる要素である。</p>
+
+<p>要素の内容には、表示させたい内容を入力する。</p>
+
+<p>使用する主な属性は以下の通り。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">selected</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">デフォルトで選択済みの状態にするか</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">label</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">要素内容よりも優先してブラウザに表示させる選択肢名</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">value</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">要素内容よりも優先してsubmit等でサーバーに送信する用の値</td>
+    </tr>
+</table>
+
+<p>前述のselect要素を使って、例を示す。</p>
+
+<pre><code>&lt;select&gt;
+    &lt;option selected &gt;選択肢その１&lt;/option&gt;
+    &lt;option label=&quot;ラベルに書いた選択肢その２&quot;&gt;選択肢その２&lt;/option&gt;
+    &lt;option&gt;選択肢その３&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><select>
+    <option selected >選択肢その１</option>
+    <option label="ラベルに書いた選択肢その２">選択肢その２</option>
+    <option>選択肢その３</option>
+</select>
+<hr></p>
 </article>
 
       
@@ -581,8 +630,8 @@ resetテスト
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/4b756e1bc7272366cd09d98f4eeff046a7c0e2de" title='Last modified Jun 10, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 10, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/f46b255fb10d6618dc3c8628e9dcea35dfbfbe2e" title='Last modified Jun 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 11, 2020
     </a>
   </div>
   
@@ -604,6 +653,7 @@ resetテスト
 <li><a href="#textarea要素">textarea要素</a></li>
 <li><a href="#button要素">button要素</a></li>
 <li><a href="#select要素">select要素</a></li>
+<li><a href="#option要素">option要素</a></li>
 </ul></li>
 </ul>
 </nav>

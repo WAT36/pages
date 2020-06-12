@@ -462,3 +462,54 @@ select要素で使用する主な属性は以下の通り。
         <td style="border:none;">入力・選択が必須であることを示す</td>
     </tr>
 </table>
+
+
+## option要素
+
+option要素は、前述のselect要素またはdatalist要素の選択肢となる要素である。
+
+要素の内容には、表示させたい内容を入力する。
+
+使用する主な属性は以下の通り。
+
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">selected</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">デフォルトで選択済みの状態にするか</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">label</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">要素内容よりも優先してブラウザに表示させる選択肢名</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">value</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">要素内容よりも優先してsubmit等でサーバーに送信する用の値</td>
+    </tr>
+</table>
+
+前述のselect要素を使って、例を示す。
+
+```
+<select>
+    <option selected >選択肢その１</option>
+    <option label="ラベルに書いた選択肢その２">選択肢その２</option>
+    <option>選択肢その３</option>
+</select>
+```
+
+表示例
+
+<hr>
+<select>
+    <option selected >選択肢その１</option>
+    <option label="ラベルに書いた選択肢その２">選択肢その２</option>
+    <option>選択肢その３</option>
+</select>
+<hr>
