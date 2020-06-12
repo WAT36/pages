@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.21a50f501c579142ed4243e8ec7496f67d8f6a931e9a2d38e6e1e66cdf1ca287.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.9f145255074db8ac92c8b522194cdbfb09c84d7d55ce361cd6ad12f26f384977.js"></script>
 
 
 
@@ -623,6 +623,34 @@ resetテスト
     <option>選択肢その３</option>
 </select>
 <hr></p>
+
+<h2 id="optgroup要素">optgroup要素</h2>
+
+<p>optgroup要素は、select要素内のoption要素をグループ化して、そこにグループの名前（ラベル）をつける要素である。</p>
+
+<p>グループに名前をつけるにはlabel属性を利用する。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;select&gt;
+    &lt;optgroup label=&quot;選択肢&quot;&gt;
+        &lt;option selected &gt;選択肢その１&lt;/option&gt;
+        &lt;option label=&quot;ラベルに書いた選択肢その２&quot;&gt;選択肢その２&lt;/option&gt;
+        &lt;option&gt;選択肢その３&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><select>
+    <optgroup label="選択肢">
+        <option selected >選択肢その１</option>
+        <option label="ラベルに書いた選択肢その２">選択肢その２</option>
+        <option>選択肢その３</option>
+</select>
+<hr></p>
 </article>
 
       
@@ -630,8 +658,8 @@ resetテスト
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f46b255fb10d6618dc3c8628e9dcea35dfbfbe2e" title='Last modified Jun 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 11, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/e3483b39e3fe811c3b2f4b70062ea7e3f12b4459" title='Last modified Jun 12, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 12, 2020
     </a>
   </div>
   
@@ -654,6 +682,7 @@ resetテスト
 <li><a href="#button要素">button要素</a></li>
 <li><a href="#select要素">select要素</a></li>
 <li><a href="#option要素">option要素</a></li>
+<li><a href="#optgroup要素">optgroup要素</a></li>
 </ul></li>
 </ul>
 </nav>

@@ -513,3 +513,32 @@ option要素は、前述のselect要素またはdatalist要素の選択肢とな
     <option>選択肢その３</option>
 </select>
 <hr>
+
+
+## optgroup要素
+
+optgroup要素は、select要素内のoption要素をグループ化して、そこにグループの名前（ラベル）をつける要素である。
+
+グループに名前をつけるにはlabel属性を利用する。
+
+使用例
+
+```
+<select>
+    <optgroup label="選択肢">
+        <option selected >選択肢その１</option>
+        <option label="ラベルに書いた選択肢その２">選択肢その２</option>
+        <option>選択肢その３</option>
+</select>
+```
+
+表示例
+
+<hr>
+<select>
+    <optgroup label="選択肢">
+        <option selected >選択肢その１</option>
+        <option label="ラベルに書いた選択肢その２">選択肢その２</option>
+        <option>選択肢その３</option>
+</select>
+<hr>
