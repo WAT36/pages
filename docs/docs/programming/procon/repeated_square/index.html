@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.0c4cb13fd95ad45177c2338080bcaf1dbfce35cd1dfc1b9bb74f594de2c0e209.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.c8340eda8e719a927dbdf1f15e4d725667fd99b97ae50d7503f8b7bb7e9e9491.js"></script>
 
 
 
@@ -140,6 +140,10 @@ https://github.com/alex-shpak/hugo-book
 
 <p>これにより、計算量はO(log<sub>2</sub>n)まで削減できる。</p>
 
+<p>しかし、注意して欲しいのが、いくらこの方法で計算量は削減できると言っても、かなり大きな数を計算しようとした時は、大きな数同士の掛け算を何回かすることにより計算時間がかかってしまうことに変わりはない。</p>
+
+<p>競技プログラミングでは大きな数を計算するときに「1000000007で割った余りを求めよ」と指定されていることが多い。このようにすることで1000000007以下の数字のみ計算に使用することになるので、計算量は通常よりも削減可能になる。そのため、繰り返し二乗法の計算には、途中で剰余を求める計算も組み入れる。</p>
+
 <p><a href="https://github.com/WAT36/python/blob/master/procon/repeated_square.py">コード</a>例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#x^nを繰り返し二乗法で求める関数</span>
 <span style="color:#75715e">#実際やると大きすぎる数を計算しようとしてエラーになりやすい</span>
@@ -173,7 +177,7 @@ MOD<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span><sp
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/61f6fb7e336ee65953d886f6bbf1a38df726a8e4" title='Last modified Jun 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/c2cd8ae9c107cd5fbb587990d73a111aa3b46f13" title='Last modified Jun 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 11, 2020
     </a>
   </div>
