@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.9f145255074db8ac92c8b522194cdbfb09c84d7d55ce361cd6ad12f26f384977.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.949c78d3fa170bc174fa00e95a7f4dfc9dd77cf5c55b17005b52d331fe34f368.js"></script>
 
 
 
@@ -651,6 +651,46 @@ resetテスト
         <option>選択肢その３</option>
 </select>
 <hr></p>
+
+<h2 id="datalist要素">datalist要素</h2>
+
+<p>datalist要素は、input要素にサジェストを追加するための要素である。</p>
+
+<p>実際のサジェストの内容は、前述の<strong>option要素・optgroup要素</strong>を利用して表現する。</p>
+
+<p>datalist要素とinput要素を関連付けるには、datalist要素のid属性の値をinput要素のlist属性に指定する。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;p&gt;行きたい場所は?
+&lt;input type=&quot;text&quot; list=&quot;place&quot;&gt;
+    &lt;datalist id=&quot;place&quot;&gt;
+        &lt;option&gt;東京&lt;/option&gt;
+        &lt;option&gt;横浜&lt;/option&gt;
+        &lt;option&gt;京都&lt;/option&gt;
+        &lt;optgroup label=&quot;海外&quot;&gt;
+            &lt;option&gt;ハワイ&lt;/option&gt;
+            &lt;option&gt;香港&lt;/option&gt;
+    &lt;/datalist&gt;
+&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p>行きたい場所は?
+<input type="text" list="place">
+    <datalist id="place">
+        <option>東京</option>
+        <option>横浜</option>
+        <option>京都</option>
+        <optgroup label="海外">
+            <option>ハワイ</option>
+            <option>香港</option>
+    </datalist>
+</p>
+<hr></p>
 </article>
 
       
@@ -658,7 +698,7 @@ resetテスト
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/e3483b39e3fe811c3b2f4b70062ea7e3f12b4459" title='Last modified Jun 12, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/2d9e309535519f4900741204526cdb9563dcaaa3" title='Last modified Jun 12, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 12, 2020
     </a>
   </div>
@@ -683,6 +723,7 @@ resetテスト
 <li><a href="#select要素">select要素</a></li>
 <li><a href="#option要素">option要素</a></li>
 <li><a href="#optgroup要素">optgroup要素</a></li>
+<li><a href="#datalist要素">datalist要素</a></li>
 </ul></li>
 </ul>
 </nav>

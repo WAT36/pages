@@ -542,3 +542,44 @@ optgroup要素は、select要素内のoption要素をグループ化して、そ
         <option>選択肢その３</option>
 </select>
 <hr>
+
+
+## datalist要素
+
+datalist要素は、input要素にサジェストを追加するための要素である。
+
+実際のサジェストの内容は、前述の**option要素・optgroup要素**を利用して表現する。
+
+datalist要素とinput要素を関連付けるには、datalist要素のid属性の値をinput要素のlist属性に指定する。
+
+使用例
+
+```
+<p>行きたい場所は?
+<input type="text" list="place">
+    <datalist id="place">
+        <option>東京</option>
+        <option>横浜</option>
+        <option>京都</option>
+        <optgroup label="海外">
+            <option>ハワイ</option>
+            <option>香港</option>
+    </datalist>
+</p>
+```
+
+表示例
+
+<hr>
+<p>行きたい場所は?
+<input type="text" list="place">
+    <datalist id="place">
+        <option>東京</option>
+        <option>横浜</option>
+        <option>京都</option>
+        <optgroup label="海外">
+            <option>ハワイ</option>
+            <option>香港</option>
+    </datalist>
+</p>
+<hr>
