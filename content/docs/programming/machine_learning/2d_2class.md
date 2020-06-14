@@ -44,5 +44,5 @@ bookToc: false
 \end{aligned}
 {{< /katex >}}
 
-
+ここから、最適なパラメータwを求めていこう。
 
