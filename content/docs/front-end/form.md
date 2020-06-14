@@ -583,3 +583,52 @@ datalist要素とinput要素を関連付けるには、datalist要素のid属性
     </datalist>
 </p>
 <hr>
+
+
+## meter要素
+
+meter要素は、メーター（ゲージ)を示すための要素である。
+
+具体的には、特定の範囲内で指定した位置を示すときに利用する。
+
+使用する主な属性は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">value</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">要素の現在値</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">min</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">メーターの範囲の下限</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">max</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">メータの範囲の上限</td>
+    </tr>
+</table>
+
+
+使用例
+
+```
+<p>ダウンロード状況：
+<meter min="0" max="100" value="45">
+</meter>
+</p>
+```
+
+表示例
+
+<hr>
+<p>ダウンロード状況：
+<meter min="0" max="100" value="45">
+</meter>
+</p>
+<hr>
