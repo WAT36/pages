@@ -640,9 +640,6 @@ progress要素は、タスクの進み具合を示すゲージを示すための
 
 使用する属性は以下の通り。
 
-value:現在の進み具合
-max:タスクの全体量
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">・</td>
@@ -671,3 +668,47 @@ Now loading...:
 Now loading...:
 <progress value="45" max="100"></progress>
 <hr>
+
+
+## output要素
+
+output要素は、計算式の計算結果、またはユーザーの操作結果を示すための要素である。
+
+使用する属性は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">for</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">計算の元となったフォームの部品</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">name</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">フォーム部品の名前</td>
+    </tr>
+</table>
+
+使用例
+
+```
+<form oninput="result.value=a.valueAsNumber+b.valueAsNumber">
+	<input name="a" value="20" type="number"> +
+	<input name="b" value="30" type="number"> =
+	<output for="a b" name="result"></output>	
+</form>
+```
+
+表示例
+
+<hr>
+<form oninput="result.value=a.valueAsNumber+b.valueAsNumber">
+	<input name="a" value="20" type="number"> +
+	<input name="b" value="30" type="number"> =
+	<output for="a b" name="result"></output>	
+</form>
+<hr>
+
+

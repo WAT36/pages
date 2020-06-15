@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.939532f0e78de67034bc44b31281c7cfd50501269aef2b6d85b0e44893cd48d5.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.9bbe0c1aadf60ac376350b090565e69b49667eb074caa7187ad8bfc502989795.js"></script>
 
 
 
@@ -745,9 +745,6 @@ resetテスト
 
 <p>使用する属性は以下の通り。</p>
 
-<p>value:現在の進み具合
-max:タスクの全体量</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">・</td>
@@ -776,6 +773,47 @@ max:タスクの全体量</p>
 <p>Now loading&hellip;:
 <progress value="45" max="100"></progress>
 <hr></p>
+
+<h2 id="output要素">output要素</h2>
+
+<p>output要素は、計算式の計算結果、またはユーザーの操作結果を示すための要素である。</p>
+
+<p>使用する属性は以下の通り。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">for</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">計算の元となったフォームの部品</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">name</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">フォーム部品の名前</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;form oninput=&quot;result.value=a.valueAsNumber+b.valueAsNumber&quot;&gt;
+	&lt;input name=&quot;a&quot; value=&quot;20&quot; type=&quot;number&quot;&gt; +
+	&lt;input name=&quot;b&quot; value=&quot;30&quot; type=&quot;number&quot;&gt; =
+	&lt;output for=&quot;a b&quot; name=&quot;result&quot;&gt;&lt;/output&gt;	
+&lt;/form&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><form oninput="result.value=a.valueAsNumber+b.valueAsNumber">
+    <input name="a" value="20" type="number"> +
+    <input name="b" value="30" type="number"> =
+    <output for="a b" name="result"></output><br />
+</form>
+<hr></p>
 </article>
 
       
@@ -783,8 +821,8 @@ max:タスクの全体量</p>
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/24efb12d63b5de848af3fcce04b6719ce2083eae" title='Last modified Jun 14, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 14, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/0e308be67da0f99a5e652cc8962e8d7517f1fa1a" title='Last modified Jun 15, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 15, 2020
     </a>
   </div>
   
@@ -811,6 +849,7 @@ max:タスクの全体量</p>
 <li><a href="#datalist要素">datalist要素</a></li>
 <li><a href="#meter要素">meter要素</a></li>
 <li><a href="#progress要素">progress要素</a></li>
+<li><a href="#output要素">output要素</a></li>
 </ul></li>
 </ul>
 </nav>
