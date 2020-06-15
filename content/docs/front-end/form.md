@@ -618,7 +618,7 @@ meter要素は、メーター（ゲージ)を示すための要素である。
 使用例
 
 ```
-<p>ダウンロード状況：
+<p>使用量状況：
 <meter min="0" max="100" value="45">
 </meter>
 </p>
@@ -627,8 +627,47 @@ meter要素は、メーター（ゲージ)を示すための要素である。
 表示例
 
 <hr>
-<p>ダウンロード状況：
+<p>使用量状況：
 <meter min="0" max="100" value="45">
 </meter>
 </p>
+<hr>
+
+
+## progress要素
+
+progress要素は、タスクの進み具合を示すゲージを示すための要素である。
+
+使用する属性は以下の通り。
+
+value:現在の進み具合
+max:タスクの全体量
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">value</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">要素の現在値</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">max</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">全体量</td>
+    </tr>
+</table>
+
+使用例
+
+```
+Now loading...:
+<progress value="45" max="100"></progress>
+```
+
+表示例
+
+<hr>
+Now loading...:
+<progress value="45" max="100"></progress>
 <hr>

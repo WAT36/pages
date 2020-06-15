@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.bba5394179d626250f54682edbf5e0bd4264407efbbb6e7f2bd5faf71e43bf4b.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.939532f0e78de67034bc44b31281c7cfd50501269aef2b6d85b0e44893cd48d5.js"></script>
 
 
 
@@ -723,7 +723,7 @@ resetテスト
 
 <p>使用例</p>
 
-<pre><code>&lt;p&gt;ダウンロード状況：
+<pre><code>&lt;p&gt;使用量状況：
 &lt;meter min=&quot;0&quot; max=&quot;100&quot; value=&quot;45&quot;&gt;
 &lt;/meter&gt;
 &lt;/p&gt;
@@ -733,10 +733,48 @@ resetテスト
 
 <hr>
 
-<p><p>ダウンロード状況：
+<p><p>使用量状況：
 <meter min="0" max="100" value="45">
 </meter>
 </p>
+<hr></p>
+
+<h2 id="progress要素">progress要素</h2>
+
+<p>progress要素は、タスクの進み具合を示すゲージを示すための要素である。</p>
+
+<p>使用する属性は以下の通り。</p>
+
+<p>value:現在の進み具合
+max:タスクの全体量</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">value</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">要素の現在値</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">max</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">全体量</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>Now loading...:
+&lt;progress value=&quot;45&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p>Now loading&hellip;:
+<progress value="45" max="100"></progress>
 <hr></p>
 </article>
 
@@ -745,8 +783,8 @@ resetテスト
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/7d6495f263b7916f2f1aa305da022c2fdab73f78" title='Last modified Jun 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 13, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/24efb12d63b5de848af3fcce04b6719ce2083eae" title='Last modified Jun 14, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 14, 2020
     </a>
   </div>
   
@@ -772,6 +810,7 @@ resetテスト
 <li><a href="#optgroup要素">optgroup要素</a></li>
 <li><a href="#datalist要素">datalist要素</a></li>
 <li><a href="#meter要素">meter要素</a></li>
+<li><a href="#progress要素">progress要素</a></li>
 </ul></li>
 </ul>
 </nav>
