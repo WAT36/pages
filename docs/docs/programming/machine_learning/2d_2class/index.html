@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.feb8d245d7be50caccca7dc54cf6571b87907665c66658467b39f2948e2b3d1d.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.31cad227ed3c8f6c6afeeeee546e6ad2bdb45b1f70e90c65758468a93985c091.js"></script>
 
 
 
@@ -179,6 +179,58 @@ https://github.com/alex-shpak/hugo-book
 
 
 <p>ここから、最適なパラメータwを求めていこう。</p>
+
+<p>１次元入力２クラス分類の時と同じく、平均交差エントロピー誤差関数は以下の式の通りになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{3}  - \frac{1}{N} \log P( { \bf T } \mid { \bf X } ) 
+            E( { \bf w } ) =   - \frac{1}{N} \sum_{n=0}^{N-1} ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) ) 
+ $$
+</p>
+
+
+
+<p>同様にしてパラメータw<sub>0</sub>,w<sub>1</sub>,w<sub>2</sub>での偏微分を求めると以下のようになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{4} \frac{\partial }{\partial w_{0} }　E( { \bf w } )
+        = \frac{1}{N} \sum_{n=0}^{N-1} ( y_{n} - t_{n} ) x_{n,0}
+ $$
+</p>
+
+
+
+
+
+<p class="katex">
+  $$ 
+\tag{5} \frac{\partial }{\partial w_{1} }　E( { \bf w } )
+        = \frac{1}{N} \sum_{n=0}^{N-1} ( y_{n} - t_{n} ) x_{n,1}
+ $$
+</p>
+
+
+
+
+
+<p class="katex">
+  $$ 
+\tag{6} \frac{\partial }{\partial w_{2} }　E( { \bf w } )
+        = \frac{1}{N} \sum_{n=0}^{N-1} ( y_{n} - t_{n} )
+ $$
+</p>
+
+
+
+<p>ここで、x<sub>n,i</sub>はx<sub>n</sub>のi番目の入力である。</p>
+
+<p>よって、これらを元に勾配法を用いて、平均交差エントロピー誤差が最小となるようなパラメータ<b>w</b>の値を求めてみよう。</p>
 </article>
 
       
@@ -186,7 +238,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/03f1d0e42e8d0331926e797a95c9ae9a29e98278" title='Last modified Jun 14, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/18401171acc6083c3860c76366962b144caca3d6" title='Last modified Jun 14, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 14, 2020
     </a>
   </div>

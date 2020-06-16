@@ -46,3 +46,32 @@ bookToc: false
 
 ここから、最適なパラメータwを求めていこう。
 
+１次元入力２クラス分類の時と同じく、平均交差エントロピー誤差関数は以下の式の通りになる。
+
+{{< katex  >}}
+\tag{3}  - \frac{1}{N} \log P( { \bf T } \mid { \bf X } ) 
+            E( { \bf w } ) =   - \frac{1}{N} \sum_{n=0}^{N-1} ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) ) 
+{{< /katex >}}
+
+同様にしてパラメータw<sub>0</sub>,w<sub>1</sub>,w<sub>2</sub>での偏微分を求めると以下のようになる。
+
+
+{{< katex  >}}
+\tag{4} \frac{\partial }{\partial w_{0} }　E( { \bf w } )
+        = \frac{1}{N} \sum_{n=0}^{N-1} ( y_{n} - t_{n} ) x_{n,0}
+{{< /katex >}}
+
+
+{{< katex  >}}
+\tag{5} \frac{\partial }{\partial w_{1} }　E( { \bf w } )
+        = \frac{1}{N} \sum_{n=0}^{N-1} ( y_{n} - t_{n} ) x_{n,1}
+{{< /katex >}}
+
+{{< katex  >}}
+\tag{6} \frac{\partial }{\partial w_{2} }　E( { \bf w } )
+        = \frac{1}{N} \sum_{n=0}^{N-1} ( y_{n} - t_{n} )
+{{< /katex >}}
+
+ここで、x<sub>n,i</sub>はx<sub>n</sub>のi番目の入力である。
+
+よって、これらを元に勾配法を用いて、平均交差エントロピー誤差が最小となるようなパラメータ<b>w</b>の値を求めてみよう。
