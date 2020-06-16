@@ -711,4 +711,32 @@ output要素は、計算式の計算結果、またはユーザーの操作結�
 </form>
 <hr>
 
+## keygen要素
+
+keygen要素は、公開鍵・秘密鍵のペアを生成するための要素である。
+
+実行すると、秘密鍵はローカルに保存され、公開鍵はサーバー側に送られる。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">keytype</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">生成する暗号鍵の種類(rsaなど)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">challenge</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">生成された公開鍵とともに送られる文字列</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">name</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">form要素と関連づけるための値</td>
+    </tr>
+</table>
+
+(実行例略)
 
