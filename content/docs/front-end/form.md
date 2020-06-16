@@ -740,3 +740,33 @@ keygen要素は、公開鍵・秘密鍵のペアを生成するための要素�
 
 (実行例略)
 
+## label要素
+
+label要素は、その要素内容をフォームの部品と紐づけるための要素である。
+
+紐づけられたラベルは、フォームの部品と一体化してユーザの操作に一緒に反応されるようになる。
+
+紐づけるための方法は
+
+- label要素の中に、要素内容と一緒に関連づけたいフォームの部品の要素を入れる
+- フォーム部品の要素にid属性を指定し、label要素のfor属性にもそのid属性と同じ値を指定する
+
+である。
+
+使用例
+
+```
+<form>
+<label for="yes"><input type="radio" name="ans" id="yes">はい</label>
+<label for="no"><input type="radio" name="ans" id="no">いいえ</label>
+</form>
+```
+
+表示例
+
+<hr>
+<form>
+<label for="yes"><input type="radio" name="ans" id="yes">はい</label>
+<label for="no"><input type="radio" name="ans" id="no">いいえ</label>
+</form>
+<hr>

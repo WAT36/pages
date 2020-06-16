@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.0fa62f1768bdcfdcb71e4bb761c1a4838cb30a5f9d9ed1df640540f38bebf136.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.4719ba8370a37bab61b3544e3b8bdb36877797eb6d834a65529de7892c0d1b27.js"></script>
 
 
 
@@ -843,6 +843,39 @@ resetテスト
 </table>
 
 <p>(実行例略)</p>
+
+<h2 id="label要素">label要素</h2>
+
+<p>label要素は、その要素内容をフォームの部品と紐づけるための要素である。</p>
+
+<p>紐づけられたラベルは、フォームの部品と一体化してユーザの操作に一緒に反応されるようになる。</p>
+
+<p>紐づけるための方法は</p>
+
+<ul>
+<li>label要素の中に、要素内容と一緒に関連づけたいフォームの部品の要素を入れる</li>
+<li>フォーム部品の要素にid属性を指定し、label要素のfor属性にもそのid属性と同じ値を指定する</li>
+</ul>
+
+<p>である。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;form&gt;
+&lt;label for=&quot;yes&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;ans&quot; id=&quot;yes&quot;&gt;はい&lt;/label&gt;
+&lt;label for=&quot;no&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;ans&quot; id=&quot;no&quot;&gt;いいえ&lt;/label&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><form>
+<label for="yes"><input type="radio" name="ans" id="yes">はい</label>
+<label for="no"><input type="radio" name="ans" id="no">いいえ</label>
+</form>
+<hr></p>
 </article>
 
       
@@ -850,8 +883,8 @@ resetテスト
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/927e90c7b0716484f4f1c709a008376a2d31e7ca" title='Last modified Jun 15, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 15, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/f4bd8bf3d9eccb95fef6bbafcf7b140d9671c024" title='Last modified Jun 16, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 16, 2020
     </a>
   </div>
   
@@ -880,6 +913,7 @@ resetテスト
 <li><a href="#progress要素">progress要素</a></li>
 <li><a href="#output要素">output要素</a></li>
 <li><a href="#keygen要素">keygen要素</a></li>
+<li><a href="#label要素">label要素</a></li>
 </ul></li>
 </ul>
 </nav>
