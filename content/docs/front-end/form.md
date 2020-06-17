@@ -792,3 +792,108 @@ fieldset要素は、formに関する要素をグループ化するための要�
         <td style="border:none;">form要素と関連づけるための値</td>
     </tr>
 </table>
+
+使用例
+
+```
+<form id="ticket">
+<fieldset form="ticket">
+<p>
+乗車駅→降車駅<br>
+<input type="text" width="10">
+→
+<input type="text" width="10">
+</p>
+大人：
+<label><input type="radio" name="adult" id="zero">０人</label>
+<label><input type="radio" name="adult" id="one">１人</label>
+<label><input type="radio" name="adult" id="two">２人</label>
+<br>
+小人：
+<label><input type="radio" name="child" id="zero">０人</label>
+<label><input type="radio" name="child" id="one">１人</label>
+<label><input type="radio" name="child" id="two">２人</label>
+</fieldset>
+</form>
+```
+
+表示例
+
+<hr>
+<form id="ticket">
+<fieldset form="ticket">
+<p>
+乗車駅→降車駅<br>
+<input type="text" width="10">
+→
+<input type="text" width="10">
+</p>
+大人：
+<label><input type="radio" name="adult" id="zero">０人</label>
+<label><input type="radio" name="adult" id="one">１人</label>
+<label><input type="radio" name="adult" id="two">２人</label>
+<br>
+小人：
+<label><input type="radio" name="child" id="zero">０人</label>
+<label><input type="radio" name="child" id="one">１人</label>
+<label><input type="radio" name="child" id="two">２人</label>
+</fieldset>
+</form>
+<hr>
+
+## legend要素
+
+legend要素は、fieldset要素でグループ化されたフォーム部品にキャプションをつけて表示させるための要素である。
+
+legend要素を使用する場合は、必ずfieldset要素の中で使用し、かつその先頭に指定する必要がある。
+
+
+使用例
+
+```
+<form id="ticket">
+<fieldset form="ticket">
+<legend>乗車券</legend>
+<p>
+乗車駅→降車駅<br>
+<input type="text" width="10">
+→
+<input type="text" width="10">
+</p>
+大人：
+<label><input type="radio" name="adult" id="zero">０人</label>
+<label><input type="radio" name="adult" id="one">１人</label>
+<label><input type="radio" name="adult" id="two">２人</label>
+<br>
+小人：
+<label><input type="radio" name="child" id="zero">０人</label>
+<label><input type="radio" name="child" id="one">１人</label>
+<label><input type="radio" name="child" id="two">２人</label>
+</fieldset>
+</form>
+```
+
+表示例
+
+<hr>
+<form id="ticket">
+<fieldset form="ticket">
+<legend>乗車券</legend>
+<p>
+乗車駅→降車駅<br>
+<input type="text" width="10">
+→
+<input type="text" width="10">
+</p>
+大人：
+<label><input type="radio" name="adult" id="zero">０人</label>
+<label><input type="radio" name="adult" id="one">１人</label>
+<label><input type="radio" name="adult" id="two">２人</label>
+<br>
+小人：
+<label><input type="radio" name="child" id="zero">０人</label>
+<label><input type="radio" name="child" id="one">１人</label>
+<label><input type="radio" name="child" id="two">２人</label>
+</fieldset>
+</form>
+<hr>
