@@ -770,3 +770,25 @@ label要素は、その要素内容をフォームの部品と紐づけるため
 <label for="no"><input type="radio" name="ans" id="no">いいえ</label>
 </form>
 <hr>
+
+
+## fieldset要素
+
+fieldset要素は、formに関する要素をグループ化するための要素である。
+
+使用する属性は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">form</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">関連づけるform要素のid属性の値</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">name</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">form要素と関連づけるための値</td>
+    </tr>
+</table>
