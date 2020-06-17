@@ -75,3 +75,62 @@ bookToc: false
 ここで、x<sub>n,i</sub>はx<sub>n</sub>のi番目の入力である。
 
 よって、これらを元に勾配法を用いて、平均交差エントロピー誤差が最小となるようなパラメータ<b>w</b>の値を求めてみよう。
+
+まず、２次元入力のロジスティック回帰モデルのコードは以下の通り。
+
+(logistic_regression_2d.py)
+
+```python
+import numpy as np
+from sigmoid import sigmoid
+
+#ロジスティック回帰モデル(２次元入力)
+def logistic_regression_2d(w,x):
+    x = w[0]*x[:,0] + w[1]*x[:,1] + w[2]
+    return sigmoid(x)
+```
+
+２次元入力での平均交差エントロピー誤差のコードは以下の通り。
+
+(cross_entropy_error_2d.py)
+
+```python
+import numpy as np
+from logistic_regression_2d import logistic_regression_2d
+
+#交差エントロピー誤差
+def cross_entropy_error_2d(w,x,t):
+    y=logistic_regression_2d(w,x)
+    cee=0
+    for n in range(len(y)):
+        cee -= (t[n]*np.log(y[n]) + (1-t[n])*np.log(1-y[n]))
+    return cee
+
+
+#平均交差エントロピー誤差
+def ave_cross_entropy_error_2d(w,x,t):
+    return cross_entropy_error_2d(w,x,t)/len(x)
+```
+
+続いて、平均交差エントロピー誤差の偏微分を求めるコードは以下の通り。
+
+(d_cee_2d.py)
+
+```python
+import numpy as np
+from logistic_regression_2d import logistic_regression_2d
+
+#平均交差エントロピー誤差の微分(２次元入力)
+def d_cee_2d(w,x,t):
+    y = logistic_regression_2d(w,x)
+    d_cee=np.zeros(3)
+    for n in range(len(y)):
+        #w0
+        d_cee[0]+=(y[n]-t[n])*x[:,0]
+        #w1
+        d_cee[1]+=(y[n]-t[n])*x[:,1]
+        #w2
+        d_cee[2]+=y[n]-t[n]
+    d_cee /= len(y)
+    return d_cee
+```
