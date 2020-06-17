@@ -193,10 +193,6 @@ type属性に指定できる値は以下の通り。
         <td style="border:none;"><input type="radio"></td>
     </tr>
     <tr>
-        <td style="border:none;">submit</td>
-        <td style="border:none;"><input type="submit"></td>
-    </tr>
-    <tr>
         <td style="border:none;">reset</td>
         <td style="border:none;"><input type="reset"></td>
     </tr>
@@ -252,10 +248,6 @@ type属性に指定できる値は以下の通り。
     <tr>
         <td style="border:none;">radio</td>
         <td style="border:none;"><input type="radio"></td>
-    </tr>
-    <tr>
-        <td style="border:none;">submit</td>
-        <td style="border:none;"><input type="submit"></td>
     </tr>
     <tr>
         <td style="border:none;">reset</td>
@@ -463,6 +455,7 @@ select要素で使用する主な属性は以下の通り。
     </tr>
 </table>
 
+使用例は下記、option要素の所で示す。
 
 ## option要素
 
@@ -478,19 +471,19 @@ option要素は、前述のselect要素またはdatalist要素の選択肢とな
         <td style="border:none;">・</td>
         <td style="border:none;">selected</td>
         <td style="border:none;">　・・・　</td>
-        <td style="border:none;">デフォルトで選択済みの状態にするか</td>
+        <td style="border:none;">デフォルトで選択済みの状態にする</td>
     </tr>
     <tr>
         <td style="border:none;">・</td>
         <td style="border:none;">label</td>
         <td style="border:none;">　・・・　</td>
-        <td style="border:none;">要素内容よりも優先してブラウザに表示させる選択肢名</td>
+        <td style="border:none;">ブラウザに表示させる選択肢名(要素内容よりも優先する)</td>
     </tr>
     <tr>
         <td style="border:none;">・</td>
         <td style="border:none;">value</td>
         <td style="border:none;">　・・・　</td>
-        <td style="border:none;">要素内容よりも優先してsubmit等でサーバーに送信する用の値</td>
+        <td style="border:none;">submit等でサーバーに送信する値(要素内容よりも優先する)</td>
     </tr>
 </table>
 
@@ -561,9 +554,6 @@ datalist要素とinput要素を関連付けるには、datalist要素のid属性
         <option>東京</option>
         <option>横浜</option>
         <option>京都</option>
-        <optgroup label="海外">
-            <option>ハワイ</option>
-            <option>香港</option>
     </datalist>
 </p>
 ```
@@ -577,9 +567,6 @@ datalist要素とinput要素を関連付けるには、datalist要素のid属性
         <option>東京</option>
         <option>横浜</option>
         <option>京都</option>
-        <optgroup label="海外">
-            <option>ハワイ</option>
-            <option>香港</option>
     </datalist>
 </p>
 <hr>
