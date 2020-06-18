@@ -19,5 +19,6 @@ bookToc: false
  - [ルビ]({{< relref "/docs/front-end/ruby.md" >}})
  - [画像・動画・音声]({{< relref "/docs/front-end/img.md" >}})
  - [フォーム]({{< relref "/docs/front-end/form.md" >}})
+ - [テーブル(表)]({{< relref "/docs/front-end/table.md" >}})
 
 
