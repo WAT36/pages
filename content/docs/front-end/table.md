@@ -66,6 +66,7 @@ td要素(table data cellの略)は、テーブルの１行内の１列分のデ�
 </table>
 <hr>
 
+
 ## th要素
 
 th要素(table header cellの略)は、見出し用のデータ(セル)を表すための要素である。
@@ -209,5 +210,66 @@ tbody要素(table bodyの略)は、表の本体の部分をグループ化して
         <td>2,1</td>
         <td>2,2</td>
     </tr>
+</table>
+<hr>
+
+
+## tfoot要素
+
+tfoot要素(table footerの略)は、表のフッター部分を表す要素である。
+
+使用例
+
+```
+<table>
+    <thead>
+        <tr>
+            <th>0,0</th>
+            <th>0,1</th>
+            <th>0,2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1,0</td>
+            <td>1,1</td>
+            <td>1,2</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>2,0</td>
+            <td>2,1</td>
+            <td>2,2</td>
+        </tr>
+    </tfoot>
+</table>
+```
+
+表示例
+
+<hr>
+<table>
+    <thead>
+        <tr>
+            <th>0,0</th>
+            <th>0,1</th>
+            <th>0,2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1,0</td>
+            <td>1,1</td>
+            <td>1,2</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>2,0</td>
+            <td>2,1</td>
+            <td>2,2</td>
+        </tr>
+    </tfoot>
 </table>
 <hr>
