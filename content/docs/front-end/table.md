@@ -99,3 +99,58 @@ th要素(table header cellの略)は、見出し用のデータ(セル)を表す
     </tr>
 </table>
 <hr>
+
+
+## thead要素
+
+thead要素(table headerの略)は、見出しとなるデータ(セル)をグループ化する要素である。
+
+thead要素の中には、見出しとするtr要素を入れる。
+
+使用例を以下に示す。
+
+```
+<table>
+    <thead>
+        <tr>
+            <th>0,0</th>
+            <th>0,1</th>
+            <th>0,2</th>
+        </tr>
+    </thead>
+    <tr>
+        <td>1,0</td>
+        <td>1,1</td>
+        <td>1,2</td>
+    </tr>
+    <tr>
+        <td>2,0</td>
+        <td>2,1</td>
+        <td>2,2</td>
+    </tr>
+</table>
+```
+
+表示例
+
+<hr>
+<table>
+    <thead>
+        <tr>
+            <th>0,0</th>
+            <th>0,1</th>
+            <th>0,2</th>
+        </tr>
+    </thead>
+    <tr>
+        <td>1,0</td>
+        <td>1,1</td>
+        <td>1,2</td>
+    </tr>
+    <tr>
+        <td>2,0</td>
+        <td>2,1</td>
+        <td>2,2</td>
+    </tr>
+</table>
+<hr>
