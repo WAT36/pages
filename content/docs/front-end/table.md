@@ -154,3 +154,60 @@ thead要素の中には、見出しとするtr要素を入れる。
     </tr>
 </table>
 <hr>
+
+## tbody要素
+
+tbody要素(table bodyの略)は、表の本体の部分をグループ化して表す要素である。
+
+使用例を以下に示す。
+
+```
+<table>
+    <thead>
+        <tr>
+            <th>0,0</th>
+            <th>0,1</th>
+            <th>0,2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1,0</td>
+            <td>1,1</td>
+            <td>1,2</td>
+        </tr>
+    </tbody>
+    <tr>
+        <td>2,0</td>
+        <td>2,1</td>
+        <td>2,2</td>
+    </tr>
+</table>
+```
+
+表示例
+
+
+<hr>
+<table>
+    <thead>
+        <tr>
+            <th>0,0</th>
+            <th>0,1</th>
+            <th>0,2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1,0</td>
+            <td>1,1</td>
+            <td>1,2</td>
+        </tr>
+    </tbody>
+    <tr>
+        <td>2,0</td>
+        <td>2,1</td>
+        <td>2,2</td>
+    </tr>
+</table>
+<hr>
