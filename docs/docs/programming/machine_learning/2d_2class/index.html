@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.914fa1b3f3bb7290abf9296cba4a3a5a92c57240fc4d00b593bd0da34ac2ec86.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.07b8a7765c3aefba409f354c8fb94df56436165033558c4fc762921f28d5c0ca.js"></script>
 
 
 
@@ -130,7 +130,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class/">１次元入力２クラス分類</a>で使用したデータに、pHのデータも加えた２次元入力のデータを新たに作成する。(入力データは<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/x_2d2class.npy">こちら</a>、目標データは<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/t_2d2class.npy">こちら</a>)</p>
 
-<p>図示すると以下のようになる。(コードは<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/2d_2class_plt.py">こちら</a>)</p>
+<p>図示すると以下のようになる。(コードは<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/plot_2d_2class_inputdata.py">こちら</a>)</p>
 
 <p><img src="https://WAT36.github.io/pages/img/datascience/Figure_32.png" width=50%></p>
 
@@ -232,21 +232,21 @@ https://github.com/alex-shpak/hugo-book
 
 <p>よって、これらを元に勾配法を用いて、平均交差エントロピー誤差が最小となるようなパラメータ<b>w</b>の値を求めてみよう。</p>
 
-<p>まず、２次元入力のロジスティック回帰モデルのコードは以下の通り。</p>
+<p>まず、２次元入力のロジスティック回帰モデルの<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/logistic_regression_2d.py">コード</a>は以下の通り。</p>
 
 <p>(logistic_regression_2d.py)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
-<span style="color:#f92672">from</span> sigmoid <span style="color:#f92672">import</span> sigmoid
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sigmoid <span style="color:#f92672">import</span> sigmoid
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 
 <span style="color:#75715e">#ロジスティック回帰モデル(２次元入力)</span>
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">logistic_regression_2d</span>(w,x):
     x <span style="color:#f92672">=</span> w[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span>x[:,<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> w[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">*</span>x[:,<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> w[<span style="color:#ae81ff">2</span>]
     <span style="color:#66d9ef">return</span> sigmoid(x)</code></pre></div>
-<p>２次元入力での平均交差エントロピー誤差のコードは以下の通り。</p>
+<p>２次元入力での平均交差エントロピー誤差の<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/cross_entropy_error_2d.py">コード</a>は以下の通り。</p>
 
 <p>(cross_entropy_error_2d.py)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
-<span style="color:#f92672">from</span> logistic_regression_2d <span style="color:#f92672">import</span> logistic_regression_2d
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> logistic_regression_2d <span style="color:#f92672">import</span> logistic_regression_2d
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 
 <span style="color:#75715e">#交差エントロピー誤差</span>
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cross_entropy_error_2d</span>(w,x,t):
@@ -260,11 +260,11 @@ https://github.com/alex-shpak/hugo-book
 <span style="color:#75715e">#平均交差エントロピー誤差</span>
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">ave_cross_entropy_error_2d</span>(w,x,t):
     <span style="color:#66d9ef">return</span> cross_entropy_error_2d(w,x,t)<span style="color:#f92672">/</span>len(x)</code></pre></div>
-<p>続いて、平均交差エントロピー誤差の偏微分を求めるコードは以下の通り。</p>
+<p>続いて、平均交差エントロピー誤差の偏微分を求める<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/d_cee_2d.py">コード</a>は以下の通り。</p>
 
 <p>(d_cee_2d.py)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
-<span style="color:#f92672">from</span> logistic_regression_2d <span style="color:#f92672">import</span> logistic_regression_2d
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> logistic_regression_2d <span style="color:#f92672">import</span> logistic_regression_2d
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 
 <span style="color:#75715e">#平均交差エントロピー誤差の微分(２次元入力)</span>
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">d_cee_2d</span>(w,x,t):
@@ -289,10 +289,13 @@ https://github.com/alex-shpak/hugo-book
 <span style="color:#f92672">from</span> d_cee_2d <span style="color:#f92672">import</span> d_cee_2d
 <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">two_d_two_class_fit</span>(w,x,t):
-    result<span style="color:#f92672">=</span>minimize(ave_cross_entropy_error_2d,w_init,args<span style="color:#f92672">=</span>(x,t),jac<span style="color:#f92672">=</span>d_cee_2d,method<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;CG&#34;</span>)
-    <span style="color:#66d9ef">return</span> result<span style="color:#f92672">.</span>x
-
+<span style="color:#75715e">#勾配法</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fit_2d_2class</span>(w,x,t):
+    result<span style="color:#f92672">=</span>minimize(ave_cross_entropy_error_2d,w,args<span style="color:#f92672">=</span>(x,t),jac<span style="color:#f92672">=</span>d_cee_2d,method<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;CG&#34;</span>)
+    <span style="color:#66d9ef">return</span> result<span style="color:#f92672">.</span>x</code></pre></div>
+<p>(solve_2d_2class.py)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> fit_2d_2class <span style="color:#f92672">import</span> fit_2d_2class
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 
 <span style="color:#75715e">#入力値</span>
 x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;x_2d2class.npy&#39;</span>)
@@ -302,7 +305,8 @@ t <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>loa
 <span style="color:#75715e">#wの初期値</span>
 w_init<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>]
 
-w<span style="color:#f92672">=</span>two_d_two_class_fit(w_init,x,t)
+<span style="color:#75715e">#勾配法でwを求める</span>
+w<span style="color:#f92672">=</span>fit_2d_2class(w_init,x,t)
 
 <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;w0:{0}&#34;</span><span style="color:#f92672">.</span>format(w[<span style="color:#ae81ff">0</span>]))
 <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;w1:{0}&#34;</span><span style="color:#f92672">.</span>format(w[<span style="color:#ae81ff">1</span>]))
@@ -314,13 +318,13 @@ w1:2.5337217620823123
 w2:-103.76947792619409
 </code></pre>
 
-<p>となり、パラメータ<b>w</b>が求められたので、これを使ったロジスティック回帰モデルを入力データとともに図示してみると以下のようになる。(コードはこちら)。</p>
+<p>となり、パラメータ<b>w</b>が求められたので、これを使ったロジスティック回帰モデルを入力データとともに図示してみると以下のようになる。(コードは<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/surface_plot_2d_2class_logistic.py">こちら</a>)。</p>
 
 <p><img src="https://WAT36.github.io/pages/img/datascience/Figure_33.png" width=50%></p>
 
 <p>これを元に、１次元入力２クラス分類の時と同様にして決定境界をロジスティック回帰モデルの値が0.5になる値のところに引いてみよう。</p>
 
-<p>入力データ、ロジスティック回帰モデル及び決定境界を等高線プロットで表した図は以下の通り。</p>
+<p>入力データ、ロジスティック回帰モデル及び決定境界を等高線プロットで表した図は以下の通り。(コードは<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/contour_2d2class_plot.py">こちら</a>)</p>
 
 <p><img src="https://WAT36.github.io/pages/img/datascience/Figure_34.png" width=75%></p>
 
@@ -332,7 +336,7 @@ w2:-103.76947792619409
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/815296d83822aeb3ecddcef0baec4a8748cd0320" title='Last modified Jun 20, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/01150e76eaf2fb80c015dc777bef7bd685e8f68b" title='Last modified Jun 20, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 20, 2020
     </a>
   </div>

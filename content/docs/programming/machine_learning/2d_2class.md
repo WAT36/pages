@@ -13,7 +13,7 @@ bookToc: false
 
 [１次元入力２クラス分類]({{< relref "/docs/programming/machine_learning/1d_2class.md" >}})で使用したデータに、pHのデータも加えた２次元入力のデータを新たに作成する。(入力データは[こちら](https://github.com/WAT36/python/blob/master/machine_learning/classification/x_2d2class.npy)、目標データは[こちら](https://github.com/WAT36/python/blob/master/machine_learning/classification/t_2d2class.npy))
 
-図示すると以下のようになる。(コードは[こちら](https://github.com/WAT36/python/blob/master/machine_learning/classification/2d_2class_plt.py))
+図示すると以下のようになる。(コードは[こちら](https://github.com/WAT36/python/blob/master/machine_learning/classification/plot_2d_2class_inputdata.py))
 
 <img src="/img/datascience/Figure_32.png" width=50%>
 
@@ -76,13 +76,13 @@ bookToc: false
 
 よって、これらを元に勾配法を用いて、平均交差エントロピー誤差が最小となるようなパラメータ<b>w</b>の値を求めてみよう。
 
-まず、２次元入力のロジスティック回帰モデルのコードは以下の通り。
+まず、２次元入力のロジスティック回帰モデルの[コード](https://github.com/WAT36/python/blob/master/machine_learning/classification/logistic_regression_2d.py)は以下の通り。
 
 (logistic_regression_2d.py)
 
 ```python
-import numpy as np
 from sigmoid import sigmoid
+import numpy as np
 
 #ロジスティック回帰モデル(２次元入力)
 def logistic_regression_2d(w,x):
@@ -90,13 +90,13 @@ def logistic_regression_2d(w,x):
     return sigmoid(x)
 ```
 
-２次元入力での平均交差エントロピー誤差のコードは以下の通り。
+２次元入力での平均交差エントロピー誤差の[コード](https://github.com/WAT36/python/blob/master/machine_learning/classification/cross_entropy_error_2d.py)は以下の通り。
 
 (cross_entropy_error_2d.py)
 
 ```python
-import numpy as np
 from logistic_regression_2d import logistic_regression_2d
+import numpy as np
 
 #交差エントロピー誤差
 def cross_entropy_error_2d(w,x,t):
@@ -112,13 +112,13 @@ def ave_cross_entropy_error_2d(w,x,t):
     return cross_entropy_error_2d(w,x,t)/len(x)
 ```
 
-続いて、平均交差エントロピー誤差の偏微分を求めるコードは以下の通り。
+続いて、平均交差エントロピー誤差の偏微分を求める[コード](https://github.com/WAT36/python/blob/master/machine_learning/classification/d_cee_2d.py)は以下の通り。
 
 (d_cee_2d.py)
 
 ```python
-import numpy as np
 from logistic_regression_2d import logistic_regression_2d
+import numpy as np
 
 #平均交差エントロピー誤差の微分(２次元入力)
 def d_cee_2d(w,x,t):
@@ -147,10 +147,17 @@ from scipy.optimize import minimize
 from d_cee_2d import d_cee_2d
 import numpy as np
 
-def two_d_two_class_fit(w,x,t):
-    result=minimize(ave_cross_entropy_error_2d,w_init,args=(x,t),jac=d_cee_2d,method="CG")
+#勾配法
+def fit_2d_2class(w,x,t):
+    result=minimize(ave_cross_entropy_error_2d,w,args=(x,t),jac=d_cee_2d,method="CG")
     return result.x
+```
 
+(solve_2d_2class.py)
+
+```python
+from fit_2d_2class import fit_2d_2class
+import numpy as np
 
 #入力値
 x = np.load('x_2d2class.npy')
@@ -160,7 +167,8 @@ t = np.load('t_2d2class.npy')
 #wの初期値
 w_init=[1,1,1]
 
-w=two_d_two_class_fit(w_init,x,t)
+#勾配法でwを求める
+w=fit_2d_2class(w_init,x,t)
 
 print("w0:{0}".format(w[0]))
 print("w1:{0}".format(w[1]))
@@ -175,13 +183,13 @@ w1:2.5337217620823123
 w2:-103.76947792619409
 ```
 
-となり、パラメータ<b>w</b>が求められたので、これを使ったロジスティック回帰モデルを入力データとともに図示してみると以下のようになる。(コードはこちら)。
+となり、パラメータ<b>w</b>が求められたので、これを使ったロジスティック回帰モデルを入力データとともに図示してみると以下のようになる。(コードは[こちら](https://github.com/WAT36/python/blob/master/machine_learning/classification/surface_plot_2d_2class_logistic.py))。
 
 <img src="/img/datascience/Figure_33.png" width=50%>
 
 これを元に、１次元入力２クラス分類の時と同様にして決定境界をロジスティック回帰モデルの値が0.5になる値のところに引いてみよう。
 
-入力データ、ロジスティック回帰モデル及び決定境界を等高線プロットで表した図は以下の通り。
+入力データ、ロジスティック回帰モデル及び決定境界を等高線プロットで表した図は以下の通り。(コードは[こちら](https://github.com/WAT36/python/blob/master/machine_learning/classification/contour_2d2class_plot.py))
 
 <img src="/img/datascience/Figure_34.png" width=75%>
 
