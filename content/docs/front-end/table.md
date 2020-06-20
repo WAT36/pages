@@ -65,3 +65,37 @@ td要素(table data cellの略)は、テーブルの１行内の１列分のデ�
     </tr>
 </table>
 <hr>
+
+## th要素
+
+th要素(table header cellの略)は、見出し用のデータ(セル)を表すための要素である。
+
+使用例を以下に示す。
+
+```
+<table>
+    <tr>
+        <th>0,0</th>
+        <th>0,1</th>
+    </tr>
+    <tr>
+        <td>1,0</td>
+        <td>1,1</td>
+    </tr>
+</table>
+```
+
+表示例
+
+<hr>
+<table>
+    <tr>
+        <th>0,0</th>
+        <th>0,1</th>
+    </tr>
+    <tr>
+        <td>1,0</td>
+        <td>1,1</td>
+    </tr>
+</table>
+<hr>
