@@ -126,9 +126,9 @@ def d_cee_2d(w,x,t):
     d_cee=np.zeros(3)
     for n in range(len(y)):
         #w0
-        d_cee[0]+=(y[n]-t[n])*x[:,0]
+        d_cee[0]+=(y[n]-t[n])*x[n,0]
         #w1
-        d_cee[1]+=(y[n]-t[n])*x[:,1]
+        d_cee[1]+=(y[n]-t[n])*x[n,1]
         #w2
         d_cee[2]+=y[n]-t[n]
     d_cee /= len(y)
@@ -138,4 +138,40 @@ def d_cee_2d(w,x,t):
 ではこれらを元に、１次元入力２クラス分類で行ったような勾配法を用いて、最適なパラメータ<b>w</b>を求めてみよう。
 
 パラメータwを求めるコードは以下の通り。
+
+(fit_2d_2class.py)
+
+```python
+from cross_entropy_error_2d import ave_cross_entropy_error_2d
+from scipy.optimize import minimize
+from d_cee_2d import d_cee_2d
+import numpy as np
+
+def two_d_two_class_fit(w,x,t):
+    result=minimize(ave_cross_entropy_error_2d,w_init,args=(x,t),jac=d_cee_2d,method="CG")
+    return result.x
+
+
+#入力値
+x = np.load('x_2d2class.npy')
+#実測値
+t = np.load('t_2d2class.npy')
+
+#wの初期値
+w_init=[1,1,1]
+
+w=two_d_two_class_fit(w_init,x,t)
+
+print("w0:{0}".format(w[0]))
+print("w1:{0}".format(w[1]))
+print("w2:{0}".format(w[2]))
+```
+
+実行結果
+
+```
+w0:2.2211059806431024
+w1:2.5337217620823123
+w2:-103.76947792619409
+```
 
