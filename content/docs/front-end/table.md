@@ -273,3 +273,67 @@ tfoot要素(table footerの略)は、表のフッター部分を表す要素で�
     </tfoot>
 </table>
 <hr>
+
+
+## caption要素
+
+caption要素は、表のキャプション(タイトル)を示すための要素である。
+
+使用例
+
+```
+<table>
+    <caption>行列のインデックス</caption>
+    <thead>
+        <tr>
+            <th>0,0</th>
+            <th>0,1</th>
+            <th>0,2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1,0</td>
+            <td>1,1</td>
+            <td>1,2</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>2,0</td>
+            <td>2,1</td>
+            <td>2,2</td>
+        </tr>
+    </tfoot>
+</table>
+```
+
+表示例
+
+<hr>
+<table>
+    <caption>行列のインデックス</caption>
+    <thead>
+        <tr>
+            <th>0,0</th>
+            <th>0,1</th>
+            <th>0,2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1,0</td>
+            <td>1,1</td>
+            <td>1,2</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>2,0</td>
+            <td>2,1</td>
+            <td>2,2</td>
+        </tr>
+    </tfoot>
+</table>
+<hr>
+
