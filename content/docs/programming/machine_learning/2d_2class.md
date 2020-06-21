@@ -137,7 +137,7 @@ def d_cee_2d(w,x,t):
 
 ではこれらを元に、１次元入力２クラス分類で行ったような勾配法を用いて、最適なパラメータ<b>w</b>を求めてみよう。
 
-パラメータwを求めるコードは以下の通り。
+パラメータwを求める[コード](https://github.com/WAT36/python/blob/master/machine_learning/classification/fit_2d_2class.py)は以下の通り。
 
 (fit_2d_2class.py)
 
@@ -183,7 +183,9 @@ w1:2.5337217620823123
 w2:-103.76947792619409
 ```
 
-となり、パラメータ<b>w</b>が求められたので、これを使ったロジスティック回帰モデルを入力データとともに図示してみると以下のようになる。(コードは[こちら](https://github.com/WAT36/python/blob/master/machine_learning/classification/surface_plot_2d_2class_logistic.py))。
+となり、パラメータ<b>w</b>が求められる。
+
+よって、このwを使ったロジスティック回帰モデルを入力データとともに図示してみると、以下のようになる。(コードは[こちら](https://github.com/WAT36/python/blob/master/machine_learning/classification/surface_plot_2d_2class_logistic.py))。
 
 <img src="/img/datascience/Figure_33.png" width=50%>
 

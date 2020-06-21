@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.07b8a7765c3aefba409f354c8fb94df56436165033558c4fc762921f28d5c0ca.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.44d300db38f62d75c25eac46e66b0a69dc32fd4e65a5aa3ad4c2d981a9773d5b.js"></script>
 
 
 
@@ -281,7 +281,7 @@ https://github.com/alex-shpak/hugo-book
     <span style="color:#66d9ef">return</span> d_cee</code></pre></div>
 <p>ではこれらを元に、１次元入力２クラス分類で行ったような勾配法を用いて、最適なパラメータ<b>w</b>を求めてみよう。</p>
 
-<p>パラメータwを求めるコードは以下の通り。</p>
+<p>パラメータwを求める<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/fit_2d_2class.py">コード</a>は以下の通り。</p>
 
 <p>(fit_2d_2class.py)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> cross_entropy_error_2d <span style="color:#f92672">import</span> ave_cross_entropy_error_2d
@@ -318,7 +318,9 @@ w1:2.5337217620823123
 w2:-103.76947792619409
 </code></pre>
 
-<p>となり、パラメータ<b>w</b>が求められたので、これを使ったロジスティック回帰モデルを入力データとともに図示してみると以下のようになる。(コードは<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/surface_plot_2d_2class_logistic.py">こちら</a>)。</p>
+<p>となり、パラメータ<b>w</b>が求められる。</p>
+
+<p>よって、このwを使ったロジスティック回帰モデルを入力データとともに図示してみると、以下のようになる。(コードは<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/surface_plot_2d_2class_logistic.py">こちら</a>)。</p>
 
 <p><img src="https://WAT36.github.io/pages/img/datascience/Figure_33.png" width=50%></p>
 
@@ -336,8 +338,8 @@ w2:-103.76947792619409
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/01150e76eaf2fb80c015dc777bef7bd685e8f68b" title='Last modified Jun 20, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 20, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/0a4501de6458c21031db7c266201fd0ca2ddb50f" title='Last modified Jun 21, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 21, 2020
     </a>
   </div>
   
