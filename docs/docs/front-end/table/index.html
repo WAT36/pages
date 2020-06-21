@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.89c4813d9a27950f14604a5db2fe1947c5303f5178e75974b1047b38cb243853.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.b6a9ef890366e66995d3e962fd27eaee26a6d4bb370f3c5f0477747d4c789a1d.js"></script>
 
 
 
@@ -448,6 +448,74 @@ https://github.com/alex-shpak/hugo-book
     </tfoot>
 </table>
 <hr></p>
+
+<h2 id="colgroup要素">colgroup要素</h2>
+
+<p>colgroup要素は、表の列をグループ化する要素である。</p>
+
+<p>span属性でグループ化する列数を指定し、そこにwidth,alignなどの属性を適用してやると、その列のセル全体に適用される。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;table&gt;
+    &lt;caption&gt;行列のインデックス&lt;/caption&gt;
+    &lt;colgroup span=&quot;2&quot; width=&quot;100&quot; align=&quot;center&quot;&gt;
+    &lt;colgroup span=&quot;1&quot; width=&quot;200&quot; align=&quot;left&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;0,0&lt;/th&gt;
+            &lt;th&gt;0,1&lt;/th&gt;
+            &lt;th&gt;0,2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1,0&lt;/td&gt;
+            &lt;td&gt;1,1&lt;/td&gt;
+            &lt;td&gt;1,2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;2,0&lt;/td&gt;
+            &lt;td&gt;2,1&lt;/td&gt;
+            &lt;td&gt;2,2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><table>
+    <caption>行列のインデックス</caption>
+    <colgroup span="2" width="100" align="center">
+    <colgroup span="1" width="200" align="left">
+    <thead>
+        <tr>
+            <th>0,0</th>
+            <th>0,1</th>
+            <th>0,2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1,0</td>
+            <td>1,1</td>
+            <td>1,2</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>2,0</td>
+            <td>2,1</td>
+            <td>2,2</td>
+        </tr>
+    </tfoot>
+</table>
+<hr></p>
 </article>
 
       
@@ -455,8 +523,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/b27d39ee2e208a8dd04cf16bd2fdb1c9dd9be743" title='Last modified Jun 20, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 20, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/15d4d3b09dec373c5ae3cf5188270d424a6afd9a" title='Last modified Jun 21, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 21, 2020
     </a>
   </div>
   
@@ -481,6 +549,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#tbody要素">tbody要素</a></li>
 <li><a href="#tfoot要素">tfoot要素</a></li>
 <li><a href="#caption要素">caption要素</a></li>
+<li><a href="#colgroup要素">colgroup要素</a></li>
 </ul></li>
 </ul>
 </nav>

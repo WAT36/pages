@@ -337,3 +337,72 @@ caption要素は、表のキャプション(タイトル)を示すための要�
 </table>
 <hr>
 
+
+## colgroup要素
+
+colgroup要素は、表の列をグループ化する要素である。
+
+span属性でグループ化する列数を指定し、そこにwidth,alignなどの属性を適用してやると、その列のセル全体に適用される。
+
+使用例
+
+```
+<table>
+    <caption>行列のインデックス</caption>
+    <colgroup span="2" width="100" align="center">
+    <colgroup span="1" width="200" align="left">
+    <thead>
+        <tr>
+            <th>0,0</th>
+            <th>0,1</th>
+            <th>0,2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1,0</td>
+            <td>1,1</td>
+            <td>1,2</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>2,0</td>
+            <td>2,1</td>
+            <td>2,2</td>
+        </tr>
+    </tfoot>
+</table>
+```
+
+表示例
+
+<hr>
+<table>
+    <caption>行列のインデックス</caption>
+    <colgroup span="2" width="100" align="center">
+    <colgroup span="1" width="200" align="left">
+    <thead>
+        <tr>
+            <th>0,0</th>
+            <th>0,1</th>
+            <th>0,2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1,0</td>
+            <td>1,1</td>
+            <td>1,2</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>2,0</td>
+            <td>2,1</td>
+            <td>2,2</td>
+        </tr>
+    </tfoot>
+</table>
+<hr>
+
