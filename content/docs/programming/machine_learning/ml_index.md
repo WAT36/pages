@@ -28,4 +28,5 @@ bookToc: false
      - [交差エントロピー誤差]({{< relref "/docs/programming/machine_learning/cross_entropy_error.md" >}})
      - [平均交差エントロピー誤差の最適解の導出]({{< relref "/docs/programming/machine_learning/cee_ans.md" >}})
      - [２次元入力２クラス分類]({{< relref "/docs/programming/machine_learning/2d_2class.md" >}})
+     - [２次元入力３クラス分類]({{< relref "/docs/programming/machine_learning/2d_3class.md" >}})
 
