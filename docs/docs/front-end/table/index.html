@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.b6a9ef890366e66995d3e962fd27eaee26a6d4bb370f3c5f0477747d4c789a1d.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.25ec153f6a3bb2e5cb5143062edef4c480367f40365d9ae6b7434f6abd079362.js"></script>
 
 
 
@@ -459,8 +459,8 @@ https://github.com/alex-shpak/hugo-book
 
 <pre><code>&lt;table&gt;
     &lt;caption&gt;行列のインデックス&lt;/caption&gt;
-    &lt;colgroup span=&quot;2&quot; width=&quot;100&quot; align=&quot;center&quot;&gt;
-    &lt;colgroup span=&quot;1&quot; width=&quot;200&quot; align=&quot;left&quot;&gt;
+    &lt;colgroup span=&quot;2&quot; width=&quot;100&quot;&gt;
+    &lt;colgroup span=&quot;1&quot; width=&quot;200&quot;&gt;
     &lt;thead&gt;
         &lt;tr&gt;
             &lt;th&gt;0,0&lt;/th&gt;
@@ -491,8 +491,82 @@ https://github.com/alex-shpak/hugo-book
 
 <p><table>
     <caption>行列のインデックス</caption>
-    <colgroup span="2" width="100" align="center">
-    <colgroup span="1" width="200" align="left">
+    <colgroup span="2" width="100">
+    <colgroup span="1" width="200">
+    <thead>
+        <tr>
+            <th>0,0</th>
+            <th>0,1</th>
+            <th>0,2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1,0</td>
+            <td>1,1</td>
+            <td>1,2</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>2,0</td>
+            <td>2,1</td>
+            <td>2,2</td>
+        </tr>
+    </tfoot>
+</table>
+<hr></p>
+
+<h2 id="col要素">col要素</h2>
+
+<p>col要素は、<strong>span属性のない</strong>colgroup要素によって表された１列以上の縦列を表す要素である。</p>
+
+<p>使用するにはcolgroup要素の中で利用する。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;table&gt;
+    &lt;caption&gt;行列のインデックス&lt;/caption&gt;
+    &lt;colgroup&gt;
+        &lt;col span=&quot;1&quot; width=&quot;50&quot;&gt;
+        &lt;col span=&quot;1&quot; width=&quot;100&quot;&gt;
+    &lt;/colgroup&gt;
+    &lt;colgroup span=&quot;1&quot; width=&quot;200&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;0,0&lt;/th&gt;
+            &lt;th&gt;0,1&lt;/th&gt;
+            &lt;th&gt;0,2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1,0&lt;/td&gt;
+            &lt;td&gt;1,1&lt;/td&gt;
+            &lt;td&gt;1,2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;2,0&lt;/td&gt;
+            &lt;td&gt;2,1&lt;/td&gt;
+            &lt;td&gt;2,2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><table>
+    <caption>行列のインデックス</caption>
+    <colgroup>
+        <col span="1" width="50">
+        <col span="1" width="100">
+    </colgroup>
+    <colgroup span="1" width="200">
     <thead>
         <tr>
             <th>0,0</th>
@@ -523,7 +597,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/15d4d3b09dec373c5ae3cf5188270d424a6afd9a" title='Last modified Jun 21, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/7b79c6bd980e9c8cecdb374355a94450ccf1a6ef" title='Last modified Jun 21, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 21, 2020
     </a>
   </div>
@@ -550,6 +624,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#tfoot要素">tfoot要素</a></li>
 <li><a href="#caption要素">caption要素</a></li>
 <li><a href="#colgroup要素">colgroup要素</a></li>
+<li><a href="#col要素">col要素</a></li>
 </ul></li>
 </ul>
 </nav>

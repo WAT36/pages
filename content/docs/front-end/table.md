@@ -349,8 +349,8 @@ span属性でグループ化する列数を指定し、そこにwidth,alignな�
 ```
 <table>
     <caption>行列のインデックス</caption>
-    <colgroup span="2" width="100" align="center">
-    <colgroup span="1" width="200" align="left">
+    <colgroup span="2" width="100">
+    <colgroup span="1" width="200">
     <thead>
         <tr>
             <th>0,0</th>
@@ -380,8 +380,8 @@ span属性でグループ化する列数を指定し、そこにwidth,alignな�
 <hr>
 <table>
     <caption>行列のインデックス</caption>
-    <colgroup span="2" width="100" align="center">
-    <colgroup span="1" width="200" align="left">
+    <colgroup span="2" width="100">
+    <colgroup span="1" width="200">
     <thead>
         <tr>
             <th>0,0</th>
@@ -406,3 +406,77 @@ span属性でグループ化する列数を指定し、そこにwidth,alignな�
 </table>
 <hr>
 
+
+## col要素
+
+col要素は、**span属性のない**colgroup要素によって表された１列以上の縦列を表す要素である。
+
+使用するにはcolgroup要素の中で利用する。
+
+使用例
+
+```
+<table>
+    <caption>行列のインデックス</caption>
+    <colgroup>
+        <col span="1" width="50">
+        <col span="1" width="100">
+    </colgroup>
+    <colgroup span="1" width="200">
+    <thead>
+        <tr>
+            <th>0,0</th>
+            <th>0,1</th>
+            <th>0,2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1,0</td>
+            <td>1,1</td>
+            <td>1,2</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>2,0</td>
+            <td>2,1</td>
+            <td>2,2</td>
+        </tr>
+    </tfoot>
+</table>
+```
+
+表示例
+
+<hr>
+<table>
+    <caption>行列のインデックス</caption>
+    <colgroup>
+        <col span="1" width="50">
+        <col span="1" width="100">
+    </colgroup>
+    <colgroup span="1" width="200">
+    <thead>
+        <tr>
+            <th>0,0</th>
+            <th>0,1</th>
+            <th>0,2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1,0</td>
+            <td>1,1</td>
+            <td>1,2</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>2,0</td>
+            <td>2,1</td>
+            <td>2,2</td>
+        </tr>
+    </tfoot>
+</table>
+<hr>
