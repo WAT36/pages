@@ -274,7 +274,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/table/</loc>
-    <lastmod>2020-06-21T16:40:41+09:00</lastmod>
+    <lastmod>2020-06-22T20:02:21+09:00</lastmod>
   </url>
   
   <url>
@@ -295,6 +295,10 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/field/</loc>
     <lastmod>2020-01-19T18:13:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/form-2/</loc>
   </url>
   
   <url>
@@ -693,6 +697,10 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/procon/repeated_square-2/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/procon/repeated_square/</loc>
     <lastmod>2020-06-14T11:05:00+09:00</lastmod>
   </url>
@@ -984,7 +992,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-06-21T16:40:41+09:00</lastmod>
+    <lastmod>2020-06-22T20:02:21+09:00</lastmod>
   </url>
   
   <url>
@@ -1013,12 +1021,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -1028,12 +1036,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   

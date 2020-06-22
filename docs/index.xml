@@ -502,7 +502,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/table/</guid>
-      <description>テーブル(表) テーブル(表)を作る要素についてを述べる。 table要素 table要素は１つのテーブル(表)を表すの要素である。 table要素</description>
+      <description>テーブル(表) テーブル(表)を作る要素についてを述べる。 table要素 table要素は１つのテーブル(表)を表す要素である。 table要素の</description>
     </item>
     
     <item>
@@ -539,6 +539,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/class_func/field/</guid>
       <description>フィールド(クラス変数・インスタンス変数) フィールド変数とはクラス内に定義する変数のこと。 その中でも主に、クラス内で定義して全てのインスタン</description>
+    </item>
+    
+    <item>
+      <title>フォーム</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/form-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/form-2/</guid>
+      <description>フォーム フォームを作成するための要素についてを述べる。 form要素 form要素はフォームを構成する要素である。 使用する主な属性は以下の通り。</description>
     </item>
     
     <item>
@@ -1250,6 +1259,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/linear_basis_function/</guid>
       <description>線形基底関数モデル 先ほどまでの章では、データの予測に直線モデルを利用していたが、勿論直線モデルを利用するのが必ずしも最適ではないという場合も</description>
+    </item>
+    
+    <item>
+      <title>繰り返し二乗法</title>
+      <link>https://WAT36.github.io/pages/docs/programming/procon/repeated_square-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/procon/repeated_square-2/</guid>
+      <description>繰り返し二乗法 例えば、210100を計算しようとした時、単純にループで１回ずつ掛け算していくと計算にかなりの時間を要してしまう。 ループで一つ</description>
     </item>
     
     <item>
