@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.3beaf163b3c407866a3c0faf9c52d5dd3be043ac28199df00e5ff7d5aef45279.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.572abfd42a4e5e4ffef3771205a9f81b031b507d43029c0990abe88648d24c07.js"></script>
 
 
 
@@ -127,10 +127,39 @@ https://github.com/alex-shpak/hugo-book
 <h1 id="その他の要素">その他の要素</h1>
 
 <p>その他の要素についてを述べる。</p>
+
+<h2 id="figure要素">figure要素</h2>
+
+<p>figure要素は、それが文書から参照される、自己完結型のコンテンツ(フローコンテンツ)であることを示す要素である。</p>
+
+<p>この要素の中には、図やソースコードなどを入れる。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;figure id=&quot;fig&quot;&gt;
+    &lt;img src=&quot;/img/front-end/img.jpg&quot; width=&quot;100&quot; height=&quot;100&quot; alt=&quot;宗谷岬、青空&quot;&gt;
+&lt;/figure&gt;
+</code></pre>
+
+<p>使用例</p>
+
+<hr>
+
+<p><figure id="fig">
+    <img src="https://WAT36.github.io/pages/img/front-end/img.jpg" width="100" height="100" alt="宗谷岬、青空">
+</figure>
+<hr></p>
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/3ffee0e3d2f920ad215290e3b78617e32729e238" title='Last modified Jun 23, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 23, 2020
+    </a>
+  </div>
   
 </div>
 
@@ -143,7 +172,10 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#その他の要素">その他の要素</a></li>
+<li><a href="#その他の要素">その他の要素</a>
+<ul>
+<li><a href="#figure要素">figure要素</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>
