@@ -26,10 +26,35 @@ figure要素は、それが文書から参照される、自己完結型のコ�
 </figure>
 ```
 
-使用例
+表示例
 
 <hr>
 <figure id="fig">
     <img src="/img/front-end/img.jpg" width="100" height="100" alt="宗谷岬、青空">
 </figure>
 <hr>
+
+
+## figcaption要素
+
+figcaption要素は、figure要素で示したコンテンツにキャプションを示すための要素である。
+
+使用例
+
+
+```
+<figure id="fig">
+    <figcaption>宗谷岬の交差点</figcaption>
+    <img src="/img/front-end/img.jpg" width="100" height="100" alt="宗谷岬、青空">
+</figure>
+```
+
+表示例
+
+<hr>
+<figure id="fig">
+    <figcaption>宗谷岬の交差点</figcaption>
+    <img src="/img/front-end/img.jpg" width="100" height="100" alt="宗谷岬、青空">
+</figure>
+<hr>
+
