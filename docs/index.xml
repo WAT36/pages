@@ -299,6 +299,15 @@
     </item>
     
     <item>
+      <title>その他の要素</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/html_other/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/html_other/</guid>
+      <description>その他の要素 その他の要素についてを述べる。</description>
+    </item>
+    
+    <item>
       <title>オーバーフィッティング(過学習)</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/overfitting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -539,15 +548,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/class_func/field/</guid>
       <description>フィールド(クラス変数・インスタンス変数) フィールド変数とはクラス内に定義する変数のこと。 その中でも主に、クラス内で定義して全てのインスタン</description>
-    </item>
-    
-    <item>
-      <title>フォーム</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/form-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/form-2/</guid>
-      <description>フォーム フォームを作成するための要素についてを述べる。 form要素 form要素はフォームを構成する要素である。 使用する主な属性は以下の通り。</description>
     </item>
     
     <item>
@@ -1263,15 +1263,6 @@
     
     <item>
       <title>繰り返し二乗法</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/repeated_square-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/repeated_square-2/</guid>
-      <description>繰り返し二乗法 例えば、210100を計算しようとした時、単純にループで１回ずつ掛け算していくと計算にかなりの時間を要してしまう。 ループで一つ</description>
-    </item>
-    
-    <item>
-      <title>繰り返し二乗法</title>
       <link>https://WAT36.github.io/pages/docs/programming/procon/repeated_square/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1601,15 +1592,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class/</guid>
       <description>１次元入力２クラス分類 先述までに述べた回帰問題は、入力データから具体的な連続した数値を予測するものであったが、ここからの分類問題は入力データ</description>
-    </item>
-    
-    <item>
-      <title>２次元入力２クラス分類</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_2class-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_2class-2/</guid>
-      <description>２次元入力２クラス分類 前章では１次元入力であったが、次は２次元入力の場合を考えてみる。 １次元入力２クラス分類で使用したデータに、pHのデータ</description>
     </item>
     
     <item>

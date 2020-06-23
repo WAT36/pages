@@ -20,5 +20,6 @@ bookToc: false
  - [画像・動画・音声]({{< relref "/docs/front-end/img.md" >}})
  - [フォーム]({{< relref "/docs/front-end/form.md" >}})
  - [テーブル(表)]({{< relref "/docs/front-end/table.md" >}})
+ - [その他の要素]({{< relref "/docs/front-end/html_other.md" >}})
 
 
