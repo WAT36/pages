@@ -111,3 +111,60 @@ summary要素は、ディスクロージャーウィジェットにおける見�
 </details>
 <hr>
 
+
+## iframe要素
+
+iframe要素は、文書の中で別の文書を表示する領域(ブラウジングコンテキスト)を示す要素である。
+
+使用する主な属性は以下の通り。
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">src</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">表示させる文書のアドレス</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">srcdoc</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">表示させるHTMLデータ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">name</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">表示させる領域の名前</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">width</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">横</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">height</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">縦</td>
+    </tr>
+</table>
+
+
+使用例を以下に示す。
+
+```
+<iframe width="200" height="150">
+</iframe>
+```
+
+表示例
+
+<hr>
+<iframe width="200" height="150">
+</iframe>
+<hr>
+
+
+
