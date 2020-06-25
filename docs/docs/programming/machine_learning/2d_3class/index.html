@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.1490f092372ed1aef4dc98da328b3a00a57e9abe086c3850e6873e6e0b88c893.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.31a0a6171fc0c24c096ef90f7581115b00c835d6a10cf18df74a4f49ffc4b793.js"></script>
 
 
 
@@ -136,9 +136,23 @@ https://github.com/alex-shpak/hugo-book
 
 <p>ここから３クラス分類を行うための決定境界を求めてみる。</p>
 
-<p>しかし３クラス以上の分類の時は、２クラス分類で使用したロジスティック回帰モデルを適用するのは難しい。</p>
+<p>しかし３クラス以上の分類の時は、２クラス分類で使用したロジスティック回帰モデルを適用するのは難しい。(使用しているシグモイド関数が0または1に近い値を取るため)</p>
 
-<p>そのため、</p>
+<p>そのため、入力データとパラメータを用いて計算した値を、シグモイド関数ではない方法を用いることで条件付き確率・交差エントロピー誤差・決定境界を求めることを考える。</p>
+
+<p>では、シグモイド関数ではない方法に何があるだろうか。</p>
+
+<p>方法の一つとして、ここでは<strong><a href="https://WAT36.github.io/pages/docs/programming/math/softmax/">ソフトマックス関数</a></strong>を利用することを考える。</p>
+
+<p>ソフトマックス関数を利用することで、出力値が全て0以上1以下の値に収まるので、この値を条件付き確率として用いる。</p>
+
+<p>p次元入力qクラス分類において、常に１を取る入力データを追加し、パラメータをq×(p+1)行列で用意し、以下のように計算して値を取る。</p>
+
+<p>(図)</p>
+
+<p>例として２次元入力３クラス分類においては以下のような設定をし、出力値を得る。</p>
+
+<p>(図)</p>
 </article>
 
       
@@ -146,8 +160,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/c76af0895d5e3cd5d6f02d48dd1fe909a28c4001" title='Last modified Jun 23, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 23, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/77832b29789d7ef0e8bbc26fad6914a6b81a881d" title='Last modified Jun 24, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 24, 2020
     </a>
   </div>
   
