@@ -35,4 +35,6 @@ bookToc: false
  - [シグモイド関数とソフトマックス関数]({{< relref "/docs/programming/math/softmax_sigmoid.md" >}})
  - [ガウス関数]({{< relref "/docs/programming/math/gauss.md" >}})
  - ガウス関数(2次元)
-
+- 確率・統計
+ - [条件付き確率]({{< relref "/docs/programming/math/conditional_probability.md" >}})
+ - [最尤推定]({{< relref "/docs/programming/math/maximum_likelihood.md" >}})

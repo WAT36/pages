@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>合同式(mod)・逆元 | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.6b961c660ac8c81531a735f8d199ab556d03663a8dde80a4fb836f034887b265.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fprocon\2finverse_mod\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>合同式(mod)・逆元</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="合同式-mod-逆元">合同式(mod)・逆元</h1>
+
+<p>最近知ったのだが、今は高校数学の課程に合同式が入っているそうだ。</p>
+
+<p>自分はゆとり世代ゆえ正式には学んでない（予備校で少し出てきたことはあったが曖昧）ので、改めて学び直してみた。</p>
+
+<p>同時に、競プロに関係する事項も。</p>
+
+<h2 id="合同式-mod">合同式(mod)</h2>
+
+<p>合同式とは以下の定義。</p>
+
+<hr>
+
+<p>a,bを整数、mを自然数とした時、</p>
+
+<p>「aをmで割った余り」と「bをmで割った余り」が等しいことを以下の式で表す。</p>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+<p class="katex">
+  $$ 
+\tag{1}
+a  \equiv b \pmod{m}
+ $$
+</p>
+
+
+
+<p>この式を<strong>合同式</strong>という。</p>
+
+<hr>
+
+<p>プログラムで表現するなら</p>
+
+<pre><code>a%m == b%m
+</code></pre>
+
+<p>である。</p>
+
+<h2 id="合同式の定理">合同式の定理</h2>
+
+<p>合同式には定理がいくつかある。</p>
+
+<h3 id="合同式の和">合同式の和</h3>
+
+<p>整数a,b,c,d、自然数mにおいて　a≡b (mod m) ,c≡d (mod m) の時、以下の式が成立する。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{2}
+a+c  \equiv b+d \pmod{m}
+ $$
+</p>
+
+
+
+<h3 id="合同式の差">合同式の差</h3>
+
+<p>同様に、整数a,b,c,d、自然数mにおいて　a≡b (mod m) ,c≡d (mod m) の時、以下の式が成立する。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{3}
+a-c  \equiv b-d \pmod{m}
+ $$
+</p>
+
+
+
+<h3 id="合同式の積">合同式の積</h3>
+
+<p>同様に、整数a,b,c,d、自然数mにおいて　a≡b (mod m) ,c≡d (mod m) の時、以下の式が成立する。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{4}
+ac  \equiv bd \pmod{m}
+ $$
+</p>
+
+
+
+<p>以上の式より、</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{5}
+a+c  \equiv b+c \pmod{m} \\
+a-c  \equiv b-c \pmod{m} \\
+ac  \equiv bc \pmod{m} 
+ $$
+</p>
+
+
+
+<p>も成立し、これらの式から、合同式は移項・乗法も可能である。</p>
+
+<h3 id="合同式のべき乗">合同式のべき乗</h3>
+
+<p>整数a,b、自然数mにおいて　a≡b (mod m) の時、以下の式が成立する。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{6}
+a^n  \equiv b^n \pmod{m}
+ $$
+</p>
+
+
+
+<h4 id="証明">(証明)</h4>
+
+<p>整数a,b,c,dを、自然数mと整数p,q,r,s,t,uを用い、以下のように定義する。</p>
+
+
+
+<p class="katex">
+  $$ 
+a = pm + t \\
+b = qm + t \\
+c = rm + u \\
+d = sm + u 
+ $$
+</p>
+
+
+
+<p>この時、</p>
+
+
+
+<p class="katex">
+  $$ 
+a  \equiv b \pmod{m} \\
+c  \equiv d \pmod{m}
+ $$
+</p>
+
+
+
+<p>であり、また</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+a+c  &= (p+r)m + (t+u) \\
+b+d  &= (q+s)m + (t+u) \\
+a-c  &= (p-r)m + (t-u) \\
+b-d  &= (q-s)m + (t-u) \\
+ac   &= (prm + pu+tr)m + tu \\
+bd   &= (qsm + qu+st)m + tu \\
+a^n  &= (p^{n} m^{n-1} + {}_n \mathrm{C} _1 p^{n-1} m^{n-2} t + \cdots + {}_n \mathrm{C} _{n-1} p t^{n-1})m + t^n \\
+b^n  &= (q^{n} m^{n-1} + {}_n \mathrm{C} _1 p^{n-1} m^{n-2} t + \cdots + {}_n \mathrm{C} _{n-1} p t^{n-1})m + t^n
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>である。これらより、</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+a+c  & \equiv b+d & \pmod{m} \\
+a-c  & \equiv b-d & \pmod{m} \\
+ac   & \equiv bd  & \pmod{m} \\
+a^n  & \equiv b^n & \pmod{m}
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>が成立する。</p>
+
+<h3 id="合同式の除法">合同式の除法</h3>
+
+<p>整数a,b,c、 自然数mにおいて　ab≡ac (mod m) の時でかつ<strong>aとmが互いに素</strong>の時、以下の式が成立する。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{7}
+\begin{aligned}
+ab  & \equiv ac & \pmod{m} \\
+\Leftrightarrow　b  & \equiv c & \pmod{m}
+\end{aligned}
+ $$
+</p>
+
+
+
+<h4 id="証明-1">(証明)</h4>
+
+<p>ab≡ac (mod m)　、かつaとmが互いに素の時において</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{8}
+\begin{aligned}
+ab  & \equiv ac & \pmod{m} \\
+\Leftrightarrow　ab-ac   & \equiv 0 & \pmod{m} \\
+\Leftrightarrow　a(b-c)  & \equiv 0 & \pmod{m}
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>となり、この式において、a(b-c)と0はmで割った余りが同じであり、0をmで割った余りは0なので、a(b-c)をmで割った余りも0、つまりa(b-c)はmで割り切れる(=mの倍数)ということになる。</p>
+
+<p>aとmは互いに素なので、b-cがmの倍数という事になる。</p>
+
+<p>これより、(b-c)≡0 (mod m)が成立するので、</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{9}
+\begin{aligned}
+(b-c)  & \equiv 0 & \pmod{m} \\
+\Leftrightarrow　b   & \equiv c & \pmod{m} 
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>となり、aとmが互いに素でab≡ac (mod m)の時、b≡c (mod m)が成立する。</p>
+
+<p>ちなみに、aとmが互いに素ではない時、(b-c)がmの倍数でない場合があるため、これは成立しない。</p>
+
+<hr>
+
+<p>以上が、合同式についての定義及び定理の紹介である。</p>
+
+<p>これらを踏まえ、次に逆元についてを述べる。</p>
+
+<h2 id="逆元">逆元</h2>
+
+<p>modを使った方程式を解いてみることを考える。例えばa,bを整数、mを自然数とした、以下のような式があったとする。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{10}
+ax  \equiv b \pmod{m}
+ $$
+</p>
+
+
+
+<p>この式でxを求めるにはどのようにすれば良いのだろうか。</p>
+
+<p>この時、</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{11}
+ay \equiv 1 \pmod{m}
+ $$
+</p>
+
+
+
+<p>となるような整数yが存在した場合、合同式の積の定理から、</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{12}
+\begin{aligned}
+x & \equiv x & \pmod{m} \\
+\Leftrightarrow 1 \cdot x & \equiv ay \cdot x & \pmod{m} \\
+\Leftrightarrow x & \equiv y \cdot ax & \pmod{m} 
+\end{aligned}
+ $$
+</p>
+
+
+
+
+
+<p class="katex">
+  $$ 
+\tag{13}
+\begin{aligned}
+ax & \equiv b & \pmod{m} \\
+\Leftrightarrow y \cdot ax & \equiv y \cdot b & \pmod{m}
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>が成り立つ。これより、</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{14}
+\begin{aligned}
+x & \equiv y \cdot ax & \pmod{m} \\
+  & \equiv y \cdot b & \pmod{m}
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>と求めることができる。</p>
+
+<p>このように、a,mに対して</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{15}
+ay \equiv 1 \pmod{m}
+ $$
+</p>
+
+
+
+<p>となるような整数yのことを、aの<strong>逆元</strong>といい、大体はa<sup>-1</sup>と書く。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{16}
+a \cdot a^{-1} \equiv 1 \pmod{m}
+ $$
+</p>
+
+
+
+<p>また、式(10)において、a,mが互いに素でない場合以下のように書き換えることもできる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{17}
+\frac{ax}{gcd(a,m)}  \equiv \frac{b}{gcd(a,m)} \pmod{ \frac{m}{gcd(a,m)} }
+ $$
+</p>
+
+
+
+<p>ここで、gcd(a,m)はaとmの最大公約数である。</p>
+
+<p>式(14),(16),(17)より、式(10)の解は</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{18}
+x  =  \left(\frac{a}{gcd(a,m)}\right)^{-1} \cdot \frac{b}{gcd(a,m)} +  k \cdot \frac{m}{gcd(a,m)} \pmod{ m } 
+ $$
+</p>
+
+
+
+<p>となる。ただしkは0 ≦ k ≦ gcd(a,m)を満たす整数である。</p>
+
+<h2 id="フェルマーの小定理">フェルマーの小定理</h2>
+
+<p>pが素数の時、任意の整数xに対して</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{19}
+x^p  \equiv x \pmod{p}
+ $$
+</p>
+
+
+
+<p>が成り立つ。</p>
+
+<p>特にxがpで割り切れない場合(互いに素)の時は、合同式の除法より</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{20}
+x^{p-1}  \equiv 1 \pmod{p}
+ $$
+</p>
+
+
+
+<p>が成り立つ。</p>
+
+<p>式(20)より</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{21}
+x \cdot x^{p-2}  \equiv 1 \pmod{p}
+ $$
+</p>
+
+
+
+<p>となるので、pが素数の時、整数xの逆元はx<sup>p-2</sup>であることもわかる。</p>
+
+<!--
+## オイラーの定理
+
+フェルマーの小定理はpが素数の時のみ使える定理であった。pが素数でない(合成数)時はどのようにすれば良いのだろうか。
+
+実はpが素数でない時は、**オイラーの定理**という定理が適用できる。
+
+合成数pを
+
+
+
+<p class="katex">
+  $$ 
+\tag{22}
+p = p_{1}^{e_{1}} p_{2}^{e_{2}} \cdots p_{n}^{e_{n}}
+ $$
+</p>
+
+
+
+と表した時、オイラー関数φ(p)を以下のように定義する。
+
+
+
+<p class="katex">
+  $$ 
+\tag{23}
+\phi(p) = p \prod_{i=1}^n \frac{p_{i}-1}{p_{i}}
+ $$
+</p>
+
+
+
+式(23)は、実はp以下のpと互いに素な自然数の個数と等しくなる。
+
+またこの時、pと互いに素な整数xについて、以下の式も成り立つ。
+
+
+
+<p class="katex">
+  $$ 
+\tag{24}
+x^{\phi(p)}  \equiv 1 \pmod{p}
+ $$
+</p>
+
+
+-->
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/388f72adac4879581f3682ab03765f6f8301c0d0" title='Last modified Jun 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 11, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#合同式-mod-逆元">合同式(mod)・逆元</a>
+<ul>
+<li><a href="#合同式-mod">合同式(mod)</a></li>
+<li><a href="#合同式の定理">合同式の定理</a>
+<ul>
+<li><a href="#合同式の和">合同式の和</a></li>
+<li><a href="#合同式の差">合同式の差</a></li>
+<li><a href="#合同式の積">合同式の積</a></li>
+<li><a href="#合同式のべき乗">合同式のべき乗</a>
+<ul>
+<li><a href="#証明">(証明)</a></li>
+</ul></li>
+<li><a href="#合同式の除法">合同式の除法</a>
+<ul>
+<li><a href="#証明-1">(証明)</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#逆元">逆元</a></li>
+<li><a href="#フェルマーの小定理">フェルマーの小定理</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>平均交差エントロピー誤差の最適解の導出 | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.6b961c660ac8c81531a735f8d199ab556d03663a8dde80a4fb836f034887b265.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2f cee_ans\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>平均交差エントロピー誤差の最適解の導出</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="平均交差エントロピー誤差の最適解の導出">平均交差エントロピー誤差の最適解の導出</h1>
+
+<p>前述の平均交差エントロピー誤差</p>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+<p class="katex">
+  $$ 
+\tag{1}
+    - \frac{1}{N} \log P( { \bf T } \mid { \bf X } ) 
+        = - \frac{1}{N} \sum_{n=0}^{N-1} ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) ) 
+ $$
+</p>
+
+
+
+<p>が最小となる値はどのように求めるべきか。</p>
+
+<p><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class/">１次元入力２クラス分類</a>の章で用いた入力データで、平均交差エントロピー誤差を可視化してみよう。グラフ表示したものを以下に示す(<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/cee_visualize.py">コード</a>)</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_30.png" width=50%></p>
+
+<p>この図より最小値はw<sub>0</sub>=0のあたりだろうと推測できる。</p>
+
+<p>前に述べた平均二乗誤差のところでは解析解を算出することで求められたが、今回も解析解を求めることは可能だろうか。</p>
+
+<p>実は、平均交差エントロピー誤差はシグモイド関数を含んでいるため、解析解を求めることは不可能である。</p>
+
+<p>ならばどのようにして求めるのが良いか？</p>
+
+<p>そこで方法として、平均二乗誤差の章でも述べた、<strong>勾配法</strong>を用いて求めることを考えてみる。</p>
+
+<p>まず、平均交差エントロピー誤差を以下のように置き換える。</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{2}
+    E_{n} ( { \bf w } )
+        &= - ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) )
+\end{aligned}
+ $$
+</p>
+
+
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{3} E( { \bf w } )
+        &= - \frac{1}{N} \log P( { \bf T } \mid { \bf X } ) \\
+        &= - \frac{1}{N} \sum_{n=0}^{N-1} ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) ) \\
+        &=   \frac{1}{N} \sum_{n=0}^{N-1} E_{n} ( { \bf w } )
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>このE(<b>w</b>)に勾配法を適用して、最適な<b>w</b>を求めることを考える。</p>
+
+<p>まず、式(3)をw<sub>0</sub>で偏微分すると以下のようになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{4} \frac{\partial }{\partial w_{0} }　E( { \bf w } )
+        &= \frac{1}{N} \frac{\partial }{\partial w_{0} } \sum_{n=0}^{N-1} E_{n} ( { \bf w } ) \\
+        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{0} } E_{n} ( { \bf w } )
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>ここで</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{5}
+   y_{n} =  \sigma ( a_{n} )  =  \frac{1}{1 + \exp(- a_{n}) } 
+ $$
+</p>
+
+
+
+
+
+<p class="katex">
+  $$ 
+\tag{6}
+   a_{n} =  w_{0} x_{n} + w_{1} 
+ $$
+</p>
+
+
+
+<p>とおくと、合成関数の微分より</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{7}
+   \frac{\partial E_{n}( { \bf w } ) }{\partial w_{0} } 
+        =  \frac{\partial E_{n}( { \bf w } ) }{\partial y_{n} } \cdot
+           \frac{\partial y_{n} }{\partial a_{n} } \cdot
+           \frac{\partial a_{n} }{\partial w_{0} }
+ $$
+</p>
+
+
+
+<p>であり、また</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{8}
+   \frac{\partial E_{n}( { \bf w } ) }{\partial y_{n} } 
+        &=  \frac{\partial }{\partial y_{n} } (- ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) )) \\
+        &=  - \frac{ t_{n} }{ y_{n} } + \frac{ 1 - t_{n} }{ 1 - y_{n} } \\
+        &=  \frac{ y_{n} - t_{n} }{ (1-y_{n}) y_{n} }
+\end{aligned}
+ $$
+</p>
+
+
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{9}
+   \frac{\partial y_{n} }{\partial a_{n} } 
+        &=  \frac{\partial }{\partial a_{n} }   \frac{1}{1 + \exp(- a_{n}) }  \\
+        &=  \frac{ \exp(- a_{n}) }{ (1 + \exp(- a_{n}))^2 }  \\
+        &=  \left( 1- \frac{ 1 }{ 1 + \exp(- a_{n}) } \right) \left( \frac{ 1 }{ 1 + \exp(- a_{n}) } \right) \\
+        &=  (1 - y_{n}) y_{n}
+\end{aligned}
+ $$
+</p>
+
+
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{10}
+   \frac{\partial a_{n} }{\partial w_{0} } 
+        &=  \frac{\partial }{\partial w_{0} }  ( w_{0} x_{n} + w_{1} )  \\
+        &=  x_{n} 
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>なので、式(4)は</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{11} \frac{\partial }{\partial w_{0} }　E( { \bf w } )
+        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{0} } E_{n} ( { \bf w } ) \\
+        &= \frac{1}{N} \sum_{n=0}^{N-1} 
+                \frac{\partial E_{n}( { \bf w } ) }{\partial y_{n} } \cdot
+                \frac{\partial y_{n} }{\partial a_{n} } \cdot
+                \frac{\partial a_{n} }{\partial w_{0} } \\
+        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{ y_{n} - t_{n} }{ (1-y_{n}) y_{n} } \cdot
+                (1 - y_{n}) y_{n} \cdot
+                x_{n} \\
+        &= \frac{1}{N} \sum_{n=0}^{N-1} ( y_{n} - t_{n} ) x_{n}
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>となる。同様にして、w<sub>1</sub>で偏微分した時は</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{12}
+   \frac{\partial E_{n}( { \bf w } ) }{\partial w_{1} } 
+        =  \frac{\partial E_{n}( { \bf w } ) }{\partial y_{n} } \cdot
+           \frac{\partial y_{n} }{\partial a_{n} } \cdot
+           \frac{\partial a_{n} }{\partial w_{1} }
+ $$
+</p>
+
+
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{13}
+   \frac{\partial a_{n} }{\partial w_{1} } 
+        &=  \frac{\partial }{\partial w_{1} }  ( w_{0} x_{n} + w_{1} )  \\
+        &=  1  \\
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>となるから、式(12),(8),(9),(13)より</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{14} \frac{\partial }{\partial w_{1} }　E( { \bf w } )
+        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial }{\partial w_{1} } E_{n} ( { \bf w } ) \\
+        &= \frac{1}{N} \sum_{n=0}^{N-1} 
+                \frac{\partial E_{n}( { \bf w } ) }{\partial y_{n} } \cdot
+                \frac{\partial y_{n} }{\partial a_{n} } \cdot
+                \frac{\partial a_{n} }{\partial w_{1} } \\
+        &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{ y_{n} - t_{n} }{ (1-y_{n}) y_{n} } \cdot
+                (1 - y_{n}) y_{n} \cdot
+                1 \\
+        &= \frac{1}{N} \sum_{n=0}^{N-1} ( y_{n} - t_{n} )
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>となる。この式(11),(14)から勾配法を利用して求めていく。</p>
+
+<p>式(11),(14)の値を求める<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/d_cee.py">コード</a>は以下の通り。</p>
+
+<p>(d_cee.py)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">from</span> logistic_regression <span style="color:#f92672">import</span> logistic_regression
+
+<span style="color:#75715e">#平均交差エントロピー誤差の微分</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">d_cee</span>(w,x,t):
+    y <span style="color:#f92672">=</span> logistic_regression(w,x)
+    d_cee<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros(<span style="color:#ae81ff">2</span>)
+    <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> range(len(y)):
+        <span style="color:#75715e">#w0</span>
+        d_cee[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">+=</span>(y[n]<span style="color:#f92672">-</span>t[n])<span style="color:#f92672">*</span>x[n]
+        <span style="color:#75715e">#w1</span>
+        d_cee[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">+=</span>y[n]<span style="color:#f92672">-</span>t[n]
+    d_cee <span style="color:#f92672">/=</span> len(y)
+    <span style="color:#66d9ef">return</span> d_cee</code></pre></div>
+<p>この関数を用い、勾配法で最適なwを求めていく。平均二乗誤差の章ではfor文ループで求めていたが、実はループを用いずに最適解を求める方法がある。</p>
+
+<p>それが<strong>scipy.optimize</strong>ライブラリに含まれる<strong>minimize()</strong>関数である。</p>
+
+<p>minimize関数に勾配法で最適解を求めたい関数、変数の初期値、関数の引数、関数の導関数(微分した関数)、勾配法の種類(method=&ldquo;CG&rdquo;)を指定すると、勾配法を用いて最適解を導出してくれる。</p>
+
+<p><a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/cee_solve.py">コード</a>を以下に記載する。</p>
+
+<p>(cee_solve.py)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> cross_entropy_error <span style="color:#f92672">import</span> ave_cross_entropy_error
+<span style="color:#f92672">from</span> scipy.optimize <span style="color:#f92672">import</span> minimize
+<span style="color:#f92672">from</span> d_cee <span style="color:#f92672">import</span> d_cee
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cee_solve</span>(w_init,x,t):
+    ans <span style="color:#f92672">=</span> minimize(ave_cross_entropy_error,w_init,args<span style="color:#f92672">=</span>(x,t),jac<span style="color:#f92672">=</span>d_cee,method<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;CG&#34;</span>)
+    <span style="color:#66d9ef">return</span> ans<span style="color:#f92672">.</span>x
+
+w_init<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>]
+
+<span style="color:#75715e">#入力値</span>
+x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;x.npy&#39;</span>)
+<span style="color:#75715e">#実測値</span>
+t <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;t.npy&#39;</span>)
+
+w_ans<span style="color:#f92672">=</span>cee_solve(w_init,x,t)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;w0:{0}&#34;</span><span style="color:#f92672">.</span>format(w_ans[<span style="color:#ae81ff">0</span>]))
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;w1:{0}&#34;</span><span style="color:#f92672">.</span>format(w_ans[<span style="color:#ae81ff">1</span>]))</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>$ python cee_solve.py 
+w0:0.7024819393205183
+w1:-27.405983513314283
+</code></pre>
+
+<p>のように、最適なw<sub>0</sub>、w<sub>1</sub>が求められる。</p>
+
+<p>それではこの答えをもとに、<a href="https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class/">１次元入力２クラス分類</a>の章で使用したデータ、そして本章で求めたロジスティック回帰モデルおよび決定境界を図示してみよう。</p>
+
+<p>図示した結果を以下に示す(コードは<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/cee_solve_plot.py">こちら</a>)</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_31.png" width=50%></p>
+
+<p>また、コードの実行結果は</p>
+
+<pre><code>w0:0.7024819393205183
+w1:-27.405983513314283
+決定境界：x=39.03903903903904
+</code></pre>
+
+<p>となる。</p>
+
+<p>以上より、ロジスティック回帰モデルを利用して求めた決定境界は39.03..[℃]と決まる。</p>
+
+<p>入力データがガウス分布に従い生成されたという過程の元だが、これが確率を用いて分類を行う方法の一例となる。</p>
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/6e0c6518147c3b5992d0fc58c93881f1fdd33136" title='Last modified Jun 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 11, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>
