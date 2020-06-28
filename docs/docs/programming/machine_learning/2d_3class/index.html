@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.66a6b3b493c3b26c8400c49c07308845f7f575e8f64a3e3e59fd8ee1819ba5f0.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.859836397c2f0eb5b5a6fef16bd3a0d5aad7ab53e6c9d6d10811351cb32ffec5.js"></script>
 
 
 
@@ -175,7 +175,36 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-<p>これにより、まず出力a<sub>k</sub>を得られる。</p>
+<p>これにより、まず出力値a<sub>k</sub>を得られる。</p>
+
+<p>次に、この出力値a<sub>k</sub>に対し、ソフトマックス関数を適用して0~1の値に収まらせ、条件付き確率とする。</p>
+
+<p>まずはソフトマックス関数で用いる総和uを以下の式(2)で定義する。</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{2}  u  &=  \exp(a_{0}) + \exp(a_{1}) + \cdots + \exp(a_{q-1}) \\
+            &=  \sum_{i=0}^{q-1} \exp(a_{i})
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>これを利用し、出力値a<sub>k</sub>にソフトマックス関数を適用した出力値y<sub>k</sub>を以下の式(3)のように定義する。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{3}  y_{k}  =  \frac{ \exp(a_{k}) }{u}  (k=0,1,2)
+ $$
+</p>
+
+
 </article>
 
       
@@ -183,8 +212,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/017350af215ad6aacd363f76516154ed1fc8e0f8" title='Last modified Jun 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 27, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/aa09fa6d7550abd5da96756e207d8f442e8c961e" title='Last modified Jun 28, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 28, 2020
     </a>
   </div>
   

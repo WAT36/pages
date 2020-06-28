@@ -45,7 +45,21 @@ p次元入力qクラス分類において、入力データx<sub>n</sub> (n=0,..
 \end{aligned}
 {{< /katex >}}
 
-これにより、まず出力a<sub>k</sub>を得られる。
+これにより、まず出力値a<sub>k</sub>を得られる。
 
+次に、この出力値a<sub>k</sub>に対し、ソフトマックス関数を適用して0~1の値に収まらせ、条件付き確率とする。
 
+まずはソフトマックス関数で用いる総和uを以下の式(2)で定義する。
 
+{{< katex  >}}
+\begin{aligned}
+\tag{2}  u  &=  \exp(a_{0}) + \exp(a_{1}) + \cdots + \exp(a_{q-1}) \\
+            &=  \sum_{i=0}^{q-1} \exp(a_{i})
+\end{aligned}
+{{< /katex >}}
+
+これを利用し、出力値a<sub>k</sub>にソフトマックス関数を適用した出力値y<sub>k</sub>を以下の式(3)のように定義する。
+
+{{< katex  >}}
+\tag{3}  y_{k}  =  \frac{ \exp(a_{k}) }{u}  (k=0,1,2)
+{{< /katex >}}
