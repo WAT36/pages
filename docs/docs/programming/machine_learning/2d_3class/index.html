@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.7539e93a18e87dc5736ed91346385aba5578951205021ee77d7f9d08fef49c4c.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.66a6b3b493c3b26c8400c49c07308845f7f575e8f64a3e3e59fd8ee1819ba5f0.js"></script>
 
 
 
@@ -148,11 +148,34 @@ https://github.com/alex-shpak/hugo-book
 
 <p>p次元入力qクラス分類において、入力データx<sub>n</sub> (n=0,..,p-1)とした時、常に１を取る入力データx<sub>p</sub>を追加、出力値がq個得られるようにパラメータをq×(p+1)行列で用意し、以下のように計算して値を取る。</p>
 
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_36.png" width=100%></p>
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_36.png" width=75%></p>
 
 <p>例として２次元入力３クラス分類においては以下のような設定をし、出力値を得る。</p>
 
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_37.png" width=100%></p>
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_37.png" width=75%></p>
+
+<p>この図より、入力データx<sub>n</sub>とパラメータw<sub>n</sub>から出力データa<sub>n</sub>を以下のように計算する。</p>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{1}  a_{k}  &=  w_{k0} x_{0} + w_{k1} x_{1} + w_{k2} x_{2}  (k=0,1,2) \\
+                &=  \sum_{i=0}^{p} w_{ki} x_{i}  (k=0,1,2)
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>これにより、まず出力a<sub>k</sub>を得られる。</p>
 </article>
 
       
@@ -160,7 +183,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/19d1115e93de89c46633da6c2b74a844219fe9a4" title='Last modified Jun 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/017350af215ad6aacd363f76516154ed1fc8e0f8" title='Last modified Jun 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 27, 2020
     </a>
   </div>
