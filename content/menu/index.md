@@ -2,7 +2,7 @@
 headless: true
 ---
 
-- [**Introduction**]({{< relref "/" >}})
+- [**About me**]({{< relref "/docs/about/aboutme.md" >}})
 
 <details>
  <summary>Notes</summary>
