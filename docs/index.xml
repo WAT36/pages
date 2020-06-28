@@ -345,24 +345,6 @@
     
     <item>
       <title>クラウド(AWS)</title>
-      <link>https://WAT36.github.io/pages/docs/cloud/aws/aws_index-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/cloud/aws/aws_index-2/</guid>
-      <description>クラウド(AWS) AWSについてのまとめ。 ハンズオン DynamoDBテーブルの作成方法 Lambda関数の作成方法 API GatewayでのAPI作</description>
-    </item>
-    
-    <item>
-      <title>クラウド(AWS)</title>
-      <link>https://WAT36.github.io/pages/docs/cloud/aws/aws_index-3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/cloud/aws/aws_index-3/</guid>
-      <description>クラウド(AWS) AWSについてのまとめ。 ハンズオン DynamoDBテーブルの作成方法 Lambda関数の作成方法 API GatewayでのAPI作</description>
-    </item>
-    
-    <item>
-      <title>クラウド(AWS)</title>
       <link>https://WAT36.github.io/pages/docs/cloud/aws/aws_index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1671,15 +1653,6 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     
     <item>
       <title>API GatewayでのAPI作成方法(AWS)</title>
-      <link>https://WAT36.github.io/pages/posts/aws_create_api_gateway-2/</link>
-      <pubDate>Mon, 27 Apr 2020 00:02:47 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/posts/aws_create_api_gateway-2/</guid>
-      <description>AWSでのAPI GatewayでのAPI作成方法について、備忘がてら手順をのせる。 1. AWSマネジメントコンソールにログインする AWSマネジメ</description>
-    </item>
-    
-    <item>
-      <title>API GatewayでのAPI作成方法(AWS)</title>
       <link>https://WAT36.github.io/pages/posts/aws_create_api_gateway/</link>
       <pubDate>Mon, 27 Apr 2020 00:02:47 +0900</pubDate>
       
@@ -1689,29 +1662,11 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     
     <item>
       <title>Lambda関数の作成方法(AWS)</title>
-      <link>https://WAT36.github.io/pages/posts/aws_create_lambda-2/</link>
-      <pubDate>Sun, 05 Apr 2020 20:04:12 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/posts/aws_create_lambda-2/</guid>
-      <description>AWSでLambdaの関数を作る方法について、またまた備忘がてら手順をのせておく。 1. AWSマネジメントコンソールにログインする AWSマネジメ</description>
-    </item>
-    
-    <item>
-      <title>Lambda関数の作成方法(AWS)</title>
       <link>https://WAT36.github.io/pages/posts/aws_create_lambda/</link>
       <pubDate>Sun, 05 Apr 2020 20:04:12 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/posts/aws_create_lambda/</guid>
       <description>AWSでLambdaの関数を作る方法について、またまた備忘がてら手順をのせておく。 1. AWSマネジメントコンソールにログインする AWSマネジメ</description>
-    </item>
-    
-    <item>
-      <title>DynamoDBテーブルの作成方法(AWS)</title>
-      <link>https://WAT36.github.io/pages/posts/aws_create_dynamo_table-2/</link>
-      <pubDate>Thu, 02 Apr 2020 22:50:12 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/posts/aws_create_dynamo_table-2/</guid>
-      <description>AWSでDynamoDBのテーブルを作る方法について、備忘がてら手順をのせる。 1. AWSマネジメントコンソールにログインする AWSマネジメント</description>
     </item>
     
     <item>
