@@ -68,11 +68,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/cloud/aws/rest_api/</loc>
-    <lastmod>2020-05-09T15:05:47+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/control/break/</loc>
     <lastmod>2020-01-22T22:17:02+09:00</lastmod>
   </url>
@@ -165,6 +160,10 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/graph/lim/</loc>
     <lastmod>2020-01-21T23:42:27+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/html_other-2/</loc>
   </url>
   
   <url>
@@ -278,13 +277,25 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/procon/dijkstra-2/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/procon/dijkstra/</loc>
     <lastmod>2020-05-16T15:03:24+09:00</lastmod>
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/text-2/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/text/</loc>
     <lastmod>2020-05-16T16:13:26+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/table-2/</loc>
   </url>
   
   <url>
@@ -313,6 +324,10 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/form-2/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/form/</loc>
     <lastmod>2020-06-18T07:52:08+09:00</lastmod>
   </url>
@@ -335,6 +350,10 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/lambda/</loc>
     <lastmod>2020-01-13T09:19:37+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/list-2/</loc>
   </url>
   
   <url>
@@ -453,8 +472,16 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/ruby-2/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/ruby/</loc>
     <lastmod>2020-05-23T12:06:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/logistic_regression-2/</loc>
   </url>
   
   <url>
@@ -473,8 +500,16 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/cross_entropy_error-2/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/cross_entropy_error/</loc>
     <lastmod>2020-06-11T19:12:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/cross_validation-2/</loc>
   </url>
   
   <url>
@@ -533,6 +568,10 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/procon/inverse_mod-2/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/procon/inverse_mod/</loc>
     <lastmod>2020-06-11T19:42:43+09:00</lastmod>
   </url>
@@ -575,6 +614,10 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/mse/</loc>
     <lastmod>2020-03-07T00:47:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/cee_ans-2/</loc>
   </url>
   
   <url>
@@ -658,8 +701,16 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/maximum_likelihood-2/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/math/maximum_likelihood/</loc>
     <lastmod>2020-06-10T23:31:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/conditional_probability-2/</loc>
   </url>
   
   <url>
@@ -680,6 +731,10 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/procon/dfs/</loc>
     <lastmod>2020-04-16T00:22:40+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/img-2/</loc>
   </url>
   
   <url>
@@ -705,6 +760,10 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/linear_basis_function/</loc>
     <lastmod>2020-04-27T23:00:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/procon/repeated_square-2/</loc>
   </url>
   
   <url>
@@ -888,8 +947,16 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class-2/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class/</loc>
     <lastmod>2020-06-10T23:31:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_2class-2/</loc>
   </url>
   
   <url>
@@ -1048,12 +1115,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -1063,12 +1130,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   

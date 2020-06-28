@@ -4,6 +4,7 @@ weight: 1
 # bookFlatSection: false
 # bookShowToC: true
 bookToc: false
+draft: true
 ---
 
 # API GatewayでのREST API作成
