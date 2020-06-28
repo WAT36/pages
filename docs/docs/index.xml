@@ -161,7 +161,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/css_about/</guid>
-      <description>CSSとは</description>
+      <description>CSSとは CSSの基本事項についてを述べる。 CSSは、HTMLに組み込む形で使用する言語で、HTMLで作成した文書に対しCSSでどの部分をど</description>
     </item>
     
     <item>
@@ -342,6 +342,24 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/gauss_2D/</guid>
       <description>ガウス関数(2次元) Python ガウス関数 a exp ( - (x - &amp;mu; ) 2 &amp;sigma; 2 ) において、入力xを2次元ベクトルとした時の場合を考える。(以下) x = x 0 x 1 この時、</description>
+    </item>
+    
+    <item>
+      <title>クラウド(AWS)</title>
+      <link>https://WAT36.github.io/pages/docs/cloud/aws/aws_index-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/cloud/aws/aws_index-2/</guid>
+      <description>クラウド(AWS) AWSについてのまとめ。 ハンズオン DynamoDBテーブルの作成方法 Lambda関数の作成方法 API GatewayでのAPI作</description>
+    </item>
+    
+    <item>
+      <title>クラウド(AWS)</title>
+      <link>https://WAT36.github.io/pages/docs/cloud/aws/aws_index-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/cloud/aws/aws_index-3/</guid>
+      <description>クラウド(AWS) AWSについてのまとめ。 ハンズオン DynamoDBテーブルの作成方法 Lambda関数の作成方法 API GatewayでのAPI作</description>
     </item>
     
     <item>

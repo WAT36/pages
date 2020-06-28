@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.6818ccf88796b6face172db0efafd373c51f4b713638f59abc2ef2669bdff675.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.fa3135f37eb73d891b8313806621dd9e096bbed31a44b869ad24d7925a2d1092.js"></script>
 
 
 
@@ -126,10 +126,40 @@ https://github.com/alex-shpak/hugo-book
 <article class="markdown">
 
 <h1 id="cssとは">CSSとは</h1>
+
+<p>CSSの基本事項についてを述べる。</p>
+
+<p>CSSは、HTMLに組み込む形で使用する言語で、HTMLで作成した文書に対しCSSでどの部分をどのように装飾するかを指定する形で利用する。</p>
+
+<p>利用方についてを以下で述べる。</p>
+
+<h2 id="cssの書式">CSSの書式</h2>
+
+<p>CSSの記法としては、大きく分けてHTML文書のどこに適用するかを示す<strong>セレクタ</strong>と、具体的にどのような装飾を行うかを示す<strong>宣言ブロック</strong>からなる。</p>
+
+<p>宣言ブロックの中には、各宣言をセミコロン(;)区切りで書き、宣言はプロパティ名とプロパティ値をコロン(:)区切りで記入する。</p>
+
+<p>表記例は以下の通り。</p>
+
+<pre><code>p 
+{
+    color: white;
+    background: red;
+}
+</code></pre>
+
+<p>この例のうち、最初の「p」がセレクタになり、その後の中括弧{}部分が宣言ブロックである。</p>
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/3ed93e4da0a34959591406bff8a6fef235ac18db" title='Last modified Jun 28, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 28, 2020
+    </a>
+  </div>
   
 </div>
 
@@ -142,7 +172,10 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#cssとは">CSSとは</a></li>
+<li><a href="#cssとは">CSSとは</a>
+<ul>
+<li><a href="#cssの書式">CSSの書式</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>

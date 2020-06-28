@@ -84,6 +84,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/css_about/</loc>
+    <lastmod>2020-06-28T11:44:31+09:00</lastmod>
   </url>
   
   <url>
@@ -184,6 +185,14 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/math/gauss_2D/</loc>
     <lastmod>2020-02-27T20:58:51+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/cloud/aws/aws_index-2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/cloud/aws/aws_index-3/</loc>
   </url>
   
   <url>
@@ -912,6 +921,11 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/posts/aws_create_api_gateway-2/</loc>
+    <lastmod>2020-04-27T00:02:47+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/posts/aws_create_api_gateway/</loc>
     <lastmod>2020-05-08T16:26:02+09:00</lastmod>
   </url>
@@ -922,8 +936,18 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/posts/aws_create_lambda-2/</loc>
+    <lastmod>2020-04-05T20:04:12+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/posts/aws_create_lambda/</loc>
     <lastmod>2020-04-05T23:04:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/posts/aws_create_dynamo_table-2/</loc>
+    <lastmod>2020-04-02T22:50:12+09:00</lastmod>
   </url>
   
   <url>
@@ -1018,7 +1042,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-06-28T09:39:43+09:00</lastmod>
+    <lastmod>2020-06-28T11:44:31+09:00</lastmod>
   </url>
   
   <url>
@@ -1248,7 +1272,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/front_index/</loc>
-    <lastmod>2020-06-23T20:19:36+09:00</lastmod>
+    <lastmod>2020-06-28T11:44:31+09:00</lastmod>
   </url>
   
   <url>
