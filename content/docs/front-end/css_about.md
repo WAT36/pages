@@ -62,3 +62,31 @@ link要素のrel属性では**stylesheet**、href属性ではそのスタイル�
 </body>
 ・・・
 ```
+
+
+### style要素を使う方法
+
+style要素は、要素内容にスタイルシート言語を記載する事で、そのスタイルシートの内容をHTML文書に組み込むことのできる要素である。
+
+style要素は、head要素の中に記載する。
+
+例
+
+```
+・・・
+<head>
+    ・・・
+    <style>
+        p 
+        {
+            color: white;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+        ・・・
+</body>
+・・・
+```
+
