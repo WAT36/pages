@@ -36,3 +36,29 @@ p
 ## HTML文書への組み込み方
 
 CSSをHTML文書に組み込む方法はいくつかある。
+
+
+### link要素を使う方法
+
+一つ目は、[link要素](https://wat36.github.io/pages/docs/front-end/html_structure/#link要素)を用いてCSSを組み込む方法である。
+
+link要素は前述の通り、HTML文書に関連する外部ファイルやリソースを示すための要素である。
+
+**外部スタイルシート**(スタイルシートだけを書き込んだファイル)を組み込む際にも、このlink要素が利用できる。
+
+link要素のrel属性では**stylesheet**、href属性ではそのスタイルシートのアドレスを指定する。
+
+
+例
+
+```
+・・・
+<head>
+    ・・・
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        ・・・
+</body>
+・・・
+```

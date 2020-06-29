@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.7ca953b1cb1c17d5627411b440e245c2792fd64d0648b285f2675f1a3c1d6ca5.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.4933feb06504240c78e95a686270716f70590d65cb40e923b0432bdb216e508f.js"></script>
 
 
 
@@ -153,6 +153,29 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="html文書への組み込み方">HTML文書への組み込み方</h2>
 
 <p>CSSをHTML文書に組み込む方法はいくつかある。</p>
+
+<h3 id="link要素を使う方法">link要素を使う方法</h3>
+
+<p>一つ目は、<a href="https://wat36.github.io/pages/docs/front-end/html_structure/#link要素">link要素</a>を用いてCSSを組み込む方法である。</p>
+
+<p>link要素は前述の通り、HTML文書に関連する外部ファイルやリソースを示すための要素である。</p>
+
+<p><strong>外部スタイルシート</strong>(スタイルシートだけを書き込んだファイル)を組み込む際にも、このlink要素が利用できる。</p>
+
+<p>link要素のrel属性では<strong>stylesheet</strong>、href属性ではそのスタイルシートのアドレスを指定する。</p>
+
+<p>例</p>
+
+<pre><code>・・・
+&lt;head&gt;
+    ・・・
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+        ・・・
+&lt;/body&gt;
+・・・
+</code></pre>
 </article>
 
       
@@ -160,8 +183,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/bb485c585c63821b1f5875aa47160cd4ef6306d3" title='Last modified Jun 28, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 28, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/b7317de23ffd74dfe73c75a429dd953ecfaa88cb" title='Last modified Jun 29, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 29, 2020
     </a>
   </div>
   
@@ -179,7 +202,10 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#cssとは">CSSとは</a>
 <ul>
 <li><a href="#cssの書式">CSSの書式</a></li>
-<li><a href="#html文書への組み込み方">HTML文書への組み込み方</a></li>
+<li><a href="#html文書への組み込み方">HTML文書への組み込み方</a>
+<ul>
+<li><a href="#link要素を使う方法">link要素を使う方法</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
