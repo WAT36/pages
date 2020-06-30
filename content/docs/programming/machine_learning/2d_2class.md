@@ -49,7 +49,7 @@ bookToc: false
 １次元入力２クラス分類の時と同じく、平均交差エントロピー誤差関数は以下の式の通りになる。
 
 {{< katex  >}}
-\tag{3}  - \frac{1}{N} \log P( { \bf T } \mid { \bf X } ) 
+\tag{3} 
             E( { \bf w } ) =   - \frac{1}{N} \sum_{n=0}^{N-1} ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) ) 
 {{< /katex >}}
 

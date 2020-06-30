@@ -84,3 +84,36 @@ k=1の時(クラス1に分類される確率)は以下のようになる。
 \tag{6}  P( { \bf t} \mid { \bf x } )  =  {y_{0}}^{t_{0}} {y_{1}}^{t_{1}} {y_{2}}^{t_{2}}
 {{< /katex >}}
 
+このように表すことで、例えばクラス０だったら<b>t</b>=[1,0,0]なのでP(<b>t</b>|<b>x</b>)=y<sub>0</sub> <sup>1</sup> y<sub>1</sub> <sup>0</sup> y<sub>2</sub> <sup>0</sup> = y<sub>0</sub> のようになる。
+
+これにより、p次元入力qクラス分類において全ての入力データ<b>X</b>から全クラスデータ<b>T</b>が得られる確率は以下のように表される。
+
+{{< katex  >}}
+\tag{6}  
+\begin{aligned}
+    P( { \bf T } \mid { \bf X } ) 
+        &= \prod_{n=0}^{p-1} P( t_{n} \mid x_{n} )  \\
+        &= \prod_{n=0}^{p-1} y_{n0}^{t_{n0}} y_{n1}^{t_{n1}} y_{n2}^{t_{n2}} \\
+        &= \prod_{n=0}^{p-1} \prod_{k=0}^{q-1} (y_{nk})^{t_{nk}}
+\end{aligned}
+{{< /katex >}}
+
+これより、平均交差エントロピー誤差関数は以下のようになる。
+
+{{< katex  >}}
+\tag{7}  
+\begin{aligned}
+    E( { \bf w } ) 
+        &=  - \frac{1}{N} \log P( { \bf T } \mid { \bf X } ) \\
+        &=  - \frac{1}{N} \log \prod_{n=0}^{p-1} P( t_{n} \mid x_{n} ) \\
+        &=  - \frac{1}{N} \sum_{n=0}^{p-1} \sum_{k=0}^{q-1} t_{nk} \log y_{nk}
+\end{aligned}
+{{< /katex >}}
+
+次に、勾配法で利用するためこの平均交差エントロピー誤差をw<sub>ki</sub>で偏微分した結果を求めてみると以下のようになる。
+
+{{< katex  >}}
+\tag{8} \frac{\partial }{\partial w_{ki} }E( { \bf w } )
+        = \frac{1}{N} \sum_{n=0}^{p-1} ( y_{nk} - t_{nk} ) x_{ni}
+{{< /katex >}}
+
