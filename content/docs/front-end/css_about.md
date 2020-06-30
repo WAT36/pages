@@ -90,3 +90,24 @@ style要素は、head要素の中に記載する。
 ・・・
 ```
 
+### style属性を使う方法
+
+HTML文書でCSSを組み込みたい要素の中に、グローバル属性の**style属性**を指定して値に具体的なCSSのコード(宣言のみ)を入れてやると、その要素にCSSが適用される。
+
+
+使用例
+
+```
+<p style="color: white; background: black">
+style属性を使ってp要素にCSSを適用してみました。
+</p>
+```
+
+表示例
+
+<hr>
+<p style="color: white; background: black">
+style属性を使ってp要素にCSSを適用してみました。
+</p>
+<hr>
+
