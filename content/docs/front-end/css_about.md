@@ -120,3 +120,67 @@ HTMLの各要素はボックスと呼ばれる四角い領域に表示される�
 
 CSSでは、これらの部位を自由に設定することが可能である。
 
+
+## 長さ・大きさの単位
+
+CSSでは大きさや長さを指定することがあり、その際にそれぞれ単位を用いて表す。
+
+CSSで利用する主な単位は、以下の通りである。
+
+- フォントに対する相対的な長さを表す単位
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">em</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">要素のフォントサイズを1とした単位</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">rem</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ルート要素のフォントサイズを1とした単位</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">ch</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">「0」の幅を1とした単位</td>
+    </tr>
+</table>
+
+- 絶対的な長さを表す単位
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">px</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ピクセル</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">pt</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ポイント</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">in</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">インチ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">cm</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">センチメートル</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">mm</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ミリメートル</td>
+    </tr>
+</table>
