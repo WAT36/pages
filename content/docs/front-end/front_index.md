@@ -23,5 +23,6 @@ bookToc: false
  - [その他の要素]({{< relref "/docs/front-end/html_other.md" >}})
 - CSS
  - [CSSとは]({{< relref "/docs/front-end/css_about.md" >}})
+ - [セレクタ]({{< relref "/docs/front-end/css_selector.md" >}})
 
 
