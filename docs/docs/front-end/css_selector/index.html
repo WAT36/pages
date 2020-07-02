@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.3c60e25b9e94cc5b40de33725f176401d9e1b819b68c867f5a6ec224758cdeee.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.6a081ebf2ee682f310a5893bfc4aa3ac4cc0f38884da64626743679c7f76d0bc.js"></script>
 
 
 
@@ -134,14 +134,42 @@ https://github.com/alex-shpak/hugo-book
 <p>種類にもよるが、シンプルセレクタを組み合わせたものもセレクタとしてCSSで利用できる。（できないパターンもある）</p>
 
 <p>以下、シンプルセレクタの種類についてを示す。</p>
-</article>
+
+<h2 id="タイプセレクタ">タイプセレクタ</h2>
+
+<p>要素名をそのままセレクタ名としたものを<strong>タイプセレクタ</strong>という。タイプセレクタを利用すると、指定した要素名の要素全てにCSSの内容が適用される。</p>
+
+<!--
+例えば以下のCSSをこのページに適用させてみる。
+
+```css
+div { color: green}
+```
+
+すると、以下のHTMLが
+
+```
+<p>p要素</p>
+<div>div要素</div>
+```
+
+以下のように表示される。
+
+<hr>
+<p>p要素</p>
+<div>div要素</div>
+<hr>
+-->
+
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">div</span> { <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">green</span>}</code></pre></div></article>
 
       
 <div class="book-footer justify-between">
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/911be3853db7f924baab6ff7458ee68a15f24ba8" title='Last modified Jul 2, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/e3c529367ce824f421fe9e02df6360b02e7e97ff" title='Last modified Jul 2, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 2, 2020
     </a>
   </div>
@@ -157,7 +185,10 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#セレクタ">セレクタ</a></li>
+<li><a href="#セレクタ">セレクタ</a>
+<ul>
+<li><a href="#タイプセレクタ">タイプセレクタ</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>
