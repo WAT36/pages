@@ -6,10 +6,19 @@
     <description>Recent content in Posts on WAT Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Mon, 27 Apr 2020 00:02:47 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2020 15:13:17 +0900</lastBuildDate>
     
 	<atom:link href="https://WAT36.github.io/pages/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>指定URLにWebリクエストを送るSlack Appの作成</title>
+      <link>https://WAT36.github.io/pages/posts/slack_request/</link>
+      <pubDate>Sat, 09 May 2020 15:13:17 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/slack_request/</guid>
+      <description>Slackには自作のアプリを作成でき、またコマンドを指定することで指定した動作を行える。 今回はSlackアプリの作成方法、及びコマンドの作成</description>
+    </item>
     
     <item>
       <title>API GatewayでのAPI作成方法(AWS)</title>
