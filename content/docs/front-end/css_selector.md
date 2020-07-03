@@ -69,3 +69,15 @@ div { color: green}
 span.address { color: blue}
 ```
 
+# IDセレクタ
+
+タイプセレクタ 、ユニバーサルセレクタにおいて、シャープ(#)の後にHTMLのid属性の値を指定すると、そのid属性の値を持つ要素がCSSの適用対象となる。このようなセレクタを**IDセレクタ**という。
+
+使用例
+
+```css
+div#mean { color: gray}
+```
+
+
+
