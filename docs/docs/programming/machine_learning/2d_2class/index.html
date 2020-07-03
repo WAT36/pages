@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>２次元入力２クラス分類 | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.d6ca8910b61d6c12625f64da90a0a6ae40cd1d961a15eaaac068169d907ac972.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2f 2d_2class\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>２次元入力２クラス分類</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="２次元入力２クラス分類">２次元入力２クラス分類</h1>
+
+<p>前章では１次元入力であったが、次は２次元入力の場合を考えてみる。</p>
+
+<p><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class/">１次元入力２クラス分類</a>で使用したデータに、pHのデータも加えた２次元入力のデータを新たに作成する。(入力データは<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/x_2d2class.npy">こちら</a>、目標データは<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/t_2d2class.npy">こちら</a>)</p>
+
+<p>図示すると以下のようになる。(コードは<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/plot_2d_2class_inputdata.py">こちら</a>)</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_32.png" width=50%></p>
+
+<p>このデータから、２次元入力２クラス分類についてを考えてみよう。</p>
+
+<h2 id="ロジスティック回帰モデル">ロジスティック回帰モデル</h2>
+
+<p>前述の１次元入力２クラス分類と同じく、２次元入力２クラス分類のときもロジスティック回帰モデルを適用することを考えてみる。２次元入力２クラス分類の場合のロジスティック回帰モデルはどのようになるだろうか。</p>
+
+<p>１次元入力の場合は</p>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{1}  y  &=  \sigma ( w_{0} x + w_{1} ) \\
+            &=  \frac{1}{1 + \exp(-(w_{0} x + w_{1}))}
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>であった。</p>
+
+<p>２次元入力の場合は、パラメータw<sub>0</sub>,w<sub>1</sub>,w<sub>2</sub>、入力変数をx<sub>0</sub>,x<sub>1</sub>と置いたとき、以下のように表される。</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{2}  y  &=  \sigma ( w_{0} x_{0} + w_{1} x_{1} + w_{2} ) \\
+            &=  \frac{1}{1 + \exp(-(w_{0} x_{0} + w_{1} x_{1} + w_{2}))}
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>ここから、最適なパラメータwを求めていこう。</p>
+
+<p>１次元入力２クラス分類の時と同じく、平均交差エントロピー誤差関数は以下の式の通りになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{3}  - \frac{1}{N} \log P( { \bf T } \mid { \bf X } ) 
+            E( { \bf w } ) =   - \frac{1}{N} \sum_{n=0}^{N-1} ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) ) 
+ $$
+</p>
+
+
+
+<p>同様にしてパラメータw<sub>0</sub>,w<sub>1</sub>,w<sub>2</sub>での偏微分を求めると以下のようになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{4} \frac{\partial }{\partial w_{0} }　E( { \bf w } )
+        = \frac{1}{N} \sum_{n=0}^{N-1} ( y_{n} - t_{n} ) x_{n,0}
+ $$
+</p>
+
+
+
+
+
+<p class="katex">
+  $$ 
+\tag{5} \frac{\partial }{\partial w_{1} }　E( { \bf w } )
+        = \frac{1}{N} \sum_{n=0}^{N-1} ( y_{n} - t_{n} ) x_{n,1}
+ $$
+</p>
+
+
+
+
+
+<p class="katex">
+  $$ 
+\tag{6} \frac{\partial }{\partial w_{2} }　E( { \bf w } )
+        = \frac{1}{N} \sum_{n=0}^{N-1} ( y_{n} - t_{n} )
+ $$
+</p>
+
+
+
+<p>ここで、x<sub>n,i</sub>はx<sub>n</sub>のi番目の入力である。</p>
+
+<p>よって、これらを元に勾配法を用いて、平均交差エントロピー誤差が最小となるようなパラメータ<b>w</b>の値を求めてみよう。</p>
+
+<p>まず、２次元入力のロジスティック回帰モデルの<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/logistic_regression_2d.py">コード</a>は以下の通り。</p>
+
+<p>(logistic_regression_2d.py)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sigmoid <span style="color:#f92672">import</span> sigmoid
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+<span style="color:#75715e">#ロジスティック回帰モデル(２次元入力)</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">logistic_regression_2d</span>(w,x):
+    x <span style="color:#f92672">=</span> w[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span>x[:,<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> w[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">*</span>x[:,<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> w[<span style="color:#ae81ff">2</span>]
+    <span style="color:#66d9ef">return</span> sigmoid(x)</code></pre></div>
+<p>２次元入力での平均交差エントロピー誤差の<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/cross_entropy_error_2d.py">コード</a>は以下の通り。</p>
+
+<p>(cross_entropy_error_2d.py)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> logistic_regression_2d <span style="color:#f92672">import</span> logistic_regression_2d
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+<span style="color:#75715e">#交差エントロピー誤差</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cross_entropy_error_2d</span>(w,x,t):
+    y<span style="color:#f92672">=</span>logistic_regression_2d(w,x)
+    cee<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> range(len(y)):
+        cee <span style="color:#f92672">-=</span> (t[n]<span style="color:#f92672">*</span>np<span style="color:#f92672">.</span>log(y[n]) <span style="color:#f92672">+</span> (<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>t[n])<span style="color:#f92672">*</span>np<span style="color:#f92672">.</span>log(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>y[n]))
+    <span style="color:#66d9ef">return</span> cee
+
+
+<span style="color:#75715e">#平均交差エントロピー誤差</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">ave_cross_entropy_error_2d</span>(w,x,t):
+    <span style="color:#66d9ef">return</span> cross_entropy_error_2d(w,x,t)<span style="color:#f92672">/</span>len(x)</code></pre></div>
+<p>続いて、平均交差エントロピー誤差の偏微分を求める<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/d_cee_2d.py">コード</a>は以下の通り。</p>
+
+<p>(d_cee_2d.py)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> logistic_regression_2d <span style="color:#f92672">import</span> logistic_regression_2d
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+<span style="color:#75715e">#平均交差エントロピー誤差の微分(２次元入力)</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">d_cee_2d</span>(w,x,t):
+    y <span style="color:#f92672">=</span> logistic_regression_2d(w,x)
+    d_cee<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros(<span style="color:#ae81ff">3</span>)
+    <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> range(len(y)):
+        <span style="color:#75715e">#w0</span>
+        d_cee[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">+=</span>(y[n]<span style="color:#f92672">-</span>t[n])<span style="color:#f92672">*</span>x[n,<span style="color:#ae81ff">0</span>]
+        <span style="color:#75715e">#w1</span>
+        d_cee[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">+=</span>(y[n]<span style="color:#f92672">-</span>t[n])<span style="color:#f92672">*</span>x[n,<span style="color:#ae81ff">1</span>]
+        <span style="color:#75715e">#w2</span>
+        d_cee[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">+=</span>y[n]<span style="color:#f92672">-</span>t[n]
+    d_cee <span style="color:#f92672">/=</span> len(y)
+    <span style="color:#66d9ef">return</span> d_cee</code></pre></div>
+<p>ではこれらを元に、１次元入力２クラス分類で行ったような勾配法を用いて、最適なパラメータ<b>w</b>を求めてみよう。</p>
+
+<p>パラメータwを求める<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/fit_2d_2class.py">コード</a>は以下の通り。</p>
+
+<p>(fit_2d_2class.py)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> cross_entropy_error_2d <span style="color:#f92672">import</span> ave_cross_entropy_error_2d
+<span style="color:#f92672">from</span> scipy.optimize <span style="color:#f92672">import</span> minimize
+<span style="color:#f92672">from</span> d_cee_2d <span style="color:#f92672">import</span> d_cee_2d
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+<span style="color:#75715e">#勾配法</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fit_2d_2class</span>(w,x,t):
+    result<span style="color:#f92672">=</span>minimize(ave_cross_entropy_error_2d,w,args<span style="color:#f92672">=</span>(x,t),jac<span style="color:#f92672">=</span>d_cee_2d,method<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;CG&#34;</span>)
+    <span style="color:#66d9ef">return</span> result<span style="color:#f92672">.</span>x</code></pre></div>
+<p>(solve_2d_2class.py)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> fit_2d_2class <span style="color:#f92672">import</span> fit_2d_2class
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+<span style="color:#75715e">#入力値</span>
+x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;x_2d2class.npy&#39;</span>)
+<span style="color:#75715e">#実測値</span>
+t <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;t_2d2class.npy&#39;</span>)
+
+<span style="color:#75715e">#wの初期値</span>
+w_init<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>]
+
+<span style="color:#75715e">#勾配法でwを求める</span>
+w<span style="color:#f92672">=</span>fit_2d_2class(w_init,x,t)
+
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;w0:{0}&#34;</span><span style="color:#f92672">.</span>format(w[<span style="color:#ae81ff">0</span>]))
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;w1:{0}&#34;</span><span style="color:#f92672">.</span>format(w[<span style="color:#ae81ff">1</span>]))
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;w2:{0}&#34;</span><span style="color:#f92672">.</span>format(w[<span style="color:#ae81ff">2</span>]))</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>w0:2.2211059806431024
+w1:2.5337217620823123
+w2:-103.76947792619409
+</code></pre>
+
+<p>となり、パラメータ<b>w</b>が求められる。</p>
+
+<p>よって、このwを使ったロジスティック回帰モデルを入力データとともに図示してみると、以下のようになる。(コードは<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/surface_plot_2d_2class_logistic.py">こちら</a>)。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_33.png" width=50%></p>
+
+<p>これを元に、１次元入力２クラス分類の時と同様にして決定境界をロジスティック回帰モデルの値が0.5になる値のところに引いてみよう。</p>
+
+<p>入力データ、ロジスティック回帰モデル及び決定境界を等高線プロットで表した図は以下の通り。(コードは<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/contour_2d2class_plot.py">こちら</a>)</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_34.png" width=75%></p>
+
+<p>この方法により、２次元入力２クラス分類の決定境界を求められる。</p>
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/86e330a3a915c4b3ae57378090eebca516bd769a" title='Last modified Jun 21, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 21, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

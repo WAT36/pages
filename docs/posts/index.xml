@@ -6,18 +6,36 @@
     <description>Recent content in Posts on WAT Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sat, 09 May 2020 15:13:17 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2020 00:02:47 +0900</lastBuildDate>
     
 	<atom:link href="https://WAT36.github.io/pages/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>指定URLにWebリクエストを送るSlack Appの作成</title>
-      <link>https://WAT36.github.io/pages/posts/slack_request/</link>
-      <pubDate>Sat, 09 May 2020 15:13:17 +0900</pubDate>
+      <title>API GatewayでのAPI作成方法(AWS)</title>
+      <link>https://WAT36.github.io/pages/posts/aws_create_api_gateway/</link>
+      <pubDate>Mon, 27 Apr 2020 00:02:47 +0900</pubDate>
       
-      <guid>https://WAT36.github.io/pages/posts/slack_request/</guid>
-      <description>Slackには自作のアプリを作成でき、またコマンドを指定することで指定した動作を行える。 今回はSlackアプリの作成方法、及びコマンドの作成</description>
+      <guid>https://WAT36.github.io/pages/posts/aws_create_api_gateway/</guid>
+      <description>AWSでのAPI GatewayでのAPI作成方法について、備忘がてら手順をのせる。 1. AWSマネジメントコンソールにログインする AWSマネジメ</description>
+    </item>
+    
+    <item>
+      <title>Lambda関数の作成方法(AWS)</title>
+      <link>https://WAT36.github.io/pages/posts/aws_create_lambda/</link>
+      <pubDate>Sun, 05 Apr 2020 20:04:12 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/aws_create_lambda/</guid>
+      <description>AWSでLambdaの関数を作る方法について、またまた備忘がてら手順をのせておく。 1. AWSマネジメントコンソールにログインする AWSマネジメ</description>
+    </item>
+    
+    <item>
+      <title>DynamoDBテーブルの作成方法(AWS)</title>
+      <link>https://WAT36.github.io/pages/posts/aws_create_dynamo_table/</link>
+      <pubDate>Thu, 02 Apr 2020 22:50:12 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/aws_create_dynamo_table/</guid>
+      <description>AWSでDynamoDBのテーブルを作る方法について、備忘がてら手順をのせる。 1. AWSマネジメントコンソールにログインする AWSマネジメント</description>
     </item>
     
     <item>

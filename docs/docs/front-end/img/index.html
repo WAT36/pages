@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>画像・動画・音声 | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.d6ca8910b61d6c12625f64da90a0a6ae40cd1d961a15eaaac068169d907ac972.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2f front-end\2fimg\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>画像・動画・音声</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="画像-動画-音声">画像・動画・音声</h1>
+
+<p>画像・動画・音声についての要素を述べる。</p>
+
+<h2 id="img要素">img要素</h2>
+
+<p>img要素は画像を表示させたい時、及びそれが利用できない時に代わりに表示させるテキストを指定する要素である。</p>
+
+<p>属性がいくつかあり、それらを利用する。</p>
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">src</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">表示する画像の相対パスまたはアドレス</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">alt</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">画像が利用できない場合に代わりに使用されるテキスト<br>(ブラウザによる)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">width</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">幅(整数値)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">height</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">高さ(整数値)</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;img src=&quot;/img/front-end/img.jpg&quot; width=&quot;100&quot; height=&quot;100&quot;&gt;
+
+&lt;img src=&quot;/img/front-end/img.jpg&quot; width=&quot;50&quot; height=&quot;50&quot;&gt;
+
+&lt;img src=&quot;/img/front-end/img.jpg&quot; width=&quot;100&quot; height=&quot;100&quot; alt=&quot;宗谷岬、青空&quot;&gt;
+</code></pre>
+
+<p>実行例</p>
+
+<hr>
+
+<p><img src="https://WAT36.github.io/pages/img/front-end/img.jpg" width="100" height="100"></p>
+
+<p><img src="https://WAT36.github.io/pages/img/front-end/img.jpg" width="50" height="50"></p>
+
+<p><img src="https://WAT36.github.io/pages/img/front-end/img.jpg" width="100" height="100" alt="宗谷岬、青空">
+<hr></p>
+
+<h2 id="picture要素">picture要素</h2>
+
+<p>picture要素はHTML5以降で追加された新しい要素で、複数のsource要素(後述)と一つのimg要素を取りまとめる要素である。これにより、最適なsource要素による画像、source要素が使えないブラウザではimg要素の画像が使われ、柔軟な画像の選定が行われる。</p>
+
+<p>（使用例はsource要素のところを参照）</p>
+
+<h2 id="source要素">source要素</h2>
+
+<p>source要素は、picture要素・video要素・audio要素の子要素として使用する要素で、複数記述、及び使用条件を指定することで、ブラウザに適した形で画像等を表示できる。</p>
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">media</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">画像の使用条件</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">srcset</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">候補画像等のパス</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">sizes</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">使用条件と画像の表示幅</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;picture&gt;
+    &lt;source media=&quot;(min-width: 200em)&quot; srcset=&quot;/img/front-end/img3.jpg&quot; title=&quot;img3.jpg&quot;&gt;
+    &lt;source media=&quot;(min-width: 100em)&quot; srcset=&quot;/img/front-end/img2.jpg&quot; title=&quot;img2.jpg&quot;&gt;
+    &lt;img src=&quot;/img/front-end/img.jpg&quot; width=&quot;50&quot; height=&quot;50&quot;&gt;
+&lt;/picture&gt;
+</code></pre>
+
+<p>実行例</p>
+
+<hr>
+
+<p><picture>
+    <source media="(min-width: 200em)" srcset="https://WAT36.github.io/pages/img/front-end/img3.jpg" title="img3.jpg">
+    <source media="(min-width: 100em)" srcset="https://WAT36.github.io/pages/img/front-end/img2.jpg" title="img2.jpg">
+    <img src="https://WAT36.github.io/pages/img/front-end/img.jpg" width="50" height="50">
+</picture>
+<hr></p>
+
+<h2 id="video要素">video要素</h2>
+
+<p>video要素は、動画を再生するための要素である。</p>
+
+<p>指定する属性は以下の通り。</p>
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">src</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ファイルのアドレス・パス</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">controls</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">再生・停止ボタンを表示させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">autoplay</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">再生を自動で開始させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">loop</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">再生を繰り返す(ループ)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">muted</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">デフォルトでミュート(音量0)にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">width</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">幅を指定する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">height</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">高さを指定する</td>
+    </tr>
+</table>
+
+<p>例を以下に示す。</p>
+
+<pre><code>&lt;video src=&quot;/img/front-end/IMG_3279.MOV.mp4&quot; controls muted width=&quot;500&quot; height=&quot;200&quot; /&gt;
+</code></pre>
+
+<p>実行例</p>
+
+<hr>
+
+<p><video src="https://WAT36.github.io/pages/img/front-end/IMG_3279.MOV.mp4" controls muted width="500" height="200" />
+<hr></p>
+
+<p>(ちなみにこの動画は私が学生時代に研究室の窓から外の吹雪を撮ったものである)</p>
+
+<h2 id="audio要素">audio要素</h2>
+
+<p>audio要素は音声を再生するための要素である。</p>
+
+<p>基本的には、video要素から視覚的な内容を排除したものであり、使う属性もvideo要素とほとんど同じ。</p>
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">src</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ファイルのアドレス・パス</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">controls</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">再生・停止ボタンを表示させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">autoplay</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">再生を自動で開始させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">loop</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">再生を繰り返す(ループ)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">muted</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">デフォルトでミュート(音量0)にする</td>
+    </tr>
+</table>
+
+<p>先程の動画ファイルをaudio要素で表示させてみよう。</p>
+
+<pre><code>&lt;audio src=&quot;/img/front-end/IMG_3279.MOV.mp4&quot; controls /&gt;
+</code></pre>
+
+<p>実行例は以下の通り。</p>
+
+<hr>
+
+<p><audio src="https://WAT36.github.io/pages/img/front-end/IMG_3279.MOV.mp4" controls />
+<hr></p>
+
+<h2 id="track要素">track要素</h2>
+
+<p>track要素はvideo要素やaudio要素の子要素として利用する要素で、字幕などの外部テキストトラックファイルを指定する場合に使用する要素である。</p>
+
+<p>使用するテキストトラックファイルは、WebVTT形式(.vtt形式)またはTTML形式ファイルである。</p>
+
+<p>指定する主な属性は以下の通り。</p>
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">src</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ファイルのアドレス・パス</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">srclang</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">外部テキストファイルの言語</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">kind</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">外部テキストファイルをどのように使用するかの指定</td>
+    </tr>
+</table>
+
+<p>また、kind属性には以下の値を指定する。</p>
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">subtitles</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">音は聞こえるが理解できない人向けの字幕、映像に重ねて表示</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">captions</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">音が（明瞭に）聞こえない人向けの字幕、映像に重ねて表示</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">descriptions</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">映像が（明瞭には）見えない場合向けの解説、合成音声で読み上げる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">chapters</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">映像のチャプターのタイトル、操作により一覧を表示</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">metadata</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">スクリプトから利用する事を想定したメタデータ</td>
+    </tr>
+</table>
+
+<p>先程の動画ファイルを利用して実行例を示す。</p>
+
+<pre><code>&lt;video src=&quot;/img/front-end/IMG_3279.MOV.mp4&quot; controls muted width=&quot;500&quot; height=&quot;200&quot; &gt;
+    &lt;track default kind=&quot;captions&quot;
+           srclang=&quot;ja&quot;
+           src=&quot;/img/front-end/track.vtt&quot;&gt;
+&lt;/video&gt;
+</code></pre>
+
+<p>ちなみに字幕として利用するvttファイル(track.vtt)は以下の通り。</p>
+
+<pre><code>WEBVTT
+
+00:00:00.000 --&gt; 00:00:15.000
+これは字幕です。15秒まで表示されます。
+
+00:00:15.000 --&gt; 00:00:30.000
+雪が降ってます。
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><video src="https://WAT36.github.io/pages/img/front-end/IMG_3279.MOV.mp4" controls muted width="500" height="200" >
+    <track default kind="captions"
+           srclang="ja"
+           src="https://WAT36.github.io/pages/img/front-end/track.vtt">
+</video>
+<hr></p>
+
+<h2 id="embed要素">embed要素</h2>
+
+<p>embed要素は、動画や音声などをプラグインを使って組み込む際に使う要素である。</p>
+
+<p>src属性で外部コンテンツを読み込み、ブラウザに追加インストールされたプラグインでコンテンツを利用する。</p>
+
+<p>よく使われるものとしては、.swfファイル(Flash)、.mpgファイル(MPEG)など。</p>
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">src</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">組み込むファイルのパス</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">type</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">組み込むデータの種類</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">width</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">幅</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">height</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">高さ</td>
+    </tr>
+</table>
+
+<h2 id="map要素">map要素</h2>
+
+<p>一つの画像に複数のリンクを設定することをイメージマップという。map要素はこのイメージマップを設定する時に使用する要素である。</p>
+
+<p>具体的に画像のどの部分をどのリンクに対応させるかは、map要素の子要素として使う後述のarea要素で指定する。</p>
+
+<p>map要素のname属性でイメージマップに名前を定義し、画像を定義しているimg要素の<strong>usemap</strong>属性でその名前を指定するとイメージマップを画像に適用できる。</p>
+
+<h2 id="area要素">area要素</h2>
+
+<p>area要素は、イメージマップにおいて指定した領域を指定したリンク先に紐付ける要素である。</p>
+
+<p>使用する主な属性は以下の通り。</p>
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">coords</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">領域の座標</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">shape</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">領域の形状</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">href</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">リンク先のアドレス</td>
+    </tr>
+</table>
+
+<p>ここで、shape属性で指定できる値は決まっており、以下の通りである。また、それに応じてcoords属性で指定するあたいも変わってくる。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;"></td>
+        <td style="border:none;"><b>値</b></td>
+        <td style="border:none;"></td>
+        <td style="border:none;"><b>図形</b></td>
+        <td style="border:none;"><b>coords属性に指定する値</b></td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">rect</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">長方形</td>
+        <td style="border:none;">左上のx座標,左上のy座標,右下のx座標,右下のy座標</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">circle</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">円</td>
+        <td style="border:none;">円の中心のx座標,円の中心のy座標,半径</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">poly</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">多角形</td>
+        <td style="border:none;">各座標をx座標、y座標の順に指定</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">default</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">画像全体</td>
+        <td style="border:none;">(指定しない)</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;img src=&quot;/img/front-end/area.png&quot; usemap=&quot;#top&quot; width=&quot;100&quot; height=&quot;100&quot;&gt;
+
+&lt;map name=&quot;top&quot;&gt;
+    &lt;area href=&quot;https://wat36.github.io/pages/&quot; shape=&quot;rect&quot; coords=&quot;0,0,100,50&quot;&gt;&lt;/area&gt;
+    &lt;area href=&quot;https://github.com/WAT36&quot; shape=&quot;rect&quot; coords=&quot;0,50,100,100&quot;&gt;&lt;/area&gt;
+&lt;/map&gt;
+</code></pre>
+
+<p>表示例（画像の上半分がこのブログのトップ、下半分は私のGithubへのリンク）</p>
+
+<hr>
+
+<p><img src="https://WAT36.github.io/pages/img/front-end/area.png" usemap="#top" width="100" height="100"></p>
+
+<p><map name="top">
+    <area href="https://wat36.github.io/pages/" shape="rect" coords="0,0,100,50"></area>
+    <area href="https://github.com/WAT36" shape="rect" coords="0,50,100,100"></area>
+</map>
+<hr></p>
+
+<h2 id="object要素">object要素</h2>
+
+<p>object要素は、画像や音声の他、様々な形式の外部データを組み込むための要素である。</p>
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">data</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">組み込むデータのアドレス</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">type</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">組み込むデータの種類</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">width</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">幅</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">height</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">高さ</td>
+    </tr>
+</table>
+
+<h2 id="param要素">param要素</h2>
+
+<p>param要素は、object要素における任意のパラメータ(属性)を指定する要素である。</p>
+
+<p>object要素内では他の要素よりも前に配置させる。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">name</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">パラメータ名</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">value</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">パラメータの値</td>
+    </tr>
+</table>
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/26f58516d6a96e4785d218806d38215085718274" title='Last modified Jun 6, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 6, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#画像-動画-音声">画像・動画・音声</a>
+<ul>
+<li><a href="#img要素">img要素</a></li>
+<li><a href="#picture要素">picture要素</a></li>
+<li><a href="#source要素">source要素</a></li>
+<li><a href="#video要素">video要素</a></li>
+<li><a href="#audio要素">audio要素</a></li>
+<li><a href="#track要素">track要素</a></li>
+<li><a href="#embed要素">embed要素</a></li>
+<li><a href="#map要素">map要素</a></li>
+<li><a href="#area要素">area要素</a></li>
+<li><a href="#object要素">object要素</a></li>
+<li><a href="#param要素">param要素</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

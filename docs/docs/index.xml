@@ -156,6 +156,15 @@
     </item>
     
     <item>
+      <title>CSSとは</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_about/</guid>
+      <description>CSSとは CSSの基本事項についてを述べる。 CSSは、HTMLに組み込む形で使用する言語で、HTMLで作成した文書に対しCSSでどの部分をど</description>
+    </item>
+    
+    <item>
       <title>csvファイルからデータを読み込む</title>
       <link>https://WAT36.github.io/pages/docs/programming/graph/read/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -300,6 +309,15 @@
     </item>
     
     <item>
+      <title>その他の要素</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/html_other/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/html_other/</guid>
+      <description>その他の要素 その他の要素についてを述べる。 figure要素 figure要素は、それが文書から参照される、自己完結型のコンテンツ(フローコンテ</description>
+    </item>
+    
+    <item>
       <title>オーバーフィッティング(過学習)</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/overfitting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -324,6 +342,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/gauss_2D/</guid>
       <description>ガウス関数(2次元) Python ガウス関数 a exp ( - (x - &amp;mu; ) 2 &amp;sigma; 2 ) において、入力xを2次元ベクトルとした時の場合を考える。(以下) x = x 0 x 1 この時、</description>
+    </item>
+    
+    <item>
+      <title>クラウド(AWS)</title>
+      <link>https://WAT36.github.io/pages/docs/cloud/aws/aws_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/cloud/aws/aws_index/</guid>
+      <description>クラウド(AWS) AWSについてのまとめ。 ハンズオン DynamoDBテーブルの作成方法 Lambda関数の作成方法 API GatewayでのAPI作</description>
     </item>
     
     <item>
@@ -480,6 +507,33 @@
     </item>
     
     <item>
+      <title>ダイクストラ法</title>
+      <link>https://WAT36.github.io/pages/docs/programming/procon/dijkstra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/procon/dijkstra/</guid>
+      <description>ダイクストラ法 グラフ探索の手法の一つ、ダイクストラ法についてを述べる。 ダイクストラ法は重み付きのグラフにおいて、ある頂点から他の全ての頂点ま</description>
+    </item>
+    
+    <item>
+      <title>テキスト</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/text/</guid>
+      <description>テキスト HTML文書にテキストを記載、装飾、補足するための要素についてをここでは述べる。 (一部表示例も記載するが、ブラウザ等により表示が異な</description>
+    </item>
+    
+    <item>
+      <title>テーブル(表)</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/table/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/table/</guid>
+      <description>テーブル(表) テーブル(表)を作る要素についてを述べる。 table要素 table要素は１つのテーブル(表)を表す要素である。 table要素の</description>
+    </item>
+    
+    <item>
       <title>ファイル</title>
       <link>https://WAT36.github.io/pages/docs/programming/file_io/file_index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -516,6 +570,15 @@
     </item>
     
     <item>
+      <title>フォーム</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/form/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/form/</guid>
+      <description>フォーム フォームを作成するための要素についてを述べる。 form要素 form要素はフォームを構成する要素である。 使用する主な属性は以下の通り。</description>
+    </item>
+    
+    <item>
       <title>ベクトル</title>
       <link>https://WAT36.github.io/pages/docs/programming/math/vector/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -549,6 +612,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/class_func/lambda/</guid>
       <description>ラムダ式（無名関数） ラムダ式（無名関数）についてを述べる。 Java Javaでは簡易的なメソッドを実装する方法としてラムダ式というのがある。 ( 実装す</description>
+    </item>
+    
+    <item>
+      <title>リスト</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/list/</guid>
+      <description>リスト HTML文書にリストを記載するための要素についてをここでは述べる。 ul要素 ul要素は、箇条書きリストを作成するための要素である。一つの</description>
     </item>
     
     <item>
@@ -750,6 +822,24 @@
     </item>
     
     <item>
+      <title>ルビ</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/ruby/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/ruby/</guid>
+      <description>ルビ HTML文書にルビ(ふりがな)を記載するための要素についてをここでは述べる。 ruby要素 ruby要素は文字にルビを振る要素であり、実際に</description>
+    </item>
+    
+    <item>
+      <title>ロジスティック回帰モデル</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/logistic_regression/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/logistic_regression/</guid>
+      <description>ロジスティック回帰モデル 前述の１次元入力２クラス分類において、最適な決定境界を引くにはどうすれば良いのだろうか。 方法の一つとしてロジスティッ</description>
+    </item>
+    
+    <item>
       <title>一変数関数f(x)をグラフに描画する</title>
       <link>https://WAT36.github.io/pages/docs/programming/graph/func_plot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -765,6 +855,24 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/ternary/</guid>
       <description>三項演算子 条件分岐を行う三項演算子についてを示す。 Java Javaでは三項演算子 &amp;ldquo;?&amp;rdquo; が実装されている。 例えば a ? b : c としたとき、aがtrueならb</description>
+    </item>
+    
+    <item>
+      <title>交差エントロピー誤差</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/cross_entropy_error/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/cross_entropy_error/</guid>
+      <description>交差エントロピー誤差 前述のロジスティック回帰モデルにおいて、入力xがt＝1となる確率を次のように表す。 $$ y = \sigma ( w_{0} x + w_{1} ) = P(t=1 \mid x) $$ ここから</description>
+    </item>
+    
+    <item>
+      <title>交差検証</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/cross_validation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/cross_validation/</guid>
+      <description>交差検証 先述のホールドアウト検証では、訓練(テスト)データの選び方によって出力結果が変わってくることを話した。なるべく変化が少なくなるように</description>
     </item>
     
     <item>
@@ -858,6 +966,15 @@
     </item>
     
     <item>
+      <title>合同式(mod)・逆元</title>
+      <link>https://WAT36.github.io/pages/docs/programming/procon/inverse_mod/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/procon/inverse_mod/</guid>
+      <description>合同式(mod)・逆元 最近知ったのだが、今は高校数学の課程に合同式が入っているそうだ。 自分はゆとり世代ゆえ正式には学んでない（予備校で少し出</description>
+    </item>
+    
+    <item>
       <title>変数の値を1増やす・減らす（インクリメント・デクリメント）</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/increment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -927,6 +1044,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/mse/</guid>
       <description>平均二乗誤差 前述の直線モデルにて、データに応じた最適なw0,w1を決めれば最適な関係式が得られると書いたが、 どのようにして最適なw0,w1を</description>
+    </item>
+    
+    <item>
+      <title>平均交差エントロピー誤差の最適解の導出</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/cee_ans/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/cee_ans/</guid>
+      <description>平均交差エントロピー誤差の最適解の導出 前述の平均交差エントロピー誤差 $$ \tag{1} - \frac{1}{N} \log P( { \bf T } \mid { \bf X } ) = - \frac{1}{N} \sum_{n=0}^{N-1} ( t_{n} \log y_{n} + (1 - t_{n}) \log (1 - y_{n}) ) $$ が最</description>
     </item>
     
     <item>
@@ -1065,12 +1191,30 @@
     </item>
     
     <item>
+      <title>最尤推定</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/maximum_likelihood/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/maximum_likelihood/</guid>
+      <description>最尤推定 当たりとハズレがそれぞれ何個か入ったくじがあり、当たりが出た時を１、ハズレが出た時を０と設定する。 この時、n回目にくじを引いた時の結</description>
+    </item>
+    
+    <item>
+      <title>条件付き確率</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/conditional_probability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/conditional_probability/</guid>
+      <description>条件付き確率 私は高校で条件付き確率を学んでこなかったゆとり世代なので、改めて条件付き確率において書き記していく。 事象A,Bにおいて、ある事象</description>
+    </item>
+    
+    <item>
       <title>機械学習</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</guid>
-      <description>機械学習 機械学習の手法についてをまとめる。 教師あり学習 直線モデル(線形回帰) 平均二乗誤差 勾配法(最急降下法) 解析解 2次元入力の面モデル N次元</description>
+      <description>機械学習 機械学習の手法についてをまとめる。 教師あり学習 回帰 直線モデル(線形回帰) 平均二乗誤差 勾配法(最急降下法) 解析解 2次元入力の面モデル N</description>
     </item>
     
     <item>
@@ -1089,6 +1233,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/procon/dfs/</guid>
       <description>深さ優先探索 探索の手法の一つである深さ優先探索についてを述べる。 深さ優先探索とは、ある状態から始めてそこから遷移出来なくなるまで状態を進めて</description>
+    </item>
+    
+    <item>
+      <title>画像・動画・音声</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/img/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/img/</guid>
+      <description>画像・動画・音声 画像・動画・音声についての要素を述べる。 img要素 img要素は画像を表示させたい時、及びそれが利用できない時に代わりに表示さ</description>
     </item>
     
     <item>
@@ -1125,6 +1278,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/linear_basis_function/</guid>
       <description>線形基底関数モデル 先ほどまでの章では、データの予測に直線モデルを利用していたが、勿論直線モデルを利用するのが必ずしも最適ではないという場合も</description>
+    </item>
+    
+    <item>
+      <title>繰り返し二乗法</title>
+      <link>https://WAT36.github.io/pages/docs/programming/procon/repeated_square/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/procon/repeated_square/</guid>
+      <description>繰り返し二乗法 例えば、210100を計算しようとした時、単純にループで１回ずつ掛け算していくと計算にかなりの時間を要してしまう。 ループで一つ</description>
     </item>
     
     <item>
@@ -1443,6 +1605,24 @@
     </item>
     
     <item>
+      <title>１次元入力２クラス分類</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class/</guid>
+      <description>１次元入力２クラス分類 先述までに述べた回帰問題は、入力データから具体的な連続した数値を予測するものであったが、ここからの分類問題は入力データ</description>
+    </item>
+    
+    <item>
+      <title>２次元入力２クラス分類</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_2class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_2class/</guid>
+      <description>２次元入力２クラス分類 前章では１次元入力であったが、次は２次元入力の場合を考えてみる。 １次元入力２クラス分類で使用したデータに、pHのデータ</description>
+    </item>
+    
+    <item>
       <title>２進数に変換して表示</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/bin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1732,7 +1912,7 @@ Fervens esse et tenet cinisque per: et vir equus formaque superorum tollit, vire
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/front_index/</guid>
-      <description>フロントエンド-memo フロントエンドの勉強用メモ。まずはHTMLから頑張ります・・ HTML 要素とタグ HTMLの全体構造 要素の種類 グローバル属性 セ</description>
+      <description>フロントエンド-memo フロントエンドの勉強用メモ。まずはHTMLから頑張ります・・ (初心者なので奥深くは書ききれておりません。悪しからず。</description>
     </item>
     
     <item>
