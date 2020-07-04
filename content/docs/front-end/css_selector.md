@@ -119,3 +119,39 @@ div#mean { color: gray}
 ```css
 a[href$=".pdf"] { color: red}
 ```
+
+# 擬似クラス
+
+ある要素が特定の状態にある時のみを適用対象とするセレクタを**擬似クラス**という。使用するには、セレクタの要素名の後に続けて書く。
+
+擬似クラスは多種類あるが、以下に一部を示す。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">:link</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">a要素で、リンク先にまだアクセスしていない場合</td>
+    </tr>
+    <tr>
+        <td style="border:none;">:visited</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">a要素で、リンク先に既にアクセスしている場合</td>
+    </tr>
+    <tr>
+        <td style="border:none;">:hover</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">マウスカーソルが上にある状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">:active</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">マウスのボタンが押されている状態</td>
+    </tr>    
+</table>
+
+使用例
+
+```css
+a:link { color: blue}
+```
+

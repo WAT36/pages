@@ -516,15 +516,6 @@
     
     <item>
       <title>ダイクストラ法</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/dijkstra-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/dijkstra-2/</guid>
-      <description>ダイクストラ法 グラフ探索の手法の一つ、ダイクストラ法についてを述べる。 ダイクストラ法は重み付きのグラフにおいて、ある頂点から他の全ての頂点ま</description>
-    </item>
-    
-    <item>
-      <title>ダイクストラ法</title>
       <link>https://WAT36.github.io/pages/docs/programming/procon/dijkstra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1218,15 +1209,6 @@
     
     <item>
       <title>条件付き確率</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/conditional_probability-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/conditional_probability-2/</guid>
-      <description>条件付き確率 私は高校で条件付き確率を学んでこなかったゆとり世代なので、改めて条件付き確率において書き記していく。 事象A,Bにおいて、ある事象</description>
-    </item>
-    
-    <item>
-      <title>条件付き確率</title>
       <link>https://WAT36.github.io/pages/docs/programming/math/conditional_probability/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1632,29 +1614,11 @@
     
     <item>
       <title>１次元入力２クラス分類</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class-2/</guid>
-      <description>１次元入力２クラス分類 先述までに述べた回帰問題は、入力データから具体的な連続した数値を予測するものであったが、ここからの分類問題は入力データ</description>
-    </item>
-    
-    <item>
-      <title>１次元入力２クラス分類</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class/</guid>
       <description>１次元入力２クラス分類 先述までに述べた回帰問題は、入力データから具体的な連続した数値を予測するものであったが、ここからの分類問題は入力データ</description>
-    </item>
-    
-    <item>
-      <title>２次元入力２クラス分類</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_2class-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_2class-2/</guid>
-      <description>２次元入力２クラス分類 前章では１次元入力であったが、次は２次元入力の場合を考えてみる。 １次元入力２クラス分類で使用したデータに、pHのデータ</description>
     </item>
     
     <item>
