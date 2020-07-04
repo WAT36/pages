@@ -69,7 +69,7 @@ div { color: green}
 span.address { color: blue}
 ```
 
-# IDセレクタ
+## IDセレクタ
 
 タイプセレクタ 、ユニバーサルセレクタにおいて、シャープ(#)の後にHTMLのid属性の値を指定すると、そのid属性の値を持つ要素がCSSの適用対象となる。このようなセレクタを**IDセレクタ**という。
 
@@ -80,4 +80,42 @@ div#mean { color: gray}
 ```
 
 
+## 属性セレクタ
 
+タイプセレクタ 、ユニバーサルセレクタにおいて、大かっこ([])の中に属性名や値を指定すると、その属性の値を持つ要素がCSSの適用対象となる。このようなセレクタを**属性セレクタ**という。
+
+属性セレクタの記法は以下のとおり。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">[属性名]</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">属性値に関係なく、その属性名が指定されている要素全て</td>
+    </tr>
+    <tr>
+        <td style="border:none;">[属性名="属性値"]</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">その属性名に属性値(完全一致)が指定されている要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">[属性名~="属性値"]</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">その属性名に属性値(含まれていればOK)が指定されている要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">[属性名^="属性値"]</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">属性名の値がその属性値で始まっている要素</td>
+    </tr>    
+    <tr>
+        <td style="border:none;">[属性名$="属性値"]</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">属性名の値がその属性値で終わっている要素</td>
+    </tr>
+</table>
+
+使用例
+
+```css
+a[href$=".pdf"] { color: red}
+```
