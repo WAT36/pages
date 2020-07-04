@@ -147,6 +147,36 @@ a[href$=".pdf"] { color: red}
         <td style="border:none;">・・</td>
         <td style="border:none;">マウスのボタンが押されている状態</td>
     </tr>    
+    <tr>
+        <td style="border:none;">:first-child</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">子要素の中で一番最初の要素</td>
+    </tr>    
+    <tr>
+        <td style="border:none;">:last-child</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">子要素の中で一番最後の要素</td>
+    </tr>    
+    <tr>
+        <td style="border:none;">:only-child</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">唯一の子要素である場合</td>
+    </tr>    
+    <tr>
+        <td style="border:none;">:focus</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">フォーカス(選択)されたとき</td>
+    </tr>    
+    <tr>
+        <td style="border:none;">:checked</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ラジオボタンやチェックボックスなどが選択されたとき</td>
+    </tr>    
+    <tr>
+        <td style="border:none;">:empty</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">要素内容が空の時</td>
+    </tr>    
 </table>
 
 使用例
