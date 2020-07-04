@@ -21,6 +21,10 @@ bookToc: false
 
 ## SNS等
 
+- [Twitter(@TilliAdu)](https://twitter.com/tilliadu)
+
+細々と呟いてます
+
 - [Qiita](https://qiita.com/T_Wakasugi)
 
 基本このブログに書いているものと内容は同じです。こっちに載せても良さそうな記事があったら載せています
