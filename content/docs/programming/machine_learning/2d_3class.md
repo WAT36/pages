@@ -119,3 +119,129 @@ k=1の時(クラス1に分類される確率)は以下のようになる。
 
 では、これらより勾配法を利用して決定境界を求めてみよう。
 
+諸関数を求めるコードは以下のとおり。
+
+```python
+from scipy.optimize import minimize
+import numpy as np
+
+
+#ロジスティック回帰モデル(２次元入力３クラス分類)
+def logistic_regression_2d_3class(w,x):
+    #w:1*9行列 -> 3*3行列
+    w=w.reshape((3,3))
+    #x:n*2行列 (xの転置)
+    n=len(x)
+    #a:n*3行列
+    a=np.zeros((n,3))
+    for k in range(3):
+        a[:,k] = np.exp( w[k,0]*x[:,0] + w[k,1]*x[:,1] +w[k,2] )
+    #u:aの１行の要素の合計、n*1行列にする
+    u = np.sum(a,axis=1)
+    u = u.reshape(n,1)
+    #y:n*3行列
+    y = a/u
+    return y
+
+
+#平均交差エントロピー誤差（２次元入力３クラス分類用）
+def cross_entropy_error_for_2d_3class(w,x,t):
+    #w:1*9行列 -> 3*3行列
+    w=w.reshape((3,3))
+    #x:n*2行列（xの転置）
+    #t:n*3行列（t[i]がクラスkにb分類された時t[i.k]=1,それ以外は0）
+    y=logistic_regression_2d_3class(w,x)
+    N=y.shape[0]
+    #cee:平均交差エントロピー誤差
+    cee=0
+    for n in range(N):
+        for k in range(3):
+            cee = cee - (t[n,k] * np.log(y[n,k]))
+    cee = cee / N
+    return cee
+
+
+#平均交差エントロピー誤差の偏微分（２次元入力３クラス分類用）
+def d_cee_for_2d_3class(w,x,t):
+    #w:1*9行列 -> 3*3行列
+    w=w.reshape((3,3))
+    #x:n*2行列（xの転置）
+    #t:n*3行列（t[i]がクラスkにb分類された時t[i.k]=1,それ以外は0）
+    y=logistic_regression_2d_3class(w,x)
+    #d_cee:3*3 (クラスの数k*(xの次元+1)) 行列
+    d_cee=np.zeros((3,3))
+    N=x.shape[0]
+    for n in range(N):
+        for k in range(3):
+            d_cee[k,:] = d_cee[k,:] + (y[n,k]-t[n,k])*np.r_[x[n,:],1]
+    d_cee = d_cee / N
+    #3*3->1*1行列(minimizeの仕様上)で返す
+    return d_cee.reshape(-1)
+
+#勾配法
+def fit_2d_3class(w,x,t):
+    result = minimize(cross_entropy_error_for_2d_3class,w,args=(x,t),jac=d_cee_for_2d_3class,method="CG")
+    return result.x
+```
+
+次に、決定境界及びデータをプロットするコードは以下のとおり。
+
+```python
+from logistic_regression_2d_3class import logistic_regression_2d_3class
+from logistic_regression_2d_3class import cross_entropy_error_for_2d_3class
+from logistic_regression_2d_3class import fit_2d_3class
+from plot_2d_3class import plot_2d_3class
+import matplotlib.pyplot as plt
+import numpy as np
+
+def contour_for_2d_3class(w,x):
+    xn=30
+    x0=np.linspace(min(x[:,0])-1,max(x[:,0])+1,xn)
+    x1=np.linspace(min(x[:,1])-1,max(x[:,1])+1,xn)
+
+    xx0,xx1=np.meshgrid(x0,x1)
+    y=np.zeros((xn,xn,3))
+    for i in range(xn):
+        wk=logistic_regression_2d_3class(w,np.concatenate([xx0[:,i].reshape(xn,1),xx1[:,i].reshape(xn,1)],1))
+        for j in range(3):
+            y[:,i,j]=wk[:,j]
+    for j in range(3):
+        cont=plt.contour(xx0,xx1,y[:,:,j],levels=(0.25,0.5,0.75),colors=['lightgray','red','lightgray'])
+        cont.clabel(fmt='%1.1f',fontsize=9)
+    plt.grid(True)
+
+
+#入力値
+x = np.load('x_2d3class.npy')
+#目標値
+t = np.load('t_2d3class.npy')
+#目標値をn*3行列にする
+temp_t=t
+t=np.zeros((t.shape[0],3))
+for i in range(t.shape[0]):
+    t[i,temp_t[i]]=1
+
+w_init=np.zeros((3,3))
+
+w=fit_2d_3class(w_init,x,t)
+
+cee=cross_entropy_error_for_2d_3class(w,x,t)
+
+print("CEE={0:.2f}".format(cee))
+
+plot_2d_3class(x,temp_t)
+contour_for_2d_3class(w,x)
+plt.show()
+```
+
+実行結果
+
+```
+CEE=0.23
+```
+
+
+また、これにより出力した図は以下のようになる。
+
+<img src="/img/datascience/Figure_38.png" width=75%>
+

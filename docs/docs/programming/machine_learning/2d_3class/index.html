@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.8d64f2e24ba25ce8ae10d2483c8d9a47d917abcb9f8b9297ae6a86cbf364e28e.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.3b6d761245993760fcf9d73865196cb30fd12765c5bb1323864e5598f05f3428.js"></script>
 
 
 
@@ -296,6 +296,122 @@ https://github.com/alex-shpak/hugo-book
 
 
 <p>では、これらより勾配法を利用して決定境界を求めてみよう。</p>
+
+<p>諸関数を求めるコードは以下のとおり。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> scipy.optimize <span style="color:#f92672">import</span> minimize
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+
+<span style="color:#75715e">#ロジスティック回帰モデル(２次元入力３クラス分類)</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">logistic_regression_2d_3class</span>(w,x):
+    <span style="color:#75715e">#w:1*9行列 -&gt; 3*3行列</span>
+    w<span style="color:#f92672">=</span>w<span style="color:#f92672">.</span>reshape((<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>))
+    <span style="color:#75715e">#x:n*2行列 (xの転置)</span>
+    n<span style="color:#f92672">=</span>len(x)
+    <span style="color:#75715e">#a:n*3行列</span>
+    a<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros((n,<span style="color:#ae81ff">3</span>))
+    <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>):
+        a[:,k] <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>exp( w[k,<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span>x[:,<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> w[k,<span style="color:#ae81ff">1</span>]<span style="color:#f92672">*</span>x[:,<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span>w[k,<span style="color:#ae81ff">2</span>] )
+    <span style="color:#75715e">#u:aの１行の要素の合計、n*1行列にする</span>
+    u <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sum(a,axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+    u <span style="color:#f92672">=</span> u<span style="color:#f92672">.</span>reshape(n,<span style="color:#ae81ff">1</span>)
+    <span style="color:#75715e">#y:n*3行列</span>
+    y <span style="color:#f92672">=</span> a<span style="color:#f92672">/</span>u
+    <span style="color:#66d9ef">return</span> y
+
+
+<span style="color:#75715e">#平均交差エントロピー誤差（２次元入力３クラス分類用）</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cross_entropy_error_for_2d_3class</span>(w,x,t):
+    <span style="color:#75715e">#w:1*9行列 -&gt; 3*3行列</span>
+    w<span style="color:#f92672">=</span>w<span style="color:#f92672">.</span>reshape((<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>))
+    <span style="color:#75715e">#x:n*2行列（xの転置）</span>
+    <span style="color:#75715e">#t:n*3行列（t[i]がクラスkにb分類された時t[i.k]=1,それ以外は0）</span>
+    y<span style="color:#f92672">=</span>logistic_regression_2d_3class(w,x)
+    N<span style="color:#f92672">=</span>y<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]
+    <span style="color:#75715e">#cee:平均交差エントロピー誤差</span>
+    cee<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> range(N):
+        <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>):
+            cee <span style="color:#f92672">=</span> cee <span style="color:#f92672">-</span> (t[n,k] <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>log(y[n,k]))
+    cee <span style="color:#f92672">=</span> cee <span style="color:#f92672">/</span> N
+    <span style="color:#66d9ef">return</span> cee
+
+
+<span style="color:#75715e">#平均交差エントロピー誤差の偏微分（２次元入力３クラス分類用）</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">d_cee_for_2d_3class</span>(w,x,t):
+    <span style="color:#75715e">#w:1*9行列 -&gt; 3*3行列</span>
+    w<span style="color:#f92672">=</span>w<span style="color:#f92672">.</span>reshape((<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>))
+    <span style="color:#75715e">#x:n*2行列（xの転置）</span>
+    <span style="color:#75715e">#t:n*3行列（t[i]がクラスkにb分類された時t[i.k]=1,それ以外は0）</span>
+    y<span style="color:#f92672">=</span>logistic_regression_2d_3class(w,x)
+    <span style="color:#75715e">#d_cee:3*3 (クラスの数k*(xの次元+1)) 行列</span>
+    d_cee<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros((<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>))
+    N<span style="color:#f92672">=</span>x<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]
+    <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> range(N):
+        <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>):
+            d_cee[k,:] <span style="color:#f92672">=</span> d_cee[k,:] <span style="color:#f92672">+</span> (y[n,k]<span style="color:#f92672">-</span>t[n,k])<span style="color:#f92672">*</span>np<span style="color:#f92672">.</span>r_[x[n,:],<span style="color:#ae81ff">1</span>]
+    d_cee <span style="color:#f92672">=</span> d_cee <span style="color:#f92672">/</span> N
+    <span style="color:#75715e">#3*3-&gt;1*1行列(minimizeの仕様上)で返す</span>
+    <span style="color:#66d9ef">return</span> d_cee<span style="color:#f92672">.</span>reshape(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+
+<span style="color:#75715e">#勾配法</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fit_2d_3class</span>(w,x,t):
+    result <span style="color:#f92672">=</span> minimize(cross_entropy_error_for_2d_3class,w,args<span style="color:#f92672">=</span>(x,t),jac<span style="color:#f92672">=</span>d_cee_for_2d_3class,method<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;CG&#34;</span>)
+    <span style="color:#66d9ef">return</span> result<span style="color:#f92672">.</span>x</code></pre></div>
+<p>次に、決定境界及びデータをプロットするコードは以下のとおり。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> logistic_regression_2d_3class <span style="color:#f92672">import</span> logistic_regression_2d_3class
+<span style="color:#f92672">from</span> logistic_regression_2d_3class <span style="color:#f92672">import</span> cross_entropy_error_for_2d_3class
+<span style="color:#f92672">from</span> logistic_regression_2d_3class <span style="color:#f92672">import</span> fit_2d_3class
+<span style="color:#f92672">from</span> plot_2d_3class <span style="color:#f92672">import</span> plot_2d_3class
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">contour_for_2d_3class</span>(w,x):
+    xn<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>
+    x0<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>linspace(min(x[:,<span style="color:#ae81ff">0</span>])<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,max(x[:,<span style="color:#ae81ff">0</span>])<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,xn)
+    x1<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>linspace(min(x[:,<span style="color:#ae81ff">1</span>])<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,max(x[:,<span style="color:#ae81ff">1</span>])<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,xn)
+
+    xx0,xx1<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>meshgrid(x0,x1)
+    y<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros((xn,xn,<span style="color:#ae81ff">3</span>))
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(xn):
+        wk<span style="color:#f92672">=</span>logistic_regression_2d_3class(w,np<span style="color:#f92672">.</span>concatenate([xx0[:,i]<span style="color:#f92672">.</span>reshape(xn,<span style="color:#ae81ff">1</span>),xx1[:,i]<span style="color:#f92672">.</span>reshape(xn,<span style="color:#ae81ff">1</span>)],<span style="color:#ae81ff">1</span>))
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>):
+            y[:,i,j]<span style="color:#f92672">=</span>wk[:,j]
+    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>):
+        cont<span style="color:#f92672">=</span>plt<span style="color:#f92672">.</span>contour(xx0,xx1,y[:,:,j],levels<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0.25</span>,<span style="color:#ae81ff">0.5</span>,<span style="color:#ae81ff">0.75</span>),colors<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;lightgray&#39;</span>,<span style="color:#e6db74">&#39;red&#39;</span>,<span style="color:#e6db74">&#39;lightgray&#39;</span>])
+        cont<span style="color:#f92672">.</span>clabel(fmt<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%1.1f</span><span style="color:#e6db74">&#39;</span>,fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">9</span>)
+    plt<span style="color:#f92672">.</span>grid(True)
+
+
+<span style="color:#75715e">#入力値</span>
+x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;x_2d3class.npy&#39;</span>)
+<span style="color:#75715e">#目標値</span>
+t <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;t_2d3class.npy&#39;</span>)
+<span style="color:#75715e">#目標値をn*3行列にする</span>
+temp_t<span style="color:#f92672">=</span>t
+t<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros((t<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>],<span style="color:#ae81ff">3</span>))
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(t<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]):
+    t[i,temp_t[i]]<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+
+w_init<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros((<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>))
+
+w<span style="color:#f92672">=</span>fit_2d_3class(w_init,x,t)
+
+cee<span style="color:#f92672">=</span>cross_entropy_error_for_2d_3class(w,x,t)
+
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;CEE={0:.2f}&#34;</span><span style="color:#f92672">.</span>format(cee))
+
+plot_2d_3class(x,temp_t)
+contour_for_2d_3class(w,x)
+plt<span style="color:#f92672">.</span>show()</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>CEE=0.23
+</code></pre>
+
+<p>また、これにより出力した図は以下のようになる。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_38.png" width=75%></p>
 </article>
 
       
@@ -303,8 +419,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/e6ae75f07e5009e1dcc1ac3d8bb6f8c25b889e52" title='Last modified Jun 30, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 30, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/144080793239f468cb0317f0e10ba28efac39fce" title='Last modified Jul 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 3, 2020
     </a>
   </div>
   
