@@ -36,7 +36,7 @@ p次元入力qクラス分類において、入力データx<sub>n</sub> (n=0,..
 
 <img src="/img/datascience/Figure_37.png" width=75%>
 
-この図より、入力データx<sub>n</sub>とパラメータw<sub>n</sub>から出力データa<sub>n</sub>を以下のように計算する。
+この図より、入力データ<b>x</b>とパラメータ<b>w</b>から出力データ<b>a</b>を以下のように計算する。
 
 {{< katex  >}}
 \begin{aligned}
