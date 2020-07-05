@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Swift on WAT Notes</title>
+    <link>https://WAT36.github.io/pages/categories/Swift/</link>
+    <description>Recent content in Swift on WAT Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    
+	<atom:link href="https://WAT36.github.io/pages/categories/Swift/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>変数を宣言する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/var/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/var/</guid>
+      <description>変数を宣言する 変数を宣言する方法についてを述べる。 Java Javaでの変数の宣言は以下の通り。 (データ型) (変数名); (変数名) = (値); // または</description>
+    </item>
+    
+  </channel>
+</rss>
