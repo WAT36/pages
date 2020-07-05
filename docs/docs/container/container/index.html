@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>stringsコマンド | WAT Notes</title>
+<title>コンテナとは？ | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -30,6 +30,7 @@ https://github.com/alex-shpak/hugo-book
 <body>
   <input type="checkbox" style="display: none" id="menu-control" />
   <main class="flex container">
+
     <aside class="book-menu fixed">
       <nav>
 <h2 class="book-brand">
@@ -53,7 +54,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2fposts\2fstrings\2f "] {
+  nav ul a[href$="\2f docs\2f container\2f container\2f "] {
       color: #004ed0;
   }
   </style>
@@ -114,47 +115,48 @@ https://github.com/alex-shpak/hugo-book
 
     </aside>
 
-    <div class="book-posts">
+    <div class="book-page">
       <header class="flex align-center justify-between book-header">
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>stringsコマンド</strong>
+  <strong>コンテナとは？</strong>
 </header>
 
       
-
-<header class="markdown">
-  <h1>stringsコマンド</h1>
-  <h5>
-    <strong>Sep 15, 2019</strong>
-  </h5>
-</header>
 <article class="markdown">
 
-<p>CTFに興味が出てきたため、社内のCTFのコミュニティに参加してちょこちょこ参加してはいるのだが、なかなか解き進めない・知識が定着せずに困っている。
-なので、１個１個覚えた知識をこのブログにつけることにした。
-最初はこの「strings」コマンドについてを書く。</p>
+<h1 id="コンテナとは">コンテナとは？</h1>
 
-<p>Linuxのコマンドにstringsというのがあるのだが、このコマンドは実行ファイルなどのバイナリファイルやデータファイル内から表示可能な文字列を抽出して表示してくれる。</p>
+<p>最近よく聞くコンテナ技術とは何なのか？</p>
 
-<h2 id="使用法">使用法</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ strings <span style="color:#f92672">[</span>オプション<span style="color:#f92672">]</span> ファイル</code></pre></div>
-<h2 id="オプション">オプション</h2>
+<p>コンテナとは、OS上に論理的な区画(コンテナ)を作り、そこにミドルウェア、アプリケーション、アプリケーションを動作させるのに必要なライブラリなどをまとめ、そのコンテナ自体が一つのサーバーのように使うことができるようにしたものである。</p>
 
-<ul>
-<li>-a・・・・・ファイル全体をスキャンする</li>
-<li>-f・・・・・ファイル名も表示する</li>
-<li>-n 文字数・・最低でも指定した文字数以上の長さを表示する</li>
-<li>-t 指定・・・「o（8進数）」「x（16進数）」「d（10進数）」のいずれかを指定して表示する</li>
-</ul>
+<p>コンテナ技術を使わない場合、複数のアプリケーションを一つのサーバ上で動作させると、データを格納するディレクトリはサーバ上のを複数のアプリケーションが共有、またIPアドレスもサーバのアドレスを共用して利用することになる。</p>
 
-<p>これまで参加したCTFでもファイルが渡された事が何回かあるのだが、stringsコマンドをやる事でフラグが出ることが何回かあった。
-これがまず基本というとこだろうか？（素人意見だが）</p>
+<p>これに対しコンテナ技術を利用すると、OSやディレクトリ、IPアドレスなどのリソースを、個々のアプリケーションが個々に分けて持たせるように見せられる。（コンテナ管理ソフトウェアがこの動作を行う。）</p>
 </article>
 
       
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/a393ef449b14f5e21ef725558c43e1ab460882f9" title='Last modified Apr 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 5, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
     </div>
+    
+  
+
+
+
   </main>
 
   
