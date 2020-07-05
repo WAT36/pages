@@ -55,20 +55,9 @@ bookToc: false
 
 直線の式は以下の式のように表すことができる。
 
-<math>
-<mi>y(x)</mi>
-<mo>=</mo>
-<msub>
-    <mi>w</mi>
-    <mn>0</mn>
-</msub>
-<mi>x</mi>
-<mo>+</mo>
-<msub>
-    <mi>w</mi>
-    <mn>1</mn>
-</msub>
-</math>
+{{< katex  >}}
+y(x) = w_{0} x + w_{1}
+{{< /katex >}}
 
 最適な直線モデルの式を求めるには、最適なw<sub>0</sub>とw<sub>1</sub>を求めれば良いのだが、どのように求めれば良いのか？  
 

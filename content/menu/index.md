@@ -12,6 +12,7 @@ headless: true
  - [**CTF**]({{< relref "/docs/ctf/ctf_index.md" >}})
  - [**コンテナ**]({{< relref "/docs/container/container_index.md" >}})
  - [**フロントエンド**]({{< relref "/docs/front-end/front_index.md" >}})
+ - [**クラウド(AWS)**]({{< relref "/docs/cloud/aws/aws_index.md" >}})
 
 </details>
 
