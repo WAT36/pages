@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.99dc2b271c20dc147df0055d5f77dccdd591fe1e4e399fa5385fb23ed0f585a7.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.e4f2dc439068660c9628a2c1d133d0d8e09d9fbbb1abf0194ccb563a203bcc19.js"></script>
 
 
 
@@ -277,14 +277,45 @@ div { color: green}
 </table>
 
 <p>使用例</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">a</span>:<span style="color:#a6e22e">link</span> { <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">blue</span>}</code></pre></div></article>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">a</span>:<span style="color:#a6e22e">link</span> { <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">blue</span>}</code></pre></div>
+<h1 id="擬似要素">擬似要素</h1>
+
+<p>要素内容の一部のみをCSSの適用対象とするセレクタを<strong>擬似要素</strong>という。</p>
+
+<p>主な擬似要素は以下の通り。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">::first-line</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">要素内容の１行目</td>
+    </tr>
+    <tr>
+        <td style="border:none;">::first-letter</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">要素内容の１文字目</td>
+    </tr>
+    <tr>
+        <td style="border:none;">::before</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">要素の始めにcontent宣言の内容を追加</td>
+    </tr>
+    <tr>
+        <td style="border:none;">::after</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">要素の終りにcontent宣言の内容を追加</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">p</span>::<span style="color:#a6e22e">first-letter</span> { <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">red</span>}</code></pre></div></article>
 
       
 <div class="book-footer justify-between">
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/36346c4370bcf0cffd70a348e810870454873b9d" title='Last modified Jul 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/5c43e0f772b4d33a1e9514fb4fc2c49669a6ad3b" title='Last modified Jul 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 5, 2020
     </a>
   </div>
@@ -309,6 +340,7 @@ div { color: green}
 <li><a href="#属性セレクタ">属性セレクタ</a></li>
 </ul></li>
 <li><a href="#擬似クラス">擬似クラス</a></li>
+<li><a href="#擬似要素">擬似要素</a></li>
 </ul>
 </nav>
   </aside>

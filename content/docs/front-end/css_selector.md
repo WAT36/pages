@@ -185,3 +185,40 @@ a[href$=".pdf"] { color: red}
 a:link { color: blue}
 ```
 
+
+# 擬似要素
+
+要素内容の一部のみをCSSの適用対象とするセレクタを**擬似要素**という。
+
+主な擬似要素は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">::first-line</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">要素内容の１行目</td>
+    </tr>
+    <tr>
+        <td style="border:none;">::first-letter</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">要素内容の１文字目</td>
+    </tr>
+    <tr>
+        <td style="border:none;">::before</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">要素の始めにcontent宣言の内容を追加</td>
+    </tr>
+    <tr>
+        <td style="border:none;">::after</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">要素の終りにcontent宣言の内容を追加</td>
+    </tr>
+</table>
+
+
+使用例
+
+```css
+p::first-letter { color: red}
+```
+
