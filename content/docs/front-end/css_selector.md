@@ -222,3 +222,39 @@ a:link { color: blue}
 p::first-letter { color: red}
 ```
 
+
+# 結合子
+
+シンプルセレクタ同士を**結合子**と呼ばれるもので結びつけたものもセレクタとして機能する。
+
+結合子及びその使用法は以下のとおり。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">セレクタ1  セレクタ2</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">セレクタ1の内部に含まれているセレクタ2の要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">セレクタ1 <b>></b> セレクタ2</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">セレクタ1の子要素となっているセレクタ2の要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">セレクタ1 <b>+</b> セレクタ2</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">セレクタ1の直後に現れるセレクタ2の要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">セレクタ1 <b>~</b> セレクタ2</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">セレクタ1の後に現れる全てのセレクタ2の要素</td>
+    </tr>
+</table>
+
+
+使用例
+
+```css
+h1+p { color: red}
+```
