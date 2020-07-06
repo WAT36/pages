@@ -24,5 +24,6 @@ bookToc: false
 - CSS
  - [CSSとは]({{< relref "/docs/front-end/css_about.md" >}})
  - [セレクタ]({{< relref "/docs/front-end/css_selector.md" >}})
+ - [CSS適用の優先順位]({{< relref "/docs/front-end/css_priority.md" >}})
 
 
