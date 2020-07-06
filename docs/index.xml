@@ -209,6 +209,15 @@
     </item>
     
     <item>
+      <title>Null</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/null/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/null/</guid>
+      <description> Null </description>
+    </item>
+    
+    <item>
       <title>N次元線形回帰モデル</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/N-dimension_linear_model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -232,7 +241,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/other/other_index/</guid>
-      <description>その他 その他、括れてない手法などをまとめる。 変数 変数を設定する 変数の型を調べる 関数、メソッドのヘルプを見る(Python) コメントアウト 正規</description>
+      <description>その他 その他、括れてない手法などをまとめる。 変数 変数を設定する 変数の型を調べる 関数、メソッドのヘルプを見る(Python) コメントアウト Null 正</description>
     </item>
     
     <item>
