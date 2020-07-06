@@ -93,7 +93,7 @@ k=1の時(クラス1に分類される確率)は以下のようになる。
 \begin{aligned}
     P( { \bf T } \mid { \bf X } ) 
         &= \prod_{n=0}^{p-1} P( t_{n} \mid x_{n} )  \\
-        &= \prod_{n=0}^{p-1} y_{n0}^{t_{n0}} y_{n1}^{t_{n1}} y_{n2}^{t_{n2}} \\
+        &= \prod_{n=0}^{p-1} y_{n0}^{t_{n0}} y_{n1}^{t_{n1}} \cdots y_{n(q-1)}^{t_{n(q-1)}} \\
         &= \prod_{n=0}^{p-1} \prod_{k=0}^{q-1} (y_{nk})^{t_{nk}}
 \end{aligned}
 {{< /katex >}}
