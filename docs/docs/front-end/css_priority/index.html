@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.d0575cb33ac6905d7d33b4dd301d0be25161f40fc3dcd525402d066f70766500.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.5737145e537bc30aa9e3d7c1bd2443fe7bbb62bf9a0a8bfb7726841244e6d625.js"></script>
 
 
 
@@ -135,13 +135,36 @@ https://github.com/alex-shpak/hugo-book
 
 <p>CSSが複数指定されていた場合は、指定元により適用の優先順位というものが指定されている。</p>
 
-<p>デフォルトでは</p>
+<p>その優先順位は</p>
 
 <pre>
 製作者のCSS  >  ユーザーのCSS  >  ブラウザのCSS
 </pre>
 
 <p>のようになっている。</p>
+
+<h2 id="important">!important</h2>
+
+<p>例えばユーザーが指定したCSSやブラウザ内のCSSの指定した宣言を優先して適用させたい場合はどのようにすれば良いか。</p>
+
+<p>その際に使用するのが<strong>!important</strong>文である。</p>
+
+<p>!important文が最後に付いた宣言は、製作者のCSSよりも優先して適用される。</p>
+
+<p>しかし、!importantが付けられていても、指定元によって優先順位がある。指定元及び!importantの有無による優先度は以下のとおり。</p>
+
+<pre>
+優先度  高
+↑
+|   ブラウザ    !important付き
+|   ユーザー    !important付き
+|   製作者      !important付き
+|   製作者
+|   ユーザー
+|   ブラウザ
+↓
+優先度  低
+</pre>
 </article>
 
       
@@ -149,7 +172,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/82871cbc083534ca21ca602a54677eeca5694353" title='Last modified Jul 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/514212a4a6b8186957f9ff0e84ec733fec8ebf6b" title='Last modified Jul 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 7, 2020
     </a>
   </div>
@@ -168,6 +191,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#css適用の優先順位">CSS適用の優先順位</a>
 <ul>
 <li><a href="#指定元による優先順位">指定元による優先順位</a></li>
+<li><a href="#important">!important</a></li>
 </ul></li>
 </ul>
 </nav>
