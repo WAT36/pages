@@ -1631,6 +1631,15 @@
     </item>
     
     <item>
+      <title>２次元入力３クラス分類</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_3class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_3class/</guid>
+      <description>２次元入力３クラス分類 次は２次元入力において、３クラス分類を行うケースについてを考える。 先程の２次元入力２クラス分類のデータに、良いでも悪い</description>
+    </item>
+    
+    <item>
       <title>２進数に変換して表示</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/bin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
