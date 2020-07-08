@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.5737145e537bc30aa9e3d7c1bd2443fe7bbb62bf9a0a8bfb7726841244e6d625.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.f5015126ae29b94452cfbdb9afd5c01cbc949443fbe89926fc39ea38f656efbe.js"></script>
 
 
 
@@ -165,6 +165,65 @@ https://github.com/alex-shpak/hugo-book
 ↓
 優先度  低
 </pre>
+
+<h2 id="詳細度による優先順位">詳細度による優先順位</h2>
+
+<p>セレクタにはその種類によって、<strong>詳細度</strong>という３桁の数値が割り振られている。</p>
+
+<p>!important文が無く、指定元が同じ場合は、この詳細度によって優先度が決まってくる。</p>
+
+<p>詳細度の数値は以下の法則によって決められる。</p>
+
+<ul>
+<li>３桁目：IDセレクタの個数</li>
+<li>２桁目：クラスセレクタの個数 + 属性セレクタの個数 + 擬似クラスの個数</li>
+<li>１桁目：タイプセレクタの個数 + 擬似要素の個数</li>
+</ul>
+
+<p>例として、以下のようなセレクタのときの詳細度を記載する。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">span div#top</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">102</td>
+    </tr>
+    <tr>
+        <td style="border:none;">div#top</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">101</td>
+    </tr>
+    <tr>
+        <td style="border:none;">#top</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">100</td>
+    </tr>
+    <tr>
+        <td style="border:none;">span.address</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">011</td>
+    </tr>    
+    <tr>
+        <td style="border:none;">.address</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">010</td>
+    </tr>
+    <tr>
+        <td style="border:none;">span div</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">002</td>
+    </tr>
+    <tr>
+        <td style="border:none;">div</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">001</td>
+    </tr>
+    <tr>
+        <td style="border:none;">*</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">000</td>
+    </tr>
+</table>
 </article>
 
       
@@ -172,7 +231,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/514212a4a6b8186957f9ff0e84ec733fec8ebf6b" title='Last modified Jul 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/c29c0052a4de4394b2a7043d6ef9dd715e15ff11" title='Last modified Jul 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 7, 2020
     </a>
   </div>
@@ -192,6 +251,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#指定元による優先順位">指定元による優先順位</a></li>
 <li><a href="#important">!important</a></li>
+<li><a href="#詳細度による優先順位">詳細度による優先順位</a></li>
 </ul></li>
 </ul>
 </nav>
