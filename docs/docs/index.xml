@@ -156,6 +156,15 @@
     </item>
     
     <item>
+      <title>CSSとは</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_about/</guid>
+      <description>CSSとは CSSの基本事項についてを述べる。 CSSは、HTMLに組み込む形で使用する言語で、HTMLで作成した文書に対しCSSでどの部分をど</description>
+    </item>
+    
+    <item>
       <title>csvファイルからデータを読み込む</title>
       <link>https://WAT36.github.io/pages/docs/programming/graph/read/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -300,6 +309,15 @@
     </item>
     
     <item>
+      <title>その他の要素</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/html_other/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/html_other/</guid>
+      <description>その他の要素 その他の要素についてを述べる。 figure要素 figure要素は、それが文書から参照される、自己完結型のコンテンツ(フローコンテ</description>
+    </item>
+    
+    <item>
       <title>オーバーフィッティング(過学習)</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/overfitting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -324,6 +342,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/gauss_2D/</guid>
       <description>ガウス関数(2次元) Python ガウス関数 a exp ( - (x - &amp;mu; ) 2 &amp;sigma; 2 ) において、入力xを2次元ベクトルとした時の場合を考える。(以下) x = x 0 x 1 この時、</description>
+    </item>
+    
+    <item>
+      <title>クラウド(AWS)</title>
+      <link>https://WAT36.github.io/pages/docs/cloud/aws/aws_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/cloud/aws/aws_index/</guid>
+      <description>クラウド(AWS) AWSについてのまとめ。 ハンズオン DynamoDBテーブルの作成方法 Lambda関数の作成方法 API GatewayでのAPI作</description>
     </item>
     
     <item>
@@ -471,6 +498,15 @@
     </item>
     
     <item>
+      <title>セレクタ</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_selector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_selector/</guid>
+      <description>セレクタ CSSのセレクタについてを述べる。 セレクタにはいくつか種類があり、セレクタの基本的な最小単位のことをシンプルセレクタという。 種類にも</description>
+    </item>
+    
+    <item>
       <title>ソフトマックス関数</title>
       <link>https://WAT36.github.io/pages/docs/programming/math/softmax/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -495,6 +531,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/front-end/text/</guid>
       <description>テキスト HTML文書にテキストを記載、装飾、補足するための要素についてをここでは述べる。 (一部表示例も記載するが、ブラウザ等により表示が異な</description>
+    </item>
+    
+    <item>
+      <title>テーブル(表)</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/table/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/table/</guid>
+      <description>テーブル(表) テーブル(表)を作る要素についてを述べる。 table要素 table要素は１つのテーブル(表)を表す要素である。 table要素の</description>
     </item>
     
     <item>
@@ -531,6 +576,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/class_func/field/</guid>
       <description>フィールド(クラス変数・インスタンス変数) フィールド変数とはクラス内に定義する変数のこと。 その中でも主に、クラス内で定義して全てのインスタン</description>
+    </item>
+    
+    <item>
+      <title>フォーム</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/form/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/form/</guid>
+      <description>フォーム フォームを作成するための要素についてを述べる。 form要素 form要素はフォームを構成する要素である。 使用する主な属性は以下の通り。</description>
     </item>
     
     <item>
@@ -1566,6 +1620,24 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class/</guid>
       <description>１次元入力２クラス分類 先述までに述べた回帰問題は、入力データから具体的な連続した数値を予測するものであったが、ここからの分類問題は入力データ</description>
+    </item>
+    
+    <item>
+      <title>２次元入力２クラス分類</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_2class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_2class/</guid>
+      <description>２次元入力２クラス分類 前章では１次元入力であったが、次は２次元入力の場合を考えてみる。 １次元入力２クラス分類で使用したデータに、pHのデータ</description>
+    </item>
+    
+    <item>
+      <title>２次元入力３クラス分類</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_3class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_3class/</guid>
+      <description>２次元入力３クラス分類 次は２次元入力において、３クラス分類を行うケースについてを考える。 先程の２次元入力２クラス分類のデータに、良いでも悪い</description>
     </item>
     
     <item>

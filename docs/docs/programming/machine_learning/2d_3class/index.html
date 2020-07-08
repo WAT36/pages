@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>２次元入力３クラス分類 | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.4a145453a42c26baf3f5b17369ff74555c11552b277a86e8719a2f9039d176d7.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2f 2d_3class\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>２次元入力３クラス分類</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="２次元入力３クラス分類">２次元入力３クラス分類</h1>
+
+<p>次は２次元入力において、３クラス分類を行うケースについてを考える。</p>
+
+<p>先程の<a href="https://WAT36.github.io/pages/docs/programming/machine_learning/2d_2class/">２次元入力２クラス分類</a>のデータに、良いでも悪いでもない「まあまあ」というカテゴリ(クラス)を追加したようなデータを考えてみよう。</p>
+
+<p>そのようなデータを新たに作成し(入力データは<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/x_2d3class.npy">こちら</a>、目標データは<a href="https://github.com/WAT36/python/blob/master/machine_learning/classification/t_2d3class.npy">こちら</a>)、図示してみる。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_35.png" width=50%></p>
+
+<p>ここから３クラス分類を行うための決定境界を求めてみる。</p>
+
+<p>しかし３クラス以上の分類の時は、２クラス分類で使用したロジスティック回帰モデルを適用するのは難しい。(使用しているシグモイド関数が0または1に近い値を取るため)</p>
+
+<p>そのため、入力データとパラメータを用いて計算した値を、シグモイド関数ではない方法を用いることで条件付き確率・交差エントロピー誤差・決定境界を求めることを考える。</p>
+
+<p>では、シグモイド関数ではない方法に何があるだろうか。</p>
+
+<p>方法の一つとして、ここでは<strong><a href="https://WAT36.github.io/pages/docs/programming/math/softmax/">ソフトマックス関数</a></strong>を利用することを考える。</p>
+
+<p>ソフトマックス関数を利用することで、出力値が全て0以上1以下の値に収まるので、この値を条件付き確率として用いる。</p>
+
+<p>p次元入力qクラス分類において、入力データx<sub>n</sub> (n=0,..,p-1)とした時、常に１を取る入力データx<sub>p</sub>を追加、出力値がq個得られるようにパラメータをq×(p+1)行列で用意し、以下のように計算して値を取る。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_36.png" width=75%></p>
+
+<p>例として２次元入力３クラス分類においては以下のような設定をし、出力値を得る。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_37.png" width=75%></p>
+
+<p>この図より、入力データ<b>x</b>とパラメータ<b>w</b>から出力データ<b>a</b>を以下のように計算する。</p>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{1}  a_{k}  &=  w_{k0} x_{0} + w_{k1} x_{1} + w_{k2} x_{2}  (k=0,1,2) \\
+                &=  \sum_{i=0}^{p} w_{ki} x_{i}  (k=0,1,2)
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>これにより、まず出力値a<sub>k</sub>を得られる。</p>
+
+<p>次に、この出力値a<sub>k</sub>に対し、ソフトマックス関数を適用して0~1の値に収まらせ、条件付き確率とする。</p>
+
+<p>まずはソフトマックス関数で用いる総和uを以下の式(2)で定義する。</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{2}  u  &=  \exp(a_{0}) + \exp(a_{1}) + \cdots + \exp(a_{q-1}) \\
+            &=  \sum_{i=0}^{q-1} \exp(a_{i})
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>これを利用し、出力値a<sub>k</sub>にソフトマックス関数を適用した出力値y<sub>k</sub>を以下の式(3)のように定義する。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{3}  y_{k}  =  \frac{ \exp(a_{k}) }{u}  (k=0,1,2)
+ $$
+</p>
+
+
+
+<p>このy<sub>k</sub>を入力データ<b>x</b>がクラスkに属する条件付き確率とする。</p>
+
+<p>例えばk=0の時(クラス0に分類される確率)は以下のようになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{4}  P( { \bf t} =[1,0,0] \mid { \bf x } )  =  y_{0}
+ $$
+</p>
+
+
+
+<p>k=1の時(クラス1に分類される確率)は以下のようになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{5}  P( { \bf t} =[0,1,0] \mid { \bf x } )  =  y_{1}
+ $$
+</p>
+
+
+
+<p>式(4),(5)を例として述べたが、P(t|x)を一般化すると以下の式(6)のようになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{6}  P( { \bf t} \mid { \bf x } )  =  {y_{0}}^{t_{0}} {y_{1}}^{t_{1}} {y_{2}}^{t_{2}}
+ $$
+</p>
+
+
+
+<p>このように表すことで、例えばクラス０だったら<b>t</b>=[1,0,0]なのでP(<b>t</b>|<b>x</b>)=y<sub>0</sub> <sup>1</sup> y<sub>1</sub> <sup>0</sup> y<sub>2</sub> <sup>0</sup> = y<sub>0</sub> のようになる。</p>
+
+<p>これにより、p次元入力qクラス分類において全ての入力データ<b>X</b>から全クラスデータ<b>T</b>が得られる確率は以下のように表される。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{6}  
+\begin{aligned}
+    P( { \bf T } \mid { \bf X } ) 
+        &= \prod_{n=0}^{p-1} P( t_{n} \mid x_{n} )  \\
+        &= \prod_{n=0}^{p-1} y_{n0}^{t_{n0}} y_{n1}^{t_{n1}} \cdots y_{n(q-1)}^{t_{n(q-1)}} \\
+        &= \prod_{n=0}^{p-1} \prod_{k=0}^{q-1} (y_{nk})^{t_{nk}}
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>これより、平均交差エントロピー誤差関数は以下のようになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{7}  
+\begin{aligned}
+    E( { \bf w } ) 
+        &=  - \frac{1}{N} \log P( { \bf T } \mid { \bf X } ) \\
+        &=  - \frac{1}{N} \log \prod_{n=0}^{p-1} P( t_{n} \mid x_{n} ) \\
+        &=  - \frac{1}{N} \sum_{n=0}^{p-1} \sum_{k=0}^{q-1} t_{nk} \log y_{nk}
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>次に、勾配法で利用するためこの平均交差エントロピー誤差をw<sub>ki</sub>で偏微分した結果を求めてみると以下のようになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{8} \frac{\partial }{\partial w_{ki} }E( { \bf w } )
+        = \frac{1}{N} \sum_{n=0}^{p-1} ( y_{nk} - t_{nk} ) x_{ni}
+ $$
+</p>
+
+
+
+<p>では、これらより勾配法を利用して決定境界を求めてみよう。</p>
+
+<p>諸関数を求めるコードは以下のとおり。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> scipy.optimize <span style="color:#f92672">import</span> minimize
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+
+<span style="color:#75715e">#ロジスティック回帰モデル(２次元入力３クラス分類)</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">logistic_regression_2d_3class</span>(w,x):
+    <span style="color:#75715e">#w:1*9行列 -&gt; 3*3行列</span>
+    w<span style="color:#f92672">=</span>w<span style="color:#f92672">.</span>reshape((<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>))
+    <span style="color:#75715e">#x:n*2行列 (xの転置)</span>
+    n<span style="color:#f92672">=</span>len(x)
+    <span style="color:#75715e">#a:n*3行列</span>
+    a<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros((n,<span style="color:#ae81ff">3</span>))
+    <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>):
+        a[:,k] <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>exp( w[k,<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span>x[:,<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> w[k,<span style="color:#ae81ff">1</span>]<span style="color:#f92672">*</span>x[:,<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span>w[k,<span style="color:#ae81ff">2</span>] )
+    <span style="color:#75715e">#u:aの１行の要素の合計、n*1行列にする</span>
+    u <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sum(a,axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+    u <span style="color:#f92672">=</span> u<span style="color:#f92672">.</span>reshape(n,<span style="color:#ae81ff">1</span>)
+    <span style="color:#75715e">#y:n*3行列</span>
+    y <span style="color:#f92672">=</span> a<span style="color:#f92672">/</span>u
+    <span style="color:#66d9ef">return</span> y
+
+
+<span style="color:#75715e">#平均交差エントロピー誤差（２次元入力３クラス分類用）</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cross_entropy_error_for_2d_3class</span>(w,x,t):
+    <span style="color:#75715e">#w:1*9行列 -&gt; 3*3行列</span>
+    w<span style="color:#f92672">=</span>w<span style="color:#f92672">.</span>reshape((<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>))
+    <span style="color:#75715e">#x:n*2行列（xの転置）</span>
+    <span style="color:#75715e">#t:n*3行列（t[i]がクラスkにb分類された時t[i.k]=1,それ以外は0）</span>
+    y<span style="color:#f92672">=</span>logistic_regression_2d_3class(w,x)
+    N<span style="color:#f92672">=</span>y<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]
+    <span style="color:#75715e">#cee:平均交差エントロピー誤差</span>
+    cee<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> range(N):
+        <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>):
+            cee <span style="color:#f92672">=</span> cee <span style="color:#f92672">-</span> (t[n,k] <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>log(y[n,k]))
+    cee <span style="color:#f92672">=</span> cee <span style="color:#f92672">/</span> N
+    <span style="color:#66d9ef">return</span> cee
+
+
+<span style="color:#75715e">#平均交差エントロピー誤差の偏微分（２次元入力３クラス分類用）</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">d_cee_for_2d_3class</span>(w,x,t):
+    <span style="color:#75715e">#w:1*9行列 -&gt; 3*3行列</span>
+    w<span style="color:#f92672">=</span>w<span style="color:#f92672">.</span>reshape((<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>))
+    <span style="color:#75715e">#x:n*2行列（xの転置）</span>
+    <span style="color:#75715e">#t:n*3行列（t[i]がクラスkにb分類された時t[i.k]=1,それ以外は0）</span>
+    y<span style="color:#f92672">=</span>logistic_regression_2d_3class(w,x)
+    <span style="color:#75715e">#d_cee:3*3 (クラスの数k*(xの次元+1)) 行列</span>
+    d_cee<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros((<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>))
+    N<span style="color:#f92672">=</span>x<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]
+    <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> range(N):
+        <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>):
+            d_cee[k,:] <span style="color:#f92672">=</span> d_cee[k,:] <span style="color:#f92672">+</span> (y[n,k]<span style="color:#f92672">-</span>t[n,k])<span style="color:#f92672">*</span>np<span style="color:#f92672">.</span>r_[x[n,:],<span style="color:#ae81ff">1</span>]
+    d_cee <span style="color:#f92672">=</span> d_cee <span style="color:#f92672">/</span> N
+    <span style="color:#75715e">#3*3-&gt;1*1行列(minimizeの仕様上)で返す</span>
+    <span style="color:#66d9ef">return</span> d_cee<span style="color:#f92672">.</span>reshape(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+
+<span style="color:#75715e">#勾配法</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fit_2d_3class</span>(w,x,t):
+    result <span style="color:#f92672">=</span> minimize(cross_entropy_error_for_2d_3class,w,args<span style="color:#f92672">=</span>(x,t),jac<span style="color:#f92672">=</span>d_cee_for_2d_3class,method<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;CG&#34;</span>)
+    <span style="color:#66d9ef">return</span> result<span style="color:#f92672">.</span>x</code></pre></div>
+<p>次に、決定境界及びデータをプロットするコードは以下のとおり。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> logistic_regression_2d_3class <span style="color:#f92672">import</span> logistic_regression_2d_3class
+<span style="color:#f92672">from</span> logistic_regression_2d_3class <span style="color:#f92672">import</span> cross_entropy_error_for_2d_3class
+<span style="color:#f92672">from</span> logistic_regression_2d_3class <span style="color:#f92672">import</span> fit_2d_3class
+<span style="color:#f92672">from</span> plot_2d_3class <span style="color:#f92672">import</span> plot_2d_3class
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">contour_for_2d_3class</span>(w,x):
+    xn<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>
+    x0<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>linspace(min(x[:,<span style="color:#ae81ff">0</span>])<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,max(x[:,<span style="color:#ae81ff">0</span>])<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,xn)
+    x1<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>linspace(min(x[:,<span style="color:#ae81ff">1</span>])<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,max(x[:,<span style="color:#ae81ff">1</span>])<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,xn)
+
+    xx0,xx1<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>meshgrid(x0,x1)
+    y<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros((xn,xn,<span style="color:#ae81ff">3</span>))
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(xn):
+        wk<span style="color:#f92672">=</span>logistic_regression_2d_3class(w,np<span style="color:#f92672">.</span>concatenate([xx0[:,i]<span style="color:#f92672">.</span>reshape(xn,<span style="color:#ae81ff">1</span>),xx1[:,i]<span style="color:#f92672">.</span>reshape(xn,<span style="color:#ae81ff">1</span>)],<span style="color:#ae81ff">1</span>))
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>):
+            y[:,i,j]<span style="color:#f92672">=</span>wk[:,j]
+    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>):
+        cont<span style="color:#f92672">=</span>plt<span style="color:#f92672">.</span>contour(xx0,xx1,y[:,:,j],levels<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0.25</span>,<span style="color:#ae81ff">0.5</span>,<span style="color:#ae81ff">0.75</span>),colors<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;lightgray&#39;</span>,<span style="color:#e6db74">&#39;red&#39;</span>,<span style="color:#e6db74">&#39;lightgray&#39;</span>])
+        cont<span style="color:#f92672">.</span>clabel(fmt<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%1.1f</span><span style="color:#e6db74">&#39;</span>,fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">9</span>)
+    plt<span style="color:#f92672">.</span>grid(True)
+
+
+<span style="color:#75715e">#入力値</span>
+x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;x_2d3class.npy&#39;</span>)
+<span style="color:#75715e">#目標値</span>
+t <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;t_2d3class.npy&#39;</span>)
+<span style="color:#75715e">#目標値をn*3行列にする</span>
+temp_t<span style="color:#f92672">=</span>t
+t<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros((t<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>],<span style="color:#ae81ff">3</span>))
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(t<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]):
+    t[i,temp_t[i]]<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+
+w_init<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros((<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>))
+
+w<span style="color:#f92672">=</span>fit_2d_3class(w_init,x,t)
+
+cee<span style="color:#f92672">=</span>cross_entropy_error_for_2d_3class(w,x,t)
+
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;CEE={0:.2f}&#34;</span><span style="color:#f92672">.</span>format(cee))
+
+plot_2d_3class(x,temp_t)
+contour_for_2d_3class(w,x)
+plt<span style="color:#f92672">.</span>show()</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>CEE=0.23
+</code></pre>
+
+<p>また、これにより出力した図は以下のようになる。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_38.png" width=75%></p>
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/a0c3473a893ba781b64e99cacb6a6fb854be9dec" title='Last modified Jul 6, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 6, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>
