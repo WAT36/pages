@@ -1119,6 +1119,15 @@
     </item>
     
     <item>
+      <title>教師なし学習</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/unsupervised_learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/unsupervised_learning/</guid>
+      <description>教師なし学習</description>
+    </item>
+    
+    <item>
       <title>数値の絶対値を算出する</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/abs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
