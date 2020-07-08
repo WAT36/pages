@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ルビ | WAT Notes</title>
+<title>Docker | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -54,7 +54,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2f front-end\2fruby\2f "] {
+  nav ul a[href$="\2f docs\2f container\2f docker\2f "] {
       color: #004ed0;
   }
   </style>
@@ -120,72 +120,19 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>ルビ</strong>
+  <strong>Docker</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="ルビ">ルビ</h1>
+<h1 id="docker">Docker</h1>
 
-<p>HTML文書にルビ(ふりがな)を記載するための要素についてをここでは述べる。</p>
-
-<h2 id="ruby要素">ruby要素</h2>
-
-<p>ruby要素は文字にルビを振る要素であり、実際にルビを振る文字及びルビとなる部分を囲む事で表現する。</p>
-
-<p>具体的なルビ及びルビを振る対象の文字の指定は、次のrt,rb,rp,rtc要素を使う。以下にそれぞれの要素についてを示す。</p>
-
-<h3 id="rt要素">rt要素</h3>
-
-<p>rt要素はルビ(ふりがな)自体を表す要素である。rtはruby textの略である。</p>
-
-<h3 id="rb要素">rb要素</h3>
-
-<p>rb要素はルビを振る対象の部分を表す要素である。rbはruby base textの略である。</p>
-
-<h3 id="rp要素">rp要素</h3>
-
-<p>rp要素はルビが未対応のブラウザの時に、ルビを振らずに()などでルビを振る文字の後に表示させる要素である。</p>
-
-<p>使用する際は、()をそれぞれrp要素で囲んで使用する。</p>
-
-<h3 id="rtc要素">rtc要素</h3>
-
-<p>rtc要素は複数のrt要素をグループ化してまとめる要素である。</p>
-
-<h1 id="使用例">使用例</h1>
-
-<p>これら要素の使用例を以下に示す。</p>
-
-<pre><code>&lt;ruby&gt;
-  &lt;rb&gt;薔&lt;/rb&gt; &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;ば&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-  &lt;rb&gt;薇&lt;/rb&gt; &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;ら&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-  &lt;rtc&gt;&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;ba&lt;/rt&gt;&lt;rt&gt;ra&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/rtc&gt;
-&lt;/ruby&gt;
-</code></pre>
-
-<p>表示例</p>
-
-<hr>
-
-<p><ruby>
-  <rb>薔</rb> <rp>(</rp><rt>ば</rt><rp>)</rp>
-  <rb>薇</rb> <rp>(</rp><rt>ら</rt><rp>)</rp>
-  <rtc><rp>(</rp><rt>ba</rt><rt>ra</rt><rp>)</rp></rtc>
-</ruby>
-<hr></p>
+<p>ウォーターフォール型によるアプリケーション開発の場合、開発に使う環境は開発用の環境、検証(テスト)用の環境、本番(実稼働)用の環境というように複数の環境を用意して開発を行うことが多い。</p>
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/c2f2ec9f3ba00fac3340b63d227e0b723c259655" title='Last modified May 23, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 23, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
@@ -194,24 +141,6 @@ https://github.com/alex-shpak/hugo-book
     </div>
     
   
-
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#ルビ">ルビ</a>
-<ul>
-<li><a href="#ruby要素">ruby要素</a>
-<ul>
-<li><a href="#rt要素">rt要素</a></li>
-<li><a href="#rb要素">rb要素</a></li>
-<li><a href="#rp要素">rp要素</a></li>
-<li><a href="#rtc要素">rtc要素</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#使用例">使用例</a></li>
-</ul>
-</nav>
-  </aside>
 
 
 
