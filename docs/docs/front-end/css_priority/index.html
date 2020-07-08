@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS適用の優先順位 | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.5aa22dfa96184d61075215a1e7cabb91d4c780c0fff36cbf671113419915853b.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2f front-end\2f css_priority\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>CSS適用の優先順位</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="css適用の優先順位">CSS適用の優先順位</h1>
+
+<h2 id="指定元による優先順位">指定元による優先順位</h2>
+
+<p>CSSはWebページの製作者だけが指定できるものではなく、閲覧しているユーザも独自に指定でき、また使用しているブラウザもブラウザが有するCSS(及びそれに近い物)を適用した上で表示している。</p>
+
+<p>このうち、どのCSSを優先して適用すべきなのか？</p>
+
+<p>CSSが複数指定されていた場合は、指定元により適用の優先順位というものが指定されている。</p>
+
+<p>その優先順位は</p>
+
+<pre>
+製作者のCSS  >  ユーザーのCSS  >  ブラウザのCSS
+</pre>
+
+<p>のようになっている。</p>
+
+<h2 id="important">!important</h2>
+
+<p>例えばユーザーが指定したCSSやブラウザ内のCSSの指定した宣言を優先して適用させたい場合はどのようにすれば良いか。</p>
+
+<p>その際に使用するのが<strong>!important</strong>文である。</p>
+
+<p>!important文が最後に付いた宣言は、製作者のCSSよりも優先して適用される。</p>
+
+<p>しかし、!importantが付けられていても、指定元によって優先順位がある。指定元及び!importantの有無による優先度は以下のとおり。</p>
+
+<pre>
+優先度  高
+↑
+|   ブラウザ    !important付き
+|   ユーザー    !important付き
+|   製作者      !important付き
+|   製作者
+|   ユーザー
+|   ブラウザ
+↓
+優先度  低
+</pre>
+
+<h2 id="詳細度による優先順位">詳細度による優先順位</h2>
+
+<p>セレクタにはその種類によって、<strong>詳細度</strong>という３桁の数値が割り振られている。</p>
+
+<p>!important文が無く、指定元が同じ場合は、この詳細度によって優先度が決まってくる。</p>
+
+<p>詳細度の数値は以下の法則によって決められる。</p>
+
+<ul>
+<li>３桁目：IDセレクタの個数</li>
+<li>２桁目：クラスセレクタの個数 + 属性セレクタの個数 + 擬似クラスの個数</li>
+<li>１桁目：タイプセレクタの個数 + 擬似要素の個数</li>
+</ul>
+
+<p>例として、以下のようなセレクタのときの詳細度を記載する。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">span div#top</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">102</td>
+    </tr>
+    <tr>
+        <td style="border:none;">div#top</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">101</td>
+    </tr>
+    <tr>
+        <td style="border:none;">#top</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">100</td>
+    </tr>
+    <tr>
+        <td style="border:none;">span.address</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">011</td>
+    </tr>    
+    <tr>
+        <td style="border:none;">.address</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">010</td>
+    </tr>
+    <tr>
+        <td style="border:none;">span div</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">002</td>
+    </tr>
+    <tr>
+        <td style="border:none;">div</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">001</td>
+    </tr>
+    <tr>
+        <td style="border:none;">*</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">000</td>
+    </tr>
+</table>
+
+<p>ちなみに例にもあるが、ユニバーサルセレクタは詳細度なし(0)となる。</p>
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/83b410c61b447dce43bb519d6352869fd7cf6f55" title='Last modified Jul 8, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 8, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#css適用の優先順位">CSS適用の優先順位</a>
+<ul>
+<li><a href="#指定元による優先順位">指定元による優先順位</a></li>
+<li><a href="#important">!important</a></li>
+<li><a href="#詳細度による優先順位">詳細度による優先順位</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>
