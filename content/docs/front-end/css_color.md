@@ -85,3 +85,37 @@ CSSでの色の表現について述べる。
     </tr>
 </table>
 
+
+## rgb(),rgba() による指定
+
+rgb(),rgba()という関数形式の書式を利用すると、RGBの値を10進数のまま指定できる。
+
+rgb()は、r、g、bの値(範囲は0~255)をそれぞれ引数として入力して利用する。
+
+rgba()は、rgb（）に加え透明度を表すalphaの値(範囲は0.0~1.0)も引数として指定できるようにした関数である。
+
+使用例
+
+```
+<table>
+    <tr>
+        <td style="background-color:rgb(255,0,0)">　　</td>
+    </tr>
+    <tr>
+        <td style="background-color:rgba(255,0,0,0.5)">　　</td>
+    </tr>
+</table>
+```
+
+表示例
+
+<hr>
+<table>
+    <tr>
+        <td style="background-color:rgb(255,0,0)">　　</td>
+    </tr>
+    <tr>
+        <td style="background-color:rgba(255,0,0,0.5)">　　</td>
+    </tr>
+</table>
+<hr>
