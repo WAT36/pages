@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.6aff0305451d036843843e17d2398f584ee0e205457fe269475f9aed8724c92c.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.21a157ef2b1b7c89299a66fbbb815f4402b0d3c97e58f1f39fb4cdd615de4507.js"></script>
 
 
 
@@ -133,9 +133,9 @@ https://github.com/alex-shpak/hugo-book
 
 <p>Nullとは何もない、何も入ってない、という状態を示す語である。</p>
 
-<p>変数に何も値が入ってないとき、変数の値を参照しようとするとNullが返ってくる。</p>
+<p>変数に何も値が定義されていないとき、変数の値を参照しようとするとNullが返ってくる。</p>
 
-<p>よく0と勘違いされることが多いが、変数の値を参照して0が返ってきたときは、0という値が変数に入っているという意味であり何も値が入っていないという意味ではない。</p>
+<p>よく0と勘違いされることが多いが、変数の値を参照して0が返ってきたときは、0という値が変数に入っているという意味であり何も値が定義されていないという意味ではないので注意。</p>
 
 <p>言語により仕様が違うこともあるので、それぞれの言語でのNullを以下に述べていく。</p>
 
@@ -150,7 +150,30 @@ https://github.com/alex-shpak/hugo-book
     Java
   </label>
   <div class="book-tabs-content markdown-inner">
-    Java
+    <p>Javaでは参照型のデータ型において、何も参照していない状態を表す時にnullを利用する。</p>
+
+<p>参照型の変数に直接nullを代入することも可能である。変数がnullであるかを確認するには、比較演算子(==)を用いる。</p>
+
+<p>nullの変数に対しメソッド呼び出しを行った場合、NullPointerException例外が発生するので注意。</p>
+
+<p>例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">util</span>.<span style="color:#f92672">*</span>;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+    String <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(s);
+    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(s.<span style="color:#a6e22e">length</span>());    
+  }
+}</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>$ java Main
+null
+Exception in thread &quot;main&quot; java.lang.NullPointerException
+        at Main.main(Main.java:7)
+</code></pre>
+
   </div>
 
   <input type="radio" name="tabs-comment" style="display: none;" id="tabs-comment-1"  />
@@ -178,8 +201,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/63f91bb94dcaeb3e9354ad5d8751edfb5e4aed8a" title='Last modified Jul 6, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 6, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/8265956545aed5e9471076718cd8ce46479837d2" title='Last modified Jul 8, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 8, 2020
     </a>
   </div>
   
