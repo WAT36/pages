@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.35e9a836166e1a50a0b77b845e7a8026df24b365ca531c9f64f42d6bb4c86020.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.87eb16e74c96daaf3c9217da6b6203221018a1ca73cbd2b8ec288433344b3004.js"></script>
 
 
 
@@ -234,6 +234,40 @@ https://github.com/alex-shpak/hugo-book
     </tr>
 </table>
 <hr></p>
+
+<h2 id="hsl-hsla-による指定">hsl(),hsla()による指定</h2>
+
+<p>rgb()と違い、hue(色相),saturation(彩度),lightness(明度)の組み合わせで色を表現する<strong>hsl()</strong>でも色を指定できる。</p>
+
+<p>h(色相)は0~359,s(彩度),l(明度)は0%~100%の範囲で値を指定する</p>
+
+<p>これに加え、透明度を表すalphaの値(範囲は0.0~1.0)も引数として指定できるようにしたものが<strong>hsla()</strong>である。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;background-color:hsl(180,50%,50%)&quot;&gt;　　&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;background-color:hsla(180,50%,50%,0.5)&quot;&gt;　　&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><table>
+    <tr>
+        <td style="background-color:hsl(180,50%,50%)">　　</td>
+    </tr>
+    <tr>
+        <td style="background-color:hsla(180,50%,50%,0.5)">　　</td>
+    </tr>
+</table>
+<hr></p>
 </article>
 
       
@@ -241,7 +275,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/b2d54a4022a4adab98b52ffc5ee1058e7cb51e74" title='Last modified Jul 9, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/b476630f297a82f6a6ec0f87e522f40cbf374c58" title='Last modified Jul 9, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 9, 2020
     </a>
   </div>
@@ -262,6 +296,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#16進数の値">16進数の値</a></li>
 <li><a href="#色を示すキーワード">色を示すキーワード</a></li>
 <li><a href="#rgb-rgba-による指定">rgb(),rgba() による指定</a></li>
+<li><a href="#hsl-hsla-による指定">hsl(),hsla()による指定</a></li>
 </ul></li>
 </ul>
 </nav>

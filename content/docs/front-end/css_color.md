@@ -119,3 +119,37 @@ rgba()は、rgb（）に加え透明度を表すalphaの値(範囲は0.0~1.0)も
     </tr>
 </table>
 <hr>
+
+## hsl(),hsla()による指定
+
+rgb()と違い、hue(色相),saturation(彩度),lightness(明度)の組み合わせで色を表現する**hsl()**でも色を指定できる。
+
+h(色相)は0~359,s(彩度),l(明度)は0%~100%の範囲で値を指定する
+
+これに加え、透明度を表すalphaの値(範囲は0.0~1.0)も引数として指定できるようにしたものが**hsla()**である。
+
+使用例
+
+```
+<table>
+    <tr>
+        <td style="background-color:hsl(180,50%,50%)">　　</td>
+    </tr>
+    <tr>
+        <td style="background-color:hsla(180,50%,50%,0.5)">　　</td>
+    </tr>
+</table>
+```
+
+表示例
+
+<hr>
+<table>
+    <tr>
+        <td style="background-color:hsl(180,50%,50%)">　　</td>
+    </tr>
+    <tr>
+        <td style="background-color:hsla(180,50%,50%,0.5)">　　</td>
+    </tr>
+</table>
+<hr>
