@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.87eb16e74c96daaf3c9217da6b6203221018a1ca73cbd2b8ec288433344b3004.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.b6cab0357f6fa93f5b686951505621b69ab5f6829af95e2f10da179fef21afd5.js"></script>
 
 
 
@@ -239,7 +239,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p>rgb()と違い、hue(色相),saturation(彩度),lightness(明度)の組み合わせで色を表現する<strong>hsl()</strong>でも色を指定できる。</p>
 
-<p>h(色相)は0~359,s(彩度),l(明度)は0%~100%の範囲で値を指定する</p>
+<p>h(色相)は0~359,s(彩度),l(明度)は0%~100%の範囲で値を指定する。</p>
 
 <p>これに加え、透明度を表すalphaの値(範囲は0.0~1.0)も引数として指定できるようにしたものが<strong>hsla()</strong>である。</p>
 
@@ -268,6 +268,30 @@ https://github.com/alex-shpak/hugo-book
     </tr>
 </table>
 <hr></p>
+
+<h1 id="cssでの色の設定">CSSでの色の設定</h1>
+
+<p>ここで設定した色のHTML文書への適用方法を述べる。</p>
+
+<h2 id="colorプロパティ">colorプロパティ</h2>
+
+<p>colorプロパティは、文書中のテキストへの文字色を設定するプロパティである。全ての要素で利用可能である。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;p style=&quot;color:red&quot;  &gt;ここは赤です。&lt;/p&gt;
+&lt;p style=&quot;color:green&quot;&gt;ここは緑です。&lt;/p&gt;
+&lt;p style=&quot;color:blue&quot; &gt;ここは青です。&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p style="color:red"  >ここは赤です。</p>
+<p style="color:green">ここは緑です。</p>
+<p style="color:blue" >ここは青です。</p>
+<hr></p>
 </article>
 
       
@@ -275,8 +299,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/b476630f297a82f6a6ec0f87e522f40cbf374c58" title='Last modified Jul 9, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 9, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/b22af08412e3ece9e96ba9adad31cf714f75a9e8" title='Last modified Jul 10, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 10, 2020
     </a>
   </div>
   
@@ -297,6 +321,10 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#色を示すキーワード">色を示すキーワード</a></li>
 <li><a href="#rgb-rgba-による指定">rgb(),rgba() による指定</a></li>
 <li><a href="#hsl-hsla-による指定">hsl(),hsla()による指定</a></li>
+</ul></li>
+<li><a href="#cssでの色の設定">CSSでの色の設定</a>
+<ul>
+<li><a href="#colorプロパティ">colorプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>
