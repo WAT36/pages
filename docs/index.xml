@@ -380,15 +380,6 @@
     </item>
     
     <item>
-      <title>クラスタリング</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/clustering/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/clustering/</guid>
-      <description>クラスタリング</description>
-    </item>
-    
-    <item>
       <title>クラス・関数(メソッド)</title>
       <link>https://WAT36.github.io/pages/docs/programming/class_func/classfunc_index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1655,15 +1646,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_2class/</guid>
       <description>２次元入力２クラス分類 前章では１次元入力であったが、次は２次元入力の場合を考えてみる。 １次元入力２クラス分類で使用したデータに、pHのデータ</description>
-    </item>
-    
-    <item>
-      <title>２次元入力３クラス分類</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_3class-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_3class-2/</guid>
-      <description>２次元入力３クラス分類 次は２次元入力において、３クラス分類を行うケースについてを考える。 先程の２次元入力２クラス分類のデータに、良いでも悪い</description>
     </item>
     
     <item>
