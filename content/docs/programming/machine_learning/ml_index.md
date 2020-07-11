@@ -31,3 +31,4 @@ bookToc: false
      - [２次元入力３クラス分類]({{< relref "/docs/programming/machine_learning/2d_3class.md" >}})
 - [教師なし学習]({{< relref "/docs/programming/machine_learning/unsupervised_learning.md" >}})
  - [クラスタリング]({{< relref "/docs/programming/machine_learning/clustering.md" >}})
+     - [K-Means法] ({{< relref "/docs/programming/machine_learning/k-means.md" >}})
