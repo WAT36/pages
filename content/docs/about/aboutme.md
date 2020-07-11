@@ -21,7 +21,7 @@ bookToc: false
 
 ## SNS等
 
-- [Twitter(@TilliAdu)](https://twitter.com/tilliadu)
+- [Twitter](https://twitter.com/tilliadu)
 
 細々と呟いてます
 
@@ -33,7 +33,9 @@ bookToc: false
 
 このブログもあります
 
+- [AtCoder](https://atcoder.jp/users/T_Wakasugi)
 
+緑で停滞中。最近伸び悩んでます
 
 ## 資格
 
