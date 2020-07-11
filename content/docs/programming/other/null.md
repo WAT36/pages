@@ -55,7 +55,9 @@ Exception in thread "main" java.lang.NullPointerException
 {{< /tab >}}
 {{< tab "Python" >}}
 
-Python
+Pythonでは**None**という語がnullである状態を示す。
+
+
 
 {{< /tab >}}
 {{< tab "Swift" >}}
