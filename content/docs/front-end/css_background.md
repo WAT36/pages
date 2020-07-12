@@ -76,3 +76,70 @@ iframe使用例
 <iframe width="500" height="400" src="/css_sample_pages/background-image.html">
 </iframe>
 <hr>
+
+
+## background-clipプロパティ
+
+background-clipプロパティは、背景画像をボックスのどの領域に表示させるかを設定するプロパティである。
+
+設定できる値は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">border-box</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ボーダー以内の領域に表示させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">padding-box</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">パディング以内の領域に表示させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">content-box</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">要素内容を表示させる領域に表示させる</td>
+    </tr>
+</table>
+
+
+使用例
+
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>background-clipサンプル</title>
+
+<style type="text/css">
+    p {
+        width:300px; height:200px; padding:10px;
+        border:dashed 3px black; 
+        color:white;
+        background-image:url(img_small.jpg);
+        background-clip:content-box;
+    }
+</style>
+
+</head>
+<body>
+
+<p>background-clipのサンプル</p>
+
+</body>
+</html>
+```
+
+iframe使用例
+
+```
+<iframe width="400" height="300" src="/css_sample_pages/background-clip.html">
+</iframe>
+```
+
+表示例
+
+<hr>
+<iframe width="400" height="300" src="/css_sample_pages/background-clip.html">
+</iframe>
+<hr>
