@@ -43,7 +43,7 @@ bookToc: false
 
 - 応用情報技術者
 
-
+- Oracle Certified Java Programmer, Silver SE 8
 
 
 他に何書こうかな・・
