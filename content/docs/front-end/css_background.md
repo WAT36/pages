@@ -27,3 +27,11 @@ iframeを使い、使用例を示す。
 </iframe>
 <hr>
 
+
+## background-imageプロパティ
+
+background-imageプロパティは、背景に画像を表示させるプロパティである。
+
+値には、**url(画像のURL)**の形で画像を指定し入力する。
+
+CSSで利用するには、body要素に適用させる。
