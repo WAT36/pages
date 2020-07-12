@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.52d17d6b66f8704052e03d10e576e3ca1185aa1d4e1b9c0dc4f074993fe18e8c.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.6e92335db6469217a4b4ebf76ade1cfaddc5a98fb529743658af63bc9705650f.js"></script>
 
 
 
@@ -154,6 +154,43 @@ https://github.com/alex-shpak/hugo-book
 <p>値には、<strong>url(画像のURL)</strong>の形で画像を指定し入力する。</p>
 
 <p>CSSで利用するには、body要素に適用させる。</p>
+
+<p>下記のhtmlをiframeに組み込んで表示させる。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">title</span>&gt;background-imageサンプル&lt;/<span style="color:#f92672">title</span>&gt;
+
+&lt;<span style="color:#f92672">style</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span>&gt;
+    <span style="color:#f92672">body</span> {
+        <span style="color:#66d9ef">background-image</span>: url(<span style="color:#e6db74">img_small.jpg</span>);
+    }
+
+    <span style="color:#f92672">h1</span> {
+        <span style="color:#66d9ef">color</span>:<span style="color:#66d9ef">greenyellow</span>
+    }
+&lt;/<span style="color:#f92672">style</span>&gt;
+
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+
+&lt;<span style="color:#f92672">h1</span>&gt;background-imageのサンプル&lt;/<span style="color:#f92672">h1</span>&gt;
+
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<p>iframe使用例</p>
+
+<pre><code>&lt;iframe width=&quot;500&quot; height=&quot;400&quot; src=&quot;/css_sample_pages/background-image.html&quot;&gt;
+&lt;/iframe&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background-image.html">
+</iframe>
+<hr></p>
 </article>
 
       
@@ -161,7 +198,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/c92a05774c455c8a02a1ab74246bfab03532df3d" title='Last modified Jul 12, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/936ae1510092a0177e680657eb0dfc2a40a71523" title='Last modified Jul 12, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 12, 2020
     </a>
   </div>
