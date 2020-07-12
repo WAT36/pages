@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.783ebc531bac727988c4c981a81190d6f9748e1232081d3d07e0e5b2b41e01e0.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.4ffc20675093f248782c9630f3d12b45a68481f95d3857255bb4c685fd835afc.js"></script>
 
 
 
@@ -252,6 +252,73 @@ https://github.com/alex-shpak/hugo-book
 <p><iframe width="400" height="300" src="https://WAT36.github.io/pages/css_sample_pages/background-clip.html">
 </iframe>
 <hr></p>
+
+<h2 id="background-repeatプロパティ">background-repeatプロパティ</h2>
+
+<p>background-repeatプロパティは、背景画像を繰り返して表示させるか、及びその表示のさせ方を設定するプロパティである。</p>
+
+<p>設定する値は以下の通り。デフォルトではrepeatである。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">repeat-x</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">横方向に画像を連続して表示させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">repeat-y</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">縦方向に画像を連続して表示させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">repeat</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">画像を全体に連続して表示させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">no-repeat</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">画像を１つだけ表示させる</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">title</span>&gt;background-repeatサンプル&lt;/<span style="color:#f92672">title</span>&gt;
+
+&lt;<span style="color:#f92672">style</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span>&gt;
+    <span style="color:#f92672">body</span> {
+        <span style="color:#66d9ef">background-image</span>: url(<span style="color:#e6db74">img_small.jpg</span>);
+        <span style="color:#66d9ef">background-repeat</span>: <span style="color:#66d9ef">repeat</span><span style="color:#f92672">-</span>x;
+    }
+
+    <span style="color:#f92672">h1</span> {
+        <span style="color:#66d9ef">color</span>:<span style="color:#66d9ef">greenyellow</span>
+    }
+&lt;/<span style="color:#f92672">style</span>&gt;
+
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+
+&lt;<span style="color:#f92672">h1</span>&gt;background-repeatのサンプル&lt;/<span style="color:#f92672">h1</span>&gt;
+
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<p>iframe使用例</p>
+
+<pre><code>&lt;iframe width=&quot;500&quot; height=&quot;400&quot; src=&quot;/css_sample_pages/background-repeat.html&quot;&gt;
+&lt;/iframe&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background-repeat.html">
+</iframe>
+<hr></p>
 </article>
 
       
@@ -259,7 +326,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/2709b302bcbecb69d5542edc30d62db7e06080da" title='Last modified Jul 12, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/80836ce641ed5a5a2b9d7c9613322ab82e648858" title='Last modified Jul 12, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 12, 2020
     </a>
   </div>
@@ -280,6 +347,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#background-colorプロパティ">background-colorプロパティ</a></li>
 <li><a href="#background-imageプロパティ">background-imageプロパティ</a></li>
 <li><a href="#background-clipプロパティ">background-clipプロパティ</a></li>
+<li><a href="#background-repeatプロパティ">background-repeatプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>

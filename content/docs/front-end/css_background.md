@@ -143,3 +143,76 @@ iframe使用例
 <iframe width="400" height="300" src="/css_sample_pages/background-clip.html">
 </iframe>
 <hr>
+
+
+## background-repeatプロパティ
+
+background-repeatプロパティは、背景画像を繰り返して表示させるか、及びその表示のさせ方を設定するプロパティである。
+
+設定する値は以下の通り。デフォルトではrepeatである。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">repeat-x</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">横方向に画像を連続して表示させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">repeat-y</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">縦方向に画像を連続して表示させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">repeat</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">画像を全体に連続して表示させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">no-repeat</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">画像を１つだけ表示させる</td>
+    </tr>
+</table>
+
+
+使用例
+
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>background-repeatサンプル</title>
+
+<style type="text/css">
+    body {
+        background-image: url(img_small.jpg);
+        background-repeat: repeat-x;
+    }
+
+    h1 {
+        color:greenyellow
+    }
+</style>
+
+</head>
+<body>
+
+<h1>background-repeatのサンプル</h1>
+
+</body>
+</html>
+```
+
+iframe使用例
+
+```
+<iframe width="500" height="400" src="/css_sample_pages/background-repeat.html">
+</iframe>
+```
+
+表示例
+
+<hr>
+<iframe width="500" height="400" src="/css_sample_pages/background-repeat.html">
+</iframe>
+<hr>
