@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.ef91e8e13340b80b02b363c579aa9a534a99c323a04d5dc75834cc6b98ef4398.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.edaf9833266e6c4cde45ac4ce56f55d11cd2d79062f4305e4fb710fabf83db79.js"></script>
 
 
 
@@ -127,11 +127,53 @@ https://github.com/alex-shpak/hugo-book
 
 <h1 id="動的計画法の応用題">動的計画法の応用題</h1>
 
-<p>動的計画法の応用問題について。</p>
+<p>動的計画法の応用問題についてをいくつか紹介する。</p>
+
+<h2 id="最長共通部分列問題">最長共通部分列問題</h2>
+
+<p>例えば以下のような問題。</p>
+
+<pre><code>２つの文字列s,tの共通部分文字列の長さの最大値を求めなさい。
+
+ただし、文字列xの部分文字列とは、xから連続するn文字 (0≦n≦|x|) を取り出してできる文字列のことである。
+</code></pre>
+
+<p>２つの文字列の部分文字列として当てはまる文字列のうち、最長となるものの長さを求める問題で、このような問題は<strong>最長共通部分列問題(LCS: Longest Common Subsequence)</strong>と呼ばれている。この問題も、動的計画法で行える。</p>
+
+<p>２次元リストdp[i][j]を「sのi文字目までの文字列とtのj文字目までの文字列における最長共通部分文字列の長さ」とする。</p>
+
+<p>この時、以下の式が成り立つ。</p>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+<p class="katex">
+  $$ 
+  dp[i+1][j+1] = 
+    \begin{cases}
+        max(dp[i][j]+1,dp[i][j+1],dp[i+1][j]) & ( (sのi+1文字目) = (tのj+1文字目) ) \\
+        max(dp[i][j+1],dp[i+1][j]) & (それ以外)
+    \end{cases}
+ $$
+</p>
+
+
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/a1cfe41c4978819f1a236398bfd1ac45c8763c78" title='Last modified Jul 9, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 9, 2020
+    </a>
+  </div>
   
 </div>
 
