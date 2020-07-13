@@ -57,7 +57,27 @@ Exception in thread "main" java.lang.NullPointerException
 
 Pythonでは**None**という語がnullである状態を示す。
 
+同じく変数に直接Noneを代入することも可能である。
 
+Noneとなっている変数の関数や属性などを呼び出すとエラーになるので注意。
+
+```python
+>>> v = None
+>>> v
+>>> #Noneは表示されない
+>>> 
+>>> a={1:'a',2:'b'}
+>>> 
+>>> a[1]
+'a'
+>>> 
+>>> a=None
+>>> a[1]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'NoneType' object is not subscriptable
+>>> #Noneの関数・属性を呼び出すとエラー
+```
 
 {{< /tab >}}
 {{< tab "Swift" >}}

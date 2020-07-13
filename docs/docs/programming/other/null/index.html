@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.1c8c51580b79438df67269a8942614bde4cc6b15f57b1f95a6ce3059282f780e.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.63f0f361786524b4d20b06835e8be32c0a681727b3f69a53bf60ff48ac288105.js"></script>
 
 
 
@@ -181,7 +181,26 @@ Exception in thread &quot;main&quot; java.lang.NullPointerException
     Python
   </label>
   <div class="book-tabs-content markdown-inner">
-    Pythonでは<strong>None</strong>という語がnullである状態を示す。
+    <p>Pythonでは<strong>None</strong>という語がnullである状態を示す。</p>
+
+<p>同じく変数に直接Noneを代入することも可能である。</p>
+
+<p>Noneとなっている変数の関数や属性などを呼び出すとエラーになるので注意。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> v <span style="color:#f92672">=</span> None
+<span style="color:#f92672">&gt;&gt;&gt;</span> v
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#Noneは表示されない</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span>{<span style="color:#ae81ff">1</span>:<span style="color:#e6db74">&#39;a&#39;</span>,<span style="color:#ae81ff">2</span>:<span style="color:#e6db74">&#39;b&#39;</span>}
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a[<span style="color:#ae81ff">1</span>]
+<span style="color:#e6db74">&#39;a&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span>None
+<span style="color:#f92672">&gt;&gt;&gt;</span> a[<span style="color:#ae81ff">1</span>]
+Traceback (most recent call last):
+  File <span style="color:#e6db74">&#34;&lt;stdin&gt;&#34;</span>, line <span style="color:#ae81ff">1</span>, <span style="color:#f92672">in</span> <span style="color:#f92672">&lt;</span>module<span style="color:#f92672">&gt;</span>
+<span style="color:#a6e22e">TypeError</span>: <span style="color:#e6db74">&#39;NoneType&#39;</span> object <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> subscriptable
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#Noneの関数・属性を呼び出すとエラー</span></code></pre></div>
   </div>
 
   <input type="radio" name="tabs-comment" style="display: none;" id="tabs-comment-2"  />
@@ -201,8 +220,8 @@ Exception in thread &quot;main&quot; java.lang.NullPointerException
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/4e1531bab4238661211ac822aab558a5e89a1582" title='Last modified Jul 9, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 9, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/c4d3959a8fd983cde617322573839ec5b30563d3" title='Last modified Jul 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 11, 2020
     </a>
   </div>
   
