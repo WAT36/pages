@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.4ffc20675093f248782c9630f3d12b45a68481f95d3857255bb4c685fd835afc.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.327d11aff8174852b2fc019aa4ba71dcb9f6f2429a13e0fb4ccff966b8d1eb36.js"></script>
 
 
 
@@ -319,6 +319,73 @@ https://github.com/alex-shpak/hugo-book
 <p><iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background-repeat.html">
 </iframe>
 <hr></p>
+
+<h2 id="background-sizeプロパティ">background-sizeプロパティ</h2>
+
+<p>background-sizeプロパティは、背景画像を表示するサイズを設定するプロパティである。</p>
+
+<p>値は以下のキーワードか、幅・高さを示す数値２つを指定する。（数値を１つ指定した場合は幅として認識される。）デフォルトはautoである。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">contain</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">画像の縦横比を保った状態で、画像全体が表示される最大サイズにする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">cover</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">画像の縦横比を保った状態で、画像全体が表示される最小サイズにする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">auto</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">画像の縦横比を保った状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">(数値)%</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">背景の表示領域に対するパーセンテージ分のサイズにする</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">title</span>&gt;background-sizeサンプル&lt;/<span style="color:#f92672">title</span>&gt;
+
+&lt;<span style="color:#f92672">style</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span>&gt;
+    <span style="color:#f92672">body</span> {
+        <span style="color:#66d9ef">background-image</span>: url(<span style="color:#e6db74">img_small.jpg</span>);
+        <span style="color:#66d9ef">background-size</span>: <span style="color:#66d9ef">cover</span>;
+    }
+
+    <span style="color:#f92672">h1</span> {
+        <span style="color:#66d9ef">color</span>:<span style="color:#66d9ef">greenyellow</span>
+    }
+&lt;/<span style="color:#f92672">style</span>&gt;
+
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+
+&lt;<span style="color:#f92672">h1</span>&gt;background-sizeのサンプル&lt;/<span style="color:#f92672">h1</span>&gt;
+
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<p>iframe使用例</p>
+
+<pre><code>&lt;iframe width=&quot;500&quot; height=&quot;400&quot; src=&quot;/css_sample_pages/background-size.html&quot;&gt;
+&lt;/iframe&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background-size.html">
+</iframe>
+<hr></p>
 </article>
 
       
@@ -326,8 +393,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/80836ce641ed5a5a2b9d7c9613322ab82e648858" title='Last modified Jul 12, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 12, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/9fb32a709eae8c135f3246a453cba527f105dac7" title='Last modified Jul 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 13, 2020
     </a>
   </div>
   
@@ -348,6 +415,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#background-imageプロパティ">background-imageプロパティ</a></li>
 <li><a href="#background-clipプロパティ">background-clipプロパティ</a></li>
 <li><a href="#background-repeatプロパティ">background-repeatプロパティ</a></li>
+<li><a href="#background-sizeプロパティ">background-sizeプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>

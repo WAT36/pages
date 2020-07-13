@@ -216,3 +216,77 @@ iframe使用例
 <iframe width="500" height="400" src="/css_sample_pages/background-repeat.html">
 </iframe>
 <hr>
+
+
+## background-sizeプロパティ
+
+background-sizeプロパティは、背景画像を表示するサイズを設定するプロパティである。
+
+値は以下のキーワードか、幅・高さを示す数値２つを指定する。（数値を１つ指定した場合は幅として認識される。）デフォルトはautoである。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">contain</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">画像の縦横比を保った状態で、画像全体が表示される最大サイズにする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">cover</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">画像の縦横比を保った状態で、画像全体が表示される最小サイズにする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">auto</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">画像の縦横比を保った状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">(数値)%</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">背景の表示領域に対するパーセンテージ分のサイズにする</td>
+    </tr>
+</table>
+
+
+
+使用例
+
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>background-sizeサンプル</title>
+
+<style type="text/css">
+    body {
+        background-image: url(img_small.jpg);
+        background-size: cover;
+    }
+
+    h1 {
+        color:greenyellow
+    }
+</style>
+
+</head>
+<body>
+
+<h1>background-sizeのサンプル</h1>
+
+</body>
+</html>
+```
+
+iframe使用例
+
+```
+<iframe width="500" height="400" src="/css_sample_pages/background-size.html">
+</iframe>
+```
+
+表示例
+
+<hr>
+<iframe width="500" height="400" src="/css_sample_pages/background-size.html">
+</iframe>
+<hr>
