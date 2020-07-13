@@ -45,5 +45,7 @@ bookToc: false
 
 - Oracle Certified Java Programmer, Silver SE 8
 
+- LinuC Level 1
+
 
 他に何書こうかな・・
