@@ -290,3 +290,70 @@ iframe使用例
 <iframe width="500" height="400" src="/css_sample_pages/background-size.html">
 </iframe>
 <hr>
+
+
+## background-originプロパティ
+
+background-originプロパティは、ボックスにおいて画像を表示させる基準となる位置を設定する要素である。
+
+設定する値は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">border-box</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ボーダー領域の左上を基準とする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">padding-box</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">パディング領域の左上を基準とする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">content-box</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">要素内容を表示させる領域の左上を基準とする</td>
+    </tr>
+</table>
+
+
+使用例
+
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>background-originサンプル</title>
+
+<style type="text/css">
+    p {
+        width:300px; height:200px; padding:10px;
+        border:dashed 3px black; 
+        color:white;
+        background-image:url(img_small.jpg);
+        background-origin:content-box;
+    }
+</style>
+
+</head>
+<body>
+
+<p>background-originのサンプル</p>
+
+</body>
+</html>
+```
+
+iframe使用例
+
+```
+<iframe width="400" height="300" src="/css_sample_pages/background-origin.html">
+</iframe>
+```
+
+表示例
+
+<hr>
+<iframe width="400" height="300" src="/css_sample_pages/background-origin.html">
+</iframe>
+<hr>
