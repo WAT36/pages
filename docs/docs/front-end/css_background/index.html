@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.86924e41744548e2b4121dc8836f68a02da030a67ebe99db91ebf596e663fc13.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.1db76eb9eb709f3795b976ad1c16af2e557786dfb86f25d19b037290b8d59927.js"></script>
 
 
 
@@ -447,6 +447,90 @@ https://github.com/alex-shpak/hugo-book
 <p><iframe width="400" height="300" src="https://WAT36.github.io/pages/css_sample_pages/background-origin.html">
 </iframe>
 <hr></p>
+
+<h2 id="background-positionプロパティ">background-positionプロパティ</h2>
+
+<p>background-positionプロパティは、背景に画像を表示させる位置を設定するプロパティである。画像が繰り返し表示される場合には、まずその位置に画像が表示され、そこから繰り返し表示される。</p>
+
+<p>設定する値は縦方向と横方向の２つで、以下の通り。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">top</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">一番上(縦方向の0%)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">bottom</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">一番下(縦方向の100%)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">left</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">一番左(横方向の0%)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">right</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">一番右(横方向の100%)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">center</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">中央(縦・横方向の50%)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">(パーセンテージ)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">それぞれの方向に対するパーセンテージ。数値の後に%をつける</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">title</span>&gt;background-positionサンプル&lt;/<span style="color:#f92672">title</span>&gt;
+
+&lt;<span style="color:#f92672">style</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span>&gt;
+    <span style="color:#f92672">body</span> {
+        <span style="color:#66d9ef">background-image</span>: url(<span style="color:#e6db74">img_small.jpg</span>);
+        <span style="color:#66d9ef">background-repeat</span>: <span style="color:#66d9ef">no-repeat</span>;
+        <span style="color:#66d9ef">background-position</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+    }
+
+    <span style="color:#f92672">h1</span> {
+        <span style="color:#66d9ef">color</span>:<span style="color:#66d9ef">black</span>
+    }
+&lt;/<span style="color:#f92672">style</span>&gt;
+
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+
+&lt;<span style="color:#f92672">h1</span>&gt;この上が0%&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;background-positionのサンプル&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;background-positionのサンプル&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;この下が100%&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<p>iframe使用例</p>
+
+<pre><code>&lt;iframe width=&quot;500&quot; height=&quot;400&quot; src=&quot;/css_sample_pages/background-position.html&quot;&gt;
+&lt;/iframe&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background-position.html">
+</iframe>
+<hr></p>
 </article>
 
       
@@ -454,7 +538,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/d1d0d31298fdf93bf21a8be8cf821f80b74df3b0" title='Last modified Jul 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/3d957500f8868553e768c03ac625e419c6e35919" title='Last modified Jul 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 13, 2020
     </a>
   </div>
@@ -478,6 +562,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#background-repeatプロパティ">background-repeatプロパティ</a></li>
 <li><a href="#background-sizeプロパティ">background-sizeプロパティ</a></li>
 <li><a href="#background-originプロパティ">background-originプロパティ</a></li>
+<li><a href="#background-positionプロパティ">background-positionプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>

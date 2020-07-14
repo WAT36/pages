@@ -357,3 +357,94 @@ iframe使用例
 <iframe width="400" height="300" src="/css_sample_pages/background-origin.html">
 </iframe>
 <hr>
+
+
+## background-positionプロパティ
+
+background-positionプロパティは、背景に画像を表示させる位置を設定するプロパティである。画像が繰り返し表示される場合には、まずその位置に画像が表示され、そこから繰り返し表示される。
+
+設定する値は縦方向と横方向の２つで、以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">top</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">一番上(縦方向の0%)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">bottom</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">一番下(縦方向の100%)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">left</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">一番左(横方向の0%)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">right</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">一番右(横方向の100%)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">center</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">中央(縦・横方向の50%)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">(パーセンテージ)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">それぞれの方向に対するパーセンテージ。数値の後に%をつける</td>
+    </tr>
+</table>
+
+
+
+使用例
+
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>background-positionサンプル</title>
+
+<style type="text/css">
+    body {
+        background-image: url(img_small.jpg);
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+    }
+
+    h1 {
+        color:black
+    }
+</style>
+
+</head>
+<body>
+
+<h1>この上が0%</h1>
+<h1>background-positionのサンプル</h1>
+<br>
+<br>
+<br>
+<br>
+<h1>background-positionのサンプル</h1>
+<h1>この下が100%</h1>
+</body>
+</html>
+```
+
+iframe使用例
+
+```
+<iframe width="500" height="400" src="/css_sample_pages/background-position.html">
+</iframe>
+```
+
+表示例
+
+<hr>
+<iframe width="500" height="400" src="/css_sample_pages/background-position.html">
+</iframe>
+<hr>
