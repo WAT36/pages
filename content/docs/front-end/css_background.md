@@ -448,3 +448,76 @@ iframe使用例
 <iframe width="500" height="400" src="/css_sample_pages/background-position.html">
 </iframe>
 <hr>
+
+
+## background-attachment プロパティ
+
+background-attachmentプロパティは、ページをスクロールしたときに背景画像も一緒にスクロールさせるか否かを設定する。
+
+
+設定する値は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">scroll</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">背景画像も一緒にスクロールする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">fixed</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">スクロールしても背景画像を動かさない</td>
+    </tr>
+</table>
+
+
+使用例
+
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>background-attachmentサンプル</title>
+
+<style type="text/css">
+    body {
+        background-image: url(img_small.jpg);
+        background-attachment: fixed;
+    }
+
+    h1 {
+        color:black
+    }
+</style>
+
+</head>
+<body>
+
+<h1>background-attachmentのサンプル</h1>
+<h1>1</h1>
+<h1>2</h1>
+<h1>3</h1>
+<h1>4</h1>
+<h1>5</h1>
+<h1>6</h1>
+<h1>7</h1>
+<h1>8</h1>
+<h1>9</h1>
+<h1>10</h1>
+</body>
+</html>
+```
+
+iframe使用例
+
+```
+<iframe width="500" height="200" src="/css_sample_pages/background-attachment.html" scrolling="yes">
+</iframe>
+```
+
+表示例
+
+<hr>
+<iframe width="500" height="400" src="/css_sample_pages/background-attachment.html" scrolling="yes">
+</iframe>
+<hr>

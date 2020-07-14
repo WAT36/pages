@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.1db76eb9eb709f3795b976ad1c16af2e557786dfb86f25d19b037290b8d59927.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.015829490303039515c093ad574511ddfc5398bbeff6ecc7f4c7bbb3b9e7d6d5.js"></script>
 
 
 
@@ -531,6 +531,72 @@ https://github.com/alex-shpak/hugo-book
 <p><iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background-position.html">
 </iframe>
 <hr></p>
+
+<h2 id="background-attachment-プロパティ">background-attachment プロパティ</h2>
+
+<p>background-attachmentプロパティは、ページをスクロールしたときに背景画像も一緒にスクロールさせるか否かを設定する。</p>
+
+<p>設定する値は以下の通り。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">scroll</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">背景画像も一緒にスクロールする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">fixed</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">スクロールしても背景画像を動かさない</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">title</span>&gt;background-attachmentサンプル&lt;/<span style="color:#f92672">title</span>&gt;
+
+&lt;<span style="color:#f92672">style</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span>&gt;
+    <span style="color:#f92672">body</span> {
+        <span style="color:#66d9ef">background-image</span>: url(<span style="color:#e6db74">img_small.jpg</span>);
+        <span style="color:#66d9ef">background-attachment</span>: <span style="color:#66d9ef">fixed</span>;
+    }
+
+    <span style="color:#f92672">h1</span> {
+        <span style="color:#66d9ef">color</span>:<span style="color:#66d9ef">black</span>
+    }
+&lt;/<span style="color:#f92672">style</span>&gt;
+
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+
+&lt;<span style="color:#f92672">h1</span>&gt;background-attachmentのサンプル&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;1&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;2&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;3&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;4&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;5&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;6&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;7&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;8&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;9&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;10&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<p>iframe使用例</p>
+
+<pre><code>&lt;iframe width=&quot;500&quot; height=&quot;200&quot; src=&quot;/css_sample_pages/background-attachment.html&quot; scrolling=&quot;yes&quot;&gt;
+&lt;/iframe&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background-attachment.html" scrolling="yes">
+</iframe>
+<hr></p>
 </article>
 
       
@@ -538,8 +604,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/3d957500f8868553e768c03ac625e419c6e35919" title='Last modified Jul 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 13, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/6441c54f2148948f8b00fd5dceac9bd48e4f3668" title='Last modified Jul 14, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 14, 2020
     </a>
   </div>
   
@@ -563,6 +629,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#background-sizeプロパティ">background-sizeプロパティ</a></li>
 <li><a href="#background-originプロパティ">background-originプロパティ</a></li>
 <li><a href="#background-positionプロパティ">background-positionプロパティ</a></li>
+<li><a href="#background-attachment-プロパティ">background-attachment プロパティ</a></li>
 </ul></li>
 </ul>
 </nav>
