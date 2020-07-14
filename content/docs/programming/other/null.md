@@ -27,6 +27,8 @@ Javaでは参照型のデータ型において、何も参照していない状�
 
 参照型の変数に直接nullを代入することも可能である。変数がnullであるかを確認するには、比較演算子(==)を用いる。
 
+intやcharなどの基本データ型にはnullは入れられないので注意すること。基本データ型には、宣言時に自動的に(型により決められている)初期値が入る。
+
 nullの変数に対しメソッド呼び出しを行った場合、NullPointerException例外が発生するので注意。
 
 例
@@ -82,7 +84,9 @@ TypeError: 'NoneType' object is not subscriptable
 {{< /tab >}}
 {{< tab "Swift" >}}
 
-Swift
+Swiftでは**nil**という語が値のない、nullである状態を示す。
+
+
 
 {{< /tab >}}
 {{< /tabs >}}
