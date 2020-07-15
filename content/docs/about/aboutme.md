@@ -47,5 +47,6 @@ bookToc: false
 
 - LinuC Level 1
 
+- AWS Cloud Practitioner
 
 他に何書こうかな・・
