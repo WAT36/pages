@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.015829490303039515c093ad574511ddfc5398bbeff6ecc7f4c7bbb3b9e7d6d5.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.189d0ee90847ed6d86f52a11ba6536c22d5d3b2948b22913f806bd89a5e5e5bb.js"></script>
 
 
 
@@ -597,6 +597,57 @@ https://github.com/alex-shpak/hugo-book
 <p><iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background-attachment.html" scrolling="yes">
 </iframe>
 <hr></p>
+
+<h2 id="backgroundプロパティ">backgroundプロパティ</h2>
+
+<p>backgroundプロパティは、これまでに出てきた背景関連のプロパティの値をまとめて指定できるプロパティである。</p>
+
+<p>一部例外はあるが、値をスペースで区切れば複数指定できる。</p>
+
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">title</span>&gt;backgroundサンプル&lt;/<span style="color:#f92672">title</span>&gt;
+
+&lt;<span style="color:#f92672">style</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span>&gt;
+    <span style="color:#f92672">body</span> {
+        <span style="color:#66d9ef">background</span>: <span style="color:#66d9ef">red</span> url(<span style="color:#e6db74">img_small.jpg</span>) <span style="color:#66d9ef">no-repeat</span> <span style="color:#66d9ef">fixed</span> <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+    }
+
+    <span style="color:#f92672">h1</span> {
+        <span style="color:#66d9ef">color</span>:<span style="color:#66d9ef">greenyellow</span>
+    }
+&lt;/<span style="color:#f92672">style</span>&gt;
+
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+
+&lt;<span style="color:#f92672">h1</span>&gt;この上が0%&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;backgroundのサンプル&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;backgroundのサンプル&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;この下が100%&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<p>iframe使用例</p>
+
+<pre><code>&lt;iframe width=&quot;500&quot; height=&quot;400&quot; src=&quot;/css_sample_pages/background.html&quot;&gt;
+&lt;/iframe&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background.html">
+</iframe>
+<hr></p>
 </article>
 
       
@@ -604,7 +655,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/6441c54f2148948f8b00fd5dceac9bd48e4f3668" title='Last modified Jul 14, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/928f9b1f9378ea7afa62af6277a3094936a5ce73" title='Last modified Jul 14, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 14, 2020
     </a>
   </div>
@@ -630,6 +681,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#background-originプロパティ">background-originプロパティ</a></li>
 <li><a href="#background-positionプロパティ">background-positionプロパティ</a></li>
 <li><a href="#background-attachment-プロパティ">background-attachment プロパティ</a></li>
+<li><a href="#backgroundプロパティ">backgroundプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>

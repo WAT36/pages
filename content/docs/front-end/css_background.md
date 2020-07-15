@@ -521,3 +521,60 @@ iframe使用例
 <iframe width="500" height="400" src="/css_sample_pages/background-attachment.html" scrolling="yes">
 </iframe>
 <hr>
+
+
+
+## backgroundプロパティ
+
+backgroundプロパティは、これまでに出てきた背景関連のプロパティの値をまとめて指定できるプロパティである。
+
+一部例外はあるが、値をスペースで区切れば複数指定できる。
+
+使用例
+
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>backgroundサンプル</title>
+
+<style type="text/css">
+    body {
+        background: red url(img_small.jpg) no-repeat fixed 100% 100%;
+    }
+
+    h1 {
+        color:greenyellow
+    }
+</style>
+
+</head>
+<body>
+
+<h1>この上が0%</h1>
+<h1>backgroundのサンプル</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>backgroundのサンプル</h1>
+<h1>この下が100%</h1>
+</body>
+</html>
+```
+
+iframe使用例
+
+```
+<iframe width="500" height="400" src="/css_sample_pages/background.html">
+</iframe>
+```
+
+表示例
+
+<hr>
+<iframe width="500" height="400" src="/css_sample_pages/background.html">
+</iframe>
+<hr>

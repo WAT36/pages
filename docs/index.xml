@@ -174,20 +174,20 @@
     
     <item>
       <title>CSSとは</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/css_about-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/css_about-2/</guid>
-      <description>CSSとは CSSの基本事項についてを述べる。 CSSは、HTMLに組み込む形で使用する言語で、HTMLで作成した文書に対しCSSでどの部分をど</description>
-    </item>
-    
-    <item>
-      <title>CSSとは</title>
       <link>https://WAT36.github.io/pages/docs/front-end/css_about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/css_about/</guid>
       <description>CSSとは CSSの基本事項についてを述べる。 CSSは、HTMLに組み込む形で使用する言語で、HTMLで作成した文書に対しCSSでどの部分をど</description>
+    </item>
+    
+    <item>
+      <title>CSS適用の優先順位</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_priority-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_priority-2/</guid>
+      <description>CSS適用の優先順位 指定元による優先順位 CSSはWebページの製作者だけが指定できるものではなく、閲覧しているユーザも独自に指定でき、また使</description>
     </item>
     
     <item>
@@ -1725,29 +1725,11 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     
     <item>
       <title>2020年04~06月の活動</title>
-      <link>https://WAT36.github.io/pages/posts/20200406-2/</link>
-      <pubDate>Sat, 04 Jul 2020 01:47:27 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/posts/20200406-2/</guid>
-      <description>さーて、毎月やろうと決めていたこの振り返りですが 普通に4,5月は忘れていました。。 多分、ずっと在宅だったせいですね まあ何はともあれ、4月から</description>
-    </item>
-    
-    <item>
-      <title>2020年04~06月の活動</title>
       <link>https://WAT36.github.io/pages/posts/20200406/</link>
       <pubDate>Sat, 04 Jul 2020 01:47:27 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/posts/20200406/</guid>
       <description>さーて、毎月やろうと決めていたこの振り返りですが 普通に4,5月は忘れていました。。 多分、ずっと在宅だったせいですね まあ何はともあれ、4月から</description>
-    </item>
-    
-    <item>
-      <title>指定URLにWebリクエストを送るSlack Appの作成</title>
-      <link>https://WAT36.github.io/pages/posts/slack_request-2/</link>
-      <pubDate>Sat, 09 May 2020 15:13:17 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/posts/slack_request-2/</guid>
-      <description>Slackには自作のアプリを作成でき、またコマンドを指定することで指定した動作を行える。 今回はSlackアプリの作成方法、及びコマンドの作成</description>
     </item>
     
     <item>
