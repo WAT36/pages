@@ -32,11 +32,11 @@ iframeを使い、使用例を示す。
 
 background-imageプロパティは、背景に画像を表示させるプロパティである。
 
-値には、**url(画像のURL)**の形で画像を指定し入力する。
+値には、**url(画像のパス)**の形で画像を指定し入力する。
 
 CSSで利用するには、body要素に適用させる。
 
-下記のhtmlをiframeに組み込んで表示させる。
+使用例として、下記のhtmlをiframeに組み込んで表示させてみる。
 
 ```html
 <!DOCTYPE HTML>
@@ -423,14 +423,14 @@ background-positionプロパティは、背景に画像を表示させる位置�
 </head>
 <body>
 
-<h1>この上が0%</h1>
+<h1>↑0%↑</h1>
 <h1>background-positionのサンプル</h1>
 <br>
 <br>
 <br>
 <br>
 <h1>background-positionのサンプル</h1>
-<h1>この下が100%</h1>
+<h1>↓100%↓</h1>
 </body>
 </html>
 ```
@@ -486,7 +486,7 @@ background-attachmentプロパティは、ページをスクロールしたと�
     }
 
     h1 {
-        color:black
+        color:greenyellow
     }
 </style>
 
@@ -540,7 +540,7 @@ backgroundプロパティは、これまでに出てきた背景関連のプロ�
 
 <style type="text/css">
     body {
-        background: red url(img_small.jpg) no-repeat fixed 100% 100%;
+        background: gray url(img_small.jpg) no-repeat fixed 100% 100%;
     }
 
     h1 {
@@ -551,7 +551,7 @@ backgroundプロパティは、これまでに出てきた背景関連のプロ�
 </head>
 <body>
 
-<h1>この上が0%</h1>
+<h1>↑0%↑</h1>
 <h1>backgroundのサンプル</h1>
 <br>
 <br>
@@ -560,7 +560,7 @@ backgroundプロパティは、これまでに出てきた背景関連のプロ�
 <br>
 <br>
 <h1>backgroundのサンプル</h1>
-<h1>この下が100%</h1>
+<h1>↓100%↓</h1>
 </body>
 </html>
 ```

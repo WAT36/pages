@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.189d0ee90847ed6d86f52a11ba6536c22d5d3b2948b22913f806bd89a5e5e5bb.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.fd684e2321ff2f4a334b2b91ae517d3c04fdbc9fc1c4c7d3b7069559a37d91b7.js"></script>
 
 
 
@@ -151,11 +151,11 @@ https://github.com/alex-shpak/hugo-book
 
 <p>background-imageプロパティは、背景に画像を表示させるプロパティである。</p>
 
-<p>値には、<strong>url(画像のURL)</strong>の形で画像を指定し入力する。</p>
+<p>値には、<strong>url(画像のパス)</strong>の形で画像を指定し入力する。</p>
 
 <p>CSSで利用するには、body要素に適用させる。</p>
 
-<p>下記のhtmlをiframeに組み込んで表示させる。</p>
+<p>使用例として、下記のhtmlをiframeに組み込んで表示させてみる。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
 &lt;<span style="color:#f92672">html</span>&gt;
 &lt;<span style="color:#f92672">head</span>&gt;
@@ -508,14 +508,14 @@ https://github.com/alex-shpak/hugo-book
 &lt;/<span style="color:#f92672">head</span>&gt;
 &lt;<span style="color:#f92672">body</span>&gt;
 
-&lt;<span style="color:#f92672">h1</span>&gt;この上が0%&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;↑0%↑&lt;/<span style="color:#f92672">h1</span>&gt;
 &lt;<span style="color:#f92672">h1</span>&gt;background-positionのサンプル&lt;/<span style="color:#f92672">h1</span>&gt;
 &lt;<span style="color:#f92672">br</span>&gt;
 &lt;<span style="color:#f92672">br</span>&gt;
 &lt;<span style="color:#f92672">br</span>&gt;
 &lt;<span style="color:#f92672">br</span>&gt;
 &lt;<span style="color:#f92672">h1</span>&gt;background-positionのサンプル&lt;/<span style="color:#f92672">h1</span>&gt;
-&lt;<span style="color:#f92672">h1</span>&gt;この下が100%&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;↓100%↓&lt;/<span style="color:#f92672">h1</span>&gt;
 &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
 <p>iframe使用例</p>
@@ -564,7 +564,7 @@ https://github.com/alex-shpak/hugo-book
     }
 
     <span style="color:#f92672">h1</span> {
-        <span style="color:#66d9ef">color</span>:<span style="color:#66d9ef">black</span>
+        <span style="color:#66d9ef">color</span>:<span style="color:#66d9ef">greenyellow</span>
     }
 &lt;/<span style="color:#f92672">style</span>&gt;
 
@@ -612,7 +612,7 @@ https://github.com/alex-shpak/hugo-book
 
 &lt;<span style="color:#f92672">style</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span>&gt;
     <span style="color:#f92672">body</span> {
-        <span style="color:#66d9ef">background</span>: <span style="color:#66d9ef">red</span> url(<span style="color:#e6db74">img_small.jpg</span>) <span style="color:#66d9ef">no-repeat</span> <span style="color:#66d9ef">fixed</span> <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+        <span style="color:#66d9ef">background</span>: <span style="color:#66d9ef">gray</span> url(<span style="color:#e6db74">img_small.jpg</span>) <span style="color:#66d9ef">no-repeat</span> <span style="color:#66d9ef">fixed</span> <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
     }
 
     <span style="color:#f92672">h1</span> {
@@ -623,7 +623,7 @@ https://github.com/alex-shpak/hugo-book
 &lt;/<span style="color:#f92672">head</span>&gt;
 &lt;<span style="color:#f92672">body</span>&gt;
 
-&lt;<span style="color:#f92672">h1</span>&gt;この上が0%&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;↑0%↑&lt;/<span style="color:#f92672">h1</span>&gt;
 &lt;<span style="color:#f92672">h1</span>&gt;backgroundのサンプル&lt;/<span style="color:#f92672">h1</span>&gt;
 &lt;<span style="color:#f92672">br</span>&gt;
 &lt;<span style="color:#f92672">br</span>&gt;
@@ -632,7 +632,7 @@ https://github.com/alex-shpak/hugo-book
 &lt;<span style="color:#f92672">br</span>&gt;
 &lt;<span style="color:#f92672">br</span>&gt;
 &lt;<span style="color:#f92672">h1</span>&gt;backgroundのサンプル&lt;/<span style="color:#f92672">h1</span>&gt;
-&lt;<span style="color:#f92672">h1</span>&gt;この下が100%&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;↓100%↓&lt;/<span style="color:#f92672">h1</span>&gt;
 &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
 <p>iframe使用例</p>
@@ -655,8 +655,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/928f9b1f9378ea7afa62af6277a3094936a5ce73" title='Last modified Jul 14, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 14, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/0f86c6aed7c88b3c3c6464b11c20c213df7e5a2a" title='Last modified Jul 15, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 15, 2020
     </a>
   </div>
   
