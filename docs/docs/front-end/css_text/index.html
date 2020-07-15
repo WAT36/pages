@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.e12a5b3bfb111bcbd90f1c37dd47c46b44c83d923c497a3d9a5af5d280463458.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.16387783f228ff2927a2da3a84abe01b121517da5ee30f850da7427393ffc14e.js"></script>
 
 
 
@@ -126,10 +126,59 @@ https://github.com/alex-shpak/hugo-book
 <article class="markdown">
 
 <h1 id="cssでのテキスト">CSSでのテキスト</h1>
+
+<p>CSSでのテキストの表現方法についてを示す。</p>
+
+<h2 id="text-shadowプロパティ">text-shadowプロパティ</h2>
+
+<p>text-shadowプロパティは、テキストに影を表示させるプロパティである。</p>
+
+<p>設定できる値は以下の通り。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">影を表示させない</td>
+    </tr>
+    <tr>
+        <td style="border:none;">色</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">影の色</td>
+    </tr>
+    <tr>
+        <td style="border:none;">数値(2~3個、単位付)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">影の表示位置(1番目から左右、上下、ぼかし範囲の指定)</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;p style=&quot;text-shadow: 4px 5px 5px red&quot;&gt;
+テキストに影を表示させる
+&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p style="text-shadow: 4px 5px 5px red">
+テキストに影を表示させる
+</p>
+<hr></p>
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/43de120f91702100d8a76f702be9bc9815025292" title='Last modified Jul 15, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 15, 2020
+    </a>
+  </div>
   
 </div>
 
@@ -142,7 +191,10 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#cssでのテキスト">CSSでのテキスト</a></li>
+<li><a href="#cssでのテキスト">CSSでのテキスト</a>
+<ul>
+<li><a href="#text-shadowプロパティ">text-shadowプロパティ</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>
