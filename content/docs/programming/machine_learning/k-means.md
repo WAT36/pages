@@ -46,4 +46,33 @@ k番目のクラスタの中心ベクトルは以下のように表す。
 
 μ<sub>0</sub> = [38,6],μ<sub>1</sub> = [40,6],μ<sub>2</sub> = [42,6]
 
+## 入力データが属するクラスタ(ベクトル)の用意
+
+次に、各入力データが属するクラスタを示すベクトル<b>R</b>を用意する。
+
+{{< katex  >}}
+\tag{2}  {\bf R}  =  
+                \left[
+                    \begin{array}{c}
+                    {\bf r}_{0} \\
+                    {\bf r}_{1} \\
+                    \vdots \\
+                    {\bf r}_{N-1} \\
+                    \end{array}
+                \right]
+{{< /katex >}}
+
+また、
+
+{{< katex  >}}
+\tag{3}  {\bf r}_{k}  =  
+                \left[
+                    \begin{array}{cc}
+                    r_{k0}  & r_{k1} & r_{k2}
+                    \end{array}
+                \right]
+{{< /katex >}}
+
+とする。<b>r</b><sub>k</sub>の次元はクラスタの数に一致する。今回はクラスタは３つなので、<b>r</b><sub>k</sub>はr<sub>k2</sub>まで用意する。
+
 
