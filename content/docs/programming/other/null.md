@@ -86,7 +86,17 @@ TypeError: 'NoneType' object is not subscriptable
 
 Swiftでは**nil**という語が値のない、nullである状態を示す。
 
+しかし、Swiftでは基本的にnilを変数や定数に代入することはできない。
 
+だが例外として、Optional<Wrapped>型の変数はnilを許容でき、nilを代入できる(他にもnilを許容できる型はいくつかあるが、代表的なものはこのOptional変数。)
+
+```swift
+var a: Optional<Int>
+var b: Int
+
+a = nil // OK
+b = nil // コンパイルエラーが発生する
+```
 
 {{< /tab >}}
 {{< /tabs >}}

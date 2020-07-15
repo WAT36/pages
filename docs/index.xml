@@ -156,15 +156,6 @@
     
     <item>
       <title>CSSとは</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/css_about-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/css_about-2/</guid>
-      <description>CSSとは CSSの基本事項についてを述べる。 CSSは、HTMLに組み込む形で使用する言語で、HTMLで作成した文書に対しCSSでどの部分をど</description>
-    </item>
-    
-    <item>
-      <title>CSSとは</title>
       <link>https://WAT36.github.io/pages/docs/front-end/css_about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -512,15 +503,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/front-end/section/</guid>
       <description>セクション セクションとは章や節といった様なもの、HTMLでは見出しとそれに対応する文書の部分(セクショニングコンテンツ)といった様なものであ</description>
-    </item>
-    
-    <item>
-      <title>セレクタ</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/css_selector-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/css_selector-2/</guid>
-      <description>セレクタ CSSのセレクタについてを述べる。 セレクタにはいくつか種類があり、セレクタの基本的な最小単位のことをシンプルセレクタという。 種類にも</description>
     </item>
     
     <item>
@@ -1649,15 +1631,6 @@
     </item>
     
     <item>
-      <title>２次元入力３クラス分類</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_3class-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_3class-2/</guid>
-      <description>２次元入力３クラス分類 次は２次元入力において、３クラス分類を行うケースについてを考える。 先程の２次元入力２クラス分類のデータに、良いでも悪い</description>
-    </item>
-    
-    <item>
       <title>２進数に変換して表示</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/bin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1689,29 +1662,11 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     
     <item>
       <title>2020年04~06月の活動</title>
-      <link>https://WAT36.github.io/pages/posts/20200406-2/</link>
-      <pubDate>Sat, 04 Jul 2020 01:47:27 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/posts/20200406-2/</guid>
-      <description>さーて、毎月やろうと決めていたこの振り返りですが 普通に4,5月は忘れていました。。 多分、ずっと在宅だったせいですね まあ何はともあれ、4月から</description>
-    </item>
-    
-    <item>
-      <title>2020年04~06月の活動</title>
       <link>https://WAT36.github.io/pages/posts/20200406/</link>
       <pubDate>Sat, 04 Jul 2020 01:47:27 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/posts/20200406/</guid>
       <description>さーて、毎月やろうと決めていたこの振り返りですが 普通に4,5月は忘れていました。。 多分、ずっと在宅だったせいですね まあ何はともあれ、4月から</description>
-    </item>
-    
-    <item>
-      <title>指定URLにWebリクエストを送るSlack Appの作成</title>
-      <link>https://WAT36.github.io/pages/posts/slack_request-2/</link>
-      <pubDate>Sat, 09 May 2020 15:13:17 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/posts/slack_request-2/</guid>
-      <description>Slackには自作のアプリを作成でき、またコマンドを指定することで指定した動作を行える。 今回はSlackアプリの作成方法、及びコマンドの作成</description>
     </item>
     
     <item>
