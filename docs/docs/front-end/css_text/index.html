@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.16387783f228ff2927a2da3a84abe01b121517da5ee30f850da7427393ffc14e.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.8fc6084d414a5db74b70c9a5c0017a58a1af49171a47192a1b7b430fd6756a35.js"></script>
 
 
 
@@ -155,7 +155,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p>使用例</p>
 
-<pre><code>&lt;p style=&quot;text-shadow: 4px 5px 5px red&quot;&gt;
+<pre><code>&lt;p style=&quot;text-shadow: 5px 5px 5px red&quot;&gt;
 テキストに影を表示させる
 &lt;/p&gt;
 </code></pre>
@@ -164,9 +164,82 @@ https://github.com/alex-shpak/hugo-book
 
 <hr>
 
-<p><p style="text-shadow: 4px 5px 5px red">
+<p><p style="text-shadow: 5px 5px 5px red">
 テキストに影を表示させる
 </p>
+<hr></p>
+
+<h2 id="text-decoration関連のプロパティ">text-decoration関連のプロパティ</h2>
+
+<p>text-decoration競のプロパティは、文字に下線・上線・取消線を引いたり、及びその線種を指定するプロパティである。</p>
+
+<p>プロパティ名・指定する値・意味は以下の通り。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;" rowspan="3">text-decoration-line</td>
+        <td style="border:none;">underline</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">下線</td>
+    </tr>
+    <tr>
+        <td style="border:none;">overline</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">上線</td>
+    </tr>
+    <tr>
+        <td style="border:none;">line-through</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">取消線</td>
+    </tr>
+    <tr>
+        <td style="border:none;">text-decoration-color</td>
+        <td style="border:none;">(色を示す値)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">線に色を付ける</td>
+    </tr>
+    <tr>
+        <td style="border:none;" rowspan="5">text-decoration-style</td>
+        <td style="border:none;">solid</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">実線</td>
+    </tr>
+    <tr>
+        <td style="border:none;">double</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">二重線</td>
+    </tr>
+    <tr>
+        <td style="border:none;">dotted</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">点線</td>
+    </tr>
+    <tr>
+        <td style="border:none;">dashed</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">破線</td>
+    </tr>
+    <tr>
+        <td style="border:none;">wavy</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">波線</td>
+    </tr>
+    <tr>
+        <td style="border:none;">text-decoration</td>
+        <td style="border:none;" colspan="3">上記で指定する値を空白区切りで区切ってまとめて指定</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;p&gt;テキストに&lt;span style=&quot;text-decoration:underline;&quot;&gt;下線&lt;/span&gt;を付けてみる&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p>テキストに<span style="text-decoration:underline;">下線</span>を付けてみる</p>
 <hr></p>
 </article>
 
@@ -175,8 +248,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/43de120f91702100d8a76f702be9bc9815025292" title='Last modified Jul 15, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 15, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/cdc12c69e60a6da11829c34b073661eaf250675e" title='Last modified Jul 16, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 16, 2020
     </a>
   </div>
   
@@ -194,6 +267,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#cssでのテキスト">CSSでのテキスト</a>
 <ul>
 <li><a href="#text-shadowプロパティ">text-shadowプロパティ</a></li>
+<li><a href="#text-decoration関連のプロパティ">text-decoration関連のプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>
