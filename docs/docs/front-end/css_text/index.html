@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.8fc6084d414a5db74b70c9a5c0017a58a1af49171a47192a1b7b430fd6756a35.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.776ce9fd252c64ab3588f969e0a39d39437c50281d0af55f4f47bc06a1d22b60.js"></script>
 
 
 
@@ -241,6 +241,42 @@ https://github.com/alex-shpak/hugo-book
 
 <p><p>テキストに<span style="text-decoration:underline;">下線</span>を付けてみる</p>
 <hr></p>
+
+<h2 id="word-breakオプション">word-breakオプション</h2>
+
+<p>word-breakプロパティは、行の折り返しの設定を行うプロパティである。</p>
+
+<p>設定できる値は以下の通り。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">break-all</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">全ての文字で折り返しが行える</td>
+    </tr>
+    <tr>
+        <td style="border:none;">keep-all</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">空白文字が連続しないところでは折り返されない</td>
+    </tr>
+    <tr>
+        <td style="border:none;">normal</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">テキストの言語のルールに従い折り返される</td>
+    </tr>
+</table>
+
+<pre><code>&lt;p style=&quot;word-break:break-all&quot;&gt;break-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-all&lt;/p&gt;
+&lt;p style=&quot;word-break:keep-all&quot; &gt;keep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-all&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p style="word-break:break-all">break-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-all</p>
+<p style="word-break:keep-all" >keep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-all</p>
+<hr></p>
 </article>
 
       
@@ -248,7 +284,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/cdc12c69e60a6da11829c34b073661eaf250675e" title='Last modified Jul 16, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/b61b3728d0ebf4d23c1e51640268bd98f887f24a" title='Last modified Jul 16, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 16, 2020
     </a>
   </div>
@@ -268,6 +304,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#text-shadowプロパティ">text-shadowプロパティ</a></li>
 <li><a href="#text-decoration関連のプロパティ">text-decoration関連のプロパティ</a></li>
+<li><a href="#word-breakオプション">word-breakオプション</a></li>
 </ul></li>
 </ul>
 </nav>

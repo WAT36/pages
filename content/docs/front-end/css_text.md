@@ -125,3 +125,39 @@ text-decoration競のプロパティは、文字に下線・上線・取消線�
 <p>テキストに<span style="text-decoration:underline;">下線</span>を付けてみる</p>
 <hr>
 
+
+## word-breakオプション
+
+word-breakプロパティは、行の折り返しの設定を行うプロパティである。
+
+設定できる値は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">break-all</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">全ての文字で折り返しが行える</td>
+    </tr>
+    <tr>
+        <td style="border:none;">keep-all</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">空白文字が連続しないところでは折り返されない</td>
+    </tr>
+    <tr>
+        <td style="border:none;">normal</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">テキストの言語のルールに従い折り返される</td>
+    </tr>
+</table>
+
+```
+<p style="word-break:break-all">break-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-all</p>
+<p style="word-break:keep-all" >keep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-all</p>
+```
+
+表示例
+
+<hr>
+<p style="word-break:break-all">break-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-all</p>
+<p style="word-break:keep-all" >keep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-all</p>
+<hr>
