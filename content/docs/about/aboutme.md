@@ -37,6 +37,10 @@ bookToc: false
 
 緑で停滞中。最近伸び悩んでます
 
+- [LAPRAS](https://lapras.com/public/S0RAG84)
+
+色んなSNSからデータを取ってきてくれて面白い
+
 ## 資格
 
 - 基本情報技術者
