@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.52350799fb3b0ef3f92054da84ccfb290c1e0daf4ffec55f0ca288bb7197ed91.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.d31554e0b4025cef1787f0f45aa74834de097b23f8d2847a4bfe08dfdd613212.js"></script>
 
 
 
@@ -216,6 +216,47 @@ https://github.com/alex-shpak/hugo-book
 
 
 <p>とする。<b>r</b><sub>k</sub>の次元はクラスタの数に一致する。今回はクラスタは３つなので、<b>r</b><sub>k</sub>はr<sub>k2</sub>まで用意する。</p>
+
+<p>また、r<sub>ki</sub>は、k番目の入力データがクラスタiに属する場合に1,そうでない場合0をとる変数とする。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{4}
+r_{nk} = 
+\begin{cases}
+    1 & (入力データkがクラスタiに属する場合)  \\
+    0 & (入力データkがクラスタiに属さない場合)
+\end{cases}
+ $$
+</p>
+
+
+
+<p>これらにより、<b>R</b>は以下のように表される。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{5}  {\bf R}  =  
+                \left[
+                    \begin{array}{ccc}
+                    r_{00} & r_{01} & r_{02} \\
+                    r_{10} & r_{11} & r_{12} \\
+                    \vdots & \vdots & \vdots \\
+                    r_{n-1,0} & r_{n-1,1} & r_{n-1,2} \\
+                    \end{array}
+                \right]
+ $$
+</p>
+
+
+
+<p>以上により、クラスタの中心位置を示すベクトル<b>μ</b>、入力データが属するクラスタの行列<b>R</b>の準備が完了した。</p>
+
+<p>ここから、行列<b>R</b>を計算していくことにより各入力データが属するクラスタを決定していく。</p>
 </article>
 
       
@@ -223,8 +264,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/efac3b09df19b2302cdff7a6050b46a692cd7b65" title='Last modified Jul 14, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 14, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/4372eb436cfd8b9055577c17cbaff8191cf3d7bd" title='Last modified Jul 16, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 16, 2020
     </a>
   </div>
   
