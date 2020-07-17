@@ -150,6 +150,8 @@ word-breakプロパティは、行の折り返しの設定を行うプロパテ�
     </tr>
 </table>
 
+使用例
+
 ```
 <p style="word-break:break-all">break-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-all</p>
 <p style="word-break:keep-all" >keep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-all</p>
@@ -160,4 +162,44 @@ word-breakプロパティは、行の折り返しの設定を行うプロパテ�
 <hr>
 <p style="word-break:break-all">break-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-all</p>
 <p style="word-break:keep-all" >keep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-all</p>
+<hr>
+
+
+## hyphensプロパティ
+
+hyphensプロパティは、ハイフネーションの設定を行うプロパティである。
+
+ハイフネーションとは、語の途中でハイフン(-)を使って改行させる仕様のことである。
+
+設定できる値は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">manual</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;"><code>& shy;</code>の場所でのみハイフネーションが行われる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ハイフネーションは一切行わない(<code>& shy;</code>も無視される)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">auto</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">言語に応じてブラウザが適当な箇所でハイフネーションを行う(lang属性による言語の指定が必要となる)</td>
+    </tr>
+</table>
+
+
+使用例
+
+```
+<p style="hyphens:manual">au&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;to</p>
+```
+
+表示例
+
+<hr>
+<p style="hyphens:manual">au&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;to</p>
 <hr>
