@@ -203,3 +203,47 @@ hyphensプロパティは、ハイフネーションの設定を行うプロパ�
 <hr>
 <p style="hyphens:manual">au&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;to</p>
 <hr>
+
+
+## white-spaceプロパティ
+
+white-spaceプロパティは、「連続する空白文字を１つにまとめるか」など、空白文字に関する設定を行うプロパティである。
+
+設定できる値と意味は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">normal</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">半角スペース・改行・タブを一つの半角スペースにまとめる。幅が広くなった場合、行を折り返す。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">nowrap</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">半角スペース・改行・タブを一つの半角スペースにまとめる。幅が広くなっても行は折り返さない。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">pre</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">半角スペース・改行・タブはまとめず。入力した通りに表示される。幅が広くなっても行は折り返さない。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">pre-wrap</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">半角スペース・改行・タブはまとめず。入力した通りに表示される。幅が広くなった場合、行を折り返す。</td>
+    </tr>
+</table>
+
+使用例
+
+```
+<p style="white-space:normal"  >  あ    い  う  え  お  か  き  く  け  こ  </p>
+<p style="white-space:pre-wrap">  あ    い  う  え  お  か  き  く  け  こ  </p>
+```
+
+表示例
+
+<hr>
+<p style="white-space:normal"  >  あ    い  う  え  お  か  き  く  け  こ  </p>
+<p style="white-space:pre-wrap">  あ    い  う  え  お  か  き  く  け  こ  </p>
+<hr>
