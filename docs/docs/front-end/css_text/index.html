@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.5c1102a1a55d7ecaf5ea073d4b9bbdf11b9e2266816b4960ff40bcc497e473cb.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.2fc4f6063c03da04c980eec7f259a22ecfff643cb44ab539d7d9e1bc7009801b.js"></script>
 
 
 
@@ -405,6 +405,69 @@ https://github.com/alex-shpak/hugo-book
 <p style="text-align:right"  >あいうえおかきくけこさしすせそ</p>
 <p style="text-align:center" >あいうえおかきくけこさしすせそ</p>
 <hr></p>
+
+<h2 id="vertical-alignプロパティ">vertical-alignプロパティ</h2>
+
+<p>vertical-alignプロパティは、行の中での文字の縦方向の揃え位置を設定するプロパティである。</p>
+
+<p>設定できる値と意味は以下の通り。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">baseline</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">親要素(アルファベット)のベースラインに合わせる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">top</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">上揃え</td>
+    </tr>
+    <tr>
+        <td style="border:none;">middle</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">中央揃え</td>
+    </tr>
+    <tr>
+        <td style="border:none;">bottom</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">下揃え</td>
+    </tr>
+    <tr>
+        <td style="border:none;">super</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">上付き文字の位置に揃える</td>
+    </tr>
+    <tr>
+        <td style="border:none;">sub</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">下付き文字の位置に揃える</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;div&gt;
+&lt;span style=&quot;font-size:30px&quot;&gt;a&lt;/span&gt;
+&lt;span style=&quot;font-size:10px;vertical-align:baseline&quot;&gt;bcde&lt;/span&gt;
+&lt;span style=&quot;font-size:10px;vertical-align:top&quot;&gt;fghi&lt;/span&gt;
+&lt;span style=&quot;font-size:10px;vertical-align:middle&quot;&gt;jklm&lt;/span&gt;
+&lt;span style=&quot;font-size:10px;vertical-align:bottom&quot;&gt;nopq&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><div>
+<span style="font-size:30px">a</span>
+<span style="font-size:10px;vertical-align:baseline">bcde</span>
+<span style="font-size:10px;vertical-align:top">fghi</span>
+<span style="font-size:10px;vertical-align:middle">jklm</span>
+<span style="font-size:10px;vertical-align:bottom">nopq</span>
+</div>
+<hr></p>
 </article>
 
       
@@ -412,8 +475,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/2a4481085faee502fde112448b29023cae633801" title='Last modified Jul 17, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 17, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/c845bc26f1ca5870703aa8220127267a4739b6d9" title='Last modified Jul 18, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 18, 2020
     </a>
   </div>
   
@@ -436,6 +499,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#hyphensプロパティ">hyphensプロパティ</a></li>
 <li><a href="#white-spaceプロパティ">white-spaceプロパティ</a></li>
 <li><a href="#text-alignプロパティ">text-alignプロパティ</a></li>
+<li><a href="#vertical-alignプロパティ">vertical-alignプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>

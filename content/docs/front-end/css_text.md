@@ -295,3 +295,69 @@ text-alignプロパティは、要素の行揃えを設定するプロパティ�
 <p style="text-align:right"  >あいうえおかきくけこさしすせそ</p>
 <p style="text-align:center" >あいうえおかきくけこさしすせそ</p>
 <hr>
+
+
+## vertical-alignプロパティ
+
+vertical-alignプロパティは、行の中での文字の縦方向の揃え位置を設定するプロパティである。
+
+設定できる値と意味は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">baseline</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">親要素(アルファベット)のベースラインに合わせる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">top</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">上揃え</td>
+    </tr>
+    <tr>
+        <td style="border:none;">middle</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">中央揃え</td>
+    </tr>
+    <tr>
+        <td style="border:none;">bottom</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">下揃え</td>
+    </tr>
+    <tr>
+        <td style="border:none;">super</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">上付き文字の位置に揃える</td>
+    </tr>
+    <tr>
+        <td style="border:none;">sub</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">下付き文字の位置に揃える</td>
+    </tr>
+</table>
+
+
+使用例
+
+```
+<div>
+<span style="font-size:30px">a</span>
+<span style="font-size:10px;vertical-align:baseline">bcde</span>
+<span style="font-size:10px;vertical-align:top">fghi</span>
+<span style="font-size:10px;vertical-align:middle">jklm</span>
+<span style="font-size:10px;vertical-align:bottom">nopq</span>
+</div>
+```
+
+表示例
+
+<hr>
+<div>
+<span style="font-size:30px">a</span>
+<span style="font-size:10px;vertical-align:baseline">bcde</span>
+<span style="font-size:10px;vertical-align:top">fghi</span>
+<span style="font-size:10px;vertical-align:middle">jklm</span>
+<span style="font-size:10px;vertical-align:bottom">nopq</span>
+</div>
+<hr>
+
