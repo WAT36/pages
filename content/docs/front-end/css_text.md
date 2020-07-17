@@ -247,3 +247,51 @@ white-spaceプロパティは、「連続する空白文字を１つにまとめ
 <p style="white-space:normal"  >  あ    い  う  え  お  か  き  く  け  こ  </p>
 <p style="white-space:pre-wrap">  あ    い  う  え  お  か  き  く  け  こ  </p>
 <hr>
+
+
+
+## text-alignプロパティ
+
+text-alignプロパティは、要素の行揃えを設定するプロパティである。
+
+
+設定できる値と意味は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">left</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">左揃え</td>
+    </tr>
+    <tr>
+        <td style="border:none;">right</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">右揃え</td>
+    </tr>
+    <tr>
+        <td style="border:none;">center</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">中央揃え</td>
+    </tr>
+    <tr>
+        <td style="border:none;">justify</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">両端揃え</td>
+    </tr>
+</table>
+
+使用例
+
+```
+<p style="text-align:left"   >あいうえおかきくけこさしすせそ</p>
+<p style="text-align:right"  >あいうえおかきくけこさしすせそ</p>
+<p style="text-align:center" >あいうえおかきくけこさしすせそ</p>
+```
+
+表示例
+
+<hr>
+<p style="text-align:left"   >あいうえおかきくけこさしすせそ</p>
+<p style="text-align:right"  >あいうえおかきくけこさしすせそ</p>
+<p style="text-align:center" >あいうえおかきくけこさしすせそ</p>
+<hr>
