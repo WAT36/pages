@@ -46,10 +46,15 @@ Dockerイメージは、Dockerコマンドを使って作成する方法、Docke
 
 
 
-## Dockerイメージからコンテナを作る
+## Dockerイメージからコンテナを作って実行する
+
+Dockerイメージからコンテナを作成し、実行するには、**docker container run**コマンドを利用する。
+
+```
+$ docker container run  (Dockerイメージ名) (実行コマンド)
+```
 
 
 
-## Dockerコンテナを動かす
 
 
