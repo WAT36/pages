@@ -18,7 +18,38 @@ bookToc: false
 {{< tabs "comment" >}}
 {{< tab "Java" >}}
 
-Java
+Javaではメソッドに可変長引数を設定できる仕様がある。
+
+その仕様は以下の通り。
+
+- 引数のデータ型の後に「...」と記述する
+- 引数の中で、可変長引数は一番最後に書く
+- 可変長引数は１種類しか利用できない
+- 可変長引数の値は配列としてメソッドに渡される。
+
+使用例は以下の通り。
+
+```java
+class Main{
+    public static String calendar(String... s){
+        String d = s[0]+"/"+s[1]+"/"+s[2];
+        return d;
+    }
+
+    public static void main(String args[]){
+        Main m = new Main();
+        System.out.println(m.calendar("2020","7","19"));
+    }
+}
+```
+
+実行結果
+
+```
+$ javac Main.java 
+$ java Main
+2020/7/19
+```
 
 {{< /tab >}}
 {{< tab "Python" >}}
