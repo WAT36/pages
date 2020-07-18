@@ -361,3 +361,57 @@ vertical-alignプロパティは、行の中での文字の縦方向の揃え位
 </div>
 <hr>
 
+
+## line-heightプロパティ
+
+line-heightプロパティは、行間を設定するプロパティである。
+
+設定できる値と意味は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">数値(単位なし)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">この数値とフォントサイズを掛けた値が行間になる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">数値(単位px)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">pxの長さが行間になる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">パーセンテージ</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">フォントサイズに対するパーセンテージが行間になる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">normal</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ブラウザが妥当とする行間に設定する</td>
+    </tr>
+</table>
+
+使用例
+
+```
+<p style="line-height:100px">
+あいうえお<br>
+かきくけこ<br>
+さしすせそ<br>
+たちつてと<br>
+なにぬねの<br>
+</p>
+```
+
+表示例
+
+<hr>
+<p style="line-height:100px">
+あいうえお<br>
+かきくけこ<br>
+さしすせそ<br>
+たちつてと<br>
+なにぬねの<br>
+</p>
+<hr>
+
