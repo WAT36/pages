@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.d31554e0b4025cef1787f0f45aa74834de097b23f8d2847a4bfe08dfdd613212.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.5f44505f3056f12c9f8a8ca6f03051aaf64575e182ca343efb70a09f76370a00.js"></script>
 
 
 
@@ -133,13 +133,13 @@ https://github.com/alex-shpak/hugo-book
 
 <p><img src="https://WAT36.github.io/pages/img/datascience/Figure_39.png" width=50%></p>
 
-<h2 id="クラスタの数を定める">クラスタの数を定める</h2>
+<h2 id="1-クラスタの数を定める">1. クラスタの数を定める</h2>
 
 <p>K-means法では、まずデータを分けるクラスタの数を定める。</p>
 
 <p>例として、ここではデータを３つのクラスタに分けてみよう。</p>
 
-<h2 id="各クラスタの中心位置を定める">各クラスタの中心位置を定める</h2>
+<h2 id="2-各クラスタの中心位置を定める">2. 各クラスタの中心位置を定める</h2>
 
 <p>次に、それぞれのクラスタの中心位置を示す座標(ベクトル)を定める。</p>
 
@@ -176,7 +176,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p>μ<sub>0</sub> = [38,6],μ<sub>1</sub> = [40,6],μ<sub>2</sub> = [42,6]</p>
 
-<h2 id="入力データが属するクラスタ-ベクトル-の用意">入力データが属するクラスタ(ベクトル)の用意</h2>
+<h2 id="3-入力データが属するクラスタ-ベクトル-の用意">3. 入力データが属するクラスタ(ベクトル)の用意</h2>
 
 <p>次に、各入力データが属するクラスタを示すベクトル<b>R</b>を用意する。</p>
 
@@ -257,6 +257,50 @@ r_{nk} =
 <p>以上により、クラスタの中心位置を示すベクトル<b>μ</b>、入力データが属するクラスタの行列<b>R</b>の準備が完了した。</p>
 
 <p>ここから、行列<b>R</b>を計算していくことにより各入力データが属するクラスタを決定していく。</p>
+
+<h2 id="4-入力データが属するクラスタを導出する">4. 入力データが属するクラスタを導出する</h2>
+
+<p>各入力データが属するクラスタはどのように計算し決定すれば良いのか？</p>
+
+<p>方法としては、</p>
+
+<p><strong>各入力データを、最も中心位置が近いクラスターに属させる</strong></p>
+
+<p>とする。</p>
+
+<p>そこで、各入力データに対し、各クラスターの中心との距離を計算し、一番距離が近いクラスターに属させる、という事を全データに対して行う。</p>
+
+<p>これにより、行列<b>R</b>の値を定めていく。</p>
+
+<h2 id="5-クラスタの中心位置を調整する">5. クラスタの中心位置を調整する</h2>
+
+<p>次に、クラスタの中心位置<b>μ</b>を、先ほど決定した入力データの値に基づき、更新していく。</p>
+
+<p>方法としては、</p>
+
+<p><strong>クラスタの中心位置を、そのクラスタに属している入力データの平均値にする</strong></p>
+
+<p>とする。</p>
+
+<p>i番目の入力データを<b>x<sub>i</sub></b> = [x<sub>i,0</sub>,x<sub>i,1</sub>]とおくと、計算式としては以下の通りになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{6}
+\begin{aligned}
+    \mu_{k,0} = \frac{1}{N_{k}}  \sum_{x_{i} \in クラスタk}^{} x_{i0} \\
+    \mu_{k,1} = \frac{1}{N_{k}}  \sum_{x_{i} \in クラスタk}^{} x_{i1} \\
+\end{aligned}
+ $$
+</p>
+
+
+
+<h2 id="6-手順4-5を繰り返し行う">6. 手順4・5を繰り返し行う</h2>
+
+<p>手順4,5を繰り返し行い、手順4により属するクラスタが変わる入力データが一つも無くなったときに終了する。</p>
 </article>
 
       
@@ -264,8 +308,8 @@ r_{nk} =
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/4372eb436cfd8b9055577c17cbaff8191cf3d7bd" title='Last modified Jul 16, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 16, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/b1a227e18fac3ddb8a7eac9e0c2d542a9047c631" title='Last modified Jul 17, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 17, 2020
     </a>
   </div>
   
