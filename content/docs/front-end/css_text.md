@@ -415,3 +415,45 @@ line-heightプロパティは、行間を設定するプロパティである。
 </p>
 <hr>
 
+
+## text-indentプロパティ
+
+text-indentプロパティは、要素の１行目のインデントを設定するプロパティである。
+
+設定できる値と意味は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">数値(単位px)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">pxの値に応じてインデントされる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">パーセンテージ</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">幅に対するパーセンテージの分だけ</td>
+    </tr>
+</table>
+
+使用例
+
+```
+<p style="text-indent:10px">あいうえお<p>
+<p style="text-indent:20px">かきくけこ<p>
+<p style="text-indent:30px">さしすせそ<p>
+<p style="text-indent:5%">たちつてと<p>
+<p style="text-indent:10%">なにぬねの<p>
+<p style="text-indent:15%">はひふへほ<p>
+```
+
+表示例
+
+<hr>
+<p style="text-indent:10px">あいうえお<p>
+<p style="text-indent:20px">かきくけこ<p>
+<p style="text-indent:30px">さしすせそ<p>
+<p style="text-indent:5%">たちつてと<p>
+<p style="text-indent:10%">なにぬねの<p>
+<p style="text-indent:15%">はひふへほ<p>
+<hr>
+

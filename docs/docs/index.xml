@@ -157,15 +157,6 @@
     
     <item>
       <title>CSSでのテキスト</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/css_text-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/css_text-2/</guid>
-      <description>CSSでのテキスト CSSでのテキストの表現方法についてを示す。 text-shadowプロパティ text-shadowプロパティは、テキストに</description>
-    </item>
-    
-    <item>
-      <title>CSSでのテキスト</title>
       <link>https://WAT36.github.io/pages/docs/front-end/css_text/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -175,29 +166,11 @@
     
     <item>
       <title>CSSでの背景</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/css_background-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/css_background-2/</guid>
-      <description>CSSでの背景 CSSでの背景の設定方法についてを述べる。 background-colorプロパティ background-colorプロパティ</description>
-    </item>
-    
-    <item>
-      <title>CSSでの背景</title>
       <link>https://WAT36.github.io/pages/docs/front-end/css_background/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/css_background/</guid>
       <description>CSSでの背景 CSSでの背景の設定方法についてを述べる。 background-colorプロパティ background-colorプロパティ</description>
-    </item>
-    
-    <item>
-      <title>CSSでの色</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/css_color-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/css_color-2/</guid>
-      <description>CSSでの色の表現 CSSでの色の表現について述べる。 16進数の値 方法の一つとして、#(シャープ)と16進数6桁の値で色を表現する方法がある。</description>
     </item>
     
     <item>
@@ -216,15 +189,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/front-end/css_about/</guid>
       <description>CSSとは CSSの基本事項についてを述べる。 CSSは、HTMLに組み込む形で使用する言語で、HTMLで作成した文書に対しCSSでどの部分をど</description>
-    </item>
-    
-    <item>
-      <title>CSS適用の優先順位</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/css_priority-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/css_priority-2/</guid>
-      <description>CSS適用の優先順位 指定元による優先順位 CSSはWebページの製作者だけが指定できるものではなく、閲覧しているユーザも独自に指定でき、また使</description>
     </item>
     
     <item>
@@ -1710,15 +1674,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_2class/</guid>
       <description>２次元入力２クラス分類 前章では１次元入力であったが、次は２次元入力の場合を考えてみる。 １次元入力２クラス分類で使用したデータに、pHのデータ</description>
-    </item>
-    
-    <item>
-      <title>２次元入力３クラス分類</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_3class-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_3class-2/</guid>
-      <description>２次元入力３クラス分類 次は２次元入力において、３クラス分類を行うケースについてを考える。 先程の２次元入力２クラス分類のデータに、良いでも悪い</description>
     </item>
     
     <item>
