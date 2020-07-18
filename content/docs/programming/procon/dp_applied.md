@@ -111,3 +111,9 @@ for i in range(n):
 #答え
 print(dp[n][W])
 ```
+
+これで良いか、と言いたいところだが、コードを見てくれたらわかるように、このアルゴリズムだと計算量がO(nW<sup>2</sup>)となり不十分である。
+
+計算過程を図にすると以下の通りである。
+
+<img src="/img/procon/dp_applied2.png" width=60%>
