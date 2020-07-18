@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.214513e53d6df35445226c424a9f2aaf7cdc83ec19159b5eb8d06850bdff71aa.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.40a62572e61ff51314ec22a08cc67d209103521c951738cc2fa602c0d75992af.js"></script>
 
 
 
@@ -183,7 +183,16 @@ Map&lt;K,V&gt; m = new HashMap&lt;K,V&gt;();
     Swift
   </label>
   <div class="book-tabs-content markdown-inner">
-    Swiftで
+    <p>Swiftでは関数の定義時ジェネリクスを利用する。</p>
+
+<p>定義方法は&lt;&gt;で囲い、その中に記述する。</p>
+
+<p>例を以下に記載する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">min</span>&lt;T : Comparable&gt;(<span style="color:#66d9ef">_</span> x: T, <span style="color:#66d9ef">_</span> y: T) -&gt; T</code></pre></div>
+<p>この例では、minという関数には引数が２つ、かつその両方は同じ型で返り値も同じ型、また利用する型はComparableプロトコルに準拠している物でなければならないという指定である。</p>
+
+<p>(・・後ほど追記します)</p>
+
   </div>
 
 </div>
@@ -195,8 +204,8 @@ Map&lt;K,V&gt; m = new HashMap&lt;K,V&gt;();
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/ed029b4058f56b91b9bde77ba62301a2aad650ce" title='Last modified Jul 16, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 16, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/e8038a0c2e0de99538b2f6c71ace0ad16b40c919" title='Last modified Jul 18, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 18, 2020
     </a>
   </div>
   
