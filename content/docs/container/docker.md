@@ -44,6 +44,19 @@ Dockerイメージは、Dockerコマンドを使って作成する方法、Docke
 
 ## Dockerイメージをリモート(Docker Hub)からダウンロードする
 
+Dockerイメージをリモートレポジトリ(Docker Hub)からダウンロードするには、**docker pull**コマンドを利用する。
+
+```
+$ docker pull (Dockerイメージ名)
+```
+
+このコマンドにより、Dockerイメージをローカルにダウンロードできる。
+
+ローカルにあるDockerイメージを確認したい時は、**docker image ls**コマンドを使う。
+
+```
+$ docker image ls
+```
 
 
 ## Dockerイメージからコンテナを作って実行する
