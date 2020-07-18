@@ -53,4 +53,6 @@ bookToc: false
 
 - AWS Cloud Practitioner
 
+- TOEIC 705
+
 他に何書こうかな・・
