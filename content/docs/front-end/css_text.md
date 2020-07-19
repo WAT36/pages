@@ -489,3 +489,40 @@ letter-spacingプロパティは、文字の間隔を設定するプロパティ
 <p style="letter-spacing:10px">あいうえお<p>
 <p style="letter-spacing:20px">かきくけこ<p>
 <hr>
+
+
+## word-spacing プロパティ
+
+word-spacingプロパティは、単語の間隔を設定するプロパティである。
+
+
+設定できる値と意味は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">数値(単位px)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">pxの値に応じて文字間隔が設定される</td>
+    </tr>
+    <tr>
+        <td style="border:none;">normal</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">標準の間隔にする</td>
+    </tr>
+</table>
+
+使用例
+
+```
+<p style="word-spacing:10px">I do my best.<p>
+<p style="word-spacing:20px">I will pass HTML5 Proffesinal Certification examination.<p>
+```
+
+表示例
+
+<hr>
+<p style="word-spacing:10px">I do my best.<p>
+<p style="word-spacing:20px">I will pass HTML5 Proffesinal Certification examination.<p>
+<hr>
+
+
