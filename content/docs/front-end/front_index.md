@@ -27,4 +27,5 @@ bookToc: false
  - [CSS適用の優先順位]({{< relref "/docs/front-end/css_priority.md" >}})
  - [CSSでの色]({{< relref "/docs/front-end/css_color.md" >}})
  - [CSSでの背景]({{< relref "/docs/front-end/css_background.md" >}})
+ - [CSSでのテキスト]({{< relref "/docs/front-end/css_text.md" >}})
 
