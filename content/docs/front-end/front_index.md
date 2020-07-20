@@ -28,4 +28,5 @@ bookToc: false
  - [CSSでの色]({{< relref "/docs/front-end/css_color.md" >}})
  - [CSSでの背景]({{< relref "/docs/front-end/css_background.md" >}})
  - [CSSでのテキスト]({{< relref "/docs/front-end/css_text.md" >}})
+ - [CSSでのフォント]({{< relref "/docs/front-end/css_font.md" >}})
 
