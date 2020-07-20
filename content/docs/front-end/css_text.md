@@ -592,6 +592,33 @@ directionプロパティは、テキストの表記の方向を設定するプ�
     </tr>
 </table>
 
+使用例は下のunicode-bidiプロパティで示す。
+
+
+## unicode-bidiプロパティ
+
+unicode-bidiプロパティは、Unicodeの文字表記の方向を上書きするプロパティである。
+
+設定できる値と意味は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">normal</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">上書きしない</td>
+    </tr>
+    <tr>
+        <td style="border:none;">embed</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">directionプロパティで設定した値を組み込む</td>
+    </tr>
+    <tr>
+        <td style="border:none;">bidi-override</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">既存のunicodeの文字表記の設定を無効にし、directionプロパティで設定した値で上書きする。</td>
+    </tr>
+</table>
+
 使用例
 
 ```
@@ -607,4 +634,3 @@ directionプロパティは、テキストの表記の方向を設定するプ�
 <p style="direction:rtl">I do my best.<p>
 <p style="direction:rtl;unicode-bidi:bidi-override">I will pass html5 proffesinal certification examination.<p>
 <hr>
-
