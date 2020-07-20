@@ -526,3 +526,48 @@ word-spacingプロパティは、単語の間隔を設定するプロパティ�
 <hr>
 
 
+## text-transformプロパティ
+
+text-transformプロパティは、アルファベットの大文字小文字を変換して表示させるプロパティである。
+
+設定できる値と意味は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">uppercase</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">半角アルファベットを全て大文字にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">normal</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">半角アルファベットを全て小文字にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">capitalize</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">半角アルファベットの単語の先頭一文字のみを大文字にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">変化させない</td>
+    </tr>
+</table>
+
+使用例
+
+```
+<p style="text-transform:uppercase">How are you?<p>
+<p style="text-transform:lowercase">I do my best.<p>
+<p style="text-transform:capitalize">I will pass html5 proffesinal certification examination.<p>
+```
+
+表示例
+
+<hr>
+<p style="text-transform:uppercase">How are you?<p>
+<p style="text-transform:lowercase">I do my best.<p>
+<p style="text-transform:capitalize">I will pass html5 proffesinal certification examination.<p>
+<hr>
+
