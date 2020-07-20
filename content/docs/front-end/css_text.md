@@ -571,3 +571,40 @@ text-transformプロパティは、アルファベットの大文字小文字を
 <p style="text-transform:capitalize">I will pass html5 proffesinal certification examination.<p>
 <hr>
 
+
+## directionプロパティ
+
+directionプロパティは、テキストの表記の方向を設定するプロパティである。
+
+
+設定できる値と意味は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">ltr</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">左から右に表記する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">rtl</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">右から左に表記する</td>
+    </tr>
+</table>
+
+使用例
+
+```
+<p style="direction:ltr">How are you?<p>
+<p style="direction:rtl">I do my best.<p>
+<p style="direction:rtl;unicode-bidi:bidi-override">I will pass html5 proffesinal certification examination.<p>
+```
+
+表示例
+
+<hr>
+<p style="direction:ltr">How are you?<p>
+<p style="direction:rtl">I do my best.<p>
+<p style="direction:rtl;unicode-bidi:bidi-override">I will pass html5 proffesinal certification examination.<p>
+<hr>
+
