@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.5f44505f3056f12c9f8a8ca6f03051aaf64575e182ca343efb70a09f76370a00.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.6fdd8a2553194d01fb05c2aa74abb21b534c6ce86ec6be77b2a9c7bfd196a567.js"></script>
 
 
 
@@ -254,6 +254,8 @@ r_{nk} =
 
 
 
+<p>最初は、全ての入力データがクラスタ0に属する(r<sub>k0</sub>=1)として初期化する。</p>
+
 <p>以上により、クラスタの中心位置を示すベクトル<b>μ</b>、入力データが属するクラスタの行列<b>R</b>の準備が完了した。</p>
 
 <p>ここから、行列<b>R</b>を計算していくことにより各入力データが属するクラスタを決定していく。</p>
@@ -301,6 +303,94 @@ r_{nk} =
 <h2 id="6-手順4-5を繰り返し行う">6. 手順4・5を繰り返し行う</h2>
 
 <p>手順4,5を繰り返し行い、手順4により属するクラスタが変わる入力データが一つも無くなったときに終了する。</p>
+
+<p>以上の手順により、K-means法によるクラスタリングが行える。</p>
+
+<p>では、コードを実装して実際にクラスタリングを行ってみよう。</p>
+
+<p>クラスタリングを行うコードを以下に示す。(k_means.py)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+k<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>
+x<span style="color:#f92672">=</span>[]
+mu<span style="color:#f92672">=</span>[]
+R<span style="color:#f92672">=</span>[]
+
+<span style="color:#75715e">#R計算</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">calc_r</span>(X,Mu):
+
+    <span style="color:#75715e">#初期化　入力データx、μとR用意</span>
+    x<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>array(X)
+    mu<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>array(Mu)
+    k<span style="color:#f92672">=</span>len(mu)
+    R<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros((len(x),k))
+
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(x)):
+        ri<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros(k)
+        ri[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+        R[i]<span style="color:#f92672">=</span>ri
+
+    flag<span style="color:#f92672">=</span>True
+    count<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+
+    <span style="color:#66d9ef">while</span>(flag):
+        flag<span style="color:#f92672">=</span>False
+
+        <span style="color:#75715e">#Rを計算し更新</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(x)):
+            d<span style="color:#f92672">=</span>[(x[i][<span style="color:#ae81ff">0</span>]<span style="color:#f92672">-</span>mu[j][<span style="color:#ae81ff">0</span>])<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> (x[i][<span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span>mu[j][<span style="color:#ae81ff">1</span>])<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>  <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(k)]
+            ri<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros(k)
+            ri[d<span style="color:#f92672">.</span>index(min(d))]<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">if</span>(<span style="color:#f92672">not</span> np<span style="color:#f92672">.</span>allclose(R[i],ri)):
+                flag<span style="color:#f92672">=</span>True
+            R[i]<span style="color:#f92672">=</span>ri
+
+        <span style="color:#75715e">#μを調整</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(k):
+            x_i<span style="color:#f92672">=</span>x[R[:,i]<span style="color:#f92672">==</span><span style="color:#ae81ff">1</span>]
+            mu_ix<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>mean(x_i[:,<span style="color:#ae81ff">0</span>])
+            mu_iy<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>mean(x_i[:,<span style="color:#ae81ff">1</span>])
+            mu[i]<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>array([mu_ix,mu_iy])
+        
+        count<span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>
+    
+    <span style="color:#66d9ef">return</span> mu,R</code></pre></div>
+<p>これを使いプロットを行うコードを示す。(do_k_means.py)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> k_means <span style="color:#f92672">import</span> calc_r
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+<span style="color:#75715e">#入力値</span>
+x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;x.npy&#39;</span>)
+
+<span style="color:#75715e">#クラスタの中心位置</span>
+mu<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>array([[<span style="color:#ae81ff">38</span>,<span style="color:#ae81ff">6</span>],[<span style="color:#ae81ff">40</span>,<span style="color:#ae81ff">6</span>],[<span style="color:#ae81ff">42</span>,<span style="color:#ae81ff">6</span>]])
+
+<span style="color:#75715e">#クラスタ計算</span>
+mu,r <span style="color:#f92672">=</span> calc_r(x,mu)
+
+<span style="color:#75715e">#プロット</span>
+color<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;red&#39;</span>,<span style="color:#e6db74">&#39;blue&#39;</span>,<span style="color:#e6db74">&#39;green&#39;</span>]
+
+<span style="color:#75715e">#各入力データをクラスタリング結果(色分け)とともに表示</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(mu)):
+    plt<span style="color:#f92672">.</span>plot(x[r[:,i]<span style="color:#f92672">==</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>],x[r[:,i]<span style="color:#f92672">==</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>],linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;none&#39;</span>,markeredgecolor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;black&#39;</span>,marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;o&#39;</span>,color<span style="color:#f92672">=</span>color[i])
+
+<span style="color:#75715e">#各クラスタの中心位置を表示(★型)</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(mu)):
+    plt<span style="color:#f92672">.</span>plot(mu[i,<span style="color:#ae81ff">0</span>],mu[i,<span style="color:#ae81ff">1</span>],linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;none&#39;</span>,markeredgecolor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;black&#39;</span>,marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;*&#39;</span>,color<span style="color:#f92672">=</span>color[i])
+
+plt<span style="color:#f92672">.</span>xlim([min(x[:,<span style="color:#ae81ff">0</span>])<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,max(x[:,<span style="color:#ae81ff">0</span>])<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>])
+plt<span style="color:#f92672">.</span>ylim([min(x[:,<span style="color:#ae81ff">1</span>])<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,max(x[:,<span style="color:#ae81ff">1</span>])<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>])
+
+plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;temperature[℃]&#39;</span>)
+plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;pH&#39;</span>)
+
+plt<span style="color:#f92672">.</span>grid(True)
+plt<span style="color:#f92672">.</span>show()</code></pre></div>
+<p>実行結果</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_40.png" width=75%></p>
 </article>
 
       
@@ -308,8 +398,8 @@ r_{nk} =
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/b1a227e18fac3ddb8a7eac9e0c2d542a9047c631" title='Last modified Jul 17, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 17, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/879876da1674b69cec324457c577d86bff03bfe7" title='Last modified Jul 18, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 18, 2020
     </a>
   </div>
   

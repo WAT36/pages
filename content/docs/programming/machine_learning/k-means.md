@@ -102,6 +102,8 @@ r_{nk} =
                 \right]
 {{< /katex >}}
 
+最初は、全ての入力データがクラスタ0に属する(r<sub>k0</sub>=1)として初期化する。
+
 以上により、クラスタの中心位置を示すベクトル<b>μ</b>、入力データが属するクラスタの行列<b>R</b>の準備が完了した。
 
 ここから、行列<b>R</b>を計算していくことにより各入力データが属するクラスタを決定していく。
@@ -145,3 +147,100 @@ i番目の入力データを<b>x<sub>i</sub></b> = [x<sub>i,0</sub>,x<sub>i,1</s
 ## 6. 手順4・5を繰り返し行う
 
 手順4,5を繰り返し行い、手順4により属するクラスタが変わる入力データが一つも無くなったときに終了する。
+
+
+以上の手順により、K-means法によるクラスタリングが行える。
+
+では、コードを実装して実際にクラスタリングを行ってみよう。
+
+クラスタリングを行うコードを以下に示す。(k_means.py)
+
+```python
+import numpy as np
+
+k=-1
+x=[]
+mu=[]
+R=[]
+
+#R計算
+def calc_r(X,Mu):
+
+    #初期化　入力データx、μとR用意
+    x=np.array(X)
+    mu=np.array(Mu)
+    k=len(mu)
+    R=np.zeros((len(x),k))
+
+    for i in range(len(x)):
+        ri=np.zeros(k)
+        ri[0]=1
+        R[i]=ri
+
+    flag=True
+    count=1
+
+    while(flag):
+        flag=False
+
+        #Rを計算し更新
+        for i in range(len(x)):
+            d=[(x[i][0]-mu[j][0])**2 + (x[i][1]-mu[j][1])**2  for j in range(k)]
+            ri=np.zeros(k)
+            ri[d.index(min(d))]=1
+            if(not np.allclose(R[i],ri)):
+                flag=True
+            R[i]=ri
+
+        #μを調整
+        for i in range(k):
+            x_i=x[R[:,i]==1]
+            mu_ix=np.mean(x_i[:,0])
+            mu_iy=np.mean(x_i[:,1])
+            mu[i]=np.array([mu_ix,mu_iy])
+        
+        count+=1
+    
+    return mu,R
+```
+
+これを使いプロットを行うコードを示す。(do_k_means.py)
+
+```python
+from k_means import calc_r
+import matplotlib.pyplot as plt
+import numpy as np
+
+#入力値
+x = np.load('x.npy')
+
+#クラスタの中心位置
+mu=np.array([[38,6],[40,6],[42,6]])
+
+#クラスタ計算
+mu,r = calc_r(x,mu)
+
+#プロット
+color=['red','blue','green']
+
+#各入力データをクラスタリング結果(色分け)とともに表示
+for i in range(len(mu)):
+    plt.plot(x[r[:,i]==1,0],x[r[:,i]==1,1],linestyle='none',markeredgecolor='black',marker='o',color=color[i])
+
+#各クラスタの中心位置を表示(★型)
+for i in range(len(mu)):
+    plt.plot(mu[i,0],mu[i,1],linestyle='none',markeredgecolor='black',marker='*',color=color[i])
+
+plt.xlim([min(x[:,0])-1,max(x[:,0])+1])
+plt.ylim([min(x[:,1])-1,max(x[:,1])+1])
+
+plt.xlabel('temperature[℃]')
+plt.ylabel('pH')
+
+plt.grid(True)
+plt.show()
+```
+
+実行結果
+
+<img src="/img/datascience/Figure_40.png" width=75%>
