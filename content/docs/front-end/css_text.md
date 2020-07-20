@@ -52,63 +52,63 @@ text-shadowプロパティは、テキストに影を表示させるプロパテ
 
 ## text-decoration関連のプロパティ
 
-text-decoration競のプロパティは、文字に下線・上線・取消線を引いたり、及びその線種を指定するプロパティである。
+text-decoration系のプロパティは、文字に下線・上線・取消線を引いたり、及びその線種を指定するプロパティである。
 
 プロパティ名・指定する値・意味は以下の通り。
 
 
-<table style="border:none;">
+<table>
     <tr>
-        <td style="border:none;" rowspan="3">text-decoration-line</td>
-        <td style="border:none;">underline</td>
-        <td style="border:none;">・・</td>
-        <td style="border:none;">下線</td>
+        <td rowspan="3">text-decoration-line</td>
+        <td>underline</td>
+        <td>・・</td>
+        <td>下線</td>
     </tr>
     <tr>
-        <td style="border:none;">overline</td>
-        <td style="border:none;">・・</td>
-        <td style="border:none;">上線</td>
+        <td>overline</td>
+        <td>・・</td>
+        <td>上線</td>
     </tr>
     <tr>
-        <td style="border:none;">line-through</td>
-        <td style="border:none;">・・</td>
-        <td style="border:none;">取消線</td>
+        <td>line-through</td>
+        <td>・・</td>
+        <td>取消線</td>
     </tr>
     <tr>
-        <td style="border:none;">text-decoration-color</td>
-        <td style="border:none;">(色を示す値)</td>
-        <td style="border:none;">・・</td>
-        <td style="border:none;">線に色を付ける</td>
+        <td>text-decoration-color</td>
+        <td>(色を示す値)</td>
+        <td>・・</td>
+        <td>線に色を付ける</td>
     </tr>
     <tr>
-        <td style="border:none;" rowspan="5">text-decoration-style</td>
-        <td style="border:none;">solid</td>
-        <td style="border:none;">・・</td>
-        <td style="border:none;">実線</td>
+        <td rowspan="5">text-decoration-style</td>
+        <td>solid</td>
+        <td>・・</td>
+        <td>実線</td>
     </tr>
     <tr>
-        <td style="border:none;">double</td>
-        <td style="border:none;">・・</td>
-        <td style="border:none;">二重線</td>
+        <td>double</td>
+        <td>・・</td>
+        <td>二重線</td>
     </tr>
     <tr>
-        <td style="border:none;">dotted</td>
-        <td style="border:none;">・・</td>
-        <td style="border:none;">点線</td>
+        <td>dotted</td>
+        <td>・・</td>
+        <td>点線</td>
     </tr>
     <tr>
-        <td style="border:none;">dashed</td>
-        <td style="border:none;">・・</td>
-        <td style="border:none;">破線</td>
+        <td>dashed</td>
+        <td>・・</td>
+        <td>破線</td>
     </tr>
     <tr>
-        <td style="border:none;">wavy</td>
-        <td style="border:none;">・・</td>
-        <td style="border:none;">波線</td>
+        <td>wavy</td>
+        <td>・・</td>
+        <td>波線</td>
     </tr>
     <tr>
-        <td style="border:none;">text-decoration</td>
-        <td style="border:none;" colspan="3">上記で指定する値を空白区切りで区切ってまとめて指定</td>
+        <td>text-decoration</td>
+        <td colspan="3">上記で指定する値を空白区切りで区切ってまとめて指定</td>
     </tr>
 </table>
 
@@ -126,7 +126,7 @@ text-decoration競のプロパティは、文字に下線・上線・取消線�
 <hr>
 
 
-## word-breakオプション
+## word-breakプロパティ
 
 word-breakプロパティは、行の折り返しの設定を行うプロパティである。
 
@@ -225,12 +225,12 @@ white-spaceプロパティは、「連続する空白文字を１つにまとめ
     <tr>
         <td style="border:none;">pre</td>
         <td style="border:none;">・・</td>
-        <td style="border:none;">半角スペース・改行・タブはまとめず。入力した通りに表示される。幅が広くなっても行は折り返さない。</td>
+        <td style="border:none;">半角スペース・改行・タブはまとめず、入力した通りに表示される。幅が広くなっても行は折り返さない。</td>
     </tr>
     <tr>
         <td style="border:none;">pre-wrap</td>
         <td style="border:none;">・・</td>
-        <td style="border:none;">半角スペース・改行・タブはまとめず。入力した通りに表示される。幅が広くなった場合、行を折り返す。</td>
+        <td style="border:none;">半角スペース・改行・タブはまとめず、入力した通りに表示される。幅が広くなった場合、行を折り返す。</td>
     </tr>
 </table>
 
