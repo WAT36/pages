@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.40a62572e61ff51314ec22a08cc67d209103521c951738cc2fa602c0d75992af.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.97f4066e996472940d18f2b65cfb9ec1d5d0448cefc20c4c57583056109025eb.js"></script>
 
 
 
@@ -131,7 +131,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p>ジェネリクスとは、特定の型に制限されない、抽象的かつ汎用的なコードを記述するための機能である。</p>
 
-<p>変数の型を明記することが必要な言語では、変数を宣言するときにその変数の型名も書く必要があ利、またその変数にはその型の値しかいれることができない。</p>
+<p>変数の型を明記することが必要な言語では、変数を宣言するときにその変数の型名も書く必要があり、またその変数にはその型の値しかいれることができない。</p>
 
 <p>しかし、ジェネリクスを利用すると、引数の型は抽象的なものになり、様々な型の引数を渡すことが可能になる。</p>
 
@@ -148,20 +148,17 @@ https://github.com/alex-shpak/hugo-book
     Java
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>Javaでは<strong>ダイヤモンド演算子</strong>と呼ばれる物でジェネリクスを宣言する。</p>
+    <p>Javaでは<strong>ダイヤモンド演算子</strong>を使ってジェネリクスを宣言する。</p>
 
-<p>クラス定義時、及び変数を定義する時の型名の後ろに、&lt;クラス名&gt;というように宣言する。</p>
+<p>クラスを定義する時、及びジェネリクスを利用する変数を定義する時、型名の後ろに&lt;クラス名&gt;というように宣言する。</p>
 
 <p>これにより、そのクラス、インスタンスを利用する時の引数にはその型の引数のみ利用できるようになる。</p>
 
 <p>インスタンス宣言時に利用できる型を定義できるので、結果としてそのクラスとしてはどの型のデータも利用することが可能になる。</p>
 
 <p>実際の利用例としては、Collectionsクラスを元としているListクラスやMapクラスがある。</p>
-
-<pre><code>List&lt;T&gt; l = new ArrayList&lt;T&gt;();
-Map&lt;K,V&gt; m = new HashMap&lt;K,V&gt;();
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span>();
+Map<span style="color:#f92672">&lt;</span>K,V<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;</span>K,V<span style="color:#f92672">&gt;</span>();</code></pre></div>
 <p>実際に利用する時はこのT,K,VをIntegerやStringなどの具体的な型にする。</p>
 
 <p>また、自分でクラスを定義するときもジェネリクスが利用できる。</p>
@@ -204,8 +201,8 @@ Map&lt;K,V&gt; m = new HashMap&lt;K,V&gt;();
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/e8038a0c2e0de99538b2f6c71ace0ad16b40c919" title='Last modified Jul 18, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 18, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/a802a3ee1188b40cf5bc7f01db802eaa2bb36fe5" title='Last modified Jul 19, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 19, 2020
     </a>
   </div>
   
