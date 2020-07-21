@@ -158,3 +158,81 @@ font-sizeプロパティは、フォントサイズを設定するプロパテ�
 <p style="font-size:xx-large;">xx-large</p>
 <hr>
 
+
+## font-weightプロパティ
+
+font-weightプロパティは、フォントの太さを設定するプロパティである。
+
+設定できる値と意味は以下の通り。
+
+<table>
+    <tr>
+        <td>bold</td>
+        <td>・・</td>
+        <td>太字にする</td>
+    </tr>
+    <tr>
+        <td>100</td>
+        <td rowspan="9">・・</td>
+        <td rowspan="9">指定したキーワードで大きさが決まる。100が最も小さく、900が最も大きくなる.400の時が基準で、「bold」の時は700の時の太さになる。(しかし、フォントによっては９段階の太さを設定していないものもあるので、値を変えても変化がない場合もある)</td>
+    </tr>
+    <tr>
+        <td>200</td>
+    </tr>
+    <tr>
+        <td>300</td>
+    </tr>
+    <tr>
+        <td>400</td>
+    </tr>
+    <tr>
+        <td>500</td>
+    </tr>
+    <tr>
+        <td>600</td>
+    </tr>
+    <tr>
+        <td>700</td>
+    </tr>
+    <tr>
+        <td>800</td>
+    </tr>
+    <tr>
+        <td>900</td>
+    </tr>
+    <tr>
+        <td>bolder</td>
+        <td>・・</td>
+        <td>現在の太さよりも一段階太くする</td>
+    </tr>
+    <tr>
+        <td>lighter</td>
+        <td>・・</td>
+        <td>現在の太さよりも一段階細くする</td>
+    </tr>
+    <tr>
+        <td>normal</td>
+        <td>・・</td>
+        <td>標準の太さ(400)にする</td>
+    </tr>
+</table>
+
+使用例
+
+```
+<p style="font-weight:100;">font-weight:100</p>
+<p style="font-weight:300;">font-weight:300</p>
+<p style="font-weight:500;">font-weight:500</p>
+<p style="font-weight:700;">font-weight:700</p>
+<p style="font-weight:900;">font-weight:900</p>
+```
+
+表示例
+
+<hr>
+<p style="font-weight:100;">font-weight:100</p>
+<p style="font-weight:300;">font-weight:300</p>
+<p style="font-weight:500;">font-weight:500</p>
+<p style="font-weight:700;">font-weight:700</p>
+<p style="font-weight:900;">font-weight:900</p>
+<hr>

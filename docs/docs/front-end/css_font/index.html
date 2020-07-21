@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.23edde94b7f2a6249d965245d722322c4efcd85db06498a241fa9df42a532c50.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.7ddc4d31cbff1c7ccf3a14758a36b10358ab8d517fb06b860fc4a49bdbdd97c9.js"></script>
 
 
 
@@ -267,6 +267,84 @@ https://github.com/alex-shpak/hugo-book
 <p style="font-size:medium;">medium</p>
 <p style="font-size:xx-large;">xx-large</p>
 <hr></p>
+
+<h2 id="font-weightプロパティ">font-weightプロパティ</h2>
+
+<p>font-weightプロパティは、フォントの太さを設定するプロパティである。</p>
+
+<p>設定できる値と意味は以下の通り。</p>
+
+<table>
+    <tr>
+        <td>bold</td>
+        <td>・・</td>
+        <td>太字にする</td>
+    </tr>
+    <tr>
+        <td>100</td>
+        <td rowspan="9">・・</td>
+        <td rowspan="9">指定したキーワードで大きさが決まる。100が最も小さく、900が最も大きくなる.400の時が基準で、「bold」の時は700の時の太さになる。(しかし、フォントによっては９段階の太さを設定していないものもあるので、値を変えても変化がない場合もある)</td>
+    </tr>
+    <tr>
+        <td>200</td>
+    </tr>
+    <tr>
+        <td>300</td>
+    </tr>
+    <tr>
+        <td>400</td>
+    </tr>
+    <tr>
+        <td>500</td>
+    </tr>
+    <tr>
+        <td>600</td>
+    </tr>
+    <tr>
+        <td>700</td>
+    </tr>
+    <tr>
+        <td>800</td>
+    </tr>
+    <tr>
+        <td>900</td>
+    </tr>
+    <tr>
+        <td>bolder</td>
+        <td>・・</td>
+        <td>現在の太さよりも一段階太くする</td>
+    </tr>
+    <tr>
+        <td>lighter</td>
+        <td>・・</td>
+        <td>現在の太さよりも一段階細くする</td>
+    </tr>
+    <tr>
+        <td>normal</td>
+        <td>・・</td>
+        <td>標準の太さ(400)にする</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;p style=&quot;font-weight:100;&quot;&gt;font-weight:100&lt;/p&gt;
+&lt;p style=&quot;font-weight:300;&quot;&gt;font-weight:300&lt;/p&gt;
+&lt;p style=&quot;font-weight:500;&quot;&gt;font-weight:500&lt;/p&gt;
+&lt;p style=&quot;font-weight:700;&quot;&gt;font-weight:700&lt;/p&gt;
+&lt;p style=&quot;font-weight:900;&quot;&gt;font-weight:900&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p style="font-weight:100;">font-weight:100</p>
+<p style="font-weight:300;">font-weight:300</p>
+<p style="font-weight:500;">font-weight:500</p>
+<p style="font-weight:700;">font-weight:700</p>
+<p style="font-weight:900;">font-weight:900</p>
+<hr></p>
 </article>
 
       
@@ -274,7 +352,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/5f828a75d2dbfc619cea643a99d125d81a0a478d" title='Last modified Jul 21, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/48d39d37330dc35ddf8e76c78433011adbf770ce" title='Last modified Jul 21, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 21, 2020
     </a>
   </div>
@@ -295,6 +373,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#webフォント">Webフォント</a></li>
 <li><a href="#font-familyプロパティ">font-familyプロパティ</a></li>
 <li><a href="#font-sizeプロパティ">font-sizeプロパティ</a></li>
+<li><a href="#font-weightプロパティ">font-weightプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>
