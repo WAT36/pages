@@ -99,3 +99,62 @@ font-familyプロパティは、フォントの種類を設定するプロパテ
 <p style="font-family:cursive;">The example of font 2</p>
 <hr>
 
+
+## font-sizeプロパティ
+
+font-sizeプロパティは、フォントサイズを設定するプロパティである。
+
+設定できる値と意味は以下の通り。
+
+<table>
+    <tr>
+        <td>数値(単位px)</td>
+        <td>・・</td>
+        <td>数値に応じたフォントサイズになる</td>
+    </tr>
+    <tr>
+        <td>パーセンテージ(単位%)</td>
+        <td>・・</td>
+        <td>親要素のフォントサイズに対するパーセンテージ分のフォントサイズになる</td>
+    </tr>
+    <tr>
+        <td>xx-small</td>
+        <td rowspan="7">・・</td>
+        <td rowspan="7">指定したキーワードで大きさが決まる。xx-smallが最も小さく、xx-largeが最も大きくなる</td>
+    </tr>
+    <tr>
+        <td>x-small</td>
+    </tr>
+    <tr>
+        <td>small</td>
+    </tr>
+    <tr>
+        <td>medium</td>
+    </tr>
+    <tr>
+        <td>large</td>
+    </tr>
+    <tr>
+        <td>x-large</td>
+    </tr>
+    <tr>
+        <td>xx-large</td>
+    </tr>
+</table>
+
+使用例
+
+```
+<p style="font-size:xx-small;">xx-small</p>
+<p style="font-size:medium;">medium</p>
+<p style="font-size:xx-large;">xx-large</p>
+```
+
+表示例
+
+<hr>
+<p style="font-size:xx-small;">xx-small</p>
+<p style="font-size:medium;">medium</p>
+<p style="font-size:xx-large;">xx-large</p>
+<hr>
+
