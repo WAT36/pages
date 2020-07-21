@@ -75,3 +75,27 @@ iframe使用例
 <iframe width="500" height="200" src="/css_sample_pages/font-face.html">
 </iframe>
 <hr>
+
+
+
+## font-familyプロパティ
+
+font-familyプロパティは、フォントの種類を設定するプロパティである。
+
+値にはフォントの種類名を記述する。スペース区切りで複数入力することもできる。その際は、左にあるものから優先されて使われる。
+
+
+使用例
+
+```
+<p style="font-family:serif;">The example of font 1</p>
+<p style="font-family:cursive;">The example of font 2</p>
+```
+
+表示例
+
+<hr>
+<p style="font-family:serif;">The example of font 1</p>
+<p style="font-family:cursive;">The example of font 2</p>
+<hr>
+
