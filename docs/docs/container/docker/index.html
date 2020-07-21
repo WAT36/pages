@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.be3d27e76576bfbd24d95b6b99060c83303ed6ba5a303c48a0f8414352a5ed05.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.5fbccca1b984bffd03cd171e582dc32393d449a870fd59ca5a222c7aff2b8f64.js"></script>
 
 
 
@@ -158,17 +158,27 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="dockerイメージをリモート-docker-hub-からダウンロードする">Dockerイメージをリモート(Docker Hub)からダウンロードする</h2>
 
-<p>Dockerイメージをリモートレポジトリ(Docker Hub)からダウンロードするには、<strong>docker pull</strong>コマンドを利用する。</p>
+<p>Dockerイメージをリモートレポジトリ(Docker Hub)からダウンロードするには、<strong>docker image pull</strong>コマンドを利用する。</p>
 
-<pre><code>$ docker pull (Dockerイメージ名)
+<pre><code>$ docker image pull [オプション] (Dockerイメージ名)[:タグ名]
 </code></pre>
 
 <p>このコマンドにより、Dockerイメージをローカルにダウンロードできる。</p>
 
-<p>ローカルにあるDockerイメージを確認したい時は、<strong>docker image ls</strong>コマンドを使う。</p>
+<p>また、Dockerイメージは同じ名前でも<strong>タグ</strong>を使い分けることによって複数登録することができる。Dockerイメージはバージョンや対応OSなどの関係から、同じ内容のものを複数登録する必要があるが、Dockerイメージ名を同じにして、タグ名にバージョン及び対応OS等の名前を振り分けることによって、Dockerイメージを管理することが可能になる。特定のタグのイメージをダウンロードしたいときは、docker image pullコマンドの時にタグ名も指定する。</p>
+
+<p>なお、タグ名を省略してdocker image pullコマンドを実行した場合は、最新版のイメージがダウンロードされる。</p>
+
+<h2 id="ローカルにあるdockerイメージを確認する">ローカルにあるDockerイメージを確認する</h2>
+
+<p>取得したローカルにあるDockerイメージを確認したい時は、<strong>docker image ls</strong>コマンドを使う。</p>
 
 <pre><code>$ docker image ls
 </code></pre>
+
+<h2 id="ローカルのdockerイメージを削除する">ローカルのDockerイメージを削除する</h2>
+
+<p>ローカルにあるDockerイメージを削除したいときは、</p>
 
 <h2 id="dockerイメージからコンテナを作って実行する">Dockerイメージからコンテナを作って実行する</h2>
 
@@ -183,8 +193,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/194a7c911f7bc236c675e96ea97c3656a42038a0" title='Last modified Jul 17, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 17, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/4c6891b616a1b4d5076bd041ab46f2815c417c0e" title='Last modified Jul 18, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 18, 2020
     </a>
   </div>
   
