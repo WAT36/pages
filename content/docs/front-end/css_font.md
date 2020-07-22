@@ -236,3 +236,43 @@ font-weightプロパティは、フォントの太さを設定するプロパテ
 <p style="font-weight:700;">font-weight:700</p>
 <p style="font-weight:900;">font-weight:900</p>
 <hr>
+
+
+## font-styleプロパティ
+
+
+font-styleプロパティは、イタリックまたは斜体の書体を選択するためのプロパティである。
+
+設定できる値と意味は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">oblique</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">斜体で表示する。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">italic</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">イタリック体で表示する。フォントにイタリック体での表示形式がない場合は、「oblique」の時と同じになる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">normal</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">標準のフォントで表示</td>
+    </tr>
+</table>
+
+使用例
+
+```
+<p style="font-style:oblique;">oblique</p>
+<p style="font-style:italic ;">italic</p>
+```
+
+表示例
+
+<hr>
+<p style="font-style:oblique;">oblique</p>
+<p style="font-style:italic ;">italic</p>
+<hr>
