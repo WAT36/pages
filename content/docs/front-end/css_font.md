@@ -312,3 +312,27 @@ font-variantプロパティは、フォントをスモールキャップ（小�
 <hr>
 
 
+## fontプロパティ
+
+fontプロパティは、これまでに出たfont-xx関連のプロパティの値をまとめて指定できるプロパティである。
+
+値はスペース区切りで複数入力する方式だが、左から以下の順番で指定するという決まりがあるので注意。
+
+- font-weight,font-style,font-variantの値（省略可）
+- font-sizeの値（省略不可）
+- line-heightの値をfont-sizeの後にスラッシュを書いて指定（省略可）
+- font-familyの値（省略不可）
+
+使用例
+
+```
+<p style="font: oblique xx-large cursive;">ABCDEFGhijklmn</p>
+<p style="font: 900 small-caps medium serif;">ABCDEFGhijklmn</p>
+```
+
+表示例
+
+<hr>
+<p style="font: oblique xx-large cursive;">ABCDEFGhijklmn</p>
+<p style="font: 900 small-caps medium serif;">ABCDEFGhijklmn</p>
+<hr>

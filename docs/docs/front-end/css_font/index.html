@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.2011f838619dfe4220481cce4836ad3c47aff2f90bc4dd5583bbf3e0224a46dc.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.b520274d84e8cd4f6e2082618fb557e02d61d4a7981c35385f0c411ea465618c.js"></script>
 
 
 
@@ -416,6 +416,33 @@ https://github.com/alex-shpak/hugo-book
 <p><p style="font-variant:normal    ;">ABCDEFGhijklmn</p>
 <p style="font-variant:small-caps;">ABCDEFGhijklmn</p>
 <hr></p>
+
+<h2 id="fontプロパティ">fontプロパティ</h2>
+
+<p>fontプロパティは、これまでに出たfont-xx関連のプロパティの値をまとめて指定できるプロパティである。</p>
+
+<p>値はスペース区切りで複数入力する方式だが、左から以下の順番で指定するという決まりがあるので注意。</p>
+
+<ul>
+<li>font-weight,font-style,font-variantの値（省略可）</li>
+<li>font-sizeの値（省略不可）</li>
+<li>line-heightの値をfont-sizeの後にスラッシュを書いて指定（省略可）</li>
+<li>font-familyの値（省略不可）</li>
+</ul>
+
+<p>使用例</p>
+
+<pre><code>&lt;p style=&quot;font: oblique xx-large cursive;&quot;&gt;ABCDEFGhijklmn&lt;/p&gt;
+&lt;p style=&quot;font: 900 small-caps medium serif;&quot;&gt;ABCDEFGhijklmn&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p style="font: oblique xx-large cursive;">ABCDEFGhijklmn</p>
+<p style="font: 900 small-caps medium serif;">ABCDEFGhijklmn</p>
+<hr></p>
 </article>
 
       
@@ -423,7 +450,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/2667f012ffaf3a9ee48b10c09248b46d60f95fa8" title='Last modified Jul 22, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/be2323c5ad98292a4fdadfc8fc46e5499638923f" title='Last modified Jul 22, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 22, 2020
     </a>
   </div>
@@ -447,6 +474,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#font-weightプロパティ">font-weightプロパティ</a></li>
 <li><a href="#font-styleプロパティ">font-styleプロパティ</a></li>
 <li><a href="#font-variantプロパティ">font-variantプロパティ</a></li>
+<li><a href="#fontプロパティ">fontプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>
