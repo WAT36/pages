@@ -33,7 +33,7 @@ CSSでフォントを指定しても、ユーザーの環境にそのフォン�
 
 使用例として、下記のhtmlをiframeに組み込んで表示させてみる。
 
-(フォントは[https://fonts.google.com/specimen/Rowdies?sidebar.open&selection.family=Rowdies](https://fonts.google.com/specimen/Rowdies?sidebar.open&selection.family=Rowdies)から拝借しました)
+(フォントはGoogle Fonts([https://fonts.google.com/specimen/Rowdies?sidebar.open&selection.family=Rowdies](https://fonts.google.com/specimen/Rowdies?sidebar.open&selection.family=Rowdies))から拝借しました)
 
 
 ```html
