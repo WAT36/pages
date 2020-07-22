@@ -276,3 +276,39 @@ font-styleプロパティは、イタリックまたは斜体の書体を選択�
 <p style="font-style:oblique;">oblique</p>
 <p style="font-style:italic ;">italic</p>
 <hr>
+
+
+## font-variantプロパティ
+
+font-variantプロパティは、フォントをスモールキャップ（小文字を小さい大文字で表す形式）で表したい時に利用するプロパティである。
+
+設定できる値と意味は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">normal</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">標準のフォントで表示</td>
+    </tr>
+    <tr>
+        <td style="border:none;">small-caps</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">スモールキャップで表示。ただしスモールキャップが設定されていないフォントでは、単純に大文字を縮小したものを小文字として表示する。</td>
+    </tr>
+</table>
+
+使用例
+
+```
+<p style="font-variant:normal    ;">ABCDEFGhijklmn</p>
+<p style="font-variant:small-caps;">ABCDEFGhijklmn</p>
+```
+
+表示例
+
+<hr>
+<p style="font-variant:normal    ;">ABCDEFGhijklmn</p>
+<p style="font-variant:small-caps;">ABCDEFGhijklmn</p>
+<hr>
+
+
