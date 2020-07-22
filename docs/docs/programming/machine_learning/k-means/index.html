@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.6fdd8a2553194d01fb05c2aa74abb21b534c6ce86ec6be77b2a9c7bfd196a567.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.c41d8909927ac0f5eb1ae51e9f30649ac346e2ff1856e17f340a0b9e980a0705.js"></script>
 
 
 
@@ -137,7 +137,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p>K-means法では、まずデータを分けるクラスタの数を定める。</p>
 
-<p>例として、ここではデータを３つのクラスタに分けてみよう。</p>
+<p>例として、ここでは分けるクラスタを３つと設定しよう。</p>
 
 <h2 id="2-各クラスタの中心位置を定める">2. 各クラスタの中心位置を定める</h2>
 
@@ -215,7 +215,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-<p>とする。<b>r</b><sub>k</sub>の次元はクラスタの数に一致する。今回はクラスタは３つなので、<b>r</b><sub>k</sub>はr<sub>k2</sub>まで用意する。</p>
+<p>とする。<b>r</b><sub>k</sub>の要素数はクラスタの数に一致する。今回はクラスタは３つなので、<b>r</b><sub>k</sub>はr<sub>k2</sub>まで用意する。</p>
 
 <p>また、r<sub>ki</sub>は、k番目の入力データがクラスタiに属する場合に1,そうでない場合0をとる変数とする。</p>
 
@@ -299,6 +299,8 @@ r_{nk} =
 </p>
 
 
+
+<p>ここで、N<sub>k</sub>はクラスタkに属する入力データの個数とする。</p>
 
 <h2 id="6-手順4-5を繰り返し行う">6. 手順4・5を繰り返し行う</h2>
 
@@ -391,6 +393,8 @@ plt<span style="color:#f92672">.</span>show()</code></pre></div>
 <p>実行結果</p>
 
 <p><img src="https://WAT36.github.io/pages/img/datascience/Figure_40.png" width=75%></p>
+
+<p>これにより、k-means法によるクラスタリングが行えた。</p>
 </article>
 
       
@@ -398,8 +402,8 @@ plt<span style="color:#f92672">.</span>show()</code></pre></div>
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/879876da1674b69cec324457c577d86bff03bfe7" title='Last modified Jul 18, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 18, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/6a3ecc46af3e1cda05eb6ae08d28131db5745cce" title='Last modified Jul 21, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 21, 2020
     </a>
   </div>
   
