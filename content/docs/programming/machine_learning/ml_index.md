@@ -29,4 +29,6 @@ bookToc: false
      - [平均交差エントロピー誤差の最適解の導出]({{< relref "/docs/programming/machine_learning/cee_ans.md" >}})
      - [２次元入力２クラス分類]({{< relref "/docs/programming/machine_learning/2d_2class.md" >}})
      - [２次元入力３クラス分類]({{< relref "/docs/programming/machine_learning/2d_3class.md" >}})
-
+- [教師なし学習]({{< relref "/docs/programming/machine_learning/unsupervised_learning.md" >}})
+ - [クラスタリング]({{< relref "/docs/programming/machine_learning/clustering.md" >}})
+     - [K-Means法] ({{< relref "/docs/programming/machine_learning/k-means.md" >}})
