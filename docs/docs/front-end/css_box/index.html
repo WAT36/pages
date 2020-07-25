@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.79fd65e612faa30328fcfe8359a89e7e52376b00217fb12788f4cb421c9b3bea.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.4049c8411660f95746d4c41a14e33cf13cea75d2cce0084e11b0f972ec1fe6cb.js"></script>
 
 
 
@@ -138,6 +138,97 @@ https://github.com/alex-shpak/hugo-book
 <p>CSSでは、ボックスの各要素を設定することができる。</p>
 
 <p>ここでは、ボックスに関連するCSSのプロパティについてを記載する。</p>
+
+<h2 id="マージン関連のプロパティ">マージン関連のプロパティ</h2>
+
+<p>CSSでは、ボックスのマージンの長さを設定することができる。</p>
+
+<p>そのためのプロパティは以下の通り。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">margin-top</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">マージンの上部分</td>
+    </tr>
+    <tr>
+        <td style="border:none;">margin-bottom</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">マージンの下部分</td>
+    </tr>
+    <tr>
+        <td style="border:none;">margin-left</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">マージンの左部分</td>
+    </tr>
+    <tr>
+        <td style="border:none;">margin-right</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">マージンの右部分</td>
+    </tr>
+    <tr>
+        <td style="border:none;">margin</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">マージンの各部分(指定できる値は1~4個)</td>
+    </tr>
+</table>
+
+<p>中でも、marginプロパティは設定した値の数で、以下の通りに意味合いが変わってくる。</p>
+
+<table style="border:none;">
+    <thead>
+        <td style="border:none;">値の数</td>
+        <td style="border:none;">適用箇所</td>
+        <td style="border:none;">例</td>
+    </thead>
+    <tr>
+        <td style="border:none;">1</td>
+        <td style="border:none;">上下左右全て</td>
+        <td style="border:none;">margin 10px;</td>
+    </tr>
+    <tr>
+        <td style="border:none;">2</td>
+        <td style="border:none;">上下  左右</td>
+        <td style="border:none;">margin 10px 10px;</td>
+    </tr>
+    <tr>
+        <td style="border:none;">3</td>
+        <td style="border:none;">上 左右 下</td>
+        <td style="border:none;">margin 10px 10px 10px;</td>
+    </tr>
+    <tr>
+        <td style="border:none;">4</td>
+        <td style="border:none;">上 右 下 左</td>
+        <td style="border:none;">margin 10px 10px 10px;</td>
+    </tr>
+    <tr>
+        <td style="border:none;">margin</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">マージンの各部分(指定できる値は1~4個)</td>
+    </tr>
+</table>
+
+<p>margin関連のプロパティにプロパティに設定する値は以下の通り。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">数値(単位px)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">pxの値が長さになる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">数値(単位%)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">要素内容を表示する領域の幅に対する比率の長さになる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">auto</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ボックスの状況から自動設定する</td>
+    </tr>
+</table>
+
+<p>（使用例と表示例を見せる）</p>
 </article>
 
       
@@ -145,7 +236,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/7a4d9527a4b4ed4620b2963dab66009ff76f4413" title='Last modified Jul 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/61bc45ac67435222e9aec1d3eccc0ea94a28a0c3" title='Last modified Jul 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 26, 2020
     </a>
   </div>
@@ -161,7 +252,10 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#cssのボックス">CSSのボックス</a></li>
+<li><a href="#cssのボックス">CSSのボックス</a>
+<ul>
+<li><a href="#マージン関連のプロパティ">マージン関連のプロパティ</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>
