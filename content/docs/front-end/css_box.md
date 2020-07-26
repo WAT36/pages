@@ -235,3 +235,49 @@ padding関連のプロパティに設定する値は以下の通り。
         <td style="border:none;">要素内容を表示する領域の幅に対する比率の長さになる</td>
     </tr>
 </table>
+
+
+使用例
+
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>paddingサンプル</title>
+
+<style type="text/css">
+    p.sample1 {background-color: #66ff99; padding: 10px;} 
+    p.sample2 {background-color: #66ff99; padding: 10px 20px;}
+    p.sample3 {background-color: #66ff99; padding: 10px 20px 30px;}
+    p.sample4 {background-color: #66ff99; padding: 10px 20px 30px 40px;}
+</style>
+
+</head>
+<body>
+    <hr>
+    <p class="sample1">パディング上下左右10px</p>
+    <hr>
+    <p class="sample2">パディング上下10px、左右20px</p>
+    <hr>
+    <p class="sample3">パディング上10px、左右20px、下30px</p>
+    <hr>
+    <p class="sample4">パディング上10px、右20px、下30px、左40px</p>
+    <hr>
+</body>
+</html>
+```
+
+
+iframe使用例
+
+```
+<iframe width="500" height="300" src="/css_sample_pages/box-padding.html">
+</iframe>
+```
+
+表示例
+
+<hr>
+<iframe width="500" height="300" src="/css_sample_pages/box-padding.html">
+</iframe>
+<hr>

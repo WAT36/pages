@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.c478c32ba7a9798e16e74c7b814d54af58e3e3d2824c4f5cce6a5615c23156b7.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.6fb78eb4ae925b2cbfc79b89763cdb5d0b4833943646ee5c14d438892f257ad6.js"></script>
 
 
 
@@ -344,6 +344,46 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">要素内容を表示する領域の幅に対する比率の長さになる</td>
     </tr>
 </table>
+
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">title</span>&gt;paddingサンプル&lt;/<span style="color:#f92672">title</span>&gt;
+
+&lt;<span style="color:#f92672">style</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span>&gt;
+    <span style="color:#f92672">p</span>.<span style="color:#a6e22e">sample1</span> {<span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#66ff99</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;} 
+    <span style="color:#f92672">p</span>.<span style="color:#a6e22e">sample2</span> {<span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#66ff99</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;}
+    <span style="color:#f92672">p</span>.<span style="color:#a6e22e">sample3</span> {<span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#66ff99</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span>;}
+    <span style="color:#f92672">p</span>.<span style="color:#a6e22e">sample4</span> {<span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#66ff99</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span>;}
+&lt;/<span style="color:#f92672">style</span>&gt;
+
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">hr</span>&gt;
+    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sample1&#34;</span>&gt;パディング上下左右10px&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">hr</span>&gt;
+    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sample2&#34;</span>&gt;パディング上下10px、左右20px&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">hr</span>&gt;
+    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sample3&#34;</span>&gt;パディング上10px、左右20px、下30px&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">hr</span>&gt;
+    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sample4&#34;</span>&gt;パディング上10px、右20px、下30px、左40px&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">hr</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<p>iframe使用例</p>
+
+<pre><code>&lt;iframe width=&quot;500&quot; height=&quot;300&quot; src=&quot;/css_sample_pages/box-padding.html&quot;&gt;
+&lt;/iframe&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><iframe width="500" height="300" src="https://WAT36.github.io/pages/css_sample_pages/box-padding.html">
+</iframe>
+<hr></p>
 </article>
 
       
@@ -351,7 +391,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f519661f1e9ab6885fe9f3e97c9640dc4ecd6083" title='Last modified Jul 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/bcb85f3f9985cc8debe159f9b93f2176d0dc526d" title='Last modified Jul 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 26, 2020
     </a>
   </div>
