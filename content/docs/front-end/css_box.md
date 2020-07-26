@@ -58,9 +58,9 @@ CSSでは、ボックスのマージンの長さを設定することができ�
 
 <table style="border:none;">
     <thead>
-        <td style="border:none;">値の数</td>
-        <td style="border:none;">適用箇所</td>
-        <td style="border:none;">例</td>
+        <th style="border:none;">値の数</th>
+        <th style="border:none;">適用箇所</th>
+        <th style="border:none;">例</th>
     </thead>
     <tr>
         <td style="border:none;">1</td>
@@ -194,9 +194,9 @@ iframe使用例
 
 <table style="border:none;">
     <thead>
-        <td style="border:none;">値の数</td>
-        <td style="border:none;">適用箇所</td>
-        <td style="border:none;">例</td>
+        <th style="border:none;">値の数</th>
+        <th style="border:none;">適用箇所</th>
+        <th style="border:none;">例</th>
     </thead>
     <tr>
         <td style="border:none;">1</td>
@@ -290,16 +290,16 @@ iframe使用例
 そのためのプロパティは以下の通り。
 
 
-<table style="border:none;">
+<table>
     <thead>
-        <td style="border:none;">プロパティ名</td>
-        <td style="border:none;">設定対象</td>
-        <td style="border:none;">設定する値</td>
+        <th>プロパティ名</th>
+        <th>設定対象</th>
+        <th>設定する値</th>
     </thead>
     <tr>
-        <td style="border:none;">border-top-style</td>
-        <td style="border:none;">上のボーダーの線種</td>
-        <td style="border:none;" rowspan="5">
+        <td>border-top-style</td>
+        <td>上のボーダーの線種</td>
+        <td rowspan="5">
             solid:実線<br>
             double:二重線<br>
             dotted:点線<br>
@@ -312,19 +312,91 @@ iframe使用例
         </td>
     </tr>
     <tr>
-        <td style="border:none;">border-bottom-style</td>
-        <td style="border:none;">下のボーダーの線種</td>
+        <td>border-bottom-style</td>
+        <td>下のボーダーの線種</td>
     </tr>
     <tr>
-        <td style="border:none;">border-left-style</td>
-        <td style="border:none;">左のボーダーの線種</td>
+        <td>border-left-style</td>
+        <td>左のボーダーの線種</td>
     </tr>
     <tr>
-        <td style="border:none;">border-right-style</td>
-        <td style="border:none;">右のボーダーの線種</td>
+        <td>border-right-style</td>
+        <td">右のボーダーの線種</td>
     </tr>
     <tr>
-        <td style="border:none;">border-style</td>
-        <td style="border:none;">上下左右のボーダーの線種(値1~4個)</td>
+        <td>border-style</td>
+        <td>上下左右のボーダーの線種(値1~4個)</td>
     </tr>
-</table>
+    <tr>
+        <td>border-top-width</td>
+        <td>上のボーダーの太さ</td>
+        <td rowspan="5">
+            数値(単位px):数値に応じた太さ<br>
+            thin:細い<br>
+            medium:中くらい<br>
+            thick:太い<br>
+            他
+        </td>
+    </tr>
+    <tr>
+        <td>border-bottom-width</td>
+        <td>下のボーダーの太さ</td>
+    </tr>
+    <tr>
+        <td>border-left-width</td>
+        <td>左のボーダーの太さ</td>
+    </tr>
+    <tr>
+        <td>border-right-width</td>
+        <td>右のボーダーの太さ</td>
+    </tr>
+    <tr>
+        <td>border-width</td>
+        <td>上下左右のボーダーの太さ(値1~4個)</td>
+    </tr>
+    <tr>
+        <td>border-top-color</td>
+        <td>上のボーダーの色</td>
+        <td rowspan="5">
+            色を示す値
+        </td>
+    </tr>
+    <tr>
+        <td>border-bottom-color</td>
+        <td>下のボーダーの色</td>
+    </tr>
+    <tr>
+        <td>border-left-color</td>
+        <td>左のボーダーの色</td>
+    </tr>
+    <tr>
+        <td>border-right-color</td>
+        <td>右のボーダーの色</td>
+    </tr>
+    <tr>
+        <td>border-color</td>
+        <td>上下左右のボーダーの色(値1~4個)</td>
+    </tr>
+    <tr>
+        <td>border-top</td>
+        <td>上のボーダーの線種・太さ・色</td>
+        <td rowspan="5">
+            線種・太さ・色を示す値を空白区切りで指定
+        </td>
+    </tr>
+    <tr>
+        <td>border-bottom</td>
+        <td>下のボーダーの線種・太さ・色</td>
+    </tr>
+    <tr>
+        <td>border-left</td>
+        <td>左のボーダーの線種・太さ・色</td>
+    </tr>
+    <tr>
+        <td>border-right</td>
+        <td>右のボーダーの線種・太さ・色</td>
+    </tr>
+    <tr>
+        <td>border</td>
+        <td>上下左右のボーダーの線種・太さ・色(全てに同じ値を適用)</td>
+    </tr></table>
