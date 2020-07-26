@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.4049c8411660f95746d4c41a14e33cf13cea75d2cce0084e11b0f972ec1fe6cb.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.603ff1990821d1e7aef174d9389eae1ef428d3d1a6d24d9a52b8f246574747f8.js"></script>
 
 
 
@@ -228,7 +228,48 @@ https://github.com/alex-shpak/hugo-book
     </tr>
 </table>
 
-<p>（使用例と表示例を見せる）</p>
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">title</span>&gt;marginサンプル&lt;/<span style="color:#f92672">title</span>&gt;
+
+&lt;<span style="color:#f92672">style</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span>&gt;
+    <span style="color:#f92672">p</span>.<span style="color:#a6e22e">sample1</span> {<span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#66ccff</span>; <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;} 
+    <span style="color:#f92672">p</span>.<span style="color:#a6e22e">sample2</span> {<span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#66ccff</span>; <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;}
+    <span style="color:#f92672">p</span>.<span style="color:#a6e22e">sample3</span> {<span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#66ccff</span>; <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span>;}
+    <span style="color:#f92672">p</span>.<span style="color:#a6e22e">sample4</span> {<span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#66ccff</span>; <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span>;}
+    <span style="color:#f92672">p</span>.<span style="color:#a6e22e">sample5</span> {<span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#66ccff</span>; <span style="color:#66d9ef">margin</span>: <span style="color:#66d9ef">auto</span>;}
+&lt;/<span style="color:#f92672">style</span>&gt;
+
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">hr</span>&gt;
+    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sample1&#34;</span>&gt;マージン上下左右10px&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">hr</span>&gt;
+    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sample2&#34;</span>&gt;マージン上下10px、左右20px&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">hr</span>&gt;
+    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sample3&#34;</span>&gt;マージン上10px、左右20px、下30px&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">hr</span>&gt;
+    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sample4&#34;</span>&gt;マージン上10px、右20px、下30px、左40px&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">hr</span>&gt;
+    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sample5&#34;</span>&gt;マージンauto&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">hr</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<p>iframe使用例</p>
+
+<pre><code>&lt;iframe width=&quot;500&quot; height=&quot;300&quot; src=&quot;/css_sample_pages/box-margin.html&quot;&gt;
+&lt;/iframe&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><iframe width="500" height="300" src="https://WAT36.github.io/pages/css_sample_pages/box-margin.html">
+</iframe>
+<hr></p>
 </article>
 
       
@@ -236,7 +277,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/61bc45ac67435222e9aec1d3eccc0ea94a28a0c3" title='Last modified Jul 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/8f2fa1f7ae06d5b5bdc5491d096bf7424bea08c8" title='Last modified Jul 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 26, 2020
     </a>
   </div>
