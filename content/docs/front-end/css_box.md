@@ -281,3 +281,50 @@ iframe使用例
 <iframe width="500" height="300" src="/css_sample_pages/box-padding.html">
 </iframe>
 <hr>
+
+## ボーダー関連のプロパティ
+
+
+同じように、CSSではボックスのボーダーの種類を設定することができる。
+
+そのためのプロパティは以下の通り。
+
+
+<table style="border:none;">
+    <thead>
+        <td style="border:none;">プロパティ名</td>
+        <td style="border:none;">設定対象</td>
+        <td style="border:none;">設定する値</td>
+    </thead>
+    <tr>
+        <td style="border:none;">border-top-style</td>
+        <td style="border:none;">上のボーダーの線種</td>
+        <td style="border:none;" rowspan="5">
+            solid:実線<br>
+            double:二重線<br>
+            dotted:点線<br>
+            dashed:破線<br>
+            groove:溝線<br>
+            inset:内側が低くなるような線<br>
+            outset:内側が高くなるような線<br>
+            none,hidden:表示しない<br>
+            他
+        </td>
+    </tr>
+    <tr>
+        <td style="border:none;">border-bottom-style</td>
+        <td style="border:none;">下のボーダーの線種</td>
+    </tr>
+    <tr>
+        <td style="border:none;">border-left-style</td>
+        <td style="border:none;">左のボーダーの線種</td>
+    </tr>
+    <tr>
+        <td style="border:none;">border-right-style</td>
+        <td style="border:none;">右のボーダーの線種</td>
+    </tr>
+    <tr>
+        <td style="border:none;">border-style</td>
+        <td style="border:none;">上下左右のボーダーの線種(値1~4個)</td>
+    </tr>
+</table>
