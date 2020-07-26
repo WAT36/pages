@@ -1335,6 +1335,15 @@
     </item>
     
     <item>
+      <title>歪み尺度</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/distortion_measure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/distortion_measure/</guid>
+      <description>歪み尺度 教師あり学習では、学習が進み精度が高くなることの指標として、平均交差エントロピー誤差のような関数を利用していた。 教師なし学習、今回の</description>
+    </item>
+    
+    <item>
       <title>深さ優先探索</title>
       <link>https://WAT36.github.io/pages/docs/programming/procon/dfs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

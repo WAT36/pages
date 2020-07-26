@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>探索 | WAT Notes</title>
+<title>歪み尺度 | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -19,7 +19,6 @@
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 
 
-<link rel="alternate" type="application/rss+xml" href="https://WAT36.github.io/pages/tags/%E6%8E%A2%E7%B4%A2/index.xml" title="WAT Notes" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -55,7 +54,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2ftags\2f%E6%8E%A2%E7%B4%A2\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2f distortion_measure\2f "] {
       color: #004ed0;
   }
   </style>
@@ -114,30 +113,45 @@ https://github.com/alex-shpak/hugo-book
 </script>
 
     </aside>
+
     <div class="book-page">
       <header class="flex align-center justify-between book-header">
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>探索</strong>
+  <strong>歪み尺度</strong>
 </header>
 
+      
+<article class="markdown">
 
-<section id="main">
-    <div class="tags_list">
-    <div class="tags_title"><span>探索</span></div>
-    </div>
-    <ul id="list">
-        
-        <li>
-            2020-01-30
-             <a href="https://WAT36.github.io/pages/posts/warshall_floyd/">ワーシャル・フロイド法</a>
-         </li>
-         
-     </ul>
-     <hr>
-     <a href="https://WAT36.github.io/pages/tags">Tags</a>
- </section>
+<h1 id="歪み尺度">歪み尺度</h1>
+
+<p>教師あり学習では、学習が進み精度が高くなることの指標として、平均交差エントロピー誤差のような関数を利用していた。</p>
+
+<p>教師なし学習、今回のクラスタリングの場合でもこのような関数を設定し利用することはできないだろうか。</p>
+
+<p>実は、クラスタリングにおいてもそのような関数があり、<strong>歪み尺度</strong>と呼ばれている。</p>
+
+<p>その式を以下に示す。</p>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+<p class="katex">
+  $$ 
+\tag{1}
+    J = \sum_{x_{i} \in クラスタk}^{}  \sum_{k=0}^{クラスタ数} | x_{i} - { \bf \mu }_{k} | ^2 
+ $$
+</p>
+
+
+</article>
 
       
 <div class="book-footer justify-end">
@@ -148,6 +162,8 @@ https://github.com/alex-shpak/hugo-book
       
     </div>
     
+  
+
 
 
   </main>
@@ -166,4 +182,5 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
 </body>
+
 </html>
