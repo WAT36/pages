@@ -321,7 +321,7 @@ iframe使用例
     </tr>
     <tr>
         <td>border-right-style</td>
-        <td">右のボーダーの線種</td>
+        <td>右のボーダーの線種</td>
     </tr>
     <tr>
         <td>border-style</td>
@@ -399,4 +399,38 @@ iframe使用例
     <tr>
         <td>border</td>
         <td>上下左右のボーダーの線種・太さ・色(全てに同じ値を適用)</td>
-    </tr></table>
+    </tr>
+</table>
+
+
+使用例
+
+```html
+<table style="border-style:double dotted dashed groove">
+    <tr>
+        <td>border-style</td>
+    </tr>
+</table>
+<br>
+<table style="border-style:double; border-width:thin medium thick">
+    <tr>
+        <td>border-width</td>
+    </tr>
+</table>
+```
+
+表示例
+
+<hr>
+<table style="border-style:double dotted dashed groove">
+    <tr>
+        <td>border-style</td>
+    </tr>
+</table>
+<br>
+<table style="border-style:double; border-width:thin medium thick">
+    <tr>
+        <td>border-width</td>
+    </tr>
+</table>
+<hr>
