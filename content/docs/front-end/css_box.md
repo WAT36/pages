@@ -434,3 +434,64 @@ iframe使用例
     </tr>
 </table>
 <hr>
+
+
+## ボックス関連のプロパティ
+
+
+ボックス全体に関するプロパティを示す。
+
+
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値の数</th>
+        <th style="border:none;">適用箇所</th>
+    </thead>
+    <tr>
+        <td style="border:none;">box-sizing</td>
+        <td style="border:none;">適用箇所を示す。例として<br>content-box:要素内容を表示する領域のみ<br>border-box:ボーダー領域まで含める</td>
+    </tr>
+    <tr>
+        <td style="border:none;">width</td>
+        <td style="border:none;">ボックスの幅</td>
+    </tr>
+    <tr>
+        <td style="border:none;">height</td>
+        <td style="border:none;">ボックスの高さ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">min-width</td>
+        <td style="border:none;">ボックスの最小の幅</td>
+    </tr>
+    <tr>
+        <td style="border:none;">min-height</td>
+        <td style="border:none;">ボックスの最小の高さ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">max-width</td>
+        <td style="border:none;">ボックスの最大の幅</td>
+    </tr>
+    <tr>
+        <td style="border:none;">max-height</td>
+        <td style="border:none;">ボックスの最大の高さ</td>
+    </tr>
+</table>
+
+
+
+使用例
+
+```html
+<p style="background-color: #66ff99;">p sample1</p>
+<p style="background-color: #66ff99; width:200px">p sample2</p>
+<p style="background-color: #66ff99; width:200px; height:200px">p sample3</p>
+```
+
+表示例
+
+<hr>
+<p style="background-color: #66ff99;">p sample1</p>
+<p style="background-color: #66ff99; width:200px">p sample2</p>
+<p style="background-color: #66ff99; width:200px; height:200px">p sample3</p>
+<hr>
