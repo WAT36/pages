@@ -554,3 +554,48 @@ border-radiusプロパティは、ボックスの角を丸くするプロパテ�
 <p style="background-color: #66ff99; height:50px; box-shadow:10px 10px 10px 10px inset">p 右下10px, ぼかし10px, 四方10px</p>
 <hr>
 
+
+## floatプロパティ
+
+floatプロパティは、ボックスを左または右に寄せて配置し、後続の要素をその反対側に記載させるようにするプロパティである。
+
+指定する値と意味は以下の通り。
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">left</td>
+        <td style="border:none;">ボックスを左側に寄せ、後続の要素を右側に配置させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">right</td>
+        <td style="border:none;">ボックスを右側に寄せ、後続の要素を左側に配置させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">ボックスを寄せない</td>
+    </tr>
+</table>
+
+使用例
+
+```
+<p style="background-color: #66ff99; float:left">p要素ボックス左<br>右に画像→</p>
+<img src="/css_sample_pages/img_small.jpg">
+<br>
+<p style="background-color: #66ff99; float:right">p要素ボックス右<br>←左に画像</p>
+<img src="/css_sample_pages/img_small.jpg">
+```
+
+表示例
+
+<hr>
+<p style="background-color: #66ff99; float:left">p要素ボックス左<br>右に画像→</p>
+<img src="/css_sample_pages/img_small.jpg">
+<br>
+<p style="background-color: #66ff99; float:right">p要素ボックス右<br>←左に画像</p>
+<img src="/css_sample_pages/img_small.jpg">
+<hr>

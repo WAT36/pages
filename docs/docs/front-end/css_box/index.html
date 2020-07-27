@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.fa01e23d38ccf50efceea021eeb3ead8d06204319d0a0330b70ee39a3174fcbc.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.b83723e96aa56ce9e246dde81a19674a40a6eb627bb02a34231e14e6ae028169.js"></script>
 
 
 
@@ -644,6 +644,51 @@ https://github.com/alex-shpak/hugo-book
 <br>
 <p style="background-color: #66ff99; height:50px; box-shadow:10px 10px 10px 10px inset">p 右下10px, ぼかし10px, 四方10px</p>
 <hr></p>
+
+<h2 id="floatプロパティ">floatプロパティ</h2>
+
+<p>floatプロパティは、ボックスを左または右に寄せて配置し、後続の要素をその反対側に記載させるようにするプロパティである。</p>
+
+<p>指定する値と意味は以下の通り。</p>
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">left</td>
+        <td style="border:none;">ボックスを左側に寄せ、後続の要素を右側に配置させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">right</td>
+        <td style="border:none;">ボックスを右側に寄せ、後続の要素を左側に配置させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">ボックスを寄せない</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;p style=&quot;background-color: #66ff99; float:left&quot;&gt;p要素ボックス左&lt;br&gt;右に画像→&lt;/p&gt;
+&lt;img src=&quot;/css_sample_pages/img_small.jpg&quot;&gt;
+&lt;br&gt;
+&lt;p style=&quot;background-color: #66ff99; float:right&quot;&gt;p要素ボックス右&lt;br&gt;←左に画像&lt;/p&gt;
+&lt;img src=&quot;/css_sample_pages/img_small.jpg&quot;&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p style="background-color: #66ff99; float:left">p要素ボックス左<br>右に画像→</p>
+<img src="https://WAT36.github.io/pages/css_sample_pages/img_small.jpg">
+<br>
+<p style="background-color: #66ff99; float:right">p要素ボックス右<br>←左に画像</p>
+<img src="https://WAT36.github.io/pages/css_sample_pages/img_small.jpg">
+<hr></p>
 </article>
 
       
@@ -651,7 +696,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/d4a53b1cf182858760dcad921c58acbb1a929cc7" title='Last modified Jul 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/5f07f1dbd65ebabeef358e3d0b7f5fc3b36bce12" title='Last modified Jul 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 27, 2020
     </a>
   </div>
@@ -674,6 +719,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#ボーダー関連のプロパティ">ボーダー関連のプロパティ</a></li>
 <li><a href="#border-radiusプロパティ">border-radiusプロパティ</a></li>
 <li><a href="#box-shadowプロパティ">box-shadowプロパティ</a></li>
+<li><a href="#floatプロパティ">floatプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>
