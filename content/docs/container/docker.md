@@ -40,7 +40,11 @@ Dockerイメージは、Dockerコマンドを使って作成する方法、Docke
 
 ## Dockerイメージをリモート(Docker Hub)にアップロードする
 
+DockerイメージをDocker Hubにアップロードするには、**docker image push**コマンドを利用する。
 
+```
+$ docker image push <Docker Hubイメージ名>/イメージ名[:タグ名]
+```
 
 ## Dockerイメージをリモート(Docker Hub)からダウンロードする
 
