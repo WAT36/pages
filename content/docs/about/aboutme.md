@@ -45,6 +45,14 @@ bookToc: false
 ## スキルセット
 
 - 言語
+ - Java
+ - C
+ - Python
+ - HTML
+ - CSS
+ - Swift
+ - Shell Script(bash)
+ - SQL
 
 - フレームワーク・ライブラリ
 
