@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.94c9db629dcf4b567d09ee2feaf722b366d941aadc33ad4aee4c0da1bed31563.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.58cbabf60c4bdd4f851f5b7fed307f08c5a3af04edd9f99faa48ef4cec0ffe7a.js"></script>
 
 
 
@@ -676,6 +676,8 @@ https://github.com/alex-shpak/hugo-book
 &lt;p style=&quot;background-color: #66ff99;&quot;&gt;p要素ボックス左&lt;/p&gt;
 &lt;p style=&quot;background-color: #66ff99;&quot;&gt;←左に画像&lt;/p&gt;
 &lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
 &lt;img src=&quot;/css_sample_pages/img_small.jpg&quot; style=&quot;float:right&quot;&gt;
 &lt;p style=&quot;background-color: #66ff99;&quot;&gt;p要素ボックス右&lt;/p&gt;
 &lt;p style=&quot;background-color: #66ff99;&quot;&gt;右に画像→&lt;/p&gt;
@@ -688,6 +690,8 @@ https://github.com/alex-shpak/hugo-book
 <p><img src="https://WAT36.github.io/pages/css_sample_pages/img_small.jpg" style="float:left">
 <p style="background-color: #66ff99;">p要素ボックス左</p>
 <p style="background-color: #66ff99;">←左に画像</p>
+<br>
+<br>
 <br>
 <img src="https://WAT36.github.io/pages/css_sample_pages/img_small.jpg" style="float:right">
 <p style="background-color: #66ff99;">p要素ボックス右</p>
@@ -748,6 +752,112 @@ https://github.com/alex-shpak/hugo-book
 <p style="background-color: #66ff99">p要素ボックス右<br>←左に画像</p>
 <p style="clear:left">clearを指定すると後続の要素は回り込みません</p>
 <hr></p>
+
+<h2 id="displayプロパティ">displayプロパティ</h2>
+
+<p>displayプロパティは、要素の表示形式を設定するプロパティである。</p>
+
+<p>インライン要素をブロックレベル要素に、あるいはその逆などの表示をさせることができる。</p>
+
+<table>
+    <thead>
+        <th>プロパティ名</th>
+        <th>設定対象</th>
+    </thead>
+    <tr>
+        <td>inline</td>
+        <td>インライン要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>block</td>
+        <td>ブロックレベル要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>list-item</td>
+        <td>リストと同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>table</td>
+        <td>テーブル(table要素)と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>inline-table</td>
+        <td>インラインテーブルと同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>table-row-group</td>
+        <td>tbody要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>table-header-group</td>
+        <td>thead要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>table-footer-group</td>
+        <td>tfoot要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>table-row</td>
+        <td>tr要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>table-column-group</td>
+        <td>colgroup要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>table-column</td>
+        <td>col要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>table-cell</td>
+        <td>td要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>table-caption</td>
+        <td>caption要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>ruby</td>
+        <td>ruby要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>ruby-base</td>
+        <td>rb要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>ruby-text</td>
+        <td>rt要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>none</td>
+        <td>ボックスが無い状態で表示する</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; display:block&#34;</span>&gt;ブロック1&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; display:block&#34;</span>&gt;ブロック2&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; display:block&#34;</span>&gt;ブロック3&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; display:block&#34;</span>&gt;ブロック4&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; display:inline&#34;</span>&gt;インライン1&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; display:inline&#34;</span>&gt;インライン2&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; display:inline&#34;</span>&gt;インライン3&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; display:inline&#34;</span>&gt;インライン4&lt;/<span style="color:#f92672">p</span>&gt;</code></pre></div>
+<p>表示例</p>
+
+<hr>
+
+<p><p style="background-color: #66ff99; display:block">ブロック1</p>
+<p style="background-color: #66ff99; display:block">ブロック2</p>
+<p style="background-color: #66ff99; display:block">ブロック3</p>
+<p style="background-color: #66ff99; display:block">ブロック4</p>
+<br>
+<p style="background-color: #66ff99; display:inline">インライン1</p>
+<p style="background-color: #66ff99; display:inline">インライン2</p>
+<p style="background-color: #66ff99; display:inline">インライン3</p>
+<p style="background-color: #66ff99; display:inline">インライン4</p>
+<hr></p>
 </article>
 
       
@@ -755,7 +865,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/8aa7a2e1831cdf8145914e920b7bd6cc400d6e83" title='Last modified Jul 28, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/04db0354bdf48e5fb8f8dc3990e390f21534b8eb" title='Last modified Jul 28, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 28, 2020
     </a>
   </div>
@@ -780,6 +890,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#box-shadowプロパティ">box-shadowプロパティ</a></li>
 <li><a href="#floatプロパティ">floatプロパティ</a></li>
 <li><a href="#clearプロパティ">clearプロパティ</a></li>
+<li><a href="#displayプロパティ">displayプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>

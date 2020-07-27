@@ -664,3 +664,113 @@ clearプロパティは、floatプロパティで寄せられたボックスの�
 <p style="background-color: #66ff99">p要素ボックス右<br>←左に画像</p>
 <p style="clear:left">clearを指定すると後続の要素は回り込みません</p>
 <hr>
+
+
+## displayプロパティ
+
+displayプロパティは、要素の表示形式を設定するプロパティである。
+
+インライン要素をブロックレベル要素に、あるいはその逆などの表示をさせることができる。
+
+<table>
+    <thead>
+        <th>プロパティ名</th>
+        <th>設定対象</th>
+    </thead>
+    <tr>
+        <td>inline</td>
+        <td>インライン要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>block</td>
+        <td>ブロックレベル要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>list-item</td>
+        <td>リストと同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>table</td>
+        <td>テーブル(table要素)と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>inline-table</td>
+        <td>インラインテーブルと同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>table-row-group</td>
+        <td>tbody要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>table-header-group</td>
+        <td>thead要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>table-footer-group</td>
+        <td>tfoot要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>table-row</td>
+        <td>tr要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>table-column-group</td>
+        <td>colgroup要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>table-column</td>
+        <td>col要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>table-cell</td>
+        <td>td要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>table-caption</td>
+        <td>caption要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>ruby</td>
+        <td>ruby要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>ruby-base</td>
+        <td>rb要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>ruby-text</td>
+        <td>rt要素と同じ表示にする</td>
+    </tr>
+    <tr>
+        <td>none</td>
+        <td>ボックスが無い状態で表示する</td>
+    </tr>
+</table>
+
+使用例
+
+```html
+<p style="background-color: #66ff99; display:block">ブロック1</p>
+<p style="background-color: #66ff99; display:block">ブロック2</p>
+<p style="background-color: #66ff99; display:block">ブロック3</p>
+<p style="background-color: #66ff99; display:block">ブロック4</p>
+<br>
+<p style="background-color: #66ff99; display:inline">インライン1</p>
+<p style="background-color: #66ff99; display:inline">インライン2</p>
+<p style="background-color: #66ff99; display:inline">インライン3</p>
+<p style="background-color: #66ff99; display:inline">インライン4</p>
+```
+
+表示例
+
+<hr>
+<p style="background-color: #66ff99; display:block">ブロック1</p>
+<p style="background-color: #66ff99; display:block">ブロック2</p>
+<p style="background-color: #66ff99; display:block">ブロック3</p>
+<p style="background-color: #66ff99; display:block">ブロック4</p>
+<br>
+<p style="background-color: #66ff99; display:inline">インライン1</p>
+<p style="background-color: #66ff99; display:inline">インライン2</p>
+<p style="background-color: #66ff99; display:inline">インライン3</p>
+<p style="background-color: #66ff99; display:inline">インライン4</p>
+<hr>
