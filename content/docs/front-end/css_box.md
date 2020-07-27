@@ -583,21 +583,29 @@ floatプロパティは、ボックスを左または右に寄せて配置し、
 使用例
 
 ```
-<p style="background-color: #66ff99; float:left">p要素ボックス左<br>右に画像→</p>
-<img src="/css_sample_pages/img_small.jpg">
+<img src="/css_sample_pages/img_small.jpg" style="float:left">
+<p style="background-color: #66ff99;">p要素ボックス左</p>
+<p style="background-color: #66ff99;">←左に画像</p>
 <br>
-<p style="background-color: #66ff99; float:right">p要素ボックス右<br>←左に画像</p>
-<img src="/css_sample_pages/img_small.jpg">
+<br>
+<br>
+<img src="/css_sample_pages/img_small.jpg" style="float:right">
+<p style="background-color: #66ff99;">p要素ボックス右</p>
+<p style="background-color: #66ff99;">右に画像→</p>
 ```
 
 表示例
 
 <hr>
-<p style="background-color: #66ff99; float:left">p要素ボックス左<br>右に画像→</p>
-<img src="/css_sample_pages/img_small.jpg">
+<img src="/css_sample_pages/img_small.jpg" style="float:left">
+<p style="background-color: #66ff99;">p要素ボックス左</p>
+<p style="background-color: #66ff99;">←左に画像</p>
 <br>
-<p style="background-color: #66ff99; float:right">p要素ボックス右<br>←左に画像</p>
-<img src="/css_sample_pages/img_small.jpg">
+<br>
+<br>
+<img src="/css_sample_pages/img_small.jpg" style="float:right">
+<p style="background-color: #66ff99;">p要素ボックス右</p>
+<p style="background-color: #66ff99;">右に画像→</p>
 <hr>
 
 
