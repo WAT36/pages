@@ -520,3 +520,64 @@ border-radiusプロパティは、ボックスの角を丸くするプロパテ�
 <p style="background-color: #66ff99; height:100px; border-radius: 10px 30px 50px">p 左上10px,右上左下30px,右下50px</p>
 <p style="background-color: #66ff99; height:100px; border-radius: 10px 30px 50px 70px">p 左上10px,右上30px,右下50px,左下70px</p>
 <hr>
+
+
+## box-shadowプロパティ
+
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">数値(単位px)</td>
+        <td style="border:none;">2~4個まで指定でき、意味は１個目から右にずらす範囲、下にずらす範囲、ぼかす範囲、四方に拡張させる範囲を表す。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">色を示す値</td>
+        <td style="border:none;">影の色を示す。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">inset</td>
+        <td style="border:none;">この値を入れると、影が内側に表示される。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">影を表示しない。</td>
+    </tr>
+</table>
+
+
+使用例
+
+```html
+<p style="background-color: #66ff99; height:50px; box-shadow:10px">p 右10px</p>
+<br>
+<p style="background-color: #66ff99; height:50px; box-shadow:10px 10px">p 右下10px</p>
+<br>
+<p style="background-color: #66ff99; height:50px; box-shadow:10px 10px 10px">p 右下10px, ぼかし10px</p>
+<br>
+<p style="background-color: #66ff99; height:50px; box-shadow:10px 10px 10px 10px">p 右下10px, ぼかし10px, 四方10px</p>
+<br>
+<p style="background-color: #66ff99; height:50px; box-shadow:10px 10px 10px 10px #663399">p 右下10px, ぼかし10px, 四方10px</p>
+<br>
+<p style="background-color: #66ff99; height:50px; box-shadow:10px 10px 10px 10px inset">p 右下10px, ぼかし10px, 四方10px</p>
+```
+
+表示例
+
+<hr>
+<p style="background-color: #66ff99; height:50px; box-shadow:10px">p 右10px</p>
+<br>
+<p style="background-color: #66ff99; height:50px; box-shadow:10px 10px">p 右下10px</p>
+<br>
+<p style="background-color: #66ff99; height:50px; box-shadow:10px 10px 10px">p 右下10px, ぼかし10px</p>
+<br>
+<p style="background-color: #66ff99; height:50px; box-shadow:10px 10px 10px 10px">p 右下10px, ぼかし10px, 四方10px</p>
+<br>
+<p style="background-color: #66ff99; height:50px; box-shadow:10px 10px 10px 10px #663399">p 右下10px, ぼかし10px, 四方10px</p>
+<br>
+<p style="background-color: #66ff99; height:50px; box-shadow:10px 10px 10px 10px inset">p 右下10px, ぼかし10px, 四方10px</p>
+<hr>
+

@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.fee84774e2069952bd312051647459961628183bda81c1387e2ed3aa81531477.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.1bb8751ee478c81e401fc171e804de2c000e567c4b36ae34fce6cdf278e81512.js"></script>
 
 
 
@@ -612,6 +612,60 @@ https://github.com/alex-shpak/hugo-book
 <p style="background-color: #66ff99; height:100px; border-radius: 10px 30px 50px">p 左上10px,右上左下30px,右下50px</p>
 <p style="background-color: #66ff99; height:100px; border-radius: 10px 30px 50px 70px">p 左上10px,右上30px,右下50px,左下70px</p>
 <hr></p>
+
+<h2 id="box-shadowプロパティ">box-shadowプロパティ</h2>
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">数値(単位px)</td>
+        <td style="border:none;">2~4個まで指定でき、意味は１個目から右にずらす範囲、下にずらす範囲、ぼかす範囲、四方に拡張させる範囲を表す。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">色を示す値</td>
+        <td style="border:none;">影の色を示す。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">inset</td>
+        <td style="border:none;">この値を入れると、影が内側に表示される。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">影を表示しない。</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; height:50px; box-shadow:10px&#34;</span>&gt;p 右10px&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; height:50px; box-shadow:10px 10px&#34;</span>&gt;p 右下10px&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; height:50px; box-shadow:10px 10px 10px&#34;</span>&gt;p 右下10px, ぼかし10px&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; height:50px; box-shadow:10px 10px 10px 10px&#34;</span>&gt;p 右下10px, ぼかし10px, 四方10px&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; height:50px; box-shadow:10px 10px 10px 10px #663399&#34;</span>&gt;p 右下10px, ぼかし10px, 四方10px&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; height:50px; box-shadow:10px 10px 10px 10px inset&#34;</span>&gt;p 右下10px, ぼかし10px, 四方10px&lt;/<span style="color:#f92672">p</span>&gt;</code></pre></div>
+<p>表示例</p>
+
+<hr>
+
+<p><p style="background-color: #66ff99; height:50px; box-shadow:10px">p 右10px</p>
+<br>
+<p style="background-color: #66ff99; height:50px; box-shadow:10px 10px">p 右下10px</p>
+<br>
+<p style="background-color: #66ff99; height:50px; box-shadow:10px 10px 10px">p 右下10px, ぼかし10px</p>
+<br>
+<p style="background-color: #66ff99; height:50px; box-shadow:10px 10px 10px 10px">p 右下10px, ぼかし10px, 四方10px</p>
+<br>
+<p style="background-color: #66ff99; height:50px; box-shadow:10px 10px 10px 10px #663399">p 右下10px, ぼかし10px, 四方10px</p>
+<br>
+<p style="background-color: #66ff99; height:50px; box-shadow:10px 10px 10px 10px inset">p 右下10px, ぼかし10px, 四方10px</p>
+<hr></p>
 </article>
 
       
@@ -619,7 +673,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/9609d246d5dd911ea5776fca9469c9e970b6e327" title='Last modified Jul 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/1c7463763fb571cf5a8a10115839ef0b548cc34d" title='Last modified Jul 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 27, 2020
     </a>
   </div>
@@ -641,6 +695,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#パディング関連のプロパティ">パディング関連のプロパティ</a></li>
 <li><a href="#ボーダー関連のプロパティ">ボーダー関連のプロパティ</a></li>
 <li><a href="#border-radiusプロパティ">border-radiusプロパティ</a></li>
+<li><a href="#box-shadowプロパティ">box-shadowプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>
