@@ -108,50 +108,22 @@ margin関連のプロパティに設定する値は以下の通り。
 
 使用例
 
-```html
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>marginサンプル</title>
-
-<style type="text/css">
-    p.sample1 {background-color: #66ccff; margin: 10px;} 
-    p.sample2 {background-color: #66ccff; margin: 10px 20px;}
-    p.sample3 {background-color: #66ccff; margin: 10px 20px 30px;}
-    p.sample4 {background-color: #66ccff; margin: 10px 20px 30px 40px;}
-    p.sample5 {background-color: #66ccff; margin: auto;}
-</style>
-
-</head>
-<body>
-    <hr>
-    <p class="sample1">マージン上下左右10px</p>
-    <hr>
-    <p class="sample2">マージン上下10px、左右20px</p>
-    <hr>
-    <p class="sample3">マージン上10px、左右20px、下30px</p>
-    <hr>
-    <p class="sample4">マージン上10px、右20px、下30px、左40px</p>
-    <hr>
-    <p class="sample5">マージンauto</p>
-    <hr>
-</body>
-</html>
 ```
-
-
-iframe使用例
-
-```
-<iframe width="500" height="300" src="/css_sample_pages/box-margin.html">
-</iframe>
+<p style="background-color: #66ccff; margin: 10px;">マージン上下左右10px</p>
+<p style="background-color: #66ccff; margin: 10px 20px;">マージン上下10px、左右20px</p>
+<p style="background-color: #66ccff; margin: 10px 20px 30px;">マージン上10px、左右20px、下30px</p>
+<p style="background-color: #66ccff; margin: 10px 20px 30px 40px;">マージン上10px、右20px、下30px、左40px</p>
+<p style="background-color: #66ccff; margin: auto;">マージンauto</p>
 ```
 
 表示例
 
 <hr>
-<iframe width="500" height="300" src="/css_sample_pages/box-margin.html">
-</iframe>
+<p style="background-color: #66ccff; margin: 10px;">マージン上下左右10px</p>
+<p style="background-color: #66ccff; margin: 10px 20px;">マージン上下10px、左右20px</p>
+<p style="background-color: #66ccff; margin: 10px 20px 30px;">マージン上10px、左右20px、下30px</p>
+<p style="background-color: #66ccff; margin: 10px 20px 30px 40px;">マージン上10px、右20px、下30px、左40px</p>
+<p style="background-color: #66ccff; margin: auto;">マージンauto</p>
 <hr>
 
 ## パディング関連のプロパティ
