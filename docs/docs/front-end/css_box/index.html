@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.b83723e96aa56ce9e246dde81a19674a40a6eb627bb02a34231e14e6ae028169.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.d8666d05742c6a6c7467fa47d433d307a22673b1c1f2c556403fa183ebee3958.js"></script>
 
 
 
@@ -689,6 +689,61 @@ https://github.com/alex-shpak/hugo-book
 <p style="background-color: #66ff99; float:right">p要素ボックス右<br>←左に画像</p>
 <img src="https://WAT36.github.io/pages/css_sample_pages/img_small.jpg">
 <hr></p>
+
+<h2 id="clearプロパティ">clearプロパティ</h2>
+
+<p>clearプロパティは、floatプロパティで寄せられたボックスの反対側に、後続の要素がくる状態を解除するプロパティである。</p>
+
+<p>指定する値と意味は以下の通り。</p>
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">left</td>
+        <td style="border:none;">直前にfloat:leftがあった時、後続の要素が右に来るという状態を解除する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">right</td>
+        <td style="border:none;">直前にfloat:rightがあった時、後続の要素が左に来るという状態を解除する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">both</td>
+        <td style="border:none;">直前にfloat:leftまたはright があった時、後続の要素が左右どちらかに来るという状態を解除する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">float関連の解除をしない</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;img src=&quot;/css_sample_pages/img_small.jpg&quot; style=&quot;float:left&quot;&gt;
+&lt;p style=&quot;background-color: #66ff99&quot;&gt;p要素ボックス右&lt;br&gt;←左に画像&lt;/p&gt;
+&lt;p style=&quot;clear:none&quot;&gt;clearを指定しないと後続の要素も回り込みます&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;img src=&quot;/css_sample_pages/img_small.jpg&quot; style=&quot;float:left&quot;&gt;
+&lt;p style=&quot;background-color: #66ff99&quot;&gt;p要素ボックス右&lt;br&gt;←左に画像&lt;/p&gt;
+&lt;p style=&quot;clear:left&quot;&gt;clearを指定すると後続の要素は回り込みません&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><img src="https://WAT36.github.io/pages/css_sample_pages/img_small.jpg" style="float:left">
+<p style="background-color: #66ff99">p要素ボックス右<br>←左に画像</p>
+<p style="clear:none">clearを指定しないと後続の要素も回り込みます</p>
+<br>
+<br>
+<img src="https://WAT36.github.io/pages/css_sample_pages/img_small.jpg" style="float:left">
+<p style="background-color: #66ff99">p要素ボックス右<br>←左に画像</p>
+<p style="clear:left">clearを指定すると後続の要素は回り込みません</p>
+<hr></p>
 </article>
 
       
@@ -696,8 +751,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/5f07f1dbd65ebabeef358e3d0b7f5fc3b36bce12" title='Last modified Jul 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 27, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/3275fe4e5c1853b0f7797a68094256a5cfecc2d4" title='Last modified Jul 28, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 28, 2020
     </a>
   </div>
   
@@ -720,6 +775,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#border-radiusプロパティ">border-radiusプロパティ</a></li>
 <li><a href="#box-shadowプロパティ">box-shadowプロパティ</a></li>
 <li><a href="#floatプロパティ">floatプロパティ</a></li>
+<li><a href="#clearプロパティ">clearプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>

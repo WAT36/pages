@@ -599,3 +599,60 @@ floatプロパティは、ボックスを左または右に寄せて配置し、
 <p style="background-color: #66ff99; float:right">p要素ボックス右<br>←左に画像</p>
 <img src="/css_sample_pages/img_small.jpg">
 <hr>
+
+
+## clearプロパティ
+
+clearプロパティは、floatプロパティで寄せられたボックスの反対側に、後続の要素がくる状態を解除するプロパティである。
+
+指定する値と意味は以下の通り。
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">left</td>
+        <td style="border:none;">直前にfloat:leftがあった時、後続の要素が右に来るという状態を解除する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">right</td>
+        <td style="border:none;">直前にfloat:rightがあった時、後続の要素が左に来るという状態を解除する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">both</td>
+        <td style="border:none;">直前にfloat:leftまたはright があった時、後続の要素が左右どちらかに来るという状態を解除する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">float関連の解除をしない</td>
+    </tr>
+</table>
+
+
+使用例
+
+```
+<img src="/css_sample_pages/img_small.jpg" style="float:left">
+<p style="background-color: #66ff99">p要素ボックス右<br>←左に画像</p>
+<p style="clear:none">clearを指定しないと後続の要素も回り込みます</p>
+<br>
+<br>
+<img src="/css_sample_pages/img_small.jpg" style="float:left">
+<p style="background-color: #66ff99">p要素ボックス右<br>←左に画像</p>
+<p style="clear:left">clearを指定すると後続の要素は回り込みません</p>
+```
+
+表示例
+
+<hr>
+<img src="/css_sample_pages/img_small.jpg" style="float:left">
+<p style="background-color: #66ff99">p要素ボックス右<br>←左に画像</p>
+<p style="clear:none">clearを指定しないと後続の要素も回り込みます</p>
+<br>
+<br>
+<img src="/css_sample_pages/img_small.jpg" style="float:left">
+<p style="background-color: #66ff99">p要素ボックス右<br>←左に画像</p>
+<p style="clear:left">clearを指定すると後続の要素は回り込みません</p>
+<hr>
