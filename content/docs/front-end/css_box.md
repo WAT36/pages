@@ -467,3 +467,56 @@ iframe使用例
 <p style="background-color: #66ff99; width:200px">p sample2</p>
 <p style="background-color: #66ff99; width:200px; height:200px">p sample3</p>
 <hr>
+
+
+## border-radiusプロパティ
+
+border-radiusプロパティは、ボックスの角を丸くするプロパティである。
+
+<table>
+    <thead>
+        <th>プロパティ名</th>
+        <th>設定対象</th>
+    </thead>
+    <tr>
+        <td>border-top-left-radius</td>
+        <td>左上の角丸</td>
+    </tr>
+    <tr>
+        <td>border-top-right-radius</td>
+        <td>右上の角丸</td>
+    </tr>
+    <tr>
+        <td>border-bottom-right-radius</td>
+        <td>右下の角丸</td>
+    </tr>
+    <tr>
+        <td>border-bottom-left-radius</td>
+        <td>左下の角丸</td>
+    </tr>
+    <tr>
+        <td>border-radius</td>
+        <td>上下左右の角丸(値1~4個)</td>
+    </tr>
+</table>
+
+値には、丸くする部分を円の1/4とした時の円弧とした時の、円の半径を単位付きの数値(px,%など)で指定する。
+
+
+使用例
+
+```html
+<p style="background-color: #66ff99; height:100px; border-radius: 10px">p 全10px</p>
+<p style="background-color: #66ff99; height:100px; border-radius: 10px 30px">p 左上右下10px,右上左下30px</p>
+<p style="background-color: #66ff99; height:100px; border-radius: 10px 30px 50px">p 左上10px,右上左下30px,右下50px</p>
+<p style="background-color: #66ff99; height:100px; border-radius: 10px 30px 50px 70px">p 左上10px,右上30px,右下50px,左下70px</p>
+```
+
+表示例
+
+<hr>
+<p style="background-color: #66ff99; height:100px; border-radius: 10px">p 全10px</p>
+<p style="background-color: #66ff99; height:100px; border-radius: 10px 30px">p 左上右下10px,右上左下30px</p>
+<p style="background-color: #66ff99; height:100px; border-radius: 10px 30px 50px">p 左上10px,右上左下30px,右下50px</p>
+<p style="background-color: #66ff99; height:100px; border-radius: 10px 30px 50px 70px">p 左上10px,右上30px,右下50px,左下70px</p>
+<hr>

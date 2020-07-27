@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.26dddf9899a53acec96c56d5cd70029ae26c23c4479e77a811a4cfcdba9b429c.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.fee84774e2069952bd312051647459961628183bda81c1387e2ed3aa81531477.js"></script>
 
 
 
@@ -564,6 +564,54 @@ https://github.com/alex-shpak/hugo-book
 <p style="background-color: #66ff99; width:200px">p sample2</p>
 <p style="background-color: #66ff99; width:200px; height:200px">p sample3</p>
 <hr></p>
+
+<h2 id="border-radiusプロパティ">border-radiusプロパティ</h2>
+
+<p>border-radiusプロパティは、ボックスの角を丸くするプロパティである。</p>
+
+<table>
+    <thead>
+        <th>プロパティ名</th>
+        <th>設定対象</th>
+    </thead>
+    <tr>
+        <td>border-top-left-radius</td>
+        <td>左上の角丸</td>
+    </tr>
+    <tr>
+        <td>border-top-right-radius</td>
+        <td>右上の角丸</td>
+    </tr>
+    <tr>
+        <td>border-bottom-right-radius</td>
+        <td>右下の角丸</td>
+    </tr>
+    <tr>
+        <td>border-bottom-left-radius</td>
+        <td>左下の角丸</td>
+    </tr>
+    <tr>
+        <td>border-radius</td>
+        <td>上下左右の角丸(値1~4個)</td>
+    </tr>
+</table>
+
+<p>値には、丸くする部分を円の1/4とした時の円弧とした時の、円の半径を単位付きの数値(px,%など)で指定する。</p>
+
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; height:100px; border-radius: 10px&#34;</span>&gt;p 全10px&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; height:100px; border-radius: 10px 30px&#34;</span>&gt;p 左上右下10px,右上左下30px&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; height:100px; border-radius: 10px 30px 50px&#34;</span>&gt;p 左上10px,右上左下30px,右下50px&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; height:100px; border-radius: 10px 30px 50px 70px&#34;</span>&gt;p 左上10px,右上30px,右下50px,左下70px&lt;/<span style="color:#f92672">p</span>&gt;</code></pre></div>
+<p>表示例</p>
+
+<hr>
+
+<p><p style="background-color: #66ff99; height:100px; border-radius: 10px">p 全10px</p>
+<p style="background-color: #66ff99; height:100px; border-radius: 10px 30px">p 左上右下10px,右上左下30px</p>
+<p style="background-color: #66ff99; height:100px; border-radius: 10px 30px 50px">p 左上10px,右上左下30px,右下50px</p>
+<p style="background-color: #66ff99; height:100px; border-radius: 10px 30px 50px 70px">p 左上10px,右上30px,右下50px,左下70px</p>
+<hr></p>
 </article>
 
       
@@ -571,7 +619,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/9e70ef3f6b698c9dd86b4a2e9c4f07ecb5c43e01" title='Last modified Jul 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/9609d246d5dd911ea5776fca9469c9e970b6e327" title='Last modified Jul 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 27, 2020
     </a>
   </div>
@@ -592,6 +640,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#マージン関連のプロパティ">マージン関連のプロパティ</a></li>
 <li><a href="#パディング関連のプロパティ">パディング関連のプロパティ</a></li>
 <li><a href="#ボーダー関連のプロパティ">ボーダー関連のプロパティ</a></li>
+<li><a href="#border-radiusプロパティ">border-radiusプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>
