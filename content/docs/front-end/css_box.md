@@ -860,3 +860,74 @@ visiblityプロパティは、ボックスが透明になったかのように�
     </tr>
 </table>
 <hr>
+
+
+## overflowプロパティ
+
+overflowプロパティは、要素内容がボックスに入りきらなくなった時に、はみ出た部分を表示するかしないかなどの設定をするプロパティである。
+
+指定する値と意味は以下の通り。
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">visible</td>
+        <td style="border:none;">ボックスからはみ出た部分も表示する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">hidden</td>
+        <td style="border:none;">ボックスからはみ出た部分は表示しない</td>
+    </tr>
+    <tr>
+        <td style="border:none;">scroll</td>
+        <td style="border:none;">ボックスからはみ出た部分は表示しないが、スクロールによって表示できるようにする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">auto</td>
+        <td style="border:none;">状況に応じてスクロール可能にする</td>
+    </tr>
+</table>
+
+使用例
+
+```
+<p style="background-color: #66ff99; height:100px; width:100px; overflow:visible">
+あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん
+</p>
+<br>
+<br>
+<br>
+<p style="background-color: #66ff99; height:100px; width:100px; overflow:hidden">
+あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん
+</p>
+<br>
+<br>
+<br>
+<p style="background-color: #66ff99; height:100px; width:100px; overflow:scroll">
+あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん
+</p>
+```
+
+表示例
+
+<hr>
+<p style="background-color: #66ff99; height:100px; width:100px; overflow:visible">
+あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん
+</p>
+<br>
+<br>
+<br>
+<p style="background-color: #66ff99; height:100px; width:100px; overflow:hidden">
+あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん
+</p>
+<br>
+<br>
+<br>
+<p style="background-color: #66ff99; height:100px; width:100px; overflow:scroll">
+あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん
+</p>
+<hr>
+
