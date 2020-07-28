@@ -86,9 +86,18 @@ $ docker image prune [オプション]
 ```
 
 
-## Dockerイメージからコンテナを作って実行する
+## Dockerイメージからコンテナを作る
 
-Dockerイメージからコンテナを作成し、実行するには、**docker container run**コマンドを利用する。
+Dockerイメージからコンテナを作成するには、**docker container create**コマンドを使用する。
+
+```
+$ docker container create [オプション] イメージ名
+```
+
+
+## Dockerイメージからコンテナを作って起動する
+
+Dockerイメージからコンテナを作成し、起動するには、**docker container run**コマンドを利用する。
 
 ```
 $ docker container run  (Dockerイメージ名) (実行コマンド)
