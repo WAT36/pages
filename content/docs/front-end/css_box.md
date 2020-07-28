@@ -931,3 +931,53 @@ overflowプロパティは、要素内容がボックスに入りきらなくな
 </p>
 <hr>
 
+
+
+## clipプロパティ
+
+clipプロパティは、ボックスをクリッピング(一部を切り抜く)して表示させるプロパティである。
+
+指定する値と意味は以下の通り。
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">auto</td>
+        <td style="border:none;">クリッピングせずに表示する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">rect(上,右,下,左)</td>
+        <td style="border:none;">ボックスのボーダーの左上からの距離をそれぞれ指定した範囲をクリッピングして表示する</td>
+    </tr>
+</table>
+
+
+使用例
+
+```
+<div style="height:100px">
+<img src="/css_sample_pages/img_small.jpg" style="clip:auto; position:absolute;">
+</div>
+<br>
+<br>
+<div style="height:100px">
+<img src="/css_sample_pages/img_small.jpg" style="clip:rect(30px,70px,70px,30px); position:absolute;">
+</div>
+```
+
+
+表示例
+
+<hr>
+<div style="height:100px">
+<img src="/css_sample_pages/img_small.jpg" style="clip:auto; position:absolute;">
+</div>
+<br>
+<br>
+<div style="height:100px">
+<img src="/css_sample_pages/img_small.jpg" style="clip:rect(30px,70px,70px,30px); position:absolute;">
+</div>
+<hr>

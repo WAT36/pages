@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.5d034e79741d0bc77e9c348b216cfaf9037f00300d77a6dc66c5f5e566448d85.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.f5947fb833a51893d8ff1812f1751829d1d74bec192048c23cc2b97d24b048a4.js"></script>
 
 
 
@@ -1010,6 +1010,53 @@ https://github.com/alex-shpak/hugo-book
 あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん
 </p>
 <hr></p>
+
+<h2 id="clipプロパティ">clipプロパティ</h2>
+
+<p>clipプロパティは、ボックスをクリッピング(一部を切り抜く)して表示させるプロパティである。</p>
+
+<p>指定する値と意味は以下の通り。</p>
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">auto</td>
+        <td style="border:none;">クリッピングせずに表示する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">rect(上,右,下,左)</td>
+        <td style="border:none;">ボックスのボーダーの左上からの距離をそれぞれ指定した範囲をクリッピングして表示する</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;div style=&quot;height:100px&quot;&gt;
+&lt;img src=&quot;/css_sample_pages/img_small.jpg&quot; style=&quot;clip:auto; position:absolute;&quot;&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;div style=&quot;height:100px&quot;&gt;
+&lt;img src=&quot;/css_sample_pages/img_small.jpg&quot; style=&quot;clip:rect(30px,70px,70px,30px); position:absolute;&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><div style="height:100px">
+<img src="https://WAT36.github.io/pages/css_sample_pages/img_small.jpg" style="clip:auto; position:absolute;">
+</div>
+<br>
+<br>
+<div style="height:100px">
+<img src="https://WAT36.github.io/pages/css_sample_pages/img_small.jpg" style="clip:rect(30px,70px,70px,30px); position:absolute;">
+</div>
+<hr></p>
 </article>
 
       
@@ -1017,8 +1064,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/7bba0d776b782a38e5aa3dbed07c095f321c1934" title='Last modified Jul 28, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 28, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/9e3e90286113f98713d79c6451dc54523fe59644" title='Last modified Jul 29, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 29, 2020
     </a>
   </div>
   
@@ -1045,6 +1092,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#displayプロパティ">displayプロパティ</a></li>
 <li><a href="#visibilityプロパティ">visibilityプロパティ</a></li>
 <li><a href="#overflowプロパティ">overflowプロパティ</a></li>
+<li><a href="#clipプロパティ">clipプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>
