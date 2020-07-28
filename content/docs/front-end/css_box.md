@@ -774,3 +774,89 @@ displayプロパティは、要素の表示形式を設定するプロパティ�
 <p style="background-color: #66ff99; display:inline">インライン3</p>
 <p style="background-color: #66ff99; display:inline">インライン4</p>
 <hr>
+
+
+## visibilityプロパティ
+
+visiblityプロパティは、ボックスが透明になったかのように見えなくさせることのできるプロパティである。
+
+
+指定する値と意味は以下の通り。
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">visible</td>
+        <td style="border:none;">ボックスを見える状態にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">hidden</td>
+        <td style="border:none;">ボックスを見えなくさせる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">collapse</td>
+        <td style="border:none;">テーブル内の要素に指定された場合、その要素は表示されなくなる</td>
+    </tr>
+</table>
+
+
+使用例
+
+```
+<p>下に画像３個、２個目をhiddenさせる</p>
+<img src="/css_sample_pages/img_small.jpg" style="display:inline">
+<img src="/css_sample_pages/img_small.jpg" style="display:inline; visibility:hidden">
+<img src="/css_sample_pages/img_small.jpg" style="display:inline">
+<br>
+<br>
+<p>表</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">0,0</td>
+        <td style="border:none; visibility:collapse">1,0</td>
+        <td style="border:none;">2,0</td>
+    </tr>
+    <tr>
+        <td style="border:none; visibility:collapse">0,1</td>
+        <td style="border:none;">1,1</td>
+        <td style="border:none; visibility:collapse">2,1</td>
+    </tr>
+    <tr>
+        <td style="border:none;">0,2</td>
+        <td style="border:none; visibility:collapse">1,2</td>
+        <td style="border:none;">2,2</td>
+    </tr>
+</table>
+```
+
+表示例
+
+<hr>
+<p>下に画像３個、２個目をhiddenさせる</p>
+<img src="/css_sample_pages/img_small.jpg" style="display:inline">
+<img src="/css_sample_pages/img_small.jpg" style="display:inline; visibility:hidden">
+<img src="/css_sample_pages/img_small.jpg" style="display:inline">
+<br>
+<br>
+<p>表</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">0,0</td>
+        <td style="border:none; visibility:collapse">1,0</td>
+        <td style="border:none;">2,0</td>
+    </tr>
+    <tr>
+        <td style="border:none; visibility:collapse">0,1</td>
+        <td style="border:none;">1,1</td>
+        <td style="border:none; visibility:collapse">2,1</td>
+    </tr>
+    <tr>
+        <td style="border:none;">0,2</td>
+        <td style="border:none; visibility:collapse">1,2</td>
+        <td style="border:none;">2,2</td>
+    </tr>
+</table>
+<hr>
