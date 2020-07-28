@@ -94,8 +94,18 @@ Dockerイメージからコンテナを作成するには、**docker container c
 $ docker container create [オプション] イメージ名
 ```
 
+## コンテナを起動する
+
+停止中のコンテナを起動するには、**docker container start**コマンドを使用する。
+
+```
+$ docker container start [コンテナ名,ID]
+```
+
 
 ## Dockerイメージからコンテナを作って起動する
+
+Dockerイメージからコンテナを作成し(docker container create)、コンテナを起動する(docker container start)過程を別々に述べたが、この２つを一気にやる方法がある。
 
 Dockerイメージからコンテナを作成し、起動するには、**docker container run**コマンドを利用する。
 
