@@ -15,7 +15,7 @@ CSSで扱うボックスについて。
 
 <img src="/img/front-end/css_box.png" width=80%>
 
-CSSでは、ボックスの各要素を設定することができる。
+CSSでは、ボックスの各部分の長さなどを設定することができる。
 
 ここでは、ボックスに関連するCSSのプロパティについてを記載する。
 
@@ -80,7 +80,7 @@ CSSでは、ボックスのマージンの長さを設定することができ�
     <tr>
         <td style="border:none;">4</td>
         <td style="border:none;">上 右 下 左</td>
-        <td style="border:none;">margin 10px 10px 10px;</td>
+        <td style="border:none;">margin 10px 10px 10px 10px;</td>
     </tr>
 </table>
 
@@ -188,7 +188,7 @@ margin関連のプロパティに設定する値は以下の通り。
     <tr>
         <td style="border:none;">4</td>
         <td style="border:none;">上 右 下 左</td>
-        <td style="border:none;">padding 10px 10px 10px;</td>
+        <td style="border:none;">padding 10px 10px 10px 10px;</td>
     </tr>
 </table>
 
@@ -380,13 +380,9 @@ padding関連のプロパティに設定する値は以下の通り。
 </table>
 <hr>
 
-
 ## ボックス関連のプロパティ
 
-
 ボックス全体に関するプロパティを示す。
-
-
 
 <table style="border:none;">
     <thead>
@@ -592,6 +588,9 @@ floatプロパティは、ボックスを左または右に寄せて配置し、
 <img src="/css_sample_pages/img_small.jpg" style="float:right">
 <p style="background-color: #66ff99;">p要素ボックス右</p>
 <p style="background-color: #66ff99;">右に画像→</p>
+<br>
+<br>
+<br>
 ```
 
 表示例
@@ -606,6 +605,9 @@ floatプロパティは、ボックスを左または右に寄せて配置し、
 <img src="/css_sample_pages/img_small.jpg" style="float:right">
 <p style="background-color: #66ff99;">p要素ボックス右</p>
 <p style="background-color: #66ff99;">右に画像→</p>
+<br>
+<br>
+<br>
 <hr>
 
 
@@ -931,53 +933,3 @@ overflowプロパティは、要素内容がボックスに入りきらなくな
 </p>
 <hr>
 
-
-
-## clipプロパティ
-
-clipプロパティは、ボックスをクリッピング(一部を切り抜く)して表示させるプロパティである。
-
-指定する値と意味は以下の通り。
-
-<table style="border:none;">
-    <thead>
-        <th style="border:none;">値</th>
-        <th style="border:none;">意味</th>
-    </thead>
-    <tr>
-        <td style="border:none;">auto</td>
-        <td style="border:none;">クリッピングせずに表示する</td>
-    </tr>
-    <tr>
-        <td style="border:none;">rect(上,右,下,左)</td>
-        <td style="border:none;">ボックスのボーダーの左上からの距離をそれぞれ指定した範囲をクリッピングして表示する</td>
-    </tr>
-</table>
-
-
-使用例
-
-```
-<div style="height:100px">
-<img src="/css_sample_pages/img_small.jpg" style="clip:auto; position:absolute;">
-</div>
-<br>
-<br>
-<div style="height:100px">
-<img src="/css_sample_pages/img_small.jpg" style="clip:rect(30px,70px,70px,30px); position:absolute;">
-</div>
-```
-
-
-表示例
-
-<hr>
-<div style="height:100px">
-<img src="/css_sample_pages/img_small.jpg" style="clip:auto; position:absolute;">
-</div>
-<br>
-<br>
-<div style="height:100px">
-<img src="/css_sample_pages/img_small.jpg" style="clip:rect(30px,70px,70px,30px); position:absolute;">
-</div>
-<hr>

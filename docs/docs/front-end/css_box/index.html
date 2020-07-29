@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.f5947fb833a51893d8ff1812f1751829d1d74bec192048c23cc2b97d24b048a4.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.7cd99a261b1b29b8cf23b6499a2abb66ad040b808cca3fef57e74ecf76ce23a2.js"></script>
 
 
 
@@ -135,7 +135,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p><img src="https://WAT36.github.io/pages/img/front-end/css_box.png" width=80%></p>
 
-<p>CSSでは、ボックスの各要素を設定することができる。</p>
+<p>CSSでは、ボックスの各部分の長さなどを設定することができる。</p>
 
 <p>ここでは、ボックスに関連するCSSのプロパティについてを記載する。</p>
 
@@ -199,7 +199,7 @@ https://github.com/alex-shpak/hugo-book
     <tr>
         <td style="border:none;">4</td>
         <td style="border:none;">上 右 下 左</td>
-        <td style="border:none;">margin 10px 10px 10px;</td>
+        <td style="border:none;">margin 10px 10px 10px 10px;</td>
     </tr>
 </table>
 
@@ -303,7 +303,7 @@ https://github.com/alex-shpak/hugo-book
     <tr>
         <td style="border:none;">4</td>
         <td style="border:none;">上 右 下 左</td>
-        <td style="border:none;">padding 10px 10px 10px;</td>
+        <td style="border:none;">padding 10px 10px 10px 10px;</td>
     </tr>
 </table>
 
@@ -487,13 +487,9 @@ https://github.com/alex-shpak/hugo-book
 </table>
 <hr>
 
-
 ## ボックス関連のプロパティ
 
-
 ボックス全体に関するプロパティを示す。
-
-
 
 <table style="border:none;">
     <thead>
@@ -681,6 +677,9 @@ https://github.com/alex-shpak/hugo-book
 &lt;img src=&quot;/css_sample_pages/img_small.jpg&quot; style=&quot;float:right&quot;&gt;
 &lt;p style=&quot;background-color: #66ff99;&quot;&gt;p要素ボックス右&lt;/p&gt;
 &lt;p style=&quot;background-color: #66ff99;&quot;&gt;右に画像→&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
 </code></pre>
 
 <p>表示例</p>
@@ -696,6 +695,9 @@ https://github.com/alex-shpak/hugo-book
 <img src="https://WAT36.github.io/pages/css_sample_pages/img_small.jpg" style="float:right">
 <p style="background-color: #66ff99;">p要素ボックス右</p>
 <p style="background-color: #66ff99;">右に画像→</p>
+<br>
+<br>
+<br>
 <hr></p>
 
 <h2 id="clearプロパティ">clearプロパティ</h2>
@@ -1010,53 +1012,6 @@ https://github.com/alex-shpak/hugo-book
 あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん
 </p>
 <hr></p>
-
-<h2 id="clipプロパティ">clipプロパティ</h2>
-
-<p>clipプロパティは、ボックスをクリッピング(一部を切り抜く)して表示させるプロパティである。</p>
-
-<p>指定する値と意味は以下の通り。</p>
-
-<table style="border:none;">
-    <thead>
-        <th style="border:none;">値</th>
-        <th style="border:none;">意味</th>
-    </thead>
-    <tr>
-        <td style="border:none;">auto</td>
-        <td style="border:none;">クリッピングせずに表示する</td>
-    </tr>
-    <tr>
-        <td style="border:none;">rect(上,右,下,左)</td>
-        <td style="border:none;">ボックスのボーダーの左上からの距離をそれぞれ指定した範囲をクリッピングして表示する</td>
-    </tr>
-</table>
-
-<p>使用例</p>
-
-<pre><code>&lt;div style=&quot;height:100px&quot;&gt;
-&lt;img src=&quot;/css_sample_pages/img_small.jpg&quot; style=&quot;clip:auto; position:absolute;&quot;&gt;
-&lt;/div&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;div style=&quot;height:100px&quot;&gt;
-&lt;img src=&quot;/css_sample_pages/img_small.jpg&quot; style=&quot;clip:rect(30px,70px,70px,30px); position:absolute;&quot;&gt;
-&lt;/div&gt;
-</code></pre>
-
-<p>表示例</p>
-
-<hr>
-
-<p><div style="height:100px">
-<img src="https://WAT36.github.io/pages/css_sample_pages/img_small.jpg" style="clip:auto; position:absolute;">
-</div>
-<br>
-<br>
-<div style="height:100px">
-<img src="https://WAT36.github.io/pages/css_sample_pages/img_small.jpg" style="clip:rect(30px,70px,70px,30px); position:absolute;">
-</div>
-<hr></p>
 </article>
 
       
@@ -1064,7 +1019,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/9e3e90286113f98713d79c6451dc54523fe59644" title='Last modified Jul 29, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/0c6eef6b3b55d2c445e5b138390eef5ba7a7f9b8" title='Last modified Jul 29, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 29, 2020
     </a>
   </div>
@@ -1092,7 +1047,6 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#displayプロパティ">displayプロパティ</a></li>
 <li><a href="#visibilityプロパティ">visibilityプロパティ</a></li>
 <li><a href="#overflowプロパティ">overflowプロパティ</a></li>
-<li><a href="#clipプロパティ">clipプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>
