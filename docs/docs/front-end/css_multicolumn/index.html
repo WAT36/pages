@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.f9094d687ce390ea31c96d35d79f956584db357106221069a4b86a0095bba8d2.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.6a9697a12c99eda955f0d5a55a595667d1cdbb01697f5b92827cb1e669047710.js"></script>
 
 
 
@@ -221,7 +221,7 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="column-gapプロパティ">column-gapプロパティ</h2>
 
-<p>column-gapプロパティは、段の感覚を設定するプロパティである。値は単位付きの数値を指定する。</p>
+<p>column-gapプロパティは、段の間隔を設定するプロパティである。値は単位付きの数値を指定する。</p>
 
 <p>使用例</p>
 
@@ -299,6 +299,48 @@ https://github.com/alex-shpak/hugo-book
 近く本朝をうかがふに、承平の将門、天慶の純友、康和の義親、平治の信頼、これらはおごれる心も猛き事も、皆とりどりにこそありしかども、ま近くは、六波羅の入道前太政大臣平朝臣清盛公と申しし人のありさま、伝えへ承るこそ、心もことばも及ばれね。
 </p>
 <hr></p>
+
+<h2 id="column-spanプロパティ">column-spanプロパティ</h2>
+
+<p>column-spanプロパティは、ボックスが段組みされている時に、指定した要素を段の中に収めず、ボックスの幅いっぱい（全ての段を跨いで）に表示させるプロパティである。</p>
+
+<p>値はall(全ての段に跨いで表示)、none（段を跨いで表示させない）が指定できる。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;div style=&quot;background-color: #66ff99; width:800px; height:300px; overflow:hidden; column-count:3&quot;&gt;
+&lt;p&gt;
+祇園精舍の鐘の声、諸行無常の響きあり。
+娑羅双樹の花の色、盛者必衰の理をあらはす。
+おごれる人も久しからず、ただ春の夜の夢のごとし。
+猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
+&lt;/p&gt;
+&lt;p style=&quot;background-color: red; column-span: all;&quot;&gt;〜〜中略〜〜&lt;/p&gt;
+&lt;p&gt;
+遠く異朝をとぶらへば、秦の趙高、漢の王莽、梁の朱忌、唐の祿山、これらは皆旧主先皇の政にも従はず、樂しみをきはめ、諌めをも思ひ入れず、天下の乱れん事を悟らずして、民間の愁ふるところを知らざつしかば、久しからずして、亡じにし者どもなり。
+近く本朝をうかがふに、承平の将門、天慶の純友、康和の義親、平治の信頼、これらはおごれる心も猛き事も、皆とりどりにこそありしかども、ま近くは、六波羅の入道前太政大臣平朝臣清盛公と申しし人のありさま、伝えへ承るこそ、心もことばも及ばれね。
+&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><div style="background-color: #66ff99; width:800px; height:300px; overflow:hidden; column-count:3">
+<p>
+祇園精舍の鐘の声、諸行無常の響きあり。
+娑羅双樹の花の色、盛者必衰の理をあらはす。
+おごれる人も久しからず、ただ春の夜の夢のごとし。
+猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
+</p>
+<p style="background-color: red; column-span: all;">〜〜中略〜〜</p>
+<p>
+遠く異朝をとぶらへば、秦の趙高、漢の王莽、梁の朱忌、唐の祿山、これらは皆旧主先皇の政にも従はず、樂しみをきはめ、諌めをも思ひ入れず、天下の乱れん事を悟らずして、民間の愁ふるところを知らざつしかば、久しからずして、亡じにし者どもなり。
+近く本朝をうかがふに、承平の将門、天慶の純友、康和の義親、平治の信頼、これらはおごれる心も猛き事も、皆とりどりにこそありしかども、ま近くは、六波羅の入道前太政大臣平朝臣清盛公と申しし人のありさま、伝えへ承るこそ、心もことばも及ばれね。
+</p>
+</div>
+<hr></p>
 </article>
 
       
@@ -306,7 +348,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/8f3b2878444b5606daa81743317811368c29b665" title='Last modified Jul 30, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/954b7caa5b78506cd1b5d926ba1637eeb06017d7" title='Last modified Jul 30, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 30, 2020
     </a>
   </div>
@@ -329,6 +371,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#columnsプロパティ">columnsプロパティ</a></li>
 <li><a href="#column-gapプロパティ">column-gapプロパティ</a></li>
 <li><a href="#column-ruleプロパティ">column-ruleプロパティ</a></li>
+<li><a href="#column-spanプロパティ">column-spanプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>
