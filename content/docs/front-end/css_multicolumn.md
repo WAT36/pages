@@ -102,3 +102,31 @@ columnsプロパティは、前述のcolumn-count,column-widthをまとめて指
 猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
 </p>
 <hr>
+
+
+## column-gapプロパティ
+
+column-gapプロパティは、段の感覚を設定するプロパティである。値は単位付きの数値を指定する。
+
+使用例
+
+```
+<p style="background-color: #66ff99; width:700px; height:100px; overflow:hidden; column-count:2; column-gap:100px">
+祇園精舍の鐘の声、諸行無常の響きあり。
+娑羅双樹の花の色、盛者必衰の理をあらはす。
+おごれる人も久しからず、ただ春の夜の夢のごとし。
+猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
+</p>
+```
+
+表示例
+
+<hr>
+<p style="background-color: #66ff99; width:700px; height:100px; overflow:hidden; column-count:2; column-gap:100px">
+祇園精舍の鐘の声、諸行無常の響きあり。
+娑羅双樹の花の色、盛者必衰の理をあらはす。
+おごれる人も久しからず、ただ春の夜の夢のごとし。
+猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
+</p>
+<hr>
+
