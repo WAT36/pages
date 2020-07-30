@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>英字文字列を全て英字小文字にする | WAT Notes</title>
+<title>混合ガウスモデル | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -54,7 +54,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fstring\2flower\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2fgaussian_mixture_model\2f "] {
       color: #004ed0;
   }
   </style>
@@ -119,65 +119,17 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>英字文字列を全て英字小文字にする</strong>
+  <strong>混合ガウスモデル</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="英字文字列を全て英字小文字にする">英字文字列を全て英字小文字にする</h1>
-
-<p>英字の文字列を全て小文字にする方法について。
-小文字の場合も、大文字同様にほとんどの言語で関数やメソッドが用意されているので、それを利用する。</p>
-
-
-
-
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-string_lowercase" style="display: none;" id="tabs-string_lowercase-0" checked="checked" />
-  <label for="tabs-string_lowercase-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>クラスはここではMain.javaとする</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-      String <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;test&#34;</span>;
-      s <span style="color:#f92672">=</span> s.<span style="color:#a6e22e">toLowerCase</span>();
-    }
-}</code></pre></div>
-<p>JavaではStringクラスに <strong>toLowerCase()</strong> というメソッドがあり、これにより文字列を全て英小文字に変換して表示してくれる。<br>
-ただし、これも文字列自体が変換されるわけではないので、反映させたい場合は出力を元の変数に代入してやる必要がある。</p>
-
-  </div>
-
-  <input type="radio" name="tabs-string_lowercase" style="display: none;" id="tabs-string_lowercase-1"  />
-  <label for="tabs-string_lowercase-1">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;test&#34;</span>
-s <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>lower()</code></pre></div>
-<p>Pythonは文字列型のstrオブジェクトにメソッド <strong>lower()</strong> があり、これにより文字列を全て小文字にできる。<br>
-ただし、これも文字列自体が変換されるわけではないので、反映させたい場合は出力を元の変数に代入してやる必要がある。</p>
-
-  </div>
-
-</div>
-
+<h1 id="混合ガウスモデル">混合ガウスモデル</h1>
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f3dcb4ba0aed4e8c96315c519011ed407623594e" title='Last modified Jan 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 5, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
