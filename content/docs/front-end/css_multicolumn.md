@@ -229,3 +229,54 @@ column-spanプロパティは、ボックスが段組みされている時に、
 </p>
 </div>
 <hr>
+
+
+## フレキシブルボックスレイアウト
+
+displayプロパティにおいて、値をflexと指定すると、その内部の子要素を縦、横、逆順などの順番で配置することができる。このような配置をフレキシブルボックスレイアウトという。
+
+順番の指定は、**flex-direction**プロパティで指定できる。指定する値と意味は以下の通り。デフォルトではrowである。
+
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">プロパティ名</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">row</td>
+        <td style="border:none;">横（左から右）</td>
+    </tr>
+    <tr>
+        <td style="border:none;">row-reverse</td>
+        <td style="border:none;">横（右から左）</td>
+    </tr>
+    <tr>
+        <td style="border:none;">column</td>
+        <td style="border:none;">縦（上から下）</td>
+    </tr>
+    <tr>
+        <td style="border:none;">column-reverse</td>
+        <td style="border:none;">縦（下から上）</td>
+    </tr>
+</table>
+
+使用例
+
+```
+<div style="display:flex; flex-direction:row">
+<p style="background-color:red">p 1個目</p>
+<p style="background-color:yellow">p 2個目</p>
+<p style="background-color:green">p 3個目</p>
+</div>
+```
+
+表示例
+
+<hr>
+<div style="display:flex; flex-direction:row">
+<p style="background-color:red">p 1個目</p>
+<p style="background-color:yellow">p 2個目</p>
+<p style="background-color:green">p 3個目</p>
+</div>
+<hr>
