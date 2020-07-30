@@ -130,3 +130,59 @@ column-gapプロパティは、段の感覚を設定するプロパティであ�
 </p>
 <hr>
 
+
+## column-ruleプロパティ
+
+段と段の間にはボーダーと同様の線を引くことができる。その線を設定するプロパティがcolumn-rule系のプロパティである。
+
+このプロパティにはいくつか種類があり、以下の通りである。
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">プロパティ名</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">column-rule-style</td>
+        <td style="border:none;">線の線種</td>
+    </tr>
+    <tr>
+        <td style="border:none;">column-rule-color</td>
+        <td style="border:none;">線の色</td>
+    </tr>
+    <tr>
+        <td style="border:none;">column-rule-width</td>
+        <td style="border:none;">線の太さ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">column-rule</td>
+        <td style="border:none;">上記のプロパティの値を空白区切りでまとめて指定</td>
+    </tr>
+</table>
+
+
+使用例
+
+```
+<p style="background-color: #66ff99; width:700px; height:300px; column-count: 3; column-rule: 3px double red;">
+祇園精舍の鐘の声、諸行無常の響きあり。
+娑羅双樹の花の色、盛者必衰の理をあらはす。
+おごれる人も久しからず、ただ春の夜の夢のごとし。
+猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
+遠く異朝をとぶらへば、秦の趙高、漢の王莽、梁の朱忌、唐の祿山、これらは皆旧主先皇の政にも従はず、樂しみをきはめ、諌めをも思ひ入れず、天下の乱れん事を悟らずして、民間の愁ふるところを知らざつしかば、久しからずして、亡じにし者どもなり。
+近く本朝をうかがふに、承平の将門、天慶の純友、康和の義親、平治の信頼、これらはおごれる心も猛き事も、皆とりどりにこそありしかども、ま近くは、六波羅の入道前太政大臣平朝臣清盛公と申しし人のありさま、伝えへ承るこそ、心もことばも及ばれね。
+</p>
+```
+
+表示例
+
+<hr>
+<p style="background-color: #66ff99; width:700px; height:300px; column-count: 3; column-rule: 3px double red;">
+祇園精舍の鐘の声、諸行無常の響きあり。
+娑羅双樹の花の色、盛者必衰の理をあらはす。
+おごれる人も久しからず、ただ春の夜の夢のごとし。
+猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
+遠く異朝をとぶらへば、秦の趙高、漢の王莽、梁の朱忌、唐の祿山、これらは皆旧主先皇の政にも従はず、樂しみをきはめ、諌めをも思ひ入れず、天下の乱れん事を悟らずして、民間の愁ふるところを知らざつしかば、久しからずして、亡じにし者どもなり。
+近く本朝をうかがふに、承平の将門、天慶の純友、康和の義親、平治の信頼、これらはおごれる心も猛き事も、皆とりどりにこそありしかども、ま近くは、六波羅の入道前太政大臣平朝臣清盛公と申しし人のありさま、伝えへ承るこそ、心もことばも及ばれね。
+</p>
+<hr>
