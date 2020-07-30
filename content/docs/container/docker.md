@@ -113,6 +113,15 @@ Dockerイメージからコンテナを作成し、起動するには、**docker
 $ docker container run  (Dockerイメージ名) (実行コマンド)
 ```
 
+## コンテナを停止する
+
+起動中のコンテナを停止するには、**docker container stop**コマンドを使用する。
+
+```
+$ docker container stop コンテナID
+```
+
+
 ## コンテナを削除する
 
 コンテナを削除するには、**docker container rm**コマンドを使用する。これにより、停止中のコンテナを削除できる。
