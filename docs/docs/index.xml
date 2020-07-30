@@ -175,15 +175,6 @@
     
     <item>
       <title>CSSでのボックス</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/css_box-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/css_box-2/</guid>
-      <description>CSSのボックス CSSで扱うボックスについて。 前述した通り、HTMLでは要素内容の表示にはボックスと呼ばれる単位で表示される。 ボックスの詳細</description>
-    </item>
-    
-    <item>
-      <title>CSSでのボックス</title>
       <link>https://WAT36.github.io/pages/docs/front-end/css_box/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1088,15 +1079,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/class_func/variablelength_arg-2/</guid>
-      <description>可変長引数の関数 関数やメソッドを定義するとき、引数の数は事前に定義する必要があり、指定された数以外の数を入力することは普通はできない。 しかし</description>
-    </item>
-    
-    <item>
-      <title>可変長引数の関数</title>
-      <link>https://WAT36.github.io/pages/docs/programming/class_func/variablelength_arg-3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/class_func/variablelength_arg-3/</guid>
       <description>可変長引数の関数 関数やメソッドを定義するとき、引数の数は事前に定義する必要があり、指定された数以外の数を入力することは普通はできない。 しかし</description>
     </item>
     

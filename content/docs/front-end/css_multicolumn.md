@@ -75,3 +75,30 @@ column-widthプロパティは、段の幅を指定するプロパティであ�
 </p>
 <hr>
 
+
+
+## columnsプロパティ
+
+columnsプロパティは、前述のcolumn-count,column-widthをまとめて指定できるプロパティである。
+
+使用例
+
+```
+<p style="background-color: #66ff99; width:700px; height:300px; overflow:hidden; columns:2">
+祇園精舍の鐘の声、諸行無常の響きあり。
+娑羅双樹の花の色、盛者必衰の理をあらはす。
+おごれる人も久しからず、ただ春の夜の夢のごとし。
+猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
+</p>
+```
+
+表示例
+
+<hr>
+<p style="background-color: #66ff99; width:700px; height:300px; overflow:hidden; columns:2">
+祇園精舍の鐘の声、諸行無常の響きあり。
+娑羅双樹の花の色、盛者必衰の理をあらはす。
+おごれる人も久しからず、ただ春の夜の夢のごとし。
+猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
+</p>
+<hr>
