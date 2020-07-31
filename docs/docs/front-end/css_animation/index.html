@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.e5a72aeaea5af0ed30cd683e8d9d52102df35270c8d1421597f654a19a68d1c9.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.d850560bf76cd0b4780db8027b4646454c7def8f732c121a21809174e83efe27.js"></script>
 
 
 
@@ -236,6 +236,73 @@ https://github.com/alex-shpak/hugo-book
 <p style="background-color:green; width:200px; height:200px; transform:skewX(45deg);">４５度</p>
 <p style="background-color:green; width:200px; height:200px; transform:skewX(60deg);">６０度</p>
 <hr></p>
+
+<h2 id="transform-originプロパティ">transform-originプロパティ</h2>
+
+<p>transform-originプロパティは、transformプロパティでボックスを回転・移動・変形させる時に、原点とする位置を設定するプロパティである。</p>
+
+<p>指定する値と意味は以下の通り。なお、値は1~3つまで指定出来る。1つ目は横方向の左からの位置、2つ目は縦方向の上からの位置、3つ目は3D用のz方向の位置を示す。</p>
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">単位付きの数値</td>
+        <td style="border:none;">ボックスの左上からの距離</td>
+    </tr>
+    <tr>
+        <td style="border:none;">パーセンテージ</td>
+        <td style="border:none;">ボックスの大きさに対するパーセンテージ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">top</td>
+        <td style="border:none;">縦方向の0%</td>
+    </tr>
+    <tr>
+        <td style="border:none;">bottom</td>
+        <td style="border:none;">縦方向の100%</td>
+    </tr>
+    <tr>
+        <td style="border:none;">center</td>
+        <td style="border:none;">縦方向の50%/横方向の50%</td>
+    </tr>
+    <tr>
+        <td style="border:none;">left</td>
+        <td style="border:none;">横方向の0%</td>
+    </tr>
+    <tr>
+        <td style="border:none;">right</td>
+        <td style="border:none;">横方向の100%</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;div style=&quot;border-style: double; height: 100px; width: 100px; padding: 0px; margin:0px&quot;&gt;
+&lt;p style=&quot;background-color:red; width:95px; height:95px; padding:0px; margin:0px; transform:rotate(45deg);&quot;&gt;center center(デフォルト)を中心に45度回転&lt;/p&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;div style=&quot;border-style: double; height: 100px; width: 100px; padding: 0px; margin:0px&quot;&gt;
+&lt;p style=&quot;background-color:red; width:95px; height:95px; padding:0px; margin:0px; transform:rotate(45deg); transform-origin:right bottom;&quot;&gt;right bottom(右下)を中心に45度回転&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><div style="border-style: double; height: 100px; width: 100px; padding: 0px; margin:0px">
+<p style="background-color:red; width:95px; height:95px; padding:0px; margin:0px; transform:rotate(45deg);">center center(デフォルト)を中心に45度回転</p>
+</div>
+<br>
+<br>
+<div style="border-style: double; height: 100px; width: 100px; padding: 0px; margin:0px">
+<p style="background-color:red; width:95px; height:95px; padding:0px; margin:0px; transform:rotate(45deg); transform-origin:right bottom;">right bottom(右下)を中心に45度回転</p>
+</div>
+<hr></p>
 </article>
 
       
@@ -243,7 +310,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/ff2118925a0bcb4992a4e0a55b90af3fb73844ec" title='Last modified Jul 31, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/ff1482180df199fbfba851c81cfdff3245b5ddfa" title='Last modified Jul 31, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 31, 2020
     </a>
   </div>
@@ -262,6 +329,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#アニメーション">アニメーション</a>
 <ul>
 <li><a href="#transformプロパティ">transformプロパティ</a></li>
+<li><a href="#transform-originプロパティ">transform-originプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>

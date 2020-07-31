@@ -120,3 +120,73 @@ transformプロパティは、ボックスを回転・拡大縮小・移動・�
 <p style="background-color:green; width:200px; height:200px; transform:skewX(45deg);">４５度</p>
 <p style="background-color:green; width:200px; height:200px; transform:skewX(60deg);">６０度</p>
 <hr>
+
+
+## transform-originプロパティ
+
+transform-originプロパティは、transformプロパティでボックスを回転・移動・変形させる時に、原点とする位置を設定するプロパティである。
+
+指定する値と意味は以下の通り。なお、値は1~3つまで指定出来る。1つ目は横方向の左からの位置、2つ目は縦方向の上からの位置、3つ目は3D用のz方向の位置を示す。
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">単位付きの数値</td>
+        <td style="border:none;">ボックスの左上からの距離</td>
+    </tr>
+    <tr>
+        <td style="border:none;">パーセンテージ</td>
+        <td style="border:none;">ボックスの大きさに対するパーセンテージ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">top</td>
+        <td style="border:none;">縦方向の0%</td>
+    </tr>
+    <tr>
+        <td style="border:none;">bottom</td>
+        <td style="border:none;">縦方向の100%</td>
+    </tr>
+    <tr>
+        <td style="border:none;">center</td>
+        <td style="border:none;">縦方向の50%/横方向の50%</td>
+    </tr>
+    <tr>
+        <td style="border:none;">left</td>
+        <td style="border:none;">横方向の0%</td>
+    </tr>
+    <tr>
+        <td style="border:none;">right</td>
+        <td style="border:none;">横方向の100%</td>
+    </tr>
+</table>
+
+
+使用例
+
+```
+<div style="border-style: double; height: 100px; width: 100px; padding: 0px; margin:0px">
+<p style="background-color:red; width:95px; height:95px; padding:0px; margin:0px; transform:rotate(45deg);">center center(デフォルト)を中心に45度回転</p>
+</div>
+<br>
+<br>
+<div style="border-style: double; height: 100px; width: 100px; padding: 0px; margin:0px">
+<p style="background-color:red; width:95px; height:95px; padding:0px; margin:0px; transform:rotate(45deg); transform-origin:right bottom;">right bottom(右下)を中心に45度回転</p>
+</div>
+```
+
+表示例
+
+<hr>
+<div style="border-style: double; height: 100px; width: 100px; padding: 0px; margin:0px">
+<p style="background-color:red; width:95px; height:95px; padding:0px; margin:0px; transform:rotate(45deg);">center center(デフォルト)を中心に45度回転</p>
+</div>
+<br>
+<br>
+<div style="border-style: double; height: 100px; width: 100px; padding: 0px; margin:0px">
+<p style="background-color:red; width:95px; height:95px; padding:0px; margin:0px; transform:rotate(45deg); transform-origin:right bottom;">right bottom(右下)を中心に45度回転</p>
+</div>
+<hr>
+
