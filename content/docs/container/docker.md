@@ -3,7 +3,6 @@ title: "Docker"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
-bookToc: false
 ---
 
 # Docker
@@ -130,6 +129,8 @@ $ docker container stop コンテナID
 $ docker container rm [オプション] コンテナID
 ```
 
+以上、一連のコマンドの動作を図に表すと以下のようになる。
 
+<img src="/img/container/docker_03.png" width=100%>
 
 
