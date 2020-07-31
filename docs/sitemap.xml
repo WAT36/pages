@@ -214,6 +214,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/css_animation/</loc>
+    <lastmod>2020-07-31T20:45:42+09:00</lastmod>
   </url>
   
   <url>
@@ -389,6 +390,10 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/</loc>
     <lastmod>2020-04-29T12:40:40+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/css_multicolumn-2/</loc>
   </url>
   
   <url>
@@ -1118,7 +1123,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-07-31T08:47:41+09:00</lastmod>
+    <lastmod>2020-07-31T20:45:42+09:00</lastmod>
   </url>
   
   <url>
@@ -1147,12 +1152,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -1162,12 +1167,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
+    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -1348,7 +1353,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/front_index/</loc>
-    <lastmod>2020-07-29T20:33:11+09:00</lastmod>
+    <lastmod>2020-07-31T20:45:42+09:00</lastmod>
   </url>
   
   <url>
