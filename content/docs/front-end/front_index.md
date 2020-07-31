@@ -30,4 +30,5 @@ bookToc: false
  - [CSSでのテキスト]({{< relref "/docs/front-end/css_text.md" >}})
  - [CSSでのフォント]({{< relref "/docs/front-end/css_font.md" >}})
  - [CSSでのボックス]({{< relref "/docs/front-end/css_box.md" >}})
+ - [マルチカラム]({{< relref "/docs/front-end/css_multicolumn.md" >}})
 
