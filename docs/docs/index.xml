@@ -305,7 +305,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/other/other_index/</guid>
-      <description>その他 その他、括れてない手法などをまとめる。 変数 変数を設定する 変数の型を調べる 関数、メソッドのヘルプを見る(Python) コメントアウト Null 正</description>
+      <description>その他 その他、括れてない手法などをまとめる。 変数 変数を設定する 変数の型を調べる 定数 関数、メソッドのヘルプを見る(Python) コメントアウト</description>
     </item>
     
     <item>
@@ -702,6 +702,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/</guid>
       <description>ホールドアウト検証 先述のオーバーフィッティング(過学習)の章で、Mを大きくすればするほど既存の入力データに対する精度が高くなり、未知の入力に</description>
+    </item>
+    
+    <item>
+      <title>マルチカラム</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_multicolumn-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_multicolumn-2/</guid>
+      <description>マルチカラム マルチカラムとは、ボックスの内部を複数の段に分割してできるレイアウトである。 ここでは、マルチカラムについてを述べる。 column</description>
     </item>
     
     <item>
@@ -1134,6 +1143,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/list/multisortlist/</guid>
       <description>多次元リスト(配列)である列をキーにしてソートする リストの中に更にリストが入っているようなリストをソートした時どうなるか？ 各要素(リスト)の</description>
+    </item>
+    
+    <item>
+      <title>定数</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/constant/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/constant/</guid>
+      <description>定数 変数は値を記憶するための入れ物であり、基本、何度でも値を代入することが可能である。 これに対し定数とは、値の入れ物という点では変数と同じだ</description>
     </item>
     
     <item>
