@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.af39a7f6088f9959194b4aa1d422be2b09d157a2e164d16619dbf7211b428e5b.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.38baf4b35142e4928f9cf0db98c7083868617a8d3611dd1814a323b85650b054.js"></script>
 
 
 
@@ -125,9 +125,13 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown">
 
-<h1 id="アニメーション">アニメーション</h1>
+<h1 id="cssのアニメーション">CSSのアニメーション</h1>
 
 <p>CSSで行えるアニメーションについてをここで述べる。</p>
+
+<h1 id="回転-拡大縮小-移動">回転・拡大縮小・移動</h1>
+
+<p>ボックスを回転・拡大縮小・移動などさせるプロパティについてを述べる。</p>
 
 <h2 id="transformプロパティ">transformプロパティ</h2>
 
@@ -309,6 +313,31 @@ https://github.com/alex-shpak/hugo-book
 <p>例えばセレクタの:hoverを使うとカーソルが上に来た時に、:activeを使うとクリックした時に、そこの表示が別の状態に切り替わる。その切り替わりを滑らかに変化させるのがCSSで言う<strong>トランジション</strong>である。</p>
 
 <p>トランジションは、ある状態から別のある状態へと移る二状態の変化を表現できる。このセクションでは、トランジションに関するプロパティについてを述べる。</p>
+
+<h2 id="transition-property-プロパティ">transition-property プロパティ</h2>
+
+<p>transition-propertyは、トランジションを適用するプロパティ名を指定するプロパティである<sub style="color:gray">(ややこしい・・)</sub></p>
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">プロパティ名</td>
+        <td style="border:none;">アクション時にトランジションを適用したいプロパティ名。空白区切りで複数入力可</td>
+    </tr>
+    <tr>
+        <td style="border:none;">all</td>
+        <td style="border:none;">トランジション適用可能な全てのプロパティに適用する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">適用しない</td>
+    </tr>
+</table>
+
+<p>(使用例は次にまとめる)</p>
 </article>
 
       
@@ -332,12 +361,16 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#アニメーション">アニメーション</a>
+<li><a href="#cssのアニメーション">CSSのアニメーション</a></li>
+<li><a href="#回転-拡大縮小-移動">回転・拡大縮小・移動</a>
 <ul>
 <li><a href="#transformプロパティ">transformプロパティ</a></li>
 <li><a href="#transform-originプロパティ">transform-originプロパティ</a></li>
 </ul></li>
-<li><a href="#トランジション">トランジション</a></li>
+<li><a href="#トランジション">トランジション</a>
+<ul>
+<li><a href="#transition-property-プロパティ">transition-property プロパティ</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>

@@ -5,9 +5,14 @@ weight: 1
 # bookShowToC: true
 ---
 
-# アニメーション
+# CSSのアニメーション
 
 CSSで行えるアニメーションについてをここで述べる。
+
+
+# 回転・拡大縮小・移動
+
+ボックスを回転・拡大縮小・移動などさせるプロパティについてを述べる。
 
 
 ## transformプロパティ
@@ -197,3 +202,29 @@ transform-originプロパティは、transformプロパティでボックスを�
 
 トランジションは、ある状態から別のある状態へと移る二状態の変化を表現できる。このセクションでは、トランジションに関するプロパティについてを述べる。
 
+
+## transition-property プロパティ
+
+transition-propertyは、トランジションを適用するプロパティ名を指定するプロパティである<sub style="color:gray">(ややこしい・・)</sub>
+
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">プロパティ名</td>
+        <td style="border:none;">アクション時にトランジションを適用したいプロパティ名。空白区切りで複数入力可</td>
+    </tr>
+    <tr>
+        <td style="border:none;">all</td>
+        <td style="border:none;">トランジション適用可能な全てのプロパティに適用する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">適用しない</td>
+    </tr>
+</table>
+
+(使用例は次にまとめる)
