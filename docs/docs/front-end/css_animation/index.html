@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.7eab31b6b09f654ee87331c545c75a044f56ebae44dee7604f2af678ebf8ddb2.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.7be4c895331ac0160098a93836b852e95b73db79d787ef56f8c656c96c55529c.js"></script>
 
 
 
@@ -453,6 +453,48 @@ https://github.com/alex-shpak/hugo-book
 <p><iframe width="400" height="300" src="https://WAT36.github.io/pages/css_sample_pages/transition-timing-function.html">
 </iframe>
 <hr></p>
+
+<h2 id="transition-delay-プロパティ">transition-delay プロパティ</h2>
+
+<p>transition-delayプロパティは、トランジションの開始を遅らせるプロパティである。</p>
+
+<p>値には、時間の単位をつけた数値を指定する。</p>
+
+<p>使用例（css）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">div</span>.<span style="color:#a6e22e">delay</span> {
+    <span style="color:#66d9ef">border-style</span>: <span style="color:#66d9ef">double</span>; <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; 
+    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>
+}
+
+<span style="color:#f92672">p</span>.<span style="color:#a6e22e">delay1</span> {
+    <span style="color:#66d9ef">background-color</span>:<span style="color:#66d9ef">red</span>; <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; 
+    <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>; 
+    <span style="color:#66d9ef">transition-property</span>: <span style="color:#66d9ef">transform</span>;
+    <span style="color:#66d9ef">transition-duration</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">s</span>;
+}
+
+<span style="color:#f92672">p</span>.<span style="color:#a6e22e">delay2</span> {
+    <span style="color:#66d9ef">background-color</span>:<span style="color:#66d9ef">red</span>; <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; 
+    <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>; 
+    <span style="color:#66d9ef">transition-property</span>: <span style="color:#66d9ef">transform</span>;
+    <span style="color:#66d9ef">transition-duration</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">s</span>;
+    <span style="color:#66d9ef">transition-delay</span>: <span style="color:#ae81ff">3</span><span style="color:#66d9ef">s</span>;
+}
+
+<span style="color:#f92672">p</span><span style="color:#f92672">[</span><span style="color:#f92672">class</span><span style="color:#f92672">^=</span><span style="color:#e6db74">&#34;delay&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">hover</span>{
+    <span style="color:#66d9ef">transform</span>:rotate(<span style="color:#ae81ff">360</span><span style="color:#66d9ef">deg</span>);
+}</code></pre></div>
+<p>使用例（html、ここもコード載せると何故か変になる・・のでスクショを記載）</p>
+
+<p><img src="https://WAT36.github.io/pages/img/front-end/transition-delay.png" width=100%></p>
+
+<p>表示例</p>
+
+<hr>
+
+<p><iframe width="400" height="300" src="https://WAT36.github.io/pages/css_sample_pages/transition-delay.html">
+</iframe>
+<hr></p>
 </article>
 
       
@@ -460,7 +502,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/af415ab8aadec66c35c86ea46fbfc909a920c5f2" title='Last modified Aug 1, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/f45ef6746c2eb01a74dd4d20fefed04eca30226e" title='Last modified Aug 1, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 1, 2020
     </a>
   </div>
@@ -487,6 +529,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#transition-property-プロパティ">transition-property プロパティ</a></li>
 <li><a href="#transition-duration-プロパティ">transition-duration プロパティ</a></li>
 <li><a href="#transition-timing-function-プロパティ">transition-timing-function プロパティ</a></li>
+<li><a href="#transition-delay-プロパティ">transition-delay プロパティ</a></li>
 </ul></li>
 </ul>
 </nav>

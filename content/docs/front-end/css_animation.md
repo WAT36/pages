@@ -360,3 +360,54 @@ p[class^="timing"]:hover{
 <iframe width="400" height="300" src="/css_sample_pages/transition-timing-function.html">
 </iframe>
 <hr>
+
+
+## transition-delay プロパティ
+
+transition-delayプロパティは、トランジションの開始を遅らせるプロパティである。
+
+値には、時間の単位をつけた数値を指定する。
+
+
+使用例（css）
+
+
+```css
+div.delay {
+    border-style: double; height: 100px; width: 100px; 
+    padding: 0px; margin:0px
+}
+
+p.delay1 {
+    background-color:red; width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    transition-property: transform;
+    transition-duration: 5s;
+}
+
+p.delay2 {
+    background-color:red; width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    transition-property: transform;
+    transition-duration: 5s;
+    transition-delay: 3s;
+}
+
+p[class^="delay"]:hover{
+    transform:rotate(360deg);
+}
+```
+
+
+使用例（html、ここもコード載せると何故か変になる・・のでスクショを記載）
+
+<img src="/img/front-end/transition-delay.png" width=100%>
+
+
+表示例
+
+<hr>
+<iframe width="400" height="300" src="/css_sample_pages/transition-delay.html">
+</iframe>
+<hr>
+
