@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.565d97dae9dd7c5f442684d880405aff5477eda0ec50900b803fce7b78492d93.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.26ca0d7ede2f6f922c387734cddfee5567304081ce1e80436be83d729dff7fa4.js"></script>
 
 
 
@@ -345,6 +345,37 @@ https://github.com/alex-shpak/hugo-book
 
 <p>値は単位付きの数値で、単位はs（秒）,ms（ミリ秒）のいずれかで指定する。</p>
 
+<p>使用例(css)</p>
+
+<pre><code>div.duration {
+    border-style: double; height: 100px; width: 100px; 
+    padding: 0px; margin:0px
+}
+
+p.sample1 {
+    background-color:red; width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    transition-property: transform;
+    transition-duration: 5s;
+}
+
+p.sample1:hover{
+    transform:rotate(360deg);
+}
+
+p.sample2 {
+    background-color:red; width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    transition-property: background-color;
+    transition-duration: 5s;
+}
+
+p.sample2:active{
+    background-color:yellow;
+}
+
+</code></pre>
+
 <p>表示例</p>
 
 <hr>
@@ -359,7 +390,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/eb5c9b00f4e063e95eeb96f8c89fe0753ab2408f" title='Last modified Aug 1, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/3be4caf8eb35b7db214a95021c5544798ecd9018" title='Last modified Aug 1, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 1, 2020
     </a>
   </div>

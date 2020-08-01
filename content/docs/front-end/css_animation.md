@@ -235,6 +235,41 @@ transition-durationプロパティは、トランジションをどれほどの�
 
 値は単位付きの数値で、単位はs（秒）,ms（ミリ秒）のいずれかで指定する。
 
+
+使用例(css)
+
+
+```
+div.duration {
+    border-style: double; height: 100px; width: 100px; 
+    padding: 0px; margin:0px
+}
+
+p.sample1 {
+    background-color:red; width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    transition-property: transform;
+    transition-duration: 5s;
+}
+
+p.sample1:hover{
+    transform:rotate(360deg);
+}
+
+p.sample2 {
+    background-color:red; width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    transition-property: background-color;
+    transition-duration: 5s;
+}
+
+p.sample2:active{
+    background-color:yellow;
+}
+
+```
+
+
 表示例
 
 <hr>
