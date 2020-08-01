@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AND演算 | WAT Notes</title>
+<title>可変長引数の関数 | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -54,7 +54,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fnumber\2f and\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2f class_func\2fvariablelength_arg-2\2f "] {
       color: #004ed0;
   }
   </style>
@@ -119,15 +119,19 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>AND演算</strong>
+  <strong>可変長引数の関数</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="and演算">AND演算</h1>
+<h1 id="可変長引数の関数">可変長引数の関数</h1>
 
-<p>ANDの論理演算をする方法についてを示す。</p>
+<p>関数やメソッドを定義するとき、引数の数は事前に定義する必要があり、指定された数以外の数を入力することは普通はできない。</p>
+
+<p>しかし、可変長引数を使うことで、関数やメソッドを任意の個数の引数で利用することができる。</p>
+
+<p>その方法を以下に示す。</p>
 
 
 
@@ -135,48 +139,70 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" name="tabs-and" style="display: none;" id="tabs-and-0" checked="checked" />
-  <label for="tabs-and-0">
+  <input type="radio" name="tabs-comment" style="display: none;" id="tabs-comment-0" checked="checked" />
+  <label for="tabs-comment-0">
     Java
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>JavaではANDの論理演算子 <strong>&amp;&amp;</strong> を使用する。戻り値はboolean型。<br />
-<code>(左辺) &amp;&amp; (右辺)</code><br />
-ちなみに、左辺がfalseだった場合は右辺の計算は行わずにfalseを出力する。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-        <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-        <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+    <p>Javaではメソッドに可変長引数を設定できる仕様がある。</p>
 
-        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(a <span style="color:#f92672">&amp;&amp;</span> a);
-        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(a <span style="color:#f92672">&amp;&amp;</span> b);
-        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(b <span style="color:#f92672">&amp;&amp;</span> b);
+<p>その仕様は以下の通り。</p>
+
+<ul>
+<li>引数のデータ型の後に「&hellip;」と記述する</li>
+<li>引数の中で、可変長引数は一番最後に書く</li>
+<li>可変長引数は１種類しか利用できない</li>
+<li>可変長引数の値は配列としてメソッドに渡される。</li>
+</ul>
+
+<p>使用例は以下の通り。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> String <span style="color:#a6e22e">calendar</span>(String... <span style="color:#a6e22e">s</span>){
+        String <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> s[0]<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">+</span>s[1]<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">+</span>s[2];
+        <span style="color:#66d9ef">return</span> d;
+    }
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+        Main <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Main();
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(m.<span style="color:#a6e22e">calendar</span>(<span style="color:#e6db74">&#34;2020&#34;</span>,<span style="color:#e6db74">&#34;7&#34;</span>,<span style="color:#e6db74">&#34;19&#34;</span>));
     }
 }</code></pre></div>
 <p>実行結果</p>
 
-<pre><code>&gt; java Main  
-true  
-false  
-false  
+<pre><code>$ javac Main.java 
+$ java Main
+2020/7/19
 </code></pre>
 
   </div>
 
-  <input type="radio" name="tabs-and" style="display: none;" id="tabs-and-1"  />
-  <label for="tabs-and-1">
+  <input type="radio" name="tabs-comment" style="display: none;" id="tabs-comment-1"  />
+  <label for="tabs-comment-1">
     Python
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>pythonでOR演算を行うには単純に <strong>and</strong> を使用する。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a <span style="color:#f92672">=</span> True
-<span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">=</span> False
-<span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(a <span style="color:#f92672">and</span> b)
-False
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(a <span style="color:#f92672">and</span> a)
-True
-<span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
+    <p>Pythonでは関数を定義するときに引数の頭に*を付けたリストのアンパック型にすると、その部分に入力された値はその引数(タプル)の要素として扱われることになる。アンパック型なので、引数はいくらでも入れられることになり、結果これで可変長引数が実現できることになる。</p>
+
+<p>実装例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">variable_args</span>(<span style="color:#f92672">*</span>args,sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span>):
+    <span style="color:#66d9ef">print</span>(args)
+    <span style="color:#66d9ef">print</span>(sep<span style="color:#f92672">.</span>join(args))</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>&gt;&gt;&gt; variable_args('2020','7','18')
+('2020', '7', '18')
+2020/7/18
+&gt;&gt;&gt; 
+&gt;&gt;&gt; variable_args('2020','7')
+('2020', '7')
+2020/7
+&gt;&gt;&gt; 
+&gt;&gt;&gt; variable_args('2020')
+('2020',)
+2020
+&gt;&gt;&gt; 
+</code></pre>
+
   </div>
 
 </div>
@@ -188,8 +214,8 @@ True
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f3dcb4ba0aed4e8c96315c519011ed407623594e" title='Last modified Jan 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 5, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/61bc45ac67435222e9aec1d3eccc0ea94a28a0c3" title='Last modified Jul 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 26, 2020
     </a>
   </div>
   
