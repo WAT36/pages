@@ -411,3 +411,38 @@ p[class^="delay"]:hover{
 </iframe>
 <hr>
 
+
+## transition プロパティ
+
+transitionプロパティは、これまでのtransition関連のプロパティの値をまとめて指定出来るプロパティである。
+
+値は空白で区切って複数指定可能である。
+
+
+使用例（css）
+
+```css
+p {
+    background-color:red; width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    transition: transform 5s linear;
+}
+
+p:hover{
+    transform:rotate(360deg);
+}
+```
+
+（html）
+
+```html
+<p>カーソル乗せると一回転！(linear)</p>
+```
+
+表示例
+
+<hr>
+<iframe width="400" height="300" src="/css_sample_pages/transition.html">
+</iframe>
+<hr>
+
