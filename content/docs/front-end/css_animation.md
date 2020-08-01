@@ -239,7 +239,7 @@ transition-durationプロパティは、トランジションをどれほどの�
 使用例(css)
 
 
-```
+```css
 div.duration {
     border-style: double; height: 100px; width: 100px; 
     padding: 0px; margin:0px
@@ -279,5 +279,79 @@ p.sample2:active{
 
 <hr>
 <iframe width="400" height="300" src="/css_sample_pages/transition-duration.html">
+</iframe>
+<hr>
+
+
+## transition-timing-function プロパティ
+
+transition-timing-functionプロパティは、トランジションの速度を一定にしたり、変化をつけた速度に設定するプロパティである。
+
+指定する値と意味は以下の通り。
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">ease</td>
+        <td style="border:none;">加速をつけて、ゆっくり始まり、ゆっくり終わる（デフォルト）</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ease-in</td>
+        <td style="border:none;">ゆっくり始まり、一定速度で終わる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ease-out</td>
+        <td style="border:none;">一定速度で始まり、ゆっくり終わる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ease-in-out</td>
+        <td style="border:none;">ゆっくり始まり、ゆっくり終わる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">linear</td>
+        <td style="border:none;">最初から最後まで一定速度</td>
+    </tr>
+</table>
+
+
+
+使用例（css）
+
+
+```css
+div.timing {
+    border-style: double; height: 100px; width: 100px; 
+    padding: 0px; margin:0px
+}
+
+p.timing1 {
+    background-color:red; width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    transition-property: transform;
+    transition-duration: 5s;
+    transition-timing-function: ease;
+}
+
+p.timing2 {
+    background-color:red; width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    transition-property: background-color;
+    transition-duration: 5s;
+    transition-timing-function: linear;
+}
+
+p[class^="timing"]:hover{
+    transform:rotate(360deg);
+}
+```
+
+
+表示例
+
+<hr>
+<iframe width="400" height="300" src="/css_sample_pages/transition-timing-function.html">
 </iframe>
 <hr>
