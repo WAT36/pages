@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSSでのフォント | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.63f8a54238337ec975633cf70142ed48d03e319265539df7b3888ebc960c34a5.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2f front-end\2f css_font\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>CSSでのフォント</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="cssでのフォント">CSSでのフォント</h1>
+
+<p>CSSでのフォントについて示す。</p>
+
+<h2 id="webフォント">Webフォント</h2>
+
+<p>CSSでフォントを指定しても、ユーザーの環境にそのフォントがインストールされていなければ使用することは基本できない。</p>
+
+<p>しかし、<strong>@font-face</strong>という書式を使用することで、Web上にあるフォントを利用でき、自身のブラウザに表示させることができる。</p>
+
+<p>設定できる値は以下の通り。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">font-family</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">利用するフォントの名前</td>
+    </tr>
+    <tr>
+        <td style="border:none;">src</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">フォントのURL。url(...)の形で指定する</td>
+    </tr>
+</table>
+
+<p>使用例として、下記のhtmlをiframeに組み込んで表示させてみる。</p>
+
+<p>(フォントはGoogle Fonts(<a href="https://fonts.google.com/specimen/Rowdies?sidebar.open&amp;selection.family=Rowdies">https://fonts.google.com/specimen/Rowdies?sidebar.open&amp;selection.family=Rowdies</a>)から拝借しました)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">title</span>&gt;font-faceサンプル&lt;/<span style="color:#f92672">title</span>&gt;
+
+&lt;<span style="color:#f92672">style</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span>&gt;
+    @<span style="color:#66d9ef">font-face</span> {
+        <span style="color:#f92672">font-family</span><span style="color:#f92672">:</span> <span style="color:#f92672">Rowdies</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">src</span><span style="color:#f92672">:</span> <span style="color:#f92672">url</span><span style="color:#f92672">(../</span><span style="color:#f92672">fonts</span><span style="color:#f92672">/</span><span style="color:#f92672">Rowdies-Regular</span>.<span style="color:#a6e22e">ttf</span><span style="color:#f92672">)</span>
+    }
+
+    <span style="color:#f92672">h1</span> {
+        <span style="color:#66d9ef">font-family</span>: Rowdies
+    }
+&lt;/<span style="color:#f92672">style</span>&gt;
+
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+
+&lt;<span style="color:#f92672">h1</span>&gt;The sample of font-face.&lt;/<span style="color:#f92672">h1</span>&gt;
+
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<p>iframe使用例</p>
+
+<pre><code>&lt;iframe width=&quot;500&quot; height=&quot;200&quot; src=&quot;/css_sample_pages/font-face.html&quot;&gt;
+&lt;/iframe&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><iframe width="500" height="200" src="https://WAT36.github.io/pages/css_sample_pages/font-face.html">
+</iframe>
+<hr></p>
+
+<h2 id="font-familyプロパティ">font-familyプロパティ</h2>
+
+<p>font-familyプロパティは、フォントの種類を設定するプロパティである。</p>
+
+<p>値にはフォントの種類名を記述する。スペース区切りで複数入力することもできる。その際は、左にあるものから優先されて使われる。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;p style=&quot;font-family:serif;&quot;&gt;The example of font 1&lt;/p&gt;
+&lt;p style=&quot;font-family:cursive;&quot;&gt;The example of font 2&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p style="font-family:serif;">The example of font 1</p>
+<p style="font-family:cursive;">The example of font 2</p>
+<hr></p>
+
+<h2 id="font-sizeプロパティ">font-sizeプロパティ</h2>
+
+<p>font-sizeプロパティは、フォントサイズを設定するプロパティである。</p>
+
+<p>設定できる値と意味は以下の通り。</p>
+
+<table>
+    <tr>
+        <td>数値(単位px)</td>
+        <td>・・</td>
+        <td>数値に応じたフォントサイズになる</td>
+    </tr>
+    <tr>
+        <td>パーセンテージ(単位%)</td>
+        <td>・・</td>
+        <td>親要素のフォントサイズに対するパーセンテージ分のフォントサイズになる</td>
+    </tr>
+    <tr>
+        <td>xx-small</td>
+        <td rowspan="7">・・</td>
+        <td rowspan="7">指定したキーワードで大きさが決まる。xx-smallが最も小さく、xx-largeが最も大きくなる</td>
+    </tr>
+    <tr>
+        <td>x-small</td>
+    </tr>
+    <tr>
+        <td>small</td>
+    </tr>
+    <tr>
+        <td>medium</td>
+    </tr>
+    <tr>
+        <td>large</td>
+    </tr>
+    <tr>
+        <td>x-large</td>
+    </tr>
+    <tr>
+        <td>xx-large</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;p style=&quot;font-size:xx-small;&quot;&gt;xx-small&lt;/p&gt;
+&lt;p style=&quot;font-size:medium;&quot;&gt;medium&lt;/p&gt;
+&lt;p style=&quot;font-size:xx-large;&quot;&gt;xx-large&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p style="font-size:xx-small;">xx-small</p>
+<p style="font-size:medium;">medium</p>
+<p style="font-size:xx-large;">xx-large</p>
+<hr></p>
+
+<h2 id="font-weightプロパティ">font-weightプロパティ</h2>
+
+<p>font-weightプロパティは、フォントの太さを設定するプロパティである。</p>
+
+<p>設定できる値と意味は以下の通り。</p>
+
+<table>
+    <tr>
+        <td>bold</td>
+        <td>・・</td>
+        <td>太字にする</td>
+    </tr>
+    <tr>
+        <td>100</td>
+        <td rowspan="9">・・</td>
+        <td rowspan="9">指定したキーワードで大きさが決まる。100が最も小さく、900が最も大きくなる.400の時が基準で、「bold」の時は700の時の太さになる。(しかし、フォントによっては９段階の太さを設定していないものもあるので、値を変えても変化がない場合もある)</td>
+    </tr>
+    <tr>
+        <td>200</td>
+    </tr>
+    <tr>
+        <td>300</td>
+    </tr>
+    <tr>
+        <td>400</td>
+    </tr>
+    <tr>
+        <td>500</td>
+    </tr>
+    <tr>
+        <td>600</td>
+    </tr>
+    <tr>
+        <td>700</td>
+    </tr>
+    <tr>
+        <td>800</td>
+    </tr>
+    <tr>
+        <td>900</td>
+    </tr>
+    <tr>
+        <td>bolder</td>
+        <td>・・</td>
+        <td>現在の太さよりも一段階太くする</td>
+    </tr>
+    <tr>
+        <td>lighter</td>
+        <td>・・</td>
+        <td>現在の太さよりも一段階細くする</td>
+    </tr>
+    <tr>
+        <td>normal</td>
+        <td>・・</td>
+        <td>標準の太さ(400)にする</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;p style=&quot;font-weight:100;&quot;&gt;font-weight:100&lt;/p&gt;
+&lt;p style=&quot;font-weight:300;&quot;&gt;font-weight:300&lt;/p&gt;
+&lt;p style=&quot;font-weight:500;&quot;&gt;font-weight:500&lt;/p&gt;
+&lt;p style=&quot;font-weight:700;&quot;&gt;font-weight:700&lt;/p&gt;
+&lt;p style=&quot;font-weight:900;&quot;&gt;font-weight:900&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p style="font-weight:100;">font-weight:100</p>
+<p style="font-weight:300;">font-weight:300</p>
+<p style="font-weight:500;">font-weight:500</p>
+<p style="font-weight:700;">font-weight:700</p>
+<p style="font-weight:900;">font-weight:900</p>
+<hr></p>
+
+<h2 id="font-styleプロパティ">font-styleプロパティ</h2>
+
+<p>font-styleプロパティは、イタリックまたは斜体の書体を選択するためのプロパティである。</p>
+
+<p>設定できる値と意味は以下の通り。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">oblique</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">斜体で表示する。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">italic</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">イタリック体で表示する。フォントにイタリック体での表示形式がない場合は、「oblique」の時と同じになる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">normal</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">標準のフォントで表示</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;p style=&quot;font-style:oblique;&quot;&gt;oblique&lt;/p&gt;
+&lt;p style=&quot;font-style:italic ;&quot;&gt;italic&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p style="font-style:oblique;">oblique</p>
+<p style="font-style:italic ;">italic</p>
+<hr></p>
+
+<h2 id="font-variantプロパティ">font-variantプロパティ</h2>
+
+<p>font-variantプロパティは、フォントをスモールキャップ（小文字を小さい大文字で表す形式）で表したい時に利用するプロパティである。</p>
+
+<p>設定できる値と意味は以下の通り。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">normal</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">標準のフォントで表示</td>
+    </tr>
+    <tr>
+        <td style="border:none;">small-caps</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">スモールキャップで表示。ただしスモールキャップが設定されていないフォントでは、単純に大文字を縮小したものを小文字として表示する。</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;p style=&quot;font-variant:normal    ;&quot;&gt;ABCDEFGhijklmn&lt;/p&gt;
+&lt;p style=&quot;font-variant:small-caps;&quot;&gt;ABCDEFGhijklmn&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p style="font-variant:normal    ;">ABCDEFGhijklmn</p>
+<p style="font-variant:small-caps;">ABCDEFGhijklmn</p>
+<hr></p>
+
+<h2 id="fontプロパティ">fontプロパティ</h2>
+
+<p>fontプロパティは、これまでに出たfont-xx関連のプロパティの値をまとめて指定できるプロパティである。</p>
+
+<p>値はスペース区切りで複数入力する方式だが、左から以下の順番で指定するという決まりがあるので注意。</p>
+
+<ul>
+<li>font-weight,font-style,font-variantの値（省略可）</li>
+<li>font-sizeの値（省略不可）</li>
+<li>line-heightの値をfont-sizeの後にスラッシュを書いて指定（省略可）</li>
+<li>font-familyの値（省略不可）</li>
+</ul>
+
+<p>使用例</p>
+
+<pre><code>&lt;p style=&quot;font: oblique xx-large cursive;&quot;&gt;ABCDEFGhijklmn&lt;/p&gt;
+&lt;p style=&quot;font: 900 small-caps medium serif;&quot;&gt;ABCDEFGhijklmn&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p style="font: oblique xx-large cursive;">ABCDEFGhijklmn</p>
+<p style="font: 900 small-caps medium serif;">ABCDEFGhijklmn</p>
+<hr></p>
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/c6e24aefc24a3eb54296772ebb27406e1b1d368e" title='Last modified Jul 22, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 22, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#cssでのフォント">CSSでのフォント</a>
+<ul>
+<li><a href="#webフォント">Webフォント</a></li>
+<li><a href="#font-familyプロパティ">font-familyプロパティ</a></li>
+<li><a href="#font-sizeプロパティ">font-sizeプロパティ</a></li>
+<li><a href="#font-weightプロパティ">font-weightプロパティ</a></li>
+<li><a href="#font-styleプロパティ">font-styleプロパティ</a></li>
+<li><a href="#font-variantプロパティ">font-variantプロパティ</a></li>
+<li><a href="#fontプロパティ">fontプロパティ</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

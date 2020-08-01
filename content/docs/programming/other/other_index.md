@@ -15,4 +15,8 @@ bookToc: false
  - [変数の型を調べる]({{< relref "/docs/programming/other/type.md" >}})
 - [関数、メソッドのヘルプを見る(Python)]({{< relref "/docs/programming/other/help.md" >}})
 - [コメントアウト]({{< relref "/docs/programming/other/comment.md" >}})
+- [Null]({{< relref "/docs/programming/other/null.md" >}})
 - [正規表現]({{< relref "/docs/programming/other/re.md" >}})
+- [ジェネリクス]({{< relref "/docs/programming/other/generics.md" >}})
+- Web通信
+ - Webリクエストを送る・レスポンスを受け取る

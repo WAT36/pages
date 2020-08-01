@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ジェネリクス | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.63f8a54238337ec975633cf70142ed48d03e319265539df7b3888ebc960c34a5.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fother\2fgenerics\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>ジェネリクス</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="ジェネリクス">ジェネリクス</h1>
+
+<p>ジェネリクスについて。</p>
+
+<p>ジェネリクスとは、特定の型に制限されない、抽象的かつ汎用的なコードを記述するための機能である。</p>
+
+<p>変数の型を明記することが必要な言語では、変数を宣言するときにその変数の型名も書く必要があり、またその変数にはその型の値しかいれることができない。</p>
+
+<p>しかし、ジェネリクスを利用すると、引数の型は抽象的なものになり、様々な型の引数を渡すことが可能になる。</p>
+
+<p>言語による仕様を示す。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-comment" style="display: none;" id="tabs-comment-0" checked="checked" />
+  <label for="tabs-comment-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Javaでは<strong>ダイヤモンド演算子</strong>を使ってジェネリクスを宣言する。</p>
+
+<p>クラスを定義する時、及びジェネリクスを利用する変数を定義する時、型名の後ろに&lt;クラス名&gt;というように宣言する。</p>
+
+<p>これにより、そのクラス、インスタンスを利用する時の引数にはその型の引数のみ利用できるようになる。</p>
+
+<p>インスタンス宣言時に利用できる型を定義できるので、結果としてそのクラスとしてはどの型のデータも利用することが可能になる。</p>
+
+<p>実際の利用例としては、Collectionsクラスを元としているListクラスやMapクラスがある。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span>();
+Map<span style="color:#f92672">&lt;</span>K,V<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;</span>K,V<span style="color:#f92672">&gt;</span>();</code></pre></div>
+<p>実際に利用する時はこのT,K,VをIntegerやStringなどの具体的な型にする。</p>
+
+<p>また、自分でクラスを定義するときもジェネリクスが利用できる。</p>
+
+<p>実装例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Gen</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> {
+    <span style="color:#75715e">//T型のフィールド変数t
+</span><span style="color:#75715e"></span>    T <span style="color:#a6e22e">t</span>;
+ 
+    <span style="color:#75715e">//T型の値を引数とする
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Gen</span>(T <span style="color:#a6e22e">t</span>){
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">t</span> <span style="color:#f92672">=</span> t;
+    }
+}</code></pre></div>
+  </div>
+
+  <input type="radio" name="tabs-comment" style="display: none;" id="tabs-comment-1"  />
+  <label for="tabs-comment-1">
+    Swift
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Swiftでは関数の定義時ジェネリクスを利用する。</p>
+
+<p>定義方法は&lt;&gt;で囲い、その中に記述する。</p>
+
+<p>例を以下に記載する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">min</span>&lt;T : Comparable&gt;(<span style="color:#66d9ef">_</span> x: T, <span style="color:#66d9ef">_</span> y: T) -&gt; T</code></pre></div>
+<p>この例では、minという関数には引数が２つ、かつその両方は同じ型で返り値も同じ型、また利用する型はComparableプロトコルに準拠している物でなければならないという指定である。</p>
+
+<p>(・・後ほど追記します)</p>
+
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/645fee45c10b955fba9c2d48b1e419e541ed2ef3" title='Last modified Jul 21, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 21, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

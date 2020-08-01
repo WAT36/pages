@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>マルチカラム | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.63f8a54238337ec975633cf70142ed48d03e319265539df7b3888ebc960c34a5.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2f front-end\2f css_multicolumn\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>マルチカラム</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="マルチカラム">マルチカラム</h1>
+
+<p>マルチカラムとは、ボックスの内部を複数の段に分割してできるレイアウトである。</p>
+
+<p>ここでは、マルチカラムについてを述べる。</p>
+
+<h2 id="column-countプロパティ">column-countプロパティ</h2>
+
+<p>column-countプロパティは、何段組みするかを設定するプロパティである。</p>
+
+<p>値は1以上の整数またはautoで指定する。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;p style=&quot;background-color: #66ff99; width:500px; height:300px; overflow:hidden; column-count:3&quot;&gt;
+祇園精舍の鐘の声、諸行無常の響きあり。
+娑羅双樹の花の色、盛者必衰の理をあらはす。
+おごれる人も久しからず、ただ春の夜の夢のごとし。
+猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
+遠く異朝をとぶらへば、秦の趙高、漢の王莽、梁の朱忌、唐の祿山、これらは皆旧主先皇の政にも従はず、樂しみをきはめ、諌めをも思ひ入れず、天下の乱れん事を悟らずして、民間の愁ふるところを知らざつしかば、久しからずして、亡じにし者どもなり。
+近く本朝をうかがふに、承平の将門、天慶の純友、康和の義親、平治の信頼、これらはおごれる心も猛き事も、皆とりどりにこそありしかども、ま近くは、六波羅の入道前太政大臣平朝臣清盛公と申しし人のありさま、伝えへ承るこそ、心もことばも及ばれね。
+&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p style="background-color: #66ff99; width:500px; height:300px; overflow:hidden; column-count:3">
+祇園精舍の鐘の声、諸行無常の響きあり。
+娑羅双樹の花の色、盛者必衰の理をあらはす。
+おごれる人も久しからず、ただ春の夜の夢のごとし。
+猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
+遠く異朝をとぶらへば、秦の趙高、漢の王莽、梁の朱忌、唐の祿山、これらは皆旧主先皇の政にも従はず、樂しみをきはめ、諌めをも思ひ入れず、天下の乱れん事を悟らずして、民間の愁ふるところを知らざつしかば、久しからずして、亡じにし者どもなり。
+近く本朝をうかがふに、承平の将門、天慶の純友、康和の義親、平治の信頼、これらはおごれる心も猛き事も、皆とりどりにこそありしかども、ま近くは、六波羅の入道前太政大臣平朝臣清盛公と申しし人のありさま、伝えへ承るこそ、心もことばも及ばれね。
+</p>
+<hr></p>
+
+<h2 id="column-widthプロパティ">column-widthプロパティ</h2>
+
+<p>column-widthプロパティは、段の幅を指定するプロパティである。値は単位付きの数値またはautoで指定する。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;p style=&quot;background-color: #66ff99; width:700px; height:300px; column-width: 100px;&quot;&gt;
+祇園精舍の鐘の声、諸行無常の響きあり。
+娑羅双樹の花の色、盛者必衰の理をあらはす。
+おごれる人も久しからず、ただ春の夜の夢のごとし。
+猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
+遠く異朝をとぶらへば、秦の趙高、漢の王莽、梁の朱忌、唐の祿山、これらは皆旧主先皇の政にも従はず、樂しみをきはめ、諌めをも思ひ入れず、天下の乱れん事を悟らずして、民間の愁ふるところを知らざつしかば、久しからずして、亡じにし者どもなり。
+近く本朝をうかがふに、承平の将門、天慶の純友、康和の義親、平治の信頼、これらはおごれる心も猛き事も、皆とりどりにこそありしかども、ま近くは、六波羅の入道前太政大臣平朝臣清盛公と申しし人のありさま、伝えへ承るこそ、心もことばも及ばれね。
+&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p style="background-color: #66ff99; width:700px; height:300px; column-width: 100px;">
+祇園精舍の鐘の声、諸行無常の響きあり。
+娑羅双樹の花の色、盛者必衰の理をあらはす。
+おごれる人も久しからず、ただ春の夜の夢のごとし。
+猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
+遠く異朝をとぶらへば、秦の趙高、漢の王莽、梁の朱忌、唐の祿山、これらは皆旧主先皇の政にも従はず、樂しみをきはめ、諌めをも思ひ入れず、天下の乱れん事を悟らずして、民間の愁ふるところを知らざつしかば、久しからずして、亡じにし者どもなり。
+近く本朝をうかがふに、承平の将門、天慶の純友、康和の義親、平治の信頼、これらはおごれる心も猛き事も、皆とりどりにこそありしかども、ま近くは、六波羅の入道前太政大臣平朝臣清盛公と申しし人のありさま、伝えへ承るこそ、心もことばも及ばれね。
+</p>
+<hr></p>
+
+<h2 id="columnsプロパティ">columnsプロパティ</h2>
+
+<p>columnsプロパティは、前述のcolumn-count,column-widthをまとめて指定できるプロパティである。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;p style=&quot;background-color: #66ff99; width:700px; height:300px; overflow:hidden; columns:2&quot;&gt;
+祇園精舍の鐘の声、諸行無常の響きあり。
+娑羅双樹の花の色、盛者必衰の理をあらはす。
+おごれる人も久しからず、ただ春の夜の夢のごとし。
+猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
+&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p style="background-color: #66ff99; width:700px; height:300px; overflow:hidden; columns:2">
+祇園精舍の鐘の声、諸行無常の響きあり。
+娑羅双樹の花の色、盛者必衰の理をあらはす。
+おごれる人も久しからず、ただ春の夜の夢のごとし。
+猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
+</p>
+<hr></p>
+
+<h2 id="column-gapプロパティ">column-gapプロパティ</h2>
+
+<p>column-gapプロパティは、段の間隔を設定するプロパティである。値は単位付きの数値を指定する。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;p style=&quot;background-color: #66ff99; width:700px; height:100px; overflow:hidden; column-count:2; column-gap:100px&quot;&gt;
+祇園精舍の鐘の声、諸行無常の響きあり。
+娑羅双樹の花の色、盛者必衰の理をあらはす。
+おごれる人も久しからず、ただ春の夜の夢のごとし。
+猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
+&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p style="background-color: #66ff99; width:700px; height:100px; overflow:hidden; column-count:2; column-gap:100px">
+祇園精舍の鐘の声、諸行無常の響きあり。
+娑羅双樹の花の色、盛者必衰の理をあらはす。
+おごれる人も久しからず、ただ春の夜の夢のごとし。
+猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
+</p>
+<hr></p>
+
+<h2 id="column-ruleプロパティ">column-ruleプロパティ</h2>
+
+<p>段と段の間にはボーダーと同様の線を引くことができる。その線を設定するプロパティがcolumn-rule系のプロパティである。</p>
+
+<p>このプロパティにはいくつか種類があり、以下の通りである。</p>
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">プロパティ名</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">column-rule-style</td>
+        <td style="border:none;">線の線種</td>
+    </tr>
+    <tr>
+        <td style="border:none;">column-rule-color</td>
+        <td style="border:none;">線の色</td>
+    </tr>
+    <tr>
+        <td style="border:none;">column-rule-width</td>
+        <td style="border:none;">線の太さ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">column-rule</td>
+        <td style="border:none;">上記のプロパティの値を空白区切りでまとめて指定</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;p style=&quot;background-color: #66ff99; width:700px; height:300px; column-count: 3; column-rule: 3px double red;&quot;&gt;
+祇園精舍の鐘の声、諸行無常の響きあり。
+娑羅双樹の花の色、盛者必衰の理をあらはす。
+おごれる人も久しからず、ただ春の夜の夢のごとし。
+猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
+遠く異朝をとぶらへば、秦の趙高、漢の王莽、梁の朱忌、唐の祿山、これらは皆旧主先皇の政にも従はず、樂しみをきはめ、諌めをも思ひ入れず、天下の乱れん事を悟らずして、民間の愁ふるところを知らざつしかば、久しからずして、亡じにし者どもなり。
+近く本朝をうかがふに、承平の将門、天慶の純友、康和の義親、平治の信頼、これらはおごれる心も猛き事も、皆とりどりにこそありしかども、ま近くは、六波羅の入道前太政大臣平朝臣清盛公と申しし人のありさま、伝えへ承るこそ、心もことばも及ばれね。
+&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p style="background-color: #66ff99; width:700px; height:300px; column-count: 3; column-rule: 3px double red;">
+祇園精舍の鐘の声、諸行無常の響きあり。
+娑羅双樹の花の色、盛者必衰の理をあらはす。
+おごれる人も久しからず、ただ春の夜の夢のごとし。
+猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
+遠く異朝をとぶらへば、秦の趙高、漢の王莽、梁の朱忌、唐の祿山、これらは皆旧主先皇の政にも従はず、樂しみをきはめ、諌めをも思ひ入れず、天下の乱れん事を悟らずして、民間の愁ふるところを知らざつしかば、久しからずして、亡じにし者どもなり。
+近く本朝をうかがふに、承平の将門、天慶の純友、康和の義親、平治の信頼、これらはおごれる心も猛き事も、皆とりどりにこそありしかども、ま近くは、六波羅の入道前太政大臣平朝臣清盛公と申しし人のありさま、伝えへ承るこそ、心もことばも及ばれね。
+</p>
+<hr></p>
+
+<h2 id="column-spanプロパティ">column-spanプロパティ</h2>
+
+<p>column-spanプロパティは、ボックスが段組みされている時に、指定した要素を段の中に収めず、ボックスの幅いっぱい（全ての段を跨いで）に表示させるプロパティである。</p>
+
+<p>値はall(全ての段に跨いで表示)、none（段を跨いで表示させない）が指定できる。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;div style=&quot;background-color: #66ff99; width:800px; height:300px; overflow:hidden; column-count:3&quot;&gt;
+&lt;p&gt;
+祇園精舍の鐘の声、諸行無常の響きあり。
+娑羅双樹の花の色、盛者必衰の理をあらはす。
+おごれる人も久しからず、ただ春の夜の夢のごとし。
+猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
+&lt;/p&gt;
+&lt;p style=&quot;background-color: red; column-span: all;&quot;&gt;〜〜中略〜〜&lt;/p&gt;
+&lt;p&gt;
+遠く異朝をとぶらへば、秦の趙高、漢の王莽、梁の朱忌、唐の祿山、これらは皆旧主先皇の政にも従はず、樂しみをきはめ、諌めをも思ひ入れず、天下の乱れん事を悟らずして、民間の愁ふるところを知らざつしかば、久しからずして、亡じにし者どもなり。
+近く本朝をうかがふに、承平の将門、天慶の純友、康和の義親、平治の信頼、これらはおごれる心も猛き事も、皆とりどりにこそありしかども、ま近くは、六波羅の入道前太政大臣平朝臣清盛公と申しし人のありさま、伝えへ承るこそ、心もことばも及ばれね。
+&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><div style="background-color: #66ff99; width:800px; height:300px; overflow:hidden; column-count:3">
+<p>
+祇園精舍の鐘の声、諸行無常の響きあり。
+娑羅双樹の花の色、盛者必衰の理をあらはす。
+おごれる人も久しからず、ただ春の夜の夢のごとし。
+猛き者もつひには滅びぬ、ひとへに風の前の塵に同じ。
+</p>
+<p style="background-color: red; column-span: all;">〜〜中略〜〜</p>
+<p>
+遠く異朝をとぶらへば、秦の趙高、漢の王莽、梁の朱忌、唐の祿山、これらは皆旧主先皇の政にも従はず、樂しみをきはめ、諌めをも思ひ入れず、天下の乱れん事を悟らずして、民間の愁ふるところを知らざつしかば、久しからずして、亡じにし者どもなり。
+近く本朝をうかがふに、承平の将門、天慶の純友、康和の義親、平治の信頼、これらはおごれる心も猛き事も、皆とりどりにこそありしかども、ま近くは、六波羅の入道前太政大臣平朝臣清盛公と申しし人のありさま、伝えへ承るこそ、心もことばも及ばれね。
+</p>
+</div>
+<hr></p>
+
+<h2 id="フレキシブルボックスレイアウト">フレキシブルボックスレイアウト</h2>
+
+<p>displayプロパティにおいて、値をflexと指定すると、その内部の子要素を縦、横、逆順などの順番で配置することができる。このような配置をフレキシブルボックスレイアウトという。</p>
+
+<p>順番の指定は、<strong>flex-direction</strong>プロパティで指定できる。指定する値と意味は以下の通り。デフォルトではrowである。</p>
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">プロパティ名</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">row</td>
+        <td style="border:none;">横（左から右）</td>
+    </tr>
+    <tr>
+        <td style="border:none;">row-reverse</td>
+        <td style="border:none;">横（右から左）</td>
+    </tr>
+    <tr>
+        <td style="border:none;">column</td>
+        <td style="border:none;">縦（上から下）</td>
+    </tr>
+    <tr>
+        <td style="border:none;">column-reverse</td>
+        <td style="border:none;">縦（下から上）</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;div style=&quot;display:flex; flex-direction:row&quot;&gt;
+&lt;p style=&quot;background-color:red&quot;&gt;p 1個目&lt;/p&gt;
+&lt;p style=&quot;background-color:yellow&quot;&gt;p 2個目&lt;/p&gt;
+&lt;p style=&quot;background-color:green&quot;&gt;p 3個目&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><div style="display:flex; flex-direction:row">
+<p style="background-color:red">p 1個目</p>
+<p style="background-color:yellow">p 2個目</p>
+<p style="background-color:green">p 3個目</p>
+</div>
+<hr></p>
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/4ae9f7c0dde16984732ba49a2970c922b7a22dd4" title='Last modified Jul 31, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 31, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#マルチカラム">マルチカラム</a>
+<ul>
+<li><a href="#column-countプロパティ">column-countプロパティ</a></li>
+<li><a href="#column-widthプロパティ">column-widthプロパティ</a></li>
+<li><a href="#columnsプロパティ">columnsプロパティ</a></li>
+<li><a href="#column-gapプロパティ">column-gapプロパティ</a></li>
+<li><a href="#column-ruleプロパティ">column-ruleプロパティ</a></li>
+<li><a href="#column-spanプロパティ">column-spanプロパティ</a></li>
+<li><a href="#フレキシブルボックスレイアウト">フレキシブルボックスレイアウト</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

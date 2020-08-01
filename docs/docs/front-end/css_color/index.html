@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSSでの色 | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.63f8a54238337ec975633cf70142ed48d03e319265539df7b3888ebc960c34a5.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2f front-end\2f css_color\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>CSSでの色</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="cssでの色の表現">CSSでの色の表現</h1>
+
+<p>CSSでの色の表現について述べる。</p>
+
+<h2 id="16進数の値">16進数の値</h2>
+
+<p>方法の一つとして、#(シャープ)と16進数6桁の値で色を表現する方法がある。</p>
+
+<p>6桁の内、上2桁をR(赤),中2桁をG(緑),下2桁をB(青)として、それぞれ0x00~0xff(255)の値で表現する。</p>
+
+<p>例えば、RGB値が10進数で0,0,255の場合は、</p>
+
+<pre><code>#0000ff
+</code></pre>
+
+<p>と示すことができる。</p>
+
+<h2 id="色を示すキーワード">色を示すキーワード</h2>
+
+<p>16進数による数値でなくとも、基本的な色を使いたい場合はその色を示すキーワードを指定することで、その色を使用できる。</p>
+
+<p>キーワードの例は以下のとおり。</p>
+
+<table>
+    <tr>
+        <th>キーワード</th>
+        <th>色</th>
+        <th>16進数の値</th>
+    </tr>
+    <tr>
+        <td>white</td>
+        <td style="background-color:white">　　</td>
+        <td>#ffffff</td>
+    </tr>
+    <tr>
+        <td>black</td>
+        <td style="background-color:black">　　</td>
+        <td>#000000</td>
+    </tr>
+    <tr>
+        <td>gray</td>
+        <td style="background-color:gray">　　</td>
+        <td>#808080</td>
+    </tr>
+    <tr>
+        <td>red</td>
+        <td style="background-color:red">　　</td>
+        <td>#ff0000</td>
+    </tr>
+    <tr>
+        <td>green</td>
+        <td style="background-color:green">　　</td>
+        <td>#00ff00</td>
+    </tr>
+    <tr>
+        <td>blue</td>
+        <td style="background-color:blue">　　</td>
+        <td>#0000ff</td>
+    </tr>
+    <tr>
+        <td>yellow</td>
+        <td style="background-color:yellow">　　</td>
+        <td>#ffff00</td>
+    </tr>
+    <tr>
+        <td>fuchsia</td>
+        <td style="background-color:fuchsia">　　</td>
+        <td>#ff00ff</td>
+    </tr>
+    <tr>
+        <td>aqua</td>
+        <td style="background-color:aqua">　　</td>
+        <td>#00ffff</td>
+    </tr>
+</table>
+
+<h2 id="rgb-rgba-による指定">rgb(),rgba() による指定</h2>
+
+<p>rgb(),rgba()という関数形式の書式を利用すると、RGBの値を10進数のまま指定できる。</p>
+
+<p>rgb()は、r、g、bの値(範囲は0~255)をそれぞれ引数として入力して利用する。</p>
+
+<p>rgba()は、rgb（）に加え不透明度を表すalphaの値(範囲は0.0~1.0)も引数として指定できるようにした関数である。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;background-color:rgb(255,0,0)&quot;&gt;　　&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;background-color:rgba(255,0,0,0.5)&quot;&gt;　　&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><table>
+    <tr>
+        <td style="background-color:rgb(255,0,0)">　　</td>
+    </tr>
+    <tr>
+        <td style="background-color:rgba(255,0,0,0.5)">　　</td>
+    </tr>
+</table>
+<hr></p>
+
+<h2 id="hsl-hsla-による指定">hsl(),hsla()による指定</h2>
+
+<p>rgb()と違い、hue(色相),saturation(彩度),lightness(明度)の組み合わせで色を表現する<strong>hsl()</strong>でも色を指定できる。</p>
+
+<p>h(色相)は0~359,s(彩度),l(明度)は0%~100%の範囲で値を指定する。</p>
+
+<p>これに加え、不透明度を表すalphaの値(範囲は0.0~1.0)も引数として指定できるようにしたものが<strong>hsla()</strong>である。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;background-color:hsl(180,50%,50%)&quot;&gt;　　&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;background-color:hsla(180,50%,50%,0.5)&quot;&gt;　　&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><table>
+    <tr>
+        <td style="background-color:hsl(180,50%,50%)">　　</td>
+    </tr>
+    <tr>
+        <td style="background-color:hsla(180,50%,50%,0.5)">　　</td>
+    </tr>
+</table>
+<hr></p>
+
+<h1 id="cssでの色の設定">CSSでの色の設定</h1>
+
+<p>ここで設定した色のHTML文書への適用方法を述べる。</p>
+
+<h2 id="colorプロパティ">colorプロパティ</h2>
+
+<p>colorプロパティは、要素内容の文字色を設定するプロパティである。全ての要素で利用可能である。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;p style=&quot;color:red&quot;  &gt;ここは赤です。&lt;/p&gt;
+&lt;p style=&quot;color:green&quot;&gt;ここは緑です。&lt;/p&gt;
+&lt;p style=&quot;color:blue&quot; &gt;ここは青です。&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p style="color:red"  >ここは赤です。</p>
+<p style="color:green">ここは緑です。</p>
+<p style="color:blue" >ここは青です。</p>
+<hr></p>
+
+<h2 id="opacityプロパティ">opacityプロパティ</h2>
+
+<p>opacityプロパティは、要素内容の文字の不透明度を設定するプロパティである。</p>
+
+<p>設定する値は、0.0 (透明) から1.0 (不透明) である。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;p style=&quot;opacity:0.2&quot;  &gt;不透明度20%です。&lt;/p&gt;
+&lt;p style=&quot;opacity:0.4&quot;  &gt;不透明度40%です。&lt;/p&gt;
+&lt;p style=&quot;opacity:0.6&quot;  &gt;不透明度60%です。&lt;/p&gt;
+&lt;p style=&quot;opacity:0.8&quot;  &gt;不透明度80%です。&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p style="opacity:0.2"  >不透明度20%です。</p>
+<p style="opacity:0.4"  >不透明度40%です。</p>
+<p style="opacity:0.6"  >不透明度60%です。</p>
+<p style="opacity:0.8"  >不透明度80%です。</p>
+<hr></p>
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/dcf1280ca8de1376c3763ee9aeabdcf295e213f3" title='Last modified Jul 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 11, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#cssでの色の表現">CSSでの色の表現</a>
+<ul>
+<li><a href="#16進数の値">16進数の値</a></li>
+<li><a href="#色を示すキーワード">色を示すキーワード</a></li>
+<li><a href="#rgb-rgba-による指定">rgb(),rgba() による指定</a></li>
+<li><a href="#hsl-hsla-による指定">hsl(),hsla()による指定</a></li>
+</ul></li>
+<li><a href="#cssでの色の設定">CSSでの色の設定</a>
+<ul>
+<li><a href="#colorプロパティ">colorプロパティ</a></li>
+<li><a href="#opacityプロパティ">opacityプロパティ</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>
