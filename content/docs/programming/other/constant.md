@@ -18,13 +18,26 @@ bookToc: false
 {{< tabs "type" >}}
 {{< tab "Java" >}}
 
-Javaで
+Javaで定数を宣言するには、宣言時にデータ型の前に**final**修飾子をつける。
+
+```
+final データ型 定数名 = 初期値;
+```
+
+定数として宣言すると、初期化以降は値を代入し直すことはできない。
+
+例
+
+```java
+final int N = 50;
+```
+
 
 {{< /tab >}}
 {{< tab "Python" >}}
 
 
-Pythonは
+Pythonには定数という仕様は存在しない。
 
 {{< /tab >}}
 {{< tab "Swift" >}}
