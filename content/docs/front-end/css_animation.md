@@ -349,6 +349,11 @@ p[class^="timing"]:hover{
 ```
 
 
+使用例（html、ここもコード載せると何故か変になる・・のでスクショを記載）
+
+<img src="/img/front-end/transition-timing-function.png" width=100%>
+
+
 表示例
 
 <hr>
