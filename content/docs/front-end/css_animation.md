@@ -228,3 +228,16 @@ transition-propertyは、トランジションを適用するプロパティ名�
 </table>
 
 (使用例は次にまとめる)
+
+## transition-duration プロパティ
+
+transition-durationプロパティは、トランジションをどれほどの時間をかけて実行するかを設定するプロパティである。
+
+値は単位付きの数値で、単位はs（秒）,ms（ミリ秒）のいずれかで指定する。
+
+表示例
+
+<hr>
+<iframe width="400" height="300" src="/css_sample_pages/transition-duration.html">
+</iframe>
+<hr>
