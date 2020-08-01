@@ -269,6 +269,11 @@ p.sample2:active{
 
 ```
 
+使用例（html、コード載せると何故か変になる・・のでスクショを記載）
+
+<img src="/img/front-end/transition-duration.png" width=100%>
+
+
 
 表示例
 
