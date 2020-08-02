@@ -124,3 +124,4 @@ print(dp[n][W])
 
 図で表すと以下のようになる。
 
+<img src="/img/procon/dp_applied3.png" width=60%>
