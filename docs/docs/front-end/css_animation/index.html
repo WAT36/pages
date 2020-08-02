@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.dd8ce05770c94d1d2adea017f497f1923b194030b372258234203716f295bd43.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.cd2f2d03dddd8c80f4490a603bb71a40d877a8b645e20a147b0ce3959dca94f3.js"></script>
 
 
 
@@ -559,6 +559,55 @@ https://github.com/alex-shpak/hugo-book
 <p>animation-nameプロパティは、キーフレーム名を指定して実行させるためのプロパティである。</p>
 
 <p>（使用例は次節でまとめて記載）</p>
+
+<h2 id="animation-duration-プロパティ">animation-duration プロパティ</h2>
+
+<p>animation-durationプロパティは、アニメーションの再生時間を設定するプロパティである。</p>
+
+<p>値は単位付きの数値で、単位はs（秒）,ms（ミリ秒）のいずれかで指定する。</p>
+
+<p>使用例（css）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">key1</span> {
+    <span style="color:#f92672">0</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">background-color</span>:<span style="color:#66d9ef">red</span>; 
+    }
+
+    <span style="color:#f92672">20</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">background-color</span>:<span style="color:#66d9ef">yellow</span>; 
+    }
+
+    <span style="color:#f92672">40</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">background-color</span>:<span style="color:#66d9ef">green</span>; 
+    }
+
+    <span style="color:#f92672">60</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">background-color</span>:<span style="color:#66d9ef">blue</span>; 
+    }
+
+    <span style="color:#f92672">80</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">background-color</span>:<span style="color:#66d9ef">purple</span>; 
+    }
+
+    <span style="color:#f92672">100</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">background-color</span>:<span style="color:#66d9ef">red</span>; 
+    }
+}
+
+<span style="color:#f92672">p</span> {
+    <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; 
+    <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>; 
+    <span style="color:#66d9ef">animation-name</span>: key1; 
+    <span style="color:#66d9ef">animation-duration</span>: <span style="color:#ae81ff">30</span><span style="color:#66d9ef">s</span>; 
+}</code></pre></div>
+<p>使用例（html）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;色変化！（一回のみ）&lt;/<span style="color:#f92672">p</span>&gt;</code></pre></div>
+<p>表示例</p>
+
+<hr>
+
+<p><iframe width="400" height="300" src="https://WAT36.github.io/pages/css_sample_pages/animation-duration.html">
+</iframe>
+<hr></p>
 </article>
 
       
@@ -566,7 +615,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/e1e7f2fcbb04f97025259c7978df515431e45d06" title='Last modified Aug 2, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/65d549cc6a0fabedc025248ce188e2d81f324d29" title='Last modified Aug 2, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 2, 2020
     </a>
   </div>
@@ -600,6 +649,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#keyframes-キーフレーム">@keyframes (キーフレーム)</a></li>
 <li><a href="#animation-name-プロパティ">animation-name プロパティ</a></li>
+<li><a href="#animation-duration-プロパティ">animation-duration プロパティ</a></li>
 </ul></li>
 </ul>
 </nav>

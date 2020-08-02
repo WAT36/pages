@@ -486,3 +486,61 @@ CSSのアニメーションでは、いつのタイミングでどのような�
 animation-nameプロパティは、キーフレーム名を指定して実行させるためのプロパティである。
 
 （使用例は次節でまとめて記載）
+
+
+## animation-duration プロパティ
+
+animation-durationプロパティは、アニメーションの再生時間を設定するプロパティである。
+
+値は単位付きの数値で、単位はs（秒）,ms（ミリ秒）のいずれかで指定する。
+
+
+使用例（css）
+
+```css
+@keyframes key1 {
+    0%{
+        background-color:red; 
+    }
+
+    20%{
+        background-color:yellow; 
+    }
+
+    40%{
+        background-color:green; 
+    }
+
+    60%{
+        background-color:blue; 
+    }
+
+    80%{
+        background-color:purple; 
+    }
+
+    100%{
+        background-color:red; 
+    }
+}
+
+p {
+    width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    animation-name: key1; 
+    animation-duration: 30s; 
+}
+```
+
+使用例（html）
+
+```html
+<p>色変化！（一回のみ）</p>
+```
+
+表示例
+
+<hr>
+<iframe width="400" height="300" src="/css_sample_pages/animation-duration.html">
+</iframe>
+<hr>
