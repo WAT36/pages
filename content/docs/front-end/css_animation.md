@@ -696,3 +696,77 @@ p {
 <iframe width="400" height="400" src="/css_sample_pages/animation-delay.html">
 </iframe>
 <hr>
+
+## animation-iteration-countプロパティ
+
+animation-iteration-countプロパティは、アニメーションを何回繰り返して再生させるかを設定するプロパティである。
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">数値</td>
+        <td style="border:none;">再生する回数</td>
+    </tr>
+    <tr>
+        <td style="border:none;">infinite</td>
+        <td style="border:none;">無限に繰り返す</td>
+    </tr>
+</table>
+
+
+使用例（css）
+
+
+```css
+
+@keyframes key1 {
+    0%{
+        transform: translate(0px,0px);
+    }
+
+    25%{
+        transform: translate(200px,0px) rotate(90deg);
+    }
+
+    50%{
+        transform: translate(200px,200px) rotate(180deg);
+    }
+
+    75%{
+        transform: translate(0px,200px) rotate(270deg);
+    }
+
+    100%{
+        transform: translate(0px,0px) rotate(360deg);
+    }
+}
+
+p {
+    width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    background-color:red; 
+    animation-name: key1; 
+    animation-duration: 10s; 
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+```
+
+
+使用例（html）
+
+```
+<p>無限に一回転！</p>
+```
+
+
+表示例
+
+<hr>
+<iframe width="400" height="400" src="/css_sample_pages/animation-iteration-count.html">
+</iframe>
+<hr>
