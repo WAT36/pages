@@ -54,9 +54,10 @@ bookToc: false
  - Shell Script(bash)
  - SQL
 
-- フレームワーク・ライブラリ
-
-- ツール
+- フレームワーク・ライブラリ・ツール等
+ - IBM Cloud
+ - AWS
+ - GCP
 
 - OS
 
