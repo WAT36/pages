@@ -633,3 +633,66 @@ p {
 <iframe width="400" height="400" src="/css_sample_pages/animation-timing-function.html">
 </iframe>
 <hr>
+
+
+## animation-delayプロパティ
+
+animation-delayプロパティは、アニメーションの開始を遅らせるプロパティである。
+
+値は単位付きの数値で、単位はs（秒）,ms（ミリ秒）のいずれかで指定する。
+
+
+
+使用例（css）
+
+
+```css
+
+@keyframes key1 {
+    0%{
+        transform: translate(0px,0px);
+    }
+
+    25%{
+        transform: translate(200px,0px) rotate(90deg);
+    }
+
+    50%{
+        transform: translate(200px,200px) rotate(180deg);
+    }
+
+    75%{
+        transform: translate(0px,200px) rotate(270deg);
+    }
+
+    100%{
+        transform: translate(0px,0px) rotate(360deg);
+    }
+}
+
+p {
+    width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    background-color:red; 
+    animation-name: key1; 
+    animation-duration: 30s; 
+    animation-timing-function: linear;
+    animation-delay: 5s;
+}
+
+```
+
+
+使用例（html）
+
+```
+<p>5秒後に一回転！（一回のみ）</p>
+```
+
+
+表示例
+
+<hr>
+<iframe width="400" height="400" src="/css_sample_pages/animation-delay.html">
+</iframe>
+<hr>
