@@ -157,11 +157,29 @@
     
     <item>
       <title>CSSでのテキスト</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_text-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_text-2/</guid>
+      <description>CSSでのテキスト CSSでのテキストの表現方法についてを示す。 text-shadowプロパティ text-shadowプロパティは、テキストに</description>
+    </item>
+    
+    <item>
+      <title>CSSでのテキスト</title>
       <link>https://WAT36.github.io/pages/docs/front-end/css_text/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/css_text/</guid>
       <description>CSSでのテキスト CSSでのテキストの表現方法についてを示す。 text-shadowプロパティ text-shadowプロパティは、テキストに</description>
+    </item>
+    
+    <item>
+      <title>CSSでのフォント</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_font-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_font-2/</guid>
+      <description>CSSでのフォント CSSでのフォントについて示す。 Webフォント CSSでフォントを指定しても、ユーザーの環境にそのフォントがインストールされ</description>
     </item>
     
     <item>
@@ -175,6 +193,15 @@
     
     <item>
       <title>CSSでのボックス</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_box-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_box-2/</guid>
+      <description>CSSのボックス CSSで扱うボックスについて。 前述した通り、HTMLでは要素内容の表示にはボックスと呼ばれる単位で表示される。 ボックスの詳細</description>
+    </item>
+    
+    <item>
+      <title>CSSでのボックス</title>
       <link>https://WAT36.github.io/pages/docs/front-end/css_box/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -184,11 +211,29 @@
     
     <item>
       <title>CSSでの背景</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_background-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_background-2/</guid>
+      <description>CSSでの背景 CSSでの背景の設定方法についてを述べる。 background-colorプロパティ background-colorプロパティ</description>
+    </item>
+    
+    <item>
+      <title>CSSでの背景</title>
       <link>https://WAT36.github.io/pages/docs/front-end/css_background/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/css_background/</guid>
       <description>CSSでの背景 CSSでの背景の設定方法についてを述べる。 background-colorプロパティ background-colorプロパティ</description>
+    </item>
+    
+    <item>
+      <title>CSSでの色</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_color-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_color-2/</guid>
+      <description>CSSでの色の表現 CSSでの色の表現について述べる。 16進数の値 方法の一つとして、#(シャープ)と16進数6桁の値で色を表現する方法がある。</description>
     </item>
     
     <item>
@@ -256,6 +301,15 @@
     
     <item>
       <title>K-Means法</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/k-means-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/k-means-2/</guid>
+      <description>K-Means法 クラスタリングの手法の一つ、K-means法についてを述べる。 先ほども示した以下のデータを例にとって、大まかな手順を、以下に</description>
+    </item>
+    
+    <item>
+      <title>K-Means法</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/k-means/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -270,6 +324,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/save/</guid>
       <description>ndarray型のデータをファイルに保存する ndarray型変数をファイルに保存する方法についてを示す。 Python ndarray型変数をファイルに保</description>
+    </item>
+    
+    <item>
+      <title>Null</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/null-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/null-2/</guid>
+      <description>Null プログラミングでよく見るNullについて。 Nullとは何なのか？ Nullとは何もない、何も入ってない、という状態を示す語である。 変数に何も</description>
     </item>
     
     <item>
@@ -391,6 +454,15 @@
     
     <item>
       <title>アニメーション</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_animation-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_animation-2/</guid>
+      <description>CSSのアニメーション CSSで行えるアニメーションについてをここで述べる。 回転・拡大縮小・移動 ボックスを回転・拡大縮小・移動などさせるプロパ</description>
+    </item>
+    
+    <item>
+      <title>アニメーション</title>
       <link>https://WAT36.github.io/pages/docs/front-end/css_animation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -441,6 +513,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/class_func/class/</guid>
       <description>クラスの定義 クラスを定義する方法についてを示す。 Java Javaでのクラス定義方法は以下の通り。 [public] class クラス名 [extends 継承元クラス名] [implements 実装先インタフェー</description>
+    </item>
+    
+    <item>
+      <title>クラスタリング</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/clustering-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/clustering-2/</guid>
+      <description>クラスタリング 教師あり学習の分類では、入力データに対し分類後のクラス(カテゴリ)が与えられていたが、ここでは入力データからデータをクラスに分</description>
     </item>
     
     <item>
@@ -567,6 +648,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/ctf/caesar_cipher/</guid>
       <description>シーザー暗号 暗号の一つであるシーザー暗号についてを述べる。 シーザー暗号は元の文(平文)の各文字を、辞書順にx字ずらしてできる暗号のことである</description>
+    </item>
+    
+    <item>
+      <title>ジェネリクス</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/generics-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/generics-2/</guid>
+      <description>ジェネリクス ジェネリクスについて。 ジェネリクスとは、特定の型に制限されない、抽象的かつ汎用的なコードを記述するための機能である。 変数の型を明</description>
     </item>
     
     <item>
@@ -711,6 +801,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/</guid>
       <description>ホールドアウト検証 先述のオーバーフィッティング(過学習)の章で、Mを大きくすればするほど既存の入力データに対する精度が高くなり、未知の入力に</description>
+    </item>
+    
+    <item>
+      <title>マルチカラム</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_multicolumn-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_multicolumn-2/</guid>
+      <description>マルチカラム マルチカラムとは、ボックスの内部を複数の段に分割してできるレイアウトである。 ここでは、マルチカラムについてを述べる。 column</description>
     </item>
     
     <item>
@@ -1093,6 +1192,24 @@
     
     <item>
       <title>可変長引数の関数</title>
+      <link>https://WAT36.github.io/pages/docs/programming/class_func/variablelength_arg-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/class_func/variablelength_arg-3/</guid>
+      <description>可変長引数の関数 関数やメソッドを定義するとき、引数の数は事前に定義する必要があり、指定された数以外の数を入力することは普通はできない。 しかし</description>
+    </item>
+    
+    <item>
+      <title>可変長引数の関数</title>
+      <link>https://WAT36.github.io/pages/docs/programming/class_func/variablelength_arg-4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/class_func/variablelength_arg-4/</guid>
+      <description>可変長引数の関数 関数やメソッドを定義するとき、引数の数は事前に定義する必要があり、指定された数以外の数を入力することは普通はできない。 しかし</description>
+    </item>
+    
+    <item>
+      <title>可変長引数の関数</title>
       <link>https://WAT36.github.io/pages/docs/programming/class_func/variablelength_arg/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1246,6 +1363,15 @@
     
     <item>
       <title>教師なし学習</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/unsupervised_learning-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/unsupervised_learning-2/</guid>
+      <description>教師なし学習 教師なし学習について。 教師なし学習は教師あり学習とは違い、入力データに対する答え(目標データ)が与えられず、入力データからデータ</description>
+    </item>
+    
+    <item>
+      <title>教師なし学習</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/unsupervised_learning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1368,6 +1494,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/other/re/</guid>
       <description>正規表現 文字列に正規表現を適用してある文字列パターンを抽出・検索したいという場合があると思う。 その場合に利用する方法を示す。 ちなみに正規表現</description>
+    </item>
+    
+    <item>
+      <title>歪み尺度</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/distortion_measure-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/distortion_measure-2/</guid>
+      <description>歪み尺度 教師あり学習では、学習が進み精度が高くなることの指標として、平均交差エントロピー誤差のような関数を利用していた。 教師なし学習、今回の</description>
     </item>
     
     <item>
