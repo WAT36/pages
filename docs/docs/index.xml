@@ -1376,7 +1376,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/gaussian_mixture_model/</guid>
-      <description>混合ガウスモデル</description>
+      <description>混合ガウスモデル 先程のk-means法では、データを必ずどれか一つのクラスターに割り当てていたが、複数のクラスターに割り当てると言うことはで</description>
     </item>
     
     <item>

@@ -7,3 +7,44 @@ bookToc: false
 ---
 
 # 混合ガウスモデル
+
+先程のk-means法では、データを必ずどれか一つのクラスターに割り当てていたが、複数のクラスターに割り当てると言うことはできないだろうか？
+
+ここで、教師あり学習でも利用した、確率を使った表現を利用することを考えてみる。
+
+k-means法では入力データがどのクラスタに属するかを示すものとして行列Rを用いていた。
+
+ここでは、この行列Rを、以下のように行列Γとして設定する。
+
+{{< katex  >}}
+\tag{1}  {\bf \Gamma}  =  
+                \left[
+                    \begin{array}{cc}
+                    {\bf \gamma}_{0} \\
+                    {\bf \gamma}_{1} \\
+                    \vdots \\
+                    {\bf \gamma}_{N-1} \\
+                    \end{array}
+                \right]
+{{< /katex >}}
+
+ここでクラスタ数をKとした時、
+
+{{< katex  >}}
+\tag{2}  {\bf \gamma}_{i}  =  
+                \left[
+                    \begin{array}{cc}
+                    \gamma_{i0}  & \gamma_{i1} & \cdots & \gamma_{i(K-1)}
+                    \end{array}
+                \right]
+{{< /katex >}}
+
+となる。γ<sub>ik</sub>は、i番目の入力データがクラスタkに属する確率を示す。
+
+また、これより
+
+{{< katex  >}}
+\tag{3}  \sum_{k=0}^{K-1} \gamma_{ik}  =  1
+{{< /katex >}}
+
+である。
