@@ -125,3 +125,16 @@ print(dp[n][W])
 図で表すと以下のようになる。
 
 <img src="/img/procon/dp_applied3.png" width=60%>
+
+コード例は以下の通り。(計算部分のみ抜粋)
+
+```python
+#計算
+for i in range(n):
+    for j in range(W+1):
+        if(j<w[i]):
+            dp[i+1][j]=dp[i][j]
+        else:
+            dp[i+1][j]=max(dp[i][j],dp[i+1][j-w[i]]+v[i])
+```
+
