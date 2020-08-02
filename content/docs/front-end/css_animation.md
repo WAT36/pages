@@ -544,3 +544,92 @@ p {
 <iframe width="400" height="300" src="/css_sample_pages/animation-duration.html">
 </iframe>
 <hr>
+
+
+## animation-timing-function プロパティ
+
+animation-timing-functionプロパティは、トランジションの時と同様に、アニメーションにおける速度を一定にしたり、変化をつけた速度に設定するプロパティである。
+
+指定する値と意味は以下の通り。
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">ease</td>
+        <td style="border:none;">加速をつけて、ゆっくり始まり、ゆっくり終わる（デフォルト）</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ease-in</td>
+        <td style="border:none;">ゆっくり始まり、一定速度で終わる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ease-out</td>
+        <td style="border:none;">一定速度で始まり、ゆっくり終わる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ease-in-out</td>
+        <td style="border:none;">ゆっくり始まり、ゆっくり終わる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">linear</td>
+        <td style="border:none;">最初から最後まで一定速度</td>
+    </tr>
+</table>
+
+
+
+使用例（css）
+
+
+```css
+
+@keyframes key1 {
+    0%{
+        transform: translate(0px,0px);
+    }
+
+    25%{
+        transform: translate(200px,0px) rotate(90deg);
+    }
+
+    50%{
+        transform: translate(200px,200px) rotate(180deg);
+    }
+
+    75%{
+        transform: translate(0px,200px) rotate(270deg);
+    }
+
+    100%{
+        transform: translate(0px,0px) rotate(360deg);
+    }
+}
+
+p {
+    width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    background-color:red; 
+    animation-name: key1; 
+    animation-duration: 30s; 
+    animation-timing-function: linear;
+}
+
+```
+
+
+使用例（html）
+
+```
+<p>一回転！（一回のみ）</p>
+```
+
+
+表示例
+
+<hr>
+<iframe width="400" height="400" src="/css_sample_pages/animation-timing-function.html">
+</iframe>
+<hr>
