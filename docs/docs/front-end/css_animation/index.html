@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.a0c966f9efb5ad6c9443b7de55046f85b030d25c9e47e8e1810f74a73d1971b2.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.35367921a06bccfbbaa2b85d612d4227fa6d967cd9166b68701f1b89dd28ac91.js"></script>
 
 
 
@@ -875,6 +875,74 @@ https://github.com/alex-shpak/hugo-book
 <p><iframe width="400" height="400" src="https://WAT36.github.io/pages/css_sample_pages/animation-direction.html">
 </iframe>
 <hr></p>
+
+<h2 id="animation-play-state-プロパティ">animation-play-state プロパティ</h2>
+
+<p>animation-play-stateプロパティは、アニメーションの再生を一時停止させる際に使用するプロパティである。</p>
+
+<p>指定する値と意味は以下の通り。</p>
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">running</td>
+        <td style="border:none;">アニメーションを再生する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">paused</td>
+        <td style="border:none;">アニメーションを一時停止させる</td>
+    </tr>
+</table>
+
+<p>使用例（css）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">key1</span> {
+    <span style="color:#f92672">0</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>);
+    }
+
+    <span style="color:#f92672">25</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>) rotate(<span style="color:#ae81ff">90</span><span style="color:#66d9ef">deg</span>);
+    }
+
+    <span style="color:#f92672">50</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>) rotate(<span style="color:#ae81ff">180</span><span style="color:#66d9ef">deg</span>);
+    }
+
+    <span style="color:#f92672">75</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>) rotate(<span style="color:#ae81ff">270</span><span style="color:#66d9ef">deg</span>);
+    }
+
+    <span style="color:#f92672">100</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>) rotate(<span style="color:#ae81ff">360</span><span style="color:#66d9ef">deg</span>);
+    }
+}
+
+<span style="color:#f92672">p</span> {
+    <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; 
+    <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>; 
+    <span style="color:#66d9ef">background-color</span>:<span style="color:#66d9ef">red</span>; 
+    <span style="color:#66d9ef">animation-name</span>: key1; 
+    <span style="color:#66d9ef">animation-duration</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">s</span>; 
+    <span style="color:#66d9ef">animation-timing-function</span>: <span style="color:#66d9ef">linear</span>;
+    <span style="color:#66d9ef">animation-iteration-count</span>: <span style="color:#66d9ef">infinite</span>;
+    <span style="color:#66d9ef">animation-direction</span>: <span style="color:#66d9ef">alternate</span>;
+    <span style="color:#66d9ef">animation-play-state</span>: <span style="color:#66d9ef">paused</span>;
+}</code></pre></div>
+<p>使用例（html）</p>
+
+<pre><code>&lt;p&gt;alternate:右回転と左回転順々せずにポーズ状態&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><iframe width="400" height="400" src="https://WAT36.github.io/pages/css_sample_pages/animation-play-state.html">
+</iframe>
+<hr></p>
 </article>
 
       
@@ -882,8 +950,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/68dbc5953aa864da2f8843d3ac4cae24b4e9abb4" title='Last modified Aug 2, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 2, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/6d2b024a51565c442732196870ccd85289e4ddfe" title='Last modified Aug 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 3, 2020
     </a>
   </div>
   
@@ -921,6 +989,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#animation-delayプロパティ">animation-delayプロパティ</a></li>
 <li><a href="#animation-iteration-countプロパティ">animation-iteration-countプロパティ</a></li>
 <li><a href="#animation-direction-プロパティ">animation-direction プロパティ</a></li>
+<li><a href="#animation-play-state-プロパティ">animation-play-state プロパティ</a></li>
 </ul></li>
 </ul>
 </nav>

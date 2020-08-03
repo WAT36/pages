@@ -858,3 +858,83 @@ p {
 <iframe width="400" height="400" src="/css_sample_pages/animation-direction.html">
 </iframe>
 <hr>
+
+
+## animation-play-state プロパティ
+
+animation-play-stateプロパティは、アニメーションの再生を一時停止させる際に使用するプロパティである。
+
+指定する値と意味は以下の通り。
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">running</td>
+        <td style="border:none;">アニメーションを再生する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">paused</td>
+        <td style="border:none;">アニメーションを一時停止させる</td>
+    </tr>
+</table>
+
+
+
+使用例（css）
+
+
+```css
+
+@keyframes key1 {
+    0%{
+        transform: translate(0px,0px);
+    }
+
+    25%{
+        transform: translate(200px,0px) rotate(90deg);
+    }
+
+    50%{
+        transform: translate(200px,200px) rotate(180deg);
+    }
+
+    75%{
+        transform: translate(0px,200px) rotate(270deg);
+    }
+
+    100%{
+        transform: translate(0px,0px) rotate(360deg);
+    }
+}
+
+p {
+    width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    background-color:red; 
+    animation-name: key1; 
+    animation-duration: 10s; 
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: paused;
+}
+
+```
+
+
+使用例（html）
+
+```
+<p>alternate:右回転と左回転順々せずにポーズ状態</p>
+```
+
+
+表示例
+
+<hr>
+<iframe width="400" height="400" src="/css_sample_pages/animation-play-state.html">
+</iframe>
+<hr>
