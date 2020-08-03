@@ -1032,3 +1032,65 @@ p {
 <iframe width="400" height="400" src="/css_sample_pages/animation-fill-mode.html">
 </iframe>
 <hr>
+
+
+## animationプロパティ
+
+animationプロパティは、これまでのアニメーション関連のプロパティの値をまとめて指定出来るプロパティである。
+
+時間を表す値については、1つ目がanimation-durationプロパティ、2つ目がanimation-delayプロパティの値を示す。
+
+使用例（css）
+
+
+```css
+
+@keyframes key1 {
+    0%{
+        background-color: white;
+        transform: translate(0px,0px);
+    }
+
+    25%{
+        background-color: red;
+        transform: translate(200px,0px) rotate(90deg);
+    }
+
+    50%{
+        background-color: yellow;
+        transform: translate(200px,200px) rotate(180deg);
+    }
+
+    75%{
+        background-color: green;
+        transform: translate(0px,200px) rotate(270deg);
+    }
+
+    100%{
+        background-color: white;
+        transform: translate(0px,0px) rotate(360deg);
+    }
+}
+
+p {
+    width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    animation: key1 10s linear 10s infinite;
+}
+
+```
+
+
+使用例（html）
+
+```
+<p>10秒後に開始して無限に一回転</p>
+```
+
+
+表示例
+
+<hr>
+<iframe width="400" height="400" src="/css_sample_pages/animation.html">
+</iframe>
+<hr>

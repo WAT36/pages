@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.dc7cbcc20c2ad2374a8959e1bd39f01ea0d4494692fba5f8bcc2234644cdc602.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.64d403c1a2b3c0ab875b2155b78c277c2aa754e84c445d6f9dc619e7c1d6e7c5.js"></script>
 
 
 
@@ -1025,6 +1025,58 @@ https://github.com/alex-shpak/hugo-book
 <p><iframe width="400" height="400" src="https://WAT36.github.io/pages/css_sample_pages/animation-fill-mode.html">
 </iframe>
 <hr></p>
+
+<h2 id="animationプロパティ">animationプロパティ</h2>
+
+<p>animationプロパティは、これまでのアニメーション関連のプロパティの値をまとめて指定出来るプロパティである。</p>
+
+<p>時間を表す値については、1つ目がanimation-durationプロパティ、2つ目がanimation-delayプロパティの値を示す。</p>
+
+<p>使用例（css）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">key1</span> {
+    <span style="color:#f92672">0</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">white</span>;
+        <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>);
+    }
+
+    <span style="color:#f92672">25</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">red</span>;
+        <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>) rotate(<span style="color:#ae81ff">90</span><span style="color:#66d9ef">deg</span>);
+    }
+
+    <span style="color:#f92672">50</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">yellow</span>;
+        <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>) rotate(<span style="color:#ae81ff">180</span><span style="color:#66d9ef">deg</span>);
+    }
+
+    <span style="color:#f92672">75</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">green</span>;
+        <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>) rotate(<span style="color:#ae81ff">270</span><span style="color:#66d9ef">deg</span>);
+    }
+
+    <span style="color:#f92672">100</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">white</span>;
+        <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>) rotate(<span style="color:#ae81ff">360</span><span style="color:#66d9ef">deg</span>);
+    }
+}
+
+<span style="color:#f92672">p</span> {
+    <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; 
+    <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>; 
+    <span style="color:#66d9ef">animation</span>: key1 <span style="color:#ae81ff">10</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">linear</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">infinite</span>;
+}</code></pre></div>
+<p>使用例（html）</p>
+
+<pre><code>&lt;p&gt;10秒後に開始して無限に一回転&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><iframe width="400" height="400" src="https://WAT36.github.io/pages/css_sample_pages/animation.html">
+</iframe>
+<hr></p>
 </article>
 
       
@@ -1032,7 +1084,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/97d23ee72a976c802c31724038d0e32aaaad4a1e" title='Last modified Aug 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/c86e0846e43de4bf4af494958676ed429a5c5bac" title='Last modified Aug 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 3, 2020
     </a>
   </div>
@@ -1073,6 +1125,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#animation-direction-プロパティ">animation-direction プロパティ</a></li>
 <li><a href="#animation-play-state-プロパティ">animation-play-state プロパティ</a></li>
 <li><a href="#animation-fill-modeプロパティ">animation-fill-modeプロパティ</a></li>
+<li><a href="#animationプロパティ">animationプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>
