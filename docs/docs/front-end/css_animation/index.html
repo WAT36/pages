@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.35367921a06bccfbbaa2b85d612d4227fa6d967cd9166b68701f1b89dd28ac91.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.dc7cbcc20c2ad2374a8959e1bd39f01ea0d4494692fba5f8bcc2234644cdc602.js"></script>
 
 
 
@@ -943,6 +943,88 @@ https://github.com/alex-shpak/hugo-book
 <p><iframe width="400" height="400" src="https://WAT36.github.io/pages/css_sample_pages/animation-play-state.html">
 </iframe>
 <hr></p>
+
+<h2 id="animation-fill-modeプロパティ">animation-fill-modeプロパティ</h2>
+
+<p>animation-fill-modeプロパティは、animation-delayプロパティによって再生が遅延されている間の表示、及び再生終了時の表示を設定するプロパティである。</p>
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">forwards</td>
+        <td style="border:none;">再生終了後はキーフレームの100%の表示のままにする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">backwards</td>
+        <td style="border:none;">遅延して再生されてない間はキーフレームの0%の表示にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">both</td>
+        <td style="border:none;">再生終了後はキーフレームの100%、遅延して再生されてない間はキーフレームの0%の表示にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">キーフレームとは無関係に表示する</td>
+    </tr>
+</table>
+
+<p>使用例（css）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">key1</span> {
+    <span style="color:#f92672">0</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">black</span>;
+        <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">white</span>;
+        <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>);
+    }
+
+    <span style="color:#f92672">25</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">red</span>;
+        <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">white</span>;
+        <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>) rotate(<span style="color:#ae81ff">90</span><span style="color:#66d9ef">deg</span>);
+    }
+
+    <span style="color:#f92672">50</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">yellow</span>;
+        <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">white</span>;
+        <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>) rotate(<span style="color:#ae81ff">180</span><span style="color:#66d9ef">deg</span>);
+    }
+
+    <span style="color:#f92672">75</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">green</span>;
+        <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">white</span>;
+        <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>) rotate(<span style="color:#ae81ff">270</span><span style="color:#66d9ef">deg</span>);
+    }
+
+    <span style="color:#f92672">100</span><span style="color:#f92672">%</span>{
+        <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">white</span>;
+        <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">black</span>;
+        <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>) rotate(<span style="color:#ae81ff">360</span><span style="color:#66d9ef">deg</span>);
+    }
+}
+
+<span style="color:#f92672">p</span> {
+    <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; 
+    <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>; 
+    <span style="color:#66d9ef">animation-name</span>: key1; 
+    <span style="color:#66d9ef">animation-duration</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">s</span>; 
+    <span style="color:#66d9ef">animation-timing-function</span>: <span style="color:#66d9ef">linear</span>;
+    <span style="color:#66d9ef">animation-delay</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">s</span>;
+    <span style="color:#66d9ef">animation-fill-mode</span>: <span style="color:#66d9ef">both</span>;
+}</code></pre></div>
+<p>使用例（html）</p>
+
+<pre><code>&lt;p&gt;10秒後に開始・最後は白ボックスのまま&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><iframe width="400" height="400" src="https://WAT36.github.io/pages/css_sample_pages/animation-fill-mode.html">
+</iframe>
+<hr></p>
 </article>
 
       
@@ -950,7 +1032,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/6d2b024a51565c442732196870ccd85289e4ddfe" title='Last modified Aug 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/97d23ee72a976c802c31724038d0e32aaaad4a1e" title='Last modified Aug 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 3, 2020
     </a>
   </div>
@@ -990,6 +1072,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#animation-iteration-countプロパティ">animation-iteration-countプロパティ</a></li>
 <li><a href="#animation-direction-プロパティ">animation-direction プロパティ</a></li>
 <li><a href="#animation-play-state-プロパティ">animation-play-state プロパティ</a></li>
+<li><a href="#animation-fill-modeプロパティ">animation-fill-modeプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>

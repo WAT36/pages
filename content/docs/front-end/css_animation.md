@@ -938,3 +938,97 @@ p {
 <iframe width="400" height="400" src="/css_sample_pages/animation-play-state.html">
 </iframe>
 <hr>
+
+
+## animation-fill-modeプロパティ
+
+animation-fill-modeプロパティは、animation-delayプロパティによって再生が遅延されている間の表示、及び再生終了時の表示を設定するプロパティである。
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">forwards</td>
+        <td style="border:none;">再生終了後はキーフレームの100%の表示のままにする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">backwards</td>
+        <td style="border:none;">遅延して再生されてない間はキーフレームの0%の表示にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">both</td>
+        <td style="border:none;">再生終了後はキーフレームの100%、遅延して再生されてない間はキーフレームの0%の表示にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">キーフレームとは無関係に表示する</td>
+    </tr>
+</table>
+
+
+
+使用例（css）
+
+
+```css
+
+@keyframes key1 {
+    0%{
+        background-color: black;
+        color: white;
+        transform: translate(0px,0px);
+    }
+
+    25%{
+        background-color: red;
+        color: white;
+        transform: translate(200px,0px) rotate(90deg);
+    }
+
+    50%{
+        background-color: yellow;
+        color: white;
+        transform: translate(200px,200px) rotate(180deg);
+    }
+
+    75%{
+        background-color: green;
+        color: white;
+        transform: translate(0px,200px) rotate(270deg);
+    }
+
+    100%{
+        background-color: white;
+        color: black;
+        transform: translate(0px,0px) rotate(360deg);
+    }
+}
+
+p {
+    width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    animation-name: key1; 
+    animation-duration: 10s; 
+    animation-timing-function: linear;
+    animation-delay: 10s;
+    animation-fill-mode: both;
+}
+
+```
+
+
+使用例（html）
+
+```
+<p>10秒後に開始・最後は白ボックスのまま</p>
+```
+
+
+表示例
+
+<hr>
+<iframe width="400" height="400" src="/css_sample_pages/animation-fill-mode.html">
+</iframe>
+<hr>
