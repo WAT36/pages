@@ -7,7 +7,7 @@ weight: 1
 
 # CSSのアニメーション
 
-CSSで行えるアニメーションについてをここで述べる。
+CSSで行えるアニメーションについてを述べる。
 
 
 # 回転・拡大縮小・移動
@@ -349,7 +349,7 @@ p[class^="timing"]:hover{
 ```
 
 
-使用例（html、ここもコード載せると何故か変になる・・のでスクショを記載）
+使用例（html、スクショを記載）
 
 <img src="/img/front-end/transition-timing-function.png" width=100%>
 
@@ -399,7 +399,7 @@ p[class^="delay"]:hover{
 ```
 
 
-使用例（html、ここもコード載せると何故か変になる・・のでスクショを記載）
+使用例（html、スクショを記載）
 
 <img src="/img/front-end/transition-delay.png" width=100%>
 
