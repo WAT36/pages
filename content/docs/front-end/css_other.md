@@ -68,3 +68,79 @@ p {
 <iframe width="350" height="350" src="/css_sample_pages/linear-gradient.html">
 </iframe>
 <hr>
+
+
+## radial-gradientプロパティ
+
+radial-gradientプロパティは、放射状のグラデーションを設定するプロパティである。
+
+書式は以下の通り。
+
+```
+radial-gradient(at 中心の位置,中心の色,外側の色)
+```
+
+ここで、引数の「中心の位置」に設定する値は以下の通り。
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">top</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">一番上(縦方向の0%)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">bottom</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">一番下(縦方向の100%)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">left</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">一番左(横方向の0%)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">right</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">一番右(横方向の100%)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">center</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">中央(縦・横方向の50%)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">(パーセンテージ)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">それぞれの方向に対するパーセンテージ。数値の後に%をつける</td>
+    </tr>
+</table>
+
+
+使用例(css)
+
+```css
+p {
+    width:300px; height:300px; 
+    padding:0px; margin:0px;
+    background-image:radial-gradient(at bottom,blue,red);
+}
+```
+
+(html)
+
+```html
+<p>radial-gradientの例</p>
+```
+
+
+表示例
+
+<hr>
+<iframe width="350" height="350" src="/css_sample_pages/radial-gradient.html">
+</iframe>
+<hr>
+
