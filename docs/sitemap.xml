@@ -164,7 +164,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/other/other_index/</loc>
-    <lastmod>2020-07-31T23:49:55+09:00</lastmod>
+    <lastmod>2020-07-16T20:37:28+09:00</lastmod>
   </url>
   
   <url>
@@ -210,6 +210,11 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/html_other/</loc>
     <lastmod>2020-06-27T23:29:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/css_animation/</loc>
+    <lastmod>2020-08-03T20:51:08+09:00</lastmod>
   </url>
   
   <url>
@@ -625,11 +630,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/list/multisortlist/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/other/constant/</loc>
-    <lastmod>2020-08-01T22:54:09+09:00</lastmod>
   </url>
   
   <url>
@@ -1119,7 +1119,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-08-01T22:54:09+09:00</lastmod>
+    <lastmod>2020-08-03T20:51:08+09:00</lastmod>
   </url>
   
   <url>
@@ -1148,12 +1148,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
+    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
     <lastmod>2019-10-22T10:17:14+09:00</lastmod>
   </url>
   
@@ -1349,7 +1349,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/front_index/</loc>
-    <lastmod>2020-07-29T20:33:11+09:00</lastmod>
+    <lastmod>2020-07-31T20:45:42+09:00</lastmod>
   </url>
   
   <url>

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>transition-durationサンプル</title>
+
+<style type="text/css">
+div.timing {
+    border-style: double; height: 100px; width: 100px; 
+    padding: 0px; margin:0px
+}
+
+p.timing1 {
+    background-color:red; width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    transition-property: transform;
+    transition-duration: 5s;
+    transition-timing-function: ease;
+}
+
+p.timing2 {
+    background-color:red; width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    transition-property: transform;
+    transition-duration: 5s;
+    transition-timing-function: linear;
+}
+
+p[class^="timing"]:hover{
+    transform:rotate(360deg);
+}
+</style>
+
+</head>
+<body>
+
+<div class="timing">
+<p class="timing1">カーソル乗せると一回転！(ease)</p>
+</div>
+<br>
+<div class="timing">
+<p class="timing2">カーソル乗せると一回転！(linear)</p>
+</div>
+
+</body>
+</html>

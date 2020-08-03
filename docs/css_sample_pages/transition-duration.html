@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>transition-durationサンプル</title>
+
+<style type="text/css">
+div.duration {
+    border-style: double; height: 100px; width: 100px; 
+    padding: 0px; margin:0px
+}
+
+p.sample1 {
+    background-color:red; width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    transition-property: transform;
+    transition-duration: 5s;
+}
+
+p.sample1:hover{
+    transform:rotate(360deg);
+}
+
+p.sample2 {
+    background-color:red; width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    transition-property: background-color;
+    transition-duration: 5s;
+}
+
+p.sample2:active{
+    background-color:yellow;
+}
+</style>
+
+</head>
+<body>
+
+<div class="duration">
+<p class="sample1">カーソル乗せると一回転！</p>
+</div>
+<br>
+<div class="duration">
+    <p class="sample2">クリックしたままで色変化！</p>
+</div>
+
+</body>
+</html>
