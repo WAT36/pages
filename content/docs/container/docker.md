@@ -129,6 +129,14 @@ $ docker container stop コンテナID
 $ docker container rm [オプション] コンテナID
 ```
 
+## ローカルにあるコンテナを一覧表示する
+
+ローカルにあるコンテナを一覧表示するには、**docker container ls**コマンドを使用する。
+
+```
+$ docker container ls [オプション]
+```
+
 以上、一連のコマンドの動作を図に表すと以下のようになる。
 
 <img src="/img/container/docker_03.png" width=100%>
