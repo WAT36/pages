@@ -381,3 +381,46 @@ list-styleプロパティは、前述のlist-style系のプロパティの値を
 <li>その３</li>
 </ul>
 <hr>
+
+# テーブル関連のプロパティ
+
+テーブル関連について、紹介し切れていないプロパティについてを述べる。
+
+## caption-sideプロパティ
+
+caption-sideプロパティは、キャプションを表の上か下かどちらかに表示させるかを設定するプロパティである。
+
+値はtop,bottomのいずれかを指定する。
+
+
+使用例
+
+```
+<table>
+    <caption style="caption-side:bottom">キャプションbottom</caption>
+    <tr>
+        <td>0,0</td>
+        <td>1,0</td>
+    </tr>
+    <tr>
+        <td>0,1</td>
+        <td>1,1</td>
+    </tr>
+</table>
+```
+
+表示例
+
+<hr>
+<table>
+    <caption style="caption-side:bottom">キャプションbottom</caption>
+    <tr>
+        <td>0,0</td>
+        <td>1,0</td>
+    </tr>
+    <tr>
+        <td>0,1</td>
+        <td>1,1</td>
+    </tr>
+</table>
+<hr>
