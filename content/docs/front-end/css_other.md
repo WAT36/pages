@@ -424,3 +424,42 @@ caption-sideプロパティは、キャプションを表の上か下かどち�
     </tr>
 </table>
 <hr>
+
+## border-collapseプロパティ
+
+border-collapseプロパティは、ボーダーを隣接するセルと重ねて表示するか、離して標示するかを設定するプロパティである。
+
+値はcollapse(隣接するセルと重ねて表示)、separate(隣接するセルと離して表示)のいずれかである。
+
+使用例
+
+```
+<table style="border-collapse: collapse;">
+    <caption>collapse</caption>
+    <tr>
+        <td style="border: solid 1px;">0,0</td>
+        <td style="border: solid 1px;">1,0</td>
+    </tr>
+    <tr>
+        <td style="border: solid 1px;">0,1</td>
+        <td style="border: solid 1px;">1,1</td>
+    </tr>
+</table>
+```
+
+
+表示例
+
+<hr>
+<table style="border-collapse: collapse;">
+    <caption>collapse</caption>
+    <tr>
+        <td style="border: solid 1px;">0,0</td>
+        <td style="border: solid 1px;">1,0</td>
+    </tr>
+    <tr>
+        <td style="border: solid 1px;">0,1</td>
+        <td style="border: solid 1px;">1,1</td>
+    </tr>
+</table>
+<hr>
