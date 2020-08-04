@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.44173e3929629d8f34c92a8c005e334e02cb6ad03c7c8b144bea1be81e89a962.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.c5c940d0178de84ed40b69157592a27920ba9d459e4f441de9f3358432914113.js"></script>
 
 
 
@@ -154,6 +154,10 @@ https://github.com/alex-shpak/hugo-book
 
 <p>Dockerイメージは、Dockerコマンドを使って作成する方法、Dockerfileという設定ファイルを作ってそこから作る方法がある。</p>
 
+<p>ここではまず、各種Dockerコマンドについてを説明する。</p>
+
+<h1 id="dockerイメージ-コンテナに関するコマンド">Dockerイメージ・コンテナに関するコマンド</h1>
+
 <h2 id="dockerイメージをリモート-docker-hub-にアップロードする">Dockerイメージをリモート(Docker Hub)にアップロードする</h2>
 
 <p>DockerイメージをDocker Hubにアップロードするには、<strong>docker image push</strong>コマンドを利用する。</p>
@@ -246,9 +250,11 @@ https://github.com/alex-shpak/hugo-book
 <pre><code>$ docker container stats
 </code></pre>
 
-<p>以上、一連のコマンドの動作を図に表すと以下のようになる。</p>
+<p>以上、Dockerイメージ・コンテナの起動に関する一連のコマンドの動作を図に表すと以下のようになる。</p>
 
 <p><img src="https://WAT36.github.io/pages/img/container/docker_03.png" width=100%></p>
+
+<h1 id="起動中のコンテナの操作方法">起動中のコンテナの操作方法</h1>
 </article>
 
       
@@ -256,7 +262,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/526c1e89e4476b7abad8ff3845075964710096df" title='Last modified Aug 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/f09d904e91a6c1e383a8065cbbc4c1e2867062bb" title='Last modified Aug 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 4, 2020
     </a>
   </div>
@@ -275,6 +281,9 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#docker">Docker</a>
 <ul>
 <li><a href="#dockerイメージを作る">Dockerイメージを作る</a></li>
+</ul></li>
+<li><a href="#dockerイメージ-コンテナに関するコマンド">Dockerイメージ・コンテナに関するコマンド</a>
+<ul>
 <li><a href="#dockerイメージをリモート-docker-hub-にアップロードする">Dockerイメージをリモート(Docker Hub)にアップロードする</a></li>
 <li><a href="#dockerイメージをリモート-docker-hub-からダウンロードする">Dockerイメージをリモート(Docker Hub)からダウンロードする</a></li>
 <li><a href="#ローカルにあるdockerイメージを確認する">ローカルにあるDockerイメージを確認する</a></li>
@@ -287,6 +296,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#ローカルにあるコンテナを一覧表示する">ローカルにあるコンテナを一覧表示する</a></li>
 <li><a href="#コンテナの稼働状況を確認する">コンテナの稼働状況を確認する</a></li>
 </ul></li>
+<li><a href="#起動中のコンテナの操作方法">起動中のコンテナの操作方法</a></li>
 </ul>
 </nav>
   </aside>

@@ -36,6 +36,9 @@ Dockerイメージの実体は、先述の通りアプリケーションの実�
 
 Dockerイメージは、Dockerコマンドを使って作成する方法、Dockerfileという設定ファイルを作ってそこから作る方法がある。
 
+ここではまず、各種Dockerコマンドについてを説明する。
+
+# Dockerイメージ・コンテナに関するコマンド
 
 ## Dockerイメージをリモート(Docker Hub)にアップロードする
 
@@ -145,8 +148,10 @@ $ docker container ls [オプション]
 $ docker container stats
 ```
 
-以上、一連のコマンドの動作を図に表すと以下のようになる。
+以上、Dockerイメージ・コンテナの起動に関する一連のコマンドの動作を図に表すと以下のようになる。
 
 <img src="/img/container/docker_03.png" width=100%>
 
+
+# 起動中のコンテナの操作方法
 
