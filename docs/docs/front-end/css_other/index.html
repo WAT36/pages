@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.9e021508de59fbb726e2b04b7968a8cdb5dc1bf434fccfbdff00700ce373552b.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.fb7596fe46322fbb173d6afef74640e5c880b357cc2732ba2ba5946af153e059.js"></script>
 
 
 
@@ -380,6 +380,56 @@ https://github.com/alex-shpak/hugo-book
 <p><iframe width="400" height="200" src="https://WAT36.github.io/pages/css_sample_pages/list-style-image.html">
 </iframe>
 <hr></p>
+
+<h2 id="list-style-position-プロパティ">list-style-position プロパティ</h2>
+
+<p>list-style-positionプロパティは、行頭記号の表示位置を設定するプロパティである。</p>
+
+<p>設定する値と意味は以下の通り。</p>
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">outside</td>
+        <td style="border:none;">テキストを表示させる領域の外側に表示させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">inside</td>
+        <td style="border:none;">テキストを表示させる領域の内側に表示させる</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;list-style-position:inside&#34;</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その１&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その２&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その３&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ul</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;list-style-position:outside&#34;</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その１&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その２&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その３&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ul</span>&gt;</code></pre></div>
+<p>表示例</p>
+
+<hr>
+
+<p><ul style="list-style-position:inside">
+<li>その１</li>
+<li>その２</li>
+<li>その３</li>
+</ul>
+<br>
+<ul style="list-style-position:outside">
+<li>その１</li>
+<li>その２</li>
+<li>その３</li>
+</ul>
+<hr></p>
 </article>
 
       
@@ -387,7 +437,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/aec556eb03f3491642a6e905f7967ba74ccc4b26" title='Last modified Aug 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/0e2cd2e71822b6816a0c5a937d43623863074ad9" title='Last modified Aug 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 4, 2020
     </a>
   </div>
@@ -413,6 +463,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#list-style-typeプロパティ">list-style-typeプロパティ</a></li>
 <li><a href="#list-style-image-プロパティ">list-style-image プロパティ</a></li>
+<li><a href="#list-style-position-プロパティ">list-style-position プロパティ</a></li>
 </ul></li>
 </ul>
 </nav>

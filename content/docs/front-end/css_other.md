@@ -301,3 +301,58 @@ ul {
 <iframe width="400" height="200" src="/css_sample_pages/list-style-image.html">
 </iframe>
 <hr>
+
+
+## list-style-position プロパティ
+
+list-style-positionプロパティは、行頭記号の表示位置を設定するプロパティである。
+
+設定する値と意味は以下の通り。
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">outside</td>
+        <td style="border:none;">テキストを表示させる領域の外側に表示させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">inside</td>
+        <td style="border:none;">テキストを表示させる領域の内側に表示させる</td>
+    </tr>
+</table>
+
+
+使用例
+
+```html
+<ul style="list-style-position:inside">
+<li>その１</li>
+<li>その２</li>
+<li>その３</li>
+</ul>
+<br>
+<ul style="list-style-position:outside">
+<li>その１</li>
+<li>その２</li>
+<li>その３</li>
+</ul>
+```
+
+表示例
+
+<hr>
+<ul style="list-style-position:inside">
+<li>その１</li>
+<li>その２</li>
+<li>その３</li>
+</ul>
+<br>
+<ul style="list-style-position:outside">
+<li>その１</li>
+<li>その２</li>
+<li>その３</li>
+</ul>
+<hr>
