@@ -219,7 +219,7 @@ list-style-typeプロパティは、リストの行頭記号の種類を設定�
 
 使用例
 
-```
+```html
 <ul style="list-style-type:circle">
 <li>その１</li>
 <li>その２</li>
@@ -395,7 +395,7 @@ caption-sideプロパティは、キャプションを表の上か下かどち�
 
 使用例
 
-```
+```html
 <table>
     <caption style="caption-side:bottom">キャプションbottom</caption>
     <tr>
@@ -433,7 +433,7 @@ border-collapseプロパティは、ボーダーを隣接するセルと重ね�
 
 使用例
 
-```
+```html
 <table style="border-collapse: collapse;">
     <caption>collapse</caption>
     <tr>
@@ -474,7 +474,7 @@ border-spacingプロパティは、テーブルにおいて隣接するセルの
 
 使用例
 
-```
+```html
 <table style="border-collapse: separate;border-spacing: 2px">
     <caption>separate 2px</caption>
     <tr>
@@ -504,3 +504,45 @@ border-spacingプロパティは、テーブルにおいて隣接するセルの
     </tr>
 </table>
 <hr>
+
+## empty-cellsプロパティ
+
+empty-cellsプロパティは、テーブルのセルが空白の時にボーダーを表示するかしないかを設定するプロパティである。
+
+値はshow(表示する),hide(表示しない)のいずれかを指定する。
+
+
+使用例
+
+```html
+<table style="border-collapse: separate;border-spacing: 2px; empty-cells: show;">
+    <caption>separate 2px</caption>
+    <tr>
+        <td style="border: solid 1px;">0,0</td>
+        <td style="border: solid 1px;"></td>
+    </tr>
+    <tr>
+        <td style="border: solid 1px;"></td>
+        <td style="border: solid 1px;">1,1</td>
+    </tr>
+</table>
+```
+
+
+表示例
+
+<hr>
+<table style="border-collapse: separate;border-spacing: 2px; empty-cells: show;">
+    <caption>separate 2px</caption>
+    <tr>
+        <td style="border: solid 1px;">0,0</td>
+        <td style="border: solid 1px;"></td>
+    </tr>
+    <tr>
+        <td style="border: solid 1px;"></td>
+        <td style="border: solid 1px;">1,1</td>
+    </tr>
+</table>
+<hr>
+
+
