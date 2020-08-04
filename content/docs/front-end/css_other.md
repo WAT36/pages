@@ -249,3 +249,55 @@ list-style-typeプロパティは、リストの行頭記号の種類を設定�
 <li>その３</li>
 </ul>
 <hr>
+
+
+## list-style-image プロパティ
+
+list-style-imageプロパティは、リストの行頭記号に表示する画像を設定するプロパティである。
+
+設定する値と意味は以下の通り。
+
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">url(...)</td>
+        <td style="border:none;">画像のURLを指定し、その画像が行頭記号として表示される。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">画像を行頭記号として表示させない</td>
+    </tr>
+</table>
+
+
+使用例(css)
+
+
+```css
+ul {
+    list-style-image: url(list-style-image.png);
+}
+```
+
+
+(html)
+
+```html
+<ul>
+    <li>その１</li>
+    <li>その２</li>
+    <li>その３</li>
+</ul>
+```
+
+
+表示例
+
+<hr>
+<iframe width="400" height="200" src="/css_sample_pages/list-style-image.html">
+</iframe>
+<hr>

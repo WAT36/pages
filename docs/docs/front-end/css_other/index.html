@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.71e1799b3f3891dfde6f4094b557029154bac7d7bf5dd369c8fbe73f14fb8e5e.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.9e021508de59fbb726e2b04b7968a8cdb5dc1bf434fccfbdff00700ce373552b.js"></script>
 
 
 
@@ -341,6 +341,45 @@ https://github.com/alex-shpak/hugo-book
 <li>その３</li>
 </ul>
 <hr></p>
+
+<h2 id="list-style-image-プロパティ">list-style-image プロパティ</h2>
+
+<p>list-style-imageプロパティは、リストの行頭記号に表示する画像を設定するプロパティである。</p>
+
+<p>設定する値と意味は以下の通り。</p>
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">url(...)</td>
+        <td style="border:none;">画像のURLを指定し、その画像が行頭記号として表示される。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">画像を行頭記号として表示させない</td>
+    </tr>
+</table>
+
+<p>使用例(css)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">ul</span> {
+    <span style="color:#66d9ef">list-style-image</span>: url(<span style="color:#e6db74">list-style-image.png</span>);
+}</code></pre></div>
+<p>(html)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;その１&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;その２&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;その３&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ul</span>&gt;</code></pre></div>
+<p>表示例</p>
+
+<hr>
+
+<p><iframe width="400" height="200" src="https://WAT36.github.io/pages/css_sample_pages/list-style-image.html">
+</iframe>
+<hr></p>
 </article>
 
       
@@ -348,7 +387,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/ab709aa9b921867b8c7e377966037adb465bcf16" title='Last modified Aug 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/aec556eb03f3491642a6e905f7967ba74ccc4b26" title='Last modified Aug 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 4, 2020
     </a>
   </div>
@@ -373,6 +412,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#リスト関連のプロパティ">リスト関連のプロパティ</a>
 <ul>
 <li><a href="#list-style-typeプロパティ">list-style-typeプロパティ</a></li>
+<li><a href="#list-style-image-プロパティ">list-style-image プロパティ</a></li>
 </ul></li>
 </ul>
 </nav>
