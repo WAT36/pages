@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.1ee203a43ad5f9e2c6a903c22f9a2c388957a7ec45d933041e70bd8ed7bc0195.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.bc0d8bd83fe25c498d63d939578c6d9a5b8a1045f750e847c51cec35ad146312.js"></script>
 
 
 
@@ -531,6 +531,44 @@ https://github.com/alex-shpak/hugo-book
     </tr>
 </table>
 <hr></p>
+
+<h2 id="border-spacingプロパティ">border-spacingプロパティ</h2>
+
+<p>border-spacingプロパティは、テーブルにおいて隣接するセルのボーダーとボーダーの間隔を設定するプロパティである。</p>
+
+<p>先述のborder-collapseプロパティの値がseparateのときに有効となり、値は単位付きの数値を指定する。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;table style=&quot;border-collapse: separate;border-spacing: 2px&quot;&gt;
+    &lt;caption&gt;separate 2px&lt;/caption&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;border: solid 1px;&quot;&gt;0,0&lt;/td&gt;
+        &lt;td style=&quot;border: solid 1px;&quot;&gt;1,0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;border: solid 1px;&quot;&gt;0,1&lt;/td&gt;
+        &lt;td style=&quot;border: solid 1px;&quot;&gt;1,1&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><table style="border-collapse: separate;border-spacing: 2px">
+    <caption>separate 2px</caption>
+    <tr>
+        <td style="border: solid 1px;">0,0</td>
+        <td style="border: solid 1px;">1,0</td>
+    </tr>
+    <tr>
+        <td style="border: solid 1px;">0,1</td>
+        <td style="border: solid 1px;">1,1</td>
+    </tr>
+</table>
+<hr></p>
 </article>
 
       
@@ -538,7 +576,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f4e9a944deeb1716463777a8ca6ffa851fdc7cb1" title='Last modified Aug 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/6618e184ff888ec2b591867229efe446859a506d" title='Last modified Aug 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 5, 2020
     </a>
   </div>
@@ -571,6 +609,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#caption-sideプロパティ">caption-sideプロパティ</a></li>
 <li><a href="#border-collapseプロパティ">border-collapseプロパティ</a></li>
+<li><a href="#border-spacingプロパティ">border-spacingプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>

@@ -463,3 +463,44 @@ border-collapseプロパティは、ボーダーを隣接するセルと重ね�
     </tr>
 </table>
 <hr>
+
+
+## border-spacingプロパティ
+
+border-spacingプロパティは、テーブルにおいて隣接するセルのボーダーとボーダーの間隔を設定するプロパティである。
+
+先述のborder-collapseプロパティの値がseparateのときに有効となり、値は単位付きの数値を指定する。
+
+
+使用例
+
+```
+<table style="border-collapse: separate;border-spacing: 2px">
+    <caption>separate 2px</caption>
+    <tr>
+        <td style="border: solid 1px;">0,0</td>
+        <td style="border: solid 1px;">1,0</td>
+    </tr>
+    <tr>
+        <td style="border: solid 1px;">0,1</td>
+        <td style="border: solid 1px;">1,1</td>
+    </tr>
+</table>
+```
+
+
+表示例
+
+<hr>
+<table style="border-collapse: separate;border-spacing: 2px">
+    <caption>separate 2px</caption>
+    <tr>
+        <td style="border: solid 1px;">0,0</td>
+        <td style="border: solid 1px;">1,0</td>
+    </tr>
+    <tr>
+        <td style="border: solid 1px;">0,1</td>
+        <td style="border: solid 1px;">1,1</td>
+    </tr>
+</table>
+<hr>
