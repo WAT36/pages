@@ -144,3 +144,108 @@ p {
 </iframe>
 <hr>
 
+
+# リスト関連のプロパティ
+
+リスト関連について、紹介し切れていないプロパティについてを述べる。
+
+
+## list-style-typeプロパティ
+
+list-style-typeプロパティは、リストの行頭記号の種類を設定するプロパティである。
+
+設定する値と意味は以下の通り。
+
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">行頭記号を消す</td>
+    </tr>
+    <tr>
+        <td style="border:none;">disc</td>
+        <td style="border:none;">黒丸にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">circle</td>
+        <td style="border:none;">白抜きの丸にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">square</td>
+        <td style="border:none;">四角にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">decimal</td>
+        <td style="border:none;">数字にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">decimal-leading-zero</td>
+        <td style="border:none;">先頭に0をつけた数字にする(01,02,03..)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lower-roman</td>
+        <td style="border:none;">小文字のローマ数字にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">upper-roman</td>
+        <td style="border:none;">大文字のローマ数字にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lower-latin</td>
+        <td style="border:none;">小文字のアルファベットにする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">upper-latin</td>
+        <td style="border:none;">大文字のアルファベットにする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lower-alpha</td>
+        <td style="border:none;">小文字のアルファベットにする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">upper-alpha</td>
+        <td style="border:none;">大文字のアルファベットにする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lower-greek</td>
+        <td style="border:none;">小文字のギリシャ文字にする</td>
+    </tr>
+</table>
+
+
+使用例
+
+```
+<ul style="list-style-type:circle">
+<li>その１</li>
+<li>その２</li>
+<li>その３</li>
+</ul>
+<br>
+<ul style="list-style-type:lower-greek">
+<li>その１</li>
+<li>その２</li>
+<li>その３</li>
+</ul>
+```
+
+
+表示例
+
+<hr>
+<ul style="list-style-type:circle">
+<li>その１</li>
+<li>その２</li>
+<li>その３</li>
+</ul>
+<br>
+<ul style="list-style-type:lower-greek">
+<li>その１</li>
+<li>その２</li>
+<li>その３</li>
+</ul>
+<hr>

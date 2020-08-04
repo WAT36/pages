@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.820fa2a7b20fd81defd76303f2346d538d3d401b5d81fa15e34b7db7578355c3.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.71e1799b3f3891dfde6f4094b557029154bac7d7bf5dd369c8fbe73f14fb8e5e.js"></script>
 
 
 
@@ -240,6 +240,107 @@ https://github.com/alex-shpak/hugo-book
 <p><iframe width="350" height="350" src="https://WAT36.github.io/pages/css_sample_pages/radial-gradient.html">
 </iframe>
 <hr></p>
+
+<h1 id="リスト関連のプロパティ">リスト関連のプロパティ</h1>
+
+<p>リスト関連について、紹介し切れていないプロパティについてを述べる。</p>
+
+<h2 id="list-style-typeプロパティ">list-style-typeプロパティ</h2>
+
+<p>list-style-typeプロパティは、リストの行頭記号の種類を設定するプロパティである。</p>
+
+<p>設定する値と意味は以下の通り。</p>
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">行頭記号を消す</td>
+    </tr>
+    <tr>
+        <td style="border:none;">disc</td>
+        <td style="border:none;">黒丸にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">circle</td>
+        <td style="border:none;">白抜きの丸にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">square</td>
+        <td style="border:none;">四角にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">decimal</td>
+        <td style="border:none;">数字にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">decimal-leading-zero</td>
+        <td style="border:none;">先頭に0をつけた数字にする(01,02,03..)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lower-roman</td>
+        <td style="border:none;">小文字のローマ数字にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">upper-roman</td>
+        <td style="border:none;">大文字のローマ数字にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lower-latin</td>
+        <td style="border:none;">小文字のアルファベットにする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">upper-latin</td>
+        <td style="border:none;">大文字のアルファベットにする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lower-alpha</td>
+        <td style="border:none;">小文字のアルファベットにする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">upper-alpha</td>
+        <td style="border:none;">大文字のアルファベットにする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lower-greek</td>
+        <td style="border:none;">小文字のギリシャ文字にする</td>
+    </tr>
+</table>
+
+<p>使用例</p>
+
+<pre><code>&lt;ul style=&quot;list-style-type:circle&quot;&gt;
+&lt;li&gt;その１&lt;/li&gt;
+&lt;li&gt;その２&lt;/li&gt;
+&lt;li&gt;その３&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;ul style=&quot;list-style-type:lower-greek&quot;&gt;
+&lt;li&gt;その１&lt;/li&gt;
+&lt;li&gt;その２&lt;/li&gt;
+&lt;li&gt;その３&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><ul style="list-style-type:circle">
+<li>その１</li>
+<li>その２</li>
+<li>その３</li>
+</ul>
+<br>
+<ul style="list-style-type:lower-greek">
+<li>その１</li>
+<li>その２</li>
+<li>その３</li>
+</ul>
+<hr></p>
 </article>
 
       
@@ -247,7 +348,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/9f12e5aaa1d9d644e11ef42420a897c5a6dd1256" title='Last modified Aug 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/ab709aa9b921867b8c7e377966037adb465bcf16" title='Last modified Aug 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 4, 2020
     </a>
   </div>
@@ -268,6 +369,10 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#linear-gradientプロパティ">linear-gradientプロパティ</a></li>
 <li><a href="#radial-gradientプロパティ">radial-gradientプロパティ</a></li>
+</ul></li>
+<li><a href="#リスト関連のプロパティ">リスト関連のプロパティ</a>
+<ul>
+<li><a href="#list-style-typeプロパティ">list-style-typeプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>
