@@ -137,6 +137,14 @@ $ docker container rm [オプション] コンテナID
 $ docker container ls [オプション]
 ```
 
+## コンテナの稼働状況を確認する
+
+コンテナが起動しているか停止しているかの稼働状況を確認するには、**docker container stats**コマンドを使用する。
+
+```
+$ docker container stats
+```
+
 以上、一連のコマンドの動作を図に表すと以下のようになる。
 
 <img src="/img/container/docker_03.png" width=100%>
