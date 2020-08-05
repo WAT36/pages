@@ -616,3 +616,11 @@ q {
 <iframe width="500" height="100" src="/css_sample_pages/quotes.html">
 </iframe>
 
+
+## counter-resetプロパティ
+
+counter-resetプロパティは、値をリセット(0にする)したいカウンタ変数を指定するプロパティである。
+
+値にはカウンタとして用いる変数を指定する
+
+(使用例は次とまとめる)
