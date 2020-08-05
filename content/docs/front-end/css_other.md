@@ -621,6 +621,42 @@ q {
 
 counter-resetプロパティは、値をリセット(0にする)したいカウンタ変数を指定するプロパティである。
 
-値にはカウンタとして用いる変数を指定する
+値にはカウンタとして用いる変数を指定する。
 
 (使用例は次とまとめる)
+
+
+## counter-incrementプロパティ
+
+counter-incrementプロパティは、カウンタ変数の値を1増やすプロパティである。
+
+値にはカウンタとして用いる変数を指定する。
+
+使用例(css)
+
+```css
+body {
+    counter-reset: chapter;
+}
+
+p::before {
+    counter-increment: chapter;
+    content: counter(chapter);
+}
+```
+
+(html)
+
+```html
+<p>p要素1個目</p>
+<p>p要素2個目</p>
+<p>p要素3個目</p>
+<p>p要素4個目</p>
+<p>p要素5個目</p>
+```
+
+
+表示例
+
+<iframe width="300" height="300" src="/css_sample_pages/counter.html">
+</iframe>

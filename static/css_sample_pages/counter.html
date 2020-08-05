@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>counterサンプル</title>
+
+<style type="text/css">
+body {
+    counter-reset: chapter;
+}
+
+p::before {
+    counter-increment: chapter;
+    content: counter(chapter);
+}
+</style>
+
+</head>
+<body>
+
+<p>p要素1個目</p>
+<p>p要素2個目</p>
+<p>p要素3個目</p>
+<p>p要素4個目</p>
+<p>p要素5個目</p>
+
+</body>
+</html>

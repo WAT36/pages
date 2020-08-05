@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.26237e84f14b78b0e4f967a8df8ec31de46e385c2c238a37cef0bad28197e203.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.463b5cbe9e440e92f051cdad78ccbbb455e5663ef42a73c9e701f74b5b025426.js"></script>
 
 
 
@@ -638,9 +638,35 @@ https://github.com/alex-shpak/hugo-book
 
 <p>counter-resetプロパティは、値をリセット(0にする)したいカウンタ変数を指定するプロパティである。</p>
 
-<p>値にはカウンタとして用いる変数を指定する</p>
+<p>値にはカウンタとして用いる変数を指定する。</p>
 
 <p>(使用例は次とまとめる)</p>
+
+<h2 id="counter-incrementプロパティ">counter-incrementプロパティ</h2>
+
+<p>counter-incrementプロパティは、カウンタ変数の値を1増やすプロパティである。</p>
+
+<p>値にはカウンタとして用いる変数を指定する。</p>
+
+<p>使用例(css)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">body</span> {
+    <span style="color:#66d9ef">counter-reset</span>: chapter;
+}
+
+<span style="color:#f92672">p</span>::<span style="color:#a6e22e">before</span> {
+    <span style="color:#66d9ef">counter-increment</span>: chapter;
+    <span style="color:#66d9ef">content</span>: counter(chapter);
+}</code></pre></div>
+<p>(html)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;p要素1個目&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;p要素2個目&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;p要素3個目&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;p要素4個目&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;p要素5個目&lt;/<span style="color:#f92672">p</span>&gt;</code></pre></div>
+<p>表示例</p>
+
+<iframe width="300" height="300" src="https://WAT36.github.io/pages/css_sample_pages/counter.html">
+</iframe>
 </article>
 
       
@@ -648,7 +674,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/3d81e767fc79040f8e2c7fdd9a48df22168a5b86" title='Last modified Aug 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/10eb95cd16d66235b34c7019bccb7119e2fda5b7" title='Last modified Aug 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 5, 2020
     </a>
   </div>
@@ -689,6 +715,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#contentプロパティ">contentプロパティ</a></li>
 <li><a href="#quotesプロパティ">quotesプロパティ</a></li>
 <li><a href="#counter-resetプロパティ">counter-resetプロパティ</a></li>
+<li><a href="#counter-incrementプロパティ">counter-incrementプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>
