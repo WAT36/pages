@@ -64,10 +64,8 @@ p {
 
 表示例
 
-<hr>
 <iframe width="350" height="350" src="/css_sample_pages/linear-gradient.html">
 </iframe>
-<hr>
 
 
 ## radial-gradientプロパティ
@@ -139,10 +137,8 @@ p {
 
 表示例
 
-<hr>
 <iframe width="350" height="350" src="/css_sample_pages/radial-gradient.html">
 </iframe>
-<hr>
 
 
 # リスト関連のプロパティ
@@ -236,7 +232,6 @@ list-style-typeプロパティは、リストの行頭記号の種類を設定�
 
 表示例
 
-<hr>
 <ul style="list-style-type:circle">
 <li>その１</li>
 <li>その２</li>
@@ -248,7 +243,6 @@ list-style-typeプロパティは、リストの行頭記号の種類を設定�
 <li>その２</li>
 <li>その３</li>
 </ul>
-<hr>
 
 
 ## list-style-image プロパティ
@@ -297,10 +291,8 @@ ul {
 
 表示例
 
-<hr>
 <iframe width="400" height="200" src="/css_sample_pages/list-style-image.html">
 </iframe>
-<hr>
 
 
 ## list-style-position プロパティ
@@ -343,7 +335,6 @@ list-style-positionプロパティは、行頭記号の表示位置を設定す�
 
 表示例
 
-<hr>
 <ul style="list-style-position:inside">
 <li>その１</li>
 <li>その２</li>
@@ -355,7 +346,6 @@ list-style-positionプロパティは、行頭記号の表示位置を設定す�
 <li>その２</li>
 <li>その３</li>
 </ul>
-<hr>
 
 ## list-style プロパティ
 
@@ -374,13 +364,11 @@ list-styleプロパティは、前述のlist-style系のプロパティの値を
 
 表示例
 
-<hr>
 <ul style="list-style:lower-greek inside">
 <li>その１</li>
 <li>その２</li>
 <li>その３</li>
 </ul>
-<hr>
 
 # テーブル関連のプロパティ
 
@@ -411,7 +399,6 @@ caption-sideプロパティは、キャプションを表の上か下かどち�
 
 表示例
 
-<hr>
 <table>
     <caption style="caption-side:bottom">キャプションbottom</caption>
     <tr>
@@ -423,7 +410,6 @@ caption-sideプロパティは、キャプションを表の上か下かどち�
         <td>1,1</td>
     </tr>
 </table>
-<hr>
 
 ## border-collapseプロパティ
 
@@ -450,7 +436,6 @@ border-collapseプロパティは、ボーダーを隣接するセルと重ね�
 
 表示例
 
-<hr>
 <table style="border-collapse: collapse;">
     <caption>collapse</caption>
     <tr>
@@ -462,7 +447,6 @@ border-collapseプロパティは、ボーダーを隣接するセルと重ね�
         <td style="border: solid 1px;">1,1</td>
     </tr>
 </table>
-<hr>
 
 
 ## border-spacingプロパティ
@@ -491,7 +475,6 @@ border-spacingプロパティは、テーブルにおいて隣接するセルの
 
 表示例
 
-<hr>
 <table style="border-collapse: separate;border-spacing: 2px">
     <caption>separate 2px</caption>
     <tr>
@@ -503,7 +486,6 @@ border-spacingプロパティは、テーブルにおいて隣接するセルの
         <td style="border: solid 1px;">1,1</td>
     </tr>
 </table>
-<hr>
 
 ## empty-cellsプロパティ
 
@@ -531,7 +513,6 @@ empty-cellsプロパティは、テーブルのセルが空白の時にボーダ
 
 表示例
 
-<hr>
 <table style="border-collapse: separate;border-spacing: 2px; empty-cells: show;">
     <caption>separate 2px</caption>
     <tr>
@@ -543,6 +524,69 @@ empty-cellsプロパティは、テーブルのセルが空白の時にボーダ
         <td style="border: solid 1px;">1,1</td>
     </tr>
 </table>
-<hr>
 
+
+# 内容を追加するプロパティ
+
+内容を追加するプロパティについて。
+
+## contentプロパティ
+
+contentプロパティは、CSSでコンテンツ（テキスト・画像など）を追加するためのプロパティである。
+
+contentプロパティでは、擬似要素:before、:afterを利用して要素の前後どちらに挿入するかを決定する。
+
+設定する値と意味は以下の通り。
+
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">テキスト(ダブルクォートまたはシングルクォートで囲う)</td>
+        <td style="border:none;">入力したテキストがそのまま挿入される</td>
+    </tr>
+    <tr>
+        <td style="border:none;">url(...)</td>
+        <td style="border:none;">指定した画像が挿入される。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">attr(...)</td>
+        <td style="border:none;">指定した属性で指定されている文字列が挿入される。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">counter(...)</td>
+        <td style="border:none;">カウンタ変数(後述)の値が挿入される。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">open-quote、close-quote</td>
+        <td style="border:none;">quotesプロパティで設定されている値が挿入される。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">コンテンツを追加しない</td>
+    </tr>
+</table>
+
+使用例(css)
+
+```css
+p::before {
+    content:"「contentプロパティで挿入された文字です」";
+}
+```
+
+(html)
+
+```html
+<p>ここはp要素の内容です</p>
+```
+
+
+表示例
+
+<iframe width="400" height="200" src="/css_sample_pages/content.html">
+</iframe>
 
