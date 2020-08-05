@@ -587,6 +587,32 @@ p::before {
 
 表示例
 
-<iframe width="400" height="200" src="/css_sample_pages/content.html">
+<iframe width="400" height="100" src="/css_sample_pages/content.html">
+</iframe>
+
+
+## quotesプロパティ
+
+quotesプロパティは、q要素またはcontentプロパティで引用符を追加(open-quote,close-quote)するときにどの引用符を使うかを指定するプロパティである。
+
+使用するには、使う引用符を半角スペースで区切ってペアで指定する。
+
+使用例
+
+```css
+q {
+    quotes:"->->" "<-<-";
+}
+```
+
+(html)
+
+```html
+<q>ここはq要素で囲まれています</q>
+```
+
+表示例
+
+<iframe width="500" height="100" src="/css_sample_pages/quotes.html">
 </iframe>
 

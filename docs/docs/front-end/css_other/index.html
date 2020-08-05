@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.3a2660208c4cfd24165d9f7b3fc1e3ecc48805866108cefdcd4d840949f65250.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.82336815b57c8b16ad44969d2d06dc472f2f1464f877eaedf115aa9d841957bc.js"></script>
 
 
 
@@ -614,7 +614,24 @@ https://github.com/alex-shpak/hugo-book
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;ここはp要素の内容です&lt;/<span style="color:#f92672">p</span>&gt;</code></pre></div>
 <p>表示例</p>
 
-<iframe width="400" height="200" src="https://WAT36.github.io/pages/css_sample_pages/content.html">
+<iframe width="400" height="100" src="https://WAT36.github.io/pages/css_sample_pages/content.html">
+</iframe>
+
+<h2 id="quotesプロパティ">quotesプロパティ</h2>
+
+<p>quotesプロパティは、q要素またはcontentプロパティで引用符を追加(open-quote,close-quote)するときにどの引用符を使うかを指定するプロパティである。</p>
+
+<p>使用するには、使う引用符を半角スペースで区切ってペアで指定する。</p>
+
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">q</span> {
+    <span style="color:#66d9ef">quotes</span>:<span style="color:#e6db74">&#34;-&gt;-&gt;&#34;</span> <span style="color:#e6db74">&#34;&lt;-&lt;-&#34;</span>;
+}</code></pre></div>
+<p>(html)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">q</span>&gt;ここはq要素で囲まれています&lt;/<span style="color:#f92672">q</span>&gt;</code></pre></div>
+<p>表示例</p>
+
+<iframe width="500" height="100" src="https://WAT36.github.io/pages/css_sample_pages/quotes.html">
 </iframe>
 </article>
 
@@ -623,7 +640,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/291e1877f07cf4ee9aed52993cda0252888dc7ab" title='Last modified Aug 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/528982d7eb5e4023b8cab1c5b50f16ccc1c9c2e4" title='Last modified Aug 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 5, 2020
     </a>
   </div>
@@ -662,6 +679,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#内容を追加するプロパティ">内容を追加するプロパティ</a>
 <ul>
 <li><a href="#contentプロパティ">contentプロパティ</a></li>
+<li><a href="#quotesプロパティ">quotesプロパティ</a></li>
 </ul></li>
 </ul>
 </nav>
