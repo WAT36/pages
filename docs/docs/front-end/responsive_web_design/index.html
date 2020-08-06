@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.9dc8d968518218f7117f4aaf2034b20d2b4e11c576c806ac48adf479e3125da0.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.fdd6734183e06bd1f965f5824922158c892063c33d2011dfbfffb590a182645e.js"></script>
 
 
 
@@ -180,7 +180,7 @@ https://github.com/alex-shpak/hugo-book
 <p>例</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">media</span> <span style="color:#f92672">screen</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">max-width</span>:<span style="color:#a6e22e">500px</span><span style="color:#f92672">)</span> {
 }</code></pre></div>
-<p>これらの設定方法において、設定する値は<strong>メディア型</strong>と呼ばれる対象とするメディアを示す値、そして<strong>メディア特性</strong>と呼ばれる幅や高さといった情報を示す値である。</p>
+<p>これらの設定方法において、設定する値は<strong>メディア型</strong>と呼ばれる対象とするメディアを示す値、そして<strong>メディア特性</strong>と呼ばれる幅や高さといった情報を示す値である。値は空白区切りで複数設定できる。</p>
 
 <p>メディア型の値は以下の通り。</p>
 
@@ -267,6 +267,18 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">デバイスの解像度(の最小/最大値)</td>
     </tr>
 </table>
+
+<h2 id="可変グリッド">可変グリッド</h2>
+
+<p>可変グリッドとは、グリッドの幅がウィンドウ幅に応じて変化するシステムである。</p>
+
+<p>グリッドとは、基準となるラインを設定し、そのラインに沿って画像やテキストを配置する方式である。</p>
+
+<p>グリッドのラインがコンテンツを配置する基準となっているので、見やすいデザインを作ることができる。</p>
+
+<p>実装するには、グリッド幅に関してはCSSで幅を%などの相対値で指定することによって実現させる。</p>
+
+<p>または、Javascriptなどのライブラリやフレームワークを使ってCSSを動的に変更させて実装する方法もある。</p>
 </article>
 
       
@@ -274,7 +286,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/4e1859d8bd21c8f3bdb5d62bd913883cd5c6dff9" title='Last modified Aug 6, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/95f55062978fdd60d8ad1ba25a59891c59286318" title='Last modified Aug 6, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 6, 2020
     </a>
   </div>
@@ -297,6 +309,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#レスポンシブwebデザインで用いる技術">レスポンシブWebデザインで用いる技術</a>
 <ul>
 <li><a href="#メディアクエリ">メディアクエリ</a></li>
+<li><a href="#可変グリッド">可変グリッド</a></li>
 </ul></li>
 </ul>
 </nav>
