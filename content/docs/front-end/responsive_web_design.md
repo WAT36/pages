@@ -37,3 +37,123 @@ weight: 1
 - 画面遷移の変更には対応できない
 
 のようなものがある。
+
+
+# レスポンシブWebデザインで用いる技術
+
+レスポンシブWebデザインに必要な技術についてを述べる。
+
+
+## メディアクエリ
+
+メディアクエリとはCSSの仕様の1つで、機器の特性に応じてCSSを切り替える方式である。レスポンシブWebデザインのキーとなる技術である。
+
+設定方法は2つあり、1つはHTMLのlink要素でCSSファイルを読み込む際に、**media属性**を利用する方法である。
+
+例
+
+```html
+<link rel="stylesheet" media="screen and (max-width:500px)" href="style.css">
+```
+
+この例は、幅が500px以内の画面に対し、指定したCSSを適用する、と言う意味になる。（具体的な属性名などの意味は後述）
+
+もう1つは、CSSに@**media**識別子を利用して条件を記述する方法である。
+
+例
+
+```css
+@media screen and (max-width:500px) {
+}
+```
+
+これらの設定方法において、設定する値は**メディア型**と呼ばれる対象とするメディアを示す値、そして**メディア特性**と呼ばれる幅や高さといった情報を示す値である。
+
+
+メディア型の値は以下の通り。
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">all</td>
+        <td style="border:none;">全ての機器</td>
+    </tr>
+    <tr>
+        <td style="border:none;">screen</td>
+        <td style="border:none;">PCやスマートフォンなどの画面</td>
+    </tr>
+    <tr>
+        <td style="border:none;">print</td>
+        <td style="border:none;">プリンタ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">projection</td>
+        <td style="border:none;">プロジェクタ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">tv</td>
+        <td style="border:none;">テレビ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">handheld</td>
+        <td style="border:none;">携帯用機器</td>
+    </tr>
+    <tr>
+        <td style="border:none;">tty</td>
+        <td style="border:none;">文字幅が固定の端末</td>
+    </tr>
+    <tr>
+        <td style="border:none;">speech</td>
+        <td style="border:none;">スピーチ・シンセサイザー</td>
+    </tr>
+    <tr>
+        <td style="border:none;">braille</td>
+        <td style="border:none;">点字ディスプレイ</td>
+    </tr>
+</table>
+
+
+メディア特性の値は以下の通り。
+
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">width<br>min-width<br>max-width</td>
+        <td style="border:none;">画面の幅(の最小/最大値)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">height<br>min-height<br>max-height</td>
+        <td style="border:none;">画面の高さ(の最小/最大値)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">device-width<br>device-min-width<br>device-max-width</td>
+        <td style="border:none;">デバイスの幅(の最小/最大値)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">device-height<br>device-min-height<br>device-max-height</td>
+        <td style="border:none;">デバイスの高さ(の最小/最大値)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">aspect-ratio<br>min-aspect-ratio<br>max-aspect-ratio</td>
+        <td style="border:none;">画面のアスペクト比(の最小/最大値)。水平/垂直の整数で指定</td>
+    </tr>
+    <tr>
+        <td style="border:none;">device-aspect-ratio<br>min-device-aspect-ratio<br>max-device-aspect-ratio</td>
+        <td style="border:none;">デバイスのアスペクト比(の最小/最大値)。水平/垂直の整数で指定</td>
+    </tr>
+    <tr>
+        <td style="border:none;">grid</td>
+        <td style="border:none;">グリッド(1)かそれ以外(0)の画面であるか</td>
+    </tr>
+    <tr>
+        <td style="border:none;">resolution<br>min-resolution<br>max-resolution</td>
+        <td style="border:none;">デバイスの解像度(の最小/最大値)</td>
+    </tr>
+</table>

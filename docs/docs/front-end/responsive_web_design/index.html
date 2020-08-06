@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.212735ea124e6acb3a94a41e3816b44f45b17e3dafc2a8c4be8396fc96fe8240.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.9dc8d968518218f7117f4aaf2034b20d2b4e11c576c806ac48adf479e3125da0.js"></script>
 
 
 
@@ -160,6 +160,113 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 
 <p>のようなものがある。</p>
+
+<h1 id="レスポンシブwebデザインで用いる技術">レスポンシブWebデザインで用いる技術</h1>
+
+<p>レスポンシブWebデザインに必要な技術についてを述べる。</p>
+
+<h2 id="メディアクエリ">メディアクエリ</h2>
+
+<p>メディアクエリとはCSSの仕様の1つで、機器の特性に応じてCSSを切り替える方式である。レスポンシブWebデザインのキーとなる技術である。</p>
+
+<p>設定方法は2つあり、1つはHTMLのlink要素でCSSファイルを読み込む際に、<strong>media属性</strong>を利用する方法である。</p>
+
+<p>例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">media</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;screen and (max-width:500px)&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;style.css&#34;</span>&gt;</code></pre></div>
+<p>この例は、幅が500px以内の画面に対し、指定したCSSを適用する、と言う意味になる。（具体的な属性名などの意味は後述）</p>
+
+<p>もう1つは、CSSに@<strong>media</strong>識別子を利用して条件を記述する方法である。</p>
+
+<p>例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">media</span> <span style="color:#f92672">screen</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">max-width</span>:<span style="color:#a6e22e">500px</span><span style="color:#f92672">)</span> {
+}</code></pre></div>
+<p>これらの設定方法において、設定する値は<strong>メディア型</strong>と呼ばれる対象とするメディアを示す値、そして<strong>メディア特性</strong>と呼ばれる幅や高さといった情報を示す値である。</p>
+
+<p>メディア型の値は以下の通り。</p>
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">all</td>
+        <td style="border:none;">全ての機器</td>
+    </tr>
+    <tr>
+        <td style="border:none;">screen</td>
+        <td style="border:none;">PCやスマートフォンなどの画面</td>
+    </tr>
+    <tr>
+        <td style="border:none;">print</td>
+        <td style="border:none;">プリンタ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">projection</td>
+        <td style="border:none;">プロジェクタ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">tv</td>
+        <td style="border:none;">テレビ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">handheld</td>
+        <td style="border:none;">携帯用機器</td>
+    </tr>
+    <tr>
+        <td style="border:none;">tty</td>
+        <td style="border:none;">文字幅が固定の端末</td>
+    </tr>
+    <tr>
+        <td style="border:none;">speech</td>
+        <td style="border:none;">スピーチ・シンセサイザー</td>
+    </tr>
+    <tr>
+        <td style="border:none;">braille</td>
+        <td style="border:none;">点字ディスプレイ</td>
+    </tr>
+</table>
+
+<p>メディア特性の値は以下の通り。</p>
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">width<br>min-width<br>max-width</td>
+        <td style="border:none;">画面の幅(の最小/最大値)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">height<br>min-height<br>max-height</td>
+        <td style="border:none;">画面の高さ(の最小/最大値)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">device-width<br>device-min-width<br>device-max-width</td>
+        <td style="border:none;">デバイスの幅(の最小/最大値)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">device-height<br>device-min-height<br>device-max-height</td>
+        <td style="border:none;">デバイスの高さ(の最小/最大値)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">aspect-ratio<br>min-aspect-ratio<br>max-aspect-ratio</td>
+        <td style="border:none;">画面のアスペクト比(の最小/最大値)。水平/垂直の整数で指定</td>
+    </tr>
+    <tr>
+        <td style="border:none;">device-aspect-ratio<br>min-device-aspect-ratio<br>max-device-aspect-ratio</td>
+        <td style="border:none;">デバイスのアスペクト比(の最小/最大値)。水平/垂直の整数で指定</td>
+    </tr>
+    <tr>
+        <td style="border:none;">grid</td>
+        <td style="border:none;">グリッド(1)かそれ以外(0)の画面であるか</td>
+    </tr>
+    <tr>
+        <td style="border:none;">resolution<br>min-resolution<br>max-resolution</td>
+        <td style="border:none;">デバイスの解像度(の最小/最大値)</td>
+    </tr>
+</table>
 </article>
 
       
@@ -186,6 +293,10 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#レスポンシブwebデザイン">レスポンシブWebデザイン</a>
 <ul>
 <li><a href="#メリットとデメリット">メリットとデメリット</a></li>
+</ul></li>
+<li><a href="#レスポンシブwebデザインで用いる技術">レスポンシブWebデザインで用いる技術</a>
+<ul>
+<li><a href="#メディアクエリ">メディアクエリ</a></li>
 </ul></li>
 </ul>
 </nav>
