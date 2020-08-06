@@ -170,3 +170,17 @@ $ docker container attach コンテナID
 
 終了するときは、Ctrl+P(またはQ) コマンドで抜け出せる。コンテナの停止を同時に行いたい時は、Ctrl+Cコマンドを利用する。
 
+
+## 起動中のコンテナでプロセス実行したい時
+
+起動中のコンテナで何かプロセスを実行したい時は、**docker container exec**コマンドを利用する。
+
+```
+$ docker container exec [オプション] コンテナID 実行するコマンド [引数]
+```
+
+コンテナに接続しようとしてdocker container attachコマンドを利用しようとしても、もしシェルが動作していなかった場合はコマンドを受け付けることができなくなる。
+このような場合に、docker container execコマンドを利用して任意のコマンドを実行する。
+
+ちなみに、コンテナのシェルを実行させるには、docker container execコマンドでコンテナ内の/bin/bashを実行させれば良い。
+
