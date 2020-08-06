@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.3d9715de564e59cd111a4050f654b32faf2e8c577edf2a4918d566559ae2c521.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.01827fb4a9ee4a72a341c394498e304d6c57fbc514f88f4f0e7a536d0fa683c3.js"></script>
 
 
 
@@ -136,6 +136,30 @@ https://github.com/alex-shpak/hugo-book
 <p>また、その度に各機器用のHTMLを作成していると、開発や運用も大変になる。</p>
 
 <p>そのため、なるべく多くの機器に少ないHTMLファイルで対応できるように、このような開発手法が登場した。</p>
+
+<p>このような方法を実装するには、各機器用のCSSを用意し、必要に応じて切り替えて利用する方法(CSSメディアクエリ)が使われる。</p>
+
+<h2 id="メリットとデメリット">メリットとデメリット</h2>
+
+<p>レスポンシブWebデザインのメリットとデメリットにはどのようなものがあるだろうか。</p>
+
+<p>まず、メリットとしては</p>
+
+<ul>
+<li>作るHTMLは1つで済み、開発運用コストが削減できる</li>
+<li>画面サイズさえ合えば、現在存在しない機器にも対応可能</li>
+<li>HTMLは1つなので、特定デバイス向けのサイトは作らずに済む。またそのようなサイトがある場合と比べ、リダイレクトの時間を削減できる。</li>
+</ul>
+
+<p>デメリットとしては</p>
+
+<ul>
+<li>1つのHTMLを複数のCSSで使い回すような構造は逆に困難・高コストになる場合もある</li>
+<li>HTML/CSSの容量が大きくなる時もあり、場合によってはページ表示や動作が遅くなることもある</li>
+<li>画面遷移の変更には対応できない</li>
+</ul>
+
+<p>のようなものがある。</p>
 </article>
 
       
@@ -143,7 +167,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/2ca48f200979b6023c0dce934f51f8490d01cb4b" title='Last modified Aug 6, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/6357549e158b5b85c0d5604f961cc62ae799948d" title='Last modified Aug 6, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 6, 2020
     </a>
   </div>
@@ -159,7 +183,10 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#レスポンシブwebデザイン">レスポンシブWebデザイン</a></li>
+<li><a href="#レスポンシブwebデザイン">レスポンシブWebデザイン</a>
+<ul>
+<li><a href="#メリットとデメリット">メリットとデメリット</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>
