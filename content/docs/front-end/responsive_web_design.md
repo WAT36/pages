@@ -229,6 +229,18 @@ weight: 1
 可変イメージは、img要素の「max-width」属性を100%とすれば実現可能となる。
 
 
+使用例
+
+```html
+<img src="/img/front-end/img.jpg" style="max-width: 100%">
+```
+
+表示例（ブラウザの幅を変えるとサイズが変化します）
+
+<img src="/img/front-end/img.jpg" style="max-width: 100%">
+
+
+
 ## ビューポート
 
 ビューポートとは、ブラウザの表示領域のことである。Webブラウザでサイトを閲覧する時は、ビューポートのサイズをもとにコンテンツが表示される。
