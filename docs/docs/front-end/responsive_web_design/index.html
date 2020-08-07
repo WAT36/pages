@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.67eef7e2036e8a3b5374464db2f688896310220f779d7cb6d2e7afd77c1de5be.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.b52a549498a0d0de494c69c6582584ad55af1afdfd8d43d9c53c33edef4b47e2.js"></script>
 
 
 
@@ -268,6 +268,46 @@ https://github.com/alex-shpak/hugo-book
     </tr>
 </table>
 
+<p>使用例(css)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">media</span> <span style="color:#f92672">screen</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">min-width</span>:<span style="color:#a6e22e">0px</span><span style="color:#f92672">)</span>{
+    <span style="color:#f92672">body</span>{
+      <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">greenyellow</span>;
+    }
+}
+  
+@<span style="color:#66d9ef">media</span> <span style="color:#f92672">screen</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">min-width</span>:<span style="color:#a6e22e">300px</span><span style="color:#f92672">)</span>{
+    <span style="color:#f92672">body</span>{
+      <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">red</span>;
+    }
+}
+  
+@<span style="color:#66d9ef">media</span> <span style="color:#f92672">screen</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">min-width</span>:<span style="color:#a6e22e">600px</span><span style="color:#f92672">)</span>{
+    <span style="color:#f92672">body</span>{
+      <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">blue</span>;
+    }
+}</code></pre></div>
+<p>(html)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">title</span>&gt;メディアクエリサンプル&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;media_query.css&#34;</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+
+&lt;<span style="color:#f92672">p</span>&gt;メディアクエリのテスト&lt;/<span style="color:#f92672">p</span>&gt;
+
+&lt;<span style="color:#f92672">p</span>&gt;幅0px以上で緑、幅300px以上で赤、幅600px以上で青になるはず。&lt;/<span style="color:#f92672">p</span>&gt;
+
+&lt;<span style="color:#f92672">p</span>&gt;ブラウザの幅を変えると色が変化します&lt;/<span style="color:#f92672">p</span>&gt;
+
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<p>表示例</p>
+
+<iframe width="100%" height="400" src="https://WAT36.github.io/pages/css_sample_pages/media_query.html">
+</iframe>
+
 <h2 id="可変グリッド">可変グリッド</h2>
 
 <p>可変グリッドとは、グリッドの幅がウィンドウ幅に応じて変化するシステムである。</p>
@@ -339,7 +379,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/02c564571ca1508aa62e2521ee90cb41ef41f907" title='Last modified Aug 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/6ce1dca77643b54cec2b9a5c12c315bbb859555a" title='Last modified Aug 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 7, 2020
     </a>
   </div>

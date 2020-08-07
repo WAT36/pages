@@ -159,6 +159,56 @@ weight: 1
 </table>
 
 
+使用例(css)
+
+```css
+@media screen and (min-width:0px){
+    body{
+      color: greenyellow;
+    }
+}
+  
+@media screen and (min-width:300px){
+    body{
+      color: red;
+    }
+}
+  
+@media screen and (min-width:600px){
+    body{
+      color: blue;
+    }
+}
+```
+
+(html)
+
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>メディアクエリサンプル</title>
+<link rel="stylesheet" type="text/css" href="media_query.css">
+</head>
+<body>
+
+<p>メディアクエリのテスト</p>
+
+<p>幅0px以上で緑、幅300px以上で赤、幅600px以上で青になるはず。</p>
+
+<p>ブラウザの幅を変えると色が変化します</p>
+
+</body>
+</html>
+```
+
+
+表示例
+
+<iframe width="100%" height="400" src="/css_sample_pages/media_query.html">
+</iframe>
+
+
 ## 可変グリッド
 
 可変グリッドとは、グリッドの幅がウィンドウ幅に応じて変化するシステムである。
