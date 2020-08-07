@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.386ab723befcfb0f042a2a9119a8a7a6492fb46ef3cbfe3f85f54d08c956745b.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.53d8309866974b4c8fe0570304511809b196901c4a55094bc83ab124c8ed8f1d.js"></script>
 
 
 
@@ -285,6 +285,43 @@ https://github.com/alex-shpak/hugo-book
 <p>可変イメージとは、画像をウィンドウ幅に応じて変更していく手法である。</p>
 
 <p>可変イメージは、img要素の「max-width」属性を100%とすれば実現可能となる。</p>
+
+<h2 id="ビューポート">ビューポート</h2>
+
+<p>ビューポートとは、ブラウザの表示領域のことである。Webブラウザでサイトを閲覧する時は、ビューポートのサイズをもとにコンテンツが表示される。</p>
+
+<p>ビューポートの幅や高さは、スマートフォンなどのデバイスのそれとは異なることが多い。そのため、デバイスによっては、サイトを表示するとコンテンツが小さく表示される場合があるので、注意が必要である。</p>
+
+<p>ビューポートに関する指定は、HTMLのmeta要素で行う。name属性に<strong>viewport</strong>を指定し、content属性にそれぞれ値を指定する。</p>
+
+<p>指定できるプロパティと意味は以下の通り。</p>
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">width</td>
+        <td style="border:none;">ビューポートの幅</td>
+    </tr>
+    <tr>
+        <td style="border:none;">height</td>
+        <td style="border:none;">ビューポートの高さ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">initial-scale</td>
+        <td style="border:none;">表示倍率の初期値</td>
+    </tr>
+    <tr>
+        <td style="border:none;">minimum-scale</td>
+        <td style="border:none;">表示倍率の最小値</td>
+    </tr>
+    <tr>
+        <td style="border:none;">maximum-scale</td>
+        <td style="border:none;">表示位置の最大値</td>
+    </tr>
+</table>
 </article>
 
       
@@ -292,7 +329,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/324e0950a281e88cde6e88a65c333a2fe43d831d" title='Last modified Aug 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/3dff4747d737133a71e0994299305c8479cb726e" title='Last modified Aug 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 7, 2020
     </a>
   </div>
@@ -317,6 +354,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#メディアクエリ">メディアクエリ</a></li>
 <li><a href="#可変グリッド">可変グリッド</a></li>
 <li><a href="#可変イメージ">可変イメージ</a></li>
+<li><a href="#ビューポート">ビューポート</a></li>
 </ul></li>
 </ul>
 </nav>

@@ -177,3 +177,42 @@ weight: 1
 可変イメージとは、画像をウィンドウ幅に応じて変更していく手法である。
 
 可変イメージは、img要素の「max-width」属性を100%とすれば実現可能となる。
+
+
+## ビューポート
+
+ビューポートとは、ブラウザの表示領域のことである。Webブラウザでサイトを閲覧する時は、ビューポートのサイズをもとにコンテンツが表示される。
+
+ビューポートの幅や高さは、スマートフォンなどのデバイスのそれとは異なることが多い。そのため、デバイスによっては、サイトを表示するとコンテンツが小さく表示される場合があるので、注意が必要である。
+
+ビューポートに関する指定は、HTMLのmeta要素で行う。name属性に**viewport**を指定し、content属性にそれぞれ値を指定する。
+
+指定できるプロパティと意味は以下の通り。
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">width</td>
+        <td style="border:none;">ビューポートの幅</td>
+    </tr>
+    <tr>
+        <td style="border:none;">height</td>
+        <td style="border:none;">ビューポートの高さ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">initial-scale</td>
+        <td style="border:none;">表示倍率の初期値</td>
+    </tr>
+    <tr>
+        <td style="border:none;">minimum-scale</td>
+        <td style="border:none;">表示倍率の最小値</td>
+    </tr>
+    <tr>
+        <td style="border:none;">maximum-scale</td>
+        <td style="border:none;">表示位置の最大値</td>
+    </tr>
+</table>
+
