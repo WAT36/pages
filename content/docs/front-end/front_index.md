@@ -34,3 +34,5 @@ bookToc: false
  - [アニメーション]({{< relref "/docs/front-end/css_animation.md" >}})
  - [その他]({{< relref "/docs/front-end/css_other.md" >}})
 - [レスポンシブWebデザイン]({{< relref "/docs/front-end/responsive_web_design.md" >}})
+- [スマートフォン最適化]({{< relref "/docs/front-end/smartphone_optimization.md" >}})
+
