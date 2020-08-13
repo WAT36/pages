@@ -601,7 +601,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/smartphone_optimization/</guid>
-      <description>スマートフォン最適化</description>
+      <description>スマートフォン最適化 スマートフォン最適化についてを述べる。 CSSスプライト CSSスプライトとは、複数の画像をつなげて1つのファイルにまとめ、</description>
     </item>
     
     <item>
@@ -962,6 +962,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/front-end/ruby/</guid>
       <description>ルビ HTML文書にルビ(ふりがな)を記載するための要素についてをここでは述べる。 ruby要素 ruby要素は文字にルビを振る要素であり、実際に</description>
+    </item>
+    
+    <item>
+      <title>レスポンシブWebデザイン</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/responsive_web_design-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/responsive_web_design-2/</guid>
+      <description>レスポンシブWebデザイン レスポンシブWebデザインについて。 レスポンシブWebデザインとは、1つのHTMLを画面幅などの特性が異なったデバ</description>
     </item>
     
     <item>
