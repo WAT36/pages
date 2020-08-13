@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.702b43890a4eee19ef25c01a40aea295b939769311ece16e45ba93a97b7aeacd.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.a6898b3f8d716f9346637c27451740c6bf509e2054a68ecfdc4887c417f618b0.js"></script>
 
 
 
@@ -204,14 +204,22 @@ https://github.com/alex-shpak/hugo-book
 <p>この事により、拡大、縮小等によって画像がぼやけて表示されてしまうなどと言う問題が起こりうる場合がある。</p>
 
 <p>この問題を回避するには、メディアクエリを利用する事で、デバイスの特性により適用するCSSを使い分けていくと言う方法が考えられる。</p>
-</article>
+
+<h2 id="a要素での電話発信">a要素での電話発信</h2>
+
+<p>通話機能を持つデバイスには、a要素を利用する事で簡単に電話を発信する設定をすることができる。</p>
+
+<p>方法は、a要素のhref属性の値を<strong>tel:(電話番号)</strong>とすれば良い。</p>
+
+<p>使用例(html)、表示例は省略</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tel:xxxxxxxxxxx&#34;</span>&gt;管理者へTEL&lt;/<span style="color:#f92672">a</span>&gt;</code></pre></div></article>
 
       
 <div class="book-footer justify-between">
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/fbf67eb91558a33d9e5c4192279ab66876cca244" title='Last modified Aug 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/2c4a4fa4eda4d2da32b5aedc867f537649b51012" title='Last modified Aug 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 13, 2020
     </a>
   </div>
@@ -231,6 +239,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#cssスプライト">CSSスプライト</a></li>
 <li><a href="#高画像度画面向けの対応">高画像度画面向けの対応</a></li>
+<li><a href="#a要素での電話発信">a要素での電話発信</a></li>
 </ul></li>
 </ul>
 </nav>
