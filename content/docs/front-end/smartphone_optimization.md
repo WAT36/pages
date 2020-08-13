@@ -105,3 +105,34 @@ CSSスプライトとは、複数の画像をつなげて1つのファイルに�
 ```html
 <a href="tel:xxxxxxxxxxx">管理者へTEL</a>
 ```
+
+
+## script要素のasync属性/defer属性
+
+script要素でJavascript等の外部ソースを読み込む時、HTMLのパース(読み込み)を中断して外部ソースの読み込みを開始し、それが終わり次第HTMLの読み込みを再度開始する。
+
+しかし、それによりHTML読み込みの待ち時間が発生してしまい、通信環境が遅くなりがちなモバイル環境においては悪影響になる場合がある。
+
+このような場合に対処するための属性が、script要素に設定するasync/defer属性である。
+
+### async属性
+
+async属性は、HTMLパース処理を中止することなく非同期に外部ソースの読み込みを行う。外部ソースの読み込みが終了後に、その外部ソースの処理が実行される。
+
+使用例(html)、表示例は省略
+
+```html
+<script src="example.js" async></script>
+```
+
+
+### defer属性
+
+defer属性は、async属性と同様にHTMLパース処理を中止することなく非同期に外部ソースを読み込むが、その外部ソースの処理実行はHTMLパース処理が終了後に行われる。
+
+使用例(html)、表示例は省略
+
+```html
+<script src="example.js" defer></script>
+```
+
