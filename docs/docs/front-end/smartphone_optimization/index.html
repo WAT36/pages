@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.5383031ee568d4e3015889ca67f0825ae7c5aeee86384d90cb0bc3342d82dae9.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.3b9b4bf8e17bbbde29f5bbe9ea2aa5f572c6224f523b39f4f53b76507365f622.js"></script>
 
 
 
@@ -131,11 +131,11 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="cssスプライト">CSSスプライト</h2>
 
-<p>CSSスプライトとは、複数の画像をつなげて1つのファイルにまとめ、それをCSSで表示範囲を指定し利用する方法である。</p>
+<p>CSSスプライトとは、複数の画像をつなげて1つのファイルにまとめ、それをCSSで表示範囲を指定する事で画像を利用する方法である。</p>
 
-<p>複数の画像を個々に利用していると、その画像の数だけ画像の読み込みの通信をすることになり、非効率になる場合がある。</p>
+<p>複数の画像を個々に利用していると、その画像の数だけ読み込みの通信をすることになり、通信速度が遅くなる場合がある。</p>
 
-<p>その対策として、複数の画像を1つにまとめることで、通信回数が削減され、効率性が向上する。</p>
+<p>その対策として、今回のような複数の画像を1つにまとめると言う方法がある。これにより通信回数が削減され、通信速度の向上が見込まれる。</p>
 
 <p>この手法は、通信が遅く不安定であるモバイル環境において有効である。</p>
 
@@ -167,9 +167,6 @@ https://github.com/alex-shpak/hugo-book
         <span style="color:#66d9ef">background-position</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">-100</span><span style="color:#66d9ef">px</span>;
     }
 
-    .<span style="color:#a6e22e">splite4</span> {
-        <span style="color:#66d9ef">background-position</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">-150</span><span style="color:#66d9ef">px</span>;
-    }
 <span style="color:#f92672">&lt;/</span><span style="color:#f92672">style</span><span style="color:#f92672">&gt;</span>
 
 <span style="color:#f92672">&lt;/</span><span style="color:#f92672">head</span><span style="color:#f92672">&gt;</span>
@@ -178,7 +175,6 @@ https://github.com/alex-shpak/hugo-book
 <span style="color:#f92672">&lt;</span><span style="color:#f92672">p</span> <span style="color:#f92672">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;splite splite1&#34;</span><span style="color:#f92672">&gt;&lt;/</span><span style="color:#f92672">p</span><span style="color:#f92672">&gt;&lt;/</span><span style="color:#f92672">p</span><span style="color:#f92672">&gt;</span>
 <span style="color:#f92672">&lt;</span><span style="color:#f92672">p</span> <span style="color:#f92672">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;splite splite2&#34;</span><span style="color:#f92672">&gt;&lt;/</span><span style="color:#f92672">p</span><span style="color:#f92672">&gt;&lt;/</span><span style="color:#f92672">p</span><span style="color:#f92672">&gt;</span>
 <span style="color:#f92672">&lt;</span><span style="color:#f92672">p</span> <span style="color:#f92672">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;splite splite3&#34;</span><span style="color:#f92672">&gt;&lt;/</span><span style="color:#f92672">p</span><span style="color:#f92672">&gt;&lt;/</span><span style="color:#f92672">p</span><span style="color:#f92672">&gt;</span>
-<span style="color:#f92672">&lt;</span><span style="color:#f92672">p</span> <span style="color:#f92672">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;splite splite4&#34;</span><span style="color:#f92672">&gt;&lt;/</span><span style="color:#f92672">p</span><span style="color:#f92672">&gt;&lt;/</span><span style="color:#f92672">p</span><span style="color:#f92672">&gt;</span>
 
 
 <span style="color:#f92672">&lt;/</span><span style="color:#f92672">body</span><span style="color:#f92672">&gt;</span>
@@ -199,11 +195,13 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="高画像度画面向けの対応">高画像度画面向けの対応</h2>
 
-<p>デバイスによってディスプレイのピクセルの長さがCSSで扱うピクセルの長さと異なる場合がある。これは、解像度の違いより画素の大きさが異なることなどにより発生する。</p>
+<p>デバイスによって、ディスプレイのピクセルの長さがCSSで扱うピクセルの長さと異なる場合がある。</p>
 
-<p>この事により、拡大、縮小等によって画像がぼやけて表示されてしまうなどと言う問題が起こりうる場合がある。</p>
+<p>これは、解像度の違いより画素の大きさが異なることなどにより発生する。</p>
 
-<p>この問題を回避するには、メディアクエリを利用する事で、デバイスの特性により適用するCSSを使い分けていくと言う方法が考えられる。</p>
+<p>これにより、拡大、縮小等によって画像がぼやけて表示されるというような問題が発生する場合がある。</p>
+
+<p>この問題を回避するには、メディアクエリを利用する事で、デバイスの特性により適用するCSSを使い分けていく。</p>
 
 <h2 id="a要素での電話発信">a要素での電話発信</h2>
 
@@ -223,7 +221,7 @@ https://github.com/alex-shpak/hugo-book
 
 <h3 id="async属性">async属性</h3>
 
-<p>async属性は、HTMLパース処理を中止することなく非同期に外部ソースの読み込みを行う。外部ソースの読み込みが終了後に、その外部ソースの処理が実行される。</p>
+<p>async属性は、HTMLパース処理を中止することなく非同期に外部ソースの読み込みを行う。外部ソースの読み込みが終了後に、HTMLパース処理の終了を待つことなくその外部ソースの処理が実行される。</p>
 
 <p>使用例(html)、表示例は省略</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;example.js&#34;</span> <span style="color:#a6e22e">async</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;</code></pre></div>
@@ -239,7 +237,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/3abbebd786a11476b643de896c0ac24be790c1da" title='Last modified Aug 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/603c9e48dd9580533b26575210ad2ede1f1ee206" title='Last modified Aug 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 13, 2020
     </a>
   </div>
