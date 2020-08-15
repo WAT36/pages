@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.4d9dec61a9ed22e48e21b475eda9625c6e6be81c0c52cf88afa55a92622dd7ba.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.3a0d8363af52ecbd588b5973cad2cd68e5fd7e01dba2c03275c6a884aa285245.js"></script>
 
 
 
@@ -123,13 +123,50 @@ https://github.com/alex-shpak/hugo-book
 </header>
 
       
-<article class="markdown"><h1>API</h1>
+<article class="markdown">
+
+<h1>API</h1>
 
 <p>HTMLに関連する各種APIについてを述べる。</p>
+
+<h1 id="マルチメディアグラフィックスapi">マルチメディアグラフィックスAPI</h1>
+
+<p>HTMLでの音声・動画といったマルチメディアに関する設定や操作を、JavaScript等といった外部ソースから制御することができる。詳しい実装方法については述べないが、設定できる内容の種類についてを述べる。</p>
+
+<h2 id="マルチメディア">マルチメディア</h2>
+
+<p>HTMLでは、audio要素で音声コンテンツ、video要素で動画コンテンツを埋め込むことができる。</p>
+
+<p>この埋め込んだマルチメディアコンテンツを、JavaScriptを使って制御することができる。</p>
+
+<p>制御できる内容は以下の通り。</p>
+
+<ul>
+<li>音声・動画プレイヤーのデザイン変更</li>
+<li>コンテンツの再読み込み</li>
+<li>再生開始・中断</li>
+</ul>
+
+<p>また、マルチメディアコンテンツの以下のような情報をJavaScriptで取得することができる。</p>
+
+<ul>
+<li>コンテンツが再生・早送り可能な状態か</li>
+<li>ネットワーク状況</li>
+<li>コンテンツの場所</li>
+<li>音量</li>
+<li>トラック情報</li>
+</ul>
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/0ada27a2360ab87a1a4bdaba8de3eee3eee1b61a" title='Last modified Aug 15, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 15, 2020
+    </a>
+  </div>
   
 </div>
 
@@ -138,6 +175,17 @@ https://github.com/alex-shpak/hugo-book
     </div>
     
   
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#マルチメディアグラフィックスapi">マルチメディアグラフィックスAPI</a>
+<ul>
+<li><a href="#マルチメディア">マルチメディア</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
 
 
 
