@@ -1,8 +1,6 @@
 ---
 title: "優先度付きキュー（ヒープ）とPythonで実装するライブラリ「heapq」について"
 date: 2019-09-28T14:09:58+09:00
-categories: [ "プログラミング", "アルゴリズム"]
-tags: [ "python", "優先度付きキュー" ]
 ---
 
 先日Atcoder Beginner Contest 141に参加してきたが、D問題がいくらやってもTLEになり詰まった挙句TIME UPになった。
