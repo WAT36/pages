@@ -89,3 +89,14 @@ Geolocation APIは、無線LAN、Wi-Fi、携帯キャリアの基地局、GPS、
 - 方角
 - 速度
 
+
+## DeviceOrientation Event
+
+DeviceOrientation Eventは、デバイスの方角や傾きが変化したときに発生するイベントである。
+
+取得できる情報の例は以下の通り。
+
+- デバイスが差す方角
+- デバイスの上下方向の傾き
+- デバイスの左右方向の傾き
+
