@@ -182,6 +182,15 @@
     </item>
     
     <item>
+      <title>DockerでNginxを動かす</title>
+      <link>https://WAT36.github.io/pages/docs/container/docker_nginx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/container/docker_nginx/</guid>
+      <description>DockerでNginxを動かす</description>
+    </item>
+    
+    <item>
       <title>for文</title>
       <link>https://WAT36.github.io/pages/docs/programming/control/for/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
