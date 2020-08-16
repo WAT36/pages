@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.8b15314c32639f91dbc911241aeb300fc8fe66579b35f89d986cb3da0e4de514.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.d70f4f8b6b04798aa5228df54a9f8c2fdc8a2e54fa317e5ba7727b36b3b3a123.js"></script>
 
 
 
@@ -168,6 +168,31 @@ https://github.com/alex-shpak/hugo-book
 <p>Adaptive Streaming技術には、Apple社が開発したプロトコルである<strong>HLS(HTTP Live Streaming)</strong>、Adobe社やMicrosoft社などにより開発された<strong>MPEG-DASH</strong>のようなプロトコルも存在する。</p>
 
 <p>また、JavaScriptのAPIにもストリーミングに対応したものが用意されている。例として<strong>Media Source Extensions</strong>はHLSやMPEG-DASHのように、ストリーミング配信されるコンテンツを再生するために作られたAPIである。</p>
+
+<h2 id="グラフィックス">グラフィックス</h2>
+
+<p>画像ファイルは、jpegやpngファイルを用意して表示するが、HTML5ではJavascript等の外部ソースを利用しても表示できる。</p>
+
+<p>JavaScriptを使って画像を描画し、HTMLで表示するには<strong>Canvas要素</strong>を利用する。canvasは画像をビットマップ形式で描画する。そのため、拡大縮小すると画像が粗くなる。</p>
+
+<p>利用方法は以下の通り。</p>
+
+<ul>
+<li>HTMLにcanvas要素を用意する。</li>
+<li>Javascriptでcanvas要素を参照し、描画用のcontextオブジェクトを取得する</li>
+<li>Javascriptを使って描画する</li>
+</ul>
+
+<p>Javascriptを使った描画では、以下のような操作が可能である。</p>
+
+<ul>
+<li>線を描く</li>
+<li>円、四角を描く</li>
+<li>色を塗る</li>
+<li>テキストを書く</li>
+<li>画像ファイルを読み込む</li>
+<li>拡大・縮小・回転する</li>
+</ul>
 </article>
 
       
@@ -175,7 +200,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f2045a9e5a727394b6281e359d8988f573f8fce9" title='Last modified Aug 15, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/651a28a679e99eac76234fb4618d517f7aa06949" title='Last modified Aug 15, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 15, 2020
     </a>
   </div>
@@ -195,6 +220,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#マルチメディア">マルチメディア</a></li>
 <li><a href="#ストリーミング">ストリーミング</a></li>
+<li><a href="#グラフィックス">グラフィックス</a></li>
 </ul></li>
 </ul>
 </nav>

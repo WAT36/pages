@@ -49,3 +49,23 @@ Adaptive Streaming技術には、Apple社が開発したプロトコルである
 また、JavaScriptのAPIにもストリーミングに対応したものが用意されている。例として**Media Source Extensions**はHLSやMPEG-DASHのように、ストリーミング配信されるコンテンツを再生するために作られたAPIである。
 
 
+## グラフィックス
+
+画像ファイルは、jpegやpngファイルを用意して表示するが、HTML5ではJavascript等の外部ソースを利用しても表示できる。
+
+JavaScriptを使って画像を描画し、HTMLで表示するには**Canvas要素**を利用する。canvasは画像をビットマップ形式で描画する。そのため、拡大縮小すると画像が粗くなる。
+
+利用方法は以下の通り。
+
+- HTMLにcanvas要素を用意する。
+- Javascriptでcanvas要素を参照し、描画用のcontextオブジェクトを取得する
+- Javascriptを使って描画する
+
+Javascriptを使った描画では、以下のような操作が可能である。
+
+- 線を描く
+- 円、四角を描く
+- 色を塗る
+- テキストを書く
+- 画像ファイルを読み込む
+- 拡大・縮小・回転する
