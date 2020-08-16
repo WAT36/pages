@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>正規表現 | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.dfd4d2a4c93846e9d0dc052cf0f06e3b9fa9db1c2aeb42de963e3dad8b5b2809.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fother\2fre\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/container/container_index/"><strong>コンテナ</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>正規表現</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="正規表現">正規表現</h1>
+
+<p>文字列に正規表現を適用してある文字列パターンを抽出・検索したいという場合があると思う。</p>
+
+<p>その場合に利用する方法を示す。</p>
+
+<p>ちなみに正規表現の文法についてはここでは割愛する。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-re" style="display: none;" id="tabs-re-0" checked="checked" />
+  <label for="tabs-re-0">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Pythonでは正規表現を扱う<strong>re</strong>モジュールがある。
+この中には色々関数があり、これらを利用して文字列パターンの抽出や検索を行う。</p>
+
+<p>また、reを使う時、条件として使う正規表現も文字列として入力するが、正規表現で使う文字は特殊文字が多く、そのまま入力すると正規表現として認識してくれない時がある。
+それを防ぐため、pythonの<strong>raw文字列</strong>を使って正規表現を書く。raw文字列を使うと、特殊文字を無視して一文字として扱ってくれるのでこの場合便利。使用法は文字列のクォーテーション(&lsquo;)の前にrを付ける。</p>
+
+<p>(例)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;C:\Users\Downloads&#39;</span>) 
+  File <span style="color:#e6db74">&#34;&lt;stdin&gt;&#34;</span>, line <span style="color:#ae81ff">1</span>
+<span style="color:#a6e22e">SyntaxError</span>: (unicode error) <span style="color:#e6db74">&#39;unicodeescape&#39;</span> codec can<span style="color:#e6db74">&#39;t decode bytes in position 2-3: truncated \UXXXXXXXX escape</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e"># \u はUnicode文字列として認識されてエラーになる</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;C:\Users\Downloads&#39;</span>) 
+C:\Users\Downloads
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e"># \Uも\Dも特殊文字とは認識せずそのまま出力する</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
+<p>このraw文字列を使い、以下に正規表現の関数の例を示す。</p>
+
+<h2 id="正規表現の文字列を正規表現オブジェクトに変換する">正規表現の文字列を正規表現オブジェクトに変換する</h2>
+
+<p>pythonのreで正規表現を使うには、文字列で表した正規表現をそのまま使う方法と、正規表現オブジェクトに変換して使う方法の2つがある。<br />
+どちらでもよいが、正規表現の動作を何回も行わせるときは最初に文字列を正規表現オブジェクトに変換させてそれを繰り返し使わせた方が効率良く利用できる。</p>
+
+<p>文字列を正規表現オブジェクトに変換するには、reモジュールの<strong>compile</strong>関数を使う。</p>
+
+<pre><code>re.compile(pattern, flags=0)
+</code></pre>
+
+<p>引数patternに文字列で表した正規表現を入れると、それに対応した正規表現オブジェクトを返してくれる。</p>
+
+<h2 id="正規表現を使って文字列を検索-抽出する">正規表現を使って文字列を検索・抽出する</h2>
+
+<p>実際に正規表現を使って文字列から該当する部分を検索・抽出するにはどうすればよいのか？
+それにはreモジュールの以下諸関数を利用する。</p>
+
+<table >
+<tr>
+<td style="border-style: none;">・re.<b>search</b>(pattern, string, flags=0) </td>
+<td style="border-style: none;">#stringで正規表現patternに最初にマッチした部分を返す</td>
+</tr>
+<tr>
+<td style="border-style: none;">・re.<b>match</b>(pattern, string, flags=0) </td>
+<td style="border-style: none;">#stringの先頭が正規表現patternにマッチしていたらそれを返す</td>
+</tr>
+<tr>
+<td style="border-style: none;">・re.<b>fullmatch</b>(pattern, string, flags=0) </td>
+<td style="border-style: none;">#string全体が正規表現patternにマッチしていたらそれを返す</td>
+</tr>
+<tr>
+<td style="border-style: none;">・re.<b>findall</b>(pattern, string, flags=0) </td>
+<td style="border-style: none;">#string中で正規表現patternにマッチしているものをリストにして全て返す</td>
+</tr>
+</table>
+
+<p>いずれの関数も、もし該当する部分がない場合はNoneが返される。
+また、これら諸関数の返り値は文字列ではなく、マッチオブジェクトと呼ばれる型のデータを返す(findallはリストを返す)。
+マッチオブジェクトから結果を取得したい場合は、以下の諸関数をさらに利用する。</p>
+
+<table>
+<tr>
+<td style="border-style: none;">・Match.<b>start</b>()</td>
+<td style="border-style: none;">#マッチした文字列の文字列中での最初のインデックスを返す</td>
+</tr>
+<tr>
+<td style="border-style: none;">・Match.<b>end</b>()</td>
+<td style="border-style: none;">#マッチした文字列の文字列中での最後のインデックスを返す</td>
+</tr>
+<tr>
+<td style="border-style: none;">・Match.<b>span</b>()</td>
+<td style="border-style: none;">#マッチした文字列が文字列中でどこからどこまでのインデックスなのかを返す</td>
+</tr>
+<tr>
+<td style="border-style: none;">・Match.<b>group</b>()</td>
+<td style="border-style: none;">#マッチした文字列を返す</td>
+</tr>
+</table>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> re
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnnoooppp&#34;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> pattern<span style="color:#f92672">=</span>re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;d+&#39;</span>) 
+<span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(pattern,s)     
+<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>group()                 
+<span style="color:#e6db74">&#39;ddd&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>start()
+<span style="color:#ae81ff">9</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>end()
+<span style="color:#ae81ff">12</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>span()
+(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">12</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>match(pattern,s) 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(m)  <span style="color:#75715e">#先頭(aaa...)に一致しないのでNone</span>
+None
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> pattern<span style="color:#f92672">=</span>re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;a+&#39;</span>) 
+<span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>match(pattern,s)
+<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>group()
+<span style="color:#e6db74">&#39;aaa&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;aaa&#34;</span>                                               
+<span style="color:#f92672">&gt;&gt;&gt;</span> pattern<span style="color:#f92672">=</span>re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;a+&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>fullmatch(pattern,s)
+<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>group()
+<span style="color:#e6db74">&#39;aaa&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span>  
+<span style="color:#f92672">&gt;&gt;&gt;</span> pattern<span style="color:#f92672">=</span>re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;a&#39;</span>)    
+<span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(pattern,s)   
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(m)
+[<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
+<h2 id="正規表現を使って文字列を置換する">正規表現を使って文字列を置換する</h2>
+
+<p>文字列中の正規表現に該当する箇所を別の文字列に置換するにはreモジュールの関数<strong>sub</strong>を使う。</p>
+
+<p><code>re.sub(pattern, repl, string, count=0, flags=0)</code></p>
+
+<p>この関数を使うと文字列stringの中で正規表現patternに該当する最も左の箇所をreplに置換した文字列を出力する。
+引数のcountには置換を行う最大回数(非負整数)を入力する。デフォルトは0だが、0の場合は回数制限なしに全てを置換する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> re
+<span style="color:#f92672">&gt;&gt;&gt;</span> s<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;aaabbbcccdddeeefff&#34;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;a+&#39;</span>,<span style="color:#e6db74">&#39;A&#39;</span>,s)   
+<span style="color:#e6db74">&#39;Abbbcccdddeeefff&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;a&#39;</span>,<span style="color:#e6db74">&#39;A&#39;</span>,s)  
+<span style="color:#e6db74">&#39;AAAbbbcccdddeeefff&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;aa&#39;</span>,<span style="color:#e6db74">&#39;A&#39;</span>,s) 
+<span style="color:#e6db74">&#39;Aabbbcccdddeeefff&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
+  </div>
+
+</div>
+
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/654420d361ba174bae745d8d4a2dd465c55199f9" title='Last modified Mar 31, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 31, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

@@ -187,7 +187,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/container/docker_nginx/</guid>
-      <description>DockerでNginxを動かす</description>
+      <description>DockerでNginxを動かす Dockerを使って、NginxオープンソースのWebサーバであるNginxを起動させてみる。 使用環境 Docker : 17.12.0-ce</description>
     </item>
     
     <item>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>線形基底関数モデル | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.dfd4d2a4c93846e9d0dc052cf0f06e3b9fa9db1c2aeb42de963e3dad8b5b2809.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2flinear_basis_function\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/container/container_index/"><strong>コンテナ</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>線形基底関数モデル</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="線形基底関数モデル">線形基底関数モデル</h1>
+
+<p>先ほどまでの章では、データの予測に直線モデルを利用していたが、勿論直線モデルを利用するのが必ずしも最適ではないという場合もある。</p>
+
+<p>直線ではなく、曲線となるような関数をモデルにしてみるのはどうだろうか？ここではそれについて述べる。</p>
+
+<p>と言っても曲線となる関数は色々あるが、今回はその中でも汎用性が高いと言われている<strong>線形基底関数モデル</strong>を利用する。</p>
+
+<p>基底関数とは、元となる関数という意味で、先ほどの線形関数(y=w<sub>0</sub>x+w<sub>1</sub>)のxを基底関数φ(x)に置き換えたものが線形基底関数モデルになる。</p>
+
+<p>基底関数には色々種類があるが、ここではガウス関数を基底関数と置いた場合を例にとる。</p>
+
+<p>その場合の線形基底関数モデルの式は以下のようになる。</p>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+<p class="katex">
+  $$ 
+\tag{1}  y(x, {\bf w} ) = w_{0} \phi_{0} (x) + w_{1} \phi_{1} (x) + w_{2} \phi_{2} (x) + \cdots + w_{M}
+ $$
+</p>
+
+
+
+<p>ここでφ<sub>j</sub>(x)はガウス関数で、以下のように表される。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{2} \phi_{j} (x) = \exp( - \frac{ ( x - \mu_{j} )^2 }{ 2 v^2} )
+ $$
+</p>
+
+
+
+<p>μ<sub>j</sub>はガウス関数φ<sub>j</sub>(x)の中心位置で、vは関数の広がりの程度を示す。</p>
+
+<p>次に、この線形基底関数モデルの式を行列を用い表現することを考えてみる。</p>
+
+<p>式(1)において、</p>
+
+
+
+<p class="katex">
+  $$ 
+  {\bf w} = \left[
+    \begin{array}{cccc}
+      w_{0} \\
+      w_{1} \\
+      \vdots \\
+      w_{M}
+    \end{array}
+  \right]
+  ,
+    {\bf \Phi} = \left[
+    \begin{array}{cccc}
+      \phi_{0} \\
+      \phi_{1} \\
+      \vdots \\
+      \phi_{M}
+    \end{array}
+  \right]
+ $$
+</p>
+
+
+
+<p>とおくと、式(1)は以下のように表される。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{3}  y({\bf x}, {\bf w} ) = \sum_{i=0}^{M} w_{i} \phi_{i} (x) = {\bf w} ^\mathrm{T} {\bf \Phi} ( {\bf x} )
+ $$
+</p>
+
+
+
+<p>ここで、式(1)を見ても分かるように、第M項目はw<sub>M</sub>のみであり、　φ<sub>M</sub>(x) は実は存在しない。</p>
+
+<p>実はφ<sub>M</sub>(x)は先述の<a href="https://WAT36.github.io/pages/docs/programming/machine_learning/N-dimension_linear_model/">N次元線形回帰モデル</a>のところでもあったように、φ<sub>M</sub>(x)は式(3)での行列計算のために入れているダミーの基底関数であり、w<sub>M</sub>φ<sub>M</sub>(x) が w<sub>M</sub>になる様にφ<sub>M</sub>(x) = 1　とする。</p>
+
+<p>この式(3)を用い、これまでと同様にして平均二乗誤差Jを求めてみよう。</p>
+
+<p>実測値を{t<sub>n</sub>}とおくと、平均二乗誤差Jは次の式(4)で表される。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{4}  J( {\bf w} ) = \frac{1}{N} \sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf \Phi} ( x_{n} ) - t_{n} ) ^2
+ $$
+</p>
+
+
+
+<p>この式(4)だが、先述の<a href="https://WAT36.github.io/pages/docs/programming/machine_learning/N-dimension_linear_model/">N次元線形回帰モデル</a>の式(4)に類似している。</p>
+
+
+
+<p class="katex">
+  $$ 
+  J( {\bf w} ) = \frac{1}{N} \sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf x}_{n} - t_{n} )^2
+ $$
+</p>
+
+
+
+<p><b>x</b><sub>n</sub>が<b>φ</b><sub>n</sub>(x)に変わったのみであり、そのため実はこの線形基底関数モデルにおいても、解はムーアーペンローズの擬似逆行列の形になる。</p>
+
+<p>よって、Jを最小化する<b>w</b>は以下の式のようになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{5}   {\bf w} = ( {\bf \Phi} ^\mathrm{T}  {\bf \Phi} )^{-1} {\bf \Phi} ^\mathrm{T} {\bf t}
+ $$
+</p>
+
+
+
+<p>ただし</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{6}   
+        {\bf \Phi}
+        = 
+                \left[
+                    \begin{array}{cccc}
+                    \phi_{0} (x_{0}) & \phi_{1} (x_{0}) & \cdots & \phi_{M} (x_{0}) \\
+                    \phi_{0} (x_{1}) & \phi_{1} (x_{1}) & \cdots & \phi_{M} (x_{1}) \\
+                    \vdots & \vdots & \ddots & \vdots \\
+                    \phi_{0} (x_{N-1}) & \phi_{1} (x_{N-1}) & \cdots & \phi_{M} (x_{N-1})
+                    \end{array}
+                \right]
+ $$
+</p>
+
+
+
+<p>である。この式(6)で表される行列を<strong>計画行列</strong>と言う。</p>
+
+<p>基底関数としているガウス関数を多次元入力に対応させると、以下のようになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{7}   
+        {\bf \Phi}
+        = 
+                \left[
+                    \begin{array}{cccc}
+                    \phi_{0} ({\bf x}_{0}) & \phi_{1} ({\bf x}_{0}) & \cdots & \phi_{M} ({\bf x}_{0}) \\
+                    \phi_{0} ({\bf x}_{1}) & \phi_{1} ({\bf x}_{1}) & \cdots & \phi_{M} ({\bf x}_{1}) \\
+                    \vdots & \vdots & \ddots & \vdots \\
+                    \phi_{0} ({\bf x}_{N-1}) & \phi_{1} ({\bf x}_{N-1}) & \cdots & \phi_{M} ({\bf x}_{N-1})
+                    \end{array}
+                \right]
+ $$
+</p>
+
+
+
+<p>では、以上の式をコードで実装してみよう。</p>
+
+<p>まず、ガウス関数とそれを利用した線形基底関数モデルは以下のようになる。(linear_basis_function.py)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#75715e">#ガウス関数 (式(2))</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">gauss</span>(x,mu,v):
+    <span style="color:#66d9ef">return</span> np<span style="color:#f92672">.</span>exp(<span style="color:#f92672">-</span>(x<span style="color:#f92672">-</span>mu)<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span><span style="color:#f92672">/</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span> v<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>))
+
+
+<span style="color:#75715e">#線形基底関数モデル (式(1))</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">linear_basis_func</span>(w,x,mu,v):
+    y<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros_like(x)                  <span style="color:#75715e">#xと同じ次数の零行列をyの初期値とする</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(w)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+        y <span style="color:#f92672">=</span> y <span style="color:#f92672">+</span> w[i]<span style="color:#f92672">*</span>gauss(x,mu[i],v)   <span style="color:#75715e">#y+=wiφi(x)</span>
+    y <span style="color:#f92672">=</span> y <span style="color:#f92672">+</span> w[len(w)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]                 <span style="color:#75715e">#y+=wM</span>
+    <span style="color:#66d9ef">return</span> y
+
+
+<span style="color:#75715e">#平均二乗誤差MSE (式(4))</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">mse</span>(y,t):
+    <span style="color:#66d9ef">return</span> np<span style="color:#f92672">.</span>mean((y<span style="color:#f92672">-</span>t)<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>)</code></pre></div>
+<p>次に、計画行列を算出するコードを記載する。(linear_basis_function.py)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#75715e">#計画行列算出 (式(7))</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">design_matrix</span>(x,t,mu,v):
+    n<span style="color:#f92672">=</span>x<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]
+    m<span style="color:#f92672">=</span>len(mu)
+    phi<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>ones((n,m<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>))            <span style="color:#75715e">#計画行列、初期値は全て１にする(最後の１列は全て１になる)</span>
+    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(m):
+        phi[:,j] <span style="color:#f92672">=</span> gauss(x,mu[j],v) <span style="color:#75715e">#計画行列のj列目を算出</span>
+    phi_T<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>transpose(phi)
+
+    b<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>linalg<span style="color:#f92672">.</span>inv(phi_T<span style="color:#f92672">.</span>dot(phi)) <span style="color:#75715e">#(φ*φ^-1)^-1</span>
+    c<span style="color:#f92672">=</span>b<span style="color:#f92672">.</span>dot(phi_T)                  <span style="color:#75715e">#(φ^T*φ^-1)^-1*φ^T</span>
+    w<span style="color:#f92672">=</span>c<span style="color:#f92672">.</span>dot(t)                      <span style="color:#75715e">#(φ^T*φ^-1)^-1*φ^T*t</span>
+    <span style="color:#66d9ef">return</span> w</code></pre></div>
+<p>例として、<a href="https://WAT36.github.io/pages/docs/programming/machine_learning/linear_model/">直線モデル</a>の章で利用したデータに対し、この線形基底関数モデルを適用させてみよう。</p>
+
+<p>まず元データは以下のような図になる。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_16.png" width=50%></p>
+
+<p>例としてmを1,4,7,10,13,16で設定した時のyを算出し、標準偏差SD(平均二乗誤差の平方根)とともにそれぞれプロットして表示する。</p>
+
+<p>コードは以下の通り。(linear_basis_function_plot.py)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> math
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">from</span> linear_basis_function <span style="color:#f92672">import</span> mse
+<span style="color:#f92672">from</span> linear_basis_function <span style="color:#f92672">import</span> design_matrix
+<span style="color:#f92672">from</span> linear_basis_function <span style="color:#f92672">import</span> linear_basis_func
+
+<span style="color:#75715e">#入力値</span>
+x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;x.npy&#39;</span>)
+<span style="color:#75715e">#実測値</span>
+t <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;t.npy&#39;</span>)
+
+<span style="color:#75715e">#mを設定</span>
+M<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">13</span>]
+
+plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">7.5</span>))
+plt<span style="color:#f92672">.</span>subplots_adjust(wspace<span style="color:#f92672">=</span><span style="color:#ae81ff">0.25</span>,hspace<span style="color:#f92672">=</span><span style="color:#ae81ff">0.3</span>)
+
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(M)):
+    <span style="color:#75715e">#2*2のi+1番目にプロット</span>
+    plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+    m<span style="color:#f92672">=</span>M[i]
+
+    <span style="color:#75715e">#ガウス関数の中心 はxの最小値〜最大値の間で設定</span>
+    mu<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>linspace(min(x),max(x),m)
+    <span style="color:#75715e">#w,y算出</span>
+    w<span style="color:#f92672">=</span>design_matrix(x,t,mu,<span style="color:#ae81ff">1</span>)
+    y<span style="color:#f92672">=</span>linear_basis_func(w,x,mu,<span style="color:#ae81ff">1</span>)
+
+    <span style="color:#75715e">#入力値xを(yを対応づけたまま)ソート</span>
+    xy<span style="color:#f92672">=</span>[[x[i],y[i]] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(x))]
+    xy<span style="color:#f92672">.</span>sort(key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> a:a[<span style="color:#ae81ff">0</span>])
+    xi,yi<span style="color:#f92672">=</span>zip(<span style="color:#f92672">*</span>xy)
+
+    <span style="color:#75715e">#標準偏差SD</span>
+    sd <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>sqrt(mse(y,t))
+
+    <span style="color:#75715e">#プロット</span>
+    plt<span style="color:#f92672">.</span>scatter(x,t,label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;t&#39;</span>)
+    plt<span style="color:#f92672">.</span>xlim(min(x)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,max(x)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+    plt<span style="color:#f92672">.</span>ylim(min(t)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,max(t)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+
+    plt<span style="color:#f92672">.</span>plot(xi,yi,<span style="color:#e6db74">&#39;-&#39;</span>,color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>,label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;y&#39;</span>)
+    plt<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lower right&#39;</span>)
+    plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;M={0:d}, SD={1:.2f}&#34;</span><span style="color:#f92672">.</span>format(m,sd))
+
+    plt<span style="color:#f92672">.</span>grid(True)
+plt<span style="color:#f92672">.</span>show()</code></pre></div>
+<p>実行結果</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_22.png" width=150%></p>
+
+<p>となり、直線モデルよりも誤差が少なく、汎用性の高い予測式が得られる。</p>
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/d183df69e828c3f06d089c80af6b801ec7293b47" title='Last modified Apr 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 27, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

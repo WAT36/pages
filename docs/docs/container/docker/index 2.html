@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Docker | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.dfd4d2a4c93846e9d0dc052cf0f06e3b9fa9db1c2aeb42de963e3dad8b5b2809.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2f container\2f docker\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/container/container_index/"><strong>コンテナ</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>Docker</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="docker">Docker</h1>
+
+<p>ウォーターフォール型によるアプリケーション開発の場合、開発に使う環境は開発用の環境、検証(テスト)用の環境、本番(実稼働)用の環境というように複数の環境を用意して開発を行うことが多い。</p>
+
+<p>しかし、環境で利用しているミドルウェアのバージョンなどがそれぞれで違っていたりすると、アプリをデプロイしても環境によっては動かないという場合もある。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/container/docker_01.png" width=75%></p>
+
+<p>Dockerでは、これらアプリケーションの実行に必要なミドルウェア、ライブラリ、ディレクトリなどといったインフラ環境をひとまとめにし、コンテナとして管理する。</p>
+
+<p>また、コンテナはDockerイメージとしてDocker Hubと呼ばれる共有レポジトリで管理される。欲しいDockerイメージ(コンテナ)があった場合はここから引っ張り出すことができ、またユーザー側で作成したDockerイメージ(コンテナ)をDocker Hubに置くこともできる。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/container/docker_02.png" width=75%></p>
+
+<p>Dockerイメージを元にして作ったコンテナはDocker上であればどこでも動くので、この技術により、ある環境では動くけどある環境では動かない、という問題を解消できる。</p>
+
+<p>Docker上で動かしているコンテナを別の環境上のDockerに移すには、Dockerイメージの形にして移す。</p>
+
+<h2 id="dockerイメージを作る">Dockerイメージを作る</h2>
+
+<p>コンテナは、元となるDockerイメージから作られる。</p>
+
+<p>Dockerイメージの実体は、先述の通りアプリケーションの実行に必要なファイル群が格納されたディレクトリ類をまとめたものである。</p>
+
+<p>では、Dockerイメージはどのようにして作るのか？</p>
+
+<p>Dockerイメージは、Dockerコマンドを使って作成する方法、Dockerfileという設定ファイルを作ってそこから作る方法がある。</p>
+
+<p>ここではまず、各種Dockerコマンドについてを説明する。</p>
+
+<h1 id="dockerイメージ-コンテナに関するコマンド">Dockerイメージ・コンテナに関するコマンド</h1>
+
+<h2 id="dockerイメージをリモート-docker-hub-にアップロードする">Dockerイメージをリモート(Docker Hub)にアップロードする</h2>
+
+<p>DockerイメージをDocker Hubにアップロードするには、<strong>docker image push</strong>コマンドを利用する。</p>
+
+<pre><code>$ docker image push &lt;Docker Hubイメージ名&gt;/イメージ名[:タグ名]
+</code></pre>
+
+<h2 id="dockerイメージをリモート-docker-hub-からダウンロードする">Dockerイメージをリモート(Docker Hub)からダウンロードする</h2>
+
+<p>Dockerイメージをリモートレポジトリ(Docker Hub)からダウンロードするには、<strong>docker image pull</strong>コマンドを利用する。</p>
+
+<pre><code>$ docker image pull [オプション] (Dockerイメージ名)[:タグ名]
+</code></pre>
+
+<p>このコマンドにより、Dockerイメージをローカルにダウンロードできる。</p>
+
+<p>また、Dockerイメージは同じ名前でも<strong>タグ</strong>を使い分けることによって複数登録することができる。Dockerイメージはバージョンや対応OSなどの関係から、同じ内容のものを複数登録する必要があるが、Dockerイメージ名を同じにして、タグ名にバージョン及び対応OS等の名前を振り分けることによって、Dockerイメージを管理することが可能になる。特定のタグのイメージをダウンロードしたいときは、docker image pullコマンドの時にタグ名も指定する。</p>
+
+<p>なお、タグ名を省略してdocker image pullコマンドを実行した場合は、最新版のイメージがダウンロードされる。</p>
+
+<h2 id="ローカルにあるdockerイメージを確認する">ローカルにあるDockerイメージを確認する</h2>
+
+<p>取得したローカルにあるDockerイメージを確認したい時は、<strong>docker image ls</strong>コマンドを使う。</p>
+
+<pre><code>$ docker image ls
+</code></pre>
+
+<h2 id="ローカルのdockerイメージを削除する">ローカルのDockerイメージを削除する</h2>
+
+<p>ローカルにあるDockerイメージを削除したいときは、<strong>docker image rm</strong>コマンドを使う。</p>
+
+<pre><code>$ docker image rm [オプション] イメージ名 [イメージ名]
+</code></pre>
+
+<p>イメージ名はレポジトリ名またはイメージIDを指定する。複数のイメージを削除したい時は、スペース区切りでイメージ名を複数入力する。</p>
+
+<p>また、未使用のDockerイメージを一挙に削除するには、<strong>docker image prune</strong>コマンドを使用する。</p>
+
+<pre><code>$ docker image prune [オプション]
+</code></pre>
+
+<h2 id="dockerイメージからコンテナを作る">Dockerイメージからコンテナを作る</h2>
+
+<p>Dockerイメージからコンテナを作成するには、<strong>docker container create</strong>コマンドを使用する。</p>
+
+<pre><code>$ docker container create [オプション] イメージ名
+</code></pre>
+
+<h2 id="コンテナを起動する">コンテナを起動する</h2>
+
+<p>停止中のコンテナを起動するには、<strong>docker container start</strong>コマンドを使用する。</p>
+
+<pre><code>$ docker container start [コンテナ名,ID]
+</code></pre>
+
+<h2 id="dockerイメージからコンテナを作って起動する">Dockerイメージからコンテナを作って起動する</h2>
+
+<p>Dockerイメージからコンテナを作成し(docker container create)、コンテナを起動する(docker container start)過程を別々に述べたが、この２つを一気にやる方法がある。</p>
+
+<p>Dockerイメージからコンテナを作成し、起動するには、<strong>docker container run</strong>コマンドを利用する。</p>
+
+<pre><code>$ docker container run  (Dockerイメージ名) (実行コマンド)
+</code></pre>
+
+<h2 id="コンテナを停止する">コンテナを停止する</h2>
+
+<p>起動中のコンテナを停止するには、<strong>docker container stop</strong>コマンドを使用する。</p>
+
+<pre><code>$ docker container stop コンテナID
+</code></pre>
+
+<h2 id="コンテナを削除する">コンテナを削除する</h2>
+
+<p>コンテナを削除するには、<strong>docker container rm</strong>コマンドを使用する。これにより、停止中のコンテナを削除できる。</p>
+
+<pre><code>$ docker container rm [オプション] コンテナID
+</code></pre>
+
+<h2 id="ローカルにあるコンテナを一覧表示する">ローカルにあるコンテナを一覧表示する</h2>
+
+<p>ローカルにあるコンテナを一覧表示するには、<strong>docker container ls</strong>コマンドを使用する。</p>
+
+<pre><code>$ docker container ls [オプション]
+</code></pre>
+
+<h2 id="コンテナの稼働状況を確認する">コンテナの稼働状況を確認する</h2>
+
+<p>コンテナが起動しているか停止しているかの稼働状況を確認するには、<strong>docker container stats</strong>コマンドを使用する。</p>
+
+<pre><code>$ docker container stats
+</code></pre>
+
+<p>以上、Dockerイメージ・コンテナの起動に関する一連のコマンドの動作を図に表すと以下のようになる。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/container/docker_03.png" width=100%></p>
+
+<h1 id="起動中のコンテナの操作方法">起動中のコンテナの操作方法</h1>
+
+<p>起動したコンテナの操作方法についてを述べる。</p>
+
+<h2 id="起動中のコンテナに接続する">起動中のコンテナに接続する</h2>
+
+<p>起動しているコンテナに接続するには、<strong>docker container attach</strong>コマンドを利用する。</p>
+
+<pre><code>$ docker container attach コンテナID
+</code></pre>
+
+<p>このコマンドにより、起動しているコンテナ内に入ることができる。</p>
+
+<p>終了するときは、Ctrl+P(またはQ) コマンドで抜け出せる。コンテナの停止を同時に行いたい時は、Ctrl+Cコマンドを利用する。</p>
+
+<h2 id="起動中のコンテナでプロセス実行したい時">起動中のコンテナでプロセス実行したい時</h2>
+
+<p>起動中のコンテナで何かプロセスを実行したい時は、<strong>docker container exec</strong>コマンドを利用する。</p>
+
+<pre><code>$ docker container exec [オプション] コンテナID 実行するコマンド [引数]
+</code></pre>
+
+<p>コンテナに接続しようとしてdocker container attachコマンドを利用しようとしても、もしシェルが動作していなかった場合はコマンドを受け付けることができなくなる。
+このような場合に、docker container execコマンドを利用して任意のコマンドを実行する。</p>
+
+<p>ちなみに、コンテナのシェルを実行させるには、docker container execコマンドでコンテナ内の/bin/bashを実行させれば良い。</p>
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/34e369bee667744af58057a41f403a862e90642d" title='Last modified Aug 16, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 16, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#docker">Docker</a>
+<ul>
+<li><a href="#dockerイメージを作る">Dockerイメージを作る</a></li>
+</ul></li>
+<li><a href="#dockerイメージ-コンテナに関するコマンド">Dockerイメージ・コンテナに関するコマンド</a>
+<ul>
+<li><a href="#dockerイメージをリモート-docker-hub-にアップロードする">Dockerイメージをリモート(Docker Hub)にアップロードする</a></li>
+<li><a href="#dockerイメージをリモート-docker-hub-からダウンロードする">Dockerイメージをリモート(Docker Hub)からダウンロードする</a></li>
+<li><a href="#ローカルにあるdockerイメージを確認する">ローカルにあるDockerイメージを確認する</a></li>
+<li><a href="#ローカルのdockerイメージを削除する">ローカルのDockerイメージを削除する</a></li>
+<li><a href="#dockerイメージからコンテナを作る">Dockerイメージからコンテナを作る</a></li>
+<li><a href="#コンテナを起動する">コンテナを起動する</a></li>
+<li><a href="#dockerイメージからコンテナを作って起動する">Dockerイメージからコンテナを作って起動する</a></li>
+<li><a href="#コンテナを停止する">コンテナを停止する</a></li>
+<li><a href="#コンテナを削除する">コンテナを削除する</a></li>
+<li><a href="#ローカルにあるコンテナを一覧表示する">ローカルにあるコンテナを一覧表示する</a></li>
+<li><a href="#コンテナの稼働状況を確認する">コンテナの稼働状況を確認する</a></li>
+</ul></li>
+<li><a href="#起動中のコンテナの操作方法">起動中のコンテナの操作方法</a>
+<ul>
+<li><a href="#起動中のコンテナに接続する">起動中のコンテナに接続する</a></li>
+<li><a href="#起動中のコンテナでプロセス実行したい時">起動中のコンテナでプロセス実行したい時</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

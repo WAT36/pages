@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>その他の要素 | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.dfd4d2a4c93846e9d0dc052cf0f06e3b9fa9db1c2aeb42de963e3dad8b5b2809.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2f front-end\2fhtml_other\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/container/container_index/"><strong>コンテナ</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>その他の要素</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="その他の要素">その他の要素</h1>
+
+<p>その他の要素についてを述べる。</p>
+
+<h2 id="figure要素">figure要素</h2>
+
+<p>figure要素は、それが文書から参照される、自己完結型のコンテンツ(フローコンテンツ)であることを示す要素である。</p>
+
+<p>この要素の中には、図やソースコードなどを入れる。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;figure id=&quot;fig&quot;&gt;
+    &lt;img src=&quot;/img/front-end/img.jpg&quot; width=&quot;100&quot; height=&quot;100&quot; alt=&quot;宗谷岬、青空&quot;&gt;
+&lt;/figure&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><figure id="fig">
+    <img src="https://WAT36.github.io/pages/img/front-end/img.jpg" width="100" height="100" alt="宗谷岬、青空">
+</figure>
+<hr></p>
+
+<h2 id="figcaption要素">figcaption要素</h2>
+
+<p>figcaption要素は、figure要素で示したコンテンツにキャプションを示すための要素である。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;figure id=&quot;fig&quot;&gt;
+    &lt;figcaption&gt;宗谷岬の交差点&lt;/figcaption&gt;
+    &lt;img src=&quot;/img/front-end/img.jpg&quot; width=&quot;100&quot; height=&quot;100&quot; alt=&quot;宗谷岬、青空&quot;&gt;
+&lt;/figure&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><figure id="fig">
+    <figcaption>宗谷岬の交差点</figcaption>
+    <img src="https://WAT36.github.io/pages/img/front-end/img.jpg" width="100" height="100" alt="宗谷岬、青空">
+</figure>
+<hr></p>
+
+<h2 id="details要素">details要素</h2>
+
+<p>details要素は、ディスクロージャーウィジェット(折りたたみ)を示すための要素である。</p>
+
+<p><strong>open</strong>属性を指定すると、最初から開かれた状態で表示される。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;details&gt;
+    &lt;p&gt;その１&lt;/p&gt;
+    &lt;p&gt;その２&lt;/p&gt;
+    &lt;p&gt;その３&lt;/p&gt;
+&lt;/details&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><details>
+    <p>その１</p>
+    <p>その２</p>
+    <p>その３</p>
+</details>
+<hr></p>
+
+<h2 id="summary要素">summary要素</h2>
+
+<p>summary要素は、ディスクロージャーウィジェットにおける見出しを示すための要素である。summary要素で示された内容は、ディスクロージャーウィジェットが開いても開いてなくても表示される。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;details&gt;
+    &lt;summary&gt;リスト&lt;/summary&gt;
+    &lt;p&gt;その１&lt;/p&gt;
+    &lt;p&gt;その２&lt;/p&gt;
+    &lt;p&gt;その３&lt;/p&gt;
+&lt;/details&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><details>
+    <summary>リスト</summary>
+    <p>その１</p>
+    <p>その２</p>
+    <p>その３</p>
+</details>
+<hr></p>
+
+<h2 id="iframe要素">iframe要素</h2>
+
+<p>iframe要素は、文書の中で別の文書を表示する領域(ブラウジングコンテキスト)を示す要素である。</p>
+
+<p>使用する主な属性は以下の通り。</p>
+
+<table style="border:none;">
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">src</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">表示させる文書のアドレス</td>
+    </tr>
+    <tr style="border:none;">
+        <td style="border:none;">・</td>
+        <td style="border:none;">srcdoc</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">表示させるHTMLデータ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">name</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">表示させる領域の名前</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">width</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">横</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">height</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">縦</td>
+    </tr>
+</table>
+
+<p>使用例を以下に示す。</p>
+
+<pre><code>&lt;iframe width=&quot;200&quot; height=&quot;150&quot;&gt;
+&lt;/iframe&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><iframe width="200" height="150">
+</iframe>
+<hr></p>
+
+<h2 id="hr要素">hr要素</h2>
+
+<p>hr要素は区切りのための水平線を引く要素である。段落・話題・場面が変わるところなどで利用する。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<hr>
+
+<hr>
+
+<h2 id="script要素">script要素</h2>
+
+<p>script要素は、文書内に実行できるコードを組み込むための要素である。</p>
+
+<p>コードは要素内容として直接書くか、src属性にコードのアドレスを指定して読み込ませる。</p>
+
+<h2 id="noscript要素">noscript要素</h2>
+
+<p>noscript要素は、script要素で組み込んだコード(スクリプト)が無効であった場合に利用される要素である。</p>
+
+<p>よって、コード(スクリプト)が有効なときには、この要素は実行されない。</p>
+
+<h2 id="template要素">template要素</h2>
+
+<p>template要素は、その部分がコードによって挿入される部分であることを示す。</p>
+
+<h2 id="canvas要素">canvas要素</h2>
+
+<p>canvas要素は、コードによって図を描画したいときに利用する要素である。</p>
+
+<p>これとは別に描画を行うコード(JavaScriptなど)を用意し、それにより描画されたビットマップイメージが入る。</p>
+
+<p>canvas要素が実行できない環境では、要素内容に指定した内容が表示される。</p>
+
+<p>(以上、使用例はjsやれるようになったらやります・・・)</p>
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/478a39fd58db8f18f037f796b9eaa789c0efd70a" title='Last modified Jun 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 27, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#その他の要素">その他の要素</a>
+<ul>
+<li><a href="#figure要素">figure要素</a></li>
+<li><a href="#figcaption要素">figcaption要素</a></li>
+<li><a href="#details要素">details要素</a></li>
+<li><a href="#summary要素">summary要素</a></li>
+<li><a href="#iframe要素">iframe要素</a></li>
+<li><a href="#hr要素">hr要素</a></li>
+<li><a href="#script要素">script要素</a></li>
+<li><a href="#noscript要素">noscript要素</a></li>
+<li><a href="#template要素">template要素</a></li>
+<li><a href="#canvas要素">canvas要素</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

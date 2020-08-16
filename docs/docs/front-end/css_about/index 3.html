@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSSとは | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.dfd4d2a4c93846e9d0dc052cf0f06e3b9fa9db1c2aeb42de963e3dad8b5b2809.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2f front-end\2f css_about\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/container/container_index/"><strong>コンテナ</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>CSSとは</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="cssとは">CSSとは</h1>
+
+<p>CSSの基本事項についてを述べる。</p>
+
+<p>CSSは、HTMLに組み込む形で使用する言語で、HTMLで作成した文書に対しCSSでどの部分をどのように装飾するかを指定する形で利用する。</p>
+
+<p>利用方についてを以下で述べる。</p>
+
+<h2 id="cssの書式">CSSの書式</h2>
+
+<p>CSSの記法としては、大きく分けてHTML文書のどこに適用するかを示す<strong>セレクタ</strong>と、具体的にどのような装飾を行うかを示す<strong>宣言ブロック</strong>からなる。</p>
+
+<p>宣言ブロックの中には、各宣言をセミコロン(;)区切りで書き、宣言はプロパティ名とプロパティ値をコロン(:)区切りで記入する。</p>
+
+<p>表記例は以下の通り。</p>
+
+<pre><code>p 
+{
+    color: white;
+    background: red;
+}
+</code></pre>
+
+<p>この例のうち、最初の「p」がセレクタになり、その後の中括弧{}部分が宣言ブロックである。</p>
+
+<h2 id="html文書への組み込み方">HTML文書への組み込み方</h2>
+
+<p>CSSをHTML文書に組み込む方法はいくつかある。</p>
+
+<h3 id="link要素を使う方法">link要素を使う方法</h3>
+
+<p>一つ目は、<a href="https://wat36.github.io/pages/docs/front-end/html_structure/#link要素">link要素</a>を用いてCSSを組み込む方法である。</p>
+
+<p>link要素は前述の通り、HTML文書に関連する外部ファイルやリソースを示すための要素である。</p>
+
+<p><strong>外部スタイルシート</strong>(スタイルシートだけを書き込んだファイル)を組み込む際にも、このlink要素が利用できる。</p>
+
+<p>link要素のrel属性では<strong>stylesheet</strong>、href属性ではそのスタイルシートのアドレスを指定する。</p>
+
+<p>例</p>
+
+<pre><code>・・・
+&lt;head&gt;
+    ・・・
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+        ・・・
+&lt;/body&gt;
+・・・
+</code></pre>
+
+<h3 id="style要素を使う方法">style要素を使う方法</h3>
+
+<p>style要素は、要素内容にスタイルシート言語を記載する事で、そのスタイルシートの内容をHTML文書に組み込むことのできる要素である。</p>
+
+<p>style要素は、head要素の中に記載する。</p>
+
+<p>例</p>
+
+<pre><code>・・・
+&lt;head&gt;
+    ・・・
+    &lt;style&gt;
+        p 
+        {
+            color: white;
+            background: red;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+        ・・・
+&lt;/body&gt;
+・・・
+</code></pre>
+
+<h3 id="style属性を使う方法">style属性を使う方法</h3>
+
+<p>HTML文書でCSSを組み込みたい要素の中に、グローバル属性の<strong>style属性</strong>を指定して値に具体的なCSSのコード(宣言のみ)を入れてやると、その要素にCSSが適用される。</p>
+
+<p>使用例</p>
+
+<pre><code>&lt;p style=&quot;color: white; background: black&quot;&gt;
+style属性を使ってp要素にCSSを適用してみました。
+&lt;/p&gt;
+</code></pre>
+
+<p>表示例</p>
+
+<hr>
+
+<p><p style="color: white; background: black">
+style属性を使ってp要素にCSSを適用してみました。
+</p>
+<hr></p>
+
+<h2 id="ボックス">ボックス</h2>
+
+<p>HTMLの各要素はボックスと呼ばれる四角い領域に表示される。ボックスにはさらに、境界線である<strong>ボーダー</strong>、ボーダーと実際の要素内容を表示する領域との余白である<strong>パディング</strong>、ボーダーの外側の余白である<strong>マージン</strong>と呼ばれる部位に分けられる。それらを図で示したものを以下に示す。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/front-end/css_box.png" width=80%></p>
+
+<p>CSSでは、これらの部位を自由に設定することが可能である。</p>
+
+<h2 id="長さ-大きさの単位">長さ・大きさの単位</h2>
+
+<p>CSSでは大きさや長さを指定することがあり、その際にそれぞれ単位を用いて表す。</p>
+
+<p>CSSで利用する主な単位は、以下の通りである。</p>
+
+<ul>
+<li>フォントに対する相対的な長さを表す単位</li>
+</ul>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">em</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">要素のフォントサイズを1とした単位</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">rem</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ルート要素のフォントサイズを1とした単位</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">ch</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">「0」の幅を1とした単位</td>
+    </tr>
+</table>
+
+<ul>
+<li>絶対的な長さを表す単位</li>
+</ul>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">px</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ピクセル</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">pt</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ポイント</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">in</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">インチ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">cm</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">センチメートル</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">mm</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ミリメートル</td>
+    </tr>
+</table>
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/42f8656977fd7a2798286cf9e8417fbcf1376c44" title='Last modified Jul 1, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 1, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#cssとは">CSSとは</a>
+<ul>
+<li><a href="#cssの書式">CSSの書式</a></li>
+<li><a href="#html文書への組み込み方">HTML文書への組み込み方</a>
+<ul>
+<li><a href="#link要素を使う方法">link要素を使う方法</a></li>
+<li><a href="#style要素を使う方法">style要素を使う方法</a></li>
+<li><a href="#style属性を使う方法">style属性を使う方法</a></li>
+</ul></li>
+<li><a href="#ボックス">ボックス</a></li>
+<li><a href="#長さ-大きさの単位">長さ・大きさの単位</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>
