@@ -3,7 +3,6 @@ title: "変数を宣言する"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
-categories: [ "Java", "Python","Swift"]
 bookToc: false
 ---
 

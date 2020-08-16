@@ -1,8 +1,6 @@
 ---
 title: "キューとPythonでの実装モジュール「deque」"
 date: 2019-11-04T09:59:32+09:00
-categories: [ "プログラミング", "アルゴリズム"]
-tags: [ "python", "キュー","幅優先探索"]
 draft: false
 ---
 
