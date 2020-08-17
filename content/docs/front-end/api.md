@@ -223,3 +223,12 @@ fetchは、Service Worker上で指定したリソースを取得する際に利�
 XMLHttpRequestは、JavaScriptでHTTP通信を実現するAPIである。
 
 これにより、ページを遷移せずにHTTP通信を行い、データを取得することが可能になる。
+
+
+## WebSocket API
+
+WebSocket APIは、JavaScriptでWebSocketプロトコル通信を実現するAPIである。
+
+WebSocketプロトコルは、ブラウザとサーバのどちらからもデータを送信可能な双方向通信を実現するための仕様である。
+
+WebSocketを利用することで、チャットのような双方向通信が頻繁に発生するアプリケーションを作ることができる。
