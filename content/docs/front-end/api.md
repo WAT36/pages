@@ -212,3 +212,14 @@ Push APIはあくまでプッシュ通知を受信するだけなので、プッ
 ## fetch
 
 fetchは、Service Worker上で指定したリソースを取得する際に利用するAPIである。
+
+
+# 通信系API
+
+通信に関するAPIを述べる。
+
+## XMLHttpRequest
+
+XMLHttpRequestは、JavaScriptでHTTP通信を実現するAPIである。
+
+これにより、ページを遷移せずにHTTP通信を行い、データを取得することが可能になる。
