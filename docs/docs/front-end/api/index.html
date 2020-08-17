@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.f16b481022798e92e3c6a08ce808656b5f0d20d925afc810d5843fb420e724b7.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.c35d52b2ad9012ad176ee0494c5dfb577a18e228401c9546b5c7ee311da80d79.js"></script>
 
 
 
@@ -310,6 +310,16 @@ https://github.com/alex-shpak/hugo-book
 <p>通常は、HTMLのパース、外部ソースなどのスクリプト処理が終わるまでユーザーは画面の操作が行えず、またそのスクリプト処理が大きいとユーザーの操作が行えない時間が増えてしまう。</p>
 
 <p>そこで、Web Workersでバックグラウンドで実行することで、画面の操作への影響を減らし、またスクリプト処理を並列で多種動かせるので、大量の処理を行わせることができる。</p>
+
+<h2 id="service-workers">Service Workers</h2>
+
+<p>Service Workersは、Webページとは別にバックグラウンドでスクリプトを実行する環境である。</p>
+
+<p>先程のWeb WorkersがWebページの内部で動作するのに対し、Service WorkersはWebページとは別に動作する。</p>
+
+<p>Service Workersを利用することで、リソースをキャッシュしてオフラインでも利用可能にしたり、バックグラウンドでの同期など、Webページやユーザの操作を必要としない機能を提供することができる。</p>
+
+<p>別環境なので、Webページを開いたタブが閉じられても、Service Workersは必要に応じて動作する。</p>
 </article>
 
       
@@ -317,8 +327,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/a5b0e226b33766e648df05bb5f9a2d3993b2382f" title='Last modified Aug 16, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 16, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/404542d7d40f06dcd3cb9b8160362dc504789b98" title='Last modified Aug 17, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 17, 2020
     </a>
   </div>
   
@@ -353,6 +363,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#indexed-database-api">Indexed Database API</a></li>
 <li><a href="#application-cache">Application cache</a></li>
 <li><a href="#web-workers">Web Workers</a></li>
+<li><a href="#service-workers">Service Workers</a></li>
 </ul></li>
 </ul>
 </nav>
