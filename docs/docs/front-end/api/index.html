@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>API | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.5416d1acfbabe84fd268c6a2265b5d531e17e90c72cd1cd363a2ecbf86ea384c.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2f front-end\2f api\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>API</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1>API</h1>
+
+<p>HTMLに関連する各種APIについて。</p>
+
+<h1 id="マルチメディアグラフィックスapi">マルチメディアグラフィックスAPI</h1>
+
+<p>HTMLでの音声・動画といったマルチメディアに関する設定や操作を、JavaScript等といった外部ソースから制御することができる。詳しい実装方法については現在は述べないが、設定できる内容の種類についてを述べる。</p>
+
+<h2 id="マルチメディア">マルチメディア</h2>
+
+<p>HTMLでは、audio要素で音声コンテンツ、video要素で動画コンテンツを埋め込むことができる。</p>
+
+<p>この埋め込んだマルチメディアコンテンツを、JavaScriptを使って制御することができる。</p>
+
+<p>制御できる内容は以下の通り。</p>
+
+<ul>
+<li>音声・動画プレイヤーのデザイン変更</li>
+<li>コンテンツの再読み込み</li>
+<li>再生開始・中断</li>
+</ul>
+
+<p>また、マルチメディアコンテンツの以下のような情報をJavaScriptで取得することができる。</p>
+
+<ul>
+<li>コンテンツが再生・早送り可能な状態か</li>
+<li>ネットワーク状況</li>
+<li>コンテンツの場所</li>
+<li>音量</li>
+<li>トラック情報</li>
+</ul>
+
+<h2 id="ストリーミング">ストリーミング</h2>
+
+<p>ストリーミングとは、マルチメディアコンテンツをダウンロードと同時に(ダウンロードできている部分の)再生を行う技術である。</p>
+
+<p>通常はコンテンツのダウンロードが全て終わってから再生するが、通信状況が悪い場合やコンテンツの容量が大きい場合は非常に時間がかかる場合もあり、コンテンツの利用をスムーズに行えない場合が多い。そのためにストリーミング技術を利用する方法が増えている。</p>
+
+<p>そのような通信状況等に応じて、適切なビットレートのコンテンツを選択し、ストリーミング再生を実現する技術を<strong>Adaptive Streaming技術</strong>と呼ぶ。</p>
+
+<p>Adaptive Streaming技術には、Apple社が開発したプロトコルである<strong>HLS(HTTP Live Streaming)</strong>、Adobe社やMicrosoft社などにより開発された<strong>MPEG-DASH</strong>のようなプロトコルも存在する。</p>
+
+<p>また、JavaScriptのAPIにもストリーミングに対応したものが用意されている。例として<strong>Media Source Extensions</strong>はHLSやMPEG-DASHのように、ストリーミング配信されるコンテンツを再生するために作られたAPIである。</p>
+
+<h2 id="グラフィックス">グラフィックス</h2>
+
+<p>画像ファイルは、jpegやpngファイルを用意して表示するが、HTML5ではJavascript等の外部ソースを利用しても表示できる。</p>
+
+<p>JavaScriptを使って画像を描画し、HTMLで表示するには<strong>Canvas要素</strong>を利用する。canvasは画像をビットマップ形式で描画する。そのため、拡大縮小すると画像が粗くなる。</p>
+
+<p>利用方法は以下の通り。</p>
+
+<ul>
+<li>HTMLにcanvas要素を用意する。</li>
+<li>Javascriptでcanvas要素を参照し、描画用のcontextオブジェクトを取得する</li>
+<li>Javascriptを使って描画する</li>
+</ul>
+
+<p>Javascriptを使った描画では、以下のような操作が可能である。</p>
+
+<ul>
+<li>線を描く</li>
+<li>円、四角を描く</li>
+<li>色を塗る</li>
+<li>テキストを書く</li>
+<li>画像ファイルを読み込む</li>
+<li>拡大・縮小・回転する</li>
+</ul>
+
+<h1 id="デバイスアクセスapi">デバイスアクセスAPI</h1>
+
+<p>デバイスに関する情報を取得できるAPIについてを述べる。</p>
+
+<h2 id="geolocation-api">Geolocation API</h2>
+
+<p>GeoLocation APIは、ユーザーの位置情報を取得するためのAPIである。</p>
+
+<p>Geolocation APIは、無線LAN、Wi-Fi、携帯キャリアの基地局、GPS、IPアドレスなどといったソースを基にユーザーの位置情報を取得する。</p>
+
+<p>取得できる情報の例は、以下の通り。</p>
+
+<ul>
+<li>緯度</li>
+<li>経度</li>
+<li>高度</li>
+<li>方角</li>
+<li>速度</li>
+</ul>
+
+<h2 id="deviceorientation-event">DeviceOrientation Event</h2>
+
+<p>DeviceOrientation Eventは、デバイスの傾きが変化したときに発生するイベントである。</p>
+
+<p>取得できる情報の例は以下の通り。</p>
+
+<ul>
+<li>デバイスが差す方角</li>
+<li>デバイスの上下方向の傾き</li>
+<li>デバイスの左右方向の傾き</li>
+</ul>
+
+<h2 id="touch-events">Touch Events</h2>
+
+<p>Touch Eventsは、タッチパネルなどの画面を指で操作しているときに発生するイベント類である。</p>
+
+<p>取得できる情報の例は以下の通り。</p>
+
+<ul>
+<li>画面をタッチ</li>
+<li>画面をタッチしたまま動かす</li>
+<li>画面から離す</li>
+</ul>
+
+<h2 id="pointer-events">Pointer Events</h2>
+
+<p>Pointer Eventsは、マウスカーソルなどといったポインタと呼ばれる要素に関するイベントである。</p>
+
+<p>取得できる情報の例は以下の通り。</p>
+
+<ul>
+<li>ポインタが要素の上に乗る</li>
+<li>ポインタが要素の上から離れる</li>
+<li>ポインタが動作状態になる</li>
+<li>ポインタが非動作状態になる</li>
+<li>ポインタが動く</li>
+</ul>
+
+<h2 id="dom3-events-ui-events">DOM3 Events (UI Events)</h2>
+
+<p>DOM3 Events (UI Events)は、マウスやキーボードなどの入力操作を取り扱うためのイベントである。</p>
+
+<p>例は以下の通り。</p>
+
+<table>
+    <thead>
+        <th>イベントの種類</th>
+        <th>概要</th>
+    </thead>
+    <tr>
+        <td>UIイベント</td>
+        <td>UIやHTML文書の操作に関するイベント</td>
+    </tr>
+    <tr>
+        <td>フォーカスイベント</td>
+        <td>フォーカスの状態変化に関するイベント</td>
+    </tr>
+    <tr>
+        <td>マウスイベント</td>
+        <td>マウス操作に関するイベント</td>
+    </tr>
+    <tr>
+        <td>ホイールイベント</td>
+        <td>マウス等ホイールの操作に関するイベント</td>
+    </tr>
+    <tr>
+        <td>入力イベント</td>
+        <td>キーボード入力の操作に関するイベント</td>
+    </tr>
+</table>
+
+<h1 id="オフラインストレージapi">オフラインストレージAPI</h1>
+
+<p>外部のインフラやリソースを利用せずとも、ブラウザ上でデータを保存できる方法がある。ここでは主にその方法についてを述べる。</p>
+
+<h2 id="web-storage">Web Storage</h2>
+
+<p>Web Storageは、キーと値の組み合わせによってブラウザにデータを蓄積し、利用するAPIである。</p>
+
+<p>Web Storageは、大きく<strong>セッションストレージ</strong>と<strong>ローカルストレージ</strong>の２種類に分けられる。セッションストレージはウィンドウやタブが閉じられるとデータも消失するが、ローカルストレージはデータが消失されず、次にページを開いたときにでもそのデータを利用することができる。</p>
+
+<h2 id="indexed-database-api">Indexed Database API</h2>
+
+<p>Indexed Database APIはWeb Storageと同様にキーと値のペアによってデータを蓄積するAPIである。蓄積するのはJavaScriptのオブジェクトである。</p>
+
+<p>Web Storageと比べると、インデックスやトランザクションを利用できることが特徴である。トランザクションとは、データベースの一連の処理のことである。</p>
+
+<h2 id="application-cache">Application cache</h2>
+
+<p>Application cacheは、マニフェストファイルと呼ばれる設定ファイルに指定したファイルをローカルのブラウザにキャッシュとして置くことで、オフラインでのページ閲覧を可能にするものである。このキャッシュの制御は、APIを通じて行う。</p>
+
+<h2 id="web-workers">Web Workers</h2>
+
+<p>Web Workersは、ブラウザでのスクリプト処理をバックグラウンドで実行するためのものである。</p>
+
+<p>通常は、HTMLのパース、外部ソースなどのスクリプト処理が終わるまでユーザーは画面の操作が行えず、またそのスクリプト処理が大きいとユーザーの操作が行えない時間が増えてしまう。</p>
+
+<p>そこで、Web Workersでバックグラウンドで実行することで、画面の操作への影響を減らし、またスクリプト処理を並列で多種動かせるので、大量の処理を行わせることができる。</p>
+
+<h2 id="service-workers">Service Workers</h2>
+
+<p>Service Workersは、Webページとは別にバックグラウンドでスクリプトを実行する環境である。</p>
+
+<p>先程のWeb WorkersがWebページの内部で動作するのに対し、Service WorkersはWebページとは別に動作する。</p>
+
+<p>Service Workersを利用することで、リソースをキャッシュしてオフラインでも利用可能にしたり、バックグラウンドでの同期など、Webページやユーザの操作を必要としない機能を提供することができる。</p>
+
+<p>別環境なので、Webページを開いたタブが閉じられても、Service Workersは必要に応じて動作する。</p>
+
+<h2 id="push-api">Push API</h2>
+
+<p>Push APIは、アプリケーションがサーバーからのプッシュ通知を受信できるようにするAPIである。</p>
+
+<p>Service Workerと組み合わせることで、アプリケーションが動作にかかわらず受信できる。</p>
+
+<p>Push APIはあくまでプッシュ通知を受信するだけなので、プッシュ通知の表示やメッセージの表示などは、これとは別に実施する必要がある。</p>
+
+<h2 id="fetch">fetch</h2>
+
+<p>fetchは、Service Worker上で指定したリソースを取得する際に利用するAPIである。</p>
+
+<h1 id="通信系api">通信系API</h1>
+
+<p>通信に関するAPIを述べる。</p>
+
+<h2 id="xmlhttprequest">XMLHttpRequest</h2>
+
+<p>XMLHttpRequestは、JavaScriptでHTTP通信を実現するAPIである。</p>
+
+<p>これにより、ページを遷移せずにHTTP通信を行い、データを取得することが可能になる。</p>
+
+<h2 id="websocket-api">WebSocket API</h2>
+
+<p>WebSocket APIは、JavaScriptでWebSocketプロトコル通信を実現するAPIである。</p>
+
+<p>WebSocketプロトコルは、ブラウザとサーバのどちらからもデータを送信可能な双方向通信を実現するための仕様である。</p>
+
+<p>WebSocketを利用することで、チャットのような双方向通信が頻繁に発生するアプリケーションを作ることができる。</p>
+
+<h2 id="server-sent-events">Server-Sent Events</h2>
+
+<p>Server-Sent Eventsは、サーバからのプッシュ通信を実現するAPIである。</p>
+
+<p>通常のHTTPではクライアントからサーバにリクエストを送信し、レスポンスが変えると通信が終了するが、Server-Sent Eventsでは、サーバからレスポンスを受け取っても通信を終了せず、接続を維持する。</p>
+
+<p>サーバはその接続を利用してメッセージを継続して送信するが、サーバからしかデータを送信できないという特徴がある。</p>
+
+<h2 id="webrtc">WebRTC</h2>
+
+<p>WebRTC(Web Real-Time Communication)は、ブラウザでリアルタイムなコミュニケーションを実現するための仕組みである。WebRTCを使うことで、ブラウザ間のビデオチャットやボイスチャット、会議システムなどが実現可能です。</p>
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/bd286ed955483eb5381044f7666b010c439ed75c" title='Last modified Aug 18, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 18, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#マルチメディアグラフィックスapi">マルチメディアグラフィックスAPI</a>
+<ul>
+<li><a href="#マルチメディア">マルチメディア</a></li>
+<li><a href="#ストリーミング">ストリーミング</a></li>
+<li><a href="#グラフィックス">グラフィックス</a></li>
+</ul></li>
+<li><a href="#デバイスアクセスapi">デバイスアクセスAPI</a>
+<ul>
+<li><a href="#geolocation-api">Geolocation API</a></li>
+<li><a href="#deviceorientation-event">DeviceOrientation Event</a></li>
+<li><a href="#touch-events">Touch Events</a></li>
+<li><a href="#pointer-events">Pointer Events</a></li>
+<li><a href="#dom3-events-ui-events">DOM3 Events (UI Events)</a></li>
+</ul></li>
+<li><a href="#オフラインストレージapi">オフラインストレージAPI</a>
+<ul>
+<li><a href="#web-storage">Web Storage</a></li>
+<li><a href="#indexed-database-api">Indexed Database API</a></li>
+<li><a href="#application-cache">Application cache</a></li>
+<li><a href="#web-workers">Web Workers</a></li>
+<li><a href="#service-workers">Service Workers</a></li>
+<li><a href="#push-api">Push API</a></li>
+<li><a href="#fetch">fetch</a></li>
+</ul></li>
+<li><a href="#通信系api">通信系API</a>
+<ul>
+<li><a href="#xmlhttprequest">XMLHttpRequest</a></li>
+<li><a href="#websocket-api">WebSocket API</a></li>
+<li><a href="#server-sent-events">Server-Sent Events</a></li>
+<li><a href="#webrtc">WebRTC</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>
