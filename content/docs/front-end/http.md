@@ -27,3 +27,17 @@ HTTP通信を行う前に、セキュリティの確保として、データを�
 
 <img src="/img/front-end/https.png">
 
+
+# HTTPのメッセージ構造
+
+HTTPのメッセージは大きく開始行、ヘッダフィールド、CRLFの改行、メッセージボディの4つに分けられる。
+
+- 開始行 (リクエストライン/ステータスライン)
+- ヘッダフィールド(０行以上、以下から構成)
+ - General-header
+ - Request-header
+ - Response-header
+ - Entity-header
+- 改行(CRLF)
+- メッセージボディ
+
