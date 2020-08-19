@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.575be9c8448785b8ee2dd32fd4c04a2047286c8964db4f1083e14d397d2c0dbd.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.63b50ca24411cf9a12810948161509f3788aef7d7902b5600338b8663880edca.js"></script>
 
 
 
@@ -162,6 +162,54 @@ https://github.com/alex-shpak/hugo-book
 <li>改行(CRLF)</li>
 <li>メッセージボディ</li>
 </ul>
+
+<h1 id="httpの開始行-リクエストメッセージ">HTTPの開始行(リクエストメッセージ)</h1>
+
+<p>HTTPメッセージの一番最初に書く開始行は以下のような構造になる。</p>
+
+<pre><code>メソッド  /任意のパス(+クエリストリング)  HTTP/1.1
+</code></pre>
+
+<p>クエリストリングとはリクエストと同時に送るデータのことで、任意のパスの後に&rdquo;?&ldquo;を書き、その後にデータを記入する。</p>
+
+<p>また、メソッドとは以下のいずれかである。</p>
+
+<table>
+    <thead>
+        <th>メソッド名</th>
+        <th>説明</th>
+    </thead>
+    <tr>
+        <td>GET</td>
+        <td>指定したURL(URI)で識別されるリソースを取得</td>
+    </tr>
+    <tr>
+        <td>POST</td>
+        <td>指定したURL(URI)で識別されるリソースの子リソースの作成、またはリソースへのデータの追加などを要求</td>
+    </tr>
+    <tr>
+        <td>PUT</td>
+        <td>指定したURL(URI)に対してエンティティ(メッセージボディ)に含まれる情報を保存することを要求</td>
+    </tr>
+    <tr>
+        <td>HEAD</td>
+        <td>GETと同じだがヘッダのみを取得</td>
+    </tr>
+    <tr>
+        <td>OPTIONS</td>
+        <td>指定したURL(URI)がサポートしているメソッドを取得</td>
+    </tr>
+    <tr>
+        <td>DELETE</td>
+        <td>指定したURL(URI)で識別されるリソースの削除を要求</td>
+    </tr>
+    <tr>
+        <td>TRACE</td>
+        <td>自分宛にリクエストメッセージを要求するループバック試験に使用</td>
+    </tr>
+</table>
+
+<p>このうちよく使われるのはGETとPOSTである。</p>
 </article>
 
       
@@ -169,7 +217,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/a78e11aafd427af605ad9e0150c58732b7e6d8e5" title='Last modified Aug 19, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/7d01a7875743513b3646b602539a8d4624687180" title='Last modified Aug 19, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 19, 2020
     </a>
   </div>
@@ -188,6 +236,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#httpプロトコル">HTTPプロトコル</a></li>
 <li><a href="#httpsプロトコル">HTTPSプロトコル</a></li>
 <li><a href="#httpのメッセージ構造">HTTPのメッセージ構造</a></li>
+<li><a href="#httpの開始行-リクエストメッセージ">HTTPの開始行(リクエストメッセージ)</a></li>
 </ul>
 </nav>
   </aside>
