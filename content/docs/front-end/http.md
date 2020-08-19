@@ -147,3 +147,69 @@ Content-type:text/html
         <td>Server Error(サーバーエラー)</td>
     </tr>
 </table>
+
+
+# HTTPのヘッダフィールド
+
+ヘッダフィールドには、メッセージの外部情報（メタ情報）を扱うためのHTTPヘッダが含まれる。
+
+HTTPヘッダとして代表的なものを示す。
+
+<table>
+    <thead>
+        <th>ヘッダ名</th>
+        <th>説明</th>
+    </thead>
+    <tr>
+        <td>Accept</td>
+        <td>受入可能なメディア型を指定</td>
+    </tr>
+    <tr>
+        <td>Authorization</td>
+        <td>HTTP認証の認証情報</td>
+    </tr>
+    <tr>
+        <td>Cache-Control</td>
+        <td>キャッシュの振る舞いを支持</td>
+    </tr>
+    <tr>
+        <td>Content-Language</td>
+        <td>エンティティの自然言語</td>
+    </tr>
+    <tr>
+        <td>Content-Length</td>
+        <td>メッセージボディの大きさ</td>
+    </tr>
+    <tr>
+        <td>Content-Type</td>
+        <td>メッセージボディのメディア型</td>
+    </tr>
+    <tr>
+        <td>Cookie</td>
+        <td>ブラウザに保存されたクッキーの値</td>
+    </tr>
+    <tr>
+        <td>Expires</td>
+        <td>レスポンスの有効期間</td>
+    </tr>
+    <tr>
+        <td>If-Modified-Since</td>
+        <td>指定時刻以降に更新されているかを確認。条件付きGETとともに使用</td>
+    </tr>
+    <tr>
+        <td>Last-Modified</td>
+        <td>リソースの最終更新時刻</td>
+    </tr>
+    <tr>
+        <td>Referer</td>
+        <td>リンクされている元のリソースのURL(URI)</td>
+    </tr>
+    <tr>
+        <td>Set-Cookie</td>
+        <td>Webサーバが生成したクッキーの値</td>
+    </tr>
+    <tr>
+        <td>User-Agent</td>
+        <td>ユーザーエージェントの名前</td>
+    </tr>
+</table>
