@@ -129,6 +129,15 @@
     
     <item>
       <title>API</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/api-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/api-2/</guid>
+      <description>API HTMLに関連する各種APIについて。 マルチメディアグラフィックスAPI HTMLでの音声・動画といったマルチメディアに関する設定や操作を、</description>
+    </item>
+    
+    <item>
+      <title>API</title>
       <link>https://WAT36.github.io/pages/docs/front-end/api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -259,7 +268,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/http/</guid>
-      <description>HTTP・HTTPS </description>
+      <description>HTTP・HTTPS HTTP、HTTPSプロトコルについてを述べる。 HTTPプロトコル HTTP(Hyper Text Transfer Protocol)とは、Webサーバとクライアン</description>
     </item>
     
     <item>
