@@ -92,3 +92,58 @@ HTTPメッセージの一番最初に書く開始行は以下のような構造�
 このうちよく使われるのはGETとPOSTである。
 
 
+# HTTPのレスポンスメッセージ
+
+HTTPのレスポンスメッセージの例は以下の通り。
+
+
+```
+HTTP/1.1 200 OK
+```
+
+```
+Date:Wed,  19 Aug 2020 23:48:50 GMT
+Server:Apache
+Content-type:text/html
+```
+
+```
+(改行)
+```
+
+```
+<!DOCTYPE html>
+・・・
+・・・
+```
+
+ここで、レスポンスメッセージの開始行には、レスポンスの状態を示す3桁の数字「ステータスコード」が含まれている。
+
+ステータスコードは以下のように分類される。
+
+<table>
+    <thead>
+        <th>ステータスコード</th>
+        <th>説明</th>
+    </thead>
+    <tr>
+        <td>1xx</td>
+        <td>Informational(情報提供のコード)</td>
+    </tr>
+    <tr>
+        <td>2xx</td>
+        <td>Success(成功)</td>
+    </tr>
+    <tr>
+        <td>3xx</td>
+        <td>Redirection(転送)</td>
+    </tr>
+    <tr>
+        <td>4xx</td>
+        <td>Client Error(クライアントエラー)</td>
+    </tr>
+    <tr>
+        <td>5xx</td>
+        <td>Server Error(サーバーエラー)</td>
+    </tr>
+</table>

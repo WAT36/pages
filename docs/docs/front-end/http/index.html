@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.63b50ca24411cf9a12810948161509f3788aef7d7902b5600338b8663880edca.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.e96c6c968f9bb23616223381696156e76a7e32cd91880695a73d2a086477cf84.js"></script>
 
 
 
@@ -210,6 +210,57 @@ https://github.com/alex-shpak/hugo-book
 </table>
 
 <p>このうちよく使われるのはGETとPOSTである。</p>
+
+<h1 id="httpのレスポンスメッセージ">HTTPのレスポンスメッセージ</h1>
+
+<p>HTTPのレスポンスメッセージの例は以下の通り。</p>
+
+<pre><code>HTTP/1.1 200 OK
+</code></pre>
+
+<pre><code>Date:Wed,  19 Aug 2020 23:48:50 GMT
+Server:Apache
+Content-type:text/html
+</code></pre>
+
+<pre><code>(改行)
+</code></pre>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+・・・
+・・・
+</code></pre>
+
+<p>ここで、レスポンスメッセージの開始行には、レスポンスの状態を示す3桁の数字「ステータスコード」が含まれている。</p>
+
+<p>ステータスコードは以下のように分類される。</p>
+
+<table>
+    <thead>
+        <th>ステータスコード</th>
+        <th>説明</th>
+    </thead>
+    <tr>
+        <td>1xx</td>
+        <td>Informational(情報提供のコード)</td>
+    </tr>
+    <tr>
+        <td>2xx</td>
+        <td>Success(成功)</td>
+    </tr>
+    <tr>
+        <td>3xx</td>
+        <td>Redirection(転送)</td>
+    </tr>
+    <tr>
+        <td>4xx</td>
+        <td>Client Error(クライアントエラー)</td>
+    </tr>
+    <tr>
+        <td>5xx</td>
+        <td>Server Error(サーバーエラー)</td>
+    </tr>
+</table>
 </article>
 
       
@@ -217,7 +268,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/7d01a7875743513b3646b602539a8d4624687180" title='Last modified Aug 19, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/a38d8c56ce5da69056db5a35cb3013c41270e11a" title='Last modified Aug 19, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 19, 2020
     </a>
   </div>
@@ -237,6 +288,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#httpsプロトコル">HTTPSプロトコル</a></li>
 <li><a href="#httpのメッセージ構造">HTTPのメッセージ構造</a></li>
 <li><a href="#httpの開始行-リクエストメッセージ">HTTPの開始行(リクエストメッセージ)</a></li>
+<li><a href="#httpのレスポンスメッセージ">HTTPのレスポンスメッセージ</a></li>
 </ul>
 </nav>
   </aside>
