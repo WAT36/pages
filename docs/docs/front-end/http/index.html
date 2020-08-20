@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.0f0dc14c294760d891e52fae1dbeebbd31ecf1bed3def90f9cace638361e831a.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.6e034b5e006a6e5728ad0ae7ca3df796502ea86b9dabfc6ae6517e23fcddd112.js"></script>
 
 
 
@@ -326,6 +326,28 @@ Content-type:text/html
         <td>ユーザーエージェントの名前</td>
     </tr>
 </table>
+
+<h1 id="httpでの認証">HTTPでの認証</h1>
+
+<p>HTTPでは、特定のファイルへのアクセスを制限するために認証することが可能である。</p>
+
+<p>その種類は主に以下の２種類である。</p>
+
+<h2 id="basic認証">Basic認証</h2>
+
+<p>Basic認証は、ユーザー名とパスワードをコロン「:」で接続し、Base64でエンコードして送信することで認証を実施。</p>
+
+<p>盗聴や改竄が容易にできてしまう。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/front-end/basic.png"></p>
+
+<h2 id="digest認証">Digest認証</h2>
+
+<p>Digest認証は、Basic認証に加えて、盗聴や改竄を防ぐためにユーザー名とパスワードをMDSでハッシュ化して送信し、認証を実施する。</p>
+
+<p>パスワードが暗号化されているので、盗聴できても解読がしにくいという利点がある。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/front-end/digest.png"></p>
 </article>
 
       
@@ -333,8 +355,8 @@ Content-type:text/html
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/654ce486afe455003f2c2dd17a9de129a11c7ce0" title='Last modified Aug 19, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 19, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/1c5a9c95861dcb1ed1c7203dc1646a6ee073bba9" title='Last modified Aug 20, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 20, 2020
     </a>
   </div>
   
@@ -355,6 +377,11 @@ Content-type:text/html
 <li><a href="#httpの開始行-リクエストメッセージ">HTTPの開始行(リクエストメッセージ)</a></li>
 <li><a href="#httpのレスポンスメッセージ">HTTPのレスポンスメッセージ</a></li>
 <li><a href="#httpのヘッダフィールド">HTTPのヘッダフィールド</a></li>
+<li><a href="#httpでの認証">HTTPでの認証</a>
+<ul>
+<li><a href="#basic認証">Basic認証</a></li>
+<li><a href="#digest認証">Digest認証</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>
