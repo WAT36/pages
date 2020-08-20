@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.5f8f0135367a838ad5eb077bb04022c3d7afb99a205e1a0c3674940b721ff93f.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.9392fc5b4510391bf2cdf3ffc3e18f21b9185d86017a139ecc6cf5ed12a931c3.js"></script>
 
 
 
@@ -213,7 +213,7 @@ https://github.com/alex-shpak/hugo-book
 
 <h1 id="httpのレスポンスメッセージ">HTTPのレスポンスメッセージ</h1>
 
-<p>HTTPのレスポンスメッセージの例は以下の通り。</p>
+<p>HTTPのレスポンスメッセージの例は以下の通り。上から開始行、ヘッダフィールド、改行、メッセージボディの順。</p>
 
 <pre><code>HTTP/1.1 200 OK
 </code></pre>
@@ -275,15 +275,15 @@ Content-type:text/html
     </thead>
     <tr>
         <td>Accept</td>
-        <td>受入可能なメディア型を指定</td>
+        <td>受入可能なメディア型</td>
     </tr>
     <tr>
         <td>Authorization</td>
-        <td>HTTP認証の認証情報</td>
+        <td>HTTPの認証情報</td>
     </tr>
     <tr>
         <td>Cache-Control</td>
-        <td>キャッシュの振る舞いを支持</td>
+        <td>キャッシュの振る舞い</td>
     </tr>
     <tr>
         <td>Content-Language</td>
@@ -291,11 +291,11 @@ Content-type:text/html
     </tr>
     <tr>
         <td>Content-Length</td>
-        <td>メッセージボディの大きさ</td>
+        <td>メッセージボディの長さ</td>
     </tr>
     <tr>
         <td>Content-Type</td>
-        <td>メッセージボディのメディア型</td>
+        <td>メッセージボディの型</td>
     </tr>
     <tr>
         <td>Cookie</td>
@@ -307,7 +307,7 @@ Content-type:text/html
     </tr>
     <tr>
         <td>If-Modified-Since</td>
-        <td>指定時刻以降に更新されているかを確認。条件付きGETとともに使用</td>
+        <td>指定時刻以降に更新されているかを確認（条件付きGETで使用）</td>
     </tr>
     <tr>
         <td>Last-Modified</td>
@@ -331,23 +331,23 @@ Content-type:text/html
 
 <p>HTTPでは、特定のファイルへのアクセスを制限するために認証することが可能である。</p>
 
-<p>その種類は主に以下の２種類である。</p>
+<p>その種類は主に以下の２種類。</p>
 
 <h2 id="basic認証">Basic認証</h2>
 
-<p>Basic認証は、ユーザー名とパスワードをコロン「:」で接続し、Base64でエンコードして送信することで認証を実施。</p>
+<p>Basic認証は、ユーザー名とパスワードをコロンで接続し、Base64でエンコードして送信することで認証を実施する方式である。</p>
 
 <p>盗聴や改竄が容易にできてしまう。</p>
 
-<p><img src="https://WAT36.github.io/pages/img/front-end/basic.png"></p>
+<p><img src="https://WAT36.github.io/pages/img/front-end/basic.png" width="75%" height="75%"></p>
 
 <h2 id="digest認証">Digest認証</h2>
 
 <p>Digest認証は、Basic認証に加えて、盗聴や改竄を防ぐためにユーザー名とパスワードをMDSでハッシュ化して送信し、認証を実施する。</p>
 
-<p>パスワードが暗号化されているので、盗聴できても解読がしにくいという利点がある。</p>
+<p>パスワードが暗号化されているので、盗聴できても解読しにくいという利点がある。</p>
 
-<p><img src="https://WAT36.github.io/pages/img/front-end/digest.png"></p>
+<p><img src="https://WAT36.github.io/pages/img/front-end/digest.png" width="75%" height="75%"></p>
 
 <h1 id="http-cookie-クッキー">HTTP cookie (クッキー)</h1>
 
@@ -371,7 +371,7 @@ Content-type:text/html
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/64794d657f47e3549504582a6ba1123eac8351bd" title='Last modified Aug 21, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/dcddb48e6a7924741c4a393720ffc703b563230d" title='Last modified Aug 21, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 21, 2020
     </a>
   </div>

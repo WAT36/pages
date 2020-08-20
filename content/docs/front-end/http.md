@@ -94,7 +94,7 @@ HTTPメッセージの一番最初に書く開始行は以下のような構造�
 
 # HTTPのレスポンスメッセージ
 
-HTTPのレスポンスメッセージの例は以下の通り。
+HTTPのレスポンスメッセージの例は以下の通り。上から開始行、ヘッダフィールド、改行、メッセージボディの順。
 
 
 ```
@@ -162,15 +162,15 @@ HTTPヘッダとして代表的なものを示す。
     </thead>
     <tr>
         <td>Accept</td>
-        <td>受入可能なメディア型を指定</td>
+        <td>受入可能なメディア型</td>
     </tr>
     <tr>
         <td>Authorization</td>
-        <td>HTTP認証の認証情報</td>
+        <td>HTTPの認証情報</td>
     </tr>
     <tr>
         <td>Cache-Control</td>
-        <td>キャッシュの振る舞いを支持</td>
+        <td>キャッシュの振る舞い</td>
     </tr>
     <tr>
         <td>Content-Language</td>
@@ -178,11 +178,11 @@ HTTPヘッダとして代表的なものを示す。
     </tr>
     <tr>
         <td>Content-Length</td>
-        <td>メッセージボディの大きさ</td>
+        <td>メッセージボディの長さ</td>
     </tr>
     <tr>
         <td>Content-Type</td>
-        <td>メッセージボディのメディア型</td>
+        <td>メッセージボディの型</td>
     </tr>
     <tr>
         <td>Cookie</td>
@@ -194,7 +194,7 @@ HTTPヘッダとして代表的なものを示す。
     </tr>
     <tr>
         <td>If-Modified-Since</td>
-        <td>指定時刻以降に更新されているかを確認。条件付きGETとともに使用</td>
+        <td>指定時刻以降に更新されているかを確認（条件付きGETで使用）</td>
     </tr>
     <tr>
         <td>Last-Modified</td>
@@ -218,25 +218,25 @@ HTTPヘッダとして代表的なものを示す。
 
 HTTPでは、特定のファイルへのアクセスを制限するために認証することが可能である。
 
-その種類は主に以下の２種類である。
+その種類は主に以下の２種類。
 
 
 ## Basic認証
 
-Basic認証は、ユーザー名とパスワードをコロン「:」で接続し、Base64でエンコードして送信することで認証を実施。
+Basic認証は、ユーザー名とパスワードをコロンで接続し、Base64でエンコードして送信することで認証を実施する方式である。
 
 盗聴や改竄が容易にできてしまう。
 
-<img src="/img/front-end/basic.png">
+<img src="/img/front-end/basic.png" width="75%" height="75%">
 
 
 ## Digest認証
 
 Digest認証は、Basic認証に加えて、盗聴や改竄を防ぐためにユーザー名とパスワードをMDSでハッシュ化して送信し、認証を実施する。
 
-パスワードが暗号化されているので、盗聴できても解読がしにくいという利点がある。
+パスワードが暗号化されているので、盗聴できても解読しにくいという利点がある。
 
-<img src="/img/front-end/digest.png">
+<img src="/img/front-end/digest.png" width="75%" height="75%">
 
 
 # HTTP cookie (クッキー)
