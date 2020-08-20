@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.6e034b5e006a6e5728ad0ae7ca3df796502ea86b9dabfc6ae6517e23fcddd112.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.5f8f0135367a838ad5eb077bb04022c3d7afb99a205e1a0c3674940b721ff93f.js"></script>
 
 
 
@@ -348,6 +348,22 @@ Content-type:text/html
 <p>パスワードが暗号化されているので、盗聴できても解読がしにくいという利点がある。</p>
 
 <p><img src="https://WAT36.github.io/pages/img/front-end/digest.png"></p>
+
+<h1 id="http-cookie-クッキー">HTTP cookie (クッキー)</h1>
+
+<p>HTTPは、システムの現在の状態を保持しない(ステートレスという)プロトコルであ利、クライアントとサーバ間の状態管理は行えないという点がある。</p>
+
+<p>そこで、Webブラウザにcookie(クッキー)と呼ばれるデータを保持しておくことで、HTTPでの状態管理を実現することができる。</p>
+
+<p>代表的な使用例としては、Webサイト上でのログイン状態の記録、ECサイト上でのカート情報の管理などがある。</p>
+
+<p>クッキーは、サーバからクライアントに返るときのHTTPレスポンスのヘッダ<strong>Set-Cookie</strong>にて指定される。</p>
+
+<p>これにより、Webサーバ上で指定された情報がWebブラウザに保存される。</p>
+
+<p>その後のWebページへのアクセス時には、保存していたクッキーをHTTPリクエストと同時にWebサーバに送ることで、状態管理を行う。</p>
+
+<p>また、クッキーはJavaScriptを利用して、クライアント側で操作することもできる。</p>
 </article>
 
       
@@ -355,8 +371,8 @@ Content-type:text/html
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/1c5a9c95861dcb1ed1c7203dc1646a6ee073bba9" title='Last modified Aug 20, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 20, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/64794d657f47e3549504582a6ba1123eac8351bd" title='Last modified Aug 21, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 21, 2020
     </a>
   </div>
   
@@ -382,6 +398,7 @@ Content-type:text/html
 <li><a href="#basic認証">Basic認証</a></li>
 <li><a href="#digest認証">Digest認証</a></li>
 </ul></li>
+<li><a href="#http-cookie-クッキー">HTTP cookie (クッキー)</a></li>
 </ul>
 </nav>
   </aside>
