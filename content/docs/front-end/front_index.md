@@ -37,4 +37,5 @@ bookToc: false
 - [スマートフォン最適化]({{< relref "/docs/front-end/smartphone_optimization.md" >}})
 - [API]({{< relref "/docs/front-end/api.md" >}})
 - [HTTP・HTTPS]({{< relref "/docs/front-end/http.md" >}})
+- [その他のWeb関連技術]({{< relref "/docs/front-end/web_other.md" >}})
 
