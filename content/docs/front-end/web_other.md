@@ -54,3 +54,23 @@ OGPは、Webページの内容を示した情報を、プログラムから読�
 活用例としてはSNSがある。OGPに対応したページにある「いいね!」ボタンなどをクリックすると、その情報が自分のSNSのページに記載されたり、または他のリコメンデーションなど、様々な機能に活用される。
 
 
+
+# データ操作
+
+## JavaScript
+
+JavaScriptというオブジェクト指向プログラミング言語があり、この言語で実装したスクリプトを、HTML文書に組み込んで使用することができる。
+
+HTMLからJavascriptを利用するには、script要素を利用してHTML文書に直接書く方法（下例）と、
+
+```html
+<script type="text/javascript">
+ //Javascriptのコードを記述する
+</script>
+```
+
+同じくscript要素のsrc属性にJavascriptのファイルを指定する方法（下例）がある。
+
+```html
+<script type="text/javascript" src="test.js"></script>
+```

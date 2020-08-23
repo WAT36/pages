@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.b8f7915d5b6270ea32056bc74f30bac3ed4338615b1e9b41df28bc3d11764f1c.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.c227ce7b703339a0de6e544f4e9b385e1dd8b3973e78e36f2ce45e46fa25c12b.js"></script>
 
 
 
@@ -172,15 +172,27 @@ https://github.com/alex-shpak/hugo-book
 <p>OGPは、Webページの内容を示した情報を、プログラムから読める形でWebページに付加しておくための仕様である。</p>
 
 <p>活用例としてはSNSがある。OGPに対応したページにある「いいね!」ボタンなどをクリックすると、その情報が自分のSNSのページに記載されたり、または他のリコメンデーションなど、様々な機能に活用される。</p>
-</article>
+
+<h1 id="データ操作">データ操作</h1>
+
+<h2 id="javascript">JavaScript</h2>
+
+<p>JavaScriptというオブジェクト指向プログラミング言語があり、この言語で実装したスクリプトを、HTML文書に組み込んで使用することができる。</p>
+
+<p>HTMLからJavascriptを利用するには、script要素を利用してHTML文書に直接書く方法（下例）と、</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
+ <span style="color:#75715e">//Javascriptのコードを記述する
+</span><span style="color:#75715e"></span>&lt;/<span style="color:#f92672">script</span>&gt;</code></pre></div>
+<p>同じくscript要素のsrc属性にJavascriptのファイルを指定する方法（下例）がある。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;test.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;</code></pre></div></article>
 
       
 <div class="book-footer justify-between">
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/bc6046bbed5295dc9797ba30463a40057bd9d538" title='Last modified Aug 21, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 21, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/50bae89efe335da90903c86f529f60e4e272a74f" title='Last modified Aug 23, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 23, 2020
     </a>
   </div>
   
@@ -201,6 +213,10 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#マイクロデータ">マイクロデータ</a></li>
 <li><a href="#rdfa-resource-description-framework-in-attributes">RDFa (Resource Description Framework in Attributes)</a></li>
 <li><a href="#ogp-open-graph-protocol">OGP (Open Graph Protocol)</a></li>
+</ul></li>
+<li><a href="#データ操作">データ操作</a>
+<ul>
+<li><a href="#javascript">JavaScript</a></li>
 </ul></li>
 </ul>
 </nav>
