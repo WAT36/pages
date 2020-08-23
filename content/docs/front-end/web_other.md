@@ -74,3 +74,10 @@ HTMLからJavascriptを利用するには、script要素を利用してHTML文�
 ```html
 <script type="text/javascript" src="test.js"></script>
 ```
+
+
+## DOM(Document Object Model)
+
+DOMとはHTML,XML文書にJavaScript等のプログラムからアクセスするためのAPIである。
+
+JavaScriptを用いてDOMを利用する事で、文書を取得したり操作することが可能になる。
