@@ -151,3 +151,23 @@ dropzone属性は、その要素にファイルなどをドロップすること
 <p data-id="1">その１</p>
 <p data-id="2">その２</p>
 ```
+
+
+## その他のグローバル属性
+
+他、紹介し切れてないグローバル属性は以下の通り（この他にもあります）
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">contenteditable</td>
+        <td style="border:none;">要素を編集可能にするかどうか(true/false)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">spellcheck</td>
+        <td style="border:none;">スペル・文法チェックをするか(true/false)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">hidden</td>
+        <td style="border:none;">要素を表示しない(属性名だけで指定可)</td>
+    </tr>
+</table>
