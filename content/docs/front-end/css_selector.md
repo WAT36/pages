@@ -177,6 +177,21 @@ a[href$=".pdf"] { color: red}
         <td style="border:none;">・・</td>
         <td style="border:none;">要素内容が空の時</td>
     </tr>    
+    <tr>
+        <td style="border:none;">:target</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">URLの最後が「#xxx」となっていた場合の、対象となっている要素</td>
+    </tr> 
+    <tr>
+        <td style="border:none;">:lang(言語コード)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">HTMLのlang属性などで設定されている言語コードの言語が設定されている要素</td>
+    </tr> 
+    <tr>
+        <td style="border:none;">:not(シンプルセレクタ)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">シンプルセレクタの対象外の要素</td>
+    </tr> 
 </table>
 
 使用例
