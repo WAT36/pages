@@ -81,3 +81,15 @@ HTMLからJavascriptを利用するには、script要素を利用してHTML文�
 DOMとはHTML,XML文書にJavaScript等のプログラムからアクセスするためのAPIである。
 
 JavaScriptを用いてDOMを利用する事で、文書を取得したり操作することが可能になる。
+
+
+## Ajax(Asynchronous Javascript + XML)
+
+Ajaxとは、ブラウザ内で非同期通信や動的ページ置き換えなどを行う技術である。
+
+AjaxはJavascriptのクラスであるXMLHttpRequestを利用して実現する。それを行なって通信結果をJavascriptでCSSで動的にWebページに反映する。非同期通信により、ユーザーがフォームなどに入力をしていてもバックグラウンドでデータを取得することが可能になる。
+
+Ajaxで転送されるデータとしてはJSONがよく用いられる。
+
+
+
