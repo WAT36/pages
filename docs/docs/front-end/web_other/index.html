@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.12b88851ee4780f662aecd516fb6545294e5ae9bf9054279620327ab810ae5d7.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.13720283c4917d991d29205aacb2283e8dd9aa2488a4d643e2e0cbe1d6e73024.js"></script>
 
 
 
@@ -216,6 +216,21 @@ https://github.com/alex-shpak/hugo-book
 <p>データURIとは、画像などのデータをBase64を用いて暗号化し、HTMLやCSSに直接埋め込んだ際のURIの事である。</p>
 
 <p>暗号化するので本来よりも容量が大きくなることがあるが、HTMLに埋め込まれるため、Webサーバへのリクエスト回数を減らすことが可能になる。</p>
+
+<h1 id="webサイトへの攻撃手法">Webサイトへの攻撃手法</h1>
+
+<h2 id="sqlインジェクション">SQLインジェクション</h2>
+
+<p>SQLインジェクションとは、入力フォームなどにSQL文を構成する値を入力させることで、アプリケーションに本来意図しないようなSQLを実行させ、データベースを不正に操作する攻撃手法のことである。</p>
+
+<p>アプリケーションが使っているSQL文が分かってないと成り立たないが、攻撃が成功してしまうとデータの改竄や消去、情報漏洩が発生する恐れがある。</p>
+
+<p>対策としては、以下のような方法がある。</p>
+
+<ul>
+<li>入力値で特殊文字を受け付けないなどする</li>
+<li>(開発言語により有無あるが)Prepared statement(事前にコンパイル可能なSQL文)を利用する</li>
+</ul>
 </article>
 
       
@@ -223,8 +238,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/d4a9e2edb3aeb42048b73fe748def9ad4a7166f9" title='Last modified Aug 24, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 24, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/c72a4a6cdb909c8dddfd67431eb0505289197fbd" title='Last modified Aug 25, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 25, 2020
     </a>
   </div>
   
@@ -256,6 +271,10 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#セッション">セッション</a></li>
 <li><a href="#データuri">データURI</a></li>
+</ul></li>
+<li><a href="#webサイトへの攻撃手法">Webサイトへの攻撃手法</a>
+<ul>
+<li><a href="#sqlインジェクション">SQLインジェクション</a></li>
 </ul></li>
 </ul>
 </nav>
