@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.83e8e5527d64d57ee2f576089760f1a4255666138a9387947a44a93c0b2012a3.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.12b88851ee4780f662aecd516fb6545294e5ae9bf9054279620327ab810ae5d7.js"></script>
 
 
 
@@ -210,6 +210,12 @@ https://github.com/alex-shpak/hugo-book
 <p>セッションは、CookieやURL rewritingなどといった技術を用いて実現する。１度目のアクセスでWebサーバからブラウザにCookieが送信され、ブラウザはURLとそのCookieを紐づけて管理し、次回のアクセスではそのクッキーを送信する。</p>
 
 <p>Webサーバはその受け取ったCookieを確認し、前回アクセスのあったユーザーと認識できれば、前回のアクセスの続きとして情報を送信する。</p>
+
+<h2 id="データuri">データURI</h2>
+
+<p>データURIとは、画像などのデータをBase64を用いて暗号化し、HTMLやCSSに直接埋め込んだ際のURIの事である。</p>
+
+<p>暗号化するので本来よりも容量が大きくなることがあるが、HTMLに埋め込まれるため、Webサーバへのリクエスト回数を減らすことが可能になる。</p>
 </article>
 
       
@@ -249,6 +255,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#通信">通信</a>
 <ul>
 <li><a href="#セッション">セッション</a></li>
+<li><a href="#データuri">データURI</a></li>
 </ul></li>
 </ul>
 </nav>
