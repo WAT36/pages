@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.0e62a8effd2bd3473ba31048e3d9b617965fb830e30fa82b5b68f480859e9c32.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.aa05006bf2829ae3d67173ea2f377faa81950aea221001fc075a92d995071a39.js"></script>
 
 
 
@@ -198,6 +198,18 @@ https://github.com/alex-shpak/hugo-book
 <p>AjaxはJavascriptのクラスであるXMLHttpRequestを利用して実現する。それを行なって通信結果をJavascriptでCSSで動的にWebページに反映する。非同期通信により、ユーザーがフォームなどに入力をしていてもバックグラウンドでデータを取得することが可能になる。</p>
 
 <p>Ajaxで転送されるデータとしてはJSONがよく用いられる。</p>
+
+<h1 id="通信">通信</h1>
+
+<h2 id="セッション">セッション</h2>
+
+<p>セッションとは、ユーザーがログイン(接続)からログオフ(切断)するまでの一連の通信のことである。</p>
+
+<p>HTTPは状態を持たないステートレスなプロトコルであるため、ユーザーがあるサイトに今ログインしている状態なのかを判別する仕組みがない。そのため、画面操作をしているユーザーのログイン状態を判別する仕組みとしてこのセッションが設けられている。</p>
+
+<p>セッションは、CookieやURL rewritingなどといった技術を用いて実現する。１度目のアクセスでWebサーバからブラウザにCookieが送信され、ブラウザはURLとそのCookieを紐づけて管理し、次回のアクセスではそのクッキーを送信する。</p>
+
+<p>Webサーバはその受け取ったCookieを確認し、前回アクセスのあったユーザーと認識できれば、前回のアクセスの続きとして情報を送信する。</p>
 </article>
 
       
@@ -205,7 +217,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/5437c732992a7304050611514d495aadf2594d09" title='Last modified Aug 24, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/2c2d554c29e88b8397b6daaf5d368f93c992ef5a" title='Last modified Aug 24, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 24, 2020
     </a>
   </div>
@@ -233,6 +245,10 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#javascript">JavaScript</a></li>
 <li><a href="#dom-document-object-model">DOM(Document Object Model)</a></li>
 <li><a href="#ajax-asynchronous-javascript-xml">Ajax(Asynchronous Javascript + XML)</a></li>
+</ul></li>
+<li><a href="#通信">通信</a>
+<ul>
+<li><a href="#セッション">セッション</a></li>
 </ul></li>
 </ul>
 </nav>
