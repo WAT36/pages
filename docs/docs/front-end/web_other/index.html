@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.0d96d8834a7f13e19d089aca66f93b74e3e7382a75d1bd7619864a0284e082e9.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.560c8266fcf3cc932662d3b2f448db0eb1bfed1743b981522101fff14a29bb9f.js"></script>
 
 
 
@@ -255,6 +255,16 @@ https://github.com/alex-shpak/hugo-book
 <p>ディレクトリトラバーサルとは、URL等のパラメータで示されているファイルから<pre>../</pre>といったような親ディレクトリを示す文字列を追加することで、本来Web利用者がアクセスできないようなファイルにアクセスしようとする攻撃手法である。</p>
 
 <p>対策としては、ファイルのパーミッション(アクセス権)を適切に設定し、他ユーザがアクセスできないようにする等ある。</p>
+
+<h2 id="httpヘッダインジェクション">HTTPヘッダインジェクション</h2>
+
+<p>Webサイトには、ユーザへのHTTPレスポンスを生成する時に、そのHTTPヘッダの値を外部から入力されたパラメータを利用して生成する物が存在する。</p>
+
+<p>そこに外部の攻撃者が任意の値を設定させることで、ユーザにレスポンスを送り意図しないような動作を行わせる攻撃手法のことを、HTTPヘッダインジェクションという。</p>
+
+<p>例えば、HTTPレスポンスのLocationヘッダはURLを設定するが、このURLに&rdquo;Set-Cookie:..&ldquo;を付け足して設定すると、ユーザーに不正なCookieまでも送ってしまう。このように、HTTPヘッダを任意に設定することでユーザーに悪影響を及ぼす場合がある。</p>
+
+<p>対策としては、HTTPヘッダを出力するAPIを使ってHTTPヘッダを作り出すなど行う。</p>
 </article>
 
       
@@ -262,7 +272,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/9a21bdb18a46fdbd5e13563eba5974f15861143e" title='Last modified Aug 25, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/f9631b9d1c542fc7276d843c476c1b7572570119" title='Last modified Aug 25, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 25, 2020
     </a>
   </div>
@@ -302,6 +312,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#クロスサイトスクリプティング-xss">クロスサイトスクリプティング(XSS)</a></li>
 <li><a href="#クロスサイトリクエストフォージェリ-csrf">クロスサイトリクエストフォージェリ(CSRF)</a></li>
 <li><a href="#ディレクトリトラバーサル">ディレクトリトラバーサル</a></li>
+<li><a href="#httpヘッダインジェクション">HTTPヘッダインジェクション</a></li>
 </ul></li>
 </ul>
 </nav>
