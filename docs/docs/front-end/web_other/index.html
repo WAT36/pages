@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.560c8266fcf3cc932662d3b2f448db0eb1bfed1743b981522101fff14a29bb9f.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.ac6103b96d54aa73ef10680b3c90f6217b5d00f57d0ccb2756738900b15a752e.js"></script>
 
 
 
@@ -265,6 +265,34 @@ https://github.com/alex-shpak/hugo-book
 <p>例えば、HTTPレスポンスのLocationヘッダはURLを設定するが、このURLに&rdquo;Set-Cookie:..&ldquo;を付け足して設定すると、ユーザーに不正なCookieまでも送ってしまう。このように、HTTPヘッダを任意に設定することでユーザーに悪影響を及ぼす場合がある。</p>
 
 <p>対策としては、HTTPヘッダを出力するAPIを使ってHTTPヘッダを作り出すなど行う。</p>
+
+<h1 id="webサイト-アプリケーションの構築手法">Webサイト、アプリケーションの構築手法</h1>
+
+<h2 id="mvcアーキテクチャ">MVCアーキテクチャ</h2>
+
+<p>様々なプログラムに応用できる汎用的な設計パターンのことをデザインパターンという。</p>
+
+<p>MVCアーキテクチャとは、Webアプリケーションにおけるデザインパターンの1つであり、ソフトウェアを以下の3つに分けて設計する手法を指す。</p>
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">モデル(Model)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">業務処理など主要な処理を行う</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ビュー(View)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">画面などの表示処理を行う</td>
+    </tr>
+    <tr>
+        <td style="border:none;">コントローラ(Controller)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">モデルとビューの橋渡しを行う</td>
+    </tr>
+</table>
+
+<p>イメージとしては、ビューがユーザーから入力を受け取り、処理依頼をコントローラに送る。その後、コントローラはモデルに処理を要求し、モデルはその処理を受け取って外部のDB塔を使い処理を完了させる。モデルは処理を完了すると、コントローラに通知する。通知を受け取ったコントローラは、処理結果をビューに送り出力させる、という流れで処理が行われる。</p>
 </article>
 
       
@@ -272,7 +300,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f9631b9d1c542fc7276d843c476c1b7572570119" title='Last modified Aug 25, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/522343d1d919705428c4069b0df56342aefeed13" title='Last modified Aug 25, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 25, 2020
     </a>
   </div>
@@ -313,6 +341,10 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#クロスサイトリクエストフォージェリ-csrf">クロスサイトリクエストフォージェリ(CSRF)</a></li>
 <li><a href="#ディレクトリトラバーサル">ディレクトリトラバーサル</a></li>
 <li><a href="#httpヘッダインジェクション">HTTPヘッダインジェクション</a></li>
+</ul></li>
+<li><a href="#webサイト-アプリケーションの構築手法">Webサイト、アプリケーションの構築手法</a>
+<ul>
+<li><a href="#mvcアーキテクチャ">MVCアーキテクチャ</a></li>
 </ul></li>
 </ul>
 </nav>

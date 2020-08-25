@@ -162,3 +162,33 @@ Webサイトには、ユーザへのHTTPレスポンスを生成する時に、�
 例えば、HTTPレスポンスのLocationヘッダはURLを設定するが、このURLに"Set-Cookie:.."を付け足して設定すると、ユーザーに不正なCookieまでも送ってしまう。このように、HTTPヘッダを任意に設定することでユーザーに悪影響を及ぼす場合がある。
 
 対策としては、HTTPヘッダを出力するAPIを使ってHTTPヘッダを作り出すなど行う。
+
+
+# Webサイト、アプリケーションの構築手法
+
+
+## MVCアーキテクチャ
+
+様々なプログラムに応用できる汎用的な設計パターンのことをデザインパターンという。
+
+MVCアーキテクチャとは、Webアプリケーションにおけるデザインパターンの1つであり、ソフトウェアを以下の3つに分けて設計する手法を指す。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">モデル(Model)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">業務処理など主要な処理を行う</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ビュー(View)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">画面などの表示処理を行う</td>
+    </tr>
+    <tr>
+        <td style="border:none;">コントローラ(Controller)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">モデルとビューの橋渡しを行う</td>
+    </tr>
+</table>
+
+イメージとしては、ビューがユーザーから入力を受け取り、処理依頼をコントローラに送る。その後、コントローラはモデルに処理を要求し、モデルはその処理を受け取って外部のDB塔を使い処理を完了させる。モデルは処理を完了すると、コントローラに通知する。通知を受け取ったコントローラは、処理結果をビューに送り出力させる、という流れで処理が行われる。
