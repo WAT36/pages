@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.13720283c4917d991d29205aacb2283e8dd9aa2488a4d643e2e0cbe1d6e73024.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.e6a462517372074c80c74e5ddb9259238b3242f511cb44b2593cd2d3528b67da.js"></script>
 
 
 
@@ -231,6 +231,16 @@ https://github.com/alex-shpak/hugo-book
 <li>入力値で特殊文字を受け付けないなどする</li>
 <li>(開発言語により有無あるが)Prepared statement(事前にコンパイル可能なSQL文)を利用する</li>
 </ul>
+
+<h2 id="クロスサイトスクリプティング-xss">クロスサイトスクリプティング(XSS)</h2>
+
+<p>クロスサイトスクリプティングとは、ユーザが悪意のあるスクリプトを生成するWebサイトを閲覧したときに、そのサイトからユーザのブラウザにスクリプトが埋め込ませることで、ユーザやサーバに被害を与える攻撃手法である。</p>
+
+<p>スクリプトが埋め込まれた状態で他の攻撃対象サイトに遷移させると、そのサイト上でスクリプトが実行され、個人情報取得やなりすましなどの攻撃をされる恐れが有る。</p>
+
+<p>ブラウザ側でJavascriptを無効にすれば防げるが、Javascriptを利用するサイトが閲覧できなくなるためお勧めではない。</p>
+
+<p>閲覧者側としてはブラウザのアップデートやセキュリティソフトの導入、サイト管理者側としては入力値のチェックなど、XSSに対応したアプリケーションを構築する必要がある。</p>
 </article>
 
       
@@ -238,7 +248,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/c72a4a6cdb909c8dddfd67431eb0505289197fbd" title='Last modified Aug 25, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/71f99027cc254f1e87e96571e3d741b557677cec" title='Last modified Aug 25, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 25, 2020
     </a>
   </div>
@@ -275,6 +285,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#webサイトへの攻撃手法">Webサイトへの攻撃手法</a>
 <ul>
 <li><a href="#sqlインジェクション">SQLインジェクション</a></li>
+<li><a href="#クロスサイトスクリプティング-xss">クロスサイトスクリプティング(XSS)</a></li>
 </ul></li>
 </ul>
 </nav>
