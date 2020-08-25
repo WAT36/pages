@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.e6a462517372074c80c74e5ddb9259238b3242f511cb44b2593cd2d3528b67da.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.0d96d8834a7f13e19d089aca66f93b74e3e7382a75d1bd7619864a0284e082e9.js"></script>
 
 
 
@@ -241,6 +241,20 @@ https://github.com/alex-shpak/hugo-book
 <p>ブラウザ側でJavascriptを無効にすれば防げるが、Javascriptを利用するサイトが閲覧できなくなるためお勧めではない。</p>
 
 <p>閲覧者側としてはブラウザのアップデートやセキュリティソフトの導入、サイト管理者側としては入力値のチェックなど、XSSに対応したアプリケーションを構築する必要がある。</p>
+
+<h2 id="クロスサイトリクエストフォージェリ-csrf">クロスサイトリクエストフォージェリ(CSRF)</h2>
+
+<p>クロスサイトリクエストフォージェリとは、ユーザがあるWebアプリケーションにログインしている(セッションを確立)時に、外部の攻撃者がそのユーザになりすまして、用意したHTTPリクエストを送信することで、ユーザの意図しない動作を行わせる攻撃手法である。</p>
+
+<p>ユーザがWebアプリケーションにログインしている時に、外部の攻撃者が用意したサイトを閲覧すると、悪意のあるスクリプトを実行させることでセッションのデータ(Cookieなど)を盗み見られてしまう。それを利用してHTTPリクエストを作成し、Webアプリケーションに送ってしまうと、外部の攻撃者がそのユーザの状態でいろいろな操作を行えてしまう。</p>
+
+<p>対策としてはWebアプリケーション側でHTTPリクエストを詳しく確認させたり、またはその他の照合情報などを利用してユーザのチェックを行うなどがある。</p>
+
+<h2 id="ディレクトリトラバーサル">ディレクトリトラバーサル</h2>
+
+<p>ディレクトリトラバーサルとは、URL等のパラメータで示されているファイルから<pre>../</pre>といったような親ディレクトリを示す文字列を追加することで、本来Web利用者がアクセスできないようなファイルにアクセスしようとする攻撃手法である。</p>
+
+<p>対策としては、ファイルのパーミッション(アクセス権)を適切に設定し、他ユーザがアクセスできないようにする等ある。</p>
 </article>
 
       
@@ -248,7 +262,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/71f99027cc254f1e87e96571e3d741b557677cec" title='Last modified Aug 25, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/9a21bdb18a46fdbd5e13563eba5974f15861143e" title='Last modified Aug 25, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 25, 2020
     </a>
   </div>
@@ -286,6 +300,8 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#sqlインジェクション">SQLインジェクション</a></li>
 <li><a href="#クロスサイトスクリプティング-xss">クロスサイトスクリプティング(XSS)</a></li>
+<li><a href="#クロスサイトリクエストフォージェリ-csrf">クロスサイトリクエストフォージェリ(CSRF)</a></li>
+<li><a href="#ディレクトリトラバーサル">ディレクトリトラバーサル</a></li>
 </ul></li>
 </ul>
 </nav>
