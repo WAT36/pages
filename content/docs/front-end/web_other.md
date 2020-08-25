@@ -199,3 +199,37 @@ MVCアーキテクチャとは、Webアプリケーションにおけるデザ�
 CMSとは、Webページをなすテキストや画像ファイルといったコンテンツを一元的に管理し、Webページの作成や更新が可能なソフトウェアの事である。
 
 HTMLやCSSの知識がなくとも、コンテンツを用意すればCMSがWebページをビルドしてくれる。例としては、ブログサービスのWordPressや本ブログの元ともなっているHugo、またWikiなどがある。
+
+# 画像ファイル
+
+## 画像ファイルの種類
+
+画像ファイルの種類はいくつかある。以下にその一部を記載する。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">BMP</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">フルカラーに対応したWindowsの標準画像フォーマット。一般的に圧縮されないことが多くファイルサイズが大きくなりすぎるため、Webサイトでの使用は不適切。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">GIF</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">256色まで対応する可逆圧縮の画像フォーマット。画質の劣化がないため、単純なイラストに向いている。アニメーションも作成できる。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">PNG</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">フルカラーに対応した可逆圧縮の画像フォーマット。GIFの代替として登場した。圧縮率はGIFよりは良いがJPEGには劣る。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">JPEG</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">フルカラーに対応した非可逆圧縮の画像フォーマット。ファイルサイズはより小さくできるが、非可逆圧縮のため画質はもとより低下する。多少の画質劣化が問題にならない写真に向いている。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">SVG</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">XMLで記述するベクターデータのフォーマット。拡大縮小しても画像が劣化しない。図形やアイコン、文字などの表現に適している。Javascriptによる制御も行える。</td>
+    </tr>
+</table>
