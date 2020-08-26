@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.b370288857863ec9b7f9139fc39caac4fb6cdddd0d6e94a046029bba72d19f7a.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.1e2a571d5a0a82280c30e635c8ec414542a3a98de728180040c5288bcc07202b.js"></script>
 
 
 
@@ -203,6 +203,18 @@ https://github.com/alex-shpak/hugo-book
 
 <p>この問題を回避するには、メディアクエリを利用する事で、デバイスの特性により適用するCSSを使い分けていく。</p>
 
+<h2 id="ホーム画面ショートカットアイコン">ホーム画面ショートカットアイコン</h2>
+
+<p>AndroidやiOSといったスマートフォン向けのOSでは、Webサイトへアクセスするためのショートカットをアプリケーションのようにホーム画面へ配置することができます。</p>
+
+<p>この際のアイコンは、HTMLのlink要素でrel属性に<strong>apple-touch-icon</strong>と指定することで、設定することが可能になります。</p>
+
+<pre><code>&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;xxx.png&quot;&gt;
+</code></pre>
+
+<p>また、href属性に画像を設定することで、アイコン画像としても使用できます。
+アイコン画像はOSによっては自動的にハイライトや影がつくことがありますが、これを避けたい場合にはrel属性に<strong>apple-touch-icon-precomposed</strong>を指定します。</p>
+
 <h2 id="a要素での電話発信">a要素での電話発信</h2>
 
 <p>通話機能を持つデバイスには、a要素を利用する事で簡単に電話を発信する設定をすることができる。</p>
@@ -257,6 +269,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#cssスプライト">CSSスプライト</a></li>
 <li><a href="#高画像度画面向けの対応">高画像度画面向けの対応</a></li>
+<li><a href="#ホーム画面ショートカットアイコン">ホーム画面ショートカットアイコン</a></li>
 <li><a href="#a要素での電話発信">a要素での電話発信</a></li>
 <li><a href="#script要素のasync属性-defer属性">script要素のasync属性/defer属性</a>
 <ul>
