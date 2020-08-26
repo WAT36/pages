@@ -260,3 +260,27 @@ SEOとは、検索エンジン最適化(Search Engine Optimization)の事であ�
 検索ロボットとは、検索エンジンのデータベースを作成するために、全世界のWebページをダウンロードするプログラムである。
 
 検索ロボットにとって分かりやすい記述をすると、SEOが行えやすい。逆に検索エンジンにヒットさせたくないときは、Basic認証や、robots.txtファイル(サイトをクロールされないように制御するファイル)を設定する。
+
+
+## Web広告
+
+Web広告として、代表的なものは以下の通り。
+
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">ペイパークリック広告(PPC)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">広告をクリックした回数に応じて課金される。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">アドワーズ広告</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">検索エンジンの検索結果に連動して表示されるPPC広告。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">アフィリエイト広告</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">成果報酬型のインターネット広告で、広告のクリック数、またその広告をもとに売上に繋がったなどの結果に応じて広告料が支払われる。</td>
+    </tr>
+</table>
