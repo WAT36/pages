@@ -140,6 +140,60 @@ type属性に指定できる値は以下の通り。
     </tr>
     <tr>
         <td style="border:none;">・</td>
+        <td style="border:none;">button</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">汎用ボタン</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">image</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">画像の送信ボタン</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">file</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">送信するファイルを選択する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">color</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">色の入力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">date</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">日付の入力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">month</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">年と月の入力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">week</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">年と週の入力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">time</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">時刻の入力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">datetime-local</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">日付と時刻の入力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
         <td style="border:none;">hidden</td>
         <td style="border:none;">　・・・　</td>
         <td style="border:none;">表示させずに送信するテキスト</td>
@@ -197,6 +251,38 @@ type属性に指定できる値は以下の通り。
         <td style="border:none;"><input type="reset"></td>
     </tr>
     <tr>
+        <td style="border:none;">button</td>
+        <td style="border:none;"><input type="button"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">image</td>
+        <td style="border:none;"><input type="image" src="/img/front-end/img.jpg" width=25% height=25%></td>
+    </tr>
+    <tr>
+        <td style="border:none;">color</td>
+        <td style="border:none;"><input type="color"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">date</td>
+        <td style="border:none;"><input type="date"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">month</td>
+        <td style="border:none;"><input type="month"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">week</td>
+        <td style="border:none;"><input type="week"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">time</td>
+        <td style="border:none;"><input type="time"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">datetime-local</td>
+        <td style="border:none;"><input type="datetime-local"></td>
+    </tr>
+    <tr>
         <td style="border:none;">hidden</td>
         <td style="border:none;"><input type="hidden"></td>
     </tr>
@@ -204,7 +290,7 @@ type属性に指定できる値は以下の通り。
 </form>
 ```
 
-表示例
+表示例（ブラウザによっては正しく表示されない場合もあります）
 
 <hr>
 <form>
@@ -252,6 +338,38 @@ type属性に指定できる値は以下の通り。
     <tr>
         <td style="border:none;">reset</td>
         <td style="border:none;"><input type="reset"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">button</td>
+        <td style="border:none;"><input type="button"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">image</td>
+        <td style="border:none;"><input type="image" src="/img/front-end/img.jpg" width=25% height=25%></td>
+    </tr>
+    <tr>
+        <td style="border:none;">color</td>
+        <td style="border:none;"><input type="color"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">date</td>
+        <td style="border:none;"><input type="date"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">month</td>
+        <td style="border:none;"><input type="month"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">week</td>
+        <td style="border:none;"><input type="week"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">time</td>
+        <td style="border:none;"><input type="time"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">datetime-local</td>
+        <td style="border:none;"><input type="datetime-local"></td>
     </tr>
     <tr>
         <td style="border:none;">hidden</td>
