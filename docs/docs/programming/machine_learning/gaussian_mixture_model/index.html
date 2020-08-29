@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.f55cb468326b07dfa463de5e37bcf703fffb87faf03aae08de7a8d381dc01334.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.2a5216c71c1ab4b24a4f07998baed51e823fe3caf0a050a7129caf4a9f305f1a.js"></script>
 
 
 
@@ -239,9 +239,39 @@ https://github.com/alex-shpak/hugo-book
 
 <p>この式(5)で表されるγは、「どの潜在変数(クラスタ)にどれほど寄与しているか」という意味合いから、<strong>負担率 (responsibility)</strong>とも呼ばれている。</p>
 
-<p>確率的にクラスタリングを行うということは、データの背後に潜む潜在変数Zを確率的な変数γとして推定することである。</p>
+<p>確率的にクラスタリングを行うということは、データの背後に潜む潜在変数Zを確率的な変数γ(負担率)として推定することである。</p>
 
-<p>次に、この変数γを推定する方法についてを述べる。</p>
+<p>次に、この負担率γを推定する方法についてを述べる。</p>
+
+<h2 id="混合ガウスモデルの導入">混合ガウスモデルの導入</h2>
+
+<p>負担率γを求めるために、混合ガウスモデルという確率モデルを導入する。</p>
+
+<p>混合ガウスモデルは、２次元ガウス関数を複数足し合わせたもので、以下の式で表される。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{6}  p( {\bf x} )  =  \sum_{k=0}^{K-1} \pi_{k} N ({\bf x} | {\bf \mu}_{k} , {\bf \Sigma}_{k} )
+ $$
+</p>
+
+
+
+<p>N(x|μ<sub>k</sub>,Σ<sub>k</sub>)は平均μ<sub>k</sub>、共分散行列Σ<sub>k</sub>の２次元ガウス関数を表している。</p>
+
+<p>このモデルのパラメータは、各ガウス分布の中心を表す中心ベクトルμ<sub>k</sub>、分布の散らばり具合を示す共分散行列Σ<sub>k</sub>、各ガウス分布の大きさ(係数)を示す<strong>混合係数</strong> π<sub>k</sub>である。混合係数は0から1の間を取る値であり、また全ての混合係数の和は1となる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{7}  \sum_{k=0}^{K-1} \pi_{k}  =  1
+ $$
+</p>
+
+
 </article>
 
       
@@ -249,7 +279,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/47e76790fc7460025da9c23a00b0644f8721e882" title='Last modified Aug 30, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/c36693ad576e807a10640cd712b265736f2a94f6" title='Last modified Aug 30, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 30, 2020
     </a>
   </div>
