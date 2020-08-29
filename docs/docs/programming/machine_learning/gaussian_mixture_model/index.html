@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.401386354b2d4ea832f0e3b5acb80da45808f532a7d0f6cb7d22341cf98d2a45.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.dd7c58afef730eca023f331aa17be34314968da8b810c59d673b4f5c47802f8e.js"></script>
 
 
 
@@ -222,6 +222,22 @@ https://github.com/alex-shpak/hugo-book
 
 
 <p>式(4)において、z<sub>ij</sub>は、i番目のデータがj番目の潜在変数に属していたら１、属していなければ０をとる変数とする。(0≦j＜K)</p>
+
+<p>これより、γ<sub>ik</sub>（i番目の入力データがクラスタkに属する確率）は、i番目の入力データが潜在変数kに属する確率と言い換えることもでき、以下のような式で表される。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{5}  {\bf \gamma}_{ik}   =  P(z_{ik} = 1 | x_{i})
+ $$
+</p>
+
+
+
+<p>式(5)は、簡単にいうとz<sub>ik</sub>の値がわからない時に、z<sub>ik</sub>の推定値として利用できる。入力データx<sub>i</sub>がどの潜在変数に属するかわかっていれば、式(5)の値は0または1になるので推定はしなくても良いが、x<sub>i</sub>がどの潜在変数に属するかがわからない場合はこの式(5)の値が0から1の値を取るので、この値が潜在変数に属する確率としてそのまま利用できる。</p>
+
+<p>この式(5)で表されるγは、「どの潜在変数(クラスタ)にどれほど寄与しているか」という意味合いから、<strong>負担率 (responsibility)</strong>とも呼ばれている。</p>
 </article>
 
       
@@ -229,8 +245,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/dd923a5360e13c03b74a27e44392fb9d9da08a0c" title='Last modified Aug 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 5, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/841b3c0f741387a8edc27f6de8f61aab16a33e63" title='Last modified Aug 29, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 29, 2020
     </a>
   </div>
   
