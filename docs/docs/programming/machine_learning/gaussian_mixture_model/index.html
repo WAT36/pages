@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.36c634835c78d14c8c755e084b47ac7c706fb1c377573133496d46733a63ba82.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.401386354b2d4ea832f0e3b5acb80da45808f532a7d0f6cb7d22341cf98d2a45.js"></script>
 
 
 
@@ -133,7 +133,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p>k-means法では入力データがどのクラスタに属するかを示すものとして行列Rを用いていた。</p>
 
-<p>ここでは、この行列Rを、以下のように行列Γとして設定する。</p>
+<p>ここでは、この行列Rを、以下のように行列Γとして設定する。なお、入力データの個数をN個とする。</p>
 
 
 
@@ -203,6 +203,25 @@ https://github.com/alex-shpak/hugo-book
 <p>そうなると、元となる源泉の温度とpHは固定されているので、それらが各クラスタの中心をなしていると考えられ、かつそのようなクラスタが存在しているとも考えることもできる。</p>
 
 <p>このように、観察はできなかったがデータに影響を与えているだろう変量のことを<strong>潜在変数(latent valiable)</strong>または<strong>隠れ変数(hidden variable)</strong>と呼ぶ。</p>
+
+<p>この潜在変数を数式で定義するにはどうすれば良いだろうか。(2)と同様にして、潜在変数の個数をK個とした時、以下のようなz<sub>i</sub>を考えてみる。(0≦i＜N)</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{4}  {\bf z }_{i}  =  
+                \left[
+                    \begin{array}{cc}
+                    z_{i0}  & z_{i1} & \cdots & z_{i(K-1)}
+                    \end{array}
+                \right]
+ $$
+</p>
+
+
+
+<p>式(4)において、z<sub>ij</sub>は、i番目のデータがj番目の潜在変数に属していたら１、属していなければ０をとる変数とする。(0≦j＜K)</p>
 </article>
 
       
@@ -210,8 +229,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/be161b455688b4d2ec3a0a1f19ea9848af945232" title='Last modified Aug 2, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 2, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/dd923a5360e13c03b74a27e44392fb9d9da08a0c" title='Last modified Aug 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 5, 2020
     </a>
   </div>
   
