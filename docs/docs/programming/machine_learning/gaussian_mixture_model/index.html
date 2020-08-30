@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.f331f46c0e8d397a93c6a2d33108dc6a90f23ea327fe520875b2db0abdb9ef28.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.dac4ae95fc6192f15911a251d763999787e475242e7ba230a3db27554c47051d.js"></script>
 
 
 
@@ -311,6 +311,64 @@ https://github.com/alex-shpak/hugo-book
 <p>この式により、γ<sub>ik</sub>を一つ一つ求めていく。</p>
 
 <p>ちなみにこの1.、2.の動作を、EMアルゴリズムでは<strong>E Step</strong>(Expectatoin step)と呼ばれる。</p>
+
+<h3 id="3-パラメータの更新">3. パラメータの更新</h3>
+
+<p>次に、算出した負担率γにおいて、各クラスタ(潜在変数)への負担率の和N<sub>k</sub>を求める。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{9}  N_{k} = \sum_{i=0}^{N-1} \gamma_{ik}
+ $$
+</p>
+
+
+
+<p>このN<sub>k</sub>は、各クラスタに属する入力データの数に相当する。</p>
+
+<p>また、混合係数π<sub>k</sub>を以下の式(10)により更新する。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{10}  \pi_{k} = \frac{ N_{k} }{ N }
+ $$
+</p>
+
+
+
+<p>Nは入力データの数なので、この式(10)によりクラスタkの混合係数π<sub>k</sub>は全体に対するクラスタ内の数の割合になる。</p>
+
+<p>そして、中心ベクトルμ<sub>k</sub>を以下の式(11)に基づき更新する。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{11}  \mu_{k} = \frac{1}{ N_{k} } \sum_{i=0}^{N-1} \gamma_{ik} x_{i}
+ $$
+</p>
+
+
+
+<p>式(11)は、クラスタへの負担率を重みづけた上でのデータの平均となり、この値を新しい中心ベクトルとして利用する。</p>
+
+<p>そして次に、共分散行列Σを更新する。Σの更新の際には、式(11)で求めたμ<sub>k</sub>を利用するので注意する。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{12}  \Sigma_{k} = \frac{1}{ N_{k} } \sum_{i=0}^{N-1} \gamma_{ik} (x_{i} - \mu_{k}) (x_{i} - \mu_{k})^{T}
+ $$
+</p>
+
+
+
+<p>式(12)も式(11)と同じく、計算にはクラスタへの負担率を重みづけた上で行い、出力する。</p>
 </article>
 
       
@@ -318,7 +376,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/df3dd827fd3682edb12cf270b0ac0d43c34881fe" title='Last modified Aug 30, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/e9910458702b495f3f9e36c54e6b68fabfe929c7" title='Last modified Aug 30, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 30, 2020
     </a>
   </div>
