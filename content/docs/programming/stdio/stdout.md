@@ -45,4 +45,10 @@ Pythonでコンソール画面への出力を扱うには組み込み関数の *
 https://docs.python.org/ja/3/library/functions.html#print
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+
+
+
+{{< /tab >}}
 {{< /tabs >}}
