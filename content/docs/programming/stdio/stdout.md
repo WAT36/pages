@@ -47,8 +47,14 @@ https://docs.python.org/ja/3/library/functions.html#print
 {{< /tab >}}
 {{< tab "Javascript" >}}
 
+Javascriptはブラウザ上で扱う言語のため、ここではブラウザ上のログ画面への出力という意味で記す。
 
+Javascriptでは、**console.log()**を利用する。
+引数には出力したい内容を入力する。
 
+```javascript
+console.log(5)
+```
 
 {{< /tab >}}
 {{< /tabs >}}
