@@ -45,4 +45,16 @@ Pythonでコンソール画面への出力を扱うには組み込み関数の *
 https://docs.python.org/ja/3/library/functions.html#print
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptはブラウザ上で扱う言語のため、ここではブラウザ上のログ画面への出力という意味で記す。
+
+Javascriptでは、**console.log()**を利用する。
+引数には出力したい値及び変数を入力する。
+
+```javascript
+console.log(5)
+```
+
+{{< /tab >}}
 {{< /tabs >}}
