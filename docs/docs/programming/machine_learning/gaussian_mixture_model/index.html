@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>混合ガウスモデル | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.fe6feb17c00096bcc4b2492961f55d41f0b87ca7abdd2724f69e21fb48bb1eb8.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2fgaussian_mixture_model\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>混合ガウスモデル</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="混合ガウスモデル">混合ガウスモデル</h1>
+
+<p>先程のk-means法では、データを必ずどれか一つのクラスターに割り当てていたが、複数のクラスターに割り当てると言うことはできないだろうか？</p>
+
+<p>ここで、教師あり学習でも利用した、確率を使った表現を利用することを考えてみる。</p>
+
+<p>k-means法では入力データがどのクラスタに属するかを示すものとして行列Rを用いていた。</p>
+
+<p>ここでは、この行列Rを、以下のように行列Γとして設定する。なお、入力データの個数をN個とする。</p>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+<p class="katex">
+  $$ 
+\tag{1}  {\bf \Gamma}  =  
+                \left[
+                    \begin{array}{cc}
+                    {\bf \gamma}_{0} \\
+                    {\bf \gamma}_{1} \\
+                    \vdots \\
+                    {\bf \gamma}_{N-1} \\
+                    \end{array}
+                \right]
+ $$
+</p>
+
+
+
+<p>ここでクラスタ数をKとした時、</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{2}  {\bf \gamma}_{i}  =  
+                \left[
+                    \begin{array}{cc}
+                    \gamma_{i0}  & \gamma_{i1} & \cdots & \gamma_{i(K-1)}
+                    \end{array}
+                \right]
+ $$
+</p>
+
+
+
+<p>となる。γ<sub>ik</sub>は、i番目の入力データがクラスタkに属する確率を示す。</p>
+
+<p>また、これより</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{3}  \sum_{k=0}^{K-1} \gamma_{ik}  =  1
+ $$
+</p>
+
+
+
+<p>である。</p>
+
+<h2 id="データがクラスタに属する確率とは">データがクラスタに属する確率とは？</h2>
+
+<p>そもそもの話だが、入力データがクラスタkに属する確率とはどう言う意味なのか？</p>
+
+<p>具体的な例を使って説明してみよう。先程の例では温度とpHを入力としたデータを利用していた。</p>
+
+<p>ここで、例えば温泉の源泉が複数あり、それらの組み合わさったことによって入力データの温度とpHが実現している、と言う説を考えてみよう。</p>
+
+<p>そうなると、源泉の数だけクラスタが存在すると考えることができ、かつ元となる源泉の温度とpHは固定されているので、それらが各クラスタの中心をなしているとも考えられる。</p>
+
+<p>このように、観察はできなかったがデータに影響を与えているだろう変量のことを<strong>潜在変数(latent valiable)</strong>または<strong>隠れ変数(hidden variable)</strong>と呼ぶ。</p>
+
+<p>この潜在変数を数式で定義するにはどうすれば良いだろうか。式(2)と同様にして、潜在変数の個数をK個とした時、以下のようなz<sub>i</sub>を考えてみる。(0≦i＜N)</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{4}  {\bf z }_{i}  =  
+                \left[
+                    \begin{array}{cc}
+                    z_{i0}  & z_{i1} & \cdots & z_{i(K-1)}
+                    \end{array}
+                \right]
+ $$
+</p>
+
+
+
+<p>式(4)において、z<sub>ij</sub>は、i番目のデータがj番目の潜在変数に属していたら１、属していなければ０をとる変数とする。(0≦j＜K)</p>
+
+<p>これより、γ<sub>ik</sub>（i番目の入力データがクラスタkに属する確率）は、i番目の入力データが潜在変数kに属する確率と言い換えることもでき、以下のような式で表される。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{5}  {\bf \gamma}_{ik}   =  P(z_{ik} = 1 | x_{i})
+ $$
+</p>
+
+
+
+<p>式(5)は、簡単にいうとz<sub>ik</sub>の値がわからない時に、z<sub>ik</sub>の推定値として利用できる。入力データx<sub>i</sub>がどの潜在変数に属するかわかっていれば、式(5)の値は0または1になるので推定はしなくても良いが、x<sub>i</sub>がどの潜在変数に属するかがわからない場合はこの式(5)の値が0から1の値を取るので、この値が潜在変数に属する確率として利用できる。</p>
+
+<p>この式(5)で表されるγは、「入力データがどの潜在変数(クラスタ)に属する確率」という意味合いから、<strong>負担率 (responsibility)</strong>とも呼ばれている。</p>
+
+<p>確率的にクラスタリングを行うということは、データの背後に潜む潜在変数Zを確率的な変数γ(負担率)として推定することである。</p>
+
+<p>次に、この負担率γを推定する方法についてを述べる。</p>
+
+<h2 id="混合ガウスモデル-1">混合ガウスモデル</h2>
+
+<p>負担率γを求めるために、混合ガウスモデルという確率モデルを導入する。</p>
+
+<p>混合ガウスモデルは、２次元ガウス関数を複数足し合わせたもので、以下の式で表される。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{6}  p( {\bf x} )  =  \sum_{k=0}^{K-1} \pi_{k} N ({\bf x} | {\bf \mu}_{k} , {\bf \Sigma}_{k} )
+ $$
+</p>
+
+
+
+<p>N(x|μ<sub>k</sub>,Σ<sub>k</sub>)は平均μ<sub>k</sub>、共分散行列Σ<sub>k</sub>の２次元ガウス関数を表している。</p>
+
+<p>このモデルのパラメータは、各ガウス分布の中心を表す中心ベクトルμ<sub>k</sub>、分布の散らばり具合を示す共分散行列Σ<sub>k</sub>、各ガウス分布の大きさ(係数)を示す<strong>混合係数</strong> π<sub>k</sub>である。混合係数は0から1の間を取る値であり、また全ての混合係数の和は1となる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{7}  \sum_{k=0}^{K-1} \pi_{k}  =  1
+ $$
+</p>
+
+
+
+<p>では、どのようにして入力データに対する最適なパラメータμ<sub>k</sub>、Σ<sub>k</sub>、π<sub>k</sub>を求めれば良いか。そのための方法を次に示す。</p>
+
+<h2 id="emアルゴリズム">EMアルゴリズム</h2>
+
+<p>前述のパラメータを入力データにフィットし、負担率γを求める方法として、<strong>EMアルゴリズム</strong>(Expectation-Maximization algorithm)を利用する。この方法はK-means法を応用した方法としても見れる。</p>
+
+<p>K-means法では、各クラスタの中心ベクトルを元にフィッティングを行なったが、EMアルゴリズムでは、中心ベクトルの他に共分散行列もフィッティングに利用する。</p>
+
+<p>大まかな手順を、以下に記載しながら進める。</p>
+
+<h3 id="1-パラメータの初期化">1. パラメータの初期化</h3>
+
+<p>まず最初に、パラメータμ、Σ、πを初期化する。</p>
+
+<p>値は何でも良いが、まずはπはどれも均等に、Σは[[1 0],[0 1]]、μはk-means法と同じ要領で決定する。</p>
+
+<h3 id="2-γの更新">2. γの更新</h3>
+
+<p>次に、入力データx<sub>i</sub>と各パラメータμ、Σ、πから、負担率γを計算する。</p>
+
+<p>式(5)から、負担率γを算出する式は以下の式(8)のようになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{8}  
+\gamma_{ik} = \frac{ \pi_{ik} N  ({\bf x}_{i} | {\bf \mu}_{k} , {\bf \Sigma}_{k} ) }{ \sum_{k=0}^{K-1} \pi_{k} N  ({\bf x}_{i} | {\bf \mu}_{k} , {\bf \Sigma}_{k} )  } 
+ $$
+</p>
+
+
+
+<p>式(5)は「i番目の入力データが潜在変数kに属する確率」なので、その値は「i番目の入力データが潜在変数0~K-1に属する時のガウス関数の値の和」のうち「i番目の入力データが潜在変数kに属する時のガウス関数の値」の確率になる。それを示したのが式(8)である。</p>
+
+<p>この式により、γ<sub>ik</sub>を一つ一つ求めていく。</p>
+
+<p>ちなみにこの2.の動作を、EMアルゴリズムでは<strong>E Step</strong>(Expectatoin step)と呼ばれる。</p>
+
+<h3 id="3-パラメータの更新">3. パラメータの更新</h3>
+
+<p>次に、算出した負担率γにおいて、各クラスタ(潜在変数)への負担率の和N<sub>k</sub>を求める。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{9}  N_{k} = \sum_{i=0}^{N-1} \gamma_{ik}
+ $$
+</p>
+
+
+
+<p>このN<sub>k</sub>は、各クラスタに属する入力データの数に相当する。</p>
+
+<p>また、混合係数π<sub>k</sub>を以下の式(10)により更新する。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{10}  \pi_{k} = \frac{ N_{k} }{ N }
+ $$
+</p>
+
+
+
+<p>Nは入力データの数なので、この式(10)によりクラスタkの混合係数π<sub>k</sub>は全体に対するクラスタ内の数の割合になる。</p>
+
+<p>そして、中心ベクトルμ<sub>k</sub>を以下の式(11)に基づき更新する。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{11}  \mu_{k} = \frac{1}{ N_{k} } \sum_{i=0}^{N-1} \gamma_{ik} x_{i}
+ $$
+</p>
+
+
+
+<p>式(11)は、クラスタへの負担率を重みづけた上でのデータの平均となり、この値を新しい中心ベクトルとして利用する。</p>
+
+<p>そして次に、共分散行列Σを更新する。Σの更新の際には、式(11)で求めたμ<sub>k</sub>を利用するので注意する。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{12}  \Sigma_{k} = \frac{1}{ N_{k} } \sum_{i=0}^{N-1} \gamma_{ik} (x_{i} - \mu_{k}) (x_{i} - \mu_{k})^{T}
+ $$
+</p>
+
+
+
+<p>式(12)も式(11)と同じく、計算にはクラスタへの負担率を重みづけた上で行い、出力する。</p>
+
+<p>この3.の動作を、EMアルゴリズムでは<strong>M Step</strong>(Maximization Step)と呼ぶ。</p>
+
+<h3 id="4-2-へ戻る-e-stepを行う">4.  2.へ戻る(E Stepを行う)</h3>
+
+<p>M stepが終わったらE stepを行い、その後M stepを行い、またE stepを行い、、というように、E stepとM stepを繰り返していき、パラメータが収束するまで行う。</p>
+
+<p>以上が、混合ガウスモデル、及びEMアルゴリズムによる確率的クラスタリングの算出である。</p>
+
+<h1 id="尤度">尤度</h1>
+
+<p>EMアルゴリズムでは混合ガウスモデルが入力データに合うようにパラメータを最適化させていたが、パラメータごとではない、EMアルゴリズムによって最適化される値というのは何かないだろうか。</p>
+
+<p>実は、それは尤度と呼ばれるもので、入力データが混合ガウスモデルから生成される確率である（教師あり学習　の章で既出）</p>
+
+<p>尤度の式は、下式(13)で与えられる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{13}  p( {\bf X} | {\bf \pi} , {\bf \mu} , {\bf \Sigma} ) =  \prod_{n=0}^{N-1} \sum_{k=0}^{K-1} \pi_{k} N (x_{n} | \mu_{k} , \Sigma_{k})
+ $$
+</p>
+
+
+
+<p>対数尤度をとると</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{14}  \log p( {\bf X} | {\bf \pi} , {\bf \mu} , {\bf \Sigma} ) =  \sum_{n=0}^{N-1} \{ \log \sum_{k=0}^{K-1} \pi_{k} N (x_{n} | \mu_{k} , \Sigma_{k}) \}
+ $$
+</p>
+
+
+
+<p>値を最大化(最適化のため)させるために、式(14)に-1をかけて負の対数尤度にし、それを誤差関数E(π,μ,Σ)として定義すると</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{15}  
+\begin{aligned}
+E ( \pi , \mu , \Sigma) 
+    &= - \log p( {\bf X} | {\bf \pi} , {\bf \mu} ) \\
+    &= - \sum_{n=0}^{N-1} \{ \log \sum_{k=0}^{K-1} \pi_{k} N (x_{n} | \mu_{k} , \Sigma_{k}) \}
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>となる。最適化すればするほど、この誤差関数の値が小さくなっていく。</p>
+
+<p>この誤差関数を指標とすることで、混合ガウスモデル、EMアルゴリズムが正しく動作されているかを確認できる。</p>
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/4f7121b1e7ed9a77fb45d509f613b6997025f5d1" title='Last modified Sep 1, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 1, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>
