@@ -691,7 +691,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/neural_network/</guid>
-      <description>ニューラルネットワーク</description>
+      <description>ニューラルネットワーク ニューラルネットワークとは、人間の神経細胞を模した数理モデルであるニューロンモデルを利用した機械学習のアルゴリズムであ</description>
     </item>
     
     <item>
@@ -1448,6 +1448,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/procon/dfs/</guid>
       <description>深さ優先探索 探索の手法の一つである深さ優先探索についてを述べる。 深さ優先探索とは、ある状態から始めてそこから遷移出来なくなるまで状態を進めて</description>
+    </item>
+    
+    <item>
+      <title>混合ガウスモデル</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/gaussian_mixture_model-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/gaussian_mixture_model-2/</guid>
+      <description>混合ガウスモデル 先程のk-means法では、データを必ずどれか一つのクラスターに割り当てていたが、複数のクラスターに割り当てると言うことはで</description>
     </item>
     
     <item>
