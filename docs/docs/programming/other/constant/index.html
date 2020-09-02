@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>定数 | WAT Notes</title>
+<title>python | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -12,13 +12,14 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.8bb4e977d9d24e1d93691ad5e4ca0653d540ed50778597daf5cc93e88ae9d988.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.fe6feb17c00096bcc4b2492961f55d41f0b87ca7abdd2724f69e21fb48bb1eb8.js"></script>
 
 
 
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 
 
+<link rel="alternate" type="application/rss+xml" href="https://WAT36.github.io/pages/tags/python/index.xml" title="WAT Notes" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -54,7 +55,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fother\2f constant\2f "] {
+  nav ul a[href$="\2ftags\2fpython\2f "] {
       color: #004ed0;
   }
   </style>
@@ -113,85 +114,43 @@ https://github.com/alex-shpak/hugo-book
 </script>
 
     </aside>
-
     <div class="book-page">
       <header class="flex align-center justify-between book-header">
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>定数</strong>
+  <strong>python</strong>
 </header>
 
-      
-<article class="markdown">
 
-<h1 id="定数">定数</h1>
-
-<p>変数は値を記憶するための入れ物であり、基本、何度でも値を代入することが可能である。</p>
-
-<p>これに対し<strong>定数</strong>とは、値の入れ物という点では変数と同じだが、値を一度しか代入できず、代入後は別の値を再代入することはできない物のことを言う。</p>
-
-<p>ここでは、各言語における定数の宣言方法についてを述べる。</p>
-
-
-
-
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-type" style="display: none;" id="tabs-type-0" checked="checked" />
-  <label for="tabs-type-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Javaで定数を宣言するには、宣言時にデータ型の前に<strong>final</strong>修飾子をつける。</p>
-
-<pre><code>final データ型 定数名 = 初期値;
-</code></pre>
-
-<p>定数として宣言すると、初期化以降は値を代入し直すことはできない。</p>
-
-<p>例</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> <span style="color:#a6e22e">int</span> N <span style="color:#f92672">=</span> 50;</code></pre></div>
-  </div>
-
-  <input type="radio" name="tabs-type" style="display: none;" id="tabs-type-1"  />
-  <label for="tabs-type-1">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    Pythonには定数という仕様は存在しない。
-  </div>
-
-  <input type="radio" name="tabs-type" style="display: none;" id="tabs-type-2"  />
-  <label for="tabs-type-2">
-    Swift
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Swiftでは<strong>let</strong>キーワードを用いて定数を宣言する。</p>
-
-<p>宣言時に値を代入することも可能。</p>
-
-<pre><code>let (定数名): (型名) = (値)
-</code></pre>
-
-<p>例</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> a: Int = <span style="color:#ae81ff">123</span></code></pre></div>
-  </div>
-
-</div>
-
-</article>
+<section id="main">
+    <div class="tags_list">
+    <div class="tags_title"><span>python</span></div>
+    </div>
+    <ul id="list">
+        
+        <li>
+            2019-11-04
+             <a href="https://WAT36.github.io/pages/posts/queue_py/">キューとPythonでの実装モジュール「deque」</a>
+         </li>
+         
+        <li>
+            2019-09-28
+             <a href="https://WAT36.github.io/pages/posts/heapq/">優先度付きキュー（ヒープ）とPythonで実装するライブラリ「heapq」について</a>
+         </li>
+         
+        <li>
+            2019-09-14
+             <a href="https://WAT36.github.io/pages/posts/bisect/">Pythonで二分探索を行うライブラリ「bisect」</a>
+         </li>
+         
+     </ul>
+     <hr>
+     <a href="https://WAT36.github.io/pages/tags">Tags</a>
+ </section>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/3358291ec5e2456c5ed7e5003392eb47551fc606" title='Last modified Aug 1, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 1, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
@@ -199,8 +158,6 @@ https://github.com/alex-shpak/hugo-book
       
     </div>
     
-  
-
 
 
   </main>
@@ -219,5 +176,4 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
 </body>
-
 </html>
