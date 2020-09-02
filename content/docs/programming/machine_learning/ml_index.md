@@ -34,4 +34,5 @@ bookToc: false
      - [K-Means法] ({{< relref "/docs/programming/machine_learning/k-means.md" >}})
      - [歪み尺度] ({{< relref "/docs/programming/machine_learning/distortion_measure.md" >}})
      - [混合ガウスモデル] ({{< relref "/docs/programming/machine_learning/gaussian_mixture_model.md" >}})
-
+- 深層学習(ディープラーニング)
+ - [ニューラルネットワーク] ({{< relref "/docs/programming/machine_learning/neural_network.md" >}})
