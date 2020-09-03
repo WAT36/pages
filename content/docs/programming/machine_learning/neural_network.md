@@ -19,12 +19,31 @@ weight: 1
 
 そして、膜電位がある一定の値(閾値)を超えると、その神経細胞は次の神経細胞へ、電気的なパルスを発信する。それが連続された構造になっている。(下図)
 
-<img src="/img/datascience/Figure_41.png" width=50%>
+<img src="/img/datascience/Figure_41.png" width=100%>
 
 
 ## ニューロンモデル
 
 ニューロンモデルは、この神経細胞の動きを模した数理モデルで、下図のように表される。
 
-<img src="/img/datascience/Figure_42.png" width=50%>
+<img src="/img/datascience/Figure_42.png" width=100%>
+
+入力値は、正も負も値を取る実数(図中のx<sub>0</sub>〜x<sub>n-1</sub>)とし、それぞれにシナプス伝達強度とした**重み**(図中のw<sub>0</sub>〜w<sub>n-1</sub>)をかける。そしてその和を取ったものを**入力総和**(図中のa)として計算する。
+
+
+{{< katex  >}}
+\tag{1}  a = w_{0} x_{0} + w_{1} x_{1} + \cdots + w_{n-1} x_{n-1}
+{{< /katex >}}
+
+なお、図にもあるように、n-1番目の重みは切片としてそのまま用いるので、x<sub>n-1</sub>=1とする。
+
+{{< katex  >}}
+\tag{2}  a = w_{0} x_{0} + w_{1} x_{1} + \cdots + w_{n-1}
+{{< /katex >}}
+
+式(1)は以下のように書き換えられる。
+
+{{< katex  >}}
+\tag{3}  a = \sum_{i=0}^{n-1} w_{i} x_{i} 
+{{< /katex >}}
 
