@@ -17,6 +17,8 @@ bookToc: false
 
 念のため言うと本名ではありません。由来は本名のスペルを並び替えてなんかいい名前できないかなと色々試行錯誤して行った末にたどり着いた名前です。（という事はHNを並べ替えれば本名に・・？）
 
+本職は某IT企業に勤務しているSEです。最近はDB設計、バッチ開発(Shell,Python)、画面開発保守(HTML,Flash)等やっております。個人では資格取得、iOSアプリ開発、競技プログラミング(Atcoder,AOJ,Leetcode)、CTF等にも興味があり取り組んでおります。本ブログには日頃の業務及び業務外で得た知見などについてを書き記して行きます。
+
 
 
 ## SNS等
@@ -37,6 +39,10 @@ bookToc: false
 
 緑で停滞中。最近伸び悩んでます
 
+- [LeetCode](https://leetcode.com/t_wakasugi/)
+
+最近やってなし・・取り組みたい
+
 - [LAPRAS](https://lapras.com/public/S0RAG84)
 
 色んなSNSからデータを取ってきてくれて面白い
@@ -55,11 +61,10 @@ bookToc: false
  - SQL
 
 - フレームワーク・ライブラリ・ツール等
+ - IBM WebSphere Application Server
  - IBM Cloud
  - AWS
  - GCP
-
-- OS
 
 
 ## 資格
@@ -73,6 +78,8 @@ bookToc: false
 - LinuC Level 1
 
 - AWS Cloud Practitioner
+
+- HTML5プロフェッショナル認定試験 レベル1
 
 - TOEIC 705
 
