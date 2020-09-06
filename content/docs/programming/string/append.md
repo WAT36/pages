@@ -55,4 +55,14 @@ print(t) # testtesttesttesttest
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptでも" **+** " 演算子を使って文字列を連結できる。
+
+```javascript
+var str = 'Hello!' + 'World!'
+console.log(str)
+```
+
+{{< /tab >}}
 {{< /tabs >}}

@@ -80,4 +80,24 @@ a = 10
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptでも**var**キーワードを用いて変数を宣言する。
+
+記法は以下のとおり。
+
+```
+var (変数名)
+```
+
+Javascriptはスクリプト言語のため、型は宣言しなくても良い。
+
+例
+
+```Javascript
+var a
+a = 10
+```
+
+{{< /tab >}}
 {{< /tabs >}}
