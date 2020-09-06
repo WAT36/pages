@@ -129,6 +129,15 @@
     </item>
     
     <item>
+      <title>API</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/api/</guid>
+      <description>API HTMLに関連する各種APIについて。 マルチメディアグラフィックスAPI HTMLでの音声・動画といったマルチメディアに関する設定や操作を、</description>
+    </item>
+    
+    <item>
       <title>break文</title>
       <link>https://WAT36.github.io/pages/docs/programming/control/break/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -153,6 +162,69 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/control/continue/</guid>
       <description>continue文 continue文はfor文、while文のループ処理において、そのループ1回分の処理をそこで終了し、 条件式の判定（for</description>
+    </item>
+    
+    <item>
+      <title>CSSでのテキスト</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_text/</guid>
+      <description>CSSでのテキスト CSSでのテキストの表現方法についてを示す。 text-shadowプロパティ text-shadowプロパティは、テキストに</description>
+    </item>
+    
+    <item>
+      <title>CSSでのフォント</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_font/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_font/</guid>
+      <description>CSSでのフォント CSSでのフォントについて示す。 Webフォント CSSでフォントを指定しても、ユーザーの環境にそのフォントがインストールされ</description>
+    </item>
+    
+    <item>
+      <title>CSSでのボックス</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_box/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_box/</guid>
+      <description>CSSのボックス CSSで扱うボックスについて。 前述した通り、HTMLでは要素内容の表示にはボックスと呼ばれる単位で表示される。 ボックスの詳細</description>
+    </item>
+    
+    <item>
+      <title>CSSでの背景</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_background/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_background/</guid>
+      <description>CSSでの背景 CSSでの背景の設定方法についてを述べる。 background-colorプロパティ background-colorプロパティ</description>
+    </item>
+    
+    <item>
+      <title>CSSでの色</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_color/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_color/</guid>
+      <description>CSSでの色の表現 CSSでの色の表現について述べる。 16進数の値 方法の一つとして、#(シャープ)と16進数6桁の値で色を表現する方法がある。</description>
+    </item>
+    
+    <item>
+      <title>CSSとは</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_about/</guid>
+      <description>CSSとは CSSの基本事項についてを述べる。 CSSは、HTMLに組み込む形で使用する言語で、HTMLで作成した文書に対しCSSでどの部分をど</description>
+    </item>
+    
+    <item>
+      <title>CSS適用の優先順位</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_priority/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_priority/</guid>
+      <description>CSS適用の優先順位 指定元による優先順位 CSSはWebページの製作者だけが指定できるものではなく、閲覧しているユーザも独自に指定でき、また使</description>
     </item>
     
     <item>
@@ -183,6 +255,15 @@
     </item>
     
     <item>
+      <title>HTTP・HTTPS</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/http/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/http/</guid>
+      <description>HTTP・HTTPS HTTP、HTTPSプロトコルについてを述べる。 HTTPプロトコル HTTP(Hyper Text Transfer Protocol)とは、Webサーバとクライアン</description>
+    </item>
+    
+    <item>
       <title>if-else文</title>
       <link>https://WAT36.github.io/pages/docs/programming/control/ifelse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -192,12 +273,30 @@
     </item>
     
     <item>
+      <title>K-Means法</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/k-means/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/k-means/</guid>
+      <description>K-Means法 クラスタリングの手法の一つ、K-means法についてを述べる。 先ほども示した以下のデータを例にとって、大まかな手順を、以下に</description>
+    </item>
+    
+    <item>
       <title>ndarray型のデータをファイルに保存する</title>
       <link>https://WAT36.github.io/pages/docs/programming/math/save/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/save/</guid>
       <description>ndarray型のデータをファイルに保存する ndarray型変数をファイルに保存する方法についてを示す。 Python ndarray型変数をファイルに保</description>
+    </item>
+    
+    <item>
+      <title>Null</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/null/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/null/</guid>
+      <description>Null プログラミングでよく見るNullについて。 Nullとは何なのか？ Nullとは何もない、何も入ってない、という状態を示す語である。 変数に何も</description>
     </item>
     
     <item>
@@ -224,7 +323,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/other/other_index/</guid>
-      <description>その他 その他、括れてない手法などをまとめる。 変数 変数を設定する 変数の型を調べる 関数、メソッドのヘルプを見る(Python) コメントアウト 正規</description>
+      <description>その他 その他、括れてない手法などをまとめる。 変数 変数を設定する 変数の型を調べる 定数 関数、メソッドのヘルプを見る(Python) コメントアウト</description>
     </item>
     
     <item>
@@ -300,12 +399,39 @@
     </item>
     
     <item>
+      <title>その他</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_other/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_other/</guid>
+      <description>その他(CSS) CSSについてその他、括れてない手法についてを述べる。 グラデーション CSSで、画像が指定可能なところにおいては、画像の場所を</description>
+    </item>
+    
+    <item>
+      <title>その他のWeb関連技術</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/web_other/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/web_other/</guid>
+      <description>その他のWeb関連技術 ここまでで述べられてないWeb関連技術についてを述べる。 なお、ここでは具体例はあまり載せられていません。悪しからず。 文</description>
+    </item>
+    
+    <item>
       <title>その他の要素</title>
       <link>https://WAT36.github.io/pages/docs/front-end/html_other/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/html_other/</guid>
       <description>その他の要素 その他の要素についてを述べる。 figure要素 figure要素は、それが文書から参照される、自己完結型のコンテンツ(フローコンテ</description>
+    </item>
+    
+    <item>
+      <title>アニメーション</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_animation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_animation/</guid>
+      <description>CSSのアニメーション CSSで行えるアニメーションについてを述べる。 回転・拡大縮小・移動 ボックスを回転・拡大縮小・移動などさせるプロパティに</description>
     </item>
     
     <item>
@@ -351,6 +477,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/class_func/class/</guid>
       <description>クラスの定義 クラスを定義する方法についてを示す。 Java Javaでのクラス定義方法は以下の通り。 [public] class クラス名 [extends 継承元クラス名] [implements 実装先インタフェー</description>
+    </item>
+    
+    <item>
+      <title>クラスタリング</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/clustering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/clustering/</guid>
+      <description>クラスタリング 教師あり学習の分類では、入力データに対し分類後のクラス(カテゴリ)が与えられていたが、ここでは入力データからデータをクラスに分</description>
     </item>
     
     <item>
@@ -471,6 +606,15 @@
     </item>
     
     <item>
+      <title>ジェネリクス</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/generics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/generics/</guid>
+      <description>ジェネリクス ジェネリクスについて。 ジェネリクスとは、特定の型に制限されない、抽象的かつ汎用的なコードを記述するための機能である。 変数の型を明</description>
+    </item>
+    
+    <item>
       <title>スカラー*行列</title>
       <link>https://WAT36.github.io/pages/docs/programming/math/scalar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -480,12 +624,30 @@
     </item>
     
     <item>
+      <title>スマートフォン最適化</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/smartphone_optimization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/smartphone_optimization/</guid>
+      <description>スマートフォン最適化 スマートフォン最適化についてを述べる。 CSSスプライト CSSスプライトとは、複数の画像をつなげて1つのファイルにまとめ、</description>
+    </item>
+    
+    <item>
       <title>セクション</title>
       <link>https://WAT36.github.io/pages/docs/front-end/section/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/section/</guid>
       <description>セクション セクションとは章や節といった様なもの、HTMLでは見出しとそれに対応する文書の部分(セクショニングコンテンツ)といった様なものであ</description>
+    </item>
+    
+    <item>
+      <title>セレクタ</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_selector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_selector/</guid>
+      <description>セレクタ CSSのセレクタについてを述べる。 セレクタにはいくつか種類があり、セレクタの基本的な最小単位のことをシンプルセレクタという。 種類にも</description>
     </item>
     
     <item>
@@ -594,6 +756,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/</guid>
       <description>ホールドアウト検証 先述のオーバーフィッティング(過学習)の章で、Mを大きくすればするほど既存の入力データに対する精度が高くなり、未知の入力に</description>
+    </item>
+    
+    <item>
+      <title>マルチカラム</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/css_multicolumn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/css_multicolumn/</guid>
+      <description>マルチカラム マルチカラムとは、ボックスの内部を複数の段に分割してできるレイアウトである。 ここでは、マルチカラムについてを述べる。 column</description>
     </item>
     
     <item>
@@ -822,6 +993,15 @@
     </item>
     
     <item>
+      <title>レスポンシブWebデザイン</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/responsive_web_design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/responsive_web_design/</guid>
+      <description>レスポンシブWebデザイン レスポンシブWebデザインについて。 レスポンシブWebデザインとは、1つのHTMLを画面幅などの特性が異なったデバ</description>
+    </item>
+    
+    <item>
       <title>ロジスティック回帰モデル</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/logistic_regression/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -957,6 +1137,15 @@
     </item>
     
     <item>
+      <title>可変長引数の関数</title>
+      <link>https://WAT36.github.io/pages/docs/programming/class_func/variablelength_arg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/class_func/variablelength_arg/</guid>
+      <description>可変長引数の関数 関数やメソッドを定義するとき、引数の数は事前に定義する必要があり、指定された数以外の数を入力することは普通はできない。 しかし</description>
+    </item>
+    
+    <item>
       <title>合同式(mod)・逆元</title>
       <link>https://WAT36.github.io/pages/docs/programming/procon/inverse_mod/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -999,6 +1188,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/list/multisortlist/</guid>
       <description>多次元リスト(配列)である列をキーにしてソートする リストの中に更にリストが入っているようなリストをソートした時どうなるか？ 各要素(リスト)の</description>
+    </item>
+    
+    <item>
+      <title>定数</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/constant/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/constant/</guid>
+      <description>定数 変数は値を記憶するための入れ物であり、基本、何度でも値を代入することが可能である。 これに対し定数とは、値の入れ物という点では変数と同じだ</description>
     </item>
     
     <item>
@@ -1098,6 +1296,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/supervised_learning/</guid>
       <description>教師あり学習 教師あり学習とは何か？ 教師あり学習とは与えられた入力とそれに対する結果のデータセットを元に、それとは別の新しい入力に対する結果を</description>
+    </item>
+    
+    <item>
+      <title>教師なし学習</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/unsupervised_learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/unsupervised_learning/</guid>
+      <description>教師なし学習 教師なし学習について。 教師なし学習は教師あり学習とは違い、入力データに対する答え(目標データ)が与えられず、入力データからデータ</description>
     </item>
     
     <item>
@@ -1218,12 +1425,30 @@
     </item>
     
     <item>
+      <title>歪み尺度</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/distortion_measure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/distortion_measure/</guid>
+      <description>歪み尺度 教師あり学習では、学習が進み精度が高くなることの指標として、平均交差エントロピー誤差のような関数を利用していた。 教師なし学習、今回の</description>
+    </item>
+    
+    <item>
       <title>深さ優先探索</title>
       <link>https://WAT36.github.io/pages/docs/programming/procon/dfs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/procon/dfs/</guid>
       <description>深さ優先探索 探索の手法の一つである深さ優先探索についてを述べる。 深さ優先探索とは、ある状態から始めてそこから遷移出来なくなるまで状態を進めて</description>
+    </item>
+    
+    <item>
+      <title>混合ガウスモデル</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/gaussian_mixture_model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/gaussian_mixture_model/</guid>
+      <description>混合ガウスモデル 先程のk-means法では、データを必ずどれか一つのクラスターに割り当てていたが、複数のクラスターに割り当てると言うことはで</description>
     </item>
     
     <item>
@@ -1611,6 +1836,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_2class/</guid>
       <description>２次元入力２クラス分類 前章では１次元入力であったが、次は２次元入力の場合を考えてみる。 １次元入力２クラス分類で使用したデータに、pHのデータ</description>
+    </item>
+    
+    <item>
+      <title>２次元入力３クラス分類</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_3class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_3class/</guid>
+      <description>２次元入力３クラス分類 次は２次元入力において、３クラス分類を行うケースについてを考える。 先程の２次元入力２クラス分類のデータに、良いでも悪い</description>
     </item>
     
     <item>
