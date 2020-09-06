@@ -65,4 +65,14 @@ c
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptでも、シングルクォート('')、ダブルクォート("")を利用して文字列を宣言する。
+
+```Javascript
+var h1 = 'Hello! World!'
+var h2 = "Hello! World!"
+```
+
+{{< /tab >}}
 {{< /tabs >}}
