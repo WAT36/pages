@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.4e54c5ee115c2111e5669efb500556569bec6450226161ba486b3ff6ac532517.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.566050c66f61322a4aacfb291656fa4bb37fc6e72abf1d54cd560313b28e989c.js"></script>
 
 
 
@@ -218,6 +218,48 @@ https://github.com/alex-shpak/hugo-book
 <p>ここでは、入力層と出力層の間に中間層が1つの<strong>2層フィードフォワードニューラルネットワークモデル</strong>とする。下に図を示す。</p>
 
 <p><img src="https://WAT36.github.io/pages/img/datascience/Figure_44.png" width=100%></p>
+
+<p>重み行列が2つあるので（中間層を第１層、出力層を第２層と呼ぶことからもある）、これから２層フィードフォワードニューラルネットワークモデルと呼ぶ。（入力層も合わせて３層と呼ぶこともある）</p>
+
+<p>中間層には、前述のニューロンモデルと同じように、ダミー入力として常に１の値をとるパラメータを加える。</p>
+
+<p>重み行列<strong>z</strong>において、a<sub>i</sub>からb<sub>j</sub>への重みをz<sub>ji</sub>とおくと、以下の式が成り立つ。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{5}  b_{j} = \sum_{i=0}^{n-1} z_{ji} a_{i}
+ $$
+</p>
+
+
+
+<p>中間層では、この式(5)により算出した結果を、シグモイド関数に通すことで出力値を得る。出力値をc、シグモイド関数をh()とおくと、以下の式が成り立つ。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{6}  c_{j} =  h( b_{j} )
+ $$
+</p>
+
+
+
+<p>ここで、シグモイド関数は入力総和から何らかの出力を決定づける関数ということで、<strong>活性化関数</strong>とも呼ばれている。</p>
+
+<p>次に出力層において、中間層の出力と重み行列から式(5)の計算を行なった最終的な出力値b<sub>i</sub>に対して、最後にソフトマックス関数を適用することにより２層フィードフォワードニューラルネットワークモデルの出力値y<sub>i</sub>を得る。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{7}  y_{i} = \frac{ \exp(a_{i}) }{ \sum_{j=0}^{K-1} \exp(a_{j}) }
+ $$
+</p>
+
+
 </article>
 
       
@@ -225,8 +267,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/b152582d1f0ffe531890811e57dff0219bb85ec5" title='Last modified Sep 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 4, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/e79ecf2ac8b2a93e3350593807f56d462a9c8f3c" title='Last modified Sep 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 7, 2020
     </a>
   </div>
   
