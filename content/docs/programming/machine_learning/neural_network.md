@@ -127,3 +127,13 @@ tは目標値、yはニューラルネットワークモデルの出力値であ
 \tag{10}  \frac{　\partial E( { \bf w } ,{ \bf v } ) }{ \partial { \bf w } } = \frac{ E( { \bf w } - \epsilon  ,{ \bf v } )-E( { \bf w }  ,{ \bf v } )}{ \epsilon }
 {{< /katex >}}
 
+式(10)だが、<b>w</b>には実際にはパラメータが複数ある。例として、<b>w</b>にw<sub>0</sub>,w<sub>1</sub>,w<sub>2</sub> のパラメータがあるとすると、まずw<sub>0</sub>での偏微分は以下のようになる。
+
+{{< katex  >}}
+\tag{11}  \frac{　\partial E( { \bf w } ,{ \bf v } ) }{ \partial { \bf w } } \Biggr| _{w_{0},w_{1},w_{2} }= \frac{ E( ( w_{0} - \epsilon, w_{1}, w_{2})  ,{ \bf v } )-E( { \bf w }  ,{ \bf v } )}{ \epsilon }
+{{< /katex >}}
+
+w<sub>1</sub>,w<sub>2</sub>に対しても同じことを行い、また<b>v</b>に対しても行う。
+
+
+
