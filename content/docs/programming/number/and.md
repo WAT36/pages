@@ -42,7 +42,7 @@ false
 {{< /tab >}}
 {{< tab "Python" >}}
 
-pythonでOR演算を行うには単純に **and** を使用する。
+pythonでAND演算を行うには単純に **and** を使用する。
 
 
 ```python
@@ -55,6 +55,15 @@ False
 True
 >>>
 ```
+
+{{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptでは、Javaと同じく論理演算子 **&&** があるのでこれを使用する。戻り値はboolean型。  
+
+```
+(左辺) && (右辺)
+``` 
 
 {{< /tab >}}
 {{< /tabs >}}
