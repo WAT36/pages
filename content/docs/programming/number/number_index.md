@@ -16,9 +16,7 @@ bookToc: false
  - [小数点以下切り捨て]({{< relref "/docs/programming/number/floor.md" >}})
  - [小数点以下切り上げ]({{< relref "/docs/programming/number/ceil.md" >}})
  - 小数点以下四捨五入
- - 論理演算
-     - [AND演算]({{< relref "/docs/programming/number/and.md" >}})
-     - [OR演算]({{< relref "/docs/programming/number/or.md" >}})
+ - [論理演算]({{< relref "/docs/programming/number/logical_operator.md" >}})
  - ビット演算
      - [論理和(OR)]({{< relref "/docs/programming/number/or_bit.md" >}})
      - [論理積(AND)]({{< relref "/docs/programming/number/and_bit.md" >}})

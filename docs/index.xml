@@ -119,15 +119,6 @@
     </item>
     
     <item>
-      <title>AND演算</title>
-      <link>https://WAT36.github.io/pages/docs/programming/number/and/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/number/and/</guid>
-      <description>AND演算 ANDの論理演算をする方法についてを示す。 Java JavaではANDの論理演算子 &amp;amp;&amp;amp; を使用する。戻り値はboolean型。 (左辺) &amp;amp;&amp;amp; (右辺</description>
-    </item>
-    
-    <item>
       <title>API</title>
       <link>https://WAT36.github.io/pages/docs/front-end/api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -305,15 +296,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/N-dimension_linear_model/</guid>
       <description>N次元線形回帰モデル 先程までの章では1次元(直線モデル)、2次元(面モデル)の入力データを扱ってきたが、そこから更に次元を広げたN次元の入力</description>
-    </item>
-    
-    <item>
-      <title>OR演算</title>
-      <link>https://WAT36.github.io/pages/docs/programming/number/or/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/number/or/</guid>
-      <description>OR演算 ORの論理演算をする方法についてを示す。 Java JavaではORの論理演算子 || を使用する。戻り値はboolean型。 (左辺) || (右辺) ちな</description>
     </item>
     
     <item>
@@ -1628,6 +1610,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/or_bit/</guid>
       <description>論理和(OR) ORのビット演算をする方法についてを示す。 Java JavaではORのビット演算子 | を使用する。論理演算の時とは違い、こちらは|1個な</description>
+    </item>
+    
+    <item>
+      <title>論理演算</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/logical_operator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/logical_operator/</guid>
+      <description>論理演算 論理演算を行う際に利用する演算子についてを述べる。 AND演算 AND演算は入力した２値が両方とも真であった時に真を返し、それ以外は偽を</description>
     </item>
     
     <item>
