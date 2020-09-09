@@ -57,5 +57,14 @@ False
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptでは、Javaと同じく論理演算子 **||** があるのでこれを使用する。戻り値はboolean型。  
+
+```
+(左辺) || (右辺)
+``` 
+
+{{< /tab >}}
 {{< /tabs >}}
 
