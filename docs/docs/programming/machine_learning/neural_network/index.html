@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.3fde10c46e2505ae90d5ac279c7e6de0ee53a064a44fcf50900146a4a6aba9ce.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.17a108f925c50e325098bd16873f014081c167cd06f42c9aad32cd900529c8e6.js"></script>
 
 
 
@@ -326,6 +326,36 @@ https://github.com/alex-shpak/hugo-book
 <p>つまりは、<b>w</b>と<b>v</b>のパラメータ全てに対して勾配法を行い、誤差関数を小さくする最適なパタメータの組み合わせを求めていく、というものである。</p>
 
 <p>この手法の難点は、パラメータの数が多いと計算時間が膨大になってしまうという点である。ニューラルネットワークでは重み行列のパラメータの数が多いので、時間も長くなりがちになる。</p>
+
+<p>ここで、別の方法として述べられているものを以下に記載する。</p>
+
+<h2 id="誤差逆伝搬法-バックプロパゲーション">誤差逆伝搬法（バックプロパゲーション）</h2>
+
+<p>誤差逆伝搬法（バックプロパゲーション）はフィードフォワードネットワークモデルに学習をさせる方法として有名な方法であり、これはネットワークの出力と目標値との誤差の情報を使って、出力層、中間層へと重みを更新していくことから、この名がついている。しかし、実態は勾配法そのものである。</p>
+
+<p>まずは、式(8)においてn1つ分に対する交差エントロピー誤差E<sub>n</sub>を以下のように考える。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{12}  E_{n} ( { \bf w } ,{ \bf v } ) = - \sum_{n=0}^{N-1} \sum_{k=0}^{K-1} t_{nk} \log (y_{nk}) 
+ $$
+</p>
+
+
+
+<p>これを利用して、式(8)を以下のように置き換える。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{13}  E ( { \bf w } ,{ \bf v } ) = - \frac{1}{N} \sum_{n=0}^{N-1} \sum_{k=0}^{K-1} E_{n} ( { \bf w } ,{ \bf v } )
+ $$
+</p>
+
+
 </article>
 
       
@@ -333,8 +363,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/c77620b852c2f4c7abba173cd79d53e08e56a06f" title='Last modified Sep 9, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 9, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/a9532cc744c41e00f465b482c9d60c65597a7815" title='Last modified Sep 10, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 10, 2020
     </a>
   </div>
   
@@ -355,6 +385,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#ニューロンモデル">ニューロンモデル</a></li>
 <li><a href="#ニューラルネットワークモデル">ニューラルネットワークモデル</a></li>
 <li><a href="#数値微分法">数値微分法</a></li>
+<li><a href="#誤差逆伝搬法-バックプロパゲーション">誤差逆伝搬法（バックプロパゲーション）</a></li>
 </ul></li>
 </ul>
 </nav>
