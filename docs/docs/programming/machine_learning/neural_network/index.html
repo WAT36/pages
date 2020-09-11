@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.6bd427428a1e9cb3420cb992f6017b14d368bf02374e11cc6a90e1d0616b498e.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.8ac94def0e800105940be4d49f82e94de0605e7806ecb4a9871758cd5f10f04d.js"></script>
 
 
 
@@ -374,9 +374,25 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-<p>また、パラメータには<b>v</b>もあるので、v<sub>ji</sub>に対しても偏微分を行う。すると、式(14)と同じようになる。</p>
+<p>また、パラメータには<b>v</b>もあるので、v<sub>kj</sub>に対しても偏微分を行う。すると、式(14)と同じようになる。</p>
 
-<p>この式に出てくる、∂E<sub>n</sub>/∂w<sub>ji</sub>と∂E<sub>n</sub>/∂v<sub>ji</sub>を求めてみることを考える。まずは、∂E<sub>n</sub>/∂v<sub>ji</sub>を見てみよう。</p>
+<p>この式に出てくる、∂E<sub>n</sub>/∂w<sub>ji</sub>と∂E<sub>n</sub>/∂v<sub>kj</sub>を求めてみることを考える。まずは、∂E<sub>n</sub>/∂v<sub>kj</sub>を見てみよう。</p>
+
+<p>偏微分の連鎖率を使って、∂E<sub>n</sub>/∂v<sub>kj</sub>は以下のように置き換えられる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{15}  \frac{ \partial E_{n} }{ \partial v_{kj} } = \frac{\partial E_{n} }{\partial a_{k}}  \frac{\partial a_{k} }{\partial v_{kj} } 
+ $$
+</p>
+
+
+
+<p>この式(15)において、まずは例としてk=0の場合を見てみる。</p>
+
+<p>まず、∂E<sub>n</sub>/∂a<sub>0</sub></p>
 </article>
 
       
@@ -384,8 +400,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/94fc210ee0846565022106629341fd259bcb1ba7" title='Last modified Sep 10, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 10, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/587188e7d4ac849f006ced687f7f7e11afff2376" title='Last modified Sep 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 11, 2020
     </a>
   </div>
   

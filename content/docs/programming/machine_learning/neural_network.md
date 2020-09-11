@@ -168,7 +168,16 @@ w<sub>1</sub>,w<sub>2</sub>に対しても同じことを行い、また<b>v</b>
 \end{aligned}
 {{< /katex >}}
 
-また、パラメータには<b>v</b>もあるので、v<sub>ji</sub>に対しても偏微分を行う。すると、式(14)と同じようになる。
+また、パラメータには<b>v</b>もあるので、v<sub>kj</sub>に対しても偏微分を行う。すると、式(14)と同じようになる。
 
-この式に出てくる、∂E<sub>n</sub>/∂w<sub>ji</sub>と∂E<sub>n</sub>/∂v<sub>ji</sub>を求めてみることを考える。まずは、∂E<sub>n</sub>/∂v<sub>ji</sub>を見てみよう。
+この式に出てくる、∂E<sub>n</sub>/∂w<sub>ji</sub>と∂E<sub>n</sub>/∂v<sub>kj</sub>を求めてみることを考える。まずは、∂E<sub>n</sub>/∂v<sub>kj</sub>を見てみよう。
 
+偏微分の連鎖率を使って、∂E<sub>n</sub>/∂v<sub>kj</sub>は以下のように置き換えられる。
+
+{{< katex  >}}
+\tag{15}  \frac{ \partial E_{n} }{ \partial v_{kj} } = \frac{\partial E_{n} }{\partial a_{k}}  \frac{\partial a_{k} }{\partial v_{kj} } 
+{{< /katex >}}
+
+この式(15)において、まずは例としてk=0の場合を見てみる。
+
+まず、∂E<sub>n</sub>/∂a<sub>0</sub>
