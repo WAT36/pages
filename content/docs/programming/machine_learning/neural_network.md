@@ -156,3 +156,19 @@ w<sub>1</sub>,w<sub>2</sub>に対しても同じことを行い、また<b>v</b>
 {{< katex  >}}
 \tag{13}  E ( { \bf w } ,{ \bf v } ) = - \frac{1}{N} \sum_{n=0}^{N-1} \sum_{k=0}^{K-1} E_{n} ( { \bf w } ,{ \bf v } )
 {{< /katex >}}
+
+ここから、重み行列の各パラメータに対する偏微分を行なっていこう。誤差関数をw<sub>ji</sub>で偏微分すると、以下のようになる。
+
+{{< katex  >}}
+\tag{14}  
+\begin{aligned}
+\frac{\partial E}{ \partial w_{ji} } 
+    &= - \frac{\partial }{ \partial w_{ji} } \frac{1}{N} \sum_{n=0}^{N-1} E_{n} \\
+    &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial E_{n} }{ \partial w_{ji} }
+\end{aligned}
+{{< /katex >}}
+
+また、パラメータには<b>v</b>もあるので、v<sub>ji</sub>に対しても偏微分を行う。すると、式(14)と同じようになる。
+
+この式に出てくる、∂E<sub>n</sub>/∂w<sub>ji</sub>と∂E<sub>n</sub>/∂v<sub>ji</sub>を求めてみることを考える。まずは、∂E<sub>n</sub>/∂v<sub>ji</sub>を見てみよう。
+

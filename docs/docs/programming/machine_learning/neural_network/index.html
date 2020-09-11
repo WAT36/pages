@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.17a108f925c50e325098bd16873f014081c167cd06f42c9aad32cd900529c8e6.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.6bd427428a1e9cb3420cb992f6017b14d368bf02374e11cc6a90e1d0616b498e.js"></script>
 
 
 
@@ -356,6 +356,27 @@ https://github.com/alex-shpak/hugo-book
 </p>
 
 
+
+<p>ここから、重み行列の各パラメータに対する偏微分を行なっていこう。誤差関数をw<sub>ji</sub>で偏微分すると、以下のようになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{14}  
+\begin{aligned}
+\frac{\partial E}{ \partial w_{ji} } 
+    &= - \frac{\partial }{ \partial w_{ji} } \frac{1}{N} \sum_{n=0}^{N-1} E_{n} \\
+    &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial E_{n} }{ \partial w_{ji} }
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>また、パラメータには<b>v</b>もあるので、v<sub>ji</sub>に対しても偏微分を行う。すると、式(14)と同じようになる。</p>
+
+<p>この式に出てくる、∂E<sub>n</sub>/∂w<sub>ji</sub>と∂E<sub>n</sub>/∂v<sub>ji</sub>を求めてみることを考える。まずは、∂E<sub>n</sub>/∂v<sub>ji</sub>を見てみよう。</p>
 </article>
 
       
@@ -363,7 +384,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/a9532cc744c41e00f465b482c9d60c65597a7815" title='Last modified Sep 10, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/94fc210ee0846565022106629341fd259bcb1ba7" title='Last modified Sep 10, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 10, 2020
     </a>
   </div>

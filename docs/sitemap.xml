@@ -63,12 +63,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/number/and/</loc>
-    <lastmod>2020-01-05T16:37:57+09:00</lastmod>
+    <loc>https://WAT36.github.io/pages/docs/programming/number/and-2/</loc>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/front-end/api-2/</loc>
+    <loc>https://WAT36.github.io/pages/docs/programming/number/and/</loc>
+    <lastmod>2020-01-05T16:37:57+09:00</lastmod>
   </url>
   
   <url>
@@ -92,16 +92,8 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/front-end/css_text-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/css_text/</loc>
     <lastmod>2020-07-20T21:04:59+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/front-end/css_font-2/</loc>
   </url>
   
   <url>
@@ -110,16 +102,8 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/front-end/css_box-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/css_box/</loc>
     <lastmod>2020-07-29T15:06:31+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/front-end/css_background-2/</loc>
   </url>
   
   <url>
@@ -128,25 +112,13 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/front-end/css_color-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/css_color/</loc>
     <lastmod>2020-07-11T17:19:46+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/front-end/css_about-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/css_about/</loc>
     <lastmod>2020-07-01T21:02:46+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/front-end/css_priority-2/</loc>
   </url>
   
   <url>
@@ -170,10 +142,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/front-end/http-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/http/</loc>
     <lastmod>2020-08-21T08:42:22+09:00</lastmod>
   </url>
@@ -181,10 +149,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/control/ifelse/</loc>
     <lastmod>2020-01-11T01:35:52+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/k-means-2/</loc>
   </url>
   
   <url>
@@ -198,10 +162,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/other/null-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/other/null/</loc>
     <lastmod>2020-07-15T20:15:42+09:00</lastmod>
   </url>
@@ -209,6 +169,10 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/N-dimension_linear_model/</loc>
     <lastmod>2020-04-25T01:30:38+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/number/or-2/</loc>
   </url>
   
   <url>
@@ -262,16 +226,8 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/front-end/css_other-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/css_other/</loc>
     <lastmod>2020-08-05T23:39:23+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/front-end/web_other-2/</loc>
   </url>
   
   <url>
@@ -282,10 +238,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/html_other/</loc>
     <lastmod>2020-06-27T23:29:16+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/front-end/css_animation-2/</loc>
   </url>
   
   <url>
@@ -316,10 +268,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/class/</loc>
     <lastmod>2020-01-18T15:26:59+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/clustering-2/</loc>
   </url>
   
   <url>
@@ -393,10 +341,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/other/generics-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/other/generics/</loc>
     <lastmod>2020-07-21T21:11:08+09:00</lastmod>
   </url>
@@ -407,10 +351,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/front-end/smartphone_optimization-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/smartphone_optimization/</loc>
     <lastmod>2020-08-27T14:12:37+09:00</lastmod>
   </url>
@@ -418,11 +358,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/section/</loc>
     <lastmod>2020-04-18T13:04:40+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/front-end/css_selector-2/</loc>
-    <lastmod>2020-07-19T22:59:43+09:00</lastmod>
   </url>
   
   <url>
@@ -456,7 +391,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/neural_network/</loc>
-    <lastmod>2020-09-10T08:54:32+09:00</lastmod>
+    <lastmod>2020-09-10T23:45:53+09:00</lastmod>
   </url>
   
   <url>
@@ -497,10 +432,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/</loc>
     <lastmod>2020-04-29T12:40:40+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/front-end/css_multicolumn-2/</loc>
   </url>
   
   <url>
@@ -634,10 +565,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/front-end/responsive_web_design-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/responsive_web_design/</loc>
     <lastmod>2020-08-08T00:12:59+09:00</lastmod>
   </url>
@@ -718,11 +645,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/class_func/variablelength_arg-2/</loc>
-    <lastmod>2020-08-29T23:02:21+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/variablelength_arg/</loc>
     <lastmod>2020-07-19T02:20:22+09:00</lastmod>
   </url>
@@ -750,10 +672,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/list/multisortlist/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/other/constant-2/</loc>
   </url>
   
   <url>
@@ -814,10 +732,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/supervised_learning/</loc>
     <lastmod>2020-03-01T00:02:19+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/unsupervised_learning-2/</loc>
   </url>
   
   <url>
@@ -891,10 +805,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/distortion_measure-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/distortion_measure/</loc>
     <lastmod>2020-07-28T23:51:02+09:00</lastmod>
   </url>
@@ -902,10 +812,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/procon/dfs/</loc>
     <lastmod>2020-04-16T00:22:40+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/gaussian_mixture_model-2/</loc>
   </url>
   
   <url>
@@ -1129,10 +1035,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_3class-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_3class/</loc>
     <lastmod>2020-07-06T21:35:28+09:00</lastmod>
   </url>
@@ -1153,11 +1055,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/posts/20200406-2/</loc>
-    <lastmod>2020-07-04T01:47:27+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/posts/20200406/</loc>
     <lastmod>2020-07-05T17:57:05+09:00</lastmod>
   </url>
@@ -1165,11 +1062,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/posts/</loc>
     <lastmod>2020-08-16T10:25:34+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/posts/slack_request-2/</loc>
-    <lastmod>2020-05-09T15:13:17+09:00</lastmod>
   </url>
   
   <url>
@@ -1219,7 +1111,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-09-10T08:54:32+09:00</lastmod>
+    <lastmod>2020-09-10T23:45:53+09:00</lastmod>
   </url>
   
   <url>
