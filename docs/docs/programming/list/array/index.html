@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>条件付き確率 | WAT Notes</title>
+<title>配列 | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -54,7 +54,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmath\2f conditional_probability\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2flist\2f array\2f "] {
       color: #004ed0;
   }
   </style>
@@ -119,74 +119,17 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>条件付き確率</strong>
+  <strong>配列</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="条件付き確率">条件付き確率</h1>
-
-<p>私は高校で条件付き確率を学んでこなかったゆとり世代なので、改めて条件付き確率において書き記していく。</p>
-
-<p>事象A,Bにおいて、ある事象Bが起こったという条件下での事象Aが起こる確率のことを、Bを<strong>条件</strong>とするAの<strong>条件付き確率</strong>と呼び、P(A|B)と表す。</p>
-
-<p>P(A|B)の求め方は、Bが起こった中のうちAが起こりうる確率であるから、以下の式で表される。</p>
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-
-
-
-<p class="katex">
-  $$ 
-\tag{1}  P(A|B) = \frac{ P( A \cap B ) }{ P(B) } 
- $$
-</p>
-
-
-
-<h2 id="例題">例題</h2>
-
-<p><img src="https://WAT36.github.io/pages/img/math/conditional_probability1.png" width=20%></p>
-
-<p>袋の中に1,2,3の数字が書かれた赤玉と白玉の計６個の玉が入っている。</p>
-
-<p>この中から、２以上の数字が書かれた球を取り出す事象をAとおく。事象Aが起こる確率P(A)はいくらか？</p>
-
-<p>答えは2/3である。</p>
-
-<p>では、球を取り出した時に球の色が赤だった事が判明したとする。この時球に書かれた数字が２以上である確率はいくらか？</p>
-
-<p>先ほどの事象Aに加え、赤い球を取り出す事象をBとおく。この場合は事象Bが起こった上での事象Aが起こる確率であるため、Bを条件とするAの条件付き確率となり、その確率P(A|B)は以下のようになる。</p>
-
-
-
-<p class="katex">
-  $$ 
-\begin{aligned}
-\tag{2}  P(A|B) &= \frac{ P( A \cap B ) }{ P(B) } \\ 
-                &= \frac{ \frac{ 2 }{ 6 } }{ \frac{ 3 }{ 6 } } \\
-                &= \frac{ 2 }{ 3 }
-\end{aligned}
- $$
-</p>
-
-
+<h1 id="配列">配列</h1>
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/e702a5bcd14819f8e7ba4de2e0eaf9fb99a99fba" title='Last modified Jun 10, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 10, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
@@ -195,6 +138,14 @@ https://github.com/alex-shpak/hugo-book
     </div>
     
   
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#配列">配列</a></li>
+</ul>
+</nav>
+  </aside>
 
 
 

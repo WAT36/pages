@@ -15,7 +15,7 @@ Pythonではリスト（・タプル）のみで、配列という概念はな�
 
 ## 配列
 
-
+- [配列]({{< relref "/docs/programming/list/array.md" >}})
 
 ## リスト（・タプル）
 
