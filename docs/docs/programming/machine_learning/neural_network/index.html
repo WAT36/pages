@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.8ac94def0e800105940be4d49f82e94de0605e7806ecb4a9871758cd5f10f04d.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.5450da3a04247f681154f5ec2f1bfab198714586acc01f46c7cec5695b33351b.js"></script>
 
 
 
@@ -378,7 +378,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p>この式に出てくる、∂E<sub>n</sub>/∂w<sub>ji</sub>と∂E<sub>n</sub>/∂v<sub>kj</sub>を求めてみることを考える。まずは、∂E<sub>n</sub>/∂v<sub>kj</sub>を見てみよう。</p>
 
-<p>偏微分の連鎖率を使って、∂E<sub>n</sub>/∂v<sub>kj</sub>は以下のように置き換えられる。</p>
+<p>偏微分の連鎖律を使って、∂E<sub>n</sub>/∂v<sub>kj</sub>は以下のように置き換えられる。</p>
 
 
 
@@ -390,9 +390,126 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-<p>この式(15)において、まずは例としてk=0の場合を見てみる。</p>
+<p>この式(15)において、まずは例として出力値の数を3(K=3),k=0の場合を見てみる。</p>
 
-<p>まず、∂E<sub>n</sub>/∂a<sub>0</sub></p>
+<p>すると、∂E<sub>n</sub>/∂a<sub>0</sub>は、Eを変形して以下のように置き換えられる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{16}  \frac{ \partial E_{n} }{ \partial a_{0} } = \frac{\partial }{\partial a_{0}} ( -t_{0} \log y_{0} -t_{1} \log y_{1} -t_{2} \log y_{2} )
+ $$
+</p>
+
+
+
+<p>ここで、t<sub>i</sub>は目標データなのでs<sub>k</sub>で変化することはないが、y<sub>i</sub>は入力総和a<sub>0</sub>から算出されるので、関係している。</p>
+
+<p>これにより式(16)は以下のように置き換えられる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{17}  \frac{ \partial E_{n} }{ \partial a_{0} } = -t_{0} \frac{1}{y_{0}} \frac{\partial y_{0}}{\partial a_{0}} -t_{1} \frac{1}{y_{1}} \frac{\partial y_{1}}{\partial a_{0}} -t_{2} \frac{1}{y_{2}} \frac{\partial y_{2}}{\partial a_{0}}
+ $$
+</p>
+
+
+
+<p>u=exp(a<sub>0</sub>)+exp(a<sub>1</sub>)+exp(a<sub>2</sub>)とおいて計算すると</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{18}  
+\begin{aligned}
+\frac{\partial y_{0}}{\partial a_{0}}
+    &= \frac{\partial }{ \partial a_{0} } \frac{ \exp (a_{0}) }{u} \\
+    &= \frac{ \exp (a_{0}) u - \exp (a_{0}) \exp (a_{0}) }{ u^2 }  \\
+    &= \frac{\exp (a_{0})}{u} ( \frac{u - \exp (a_{0})}{u} ) \\
+    &= \frac{\exp (a_{0})}{u} ( 1- \frac{\exp (a_{0})}{u} ) \\
+    &= y_{0} (1 - y_{0})
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>また、i≠0の時は</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{19}  
+\begin{aligned}
+\frac{\partial y_{i}}{\partial a_{0}}
+    &= \frac{\partial }{ \partial a_{0} } \frac{ \exp (a_{i}) }{u} \\
+    &= \frac{ 0* u - \exp (a_{i}) \exp (a_{0}) }{ u^2 }  \\
+    &= \frac{ - \exp (a_{i}) \exp (a_{0}) }{ u^2 }  \\
+    &= - \frac{\exp (a_{i})}{u} \frac{\exp (a_{0})}{u} \\
+    &= - y_{i} y_{0}
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>となる。これら式(18)(19)を使うと、式(17)は</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{20}  \frac{ \partial E_{n} }{ \partial a_{0} } 
+        &= -t_{0} (1-y_{0}) +t_{1} y_{0} +t_{2} y_{0} \\
+        &= ( t_{0} + t_{1} + t_{2} )y_{0} - t_{0} \\
+        &= y_{0} - t_{0} 
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>のように置き換えられる。同様にして</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{21}  \frac{ \partial E_{n} }{ \partial a_{1} } = y_{1} - t_{1}
+ $$
+</p>
+
+
+
+
+
+<p class="katex">
+  $$ 
+\tag{22}  \frac{ \partial E_{n} }{ \partial a_{2} } = y_{2} - t_{2}
+ $$
+</p>
+
+
+
+<p>となる、これから</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{23}  \frac{ \partial E_{n} }{ \partial a_{k} } = y_{k} - t_{k}
+ $$
+</p>
+
+
+
+<p>と表せる。</p>
 </article>
 
       
@@ -400,8 +517,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/587188e7d4ac849f006ced687f7f7e11afff2376" title='Last modified Sep 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 11, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/f625e97bbed534674ee85b0cc7bcd8ea412e79d4" title='Last modified Sep 12, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 12, 2020
     </a>
   </div>
   

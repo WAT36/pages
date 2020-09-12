@@ -172,12 +172,81 @@ w<sub>1</sub>,w<sub>2</sub>に対しても同じことを行い、また<b>v</b>
 
 この式に出てくる、∂E<sub>n</sub>/∂w<sub>ji</sub>と∂E<sub>n</sub>/∂v<sub>kj</sub>を求めてみることを考える。まずは、∂E<sub>n</sub>/∂v<sub>kj</sub>を見てみよう。
 
-偏微分の連鎖率を使って、∂E<sub>n</sub>/∂v<sub>kj</sub>は以下のように置き換えられる。
+偏微分の連鎖律を使って、∂E<sub>n</sub>/∂v<sub>kj</sub>は以下のように置き換えられる。
 
 {{< katex  >}}
 \tag{15}  \frac{ \partial E_{n} }{ \partial v_{kj} } = \frac{\partial E_{n} }{\partial a_{k}}  \frac{\partial a_{k} }{\partial v_{kj} } 
 {{< /katex >}}
 
-この式(15)において、まずは例としてk=0の場合を見てみる。
+この式(15)において、まずは例として出力値の数を3(K=3),k=0の場合を見てみる。
 
-まず、∂E<sub>n</sub>/∂a<sub>0</sub>
+すると、∂E<sub>n</sub>/∂a<sub>0</sub>は、Eを変形して以下のように置き換えられる。
+
+{{< katex  >}}
+\tag{16}  \frac{ \partial E_{n} }{ \partial a_{0} } = \frac{\partial }{\partial a_{0}} ( -t_{0} \log y_{0} -t_{1} \log y_{1} -t_{2} \log y_{2} )
+{{< /katex >}}
+
+ここで、t<sub>i</sub>は目標データなのでs<sub>k</sub>で変化することはないが、y<sub>i</sub>は入力総和a<sub>0</sub>から算出されるので、関係している。
+
+これにより式(16)は以下のように置き換えられる。
+
+{{< katex  >}}
+\tag{17}  \frac{ \partial E_{n} }{ \partial a_{0} } = -t_{0} \frac{1}{y_{0}} \frac{\partial y_{0}}{\partial a_{0}} -t_{1} \frac{1}{y_{1}} \frac{\partial y_{1}}{\partial a_{0}} -t_{2} \frac{1}{y_{2}} \frac{\partial y_{2}}{\partial a_{0}}
+{{< /katex >}}
+
+u=exp(a<sub>0</sub>)+exp(a<sub>1</sub>)+exp(a<sub>2</sub>)とおいて計算すると
+
+{{< katex  >}}
+\tag{18}  
+\begin{aligned}
+\frac{\partial y_{0}}{\partial a_{0}}
+    &= \frac{\partial }{ \partial a_{0} } \frac{ \exp (a_{0}) }{u} \\
+    &= \frac{ \exp (a_{0}) u - \exp (a_{0}) \exp (a_{0}) }{ u^2 }  \\
+    &= \frac{\exp (a_{0})}{u} ( \frac{u - \exp (a_{0})}{u} ) \\
+    &= \frac{\exp (a_{0})}{u} ( 1- \frac{\exp (a_{0})}{u} ) \\
+    &= y_{0} (1 - y_{0})
+\end{aligned}
+{{< /katex >}}
+
+また、i≠0の時は
+
+{{< katex  >}}
+\tag{19}  
+\begin{aligned}
+\frac{\partial y_{i}}{\partial a_{0}}
+    &= \frac{\partial }{ \partial a_{0} } \frac{ \exp (a_{i}) }{u} \\
+    &= \frac{ 0* u - \exp (a_{i}) \exp (a_{0}) }{ u^2 }  \\
+    &= \frac{ - \exp (a_{i}) \exp (a_{0}) }{ u^2 }  \\
+    &= - \frac{\exp (a_{i})}{u} \frac{\exp (a_{0})}{u} \\
+    &= - y_{i} y_{0}
+\end{aligned}
+{{< /katex >}}
+
+となる。これら式(18)(19)を使うと、式(17)は
+
+{{< katex  >}}
+\begin{aligned}
+\tag{20}  \frac{ \partial E_{n} }{ \partial a_{0} } 
+        &= -t_{0} (1-y_{0}) +t_{1} y_{0} +t_{2} y_{0} \\
+        &= ( t_{0} + t_{1} + t_{2} )y_{0} - t_{0} \\
+        &= y_{0} - t_{0} 
+\end{aligned}
+{{< /katex >}}
+
+のように置き換えられる。同様にして
+
+{{< katex  >}}
+\tag{21}  \frac{ \partial E_{n} }{ \partial a_{1} } = y_{1} - t_{1}
+{{< /katex >}}
+
+{{< katex  >}}
+\tag{22}  \frac{ \partial E_{n} }{ \partial a_{2} } = y_{2} - t_{2}
+{{< /katex >}}
+
+となる、これから
+
+{{< katex  >}}
+\tag{23}  \frac{ \partial E_{n} }{ \partial a_{k} } = y_{k} - t_{k}
+{{< /katex >}}
+
+と表せる。
