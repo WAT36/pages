@@ -250,3 +250,41 @@ u=exp(a<sub>0</sub>)+exp(a<sub>1</sub>)+exp(a<sub>2</sub>)とおいて計算す�
 {{< /katex >}}
 
 と表せる。
+
+では次に、式(15)の右部分である∂a<sub>k</sub>/∂v<sub>kj</sub>を見てみよう。同じくまずは例として出力値の数を3(K=3),k=0の場合を見てみる。すると、a<sub>0</sub>は以下のようになる。
+
+{{< katex  >}}
+\tag{24}  a_{0}= v_{00} z_{0} + v_{01} z_{1} + v_{02} z_{2}
+{{< /katex >}}
+
+ので、この式(24)から以下の式が成り立つ。
+
+{{< katex  >}}
+\tag{25}  \frac{ \partial a_{0} }{ \partial v_{0i} } = z_{i}
+{{< /katex >}}
+
+k=1,2...の場合でも同様の結果が得られるので、式(25)は以下の式のようにも置き換えられる。
+
+{{< katex  >}}
+\tag{25}  \frac{ \partial a_{k} }{ \partial v_{ki} } = z_{i}
+{{< /katex >}}
+
+では、この結果を式(15)と合わせてみよう。すると、以下のようになる。
+
+{{< katex  >}}
+\begin{aligned}
+\tag{26}  \frac{ \partial E_{n} }{ \partial v_{kj} } 
+    &= \frac{\partial E_{n} }{\partial a_{k}}  \frac{\partial a_{k} }{\partial v_{kj} } \\
+    &= (y_{k} - t_{k})z_{j}
+\end{aligned}
+{{< /katex >}}
+
+この式(26)を利用して、勾配法でパラメータv<sub>kj</sub>を更新していくための漸化式を以下のように定める。
+
+{{< katex  >}}
+\tag{27}  v_{kj}(t+1)
+    = v_{kj}(t) - \alpha \frac{\partial E_{n} }{\partial v_{kj} }
+    = v_{kj}(t) - \alpha (y_{k} - t_{k})z_{j}
+{{< /katex >}}
+
+ここで、αは0~1の値を取る実数である。
