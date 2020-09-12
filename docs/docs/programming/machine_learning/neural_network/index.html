@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.bb0166f8594e7b259bc4fab904777fe614ea80949bfcd5c00e07d99c695f4c49.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.0f2f2f41bf657dc44ec2ebbfde0c266a1fc3ce4ab61e386e5e5c1805e878e388.js"></script>
 
 
 
@@ -578,6 +578,33 @@ https://github.com/alex-shpak/hugo-book
 
 
 <p>ここで、αは0~1の値を取る実数である。</p>
+
+<p>以上より、∂E/∂v<sub>kj</sub>が求められた。</p>
+
+<p>次に、もう一つの重み行列である<b>w</b>のパラメータw<sub>ji</sub>の偏微分を求めてみよう。</p>
+
+<p>こちらも先ほどと同様に、連鎖律を使って以下のように求めていく。ここで、シグモイド関数をh(x)とおく。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{28}
+\begin{aligned}
+\frac{ \partial E_{n} }{ \partial w_{ji} } 
+    &= \frac{\partial E_{n} }{\partial b_{j}} \cdot \frac{\partial b_{j} }{\partial w_{ji} } \\
+    &= ( \sum_{k=0}^{K-1} \frac{\partial E_{n} }{\partial a_{k}} \cdot \frac{\partial a_{k} }{\partial z_{j}} ) \frac{\partial z_{j} }{\partial b_{j} } \cdot  \frac{\partial  }{\partial w_{ji}} \sum_{i=0}^{D} w_{ji} x_{i} \\
+    &= ( \sum_{k=0}^{K-1} (y_{k}-t_{k}) \cdot \frac{\partial }{\partial z_{j}} \sum_{j=0}^{M} v_{kj} z_{j} ) \frac{\partial }{\partial b_{j} } h(b_{j}) \cdot x_{i} \\
+    &= ( \sum_{k=0}^{K-1} (y_{k}-t_{k}) \cdot v_{kj} ) h'(b_{j}) \cdot x_{i} \\
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>この式(28)において、入力層の重み行列<b>w</b>の偏微分は、先述の中間層の重み行列<b>v</b>のパラメータ及び偏微分の結果を利用して算出している形になっていることがわかる。つまり、出力結果で生じた誤差を逆方向に伝達させて計算しているともみることができる。</p>
+
+<p>この性質から、フィードフォワードニューラルネットワークモデルの勾配法が、誤差逆伝搬法（バックプロパゲーション）とも呼ばれている。</p>
 </article>
 
       
@@ -585,7 +612,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/703665331c1c82df8a3be7f769e9d8dbf3b0ed67" title='Last modified Sep 12, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/59dcdc39f086bfd3416a76c097b0feb38b185d2a" title='Last modified Sep 12, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 12, 2020
     </a>
   </div>

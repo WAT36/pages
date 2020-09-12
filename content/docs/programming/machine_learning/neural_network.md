@@ -288,3 +288,24 @@ k=1,2...の場合でも同様の結果が得られるので、式(25)は以下�
 {{< /katex >}}
 
 ここで、αは0~1の値を取る実数である。
+
+以上より、∂E/∂v<sub>kj</sub>が求められた。
+
+次に、もう一つの重み行列である<b>w</b>のパラメータw<sub>ji</sub>の偏微分を求めてみよう。
+
+こちらも先ほどと同様に、連鎖律を使って以下のように求めていく。ここで、シグモイド関数をh(x)とおく。
+
+{{< katex  >}}
+\tag{28}
+\begin{aligned}
+\frac{ \partial E_{n} }{ \partial w_{ji} } 
+    &= \frac{\partial E_{n} }{\partial b_{j}} \cdot \frac{\partial b_{j} }{\partial w_{ji} } \\
+    &= ( \sum_{k=0}^{K-1} \frac{\partial E_{n} }{\partial a_{k}} \cdot \frac{\partial a_{k} }{\partial z_{j}} ) \frac{\partial z_{j} }{\partial b_{j} } \cdot  \frac{\partial  }{\partial w_{ji}} \sum_{i=0}^{D} w_{ji} x_{i} \\
+    &= ( \sum_{k=0}^{K-1} (y_{k}-t_{k}) \cdot \frac{\partial }{\partial z_{j}} \sum_{j=0}^{M} v_{kj} z_{j} ) \frac{\partial }{\partial b_{j} } h(b_{j}) \cdot x_{i} \\
+    &= ( \sum_{k=0}^{K-1} (y_{k}-t_{k}) \cdot v_{kj} ) h'(b_{j}) \cdot x_{i} \\
+\end{aligned}
+{{< /katex >}}
+
+この式(28)において、入力層の重み行列<b>w</b>の偏微分は、先述の中間層の重み行列<b>v</b>のパラメータ及び偏微分の結果を利用して算出している形になっていることがわかる。つまり、出力結果で生じた誤差を逆方向に伝達させて計算しているともみることができる。
+
+この性質から、フィードフォワードニューラルネットワークモデルの勾配法が、誤差逆伝搬法（バックプロパゲーション）とも呼ばれている。

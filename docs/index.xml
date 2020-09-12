@@ -120,6 +120,15 @@
     
     <item>
       <title>AND演算</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/and-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/and-2/</guid>
+      <description>AND演算 ANDの論理演算をする方法についてを示す。 Java JavaではANDの論理演算子 &amp;amp;&amp;amp; を使用する。戻り値はboolean型。 (左辺) &amp;amp;&amp;amp; (右辺</description>
+    </item>
+    
+    <item>
+      <title>AND演算</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/and/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -305,6 +314,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/N-dimension_linear_model/</guid>
       <description>N次元線形回帰モデル 先程までの章では1次元(直線モデル)、2次元(面モデル)の入力データを扱ってきたが、そこから更に次元を広げたN次元の入力</description>
+    </item>
+    
+    <item>
+      <title>OR演算</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/or-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/or-2/</guid>
+      <description>OR演算 ORの論理演算をする方法についてを示す。 Java JavaではORの論理演算子 || を使用する。戻り値はboolean型。 (左辺) || (右辺) ちな</description>
     </item>
     
     <item>
@@ -683,6 +701,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/front-end/table/</guid>
       <description>テーブル(表) テーブル(表)を作る要素についてを述べる。 table要素 table要素は１つのテーブル(表)を表す要素である。 table要素の</description>
+    </item>
+    
+    <item>
+      <title>ニューラルネットワーク</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/neural_network-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/neural_network-2/</guid>
+      <description>ニューラルネットワーク ニューラルネットワークとは、人間の神経細胞を模した数理モデルであるニューロンモデルを利用した機械学習のアルゴリズムであ</description>
     </item>
     
     <item>
