@@ -1771,7 +1771,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/list/array/</guid>
-      <description>配列</description>
+      <description>配列 配列とは、同じデータ型の値をまとめて扱いたい時に利用するデータ構造である。ここでは配列の定義方法についてを述べる。 なお、Pythonには</description>
     </item>
     
     <item>

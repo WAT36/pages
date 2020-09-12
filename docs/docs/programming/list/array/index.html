@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.1d14b8261f7b3afb45fe0ab85626393d9d468435c0426e528a86b7298c84ddd9.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.914117fb69384cc74bbf6efdcb18f6f8ab101a558d2141ba80d44ad0bea5f7f9.js"></script>
 
 
 
@@ -126,10 +126,68 @@ https://github.com/alex-shpak/hugo-book
 <article class="markdown">
 
 <h1 id="配列">配列</h1>
+
+<p>配列とは、同じデータ型の値をまとめて扱いたい時に利用するデータ構造である。ここでは配列の定義方法についてを述べる。</p>
+
+<p>なお、Pythonには配列という概念は存在しない（リストとひっくるめている？）のでここでは述べない。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-list" style="display: none;" id="tabs-list-0" checked="checked" />
+  <label for="tabs-list-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Javaでは以下の形式で配列を宣言する。</p>
+
+<pre><code>データ型[] 配列名 = new データ型[要素数];
+</code></pre>
+
+<p>この方法により、配列内に指定したデータ型の値を、指定した要素数の数まで入れることができる。</p>
+
+<p>配列への値の代入及び取得は、以下のようにインデックスを指定して行う。</p>
+
+<pre><code>配列名[インデックス] = 値;
+変数 = 配列名[インデックス];
+</code></pre>
+
+  </div>
+
+  <input type="radio" name="tabs-list" style="display: none;" id="tabs-list-1"  />
+  <label for="tabs-list-1">
+    Javascript
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Javascriptでは以下の形式で配列を宣言する。Javaのような要素数の指定は不要である。</p>
+
+<pre><code>var 配列名 = [(値、カンマ区切りで複数入力可)]
+</code></pre>
+
+<p>配列への値の代入及び取得は、Javaと同じようにインデックスを指定して行う。</p>
+
+<pre><code>配列名[インデックス] = 値;
+変数 = 配列名[インデックス];
+</code></pre>
+
+  </div>
+
+</div>
+
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/71cc63691622024fe94c27b53e1b973f1e0e837c" title='Last modified Sep 12, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 12, 2020
+    </a>
+  </div>
   
 </div>
 
