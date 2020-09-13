@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.0f2f2f41bf657dc44ec2ebbfde0c266a1fc3ce4ab61e386e5e5c1805e878e388.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.63046bf53b1fbcdbd141c172554399fc18b0b75765c4c4dc36ebcde8ee7a0e02.js"></script>
 
 
 
@@ -605,6 +605,20 @@ https://github.com/alex-shpak/hugo-book
 <p>この式(28)において、入力層の重み行列<b>w</b>の偏微分は、先述の中間層の重み行列<b>v</b>のパラメータ及び偏微分の結果を利用して算出している形になっていることがわかる。つまり、出力結果で生じた誤差を逆方向に伝達させて計算しているともみることができる。</p>
 
 <p>この性質から、フィードフォワードニューラルネットワークモデルの勾配法が、誤差逆伝搬法（バックプロパゲーション）とも呼ばれている。</p>
+
+<p>長くなったが、誤差逆伝搬法の一連の手順を以下にまとめる。</p>
+
+<ol>
+<li>入力値、重み行列から出力値を算出する</li>
+</ol>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_45.png" width=100%></p>
+
+<ol>
+<li>中間層の出力z,出力層の出力y,目標データtから、新しい重み行列vの値を算出する（まだ更新はしない）</li>
+</ol>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_46.png" width=100%></p>
 </article>
 
       
@@ -612,7 +626,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/59dcdc39f086bfd3416a76c097b0feb38b185d2a" title='Last modified Sep 12, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/6360cf28f93828b58971952fa862778d9e1bb79e" title='Last modified Sep 12, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 12, 2020
     </a>
   </div>
