@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.63046bf53b1fbcdbd141c172554399fc18b0b75765c4c4dc36ebcde8ee7a0e02.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.56a1b8c173ea6b598c21e78f2accd6147c70837b00056874e032533c488c8521.js"></script>
 
 
 
@@ -610,15 +610,25 @@ https://github.com/alex-shpak/hugo-book
 
 <ol>
 <li>入力値、重み行列から出力値を算出する</li>
-</ol>
 
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_45.png" width=100%></p>
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_45.png" width=100%>
 
-<ol>
+
 <li>中間層の出力z,出力層の出力y,目標データtから、新しい重み行列vの値を算出する（まだ更新はしない）</li>
+
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_46.png" width=100%>
+
+<li>入力データx,中間層の入力総和b,重み行列v,出力層の出力y,目標データtから、新しい重み行列wの値を算出する（まだ更新はしない）</li>
+
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_47.png" width=100%>
+
+<li>算出した新しい重み行列v,wのパラメータを更新する</li>
+
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_48.png" width=100%>
+
 </ol>
 
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_46.png" width=100%></p>
+<p>この手順を繰り返すことで、誤差逆伝搬法を行なっていく。</p>
 </article>
 
       
@@ -626,8 +636,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/6360cf28f93828b58971952fa862778d9e1bb79e" title='Last modified Sep 12, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 12, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/3cf20e11a52e670e43fdb6339b06b1cdc90bf2a4" title='Last modified Sep 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 13, 2020
     </a>
   </div>
   
