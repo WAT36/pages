@@ -16,6 +16,7 @@ Pythonではリスト（・タプル）のみで、配列という概念はな�
 ## 配列
 
 - [配列]({{< relref "/docs/programming/list/array.md" >}})
+- [多次元配列]({{< relref "/docs/programming/list/multi_array.md" >}})
 
 ## リスト（・タプル）
 

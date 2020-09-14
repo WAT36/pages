@@ -1173,6 +1173,15 @@
     </item>
     
     <item>
+      <title>多次元配列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/list/multi_array/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/list/multi_array/</guid>
+      <description>多次元配列 多次元配列とは、配列の中に同じ長さの配列を複数含ませたデータ構造のことである。 Java Javaにおいて、例として二次元配列を設定するには</description>
+    </item>
+    
+    <item>
       <title>定数</title>
       <link>https://WAT36.github.io/pages/docs/programming/other/constant/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

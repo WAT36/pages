@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>標準出力 | WAT Notes</title>
+<title>多次元配列 | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -54,7 +54,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fstdio\2fstdout\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2flist\2fmulti_array\2f "] {
       color: #004ed0;
   }
   </style>
@@ -119,15 +119,15 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>標準出力</strong>
+  <strong>多次元配列</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="標準出力">標準出力</h1>
+<h1 id="多次元配列">多次元配列</h1>
 
-<p>標準出力について。</p>
+<p>多次元配列とは、配列の中に同じ長さの配列を複数含ませたデータ構造のことである。</p>
 
 
 
@@ -135,54 +135,60 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" name="tabs-standard_output" style="display: none;" id="tabs-standard_output-0" checked="checked" />
-  <label for="tabs-standard_output-0">
+  <input type="radio" name="tabs-array" style="display: none;" id="tabs-array-0" checked="checked" />
+  <label for="tabs-array-0">
     Java
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>クラスはここではMain.javaとする</p>
+    <p>Javaにおいて、例として二次元配列を設定するには以下の形式で宣言する。</p>
+
+<pre><code>データ型[][] 配列名 = new データ型[要素数][要素数];
+</code></pre>
+
+<p>配列の次元数を増やしたい場合は、かっこ[]の数をその数になるように増やして設定する。</p>
+
+<p>配列への値の代入及び取得は、同様にインデックスを指定して行う。ただし、次元の数に注意する。</p>
+
+<p>ここでは、使用例を以下に記載する。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
     <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-        <span style="color:#75715e">//出力後、改行したい時
-</span><span style="color:#75715e"></span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(変数もしくはデータ);
+        <span style="color:#66d9ef">int</span>[][] <span style="color:#a6e22e">table</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>[3][4];
 
-        <span style="color:#75715e">//出力後、改行したくない時
-</span><span style="color:#75715e"></span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(変数もしくはデータ);
+        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>table.<span style="color:#a6e22e">length</span>;i<span style="color:#f92672">++</span>){
+            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">j</span><span style="color:#f92672">=</span>0;j<span style="color:#f92672">&lt;</span>table[i].<span style="color:#a6e22e">length</span>;j<span style="color:#f92672">++</span>){
+                table[i][j] <span style="color:#f92672">=</span> i<span style="color:#f92672">+</span>j;
+                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(table[i][j]<span style="color:#f92672">+</span><span style="color:#e6db74">&#34; &#34;</span>);
+            }
+            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>();
+        }
     }
 }</code></pre></div>
-<p>javaで画面に出力したい時は <strong>System.out.println()</strong> を利用する。<br>
-引数には画面に出力したい変数またはデータを入れる。
-出力後改行したくない時は System.out. <strong>print()</strong> を使う。</p>
+<p>実行結果</p>
+
+<pre><code>$ java Main
+0 1 2 3 
+1 2 3 4 
+2 3 4 5 
+</code></pre>
 
   </div>
 
-  <input type="radio" name="tabs-standard_output" style="display: none;" id="tabs-standard_output-1"  />
-  <label for="tabs-standard_output-1">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x<span style="color:#f92672">=</span>(<span style="color:#960050;background-color:#1e0010">変数もしくはデータ</span>)
-<span style="color:#66d9ef">print</span>(x)        <span style="color:#75715e"># xを画面に出力して改行する</span>
-<span style="color:#66d9ef">print</span>(x,end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>) <span style="color:#75715e"># xを画面に出力して改行しない</span></code></pre></div>
-<p>Pythonでコンソール画面への出力を扱うには組み込み関数の <strong>print()</strong> を使う。<br>
-基本、入力された引数を画面に出力する。<br>
-改行したくない場合はprint()のendパラメータに&rdquo;&ldquo;を指定。<br>
-詳しくは以下の公式ドキュメント参照。<br>
-<a href="https://docs.python.org/ja/3/library/functions.html#print">https://docs.python.org/ja/3/library/functions.html#print</a></p>
-
-  </div>
-
-  <input type="radio" name="tabs-standard_output" style="display: none;" id="tabs-standard_output-2"  />
-  <label for="tabs-standard_output-2">
+  <input type="radio" name="tabs-array" style="display: none;" id="tabs-array-1"  />
+  <label for="tabs-array-1">
     Javascript
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>Javascriptはブラウザ上で扱う言語のため、ここではブラウザ上のログ画面への出力という意味で記す。</p>
+    <p>Javascriptでは以下の形式で配列を宣言する。Javaのような要素数の指定は不要である。</p>
 
-<p>Javascriptでは、<strong>console.log()</strong>を利用する。
-引数には出力したい値及び変数を入力する。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">5</span>)
-</code></pre></div>
+<pre><code>var 配列名 = [(値、カンマ区切りで複数入力可)]
+</code></pre>
+
+<p>配列への値の代入及び取得は、Javaと同じようにインデックスを指定して行う。</p>
+
+<pre><code>配列名[インデックス] = 値;
+変数 = 配列名[インデックス];
+</code></pre>
+
   </div>
 
 </div>
@@ -190,14 +196,7 @@ https://github.com/alex-shpak/hugo-book
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/ef92d0414e8d086c310913cc849c60d4487a4a79" title='Last modified Sep 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 3, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
@@ -206,6 +205,14 @@ https://github.com/alex-shpak/hugo-book
     </div>
     
   
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#多次元配列">多次元配列</a></li>
+</ul>
+</nav>
+  </aside>
 
 
 
