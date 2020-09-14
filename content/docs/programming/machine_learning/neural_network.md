@@ -57,7 +57,9 @@ weight: 1
 
 例えば、N(入力値の個数)=2、重みをw<sub>0</sub>=-2,w<sub>1</sub>=1,w<sub>2</sub>=2とした場合の出力値yのグラフは以下のようになる。
 
-直線-2x<sub>0</sub>+x<sub>1</sub>+2=0 (w<sub>0</sub>x<sub>0</sub>+w<sub>1</sub>x<sub>1</sub>+w<sub>2</sub>x<sub>2</sub>=0)を境に出力値は0か1に大きく分かれる事となる。
+（コード類は[こちら](https://github.com/WAT36/python/blob/master/machine_learning/deeplearning/neural_network.ipynb)のJupyter Notebookにまとめたのでご参考に）
+
+この図より、直線-2x<sub>0</sub>+x<sub>1</sub>+2=0 (w<sub>0</sub>x<sub>0</sub>+w<sub>1</sub>x<sub>1</sub>+w<sub>2</sub>x<sub>2</sub>=0)を境に出力値は0か1に大きく分かれる事となる。
 
 <img src="/img/datascience/Figure_43.png" width=100%>
 
