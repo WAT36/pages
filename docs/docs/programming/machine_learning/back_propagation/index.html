@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>誤差逆伝搬法 | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.9ce9aa11d69122bc9c127871a26d39604045f09e0f733f423e7e4b2056b985be.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2f back_propagation\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>誤差逆伝搬法</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="誤差逆伝搬法-バックプロパゲーション">誤差逆伝搬法（バックプロパゲーション）</h1>
+
+<p>誤差逆伝搬法（バックプロパゲーション）はフィードフォワードネットワークモデルに学習をさせる方法として有名な方法であり、これはネットワークの出力と目標値との誤差の情報を使って、出力層、中間層へと重みを更新していくことから、この名がついている。しかし、実態は勾配法そのものである。</p>
+
+<p>まずは、前章のn1つ分に対する交差エントロピー誤差E<sub>n</sub>を以下のように考える。</p>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+<p class="katex">
+  $$ 
+\tag{1}  E_{n} ( { \bf w } ,{ \bf v } ) = - \sum_{n=0}^{N-1} \sum_{k=0}^{K-1} t_{nk} \log (y_{nk}) 
+ $$
+</p>
+
+
+
+<p>これを利用して、以下のように置き換える。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{2}}  E ( { \bf w } ,{ \bf v } ) = - \frac{1}{N} \sum_{n=0}^{N-1} \sum_{k=0}^{K-1} E_{n} ( { \bf w } ,{ \bf v } )
+ $$
+</p>
+
+
+
+<p>ここから、重み行列の各パラメータに対する偏微分を行なっていこう。誤差関数をw<sub>ji</sub>で偏微分すると、以下のようになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{3}  
+\begin{aligned}
+\frac{\partial E}{ \partial w_{ji} } 
+    &= - \frac{\partial }{ \partial w_{ji} } \frac{1}{N} \sum_{n=0}^{N-1} E_{n} \\
+    &= \frac{1}{N} \sum_{n=0}^{N-1} \frac{\partial E_{n} }{ \partial w_{ji} }
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>また、パラメータには<b>v</b>もあるので、v<sub>kj</sub>に対しても偏微分を行う。すると、式(3)と同じようになる。</p>
+
+<p>この式に出てくる、∂E<sub>n</sub>/∂w<sub>ji</sub>と∂E<sub>n</sub>/∂v<sub>kj</sub>を求めてみることを考える。まずは、∂E<sub>n</sub>/∂v<sub>kj</sub>を見てみよう。</p>
+
+<p>偏微分の連鎖律を使って、∂E<sub>n</sub>/∂v<sub>kj</sub>は以下のように置き換えられる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{4}  \frac{ \partial E_{n} }{ \partial v_{kj} } = \frac{\partial E_{n} }{\partial a_{k}}  \frac{\partial a_{k} }{\partial v_{kj} } 
+ $$
+</p>
+
+
+
+<p>この式(4)において、まずは例として出力値の数を3(K=3),k=0の場合を見てみる。</p>
+
+<p>すると、∂E<sub>n</sub>/∂a<sub>0</sub>は、Eを変形して以下のように置き換えられる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{5}  \frac{ \partial E_{n} }{ \partial a_{0} } = \frac{\partial }{\partial a_{0}} ( -t_{0} \log y_{0} -t_{1} \log y_{1} -t_{2} \log y_{2} )
+ $$
+</p>
+
+
+
+<p>ここで、t<sub>i</sub>は目標データなのでs<sub>k</sub>で変化することはないが、y<sub>i</sub>は入力総和a<sub>0</sub>から算出されるので、関係している。</p>
+
+<p>これにより式(16)は以下のように置き換えられる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{6}  \frac{ \partial E_{n} }{ \partial a_{0} } = -t_{0} \frac{1}{y_{0}} \frac{\partial y_{0}}{\partial a_{0}} -t_{1} \frac{1}{y_{1}} \frac{\partial y_{1}}{\partial a_{0}} -t_{2} \frac{1}{y_{2}} \frac{\partial y_{2}}{\partial a_{0}}
+ $$
+</p>
+
+
+
+<p>u=exp(a<sub>0</sub>)+exp(a<sub>1</sub>)+exp(a<sub>2</sub>)とおいて計算すると</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{7}  
+\begin{aligned}
+\frac{\partial y_{0}}{\partial a_{0}}
+    &= \frac{\partial }{ \partial a_{0} } \frac{ \exp (a_{0}) }{u} \\
+    &= \frac{ \exp (a_{0}) u - \exp (a_{0}) \exp (a_{0}) }{ u^2 }  \\
+    &= \frac{\exp (a_{0})}{u} ( \frac{u - \exp (a_{0})}{u} ) \\
+    &= \frac{\exp (a_{0})}{u} ( 1- \frac{\exp (a_{0})}{u} ) \\
+    &= y_{0} (1 - y_{0})
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>また、i≠0の時は</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{8}  
+\begin{aligned}
+\frac{\partial y_{i}}{\partial a_{0}}
+    &= \frac{\partial }{ \partial a_{0} } \frac{ \exp (a_{i}) }{u} \\
+    &= \frac{ 0* u - \exp (a_{i}) \exp (a_{0}) }{ u^2 }  \\
+    &= \frac{ - \exp (a_{i}) \exp (a_{0}) }{ u^2 }  \\
+    &= - \frac{\exp (a_{i})}{u} \frac{\exp (a_{0})}{u} \\
+    &= - y_{i} y_{0}
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>となる。これら式(7)(8)を使うと、式(6)は</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{9}  \frac{ \partial E_{n} }{ \partial a_{0} } 
+        &= -t_{0} (1-y_{0}) +t_{1} y_{0} +t_{2} y_{0} \\
+        &= ( t_{0} + t_{1} + t_{2} )y_{0} - t_{0} \\
+        &= y_{0} - t_{0} 
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>のように置き換えられる。同様にして</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{10}  \frac{ \partial E_{n} }{ \partial a_{1} } = y_{1} - t_{1}
+ $$
+</p>
+
+
+
+
+
+<p class="katex">
+  $$ 
+\tag{11}  \frac{ \partial E_{n} }{ \partial a_{2} } = y_{2} - t_{2}
+ $$
+</p>
+
+
+
+<p>となる、これから</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{12}  \frac{ \partial E_{n} }{ \partial a_{k} } = y_{k} - t_{k}
+ $$
+</p>
+
+
+
+<p>と表せる。</p>
+
+<p>では次に、式(4)の右部分である∂a<sub>k</sub>/∂v<sub>kj</sub>を見てみよう。同じくまずは例として出力値の数を3(K=3),k=0の場合を見てみる。すると、a<sub>0</sub>は以下のようになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{13}  a_{0}= v_{00} z_{0} + v_{01} z_{1} + v_{02} z_{2}
+ $$
+</p>
+
+
+
+<p>ので、この式(13)から以下の式が成り立つ。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{14}  \frac{ \partial a_{0} }{ \partial v_{0i} } = z_{i}
+ $$
+</p>
+
+
+
+<p>k=1,2&hellip;の場合でも同様の結果が得られるので、式(14)は以下の式のようにも置き換えられる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{15}  \frac{ \partial a_{k} }{ \partial v_{ki} } = z_{i}
+ $$
+</p>
+
+
+
+<p>では、この結果を式(15)と合わせてみよう。すると、以下のようになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{16}  \frac{ \partial E_{n} }{ \partial v_{kj} } 
+    &= \frac{\partial E_{n} }{\partial a_{k}}  \frac{\partial a_{k} }{\partial v_{kj} } \\
+    &= (y_{k} - t_{k})z_{j}
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>この式(16)を利用して、勾配法でパラメータv<sub>kj</sub>を更新していくための漸化式を以下のように定める。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{17}  v_{kj}(t+1)
+    = v_{kj}(t) - \alpha \frac{\partial E_{n} }{\partial v_{kj} }
+    = v_{kj}(t) - \alpha (y_{k} - t_{k})z_{j}
+ $$
+</p>
+
+
+
+<p>ここで、αは0~1の値を取る実数である。</p>
+
+<p>以上より、∂E/∂v<sub>kj</sub>が求められた。</p>
+
+<p>次に、もう一つの重み行列である<b>w</b>のパラメータw<sub>ji</sub>の偏微分を求めてみよう。</p>
+
+<p>こちらも先ほどと同様に、連鎖律を使って以下のように求めていく。ここで、シグモイド関数をh(x)とおく。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{18}
+\begin{aligned}
+\frac{ \partial E_{n} }{ \partial w_{ji} } 
+    &= \frac{\partial E_{n} }{\partial b_{j}} \cdot \frac{\partial b_{j} }{\partial w_{ji} } \\
+    &= ( \sum_{k=0}^{K-1} \frac{\partial E_{n} }{\partial a_{k}} \cdot \frac{\partial a_{k} }{\partial z_{j}} ) \frac{\partial z_{j} }{\partial b_{j} } \cdot  \frac{\partial  }{\partial w_{ji}} \sum_{i=0}^{D} w_{ji} x_{i} \\
+    &= ( \sum_{k=0}^{K-1} (y_{k}-t_{k}) \cdot \frac{\partial }{\partial z_{j}} \sum_{j=0}^{M} v_{kj} z_{j} ) \frac{\partial }{\partial b_{j} } h(b_{j}) \cdot x_{i} \\
+    &= ( \sum_{k=0}^{K-1} (y_{k}-t_{k}) \cdot v_{kj} ) h'(b_{j}) \cdot x_{i} \\
+\end{aligned}
+ $$
+</p>
+
+
+
+<p>この式(18)において、入力層の重み行列<b>w</b>の偏微分は、先述の中間層の重み行列<b>v</b>のパラメータ及び偏微分の結果を利用して算出している形になっていることがわかる。つまり、出力結果で生じた誤差を逆方向に伝達させて計算しているともみることができる。</p>
+
+<p>この性質から、フィードフォワードニューラルネットワークモデルの勾配法が、誤差逆伝搬法（バックプロパゲーション）とも呼ばれている。</p>
+
+<p>長くなったが、誤差逆伝搬法の一連の手順を以下にまとめる。</p>
+
+<ol>
+<li>入力値、重み行列から出力値を算出する</li>
+
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_45.png" width=100%>
+
+
+<li>中間層の出力z,出力層の出力y,目標データtから、新しい重み行列vの値を算出する（まだ更新はしない）</li>
+
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_46.png" width=100%>
+
+<li>入力データx,中間層の入力総和b,重み行列v,出力層の出力y,目標データtから、新しい重み行列wの値を算出する（まだ更新はしない）</li>
+
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_47.png" width=100%>
+
+<li>算出した新しい重み行列v,wのパラメータを更新する</li>
+
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_48.png" width=100%>
+
+</ol>
+
+<p>この手順を繰り返すことで、誤差逆伝搬法を行なっていく。</p>
+</article>
+
+      
+<div class="book-footer justify-end">
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#誤差逆伝搬法-バックプロパゲーション">誤差逆伝搬法（バックプロパゲーション）</a></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>
