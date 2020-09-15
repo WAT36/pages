@@ -45,4 +45,6 @@ w<sub>1</sub>,w<sub>2</sub>に対しても同じことを行い、また<b>v</b>
 
 この手法の難点は、パラメータの数が多いと計算時間が膨大になってしまうという点である。ニューラルネットワークでは重み行列のパラメータの数が多いので、時間も長くなりがちになる。
 
+コードでの実装例を[こちら](https://github.com/WAT36/python/blob/master/machine_learning/deeplearning/numerical_differentialation.ipynb)のNotebookに記載するが、回数にもよるが時間が長くかかりやすいこともわかる。
+
 ここで、別の方法として述べられているものを以下に記載する。
