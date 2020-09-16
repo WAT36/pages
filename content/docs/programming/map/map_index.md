@@ -10,6 +10,9 @@ bookToc: false
 
 多くの言語でこれに似たようなデータ構造がある（と予想している）が、言語により名前が違うので注意。    
 JavaではMap、Pythonでは辞書と呼ばれている。  
+C言語では構造体、JavaScriptではオブジェクト(プロパティ)と言った名前のデータ構造で呼ばれている（これらを似た構造としてひとまとめにする事に否定的な意見もあるかもしれないが、ここでは一緒の候としてまとめておく）
+
+## 辞書、Map
 
 - [辞書(Map)]({{< relref "/docs/programming/map/map.md" >}})
 - [辞書(Map)に要素を追加する]({{< relref "/docs/programming/map/put.md" >}})
@@ -23,3 +26,6 @@ JavaではMap、Pythonでは辞書と呼ばれている。
 - [辞書(Map)から値のリストを取得]({{< relref "/docs/programming/map/valuelist.md" >}})
 - [辞書(Map)のループ]({{< relref "/docs/programming/map/dict_loop.md" >}})
 
+## 構造体、オブジェクト
+
+- [オブジェクト(Javascript)]({{< relref "/docs/programming/map/object.md" >}})
