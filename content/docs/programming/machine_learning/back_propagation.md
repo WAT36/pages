@@ -18,7 +18,7 @@ weight: 1
 これを利用して、以下のように置き換える。
 
 {{< katex  >}}
-\tag{2}}  E ( { \bf w } ,{ \bf v } ) = - \frac{1}{N} \sum_{n=0}^{N-1} \sum_{k=0}^{K-1} E_{n} ( { \bf w } ,{ \bf v } )
+\tag{2}  E ( { \bf w } ,{ \bf v } ) = - \frac{1}{N} \sum_{n=0}^{N-1} \sum_{k=0}^{K-1} E_{n} ( { \bf w } ,{ \bf v } )
 {{< /katex >}}
 
 ここから、重み行列の各パラメータに対する偏微分を行なっていこう。誤差関数をw<sub>ji</sub>で偏微分すると、以下のようになる。
@@ -197,3 +197,7 @@ k=1,2...の場合でも同様の結果が得られるので、式(14)は以下�
 </ol>
 
 この手順を繰り返すことで、誤差逆伝搬法を行なっていく。
+
+では、コードを書いて学習させてみよう。[こちら](https://github.com/WAT36/python/blob/master/machine_learning/deeplearning/back_propagation.ipynb)のJupyter Notebookに誤差逆伝搬法のコードを記載する。
+
+結果からわかるとおり、誤差逆伝搬法は数値微分法よりも計算速度が速くなる。
