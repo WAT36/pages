@@ -200,4 +200,4 @@ k=1,2...の場合でも同様の結果が得られるので、式(14)は以下�
 
 では、コードを書いて学習させてみよう。[こちら](https://github.com/WAT36/python/blob/master/machine_learning/deeplearning/back_propagation.ipynb)のJupyter Notebookに誤差逆伝搬法のコードを記載する。
 
-結果からわかるとおり、誤差逆伝搬法は数値微分法よりも計算速度が速くなる。
+Notebookの結果より、誤差逆伝搬法は数値微分法よりも計算速度が速くなることが解る。

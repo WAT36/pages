@@ -7,7 +7,7 @@ weight: 1
 
 # 数値微分法
 
-分類問題を解く前に、指標となる誤差関数を、教師あり学習の章でも利用した平均誤差エントロピー誤差を利用し、以下の式で定義する。
+前述のフィードフォワードニューラルネットワークにおいて、最適な重み行列w,vの値を求めるために指標となる誤差関数を、教師あり学習の章でも利用した平均誤差エントロピー誤差を利用し、以下の式で定義する。
 
 {{< katex  >}}
 \tag{1}  E( { \bf w } ,{ \bf v } ) = - \frac{1}{N} \sum_{n=0}^{N-1} \sum_{k=0}^{K-1} t_{nk} \log (y_{nk}) 
@@ -24,19 +24,19 @@ tは目標値、yはニューラルネットワークモデルの出力値であ
 関数f(x)をxで微分した値は、ある微小な値εを用いると以下のように表される。
 
 {{< katex  >}}
-\tag{2}  \frac{　df(x) }{dx} = - \frac{f(x + \epsilon )-f(x)}{ \epsilon }
+\tag{2}  \frac{　df(x) }{dx} = \frac{f(x + \epsilon )-f(x)}{ \epsilon }
 {{< /katex >}}
 
 これにより、誤差関数E(<b>w</b>,<b>v</b>)を<b>w</b>で偏微分した値は以下のようになる。
 
 {{< katex  >}}
-\tag{3}  \frac{　\partial E( { \bf w } ,{ \bf v } ) }{ \partial { \bf w } } = \frac{ E( { \bf w } - \epsilon  ,{ \bf v } )-E( { \bf w }  ,{ \bf v } )}{ \epsilon }
+\tag{3}  \frac{　\partial E( { \bf w } ,{ \bf v } ) }{ \partial { \bf w } } = \frac{ E( { \bf w } + \epsilon  ,{ \bf v } )-E( { \bf w }  ,{ \bf v } )}{ \epsilon }
 {{< /katex >}}
 
 式(3)だが、<b>w</b>には実際にはパラメータが複数ある。例として、<b>w</b>にw<sub>0</sub>,w<sub>1</sub>,w<sub>2</sub> のパラメータがあるとすると、まずw<sub>0</sub>での偏微分は以下のようになる。
 
 {{< katex  >}}
-\tag{11}  \frac{　\partial E( { \bf w } ,{ \bf v } ) }{ \partial { \bf w } } \Biggr| _{w_{0},w_{1},w_{2} }= \frac{ E( ( w_{0} - \epsilon, w_{1}, w_{2})  ,{ \bf v } )-E( { \bf w }  ,{ \bf v } )}{ \epsilon }
+\tag{4}  \frac{　\partial E( { \bf w } ,{ \bf v } ) }{ \partial { \bf w } } \Biggr| _{w_{0},w_{1},w_{2} }= \frac{ E( ( w_{0} + \epsilon, w_{1}, w_{2})  ,{ \bf v } )-E( ( w_{0}, w_{1}, w_{2})  ,{ \bf v } )}{ \epsilon }
 {{< /katex >}}
 
 w<sub>1</sub>,w<sub>2</sub>に対しても同じことを行い、また<b>v</b>のパラメータ全てに対しても行う。
@@ -47,4 +47,4 @@ w<sub>1</sub>,w<sub>2</sub>に対しても同じことを行い、また<b>v</b>
 
 コードでの実装例を[こちら](https://github.com/WAT36/python/blob/master/machine_learning/deeplearning/numerical_differentialation.ipynb)のNotebookに記載するが、回数にもよるが時間が長くかかりやすいこともわかる。
 
-ここで、別の方法として述べられているものを以下に記載する。
+ここで、別の方法として述べられているものを次に記載する。
