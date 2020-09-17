@@ -668,6 +668,15 @@
     </item>
     
     <item>
+      <title>ニューラルネットワーク</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/neural_network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/neural_network/</guid>
+      <description>ニューラルネットワーク ニューラルネットワークとは、人間の神経細胞を模した数理モデルであるニューロンモデルを利用した機械学習のアルゴリズムであ</description>
+    </item>
+    
+    <item>
       <title>ファイル</title>
       <link>https://WAT36.github.io/pages/docs/programming/file_io/file_index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1334,6 +1343,15 @@
     </item>
     
     <item>
+      <title>数値微分法</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/numerical_differentiation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/numerical_differentiation/</guid>
+      <description>数値微分法 前述のフィードフォワードニューラルネットワークにおいて、最適な重み行列w,vの値を求めるために指標となる誤差関数を、教師あり学習の</description>
+    </item>
+    
+    <item>
       <title>数値（整数）の桁数を調べる</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/digits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1610,6 +1628,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/analytical_solution/</guid>
       <description>解析解 先程の直線モデルの例では勾配法を用いてw0、w1の値を求めたが、実は勾配法を用いなくても数式を計算していけば最適なw0、w1が求められ</description>
+    </item>
+    
+    <item>
+      <title>誤差逆伝搬法</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/back_propagation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/back_propagation/</guid>
+      <description>誤差逆伝搬法（バックプロパゲーション） 誤差逆伝搬法（バックプロパゲーション）はフィードフォワードネットワークモデルに学習をさせる方法として有</description>
     </item>
     
     <item>

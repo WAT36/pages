@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ニューラルネットワーク | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.b5d05a06f498ac11698478fc04ca42302d60240a8027ea2e372a0b8bae8ea49a.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2fneural_network\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
+  </div>
+  <br>
+  <div class="page-nav-item">
+    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
+  </div>
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>ニューラルネットワーク</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="ニューラルネットワーク">ニューラルネットワーク</h1>
+
+<p>ニューラルネットワークとは、人間の神経細胞を模した数理モデルである<strong>ニューロンモデル</strong>を利用した機械学習のアルゴリズムである。</p>
+
+<p>ニューロンモデルを幾層にも組み合わせて計算を行なっていく方法で、より多くのニューロンモデルを使用した物は<strong>ディープラーニング</strong>とも呼ばれる。</p>
+
+<h2 id="神経細胞">神経細胞</h2>
+
+<p>人間の脳にある神経細胞は核と軸索と呼ばれる部位からなり、軸索の先をシナプスと呼ばれるインターフェースで別の神経細胞に繋げる形で幾つにも繋がっている。</p>
+
+<p>神経細胞は、他の細胞から電気的なパルスを受け取り、また対応するシナプスの状態によりその電気パルスをどれほど受け取るか(シナプス伝達強度)が違ってくるため、神経細胞内の電位(膜電位)が大きく変化したりする。</p>
+
+<p>そして、膜電位がある一定の値(閾値)を超えると、その神経細胞は次の神経細胞へ、電気的なパルスを発信する。それが連続された構造になっている。(下図)</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_41.png" width=100%></p>
+
+<h2 id="ニューロンモデル">ニューロンモデル</h2>
+
+<p>ニューロンモデルは、この神経細胞の動きを模した数理モデルで、下図のように表される。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_42.png" width=100%></p>
+
+<p>入力値は、正も負も値を取る実数(図中のx<sub>0</sub>〜x<sub>n-1</sub>)とし、それぞれにシナプス伝達強度とした<strong>重み</strong>(図中のw<sub>0</sub>〜w<sub>n-1</sub>)をかける。そしてその和を取ったものを<strong>入力総和</strong>(図中のa)として計算する。</p>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+<p class="katex">
+  $$ 
+\tag{1}  a = w_{0} x_{0} + w_{1} x_{1} + \cdots + w_{n-1} x_{n-1}
+ $$
+</p>
+
+
+
+<p>なお、図にもあるように、n-1番目の重みは切片としてそのまま用いるので、x<sub>n-1</sub>=1とする。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{2}  a = w_{0} x_{0} + w_{1} x_{1} + \cdots + w_{n-1}
+ $$
+</p>
+
+
+
+<p>式(1)は以下のように書き換えられる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{3}  a = \sum_{i=0}^{n-1} w_{i} x_{i} 
+ $$
+</p>
+
+
+
+<p>そして、この入力総和aを、シグモイド関数を使って出力値yに置き換え、出力する。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{4}  y = \frac{1}{1 + \exp(-a) }
+ $$
+</p>
+
+
+
+<p>この一連の流れは、教師あり学習で出てきたロジスティック回帰に似ており、重みや入力総和によって決定境界が引かれ、それを境に出力が0か1に別れる、とみることもできる。</p>
+
+<p>例えば、N(入力値の個数)=2、重みをw<sub>0</sub>=-2,w<sub>1</sub>=1,w<sub>2</sub>=2とした場合の出力値yのグラフは以下のようになる。</p>
+
+<p>（コード類は<a href="https://github.com/WAT36/python/blob/master/machine_learning/deeplearning/neural_network.ipynb">こちら</a>のJupyter Notebookにまとめたのでご参考に）</p>
+
+<p>この図より、直線-2x<sub>0</sub>+x<sub>1</sub>+2=0 (w<sub>0</sub>x<sub>0</sub>+w<sub>1</sub>x<sub>1</sub>+w<sub>2</sub>x<sub>2</sub>=0)を境に出力値は0か1に大きく分かれる事となる。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_43.png" width=100%></p>
+
+<h2 id="ニューラルネットワークモデル">ニューラルネットワークモデル</h2>
+
+<p>先述のニューロンモデルをいくつも組み合わせた、ニューロンモデルの集合体のモデルのことを<strong>ニューラルネットワークモデル</strong>という。</p>
+
+<p>ニューラルネットワークモデルにはいくつか種類があるが、ここでは一方向にのみ流れる<strong>フィードフォワードニューラルネット</strong>を考える。</p>
+
+<p>ここでは、入力層と出力層の間に中間層が1つの<strong>2層フィードフォワードニューラルネットワークモデル</strong>とする。下に図を示す。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_44.png" width=100%></p>
+
+<p>重み行列が2つあるので（中間層を第１層、出力層を第２層と呼ぶことからもある）、これから２層フィードフォワードニューラルネットワークモデルと呼ぶ。（入力層も合わせて３層と呼ぶこともある）</p>
+
+<p>中間層には、前述のニューロンモデルと同じように、ダミー入力として常に１の値をとるパラメータを加える。</p>
+
+<p>重み行列<strong>z</strong>において、a<sub>i</sub>からb<sub>j</sub>への重みをz<sub>ji</sub>とおくと、以下の式が成り立つ。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{5}  b_{j} = \sum_{i=0}^{n-1} z_{ji} a_{i}
+ $$
+</p>
+
+
+
+<p>中間層では、この式(5)により算出した結果を、シグモイド関数に通すことで出力値を得る。出力値をc、シグモイド関数をh()とおくと、以下の式が成り立つ。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{6}  c_{j} =  h( b_{j} )
+ $$
+</p>
+
+
+
+<p>ここで、シグモイド関数は入力総和から何らかの出力を決定づける関数ということで、<strong>活性化関数</strong>とも呼ばれている。</p>
+
+<p>次に出力層において、中間層の出力と重み行列から式(5)の計算を行なった最終的な出力値b<sub>i</sub>に対して、最後にソフトマックス関数を適用することにより２層フィードフォワードニューラルネットワークモデルの出力値y<sub>i</sub>を得る。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{7}  y_{i} = \frac{ \exp(a_{i}) }{ \sum_{j=0}^{K-1} \exp(a_{j}) }
+ $$
+</p>
+
+
+
+<p>ここまでの一連の処理をコードにまとめてみよう。</p>
+
+<p>と言いたいが、ここに記載するとかなり長くなるので、<a href="https://github.com/WAT36/python/blob/master/machine_learning/deeplearning/FNN.ipynb">こちら</a>のJupyter Notebookにコードを記載する。</p>
+
+<p>では、この２層フィードフォワードニューラルネットワークモデルを利用した学習法を考えてみよう。</p>
+
+<p>その方法の一つを、次章で紹介する。</p>
+</article>
+
+      
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/5e0cfc559fc3ad4940f2dcabbb3120fde8e9a577" title='Last modified Sep 14, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 14, 2020
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#ニューラルネットワーク">ニューラルネットワーク</a>
+<ul>
+<li><a href="#神経細胞">神経細胞</a></li>
+<li><a href="#ニューロンモデル">ニューロンモデル</a></li>
+<li><a href="#ニューラルネットワークモデル">ニューラルネットワークモデル</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

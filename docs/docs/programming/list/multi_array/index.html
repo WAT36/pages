@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>多次元配列 | WAT Notes</title>
+<title>AND演算 | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.82deb82514004f5372fcbbe6879c654a18efd406921bd485bef5c2c2aba4a657.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.b5d05a06f498ac11698478fc04ca42302d60240a8027ea2e372a0b8bae8ea49a.js"></script>
 
 
 
@@ -54,13 +54,13 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2flist\2fmulti_array\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fnumber\2f and\2f "] {
       color: #004ed0;
   }
   </style>
 
 <ul>
-<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
 </ul>
 
 <p><details>
@@ -119,15 +119,15 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>多次元配列</strong>
+  <strong>AND演算</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="多次元配列">多次元配列</h1>
+<h1 id="and演算">AND演算</h1>
 
-<p>多次元配列とは、配列の中に同じ長さの配列を複数含ませたデータ構造のことである。</p>
+<p>ANDの論理演算をする方法についてを示す。</p>
 
 
 
@@ -135,56 +135,48 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" name="tabs-array" style="display: none;" id="tabs-array-0" checked="checked" />
-  <label for="tabs-array-0">
+  <input type="radio" name="tabs-and" style="display: none;" id="tabs-and-0" checked="checked" />
+  <label for="tabs-and-0">
     Java
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>Javaにおいて、例として二次元配列を設定するには以下の形式で宣言する。</p>
-
-<pre><code>データ型[][] 配列名 = new データ型[要素数][要素数];
-</code></pre>
-
-<p>配列の次元数を増やしたい場合は、かっこ[]の数をその数になるように増やして設定する。</p>
-
-<p>配列への値の代入及び取得は、同様にインデックスを指定して行う。ただし、次元の数に注意する。</p>
-
-<p>ここでは、使用例を以下に記載する。</p>
+    <p>JavaではANDの論理演算子 <strong>&amp;&amp;</strong> を使用する。戻り値はboolean型。<br />
+<code>(左辺) &amp;&amp; (右辺)</code><br />
+ちなみに、左辺がfalseだった場合は右辺の計算は行わずにfalseを出力する。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
     <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-        <span style="color:#66d9ef">int</span>[][] <span style="color:#a6e22e">table</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>[3][4];
+        <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+        <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
 
-        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>table.<span style="color:#a6e22e">length</span>;i<span style="color:#f92672">++</span>){
-            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">j</span><span style="color:#f92672">=</span>0;j<span style="color:#f92672">&lt;</span>table[i].<span style="color:#a6e22e">length</span>;j<span style="color:#f92672">++</span>){
-                table[i][j] <span style="color:#f92672">=</span> i<span style="color:#f92672">+</span>j;
-                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(table[i][j]<span style="color:#f92672">+</span><span style="color:#e6db74">&#34; &#34;</span>);
-            }
-            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>();
-        }
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(a <span style="color:#f92672">&amp;&amp;</span> a);
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(a <span style="color:#f92672">&amp;&amp;</span> b);
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(b <span style="color:#f92672">&amp;&amp;</span> b);
     }
 }</code></pre></div>
 <p>実行結果</p>
 
-<pre><code>$ java Main
-0 1 2 3 
-1 2 3 4 
-2 3 4 5 
+<pre><code>&gt; java Main  
+true  
+false  
+false  
 </code></pre>
 
   </div>
 
-  <input type="radio" name="tabs-array" style="display: none;" id="tabs-array-1"  />
-  <label for="tabs-array-1">
-    Javascript
+  <input type="radio" name="tabs-and" style="display: none;" id="tabs-and-1"  />
+  <label for="tabs-and-1">
+    Python
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>Javascriptでは以下の形式で宣言する。なお、JavascriptではJavaとは違い、配列内に入る配列の長さは全て等しくなくても良い。また、宣言時に初期値も入力できる。</p>
-
-<pre><code>var 配列名 = [[]]
-</code></pre>
-
-<p>配列への値の代入及び取得は、Javaと同じようにインデックスを指定して行えば良い。ただし、こちらも次元には注意する。</p>
-
+    <p>pythonでOR演算を行うには単純に <strong>and</strong> を使用する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a <span style="color:#f92672">=</span> True
+<span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">=</span> False
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(a <span style="color:#f92672">and</span> b)
+False
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(a <span style="color:#f92672">and</span> a)
+True
+<span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
   </div>
 
 </div>
@@ -196,8 +188,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/332a4b06d7b46243218a9dbd271f17ef1aecc04b" title='Last modified Sep 14, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 14, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/f3dcb4ba0aed4e8c96315c519011ed407623594e" title='Last modified Jan 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 5, 2020
     </a>
   </div>
   
@@ -208,14 +200,6 @@ https://github.com/alex-shpak/hugo-book
     </div>
     
   
-
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#多次元配列">多次元配列</a></li>
-</ul>
-</nav>
-  </aside>
 
 
 
