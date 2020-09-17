@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OR演算 | WAT Notes</title>
+<title>論理演算 | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.b5d05a06f498ac11698478fc04ca42302d60240a8027ea2e372a0b8bae8ea49a.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.b75e042b85bbb0fe25c58be1fe87f12bd00d3ea1ec2cea2edb778386a609a013.js"></script>
 
 
 
@@ -54,13 +54,13 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fnumber\2for\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fnumber\2flogical_operator\2f "] {
       color: #004ed0;
   }
   </style>
 
 <ul>
-<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
 
 <p><details>
@@ -119,15 +119,94 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>OR演算</strong>
+  <strong>論理演算</strong>
 </header>
 
       
 <article class="markdown">
 
+<h1>論理演算</h1>
+
+<p>論理演算を行う際に利用する演算子についてを述べる。</p>
+
+<h1 id="and演算">AND演算</h1>
+
+<p>AND演算は入力した２値が両方とも真であった時に真を返し、それ以外は偽を返す演算方法である。</p>
+
+<p>それぞれの言語における方法を示す。</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-and" style="display: none;" id="tabs-and-0" checked="checked" />
+  <label for="tabs-and-0">
+    Java
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>JavaではANDの論理演算子 <strong>&amp;&amp;</strong> を使用する。戻り値はboolean型。<br />
+<code>(左辺) &amp;&amp; (右辺)</code><br />
+ちなみに、左辺がfalseだった場合は右辺の計算は行わずにfalseを出力する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+        <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+        <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(a <span style="color:#f92672">&amp;&amp;</span> a);
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(a <span style="color:#f92672">&amp;&amp;</span> b);
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(b <span style="color:#f92672">&amp;&amp;</span> b);
+    }
+}</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>&gt; java Main  
+true  
+false  
+false  
+</code></pre>
+
+  </div>
+
+  <input type="radio" name="tabs-and" style="display: none;" id="tabs-and-1"  />
+  <label for="tabs-and-1">
+    Python
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>pythonでAND演算を行うには単純に <strong>and</strong> を使用する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a <span style="color:#f92672">=</span> True
+<span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">=</span> False
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(a <span style="color:#f92672">and</span> b)
+False
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(a <span style="color:#f92672">and</span> a)
+True
+<span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
+  </div>
+
+  <input type="radio" name="tabs-and" style="display: none;" id="tabs-and-2"  />
+  <label for="tabs-and-2">
+    Javascript
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Javascriptでは、Javaと同じく論理演算子 <strong>&amp;&amp;</strong> があるのでこれを使用する。戻り値はboolean型。</p>
+
+<pre><code>(左辺) &amp;&amp; (右辺)
+</code></pre>
+
+  </div>
+
+</div>
+
+
+<hr>
+
 <h1 id="or演算">OR演算</h1>
 
-<p>ORの論理演算をする方法についてを示す。</p>
+<p>OR演算は入力した２値が両方とも偽であった時に偽を返し、それ以外は真を返す演算方法である。</p>
+
+<p>各言語における方法を示す。</p>
 
 
 
@@ -179,6 +258,18 @@ False
 <span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
   </div>
 
+  <input type="radio" name="tabs-or" style="display: none;" id="tabs-or-2"  />
+  <label for="tabs-or-2">
+    Javascript
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Javascriptでは、Javaと同じく論理演算子 <strong>||</strong> があるのでこれを使用する。戻り値はboolean型。</p>
+
+<pre><code>(左辺) || (右辺)
+</code></pre>
+
+  </div>
+
 </div>
 
 </article>
@@ -188,8 +279,8 @@ False
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f3dcb4ba0aed4e8c96315c519011ed407623594e" title='Last modified Jan 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 5, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/c08789d2f6fad0a4e45a4d28d950742e7fdcca8e" title='Last modified Sep 9, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 9, 2020
     </a>
   </div>
   
@@ -200,6 +291,15 @@ False
     </div>
     
   
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#and演算">AND演算</a></li>
+<li><a href="#or演算">OR演算</a></li>
+</ul>
+</nav>
+  </aside>
 
 
 
