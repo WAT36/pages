@@ -38,3 +38,5 @@ bookToc: false
  - [ニューラルネットワーク] ({{< relref "/docs/programming/machine_learning/neural_network.md" >}})
  - [数値微分法]({{< relref "/docs/programming/machine_learning/numerical_differentiation.md" >}})
  - [誤差逆伝搬法] ({{< relref "/docs/programming/machine_learning/back_propagation.md" >}})
+ - [Kerasでニューラルネットワーク] ({{< relref "/docs/programming/machine_learning/keras.md" >}})
+
