@@ -11,7 +11,7 @@ weight: 1
 
 ## MNISTデータベース
 
-手書き文字のデータは、**MNIST**と呼ばれるゆうメーなデータセットを利用する。
+手書き文字のデータは、**MNIST**と呼ばれるなデータセットを利用する。
 
 MNISTデータセットは、Kerasから以下のように利用することができる。
 
@@ -32,7 +32,7 @@ x0 = x_train[0]
 
 # ヒートマップにして表示
 plt.figure()
-plt.imshow(x0,interpolation='nearest',vmin=0,vmax=255,cmap='jet')
+plt.imshow(x0,interpolation='nearest',vmin=0,vmax=255,cmap='binary')
 plt.show()
 
 #ちなみに認識結果（目標値）は
@@ -42,4 +42,13 @@ print('↑の目標値：{0}'.format(y_train[0]))
 実行結果
 
 <img src="/img/datascience/Figure_49.png" width=100%>
+
+
+## ２層フィードフォワードニューラルネットワークでの学習
+
+では、このデータをニューラルネットワークを用いて学習させてみよう。
+
+MNISTでの入力データは1つにつき28*28の配列変数だったので、まずはこれを1*784の形に変形させる。
+
+また、値を実数として扱うためにfloat型に変換し、255で割って0~1の範囲に値を収める。
 
