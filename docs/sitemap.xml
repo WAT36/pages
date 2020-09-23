@@ -148,10 +148,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/keras-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/keras/</loc>
     <lastmod>2020-09-23T19:38:49+09:00</lastmod>
   </url>
@@ -374,10 +370,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/table/</loc>
     <lastmod>2020-06-22T21:38:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/neural_network-2/</loc>
   </url>
   
   <url>
@@ -707,6 +699,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/mnist/</loc>
+    <lastmod>2020-09-23T20:29:15+09:00</lastmod>
   </url>
   
   <url>
@@ -760,10 +753,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/numerical_differentiation-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/numerical_differentiation/</loc>
     <lastmod>2020-09-17T22:34:25+09:00</lastmod>
   </url>
@@ -805,7 +794,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</loc>
-    <lastmod>2020-09-18T00:22:01+09:00</lastmod>
+    <lastmod>2020-09-23T20:29:15+09:00</lastmod>
   </url>
   
   <url>
@@ -921,10 +910,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/analytical_solution/</loc>
     <lastmod>2020-04-11T00:39:49+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/back_propagation-2/</loc>
   </url>
   
   <url>
@@ -1144,7 +1129,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-09-23T19:38:49+09:00</lastmod>
+    <lastmod>2020-09-23T20:29:15+09:00</lastmod>
   </url>
   
   <url>

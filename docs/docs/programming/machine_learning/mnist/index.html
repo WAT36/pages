@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.6fae99d9371171ebfa2a6ff25b511801e0d49756ae1a1f26069c08c4c0a86831.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.5e8e1710e923c65dc817c20dc856faa9e475800f8676358c94e6755360f9a411.js"></script>
 
 
 
@@ -126,10 +126,30 @@ https://github.com/alex-shpak/hugo-book
 <article class="markdown">
 
 <h1 id="手書き文字の認識">手書き文字の認識</h1>
+
+<p>ここでは、実用的な問題への応用として、手書き数字をニューラルネットワークを使って認識させてみることを考えてみる。</p>
+
+<h2 id="mnistデータベース">MNISTデータベース</h2>
+
+<p>手書き文字のデータは、<strong>MNIST</strong>と呼ばれるゆうメーなデータセットを利用する。</p>
+
+<p>MNISTデータセットは、Kerasから以下のように利用することができる。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> keras.datasets <span style="color:#f92672">import</span> mnist
+
+<span style="color:#75715e"># trainに60000個の訓練用データ、testに10000個のテストデータが入る</span>
+(x_train,y_train),(x_test,y_test) <span style="color:#f92672">=</span> mnist<span style="color:#f92672">.</span>load_data()</code></pre></div>
+<p>ここで、x_trainには60000*28*28の配列変数で、0~255の値をとるデータが入る。また、y_trainには60000*1の配列変数で、画像の認識結果である0-9の値が入る。</p>
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/1f3778ac573aff4919085e1155682e43ffee6bf1" title='Last modified Sep 23, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 23, 2020
+    </a>
+  </div>
   
 </div>
 
@@ -142,7 +162,10 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#手書き文字の認識">手書き文字の認識</a></li>
+<li><a href="#手書き文字の認識">手書き文字の認識</a>
+<ul>
+<li><a href="#mnistデータベース">MNISTデータベース</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>
