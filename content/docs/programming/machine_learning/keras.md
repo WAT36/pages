@@ -12,3 +12,7 @@ weight: 1
 ライブラリの例としては、Googleが開発したTensorflowやKerasなどが有名である。
 
 ここでは、例としてKerasを使ってニューラルネットワークを実行してみよう。
+
+と言ってもここに書くと長くなるので、とりあえずコードと説明をまとめたNotebookを[こちら](https://github.com/WAT36/python/blob/master/machine_learning/deeplearning/keras.ipynb)に記載しておくのでご参照を。
+
+(もうちょっと何か書きたい・・)
