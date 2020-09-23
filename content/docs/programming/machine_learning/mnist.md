@@ -24,5 +24,22 @@ from keras.datasets import mnist
 
 ここで、x_trainには60000*28*28の配列変数で、0~255の値をとるデータが入る。また、y_trainには60000*1の配列変数で、画像の認識結果である0-9の値が入る。
 
+例として、データを一つとって図示してみよう。以下にその過程を示す。
 
+```python
+#最初のデータだけ図示
+x0 = x_train[0]
+
+# ヒートマップにして表示
+plt.figure()
+plt.imshow(x0,interpolation='nearest',vmin=0,vmax=255,cmap='jet')
+plt.show()
+
+#ちなみに認識結果（目標値）は
+print('↑の目標値：{0}'.format(y_train[0]))
+```
+
+実行結果
+
+<img src="/img/datascience/Figure_49.png" width=100%>
 
