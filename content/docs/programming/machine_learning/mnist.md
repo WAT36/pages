@@ -85,7 +85,18 @@ model.add(Dense(16,input_dim=784,activation='sigmoid'))
 model.add(Dense(10,activation='softmax'))
 #学習方法の設定。目的関数を交差エントロピー誤差、学習の評価として正答率を計算、アルゴリズムをAdamに設定
 model.compile(loss='categorical_crossentropy',optimizer=Adam(),metrics=['accuracy'])
+
+#学習を行わせる。trainは訓練データ、全データを学習に使う回数:10、validation_dataにテストデータ。(verbose=1で進行状況表示)
+history=model.fit(x_train,y_train,epochs=10,batch_size=1000,verbose=1,validation_data=(x_test,y_test))
+#学習の評価値を出力
+score=model.evaluate(x_test,y_test,verbose=0)
 ```
 
+ここで、学習を行う(model.fit)時は交差エントロピー誤差を勾配法を用いて最小値を計算しにいくのだが、勾配法だと局所解に嵌った場合抜け出せなくなり、正しい最小値が得られないという場合がありうる。
 
+そこで、別の方法として、**確率的勾配法**という手法を用いてここでは計算を行なっている。
+
+確率的勾配法とは、複数個のデータセットを用いて勾配を計算しパラメータを更新する方法である。これにより、場合によっては局所解から脱出できることがある。
+
+確率的勾配法で用いるデータセットの個数として、コードではbatch_size=1000(1000個)と指定している。
 
