@@ -100,3 +100,36 @@ score=model.evaluate(x_test,y_test,verbose=0)
 
 確率的勾配法で用いるデータセットの個数として、コードではbatch_size=1000(1000個)と指定している。
 
+
+次に、学習させたモデルを用いてテストデータを何個か評価させてみよう。
+
+評価させるためのコードを以下に示す。
+
+```python
+y=model.predict(x_test)
+plt.figure(2,figsize=(12,8))
+plt.gray()
+for i in range(12*8):
+    plt.subplot(8,12,i+1)
+    x=x_test[i,:]
+    x=x.reshape(28,28)
+    plt.pcolor(1-x)
+    wk=y[i,:]
+    prediction=np.argmax(wk)
+    plt.text(22,25.5,"%d" % prediction, fontsize=12)
+    if prediction != np.argmax(y_test[i,:]):
+        plt.plot([0,27],[1,1],color='red',linewidth=5)
+    else:
+        plt.plot([0,27],[1,1],color='yellow',linewidth=5)
+    plt.xlim(0,27)
+    plt.ylim(27,0)
+    plt.xticks([],"")
+    plt.yticks([],"")
+
+plt.show()  
+```
+
+実行結果
+
+<img src="/img/datascience/Figure_50.png" width=100%>
+
