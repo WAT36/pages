@@ -151,3 +151,28 @@ ReLU関数とは以下の式で表される関数である。
         0 & (otherwise)
     \end{cases}
 {{< /katex >}}
+
+シグモイド関数は入力値がどのように変化しても常に1に近い値を出力するので、入力の変化が出力に反映されにくくなる。
+
+その結果、誤差関数の偏微分が0に近い値になり、勾配法による学習が遅くなるという欠点があった。
+
+そのため、このようなReLU関数を用いることで、その問題を解決することが可能になる。
+
+では、先程のコードで、中間層の活性化関数を'relu'に変えて実行してみよう。
+
+
+```python
+#モデルの定義
+model = Sequential()
+#784次元を入力とする16個の中間層を定義する。活性化関数はReLU関数
+model.add(Dense(16,input_dim=784,activation='relu'))
+#10個の出力層を定義する。活性化関数はソフトマックス関数
+model.add(Dense(10,activation='softmax'))
+#学習方法の設定。目的関数を交差エントロピー誤差、学習の評価として正答率を計算、アルゴリズムをAdamに設定
+model.compile(loss='categorical_crossentropy',optimizer=Adam(),metrics=['accuracy'])
+```
+
+こちらで先ほどと同じようにテストデータを評価すると以下のようになる。
+
+<img src="/img/datascience/Figure_51.png" width=100%>
+

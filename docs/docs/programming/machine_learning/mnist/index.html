@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.cdd67477075e787bb38d51958aa6c2cec752a3829704d66ed69214836bcddb40.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.dc81cc238a0bb6e02da04bc0898e480e5ff15bf3255aa07b69534880b7211909.js"></script>
 
 
 
@@ -260,6 +260,25 @@ plt<span style="color:#f92672">.</span>show()  </code></pre></div>
 </p>
 
 
+
+<p>シグモイド関数は入力値がどのように変化しても常に1に近い値を出力するので、入力の変化が出力に反映されにくくなる。</p>
+
+<p>その結果、誤差関数の偏微分が0に近い値になり、勾配法による学習が遅くなるという欠点があった。</p>
+
+<p>そのため、このようなReLU関数を用いることで、その問題を解決することが可能になる。</p>
+
+<p>では、先程のコードで、中間層の活性化関数を&rsquo;relu&rsquo;に変えて実行してみよう。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#モデルの定義</span>
+model <span style="color:#f92672">=</span> Sequential()
+<span style="color:#75715e">#784次元を入力とする16個の中間層を定義する。活性化関数はReLU関数</span>
+model<span style="color:#f92672">.</span>add(Dense(<span style="color:#ae81ff">16</span>,input_dim<span style="color:#f92672">=</span><span style="color:#ae81ff">784</span>,activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;relu&#39;</span>))
+<span style="color:#75715e">#10個の出力層を定義する。活性化関数はソフトマックス関数</span>
+model<span style="color:#f92672">.</span>add(Dense(<span style="color:#ae81ff">10</span>,activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;softmax&#39;</span>))
+<span style="color:#75715e">#学習方法の設定。目的関数を交差エントロピー誤差、学習の評価として正答率を計算、アルゴリズムをAdamに設定</span>
+model<span style="color:#f92672">.</span>compile(loss<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;categorical_crossentropy&#39;</span>,optimizer<span style="color:#f92672">=</span>Adam(),metrics<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;accuracy&#39;</span>])</code></pre></div>
+<p>こちらで先ほどと同じようにテストデータを評価すると以下のようになる。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_51.png" width=100%></p>
 </article>
 
       
@@ -267,7 +286,7 @@ plt<span style="color:#f92672">.</span>show()  </code></pre></div>
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/35839e76e1fcab3b7aa3b8bedf4b8126593d581c" title='Last modified Sep 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/27e0d1272bbb30ad536f54329c2bd8b3e8f8ca3d" title='Last modified Sep 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 26, 2020
     </a>
   </div>
