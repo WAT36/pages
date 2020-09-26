@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.dc81cc238a0bb6e02da04bc0898e480e5ff15bf3255aa07b69534880b7211909.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.15ccc95d8bf22b9231fd7000a71f34cfd443c1042ba4025214dc13bee5bc7b95.js"></script>
 
 
 
@@ -131,14 +131,16 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="mnistデータベース">MNISTデータベース</h2>
 
-<p>手書き文字のデータは、<strong>MNIST</strong>と呼ばれるなデータセットを利用する。</p>
+<p>手書き文字のデータは、<strong>MNIST</strong>と呼ばれるデータセットを利用する。</p>
 
 <p>MNISTデータセットは、Kerasから以下のように利用することができる。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> keras.datasets <span style="color:#f92672">import</span> mnist
 
 <span style="color:#75715e"># trainに60000個の訓練用データ、testに10000個のテストデータが入る</span>
 (x_train,y_train),(x_test,y_test) <span style="color:#f92672">=</span> mnist<span style="color:#f92672">.</span>load_data()</code></pre></div>
-<p>ここで、x_trainには60000*28*28の配列変数で、0~255の値をとるデータが入る。また、y_trainには60000*1の配列変数で、画像の認識結果である0-9の値が入る。</p>
+<p>ここで、x_trainには60000*28*28の配列変数で、0~255の値をとるデータが入る。</p>
+
+<p>また、y_trainには60000*1の配列変数で、画像の認識結果である0-9の値が入る。</p>
 
 <p>例として、データを一つとって図示してみよう。以下にその過程を示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#最初のデータだけ図示</span>
@@ -153,7 +155,7 @@ plt<span style="color:#f92672">.</span>show()
 <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;↑の目標値：{0}&#39;</span><span style="color:#f92672">.</span>format(y_train[<span style="color:#ae81ff">0</span>]))</code></pre></div>
 <p>実行結果</p>
 
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_49.png" width=100%></p>
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_49.png" width=50%></p>
 
 <h2 id="２層フィードフォワードニューラルネットワークでの学習">２層フィードフォワードニューラルネットワークでの学習</h2>
 
@@ -231,9 +233,9 @@ plt<span style="color:#f92672">.</span>show()  </code></pre></div>
 
 <p><img src="https://WAT36.github.io/pages/img/datascience/Figure_50.png" width=100%></p>
 
-<p>この結果を見ると、うまく認識されていないケースが多いように見える。</p>
+<p>黄線が正しく認識できたデータ、赤線が認識できなかったデータを表しているが、この結果を見ると、うまく認識されていないケースが多いように見える。</p>
 
-<p>そのため、どこか改良してみることを考えてみよう。ここでは、途中の活性化関数を別のものにしてみることを考えてみよう。</p>
+<p>そのため、どこか改良してみることを考えてみよう。ここでは、途中の活性化関数を別のものにさせてみる。</p>
 
 <h2 id="relu活性化関数">ReLU活性化関数</h2>
 
@@ -279,6 +281,10 @@ model<span style="color:#f92672">.</span>compile(loss<span style="color:#f92672"
 <p>こちらで先ほどと同じようにテストデータを評価すると以下のようになる。</p>
 
 <p><img src="https://WAT36.github.io/pages/img/datascience/Figure_51.png" width=100%></p>
+
+<p>少しだけではあるが精度は良くなったように見える。だが、もう少し精度を上げることはできないだろうか？</p>
+
+<p>ここで少し機械学習とはそれるが、画像処理の技術を適用することを次章で考えてみる。</p>
 </article>
 
       
@@ -286,7 +292,7 @@ model<span style="color:#f92672">.</span>compile(loss<span style="color:#f92672"
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/27e0d1272bbb30ad536f54329c2bd8b3e8f8ca3d" title='Last modified Sep 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/8569c300b24dd14becff0826f939d06658f26656" title='Last modified Sep 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 26, 2020
     </a>
   </div>
