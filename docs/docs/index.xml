@@ -714,6 +714,15 @@
     </item>
     
     <item>
+      <title>フィルターと畳み込みニューラルネットワーク</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/filter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/filter/</guid>
+      <description>フィルターと畳み込みニューラルネットワーク 先述の手書き文字認識の章で、活性化関数を変えるなどして認識精度の向上を図ったが、もっと精度を上げる</description>
+    </item>
+    
+    <item>
       <title>フィールド(クラス変数・インスタンス変数)</title>
       <link>https://WAT36.github.io/pages/docs/programming/class_func/field/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1494,15 +1503,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/linear_model/</guid>
       <description>直線モデル 回帰問題の手法の一つである直線モデルについて。 教師あり学習 で与えられた入力と結果から関係式を算出すると言うことを述べたが、 必ずしも</description>
-    </item>
-    
-    <item>
-      <title>空間フィルター</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/filter/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/filter/</guid>
-      <description>空間フィルター 先述の手書き文字認識の章で、活性化関数を変えるなどして認識精度の向上を図ったが、もっと精度を上げるための方法はないだろうか？ こ</description>
     </item>
     
     <item>

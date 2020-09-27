@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>空間フィルター | WAT Notes</title>
+<title>フィルターと畳み込みニューラルネットワーク | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.663be6ed4bd7582e026437bdc5991d6740cd49eed1d5a17734dd0024f88b5477.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.c01cc61d7057f415cca6cd4e55c291a9d2b1480f7e9975a4cee3310d4c08fada.js"></script>
 
 
 
@@ -119,19 +119,21 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>空間フィルター</strong>
+  <strong>フィルターと畳み込みニューラルネットワーク</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="空間フィルター">空間フィルター</h1>
+<h1 id="フィルターと畳み込みニューラルネットワーク">フィルターと畳み込みニューラルネットワーク</h1>
 
 <p>先述の手書き文字認識の章で、活性化関数を変えるなどして認識精度の向上を図ったが、もっと精度を上げるための方法はないだろうか？</p>
 
 <p>ここで、先述の方法では、入力画像を１次元のベクトルに変換して学習を行わせており、２次元画像の空間の情報を考慮していないというところに着目する。（要は、画像の縦方向の関連性、画像の直線や曲線と言ったような画像の情報を見ていないということ。）</p>
 
 <p>画像の空間の情報を取り出す方法として、<strong>空間フィルター</strong>という画像処理の手法がある。</p>
+
+<h1 id="空間フィルター">空間フィルター</h1>
 
 <p>空間フィルターは、２次元の行列で表される。フィルターを画像の一部分に当て嵌め、画像の一部分とフィルターとの要素の積の和を、画像をスライドさせながら画像の全領域で求めていく。</p>
 
@@ -194,6 +196,10 @@ plt<span style="color:#f92672">.</span>show()</code></pre></div>
 <p>実行結果</p>
 
 <p><img src="https://WAT36.github.io/pages/img/datascience/Figure_53.png" width=75%></p>
+
+<h1 id="畳み込みニューラルネットワーク">畳み込みニューラルネットワーク</h1>
+
+<p>フィルターを使ったニューラルネットワークを<strong>畳み込みニューラルネットワーク</strong>、または<strong>コンボリューションニューラルネットワーク (Convolution Neural Network:CNN)</strong>と呼ぶ。</p>
 </article>
 
       
@@ -201,7 +207,7 @@ plt<span style="color:#f92672">.</span>show()</code></pre></div>
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/51eaeb0644770673263dc471ddbbf4ed073bbce4" title='Last modified Sep 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/772095a9794835446e849c2e1f7c0595a5e23043" title='Last modified Sep 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 27, 2020
     </a>
   </div>
@@ -217,7 +223,9 @@ plt<span style="color:#f92672">.</span>show()</code></pre></div>
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
+<li><a href="#フィルターと畳み込みニューラルネットワーク">フィルターと畳み込みニューラルネットワーク</a></li>
 <li><a href="#空間フィルター">空間フィルター</a></li>
+<li><a href="#畳み込みニューラルネットワーク">畳み込みニューラルネットワーク</a></li>
 </ul>
 </nav>
   </aside>
