@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.36c837f74abe40e7fdb6f32b01379a91667ca875084d9cc1684630ab08f0023f.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.37e27cb07890aa9b71c939ac06e26026070b720468416746bb3c4579fc046be6.js"></script>
 
 
 
@@ -145,9 +145,29 @@ https://github.com/alex-shpak/hugo-book
 [[<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span>]
  [<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span>]
  [<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span>]]</code></pre></div>
-<p>空間フィルターを、以下のように画像の全要素にスライドさせながら計算していき、その和を計算して値を算出していく。</p>
+<p>畳み込み演算を、以下のように画像の全要素にスライドさせながら計算していき、その和を計算して値を算出していく。</p>
 
 <p><img src="https://WAT36.github.io/pages/img/datascience/Figure_52.png" width=75%></p>
+
+<p>画像の位置(i,j)のピクセル値をx(i,j)、3*3のフィルターをh(i,j)とした場合、畳み込み演算で得られる値をg(i,j)とおくと、以下のような式が成り立つ。</p>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+<p class="katex">
+  $$ 
+\tag{1}  g(i,j) = \sum_{u=-1}^{1} \sum_{v=-1}^{1} x(i+u,j+v) h(u+1,v+1)
+ $$
+</p>
+
+
+
+<p>では、先程の画像にこのフィルターを適用して図示してみよう。以下にコードを示す。</p>
 </article>
 
       
@@ -155,7 +175,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/b180f4139f50aef95b3468bdb3a885346ace876d" title='Last modified Sep 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/467c5fdb0741b8643eb83e7d230f6948d6e92d0f" title='Last modified Sep 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 27, 2020
     </a>
   </div>
