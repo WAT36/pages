@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.c01cc61d7057f415cca6cd4e55c291a9d2b1480f7e9975a4cee3310d4c08fada.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.1753335d99582c9bb3385dbd830340f8fd1bb11473a8e16759061fb86ef650d9.js"></script>
 
 
 
@@ -197,9 +197,17 @@ plt<span style="color:#f92672">.</span>show()</code></pre></div>
 
 <p><img src="https://WAT36.github.io/pages/img/datascience/Figure_53.png" width=75%></p>
 
+<p>ここで、フィルターを適用すると元の画像の一番外側の行列のデータが算出されず失われるという欠点がある。</p>
+
+<p>そこで、一番外側のデータも算出させるために、元の画像データの外側に一つ分からのデータを追加させておく。こうすることで、元の画像データ全ての要素にフィルターが適用される。この追加する一列分のからのデータのことを<strong>パディング</strong>という。例を以下に示す。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_54.png" width=75%></p>
+
 <h1 id="畳み込みニューラルネットワーク">畳み込みニューラルネットワーク</h1>
 
 <p>フィルターを使ったニューラルネットワークを<strong>畳み込みニューラルネットワーク</strong>、または<strong>コンボリューションニューラルネットワーク (Convolution Neural Network:CNN)</strong>と呼ぶ。</p>
+
+<p>フィルターを利用することで様々な画像処理が行えるが、このCNNでは、フィルター自体を学習させる。</p>
 </article>
 
       
@@ -207,7 +215,7 @@ plt<span style="color:#f92672">.</span>show()</code></pre></div>
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/772095a9794835446e849c2e1f7c0595a5e23043" title='Last modified Sep 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/b6b8ef8cce39cbd5f420c16399893198792b26a3" title='Last modified Sep 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 27, 2020
     </a>
   </div>
