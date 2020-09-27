@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>オーバーフィッティング(過学習) | WAT Notes</title>
+<title>空間フィルター | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -54,7 +54,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2foverfitting\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2f filter\2f "] {
       color: #004ed0;
   }
   </style>
@@ -119,36 +119,17 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>オーバーフィッティング(過学習)</strong>
+  <strong>空間フィルター</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="オーバーフィッティング-過学習">オーバーフィッティング(過学習)</h1>
-
-<p>先述の<a href="https://WAT36.github.io/pages/docs/programming/machine_learning/linear_basis_function/">線形基底関数モデル</a>において、Mの値を大きくすればするほど、誤差が小さくなるような予測式が得られる事が解った。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_22.png" width=150%></p>
-
-<p>しかし、ここで誤差が小さくなるというのは既に入力している入力値・実測値に対してであり、未知の入力値に対しても精度の高い予測値が得られるか？ということを考えると、上図でより高いMで算出した予測式では精度が悪くなるだろうというのは明らかである。</p>
-
-<p>このように、既知の入力値に対しては高精度だが、未知の入力値に対しては精度が悪い(汎用能力が低い)状態のことを<strong>過学習(オーバーフィッティング)</strong>という。</p>
-
-<p>では過学習の状態まで至らず、汎用能力も高くなるような最適なMの値を求めるにはどうしたら良いのだろうか？</p>
-
-<p>その方法について次章から述べていく。</p>
+<h1 id="空間フィルター">空間フィルター</h1>
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/39d83a9e7c134a024c2f408f4d8b153aed6c9f54" title='Last modified Apr 25, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 25, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
@@ -157,6 +138,14 @@ https://github.com/alex-shpak/hugo-book
     </div>
     
   
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#空間フィルター">空間フィルター</a></li>
+</ul>
+</nav>
+  </aside>
 
 
 
