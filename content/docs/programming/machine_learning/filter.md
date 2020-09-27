@@ -41,3 +41,32 @@ weight: 1
 
 では、先程の画像にこのフィルターを適用して図示してみよう。以下にコードを示す。
 
+```python
+#フィルター適用
+def do_filter(x,f):
+    filtered=np.zeros((len(x),len(x[0])))
+    for i in range(len(x)):
+        if(i==0 or i==len(x)-1):
+            continue
+        else:
+            for j in range(len(x[0]-3)):
+                if(j==0 or j==len(x[0])-1):
+                    continue
+                else:
+                    gij=0
+                    for u in range(-1,2):
+                        for v in range(-1,2):
+                            gij+=x[i+u][j+v]*f[u+1][v+1]
+                    filtered[i][j]=gij
+    return filtered
+
+#図示
+x0_filtered=do_filter(x0,filter)
+plt.figure()
+plt.imshow(x0_filtered,interpolation='nearest',vmin=0,vmax=255,cmap='binary')
+plt.show()
+```
+
+実行結果
+
+<img src="/img/datascience/Figure_53.png" width=75%>
