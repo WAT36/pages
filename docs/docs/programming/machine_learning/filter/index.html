@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.4b28a4fd316f07e4a6d459fa38c2240898e8e7e9b6c4c9abd02a0d6bafaf0cc1.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.c714d8162956265d5dcea43a768e8ecfc04da753b6ae92f42f9c9e058edbef3c.js"></script>
 
 
 
@@ -126,10 +126,35 @@ https://github.com/alex-shpak/hugo-book
 <article class="markdown">
 
 <h1 id="空間フィルター">空間フィルター</h1>
-</article>
+
+<p>先述の手書き文字認識の章で、活性化関数を変えるなどして認識精度の向上を図ったが、もっと精度を上げるための方法はないだろうか？</p>
+
+<p>ここで、先述の方法では、入力画像を１次元のベクトルに変換して学習を行わせており、２次元画像の空間の情報を考慮していないというところに着目する。（要は、画像の縦方向の関連性、画像の直線や曲線と言ったような画像の情報を見ていないということ。）</p>
+
+<p>画像の空間の情報を取り出す方法として、<strong>空間フィルター</strong>という画像処理の手法がある。</p>
+
+<p>空間フィルターは、２次元の行列で表される。フィルターを画像の一部分に当て嵌め、画像の一部分とフィルターとの要素の積の和を、画像をスライドさせながら画像の全領域で求めていく。</p>
+
+<p>このような計算を、<strong>畳み込み演算 (Convolution)</strong>と呼ぶ。</p>
+
+<p>例として、以下のような空間フィルターを定義し、適用してみよう。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#空間フィルター</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">&gt;&gt;&gt;</span> filter <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>],[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>],[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>]])
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(filter)
+[[<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span>]
+ [<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span>]
+ [<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span>]]</code></pre></div></article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/8183e39e8c93876c5f66b045162bb0e6f9171476" title='Last modified Sep 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 27, 2020
+    </a>
+  </div>
   
 </div>
 
