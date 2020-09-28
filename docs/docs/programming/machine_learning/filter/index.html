@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.6acbc84ca9f904cc7ac227d6c3af9b4f680418994bf3b9f21fff974ffe572bcf.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.b3388b1727ae455a3489e72ebc63ccec16bda065813bbca900841f7a45f2f9bf.js"></script>
 
 
 
@@ -133,7 +133,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p>画像の空間の情報を取り出す方法として、<strong>空間フィルター</strong>という画像処理の手法がある。</p>
 
-<h1 id="空間フィルター">空間フィルター</h1>
+<h2 id="空間フィルター">空間フィルター</h2>
 
 <p>空間フィルターは、２次元の行列で表される。フィルターを画像の一部分に当て嵌め、画像の一部分とフィルターとの要素の積の和を、画像をスライドさせながら画像の全領域で求めていく。</p>
 
@@ -205,11 +205,17 @@ plt<span style="color:#f92672">.</span>show()</code></pre></div>
 
 <p>また、画像の全要素に適用するためにフィルターを１要素ずつずらしていたが、これは2でも3でも任意の間隔でずらすことができる。この間隔のことを<strong>ストライド</strong>という。</p>
 
-<h1 id="畳み込みニューラルネットワーク">畳み込みニューラルネットワーク</h1>
+<h2 id="畳み込みニューラルネットワーク">畳み込みニューラルネットワーク</h2>
 
 <p>フィルターを使ったニューラルネットワークを<strong>畳み込みニューラルネットワーク</strong>、または<strong>コンボリューションニューラルネットワーク (Convolution Neural Network:CNN)</strong>と呼ぶ。</p>
 
 <p>フィルターを利用することで様々な画像処理が行えるが、このCNNでは、フィルター自体を学習させる。</p>
+
+<p>入力として、元となる入力画像と、フィルターを何種か用意する。</p>
+
+<p>そして、入力画像を用意したフィルター全てで適用する。その結果、入力は入力画像の要素数×フィルターの枚数となる。</p>
+
+<p>それらをニューラルネットワークの入力層に入力し、最終的に10個の出力層に出力させる。</p>
 </article>
 
       
@@ -217,7 +223,7 @@ plt<span style="color:#f92672">.</span>show()</code></pre></div>
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/12154e2201c83d5846adf4bc45941e422cb3591d" title='Last modified Sep 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/12f5585a907351031439ae96a5095e4af4a5ea71" title='Last modified Sep 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 27, 2020
     </a>
   </div>
@@ -233,9 +239,11 @@ plt<span style="color:#f92672">.</span>show()</code></pre></div>
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#フィルターと畳み込みニューラルネットワーク">フィルターと畳み込みニューラルネットワーク</a></li>
+<li><a href="#フィルターと畳み込みニューラルネットワーク">フィルターと畳み込みニューラルネットワーク</a>
+<ul>
 <li><a href="#空間フィルター">空間フィルター</a></li>
 <li><a href="#畳み込みニューラルネットワーク">畳み込みニューラルネットワーク</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>
