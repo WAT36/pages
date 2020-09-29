@@ -569,6 +569,15 @@
     </item>
     
     <item>
+      <title>フィルターと畳み込みニューラルネットワーク</title>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/filter-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/filter-2/</guid>
+      <description>フィルターと畳み込みニューラルネットワーク 先述の手書き文字認識の章で、活性化関数を変えるなどして認識精度の向上を図ったが、もっと精度を上げる</description>
+    </item>
+    
+    <item>
       <title>フィールド(クラス変数・インスタンス変数)</title>
       <link>https://WAT36.github.io/pages/docs/programming/class_func/field/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
