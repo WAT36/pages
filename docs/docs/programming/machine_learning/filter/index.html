@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.1b80730adfc79c3a9f46d2ca55990e527ecef05dbfdbbb6f65c04ad72ae338d2.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.1c17497fad4286e896a2d3bf39675c7fb76f23b56ba11ff4a5f8bd62a8732431.js"></script>
 
 
 
@@ -139,7 +139,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p>このような計算を、<strong>畳み込み演算 (Convolution)</strong>と呼ぶ。</p>
 
-<p>例として、以下のような空間フィルターを定義し、適用してみよう。</p>
+<p>例として、以下のような(縦のエッジを強調する)空間フィルターを定義し、適用してみよう。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#空間フィルター</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 <span style="color:#f92672">&gt;&gt;&gt;</span> filter <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>],[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>],[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>]])
@@ -151,7 +151,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p><img src="https://WAT36.github.io/pages/img/datascience/Figure_52.png" width=75%></p>
 
-<p>画像の位置(i,j)のピクセル値をx(i,j)、3*3のフィルターをh(i,j)とした場合、畳み込み演算で得られる値をg(i,j)とおくと、以下のような式が成り立つ。</p>
+<p>この例から、画像の位置(i,j)のピクセル値をx(i,j)、3*3のフィルターをh(i,j)とした場合、畳み込み演算で得られる値をg(i,j)とおくと、以下のような式が成り立つ。</p>
 
 
 
@@ -195,11 +195,11 @@ plt<span style="color:#f92672">.</span>imshow(x0_filtered,interpolation<span sty
 plt<span style="color:#f92672">.</span>show()</code></pre></div>
 <p>実行結果</p>
 
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_53.png" width=75%></p>
+<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_53.png" width=50%></p>
 
 <p>ここで、フィルターを適用すると元の画像の一番外側の行列のデータが算出されず失われるという欠点がある。</p>
 
-<p>そこで、一番外側のデータも算出させるために、元の画像データの外側に一つ分からのデータを追加させておく。こうすることで、元の画像データ全ての要素にフィルターが適用される。この追加する一列分のからのデータのことを<strong>パディング</strong>という。例を以下に示す。</p>
+<p>そこで、一番外側のデータも算出させるために、元の画像データの外側に一つ分からのデータを追加させておく。こうすることで、元の画像データ全ての要素にフィルターが適用される。この追加する一列分の空のデータのことを<strong>パディング</strong>という。例を以下に示す。</p>
 
 <p><img src="https://WAT36.github.io/pages/img/datascience/Figure_54.png" width=75%></p>
 
@@ -240,6 +240,8 @@ score<span style="color:#f92672">=</span>model2<span style="color:#f92672">.</sp
 <p>先述までの結果と比べると、遥かに分類精度が良くなっていることがわかる。</p>
 
 <p>空間フィルター、畳み込みニューラルネットワークにより空間情報を取り入れることにより、分類精度が向上する。この技術は、手書き数字だけでなく、その他の画像認識にも応用可能である。</p>
+
+<p>なお、前章と合わせた一連の実装例を<a href="https://github.com/WAT36/python/blob/master/machine_learning/deeplearning/mnist.ipynb">こちら</a>のNotebookに記載したので、参考として載せておく。</p>
 </article>
 
       
@@ -247,7 +249,7 @@ score<span style="color:#f92672">=</span>model2<span style="color:#f92672">.</sp
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/6b2f263eb6aea12d31d6778ac3f2ac56e6c55467" title='Last modified Sep 29, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/567e5cbeaf41269fe65597640c208bacd46464c0" title='Last modified Sep 29, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 29, 2020
     </a>
   </div>
