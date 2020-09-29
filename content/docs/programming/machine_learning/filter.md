@@ -92,3 +92,27 @@ plt.show()
 そして、入力画像を用意したフィルター全てで適用する。その結果、入力は入力画像の要素数×フィルターの枚数となる。
 
 それらをニューラルネットワークの入力層に入力し、最終的に10個の出力層に出力させる。
+
+一連の流れをKerasで実装した例を以下に示す。
+
+```python
+#CNN
+model2=Sequential()
+#コンボリューション層定義、3*3のフィルターを8枚使用、パディング使用(same)、input_shape:入力画像のサイズ
+model2.add(Conv2D(8,(3,3),padding='same',input_shape=(28,28,1),activation='relu'))
+#コンボリューション層の出力の次元を(バッチ数、フィルター数*出力画像縦幅*出力画像横幅)にさせる
+model2.add(Flatten())
+#出力層定義、10個で活性化関数はソフトマックス関数
+model2.add(Dense(10,activation='softmax'))
+model2.compile(loss='categorical_crossentropy',optimizer=Adam(),metrics=['accuracy'])
+
+history=model2.fit(x_train,y_train,epochs=20,batch_size=1000,verbose=1,validation_data=(x_test,y_test))
+score=model2.evaluate(x_test,y_test,verbose=0)
+
+print('交差エントロピー誤差:',score[0])
+print('正答率:',score[1])
+```
+
+このモデルで、先述の時と同じようにテストデータを評価すると以下のようになる。
+
+<img src="/img/datascience/Figure_55.png" width=75%>
