@@ -3,7 +3,6 @@ title: "動的計画法の応用題"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
-bookToc: false
 ---
 
 # 動的計画法の応用題
@@ -140,6 +139,8 @@ for i in range(n):
 
 <hr>
 
+### 値が大きい時
+
 続いて、例その２。
 
 ```
@@ -206,14 +207,36 @@ n種類の数aiがそれぞれmi個ずつあります。これらの中からい
 
 dp[i][j]:i番目までの数値でjが作れるか
 
-i番目までの数値でjを作るには、i-1番目までで j-α×(i番目の数値) が作れる必要がある。(αは0以上の整数)
+i番目までの数値でjを作るには、i-1番目までの数値で j-α×(i番目の数値) が作れる必要がある。(αは0以上の整数)
 
 したがって、漸化式は以下のようになる。
 
 {{< katex  >}}
 dp[i][j] = 
 \begin{cases}
-    True  & (dp[i-1][j-k*a_i] = True となるk (0 \leqq k \leqq mi かつ k a_i \leqq j) が存在する場合)  \\
+    True  & (dp[i-1][j-k*a_i] = True となるk (0 \leqq k \leqq m_{i} かつ k a_i \leqq j) が存在する場合)  \\
     False & (otherwise)
 \end{cases}
 {{< /katex >}}
+
+コード例は以下の通り。
+
+```python
+n=3
+a=[3,5,8]
+m=[3,2,2]
+K=17
+
+dp=[[False for _ in range(K+1)] for _ in range(n+1)]
+dp[0][0]=True
+
+for i in range(n):
+    for j in range(K+1):
+        if(dp[i][j]):
+            k=0
+            while j+k*a[i]<=K:
+                dp[i+1][j+k*a[i]]=True
+                k+=1
+
+print(dp[n][K])
+```

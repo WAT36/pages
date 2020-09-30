@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.3a80d6b753653c32c030f60c5fc5a41e6fbaf87455dc13bcfbf72faaaa2da238.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.7feb25d6604aae62af16a92e256a80b3536dd436765a94e397b060e8490d932d.js"></script>
 
 
 
@@ -261,6 +261,8 @@ dp<span style="color:#f92672">=</span>[[<span style="color:#ae81ff">0</span> <sp
             dp[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][j]<span style="color:#f92672">=</span>max(dp[i][j],dp[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">-</span>w[i]]<span style="color:#f92672">+</span>v[i])</code></pre></div>
 <hr>
 
+<h3 id="値が大きい時">値が大きい時</h3>
+
 <p>続いて、例その２。</p>
 
 <pre><code>重さがwi、価値がviであるようなn個の品物があった時、重さの総和がWを超えないように品物を選ぶ時の、価値の総和の最大値を求めよ。
@@ -326,7 +328,7 @@ dp[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]<s
 
 <p>dp[i][j]:i番目までの数値でjが作れるか</p>
 
-<p>i番目までの数値でjを作るには、i-1番目までで j-α×(i番目の数値) が作れる必要がある。(αは0以上の整数)</p>
+<p>i番目までの数値でjを作るには、i-1番目までの数値で j-α×(i番目の数値) が作れる必要がある。(αは0以上の整数)</p>
 
 <p>したがって、漸化式は以下のようになる。</p>
 
@@ -336,22 +338,40 @@ dp[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]<s
   $$ 
 dp[i][j] = 
 \begin{cases}
-    True  & (dp[i-1][j-k*a_i] = True となるk (0 \leqq k \leqq mi かつ k a_i \leqq j) が存在する場合)  \\
+    True  & (dp[i-1][j-k*a_i] = True となるk (0 \leqq k \leqq m_{i} かつ k a_i \leqq j) が存在する場合)  \\
     False & (otherwise)
 \end{cases}
  $$
 </p>
 
 
-</article>
+
+<p>コード例は以下の通り。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">n<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>
+a<span style="color:#f92672">=</span>[<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">8</span>]
+m<span style="color:#f92672">=</span>[<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>]
+K<span style="color:#f92672">=</span><span style="color:#ae81ff">17</span>
+
+dp<span style="color:#f92672">=</span>[[False <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(K<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)]
+dp[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]<span style="color:#f92672">=</span>True
+
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(K<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">if</span>(dp[i][j]):
+            k<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+            <span style="color:#66d9ef">while</span> j<span style="color:#f92672">+</span>k<span style="color:#f92672">*</span>a[i]<span style="color:#f92672">&lt;=</span>K:
+                dp[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">+</span>k<span style="color:#f92672">*</span>a[i]]<span style="color:#f92672">=</span>True
+                k<span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>
+
+<span style="color:#66d9ef">print</span>(dp[n][K])</code></pre></div></article>
 
       
 <div class="book-footer justify-between">
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/504c23edc2c0d276c67f890d85ccca8d23dec243" title='Last modified Aug 16, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 16, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/184a0091929b80f1951f20fbc60cef3559dda0f6" title='Last modified Sep 30, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 30, 2020
     </a>
   </div>
   
@@ -362,6 +382,22 @@ dp[i][j] =
     </div>
     
   
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#動的計画法の応用題">動的計画法の応用題</a>
+<ul>
+<li><a href="#最長共通部分列問題">最長共通部分列問題</a></li>
+<li><a href="#個数制限なしナップザック問題">個数制限なしナップザック問題</a>
+<ul>
+<li><a href="#値が大きい時">値が大きい時</a></li>
+</ul></li>
+<li><a href="#個数制限付き部分和問題">個数制限付き部分和問題</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
 
 
 
