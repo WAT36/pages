@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.db3ba7ab3bbca1083222e2b3b955818d71382019fca10fa23af6f41bd978b78e.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.bda7b0c27eeefff2c81bb9bc59f3008b3c1b6b17b380816d639bbb3d0c8957ed.js"></script>
 
 
 
@@ -433,6 +433,49 @@ dp<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0</span> <spa
 <p>これに動的計画法を適用してみよう。リストdpを以下のように定める。</p>
 
 <p>dp[i][j]:jのi分割の総数</p>
+
+<p>ここでjのi分割の個数は、j-iのi分割にそれぞれ1を足したパターン、及びjのi-1分割に1を追加したパターンとみることができるので、以下のように表せられる。</p>
+
+
+
+<p class="katex">
+  $$ 
+dp[i][j] = dp[i][j-1] + dp[i-1][j]
+ $$
+</p>
+
+
+
+<p>例として、n,m≦10の場合でどうなるかを見てみよう。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">n<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
+m<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
+M<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span><span style="color:#f92672">**</span><span style="color:#ae81ff">9</span>)<span style="color:#f92672">+</span><span style="color:#ae81ff">7</span>
+
+dp<span style="color:#f92672">=</span>[[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(m<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)]
+
+dp[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+<span style="color:#66d9ef">print</span>(dp[<span style="color:#ae81ff">0</span>])
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,m<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">if</span>(j<span style="color:#f92672">-</span>i<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span>):
+            dp[i][j]<span style="color:#f92672">=</span>(dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j]<span style="color:#f92672">+</span>dp[i][j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])<span style="color:#f92672">%</span>M
+        <span style="color:#66d9ef">else</span>:
+            dp[i][j]<span style="color:#f92672">=</span>dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j]
+    <span style="color:#66d9ef">print</span>(dp[i])</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+[1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[1, 1, 2, 5, 9, 14, 20, 27, 35, 44, 54]
+[1, 1, 2, 5, 14, 28, 48, 75, 110, 154, 208]
+[1, 1, 2, 5, 14, 42, 90, 165, 275, 429, 637]
+[1, 1, 2, 5, 14, 42, 132, 297, 572, 1001, 1638]
+[1, 1, 2, 5, 14, 42, 132, 429, 1001, 2002, 3640]
+[1, 1, 2, 5, 14, 42, 132, 429, 1430, 3432, 7072]
+[1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 11934]
+[1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796]
+</code></pre>
 </article>
 
       
@@ -440,7 +483,7 @@ dp<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0</span> <spa
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/6b319c75ac33217bb463f9c46566a58e4d35d377" title='Last modified Oct 2, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/e6b6e82e0eade1f53e1d79b18480c16d8d0e247e" title='Last modified Oct 2, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 2, 2020
     </a>
   </div>
