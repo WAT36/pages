@@ -26,4 +26,4 @@ C言語では構造体、JavaScriptではオブジェクト(プロパティ)と�
  - 匿名（無名）クラス
  - [ラムダ式（無名関数）]({{< relref "/docs/programming/class_func/lambda.md" >}})
 - 構造体、オブジェクト
- - [オブジェクト(Javascript)]({{< relref "/docs/programming/map/object.md" >}})
+ - [オブジェクト(Javascript)]({{< relref "/docs/programming/class_func/object.md" >}})
