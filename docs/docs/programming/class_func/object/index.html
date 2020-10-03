@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.96ae31ac182f15b30f336761e56822e576c9f438d35204481d3296a70d4d04c6.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.8cece4958f83c28e690a57e0de6d2eecad0245a7cd6e968b9eed2ad8d0fa95e9.js"></script>
 
 
 
@@ -221,10 +221,52 @@ https://github.com/alex-shpak/hugo-book
 
 </div>
 
+
+<hr>
+
+<h2 id="thisキーワード">thisキーワード</h2>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" name="tabs-this" style="display: none;" id="tabs-this-0" checked="checked" />
+  <label for="tabs-this-0">
+    Javascript
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p><strong>this</strong>キーワードは、オブジェクト内でオブジェクトのプロパティを参照するときに用いる。</p>
+
+<p>但し、オブジェクトを参照するのは、thisがメソッドとして使用された場合に限るので注意。</p>
+
+<pre><code>var 変数名 = {
+    (key名1) : (value名1),
+    (key名2) : (value名2),
+    ・・・
+    (key名) : function(){
+        //メソッド
+        this.key名1  //これでvalue名1が参照できる
+    }
+}
+</code></pre>
+
+  </div>
+
+</div>
+
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/921c1ba836a47671d13d47d8820b08995dbe346e" title='Last modified Oct 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 3, 2020
+    </a>
+  </div>
   
 </div>
 
@@ -242,6 +284,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#オブジェクトの定義">オブジェクトの定義</a></li>
 <li><a href="#プロパティの書き換え">プロパティの書き換え</a></li>
 <li><a href="#プロパティの追加">プロパティの追加</a></li>
+<li><a href="#thisキーワード">thisキーワード</a></li>
 </ul></li>
 </ul>
 </nav>
