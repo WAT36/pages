@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.8316f0ae9a12073a68f5ff0e1c38f260ab3f9dd7608e3562963341dd03754358.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.0f8910694238634833ffc0fa97f371d80af76af34ab7642dd2b93333bd699818.js"></script>
 
 
 
@@ -494,7 +494,45 @@ dp[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]<s
 
 <p>高校数学Aでも出てきた重複組み合わせの問題である。これも動的計画法を適用して考えてみよう。リストdpを以下のように定めてみる。</p>
 
-<p>dp[i+1][j]:i番目までの品物からj個選ぶ組み合わせの総数</p>
+<p>dp[i][j]:i番目までの品物からj個選ぶ組み合わせの総数</p>
+
+<p>i番目までの品物からj個選ぶためには、i-1番目までの品物からj-k個選んで、i番目の品物をk個加えれば良いので、以下の漸化式が成り立つ。</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{1} dp[i][j] = \sum_{k=0}^{ min(j,a[i]) } dp[i-1][j-k] 
+ $$
+</p>
+
+
+
+<p>ここで、</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{2} \sum_{k=0}^{ min(j,a[i]) } dp[i-1][j-k] = \sum_{k=0}^{ min(j,a[i]) } dp[i-1][j-1-k] + dp[i-1][j] - dp[i-1][j-1-a_{i}] 
+ $$
+</p>
+
+
+
+<p>となるので、式(1)から式(2)は</p>
+
+
+
+<p class="katex">
+  $$ 
+\tag{3} dp[i][j] = dp[i][j-1] + dp[i-1][j] - dp[i-1][j-1-a_{i}] 
+ $$
+</p>
+
+
+
+<p>と表される。</p>
 </article>
 
       
@@ -502,7 +540,7 @@ dp[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]<s
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/b167edff2a89233f887dc39f73048c108b2f9af7" title='Last modified Oct 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/fc719cf0d1a5f149c5df0f455447748feb85ee0f" title='Last modified Oct 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 3, 2020
     </a>
   </div>
