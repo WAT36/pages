@@ -383,13 +383,13 @@ i番目までの品物からj個選ぶためには、i-1番目までの品物か
 ここで、
 
 {{< katex  >}}
-\tag{2} \sum_{k=0}^{ min(j,a[i]) } dp[i-1][j-k] = \sum_{k=0}^{ min(j,a[i]) } dp[i-1][j-1-k] + dp[i-1][j] - dp[i-1][j-1-a_{i}] 
+\tag{2} \sum_{k=0}^{ min(j,a[i]) } dp[i-1][j-k] = \sum_{k=0}^{ min(j,a[i]) } dp[i-1][j-1-k] + dp[i-1][j] - dp[i-1][j-1-a_{i-1}] 
 {{< /katex >}}
 
 となるので、式(1)から式(2)は
 
 {{< katex  >}}
-\tag{3} dp[i][j] = dp[i][j-1] + dp[i-1][j] - dp[i-1][j-1-a_{i}] 
+\tag{3} dp[i][j] = dp[i][j-1] + dp[i-1][j] - dp[i-1][j-1-a_{i-1}] 
 {{< /katex >}}
 
 と表される。

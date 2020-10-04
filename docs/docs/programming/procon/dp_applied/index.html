@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.0f8910694238634833ffc0fa97f371d80af76af34ab7642dd2b93333bd699818.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.f639ed4e13237f3910a3460813b091bf1c1765cd2c9a1bb600eb1fb5077c71fe.js"></script>
 
 
 
@@ -514,7 +514,7 @@ dp[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]<s
 
 <p class="katex">
   $$ 
-\tag{2} \sum_{k=0}^{ min(j,a[i]) } dp[i-1][j-k] = \sum_{k=0}^{ min(j,a[i]) } dp[i-1][j-1-k] + dp[i-1][j] - dp[i-1][j-1-a_{i}] 
+\tag{2} \sum_{k=0}^{ min(j,a[i]) } dp[i-1][j-k] = \sum_{k=0}^{ min(j,a[i]) } dp[i-1][j-1-k] + dp[i-1][j] - dp[i-1][j-1-a_{i-1}] 
  $$
 </p>
 
@@ -526,7 +526,7 @@ dp[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]<s
 
 <p class="katex">
   $$ 
-\tag{3} dp[i][j] = dp[i][j-1] + dp[i-1][j] - dp[i-1][j-1-a_{i}] 
+\tag{3} dp[i][j] = dp[i][j-1] + dp[i-1][j] - dp[i-1][j-1-a_{i-1}] 
  $$
 </p>
 
@@ -540,8 +540,8 @@ dp[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]<s
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/fc719cf0d1a5f149c5df0f455447748feb85ee0f" title='Last modified Oct 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 3, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/4425bb9fefab8e0c89b9e4b619a8022b9756c02d" title='Last modified Oct 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 4, 2020
     </a>
   </div>
   
