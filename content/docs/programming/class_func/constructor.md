@@ -86,7 +86,7 @@ Pythonでは　**\_\_init()\_\_** という関数がクラスのコンストラ�
 {{< /tab >}}
 {{< tab "Javascript" >}}
 
-JavascriptでのコンストラクタはJavaやPythonのとは対象が微妙に異なる。
+JavascriptでのコンストラクタはJavaやPythonのそれとは対象が微妙に異なる。
 
 まず、JavascriptにはJavaのクラスのといったデータ構造はないため、これに対するコンストラクタではない。
 
