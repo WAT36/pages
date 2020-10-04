@@ -178,6 +178,46 @@ AttributeError: 'Beverage' object has no attribute 'alcohol_content'
 
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptでは[コンストラクタ](https://wat36.github.io/pages/docs/programming/class_func/constructor/)を使って作られたオブジェクトを使った継承が行える。
+
+例えば以下のようなオブジェクトがあったとする。
+
+```javascript
+var Person = function(name){
+    this.name = name
+    this.introduce = function(){
+      console.log('My name is ' + this.name)
+    }
+}
+
+var Student = function(name,grade){
+    this.name = name
+    this.grade = grade
+}
+```
+
+ここで、StudentオブジェクトにもPersonオブジェクトが持つプロパティを持たせたい（継承）とき、以下のようにする。
+
+```javascript
+Student.prototype = new Person();
+```
+
+これにより、StudentオブジェクトにPersonオブジェクトが持つプロパティを持たせることができる。これがjavascriptでの継承の方法である。この後の例を以下に示す。
+
+```javascript
+var mary = new Student('Mary',1)
+console.log(mary.introduce())
+```
+
+実行結果
+
+```
+My name is Mary
+```
+
+{{< /tab >}}
 {{< /tabs >}}
 
 
