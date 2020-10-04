@@ -84,6 +84,52 @@ Pythonでは　**\_\_init()\_\_** という関数がクラスのコンストラ�
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+JavascriptでのコンストラクタはJavaやPythonのそれとは対象が微妙に異なる。
+
+まず、JavascriptにはJavaのクラスのといったデータ構造はないため、これに対するコンストラクタではない。
+
+しかし、Javascriptでは関数がクラスのようなデータ構造を表せることがあり、コンストラクタとはこれに対してのコンストラクタである。
+
+これを利用すると、関数の中身で指定されたプロパティを持ったオブジェクトが生成される。
+
+例えば以下の関数があったとする。
+
+```javascript
+var Person = function(name){
+    this.name = name
+}
+```
+
+この関数を、**new**キーワードを用いて別の変数に格納すると、変数にはオブジェクト型のデータが格納される。
+
+```javascript
+var john = Person('john')
+console.log(john.name)
+```
+
+実行結果
+
+```
+john
+```
+
+何が起きているのだろうか？実は、newキーワードを使うと、指定された関数は以下の処理が追加されたような挙動を示す。
+
+```javascript
+var Person = function(name){
+    //var this={}
+    this.name = name
+    //return this
+}
+```
+
+newを追加することによって、関数をオブジェクトとして表すことが可能になる。
+
+javascriptでは、このnewで指定された関数のことを**コンストラクタ**と呼んでいる。また、コンストラクタにより生成されたオブジェクトを**インスタンス**と呼ぶ。
+
+{{< /tab >}}
 {{< /tabs >}}
 
 

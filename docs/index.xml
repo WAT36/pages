@@ -425,6 +425,15 @@
     </item>
     
     <item>
+      <title>オブジェクト(Javascript)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/class_func/object/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/class_func/object/</guid>
+      <description>オブジェクト(Javascript) Javascriptのオブジェクトについて。 Javascriptでは、オブジェクトと呼ばれる、C言語など</description>
+    </item>
+    
+    <item>
       <title>オーバーフィッティング(過学習)</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/overfitting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -484,7 +493,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/class_func/classfunc_index/</guid>
-      <description>クラス・関数(メソッド) クラス及び関数（メソッド）の定義についてを示す。 これも言語によって違う名前で呼ばれているものもあるので注意。 クラス ク</description>
+      <description>クラス・関数(メソッド) クラス及び関数（メソッド）の定義についてを示す。 これも言語によって違う名前で呼ばれているものもあるので注意。 C言語で</description>
     </item>
     
     <item>
