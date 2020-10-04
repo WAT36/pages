@@ -377,13 +377,17 @@ dp[i][j]:i番目までの品物からj個選ぶ組み合わせの総数
 i番目までの品物からj個選ぶためには、i-1番目までの品物からj-k個選んで、i番目の品物をk個加えれば良いので、以下の漸化式が成り立つ。
 
 {{< katex  >}}
-\tag{1} dp[i][j] = \sum_{k=0}^{ min(j,a[i]) } dp[i-1][j-k] 
+\tag{1} dp[i][j] = \sum_{k=0}^{ min(j,a_{i-1}) } dp[i-1][j-k] 
 {{< /katex >}}
 
 ここで、
 
 {{< katex  >}}
-\tag{2} \sum_{k=0}^{ min(j,a[i]) } dp[i-1][j-k] = \sum_{k=0}^{ min(j,a[i]) } dp[i-1][j-1-k] + dp[i-1][j] - dp[i-1][j-1-a_{i-1}] 
+\tag{2} 
+\begin{aligned}
+&\sum_{k=0}^{ min(j,a_{i-1}) } dp[i-1][j-k] \\
+&= \sum_{k=0}^{ min(j,a_{i-1}) } dp[i-1][j-1-k] + dp[i-1][j] - dp[i-1][j-1-a_{i-1}] 
+\end{aligned}
 {{< /katex >}}
 
 となるので、式(1)から式(2)は
@@ -394,4 +398,33 @@ i番目までの品物からj個選ぶためには、i-1番目までの品物か
 
 と表される。
 
+コード例は以下の通り。
+
+```python
+n=3
+m=3
+a=[1,2,3]
+M=(10**9)+7
+
+dp=[[0 for _ in range(m+1)] for _ in range(n+1)]
+
+for i in range(n+1):
+    # 1個も選ばない方法は1通り
+    dp[i][0]=1
+
+for i in range(1,n+1):
+    for j in range(1,m+1):
+        if(j-1-a[i-1]>=0):
+            dp[i][j]=(dp[i][j-1]+dp[i-1][j]-dp[i-1][j-1-a[i-1]])%M
+        else:
+            dp[i][j]=(dp[i][j-1]+dp[i-1][j])%M
+
+print(dp[n][m])
+```
+
+実行結果
+
+```
+6
+```
 
