@@ -1046,6 +1046,15 @@
     </item>
     
     <item>
+      <title>二部グラフ</title>
+      <link>https://WAT36.github.io/pages/docs/programming/procon/bipartite_graph/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/procon/bipartite_graph/</guid>
+      <description>二部グラフ</description>
+    </item>
+    
+    <item>
       <title>交差エントロピー誤差</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/cross_entropy_error/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1133,6 +1142,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/procon/dynamic_planning/</guid>
       <description>動的計画法 動的計画法について。 動的計画法とはアルゴリズム設計手法の一つで、配列やリストの要素をそれ以前に算出した別の要素を使って算出する手法</description>
+    </item>
+    
+    <item>
+      <title>動的計画法の応用題</title>
+      <link>https://WAT36.github.io/pages/docs/programming/procon/dp_applied-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/procon/dp_applied-2/</guid>
+      <description>動的計画法の応用題 動的計画法の応用問題についてをいくつか紹介する。 最長共通部分列問題 例えば以下のような問題。 ２つの文字列s,tの共通部分文字</description>
     </item>
     
     <item>
