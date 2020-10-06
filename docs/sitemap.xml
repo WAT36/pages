@@ -59,12 +59,12 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/about/aboutme/</loc>
-    <lastmod>2020-03-26T22:25:31+09:00</lastmod>
+    <lastmod>2020-09-06T21:04:40+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/number/and/</loc>
-    <lastmod>2020-01-05T16:37:57+09:00</lastmod>
+    <loc>https://WAT36.github.io/pages/docs/front-end/api/</loc>
+    <lastmod>2020-08-19T00:10:09+09:00</lastmod>
   </url>
   
   <url>
@@ -83,8 +83,38 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/css_text/</loc>
+    <lastmod>2020-07-20T21:04:59+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/css_font/</loc>
+    <lastmod>2020-07-22T20:00:36+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/css_box/</loc>
+    <lastmod>2020-07-29T15:06:31+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/css_background/</loc>
+    <lastmod>2020-07-15T19:13:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/css_color/</loc>
+    <lastmod>2020-07-11T17:19:46+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/css_about/</loc>
     <lastmod>2020-07-01T21:02:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/css_priority/</loc>
+    <lastmod>2020-07-08T21:41:13+09:00</lastmod>
   </url>
   
   <url>
@@ -94,17 +124,32 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/control/for/</loc>
-    <lastmod>2020-01-17T22:14:37+09:00</lastmod>
+    <lastmod>2020-09-15T23:17:07+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/html_structure/</loc>
-    <lastmod>2020-04-09T09:48:39+09:00</lastmod>
+    <lastmod>2020-08-27T14:02:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/http/</loc>
+    <lastmod>2020-08-21T08:42:22+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/control/ifelse/</loc>
-    <lastmod>2020-01-11T01:35:52+09:00</lastmod>
+    <lastmod>2020-09-11T00:51:44+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/k-means/</loc>
+    <lastmod>2020-07-22T23:13:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/keras/</loc>
+    <lastmod>2020-09-23T19:38:49+09:00</lastmod>
   </url>
   
   <url>
@@ -113,18 +158,18 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/other/null/</loc>
+    <lastmod>2020-07-15T20:15:42+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/N-dimension_linear_model/</loc>
     <lastmod>2020-04-25T01:30:38+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/number/or/</loc>
-    <lastmod>2020-01-05T16:37:57+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/other/other_index/</loc>
-    <lastmod>2020-04-20T09:36:36+09:00</lastmod>
+    <lastmod>2020-07-31T23:49:55+09:00</lastmod>
   </url>
   
   <url>
@@ -144,7 +189,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/control/switch/</loc>
-    <lastmod>2020-01-14T21:57:53+09:00</lastmod>
+    <lastmod>2020-09-11T00:37:36+09:00</lastmod>
   </url>
   
   <url>
@@ -168,8 +213,28 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/css_other/</loc>
+    <lastmod>2020-08-05T23:39:23+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/web_other/</loc>
+    <lastmod>2020-08-28T21:29:33+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/html_other/</loc>
     <lastmod>2020-06-27T23:29:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/css_animation/</loc>
+    <lastmod>2020-08-03T23:31:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/class_func/object/</loc>
+    <lastmod>2020-10-03T11:56:31+09:00</lastmod>
   </url>
   
   <url>
@@ -198,8 +263,13 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/clustering/</loc>
+    <lastmod>2020-07-11T12:30:47+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/classfunc_index/</loc>
-    <lastmod>2020-03-04T23:10:47+09:00</lastmod>
+    <lastmod>2020-10-03T11:23:31+09:00</lastmod>
   </url>
   
   <url>
@@ -239,12 +309,12 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/global_attr/</loc>
-    <lastmod>2020-04-04T00:56:50+09:00</lastmod>
+    <lastmod>2020-08-25T00:12:29+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/constructor/</loc>
-    <lastmod>2020-01-20T22:06:21+09:00</lastmod>
+    <lastmod>2020-10-04T22:15:33+09:00</lastmod>
   </url>
   
   <url>
@@ -263,8 +333,18 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/other/generics/</loc>
+    <lastmod>2020-07-21T21:11:08+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/math/scalar/</loc>
     <lastmod>2020-01-13T09:52:52+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/smartphone_optimization/</loc>
+    <lastmod>2020-08-27T14:12:37+09:00</lastmod>
   </url>
   
   <url>
@@ -274,7 +354,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/css_selector/</loc>
-    <lastmod>2020-07-06T20:38:46+09:00</lastmod>
+    <lastmod>2020-08-24T23:07:31+09:00</lastmod>
   </url>
   
   <url>
@@ -298,6 +378,11 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/neural_network/</loc>
+    <lastmod>2020-09-17T22:34:25+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/file_io/file_index/</loc>
     <lastmod>2020-02-27T21:42:34+09:00</lastmod>
   </url>
@@ -313,13 +398,18 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/filter/</loc>
+    <lastmod>2020-09-29T15:48:06+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/field/</loc>
     <lastmod>2020-01-19T18:13:04+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/form/</loc>
-    <lastmod>2020-06-18T07:52:08+09:00</lastmod>
+    <lastmod>2020-08-29T12:52:01+09:00</lastmod>
   </url>
   
   <url>
@@ -338,13 +428,18 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/css_multicolumn/</loc>
+    <lastmod>2020-07-31T08:47:41+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/lambda/</loc>
     <lastmod>2020-01-13T09:19:37+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/list/</loc>
-    <lastmod>2020-05-20T12:40:57+09:00</lastmod>
+    <lastmod>2020-08-28T19:48:39+09:00</lastmod>
   </url>
   
   <url>
@@ -463,6 +558,11 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/front-end/responsive_web_design/</loc>
+    <lastmod>2020-08-08T00:12:59+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/logistic_regression/</loc>
     <lastmod>2020-06-11T19:12:54+09:00</lastmod>
   </url>
@@ -474,7 +574,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/ternary/</loc>
-    <lastmod>2020-01-05T16:37:57+09:00</lastmod>
+    <lastmod>2020-09-11T00:28:49+09:00</lastmod>
   </url>
   
   <url>
@@ -529,7 +629,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/procon/dp_applied/</loc>
-    <lastmod>2020-10-04T22:00:46+09:00</lastmod>
+    <lastmod>2020-10-06T21:08:19+09:00</lastmod>
   </url>
   
   <url>
@@ -543,18 +643,23 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/class_func/variablelength_arg/</loc>
+    <lastmod>2020-07-19T02:20:22+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/procon/inverse_mod/</loc>
     <lastmod>2020-06-11T19:42:43+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/increment/</loc>
-    <lastmod>2020-02-12T21:41:34+09:00</lastmod>
+    <lastmod>2020-09-04T13:14:31+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/other/var/</loc>
-    <lastmod>2020-04-21T14:28:55+09:00</lastmod>
+    <lastmod>2020-09-03T18:53:51+09:00</lastmod>
   </url>
   
   <url>
@@ -565,6 +670,16 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/list/multisortlist/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/list/multi_array/</loc>
+    <lastmod>2020-09-14T22:09:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/other/constant/</loc>
+    <lastmod>2020-08-01T23:31:26+09:00</lastmod>
   </url>
   
   <url>
@@ -598,6 +713,11 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/mnist/</loc>
+    <lastmod>2020-09-26T14:39:56+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/list/list_in/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
   </url>
@@ -623,6 +743,11 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/unsupervised_learning/</loc>
+    <lastmod>2020-07-09T20:58:43+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/abs/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
   </url>
@@ -640,6 +765,11 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/str/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/numerical_differentiation/</loc>
+    <lastmod>2020-09-17T22:34:25+09:00</lastmod>
   </url>
   
   <url>
@@ -679,7 +809,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</loc>
-    <lastmod>2020-06-22T20:08:58+09:00</lastmod>
+    <lastmod>2020-09-27T20:50:37+09:00</lastmod>
   </url>
   
   <url>
@@ -688,8 +818,18 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/distortion_measure/</loc>
+    <lastmod>2020-07-28T23:51:02+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/procon/dfs/</loc>
     <lastmod>2020-04-16T00:22:40+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/gaussian_mixture_model/</loc>
+    <lastmod>2020-09-02T08:30:51+09:00</lastmod>
   </url>
   
   <url>
@@ -709,7 +849,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/inheritance/</loc>
-    <lastmod>2020-03-07T11:17:02+09:00</lastmod>
+    <lastmod>2020-10-04T23:03:03+09:00</lastmod>
   </url>
   
   <url>
@@ -788,8 +928,18 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/back_propagation/</loc>
+    <lastmod>2020-09-17T22:34:25+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/or_bit/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/number/logical_operator/</loc>
+    <lastmod>2020-09-09T23:42:45+09:00</lastmod>
   </url>
   
   <url>
@@ -864,7 +1014,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/map/map_index/</loc>
-    <lastmod>2020-02-06T20:49:02+09:00</lastmod>
+    <lastmod>2020-10-03T01:18:42+09:00</lastmod>
   </url>
   
   <url>
@@ -873,8 +1023,13 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/list/array/</loc>
+    <lastmod>2020-09-12T18:15:16+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/func/</loc>
-    <lastmod>2020-01-26T12:52:01+09:00</lastmod>
+    <lastmod>2020-10-03T12:02:13+09:00</lastmod>
   </url>
   
   <url>
@@ -928,12 +1083,17 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/posts/20200406/</loc>
-    <lastmod>2020-07-05T17:57:05+09:00</lastmod>
+    <loc>https://WAT36.github.io/pages/posts/20200708/</loc>
+    <lastmod>2020-09-04T20:42:24+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/posts/</loc>
+    <lastmod>2020-09-04T20:42:24+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/posts/20200406/</loc>
     <lastmod>2020-07-05T17:57:05+09:00</lastmod>
   </url>
   
@@ -968,88 +1128,28 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/</loc>
-    <lastmod>2020-04-29T12:18:35+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/tags/</loc>
-    <lastmod>2020-04-29T12:18:35+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/categories/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0/</loc>
-    <lastmod>2020-04-29T12:18:35+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</loc>
-    <lastmod>2020-04-29T12:18:35+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/posts/warshall_floyd/</loc>
-    <lastmod>2020-04-29T12:18:35+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/tags/%E6%8E%A2%E7%B4%A2/</loc>
-    <lastmod>2020-04-29T12:18:35+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/tags/%E3%82%B0%E3%83%A9%E3%83%95/</loc>
-    <lastmod>2020-02-02T13:27:15+09:00</lastmod>
+    <lastmod>2020-08-16T10:25:34+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/posts/graph_coloring/</loc>
-    <lastmod>2020-02-02T13:27:15+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/tags/%E5%BD%A9%E8%89%B2/</loc>
-    <lastmod>2020-02-02T13:27:15+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/tags/%E9%9D%A2%E5%BD%A9%E8%89%B2/</loc>
-    <lastmod>2020-02-02T13:27:15+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/tags/%E9%A0%82%E7%82%B9%E5%BD%A9%E8%89%B2/</loc>
-    <lastmod>2020-02-02T13:27:15+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/tags/python/</loc>
-    <lastmod>2019-11-12T21:18:53+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/tags/%E3%82%AD%E3%83%A5%E3%83%BC/</loc>
-    <lastmod>2019-11-12T21:18:53+09:00</lastmod>
+    <lastmod>2020-08-16T10:25:34+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/posts/queue_py/</loc>
-    <lastmod>2019-11-12T21:18:53+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/tags/%E5%B9%85%E5%84%AA%E5%85%88%E6%8E%A2%E7%B4%A2/</loc>
-    <lastmod>2019-11-12T21:18:53+09:00</lastmod>
+    <lastmod>2020-08-16T10:25:34+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-10-04T22:00:46+09:00</lastmod>
+    <lastmod>2020-10-06T21:08:19+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/number_index/</loc>
-    <lastmod>2020-02-12T21:41:34+09:00</lastmod>
+    <lastmod>2020-09-09T23:42:45+09:00</lastmod>
   </url>
   
   <url>
@@ -1069,37 +1169,12 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/string/string/</loc>
-    <lastmod>2020-01-05T16:37:57+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/tags/CTF/</loc>
-    <lastmod>2019-10-22T10:17:14+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/categories/CTF/</loc>
-    <lastmod>2019-10-22T10:17:14+09:00</lastmod>
+    <lastmod>2020-09-06T21:50:55+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/posts/file_magic/</loc>
-    <lastmod>2019-10-22T10:17:14+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/categories/Linux/</loc>
-    <lastmod>2019-10-22T10:17:14+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/tags/Linux/</loc>
-    <lastmod>2019-10-22T10:17:14+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/tags/UNIX/</loc>
-    <lastmod>2019-10-22T10:17:14+09:00</lastmod>
+    <lastmod>2020-08-16T10:25:34+09:00</lastmod>
   </url>
   
   <url>
@@ -1109,7 +1184,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/string/append/</loc>
-    <lastmod>2020-01-05T16:37:57+09:00</lastmod>
+    <lastmod>2020-09-06T21:35:11+09:00</lastmod>
   </url>
   
   <url>
@@ -1139,7 +1214,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/stdio/stdout/</loc>
-    <lastmod>2020-01-05T16:37:57+09:00</lastmod>
+    <lastmod>2020-09-03T00:18:42+09:00</lastmod>
   </url>
   
   <url>
@@ -1158,28 +1233,18 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/tags/%E5%84%AA%E5%85%88%E5%BA%A6%E4%BB%98%E3%81%8D%E3%82%AD%E3%83%A5%E3%83%BC/</loc>
-    <lastmod>2019-10-01T20:54:58+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/posts/heapq/</loc>
-    <lastmod>2019-10-01T20:54:58+09:00</lastmod>
+    <lastmod>2020-08-16T10:25:34+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/posts/strings/</loc>
-    <lastmod>2019-10-09T00:35:37+09:00</lastmod>
+    <lastmod>2020-08-16T10:25:34+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/posts/bisect/</loc>
-    <lastmod>2019-09-15T12:49:10+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/tags/%E4%BA%8C%E5%88%86%E6%8E%A2%E7%B4%A2/</loc>
-    <lastmod>2019-09-15T12:49:10+09:00</lastmod>
+    <lastmod>2020-08-16T10:25:34+09:00</lastmod>
   </url>
   
   <url>
@@ -1189,7 +1254,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/list/list_index/</loc>
-    <lastmod>2020-02-10T23:24:45+09:00</lastmod>
+    <lastmod>2020-09-14T21:58:23+09:00</lastmod>
   </url>
   
   <url>
@@ -1248,6 +1313,10 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/categories/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/ctf/ctf_index/</loc>
     <lastmod>2020-04-11T01:28:31+09:00</lastmod>
   </url>
@@ -1258,23 +1327,12 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/categories/Java/</loc>
-    <lastmod>2020-04-21T14:28:55+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/categories/Python/</loc>
-    <lastmod>2020-04-21T14:28:55+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/categories/Swift/</loc>
-    <lastmod>2020-04-21T14:28:55+09:00</lastmod>
+    <loc>https://WAT36.github.io/pages/tags/</loc>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/front_index/</loc>
-    <lastmod>2020-07-02T12:42:03+09:00</lastmod>
+    <lastmod>2020-08-29T21:19:15+09:00</lastmod>
   </url>
   
   <url>
