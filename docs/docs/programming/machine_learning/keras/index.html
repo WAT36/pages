@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kerasでニューラルネットワーク | WAT Notes</title>
+<title>アルゴリズム | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -12,13 +12,14 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.953b652f6cb6ce930775b4b51e502e45391853c1fcdd8ab264a0063cc810130f.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.93e9097259d8d452d156ea8066701994d17290f84287ddf0fbb2b44692512b2f.js"></script>
 
 
 
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 
 
+<link rel="alternate" type="application/rss+xml" href="https://WAT36.github.io/pages/categories/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0/index.xml" title="WAT Notes" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -54,13 +55,13 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2fkeras\2f "] {
+  nav ul a[href$="\2f categories\2f%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0\2f "] {
       color: #004ed0;
   }
   </style>
 
 <ul>
-<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
 </ul>
 
 <p><details>
@@ -113,40 +114,53 @@ https://github.com/alex-shpak/hugo-book
 </script>
 
     </aside>
-
     <div class="book-page">
       <header class="flex align-center justify-between book-header">
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>Kerasでニューラルネットワーク</strong>
+  <strong>アルゴリズム</strong>
 </header>
 
+
+<section id="main">
+    <div class="categories_list">
+    <div class="categories_title"><span>アルゴリズム</span></div>
+    </div>
+    <ul id="list">
+        
+        <li>
+            2020-01-30
+             <a href="https://WAT36.github.io/pages/posts/warshall_floyd/">ワーシャル・フロイド法</a>
+         </li>
+         
+        <li>
+            2019-11-30
+             <a href="https://WAT36.github.io/pages/posts/graph_coloring/">グラフの彩色問題 ～Welsh・Powellのアルゴリズム～</a>
+         </li>
+         
+        <li>
+            2019-11-04
+             <a href="https://WAT36.github.io/pages/posts/queue_py/">キューとPythonでの実装モジュール「deque」</a>
+         </li>
+         
+        <li>
+            2019-09-28
+             <a href="https://WAT36.github.io/pages/posts/heapq/">優先度付きキュー（ヒープ）とPythonで実装するライブラリ「heapq」について</a>
+         </li>
+         
+        <li>
+            2019-09-14
+             <a href="https://WAT36.github.io/pages/posts/bisect/">Pythonで二分探索を行うライブラリ「bisect」</a>
+         </li>
+         
+     </ul>
+     <hr>
+     <a href="https://WAT36.github.io/pages/categories">Categories</a>
+ </section>
+
       
-<article class="markdown">
-
-<h1 id="kerasでニューラルネットワーク">Kerasでニューラルネットワーク</h1>
-
-<p>前章ではニューラルネットワークを一から実装してきたが、今ではニューラルネットワークに関連するライブラリがあり、それを利用するとニューラルネットワークが短いコードで実行できるようになる。</p>
-
-<p>ライブラリの例としては、Googleが開発したTensorflowやKerasなどが有名である。</p>
-
-<p>ここでは、例としてKerasを使ってニューラルネットワークを実行してみよう。</p>
-
-<p>と言ってもここに書くと長くなるので、とりあえずコードと説明をまとめたNotebookを<a href="https://github.com/WAT36/python/blob/master/machine_learning/deeplearning/keras.ipynb">こちら</a>に記載しておくのでご参照を。</p>
-
-<p>(もうちょっと何か書きたい・・)</p>
-</article>
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/e210552a460368386d7fa085bc3d266f6d57b045" title='Last modified Sep 23, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 23, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 
@@ -154,16 +168,6 @@ https://github.com/alex-shpak/hugo-book
       
     </div>
     
-  
-
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#kerasでニューラルネットワーク">Kerasでニューラルネットワーク</a></li>
-</ul>
-</nav>
-  </aside>
-
 
 
   </main>
@@ -182,5 +186,4 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
 </body>
-
 </html>

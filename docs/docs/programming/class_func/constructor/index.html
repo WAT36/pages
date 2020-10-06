@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.953b652f6cb6ce930775b4b51e502e45391853c1fcdd8ab264a0063cc810130f.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.93e9097259d8d452d156ea8066701994d17290f84287ddf0fbb2b44692512b2f.js"></script>
 
 
 
@@ -60,7 +60,7 @@ https://github.com/alex-shpak/hugo-book
   </style>
 
 <ul>
-<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
 </ul>
 
 <p><details>
@@ -207,46 +207,6 @@ Car2:carrola 200-2020 kaki-kukeko
 <span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
   </div>
 
-  <input type="radio" name="tabs-constructor" style="display: none;" id="tabs-constructor-2"  />
-  <label for="tabs-constructor-2">
-    Javascript
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>JavascriptでのコンストラクタはJavaやPythonのそれとは対象が微妙に異なる。</p>
-
-<p>まず、JavascriptにはJavaのクラスのといったデータ構造はないため、これに対するコンストラクタではない。</p>
-
-<p>しかし、Javascriptでは関数がクラスのようなデータ構造を表せることがあり、コンストラクタとはこれに対してのコンストラクタである。</p>
-
-<p>これを利用すると、関数の中身で指定されたプロパティを持ったオブジェクトが生成される。</p>
-
-<p>例えば以下の関数があったとする。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">name</span>){
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>
-}
-</code></pre></div>
-<p>この関数を、<strong>new</strong>キーワードを用いて別の変数に格納すると、変数にはオブジェクト型のデータが格納される。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">john</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#39;john&#39;</span>)
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">john</span>.<span style="color:#a6e22e">name</span>)
-</code></pre></div>
-<p>実行結果</p>
-
-<pre><code>john
-</code></pre>
-
-<p>何が起きているのだろうか？実は、newキーワードを使うと、指定された関数は以下の処理が追加されたような挙動を示す。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">name</span>){
-    <span style="color:#75715e">//var this={}
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>
-    <span style="color:#75715e">//return this
-</span><span style="color:#75715e"></span>}
-</code></pre></div>
-<p>newを追加することによって、関数をオブジェクトとして表すことが可能になる。</p>
-
-<p>javascriptでは、このnewで指定された関数のことを<strong>コンストラクタ</strong>と呼んでいる。また、コンストラクタにより生成されたオブジェクトを<strong>インスタンス</strong>と呼ぶ。</p>
-
-  </div>
-
 </div>
 
 </article>
@@ -256,8 +216,8 @@ Car2:carrola 200-2020 kaki-kukeko
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/eb41c6210448c1389541638eb070cd389485d09d" title='Last modified Oct 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 4, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/6af38773b6c0f16c60263ca2ad1f579d56ad1efd" title='Last modified Jan 20, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 20, 2020
     </a>
   </div>
   

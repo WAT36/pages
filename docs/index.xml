@@ -1136,6 +1136,15 @@
     </item>
     
     <item>
+      <title>動的計画法の応用題</title>
+      <link>https://WAT36.github.io/pages/docs/programming/procon/dp_applied/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/procon/dp_applied/</guid>
+      <description>動的計画法の応用題 動的計画法の応用問題をいくつか紹介する。 最長共通部分列問題 例えば以下のような問題。 ２つの文字列s,tの共通部分文字列の長さ</description>
+    </item>
+    
+    <item>
       <title>勾配法(最急降下法)</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/steepest_descent_method/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

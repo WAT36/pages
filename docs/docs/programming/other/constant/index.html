@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>定数 | WAT Notes</title>
+<title>OR演算 | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.953b652f6cb6ce930775b4b51e502e45391853c1fcdd8ab264a0063cc810130f.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.93e9097259d8d452d156ea8066701994d17290f84287ddf0fbb2b44692512b2f.js"></script>
 
 
 
@@ -54,13 +54,13 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fother\2f constant\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fnumber\2for\2f "] {
       color: #004ed0;
   }
   </style>
 
 <ul>
-<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
 </ul>
 
 <p><details>
@@ -119,19 +119,15 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>定数</strong>
+  <strong>OR演算</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="定数">定数</h1>
+<h1 id="or演算">OR演算</h1>
 
-<p>変数は値を記憶するための入れ物であり、基本、何度でも値を代入することが可能である。</p>
-
-<p>これに対し<strong>定数</strong>とは、値の入れ物という点では変数と同じだが、値を一度しか代入できず、代入後は別の値を再代入することはできない物のことを言う。</p>
-
-<p>ここでは、各言語における定数の宣言方法についてを述べる。</p>
+<p>ORの論理演算をする方法についてを示す。</p>
 
 
 
@@ -139,44 +135,48 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" name="tabs-type" style="display: none;" id="tabs-type-0" checked="checked" />
-  <label for="tabs-type-0">
+  <input type="radio" name="tabs-or" style="display: none;" id="tabs-or-0" checked="checked" />
+  <label for="tabs-or-0">
     Java
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>Javaで定数を宣言するには、宣言時にデータ型の前に<strong>final</strong>修飾子をつける。</p>
+    <p>JavaではORの論理演算子 <strong>||</strong> を使用する。戻り値はboolean型。<br />
+<code>(左辺) || (右辺)</code><br />
+ちなみに、左辺がtrueだった場合は右辺の計算は行わずにtrueを出力する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+        <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+        <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
 
-<pre><code>final データ型 定数名 = 初期値;
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(a <span style="color:#f92672">||</span> a);
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(a <span style="color:#f92672">||</span> b);
+        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(b <span style="color:#f92672">||</span> b);
+    }
+}</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>&gt; java Main  
+true  
+true  
+false  
 </code></pre>
 
-<p>定数として宣言すると、初期化以降は値を代入し直すことはできない。</p>
-
-<p>例</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> <span style="color:#a6e22e">int</span> N <span style="color:#f92672">=</span> 50;</code></pre></div>
   </div>
 
-  <input type="radio" name="tabs-type" style="display: none;" id="tabs-type-1"  />
-  <label for="tabs-type-1">
+  <input type="radio" name="tabs-or" style="display: none;" id="tabs-or-1"  />
+  <label for="tabs-or-1">
     Python
   </label>
   <div class="book-tabs-content markdown-inner">
-    Pythonには定数という仕様は存在しない。
-  </div>
-
-  <input type="radio" name="tabs-type" style="display: none;" id="tabs-type-2"  />
-  <label for="tabs-type-2">
-    Swift
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Swiftでは<strong>let</strong>キーワードを用いて定数を宣言する。</p>
-
-<p>宣言時に値を代入することも可能。</p>
-
-<pre><code>let (定数名): (型名) = (値)
-</code></pre>
-
-<p>例</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> a: Int = <span style="color:#ae81ff">123</span></code></pre></div>
+    <p>pythonでOR演算を行うには単純に <strong>or</strong> を使用する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a <span style="color:#f92672">=</span> True
+<span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">=</span> False
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(a <span style="color:#f92672">or</span> b)
+True
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(b <span style="color:#f92672">or</span> b)
+False
+<span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
   </div>
 
 </div>
@@ -188,8 +188,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/3358291ec5e2456c5ed7e5003392eb47551fc606" title='Last modified Aug 1, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 1, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/f3dcb4ba0aed4e8c96315c519011ed407623594e" title='Last modified Jan 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 5, 2020
     </a>
   </div>
   
