@@ -3,6 +3,7 @@ title: "二部グラフ"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
+bookToc: false
 ---
 
 # 二部グラフ
@@ -27,7 +28,7 @@ def dfs(v,c):
         if(color[G[v][i]]==c):
             return false
         #隣接している頂点がまだ塗られていないなら-cで塗る
-        if(color[G[v][i]]==0 && not dfs(G[v][i],-c)):
+        if(color[G[v][i]]==0 and not dfs(G[v][i],-c)):
             return false
     #全ての頂点を塗れたらTrue
     return True
@@ -37,9 +38,26 @@ for i in range(V):
         #まだ頂点iが塗られていなければ1で塗る
         if(not dfs(i,1)):
             print("No")
-            return
+            break
+else:
+    print("Yes")
 
-print("Yes")
 
+```
 
+試しに上の図の二部グラフをこれで判定してみよう(以下に図示する)
+
+![二部グラフ例](/img/procon/bipartite_2.png)
+
+このグラフの上記コードのV,Gで表すと以下のようになる。
+
+```python
+V=7
+G=[[1,3,5],[0,2,6],[1,3],[0,2,4],[3,5],[0,4,6],[1,5]]
+```
+
+実行結果
+
+```
+Yes
 ```

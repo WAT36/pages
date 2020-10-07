@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.c64227dfa7cf9021c60f33cd297d2283de5c67cd6413c6dbc872405cb5043cb1.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.d9c0304de63efe40e00492c69c6a3276f20c8a05b049b5e9b9cbe70de039cb2a.js"></script>
 
 
 
@@ -144,7 +144,7 @@ color<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0</span> <
         <span style="color:#66d9ef">if</span>(color[G[v][i]]<span style="color:#f92672">==</span>c):
             <span style="color:#66d9ef">return</span> false
         <span style="color:#75715e">#隣接している頂点がまだ塗られていないなら-cで塗る</span>
-        <span style="color:#66d9ef">if</span>(color[G[v][i]]<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">not</span> dfs(G[v][i],<span style="color:#f92672">-</span>c)):
+        <span style="color:#66d9ef">if</span>(color[G[v][i]]<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> dfs(G[v][i],<span style="color:#f92672">-</span>c)):
             <span style="color:#66d9ef">return</span> false
     <span style="color:#75715e">#全ての頂点を塗れたらTrue</span>
     <span style="color:#66d9ef">return</span> True
@@ -154,16 +154,28 @@ color<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0</span> <
         <span style="color:#75715e">#まだ頂点iが塗られていなければ1で塗る</span>
         <span style="color:#66d9ef">if</span>(<span style="color:#f92672">not</span> dfs(i,<span style="color:#ae81ff">1</span>)):
             <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;No&#34;</span>)
-            <span style="color:#66d9ef">return</span>
+            <span style="color:#66d9ef">break</span>
+<span style="color:#66d9ef">else</span>:
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Yes&#34;</span>)</code></pre></div>
+<p>試しに上の図の二部グラフをこれで判定してみよう(以下に図示する)</p>
 
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Yes&#34;</span>)</code></pre></div></article>
+<p><img src="https://WAT36.github.io/pages/img/procon/bipartite_2.png" alt="二部グラフ例" /></p>
+
+<p>このグラフの上記コードのV,Gで表すと以下のようになる。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">V<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>
+G<span style="color:#f92672">=</span>[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>],[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">6</span>],[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>],[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>],[<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>],[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">6</span>],[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">5</span>]]</code></pre></div>
+<p>実行結果</p>
+
+<pre><code>Yes
+</code></pre>
+</article>
 
       
 <div class="book-footer justify-between">
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/79a8d4ebf04d1db8f5e803bcb79794f366759f57" title='Last modified Oct 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/eb14466cf49e726997c5c569afc9a544ee8aec54" title='Last modified Oct 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 7, 2020
     </a>
   </div>
@@ -175,14 +187,6 @@ color<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0</span> <
     </div>
     
   
-
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#二部グラフ">二部グラフ</a></li>
-</ul>
-</nav>
-  </aside>
 
 
 
