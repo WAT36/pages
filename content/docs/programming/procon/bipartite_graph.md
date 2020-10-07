@@ -18,7 +18,7 @@ weight: 1
 V=10                            #頂点の数(入力)
 G=[[] for _ in range(V)]        #グラフ（入力）
 
-color=[-1 for _ in range(V)]    #頂点の色
+color=[0 for _ in range(V)]    #頂点の色
 
 def dfs(v,c):
     color[v]=c
@@ -29,6 +29,8 @@ def dfs(v,c):
         #隣接している頂点がまだ塗られていないなら-cで塗る
         if(color[G[v][i]]==0 && not dfs(G[v][i],-c)):
             return false
+    #全ての頂点を塗れたらTrue
+    return True
 
 for i in range(V):
     if(color[i]==0):
