@@ -13,8 +13,6 @@ bookToc: false
 
 グラフ描画では**matplotlib**の**pyplot**というライブラリを利用する。
 
-データ処理では**pandas**というライブラリを利用する。
-
 - グラフ
  - 2次元グラフ
       - [(折れ線)グラフを描画する]({{< relref "/docs/programming/graph/plot.md" >}})
@@ -31,7 +29,5 @@ bookToc: false
       - [2変数関数のグラフ(ヒートマップ)を作成する]({{< relref "/docs/programming/graph/pcolor.md" >}})
       - [2変数関数のグラフ(３D面グラフ)を作成する]({{< relref "/docs/programming/graph/surface.md" >}})
       - [2変数関数のグラフ(等高線プロット)を作成する]({{< relref "/docs/programming/graph/contour.md" >}})
-- データ処理
-      - [csvファイルからデータを読み込む]({{< relref "/docs/programming/graph/read.md" >}})
 
 
