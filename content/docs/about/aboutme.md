@@ -12,10 +12,10 @@ bookToc: false
 
 ## HN
 
-<b>Tatsuroh Wakasugi</b>
+<b>WAT</b>
 
 
-念のため言うと本名ではありません。由来は本名のスペルを並び替えてなんかいい名前できないかなと色々試行錯誤して行った末にたどり着いた名前です。
+昔から使っているHNのWATで通しています。Github等一部のSNSではTatsuroh Wakasugiの名を使っていますが、念のため言うと本名ではありません。どちらも由来は本名のスペルから来ております。
 
 本職は某IT企業に勤務しているSEです。最近はDB設計、バッチ開発(Shell,Python)、画面開発保守(HTML,Flash)等やっております。個人では資格取得、iOSアプリ開発、競技プログラミング(Atcoder,AOJ,Leetcode)、CTF等にも興味があり取り組んでおります。本ブログには日頃の業務及び業務外で得た知見などについてを書き記して行きます。
 
@@ -60,6 +60,7 @@ bookToc: false
  - VBA
  - Shell Script(bash)
  - SQL
+ - Javascript
 
 - フレームワーク・ライブラリ・ツール等
  - IBM WebSphere Application Server
@@ -82,7 +83,7 @@ bookToc: false
 
 - HTML5プロフェッショナル認定試験 レベル1
 
-- TOEIC 705
+- TOEIC 720
 
 - 普通自動車第一種免許
 
