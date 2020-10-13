@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.15fbe74d36f7e12d65d47694c51493ddd07fc04c161167e10dceb94952196464.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.6b64b13a6f08edb4d610383ecc5e9cd2956796b5eb4a4fce51949f7e45ad5b4d.js"></script>
 
 
 
@@ -126,10 +126,39 @@ https://github.com/alex-shpak/hugo-book
 <article class="markdown">
 
 <h1 id="ベルマンフォード法">ベルマンフォード法</h1>
+
+<p>ベルマンフォード法とは、最短路問題(ある点から他の全ての頂点との間の最短路を求める問題)を解く手法の一つである。</p>
+
+<p>始点sから頂点iへの最短距離をd[i]とした時、以下の式が成り立つ。</p>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+<p class="katex">
+  $$ 
+  dp[i] = min( d[j] + (jからiへの辺のコスト) | e=(j,i) \in E )
+ $$
+</p>
+
+
+
+<p>初期値をd[s]=0,d[i]=INFとし、この式を繰り返すと最短距離を計算し更新していく。負の閉路が存在しなければこの更新はいつか停止する。停止した時のdが最短距離を示している。</p>
 </article>
 
       
-<div class="book-footer justify-end">
+<div class="book-footer justify-between">
+  
+  <div>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/d342b88d018c071f983e133ae2796da7e0168724" title='Last modified Oct 14, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 14, 2020
+    </a>
+  </div>
   
 </div>
 
