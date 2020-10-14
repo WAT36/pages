@@ -25,15 +25,16 @@ INF=float("inf")
 
 #辺
 class edge:
-    __init__(self,start,end,cost):
+    def __init__(self,start,end,cost):
         self.start=start
         self.end=end
         self.cost=cost
 
 
-#以下、V,E,edgesを入力する
+#以下、V,E,s,edgesを入力する
 V=0     #頂点の数
 E=0     #辺の数
+s=-1    #始点
 
 edges = [edge(-1,-1,-1) for _ in range(E)] #辺
 d  = [-1 for _ in range(V)] # 最短距離
@@ -51,4 +52,36 @@ def shortest_path(s):
                 update = True
         if(not update):
             break
+
+shortest_path(s)
+print(d)
 ```
+
+では、例として以下のグラフでベルマンフォード法を使ってみよう。
+
+![グラフ例1](/img/procon/dijkstra1.png)
+
+この時、コード中のV,E,s,edgesを以下のように定める。
+
+```python
+V=5     #頂点の数
+E=7     #辺の数
+s=0     #始点
+
+edges = [edge(-1,-1,-1) for _ in range(E)] #辺
+edges[0]=edge(0,1,2)
+edges[1]=edge(0,2,5)
+edges[2]=edge(0,3,6)
+edges[3]=edge(1,2,1)
+edges[4]=edge(1,4,9)
+edges[5]=edge(2,4,10)
+edges[6]=edge(3,4,4)
+```
+
+実行結果は以下の通り。
+
+```
+[0, 2, 3, 6, 10]
+```
+
+計算量については、whileループで少なくとも一つの頂点の最短距離が確定するので、多くてもV回実行される。その中のfor文でE回ループされるので、計算量は0(|V|*|E|)となる。

@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.566c5584bd775c8fbcdef89a1b0fdb188a0730f66717318f73642aa866db8d69.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.56674d3c71dabc086ae04fbc9bc6304f09202bb7655e486658820562a5e1976c.js"></script>
 
 
 
@@ -154,15 +154,16 @@ https://github.com/alex-shpak/hugo-book
 
 <span style="color:#75715e">#辺</span>
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">edge</span>:
-    __init__(self,start,end,cost):
+    <span style="color:#66d9ef">def</span> __init__(self,start,end,cost):
         self<span style="color:#f92672">.</span>start<span style="color:#f92672">=</span>start
         self<span style="color:#f92672">.</span>end<span style="color:#f92672">=</span>end
         self<span style="color:#f92672">.</span>cost<span style="color:#f92672">=</span>cost
 
 
-<span style="color:#75715e">#以下、V,E,edgesを入力する</span>
+<span style="color:#75715e">#以下、V,E,s,edgesを入力する</span>
 V<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>     <span style="color:#75715e">#頂点の数</span>
 E<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>     <span style="color:#75715e">#辺の数</span>
+s<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>    <span style="color:#75715e">#始点</span>
 
 edges <span style="color:#f92672">=</span> [edge(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(E)] <span style="color:#75715e">#辺</span>
 d  <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(V)] <span style="color:#75715e"># 最短距離</span>
@@ -179,14 +180,41 @@ d  <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><sp
                 d[e<span style="color:#f92672">.</span>end] <span style="color:#f92672">=</span> d[e<span style="color:#f92672">.</span>start] <span style="color:#f92672">+</span> e<span style="color:#f92672">.</span>cost
                 update <span style="color:#f92672">=</span> True
         <span style="color:#66d9ef">if</span>(<span style="color:#f92672">not</span> update):
-            <span style="color:#66d9ef">break</span></code></pre></div></article>
+            <span style="color:#66d9ef">break</span>
+
+shortest_path(s)
+<span style="color:#66d9ef">print</span>(d)</code></pre></div>
+<p>では、例として以下のグラフでベルマンフォード法を使ってみよう。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/dijkstra1.png" alt="グラフ例1" /></p>
+
+<p>この時、コード中のV,E,s,edgesを以下のように定める。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">V<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>     <span style="color:#75715e">#頂点の数</span>
+E<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>     <span style="color:#75715e">#辺の数</span>
+s<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>     <span style="color:#75715e">#始点</span>
+
+edges <span style="color:#f92672">=</span> [edge(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(E)] <span style="color:#75715e">#辺</span>
+edges[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">=</span>edge(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>)
+edges[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">=</span>edge(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">5</span>)
+edges[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">=</span>edge(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">6</span>)
+edges[<span style="color:#ae81ff">3</span>]<span style="color:#f92672">=</span>edge(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>)
+edges[<span style="color:#ae81ff">4</span>]<span style="color:#f92672">=</span>edge(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">9</span>)
+edges[<span style="color:#ae81ff">5</span>]<span style="color:#f92672">=</span>edge(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">10</span>)
+edges[<span style="color:#ae81ff">6</span>]<span style="color:#f92672">=</span>edge(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">4</span>)</code></pre></div>
+<p>実行結果は以下の通り。</p>
+
+<pre><code>[0, 2, 3, 6, 10]
+</code></pre>
+
+<p>計算量については、whileループで少なくとも一つの頂点の最短距離が確定するので、多くてもV回実行される。その中のfor文でE回ループされるので、計算量は0(|V|*|E|)となる。</p>
+</article>
 
       
 <div class="book-footer justify-between">
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/9795076db886eb7dad5218b389246bc6de434250" title='Last modified Oct 14, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/85e3e60b41574177a7c18c57a3220ee7dc159342" title='Last modified Oct 14, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 14, 2020
     </a>
   </div>
