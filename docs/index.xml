@@ -1456,7 +1456,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/procon/minimum_spanning_tree/</guid>
-      <description>最小全域木</description>
+      <description>最小全域木 無向グラフが与えられたときに、その内のある辺だけを用いてグラフ中の任意の２頂点を連結(ある頂点から他のどの頂点への経路が存在する)</description>
     </item>
     
     <item>
