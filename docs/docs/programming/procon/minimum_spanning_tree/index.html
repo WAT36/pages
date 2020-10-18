@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.577d8ef32e278f4af8b58e4b5d0bd159423aedae404983182cc0a63e84a83780.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.0627286a2d5296651b8bf7130c22c455bdc800007feef38e748993e0c04fd2e3.js"></script>
 
 
 
@@ -143,7 +143,35 @@ https://github.com/alex-shpak/hugo-book
 
 <p>始め、1つの頂点vからなるグラフTを考えたとき、ここからグラフTとその他の頂点を結ぶ最小コストの辺をグラフTに追加していく、と言う操作を繰り返すことにより、最小全域木が作成できる。</p>
 
-<p>プリム法において、グラフTとTに含まれていないその他の頂点との最小コストの辺の求め方は、</p>
+<p>プリム法のアルゴリズムは以下の通り。</p>
+
+<p>入出力：</p>
+
+<ul>
+<li>入力
+
+<ul>
+<li>グラフ G = (V,E)</li>
+<li>W(a,b):頂点aから頂点b(a,b∈V)を結ぶ辺の重み(コスト)。辺が存在しないときはW(a,b)=∞</li>
+<li>頂点s (s∈V)</li>
+</ul></li>
+<li>出力
+
+<ul>
+<li>最小全域木 X = (V&rsquo;,E&rsquo;)</li>
+</ul></li>
+</ul>
+
+<p>アルゴリズム：</p>
+
+<ol>
+<li>X=a (a∈V)、Y=V-X とする。aは何でも良い。</li>
+<li>頂点x (x∈X) 、頂点y (y∈Y)を結ぶ辺で、Xに追加したときに閉路をなさない辺のうち、最小のコストを持つ辺eを探す。</li>
+<li>X=X+(eのY側の要素)、Y=Y-(eのY側の要素)とする。</li>
+<li>Y={} (|Y|=0) ならば、Xを出力して終了する。そうでない時は、2.に戻る。</li>
+</ol>
+
+<p>例として、以下のグラフに対しプリム法を適用した場合を追って説明する。</p>
 </article>
 
       
@@ -151,7 +179,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/9a58dc035033199609c0ffc969657df7c76dfcb7" title='Last modified Oct 16, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/db6771a4e19c9fe09eb0b2c3e63d3c4bc998fef5" title='Last modified Oct 16, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 16, 2020
     </a>
   </div>
