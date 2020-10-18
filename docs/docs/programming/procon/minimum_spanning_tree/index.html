@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.0627286a2d5296651b8bf7130c22c455bdc800007feef38e748993e0c04fd2e3.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.e06196bb4b0b0d137beee5235259870f7b686117b09e23cc9bbedda3b8cceec2.js"></script>
 
 
 
@@ -172,6 +172,32 @@ https://github.com/alex-shpak/hugo-book
 </ol>
 
 <p>例として、以下のグラフに対しプリム法を適用した場合を追って説明する。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/dijkstra1.png" alt="ダイクストラ例1" /></p>
+
+<p>まずは頂点Aを最小全域木Xとし、その他の頂点をグラフYとする。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/prim1.png" alt="プリム例1" /></p>
+
+<p>次に、グラフXとグラフYを結ぶ辺のうち、Xに加えた時に閉路をなさず、最小コストである辺を探す。この場合は、頂点A-Bを結ぶ辺が該当する。</p>
+
+<p>この辺、及び、頂点BをXに加え、またYから除外する。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/prim2.png" alt="プリム例2" /></p>
+
+<p>この動作を繰り返していく。この状態において、グラフXとグラフYを結ぶ辺のうち、Xに加えた時に閉路をなさず、最小コストである辺は、頂点B-Cを結ぶ辺が該当する。よって、頂点CをXに加え、またYから除外する。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/prim3.png" alt="プリム例3" /></p>
+
+<p>次は、頂点A-Dを結ぶ辺が該当する。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/prim4.png" alt="プリム例4" /></p>
+
+<p>次は、頂点D-Eを結ぶ辺が該当する。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/prim5.png" alt="プリム例5" /></p>
+
+<p>Yの頂点がなくなったので、Xを出力して終了する。このXが、最小全域木である。</p>
 </article>
 
       
@@ -179,8 +205,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/db6771a4e19c9fe09eb0b2c3e63d3c4bc998fef5" title='Last modified Oct 16, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 16, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/7a1a62051c3e96eac52dcf3d08eed4b0ba228584" title='Last modified Oct 18, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 18, 2020
     </a>
   </div>
   
