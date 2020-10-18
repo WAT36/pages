@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.e06196bb4b0b0d137beee5235259870f7b686117b09e23cc9bbedda3b8cceec2.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.44777139bb736423518260c9e49109a9a0197a73b23ac26ad1a3fe477014b3fe.js"></script>
 
 
 
@@ -198,6 +198,57 @@ https://github.com/alex-shpak/hugo-book
 <p><img src="https://WAT36.github.io/pages/img/procon/prim5.png" alt="プリム例5" /></p>
 
 <p>Yの頂点がなくなったので、Xを出力して終了する。このXが、最小全域木である。</p>
+
+<p>以上が、プリム法による最小全域木の導出である。これをコードで実装した例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">INF<span style="color:#f92672">=</span>float(<span style="color:#e6db74">&#34;inf&#34;</span>)
+
+<span style="color:#75715e"># 設定（ユーザ側で入力）</span>
+V<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>     <span style="color:#75715e">#頂点数</span>
+cost<span style="color:#f92672">=</span>[[INF <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(V)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(V)]    <span style="color:#75715e">#cost[i][j]:頂点iから頂点jへのコスト</span>
+
+<span style="color:#75715e"># 設定（入力しない）</span>
+ans_cost<span style="color:#f92672">=</span>[[INF <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(V)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(V)]  <span style="color:#75715e">#cost_x[i][j]:(最小全域木の)頂点iから頂点jへのコスト</span>
+min_cost<span style="color:#f92672">=</span>[INF <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(V)]                    <span style="color:#75715e">#min_cost[i]:Xから頂点iへの最小コスト</span>
+y_nearest_x<span style="color:#f92672">=</span>[INF <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(V)]                 <span style="color:#75715e">#y_nearest_x[i]:頂点iへのコストが最も低いXの頂点</span>
+used<span style="color:#f92672">=</span>[False <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(V)]                      <span style="color:#75715e">#used[i]:頂点iがXに含まれているか示す</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(V):
+    ans_cost[i][i]<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+
+<span style="color:#75715e">#初めの点の初期設定</span>
+min_cost[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+y_nearest_x[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+
+<span style="color:#66d9ef">while</span> True:
+    v<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>
+    
+    <span style="color:#75715e">#Xに属さない頂点のうちXからの辺のコストが最小になる頂点を探す</span>
+    <span style="color:#66d9ef">for</span> u <span style="color:#f92672">in</span> range(V):
+        <span style="color:#66d9ef">if</span>(<span style="color:#f92672">not</span> used[u] <span style="color:#f92672">and</span> (v<span style="color:#f92672">==-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">or</span> min_cost[u] <span style="color:#f92672">&lt;</span> min_cost[v])):
+            v<span style="color:#f92672">=</span>u
+
+    <span style="color:#75715e">#全て見終わったら終了</span>
+    <span style="color:#66d9ef">if</span>(v<span style="color:#f92672">==-</span><span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">break</span>
+
+    <span style="color:#75715e">#頂点vをXに追加する</span>
+    used[v]<span style="color:#f92672">=</span>True
+    ans_cost[v][y_nearest_x[v]]<span style="color:#f92672">=</span>cost[v][y_nearest_x[v]]
+    ans_cost[y_nearest_x[v]][v]<span style="color:#f92672">=</span>cost[y_nearest_x[v]][v]
+
+    <span style="color:#75715e">#xからの最終コスト更新</span>
+    <span style="color:#66d9ef">for</span> u <span style="color:#f92672">in</span> range(V):
+        <span style="color:#66d9ef">if</span>(cost[v][u]<span style="color:#f92672">&lt;</span>min_cost[u]):
+            min_cost[u]<span style="color:#f92672">=</span>cost[v][u]
+            y_nearest_x[u]<span style="color:#f92672">=</span>v
+
+<span style="color:#66d9ef">print</span>(ans_cost)</code></pre></div>
+<p>このコードにおいて、先程の例で示したグラフを表す以下の値を入力する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">V<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
+cost<span style="color:#f92672">=</span>[[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,INF],[<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,INF,<span style="color:#ae81ff">9</span>],[<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>,INF,<span style="color:#ae81ff">10</span>],[<span style="color:#ae81ff">6</span>,INF,INF,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">4</span>],[INF,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">0</span>]]</code></pre></div>
+<p>すると、実行結果は以下のようになる。</p>
+
+<pre><code>[[0, 2, inf, 6, inf], [2, 0, 1, inf, inf], [inf, 1, 0, inf, inf], [6, inf, inf, 0, 4], [inf, inf, inf, 4, 0]]
+</code></pre>
 </article>
 
       
@@ -205,7 +256,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/7a1a62051c3e96eac52dcf3d08eed4b0ba228584" title='Last modified Oct 18, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/cecf93872a93a731669f9cb0a6a300303583c087" title='Last modified Oct 18, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 18, 2020
     </a>
   </div>
