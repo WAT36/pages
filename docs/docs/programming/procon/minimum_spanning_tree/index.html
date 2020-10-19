@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.9592ac44407f59903c951e3cfb444fe5cfa13ac330c33c6af359327c0fb1da78.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.24693e614de6a2db2b69973960c8dc195c1830d144a7d36bcc6ce51ac5360c4b.js"></script>
 
 
 
@@ -280,11 +280,33 @@ cost<span style="color:#f92672">=</span>[[<span style="color:#ae81ff">0</span>,<
 <ol>
 <li>Eをコストの小さい順にソートする。</li>
 <li>コストが最小の辺e (e∈E)を取り出し、eをEから除外する(E=E-e)。</li>
-<li>eをXに追加したときに閉路ができなければ、eをXに追加する。</li>
+<li>eをXに追加したときに閉路ができなければ、eをXに追加する。結んでいる頂点もXに追加する。</li>
 <li>Xに全ての頂点が含まれたら、Xを出力して終了する。そうでない時は、2.に戻る。</li>
 </ol>
 
 <p>3.の閉路ができるかを判定する方法については、Union-FInd木を用いると判定しやすい。辺を追加するときに、結ぶ頂点が同じUnion-Find木にあるならば、閉路ができると判断できる。</p>
+
+<p>これも図を使って流れを説明してみよう。プリム法でも用いた以下のグラフを利用する。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/dijkstra1.png" alt="ダイクストラ例1" /></p>
+
+<p>まずは、辺も頂点もない以下の状態から始まる。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/kruskal1.png" alt="クラスカル例1" /></p>
+
+<p>次に、一番コストが低い辺を探して、最小全域木に加える。この場合は、頂点B-C間の辺である。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/kruskal2.png" alt="クラスカル例2" /></p>
+
+<p>同様にして、次に最もコストが低い頂点A-B間の辺、さらに次に最もコストが低い頂点D-E間の辺を加える。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/kruskal3.png" alt="クラスカル例3" /></p>
+
+<p>次だが、最もコストの低い頂点A-C間の辺は加えると閉路ができてしまうので、ここでは加えない。その次にコストの低い頂点A-D間の辺を加える。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/kruskal4.png" alt="クラスカル例4" /></p>
+
+<p>これで、全ての頂点が含まれたので、このグラフを出力して終了する。このグラフが、最小全域木となる。</p>
 </article>
 
       
@@ -292,8 +314,8 @@ cost<span style="color:#f92672">=</span>[[<span style="color:#ae81ff">0</span>,<
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/fae159751e57e5c09dbc2c6d85a270dc3e14ab5e" title='Last modified Oct 18, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 18, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/3eda1990285fd2bb4dd69ec224ccfcf02b1dcd93" title='Last modified Oct 19, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 19, 2020
     </a>
   </div>
   
