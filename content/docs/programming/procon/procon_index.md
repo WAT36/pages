@@ -18,6 +18,7 @@ bookToc: false
  - [二分探索(Pythonで二分探索を行うライブラリ「bisect」)]({{< relref "/posts/bisect.md" >}})
  - [優先度付きキュー(Pythonで実装するライブラリ「heapq」)]({{< relref "/posts/heapq.md" >}})
  - [Union-Find木]({{< relref "/docs/programming/procon/union-find.md" >}})
+ - [セグメント木]({{< relref "/docs/programming/procon/segment_tree.md" >}})
 - グラフ 
  - [グラフの表現方法]({{< relref "/docs/programming/procon/graph.md" >}})
  - [二部グラフ]({{< relref "/docs/programming/procon/bipartite_graph.md" >}})
