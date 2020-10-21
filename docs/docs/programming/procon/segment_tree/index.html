@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.4e236d4869836aa8f28276c423029ec684b42aa86c4bd93167bb0dd77e7971d3.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.2717b04358f288f8badc2b874d734651603cf3c633e42bf38e02c4ba8356fc36.js"></script>
 
 
 
@@ -144,7 +144,33 @@ https://github.com/alex-shpak/hugo-book
 
 <p>この数列において、i,j(0≦i≦j&lt;|a|)を入力したときに、a[i]からa[j]の区間内での最小値を求めることを考えてみよう。</p>
 
+<h2 id="セグメント木を使った最小値の求め方">セグメント木を使った最小値の求め方</h2>
+
 <p>この数列をセグメント木で、節点にその節点が示す区間の最小値を入力すると以下のようになる。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/segment_tree2.png" alt="セグメント木例2" /></p>
+
+<p>ここで、区間を示す値i,jを入力したとき、どのようにして最小値を求めれば良いか。</p>
+
+<p>方法は、セグメント木中で区間[i,j]を示すような値を取り出し、その最小値を求めれば良いのである。</p>
+
+<p>例えば、i=1,j=4の時は、以下のセグメント木の黄色い節点の値の最小値「2」が区間[i,j]の最小値となる。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/segment_tree3.png" alt="セグメント木例3" /></p>
+
+<p>i,jが与えられた時に、セグメント木を使って区間[i,j]の最小値を取り出す方法は、セグメント木の根から以下の手順を再帰的に求める。</p>
+
+<ul>
+<li>[i,j]とその節点が示す区間が全く交差していなければ、最小値を計算するのに影響しない値を返す。(intの最大値など)</li>
+<li>[i,j]にその節点が示す区間が含まれるならば、その節点の持つ値を返す。</li>
+<li>上の2つのいずれでもない場合は、2つの子ノードについてこの手順を行い、その2つの最小値を返す。</li>
+</ul>
+
+<h2 id="セグメント木の値の更新">セグメント木の値の更新</h2>
+
+<p>aの要素を更新する時、セグメント木中の節点の値も更新しなければならない。その場合の計算方法はどうすれば良いか？</p>
+
+<p>これは、セグメント木の葉の要素(a[i])から更新し、その後親要素へ順に最小値を計算、更新させていく。</p>
 </article>
 
       
@@ -152,7 +178,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/c6fa9e5aa159a7c6e3eb0f18805d3eb91537b4b2" title='Last modified Oct 21, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/94289885b858d0edbfffb81424970742e9c67187" title='Last modified Oct 21, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 21, 2020
     </a>
   </div>
@@ -168,7 +194,11 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#セグメント木">セグメント木</a></li>
+<li><a href="#セグメント木">セグメント木</a>
+<ul>
+<li><a href="#セグメント木を使った最小値の求め方">セグメント木を使った最小値の求め方</a></li>
+<li><a href="#セグメント木の値の更新">セグメント木の値の更新</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>
