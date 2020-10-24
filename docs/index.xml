@@ -749,24 +749,6 @@
     </item>
     
     <item>
-      <title>ベクトル</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/vector/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/vector/</guid>
-      <description>ベクトル ベクトルの定義についてを示す。 Python ベクトル(1次元配列)は、numpyライブラリにある関数array(list)を使って定義する。 同じ</description>
-    </item>
-    
-    <item>
-      <title>ベクトルの大きさ(ノルム)</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/norm/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/norm/</guid>
-      <description>ベクトルの大きさ(ノルム) Python ベクトルの大きさ(ノルム)を算出したいときは、numpy.linalgモジュールにある関数normを使用する。 n</description>
-    </item>
-    
-    <item>
       <title>ベルマンフォード法</title>
       <link>https://WAT36.github.io/pages/docs/programming/procon/bellman_ford/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1429,7 +1411,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/math_index/</guid>
-      <description>数学系 数学に関する手法などをまとめる。 都合上、現在はPythonのみ記載。 線形代数ではnumpyというライブラリを利用する。 線形代数 ベクトル</description>
+      <description>数学系 数学に関する手法などをまとめる。 都合上、現在はPythonのみ記載。 線形代数ではnumpyというライブラリを利用する。 線形代数 行列 零行</description>
     </item>
     
     <item>
@@ -1622,15 +1604,6 @@
     </item>
     
     <item>
-      <title>行列の型(サイズ)</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/matrix_size/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/matrix_size/</guid>
-      <description>行列の型(サイズ) 行列の型(サイズ)を調べる方法についてを示す。 Python 行列(2次元配列)のサイズはnumpy.ndarray型の変数.shape</description>
-    </item>
-    
-    <item>
       <title>行列積(ベクトルの内積)</title>
       <link>https://WAT36.github.io/pages/docs/programming/math/dot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1664,15 +1637,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/ones/</guid>
       <description>要素が全て１の行列 要素が全て１の行列を生成する方法についてを示す。 Python numpyの関数onesを使うと、要素が全て１の行列を生成できる。 零行列</description>
-    </item>
-    
-    <item>
-      <title>要素が等間隔になるベクトル</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/arange/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/arange/</guid>
-      <description>要素が等間隔になるベクトル 指定した範囲内で、全ての要素の感覚が等しくなるようなベクトルを生成する方法についてを示す。 Python 主に方法は二つある。 numpy.arange()</description>
     </item>
     
     <item>

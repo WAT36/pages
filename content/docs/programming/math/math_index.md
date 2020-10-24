@@ -14,11 +14,7 @@ bookToc: false
 線形代数では**numpy**というライブラリを利用する。
 
 - 線形代数
- - [ベクトル]({{< relref "/docs/programming/math/vector.md" >}})
-     - [要素が等間隔になるベクトル]({{< relref "/docs/programming/math/arange.md" >}})
-     - [ベクトルの大きさ(ノルム)]({{< relref "/docs/programming/math/norm.md" >}})
  - [行列]({{< relref "/docs/programming/math/matrix.md" >}})
-     - [行列の型(サイズ)]({{< relref "/docs/programming/math/matrix_size.md" >}})
      - [零行列]({{< relref "/docs/programming/math/zero.md" >}})
      - [要素が全て１の行列]({{< relref "/docs/programming/math/ones.md" >}})
      - [要素がランダムの行列]({{< relref "/docs/programming/math/rand.md" >}})
