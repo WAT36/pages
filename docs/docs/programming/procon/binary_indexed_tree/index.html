@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.2894c68d812c4176669856d3a915f42293c9a2e1408d42a688d5b5078640ba5a.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.2e06f92c14efedd87f90549a6f1e8025916a05a5734c3fce7761cd138495319a.js"></script>
 
 
 
@@ -145,7 +145,11 @@ https://github.com/alex-shpak/hugo-book
 
 <p>BITでは、節点の値にその節点が示す区間の値の和を設定する。</p>
 
-<p>ここから、例えばi=5を入力した時、a<sub>0</sub>〜a<sub>4</sub>までの和を求めるが、この求め方もセグメント木の時と同様に、a<sub>0</sub>〜a<sub>4</sub>の区間を示す節点を取り出してきて、その値の和を求めれば良い。この例の時、以下のような図で表される。</p>
+<p>ここから、例えばi=5を入力した時、a<sub>0</sub>〜a<sub>4</sub>までの和を求めるが、この求め方もセグメント木の時と同様に、a<sub>0</sub>〜a<sub>4</sub>の区間を示す節点を取り出してきて、その値の和を求めれば良い。この例の時、以下のような図で表され、和は17+4=21が返る。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/bit2.png" alt="BIT例2" /></p>
+
+<p>ここで、BITにおいては、区間内の和を示しているので、実は各節点の2つ目の子になっている節点は必要ないことがわかる。(iが与えられた時は2つ目の子の要素は計算に使わない。i,xが与えられた時でa<sub>i-1</sub>が親節点の2つ目の子になっていた場合、a<sub>i-1</sub>を示す節点の値を書き換えなくても、その親接点から上の接点の要素を書き換えれば、その他の計算には影響を与えないため。)</p>
 </article>
 
       
@@ -153,7 +157,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f576c7998d79b33c2381318739636c5a9ab78ba8" title='Last modified Oct 24, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/1a9a862d7fad8c1e7aad17e3a99249aeb95b4a35" title='Last modified Oct 24, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 24, 2020
     </a>
   </div>
