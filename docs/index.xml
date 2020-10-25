@@ -317,15 +317,6 @@
     </item>
     
     <item>
-      <title>Rand</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/rand/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/rand/</guid>
-      <description>要素がランダムの行列 要素がランダムの行列を生成する方法を示す。 Python 要素がランダムな行列(2次元配列)を生成するにはnumpy.random.r</description>
-    </item>
-    
-    <item>
       <title>Set型</title>
       <link>https://WAT36.github.io/pages/docs/programming/list/set/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -602,15 +593,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/other/generics/</guid>
       <description>ジェネリクス ジェネリクスについて。 ジェネリクスとは、特定の型に制限されない、抽象的かつ汎用的なコードを記述するための機能である。 変数の型を明</description>
-    </item>
-    
-    <item>
-      <title>スカラー*行列</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/scalar/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/scalar/</guid>
-      <description>スカラー*行列 スカラーと行列を書ける方法についてを示す。 Python スカラーと行列をかけたいときは、普通にスカラーとnumpy.ndarray型の変数</description>
     </item>
     
     <item>
@@ -1411,7 +1393,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/math_index/</guid>
-      <description>数学系 数学に関する手法などをまとめる。 都合上、現在はPythonのみ記載。 線形代数ではnumpyというライブラリを利用する。 線形代数 行列 零行</description>
+      <description>数学系 数学に関する手法などをまとめる。 都合上、現在はPythonのみ記載。 線形代数ではnumpyというライブラリを利用する。 線形代数 行列 行列</description>
     </item>
     
     <item>
@@ -1595,15 +1577,6 @@
     </item>
     
     <item>
-      <title>行列のサイズを変更する</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/reshape/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/reshape/</guid>
-      <description>行列のサイズを変更する 行列のサイズを変更する方法についてを示す。 Python 行列のサイズを変更したい場合は変数名.reshape(n,m)を使う。 変更</description>
-    </item>
-    
-    <item>
       <title>行列積(ベクトルの内積)</title>
       <link>https://WAT36.github.io/pages/docs/programming/math/dot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1628,15 +1601,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/min/</guid>
       <description>複数の数字のうち最も小さい数字をとる 複数の数値から一番小さい数値を取り出したい時の方法を示す。 Java Javaではjava.lang.Mathクラ</description>
-    </item>
-    
-    <item>
-      <title>要素が全て１の行列</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/ones/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/ones/</guid>
-      <description>要素が全て１の行列 要素が全て１の行列を生成する方法についてを示す。 Python numpyの関数onesを使うと、要素が全て１の行列を生成できる。 零行列</description>
     </item>
     
     <item>
@@ -1880,15 +1844,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/ctf/esolang/</guid>
       <description>難解プログラミング言語 難解プログラミング言語とは、意図的に解読が困難になるように設計されたプログラミング言語である。 実用性を考慮して作られた</description>
-    </item>
-    
-    <item>
-      <title>零行列</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/zero/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/zero/</guid>
-      <description>零行列 零行列を生成する方法についてを示す。 Python 零行列はnumpyの関数zerosで生成できる。 引数に１つの整数を渡した場合は1次元(ベクトル)</description>
     </item>
     
     <item>

@@ -173,11 +173,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/math/rand/</loc>
-    <lastmod>2020-01-11T22:25:42+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/list/set/</loc>
     <lastmod>2020-02-08T21:52:13+09:00</lastmod>
   </url>
@@ -330,11 +325,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/other/generics/</loc>
     <lastmod>2020-07-21T21:11:08+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/math/scalar/</loc>
-    <lastmod>2020-01-13T09:52:52+09:00</lastmod>
   </url>
   
   <url>
@@ -779,7 +769,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/math/math_index/</loc>
-    <lastmod>2020-05-22T21:41:48+09:00</lastmod>
+    <lastmod>2020-10-24T12:13:40+09:00</lastmod>
   </url>
   
   <url>
@@ -883,11 +873,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/math/reshape/</loc>
-    <lastmod>2020-01-11T22:10:15+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/math/dot/</loc>
     <lastmod>2020-01-13T11:09:38+09:00</lastmod>
   </url>
@@ -900,11 +885,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/min/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/math/ones/</loc>
-    <lastmod>2020-01-10T07:54:47+09:00</lastmod>
   </url>
   
   <url>
@@ -1043,11 +1023,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/math/zero/</loc>
-    <lastmod>2020-01-09T08:29:00+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class/</loc>
     <lastmod>2020-06-10T23:31:55+09:00</lastmod>
   </url>
@@ -1139,7 +1114,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-10-24T11:10:40+09:00</lastmod>
+    <lastmod>2020-10-24T12:13:40+09:00</lastmod>
   </url>
   
   <url>
