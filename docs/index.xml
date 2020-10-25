@@ -642,15 +642,6 @@
     
     <item>
       <title>セグメント木</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/segment_tree-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/segment_tree-2/</guid>
-      <description>セグメント木 セグメント木は区間と二分木を組み合わせたようなデータ構造である。例えば長さ8のリストをセグメント木で表すと以下のようになる。 ここ</description>
-    </item>
-    
-    <item>
-      <title>セグメント木</title>
       <link>https://WAT36.github.io/pages/docs/programming/procon/segment_tree/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -782,15 +773,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/norm/</guid>
       <description>ベクトルの大きさ(ノルム) Python ベクトルの大きさ(ノルム)を算出したいときは、numpy.linalgモジュールにある関数normを使用する。 n</description>
-    </item>
-    
-    <item>
-      <title>ベルマンフォード法</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/bellman_ford-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/bellman_ford-2/</guid>
-      <description>ベルマンフォード法 ベルマンフォード法とは、最短路問題(ある点から他の全ての頂点との間の最短路を求める問題)を解く手法の一つである。 始点sから</description>
     </item>
     
     <item>
@@ -1079,15 +1061,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/ternary/</guid>
       <description>三項演算子 条件分岐を行う三項演算子についてを示す。 Java Javaでは三項演算子 &amp;ldquo;?&amp;rdquo; が実装されている。 例えば a ? b : c としたとき、aがtrueならb</description>
-    </item>
-    
-    <item>
-      <title>二部グラフ</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/bipartite_graph-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/bipartite_graph-2/</guid>
-      <description>二部グラフ 前述のグラフの彩色問題において、彩色数(グラフの頂点を彩色するのに必要な最小の色数)が2であるグラフを二部グラフという。 グラフが与</description>
     </item>
     
     <item>
@@ -1493,15 +1466,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/string/find/</guid>
       <description>文字列中にある文字列が含まれているときにその位置を確認する 文字列中に特定の文字列が含まれていた時、その位置を確認したい場合どうするか？ ここで</description>
-    </item>
-    
-    <item>
-      <title>最小全域木</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/minimum_spanning_tree-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/minimum_spanning_tree-2/</guid>
-      <description>最小全域木 無向グラフが与えられたときに、その内のある辺だけを用いてグラフ中の任意の２頂点を連結(ある頂点から他のどの頂点への経路が存在する)</description>
     </item>
     
     <item>
