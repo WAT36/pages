@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.b1cbad64389a93c52fbdb1880980bd5086d41bf1202e61cce42cee6670a986d8.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.87887c3c49aa3335f848a829db76cb167bcc654ed2a05f60a7f5b6ea918679ed.js"></script>
 
 
 
@@ -165,7 +165,17 @@ https://github.com/alex-shpak/hugo-book
 
 <p>ではまず、このデータ構造を用いて、「iが与えられた時、a<sub>1</sub>&hellip;a<sub>i</sub>の和を計算する」方法を以下に示す。</p>
 
-<p>a<sub>i</sub>までの和を求めるには、</p>
+<p>a<sub>i</sub>までの和を求めるには、iの２進数表記の数を利用して、以下のように行う。</p>
+
+<ol>
+<li>a[i]の値を加える。</li>
+<li>iの２進数表記において、一番下の&rdquo;1&rdquo;を減算する。(i -= i &amp; -i)</li>
+<li>i==0なら1.で加えた値を出力して終了する。そうでない場合は1.へ戻る</li>
+</ol>
+
+<p>例えばi=7の時は以下の通り。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/bit5.png" alt="BIT例5" /></p>
 </article>
 
       
@@ -173,8 +183,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/9bcc7f718b135daa99d23c3d2e10bd46c65a5329" title='Last modified Oct 25, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 25, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/1e98d6484915cc8f3ed3c28544dc00a3d4d66049" title='Last modified Oct 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 26, 2020
     </a>
   </div>
   
