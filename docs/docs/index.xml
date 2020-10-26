@@ -273,15 +273,6 @@
     </item>
     
     <item>
-      <title>ndarray型のデータをファイルに保存する</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/save/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/save/</guid>
-      <description>ndarray型のデータをファイルに保存する ndarray型変数をファイルに保存する方法についてを示す。 Python ndarray型変数をファイルに保</description>
-    </item>
-    
-    <item>
       <title>Null</title>
       <link>https://WAT36.github.io/pages/docs/programming/other/null/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1137,15 +1128,6 @@
     </item>
     
     <item>
-      <title>単位行列</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/identity/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/identity/</guid>
-      <description>単位行列 単位行列を生成する方法を述べる。 Python 単位行列を算出したいときは、numpyモジュールにある関数identityを使用する。 numpy.identity(n) 上記の式に</description>
-    </item>
-    
-    <item>
       <title>可変長引数の関数</title>
       <link>https://WAT36.github.io/pages/docs/programming/class_func/variablelength_arg/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1394,7 +1376,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/math_index/</guid>
-      <description>数学系 数学に関する手法などをまとめる。 都合上、現在はPythonのみ記載。 線形代数ではnumpyというライブラリを利用する。 線形代数 行列 行列</description>
+      <description>数学系 数学に関する手法などをまとめる。 都合上、現在はPythonのみ記載。 関数 シグモイド関数 ソフトマックス関数 シグモイド関数とソフトマックス</description>
     </item>
     
     <item>
@@ -1569,24 +1551,6 @@
     </item>
     
     <item>
-      <title>行列</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/matrix/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/matrix/</guid>
-      <description>行列 行列の定義についてを示す。 Python 行列(2次元配列)もベクトルと同様、numpyライブラリにある関数array(list)を使って定義する。引</description>
-    </item>
-    
-    <item>
-      <title>行列積(ベクトルの内積)</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/dot/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/dot/</guid>
-      <description>行列積(ベクトルの内積) 行列積、ベクトルでいう内積を算出する方法についてを示す。 Python 行列積を算出したいときは、numpy変数の関数dotを使用</description>
-    </item>
-    
-    <item>
       <title>複数の数字のうち最も大きい数字をとる</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/max/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1665,15 +1629,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/and_bit/</guid>
       <description>論理積(AND) ANDのビット演算をする方法についてを示す。 Java JavaではANDのビット演算子 &amp;amp; を使用する。論理演算の時とは違い、こちらは&amp;</description>
-    </item>
-    
-    <item>
-      <title>転置行列</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/transpose/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/transpose/</guid>
-      <description>転置行列 転置行列を算出する方法についてを示す。 Python 転置行列を算出したい時は、(ndarray型の変数).Tで行う。 &amp;gt;&amp;gt;&amp;gt; import numpy as np &amp;gt;&amp;gt;&amp;gt; &amp;gt;&amp;gt;&amp;gt; a = np.array([[1, 2]]) &amp;gt;&amp;gt;&amp;gt; &amp;gt;&amp;gt;&amp;gt; print(a)</description>
     </item>
     
     <item>
@@ -1791,15 +1746,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/map/map_index/</guid>
       <description>辞書、Map 辞書、Mapについての記事。 多くの言語でこれに似たようなデータ構造がある（と予想している）が、言語により名前が違うので注意。 Ja</description>
-    </item>
-    
-    <item>
-      <title>逆行列</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/inv/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/inv/</guid>
-      <description>逆行列 逆行列を算出する方法についてを述べる。 Python 逆行列を算出したいときは、numpy.linalgモジュールにある関数invを使用する。 numpy.linalg.inv(A) 上記</description>
     </item>
     
     <item>

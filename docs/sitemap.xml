@@ -148,11 +148,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/math/save/</loc>
-    <lastmod>2020-01-16T00:24:34+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/other/null/</loc>
     <lastmod>2020-07-15T20:15:42+09:00</lastmod>
   </url>
@@ -628,11 +623,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/math/identity/</loc>
-    <lastmod>2020-02-06T20:33:14+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/variablelength_arg/</loc>
     <lastmod>2020-07-19T02:20:22+09:00</lastmod>
   </url>
@@ -769,7 +759,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/math/math_index/</loc>
-    <lastmod>2020-10-24T12:13:40+09:00</lastmod>
+    <lastmod>2020-10-25T18:51:41+09:00</lastmod>
   </url>
   
   <url>
@@ -868,16 +858,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/math/matrix/</loc>
-    <lastmod>2020-01-07T08:27:05+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/math/dot/</loc>
-    <lastmod>2020-01-13T11:09:38+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/max/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
   </url>
@@ -920,11 +900,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/and_bit/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/math/transpose/</loc>
-    <lastmod>2020-02-04T08:23:33+09:00</lastmod>
   </url>
   
   <url>
@@ -990,11 +965,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/map/map_index/</loc>
     <lastmod>2020-10-03T01:18:42+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/math/inv/</loc>
-    <lastmod>2020-02-07T08:02:13+09:00</lastmod>
   </url>
   
   <url>
@@ -1114,7 +1084,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-10-24T12:13:40+09:00</lastmod>
+    <lastmod>2020-10-25T18:51:41+09:00</lastmod>
   </url>
   
   <url>
