@@ -228,13 +228,11 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/math/gauss/</loc>
-    <lastmod>2020-02-21T22:09:01+09:00</lastmod>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/gauss/</loc>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/math/gauss_2D/</loc>
-    <lastmod>2020-02-27T20:58:51+09:00</lastmod>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/gauss_2D/</loc>
   </url>
   
   <url>
@@ -303,13 +301,11 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/math/sigmoid/</loc>
-    <lastmod>2020-02-08T23:05:45+09:00</lastmod>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/sigmoid/</loc>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/math/softmax_sigmoid/</loc>
-    <lastmod>2020-02-21T22:09:01+09:00</lastmod>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/softmax_sigmoid/</loc>
   </url>
   
   <url>
@@ -343,8 +339,7 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/math/softmax/</loc>
-    <lastmod>2020-02-17T22:03:21+09:00</lastmod>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/softmax/</loc>
   </url>
   
   <url>
@@ -758,11 +753,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/math/math_index/</loc>
-    <lastmod>2020-10-25T18:51:41+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/string/length/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
   </url>
@@ -783,13 +773,11 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/math/maximum_likelihood/</loc>
-    <lastmod>2020-06-10T23:31:55+09:00</lastmod>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/maximum_likelihood/</loc>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/math/conditional_probability/</loc>
-    <lastmod>2020-06-10T23:31:55+09:00</lastmod>
+    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/conditional_probability/</loc>
   </url>
   
   <url>
@@ -1084,7 +1072,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-10-25T18:51:41+09:00</lastmod>
+    <lastmod>2020-10-24T11:10:40+09:00</lastmod>
   </url>
   
   <url>

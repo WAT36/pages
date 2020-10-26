@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>数学系 | WAT Notes</title>
+<title>条件付き確率 | WAT Notes</title>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.c235909f5e9120e498638d1f281778c620f93faebff7ab0b2578bb08d787d666.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.f2f229d0de5ded557dd44aa5170313696f09bbc33f47b042893376059bfb8aa6.js"></script>
 
 
 
@@ -54,7 +54,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmath\2fmath_index\2f "] {
+  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2f conditional_probability\2f "] {
       color: #004ed0;
   }
   </style>
@@ -119,45 +119,67 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>数学系</strong>
+  <strong>条件付き確率</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="数学系">数学系</h1>
+<h1 id="条件付き確率">条件付き確率</h1>
 
-<p>数学に関する手法などをまとめる。<br />
-都合上、現在はPythonのみ記載。</p>
+<p>私は高校で条件付き確率を学んでこなかったゆとり世代なので、改めて条件付き確率において書き記していく。</p>
 
-<ul>
-<li>関数
+<p>事象A,Bにおいて、ある事象Bが起こったという条件下での事象Aが起こる確率のことを、Bを<strong>条件</strong>とするAの<strong>条件付き確率</strong>と呼び、P(A|B)と表す。</p>
 
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/programming/math/sigmoid/">シグモイド関数</a></li>
-<li><a href="https://WAT36.github.io/pages/docs/programming/math/softmax/">ソフトマックス関数</a></li>
-<li><a href="https://WAT36.github.io/pages/docs/programming/math/softmax_sigmoid/">シグモイド関数とソフトマックス関数</a></li>
-<li><a href="https://WAT36.github.io/pages/docs/programming/math/gauss/">ガウス関数</a></li>
-<li>ガウス関数(2次元)</li>
-</ul></li>
-<li>確率・統計
+<p>P(A|B)の求め方は、Bが起こった中のうちAが起こりうる確率であるから、以下の式で表される。</p>
 
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/programming/math/conditional_probability/">条件付き確率</a></li>
-<li><a href="https://WAT36.github.io/pages/docs/programming/math/maximum_likelihood/">最尤推定</a></li>
-</ul></li>
-</ul>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+<p class="katex">
+  $$ 
+\tag{1}  P(A|B) = \frac{ P( A \cap B ) }{ P(B) } 
+ $$
+</p>
+
+
+
+<h2 id="例題">例題</h2>
+
+<p><img src="https://WAT36.github.io/pages/img/math/conditional_probability1.png" width=20%></p>
+
+<p>袋の中に1,2,3の数字が書かれた赤玉と白玉の計６個の玉が入っている。</p>
+
+<p>この中から、２以上の数字が書かれた球を取り出す事象をAとおく。事象Aが起こる確率P(A)はいくらか？</p>
+
+<p>答えは2/3である。</p>
+
+<p>では、球を取り出した時に球の色が赤だった事が判明したとする。この時球に書かれた数字が２以上である確率はいくらか？</p>
+
+<p>先ほどの事象Aに加え、赤い球を取り出す事象をBとおく。この場合は事象Bが起こった上での事象Aが起こる確率であるため、Bを条件とするAの条件付き確率となり、その確率P(A|B)は以下のようになる。</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+\tag{2}  P(A|B) &= \frac{ P( A \cap B ) }{ P(B) } \\ 
+                &= \frac{ \frac{ 2 }{ 6 } }{ \frac{ 3 }{ 6 } } \\
+                &= \frac{ 2 }{ 3 }
+\end{aligned}
+ $$
+</p>
+
+
 </article>
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/1c4e58fbe781168c2ec3ca7aa099065865cab5d1" title='Last modified Oct 25, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 25, 2020
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
 </div>
 

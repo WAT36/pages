@@ -41,3 +41,14 @@ bookToc: false
  - [Kerasでニューラルネットワーク] ({{< relref "/docs/programming/machine_learning/keras.md" >}})
  - [手書き文字の認識] ({{< relref "/docs/programming/machine_learning/mnist.md" >}})
  - [フィルターと畳み込みニューラルネットワーク] ({{< relref "/docs/programming/machine_learning/filter.md" >}})
+
+- 数学系
+ - 関数
+     - [シグモイド関数]({{< relref "/docs/programming/machine_learning/sigmoid.md" >}})
+     - [ソフトマックス関数]({{< relref "/docs/programming/machine_learning/softmax.md" >}})
+     - [シグモイド関数とソフトマックス関数]({{< relref "/docs/programming/machine_learning/softmax_sigmoid.md" >}})
+     - [ガウス関数]({{< relref "/docs/programming/machine_learning/gauss.md" >}})
+     - ガウス関数(2次元)
+ - 確率・統計
+     - [条件付き確率]({{< relref "/docs/programming/machine_learning/conditional_probability.md" >}})
+     - [最尤推定]({{< relref "/docs/programming/machine_learning/maximum_likelihood.md" >}})

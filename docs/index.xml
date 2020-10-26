@@ -417,19 +417,19 @@
     
     <item>
       <title>ガウス関数</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/gauss/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/gauss/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/programming/math/gauss/</guid>
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/gauss/</guid>
       <description>ガウス関数 Python ガウス関数は以下の式で表される関数である。 a exp ( - (x - &amp;mu; ) 2 &amp;sigma; 2 ) ここで、式中の変数は以下の意味を持つ。 μ：中心(平均) σ：標準</description>
     </item>
     
     <item>
       <title>ガウス関数(2次元)</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/gauss_2D/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/gauss_2D/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/programming/math/gauss_2D/</guid>
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/gauss_2D/</guid>
       <description>ガウス関数(2次元) Python ガウス関数 a exp ( - (x - &amp;mu; ) 2 &amp;sigma; 2 ) において、入力xを2次元ベクトルとした時の場合を考える。(以下) x = x 0 x 1 この時、</description>
     </item>
     
@@ -552,19 +552,19 @@
     
     <item>
       <title>シグモイド関数</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/sigmoid/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/sigmoid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/programming/math/sigmoid/</guid>
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/sigmoid/</guid>
       <description>シグモイド関数 機械学習でよく用いられるシグモイド関数についてを述べる。 シグモイド関数とは以下の式で定義される関数である。 Python シグモイド関数をプ</description>
     </item>
     
     <item>
       <title>シグモイド関数とソフトマックス関数</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/softmax_sigmoid/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/softmax_sigmoid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/programming/math/softmax_sigmoid/</guid>
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/softmax_sigmoid/</guid>
       <description>シグモイド関数とソフトマックス関数 シグモイド関数とソフトマックス関数は類似しているところがある。 2変数(x0、x1)の時のソフトマックス関数</description>
     </item>
     
@@ -624,10 +624,10 @@
     
     <item>
       <title>ソフトマックス関数</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/softmax/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/softmax/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/programming/math/softmax/</guid>
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/softmax/</guid>
       <description>ソフトマックス関数 Python 複数の数x1,x2,&amp;hellip;xiがあり、それらの数の大小関係を保ったままそれぞれを確率を表す数y1,y2,&amp;he</description>
     </item>
     
@@ -1370,15 +1370,6 @@
     </item>
     
     <item>
-      <title>数学系</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/math_index/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/math_index/</guid>
-      <description>数学系 数学に関する手法などをまとめる。 都合上、現在はPythonのみ記載。 関数 シグモイド関数 ソフトマックス関数 シグモイド関数とソフトマックス</description>
-    </item>
-    
-    <item>
       <title>文字列の長さ（文字数）を調べる</title>
       <link>https://WAT36.github.io/pages/docs/programming/string/length/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1416,19 +1407,19 @@
     
     <item>
       <title>最尤推定</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/maximum_likelihood/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/maximum_likelihood/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/programming/math/maximum_likelihood/</guid>
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/maximum_likelihood/</guid>
       <description>最尤推定 当たりとハズレがそれぞれ何個か入ったくじがあり、当たりが出た時を１、ハズレが出た時を０と設定する。 この時、n回目にくじを引いた時の結</description>
     </item>
     
     <item>
       <title>条件付き確率</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/conditional_probability/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/conditional_probability/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/programming/math/conditional_probability/</guid>
+      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/conditional_probability/</guid>
       <description>条件付き確率 私は高校で条件付き確率を学んでこなかったゆとり世代なので、改めて条件付き確率において書き記していく。 事象A,Bにおいて、ある事象</description>
     </item>
     

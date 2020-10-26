@@ -24,7 +24,7 @@ bookToc: false
 
 では、シグモイド関数ではない方法に何があるだろうか。
 
-方法の一つとして、ここでは**[ソフトマックス関数]({{< relref "/docs/programming/math/softmax.md" >}})**を利用することを考える。
+方法の一つとして、ここでは**[ソフトマックス関数]({{< relref "/docs/programming/machine_learning/softmax.md" >}})**を利用することを考える。
 
 ソフトマックス関数を利用することで、出力値が全て0以上1以下の値に収まるので、この値を条件付き確率として用いる。
 
