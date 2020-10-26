@@ -68,8 +68,12 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/procon/binary_indexed_tree-2/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/procon/binary_indexed_tree/</loc>
-    <lastmod>2020-10-25T17:37:49+09:00</lastmod>
+    <lastmod>2020-10-25T22:40:14+09:00</lastmod>
   </url>
   
   <url>
@@ -418,8 +422,16 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/vector-2/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/math/vector/</loc>
     <lastmod>2020-01-06T22:40:20+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/norm-2/</loc>
   </url>
   
   <url>
@@ -903,6 +915,10 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/matrix_size-2/</loc>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/math/matrix_size/</loc>
     <lastmod>2020-01-08T08:23:27+09:00</lastmod>
   </url>
@@ -925,6 +941,10 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/math/ones/</loc>
     <lastmod>2020-01-10T07:54:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/arange-2/</loc>
   </url>
   
   <url>
@@ -1164,7 +1184,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-10-25T17:37:49+09:00</lastmod>
+    <lastmod>2020-10-25T22:40:14+09:00</lastmod>
   </url>
   
   <url>

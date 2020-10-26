@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.eac1b4c8d04f625750af491400cbb2400a38b2bdcaef5507572cf992aca0ce63.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.b1cbad64389a93c52fbdb1880980bd5086d41bf1202e61cce42cee6670a986d8.js"></script>
 
 
 
@@ -130,8 +130,8 @@ https://github.com/alex-shpak/hugo-book
 <p>Binary Indexed Tree(BIT)は、セグメント木を応用したデータ構造で、リスト(数列)a<sub>n</sub>が与えられた時、次のことが行える。</p>
 
 <ul>
-<li>iが与えられた時、a<sub>0</sub>&hellip;a<sub>i-1</sub>の和を計算する。</li>
-<li>i,xが与えられた時、a<sub>i-1</sub>+=xとする。</li>
+<li>iが与えられた時、a<sub>1</sub>&hellip;a<sub>i</sub>の和を計算する。</li>
+<li>i,xが与えられた時、a<sub>i</sub>+=xとする。</li>
 </ul>
 
 <p>BITをどのように表すかだが、セグメント木と同様に、リストの各要素を木の葉の要素にならべる。</p>
@@ -145,11 +145,11 @@ https://github.com/alex-shpak/hugo-book
 
 <p>BITでは、節点の値にその節点が示す区間の値の和を設定する。</p>
 
-<p>ここから、例えばi=5を入力した時、a<sub>0</sub>〜a<sub>4</sub>までの和を求めるが、この求め方もセグメント木の時と同様に、a<sub>0</sub>〜a<sub>4</sub>の区間を示す節点を取り出してきて、その値の和を求めれば良い。この例の時、以下のような図で表され、和は17+4=21が返る。</p>
+<p>ここから、例えばi=5を入力した時、a<sub>1</sub>〜a<sub>5</sub>までの和を求めるが、この求め方もセグメント木の時と同様に、a<sub>1</sub>〜a<sub>5</sub>の区間を示す節点を取り出してきて、その値の和を求めれば良い。この例の時、以下のような図で表され、和は17+4=21が返る。</p>
 
 <p><img src="https://WAT36.github.io/pages/img/procon/bit2.png" alt="BIT例2" /></p>
 
-<p>ここで、BITにおいては、区間内の和を示しているので、実は各節点の2つ目の子になっている節点は必要ないことがわかる。(iが与えられた時は2つ目の子の要素は計算に使わない。i,xが与えられた時でa<sub>i-1</sub>が親節点の2つ目の子になっていた場合、a<sub>i-1</sub>を示す節点の値を書き換えなくても、その親接点から上の接点の要素を書き換えれば、その他の計算には影響を与えないため。)</p>
+<p>ここで、BITにおいては、区間内の和を示しているので、実は各節点の2つ目の子になっている節点は必要ないことがわかる。(iが与えられた時は2つ目の子の要素は計算に使わない。i,xが与えられた時でa<sub>i</sub>が親節点の2つ目の子になっていた場合、a<sub>i</sub>を示す節点の値を書き換えなくても、その親節点から上の接点の要素を書き換えれば、その他の計算には影響を与えないため。)</p>
 
 <p>そのため、BITは以下のようにも置き換えられる。</p>
 
@@ -161,11 +161,11 @@ https://github.com/alex-shpak/hugo-book
 
 <p><img src="https://WAT36.github.io/pages/img/procon/bit4.png" alt="BIT例4" /></p>
 
-<p>ここで、リストのインデックスを２進数で表したとき、２進数の1桁目が0のところは一番深いところの要素(要素1つ分の区間の節点)を表し、その1つ上の要素はリストのインデックス(２進数)の1桁目が1で2桁目が0である・・・というように表せ流。BITでは、この性質を用いて計算をすることが多い。</p>
+<p>ここで、リストのインデックスを２進数で表したとき、２進数の1桁目が0のところは一番深いところの要素(要素1つ分の区間の節点)を表し、その1つ上の要素はリストのインデックス(２進数)の1桁目が1で2桁目が0である・・・というように表せる。BITでは、この性質を用いて計算をすることが多い。</p>
 
-<p>ではまず、このデータ構造を用いて、「iが与えられた時、a<sub>0</sub>&hellip;a<sub>i-1</sub>の和を計算。」方法を以下に示す。</p>
+<p>ではまず、このデータ構造を用いて、「iが与えられた時、a<sub>1</sub>&hellip;a<sub>i</sub>の和を計算する」方法を以下に示す。</p>
 
-<p>a<sub>i-1</sub>までの和を求めるには、</p>
+<p>a<sub>i</sub>までの和を求めるには、</p>
 </article>
 
       
@@ -173,7 +173,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/6d4924cb7bcda5e648738df9657ce251681aeb2e" title='Last modified Oct 25, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/9bcc7f718b135daa99d23c3d2e10bd46c65a5329" title='Last modified Oct 25, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 25, 2020
     </a>
   </div>
