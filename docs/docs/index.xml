@@ -130,15 +130,6 @@
     
     <item>
       <title>Binary Indexed Tree</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/binary_indexed_tree-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/binary_indexed_tree-2/</guid>
-      <description>Binary Indexed Tree Binary Indexed Tree(BIT)は、セグメント木を応用したデータ構造で、リスト(数列)anが与えられた時、次のことが行える。 iが与えられた時、a</description>
-    </item>
-    
-    <item>
-      <title>Binary Indexed Tree</title>
       <link>https://WAT36.github.io/pages/docs/programming/procon/binary_indexed_tree/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -769,29 +760,11 @@
     
     <item>
       <title>ベクトル</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/vector-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/vector-2/</guid>
-      <description>ベクトル ベクトルの定義についてを示す。 Python ベクトル(1次元配列)は、numpyライブラリにある関数array(list)を使って定義する。 同じ</description>
-    </item>
-    
-    <item>
-      <title>ベクトル</title>
       <link>https://WAT36.github.io/pages/docs/programming/math/vector/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/vector/</guid>
       <description>ベクトル ベクトルの定義についてを示す。 Python ベクトル(1次元配列)は、numpyライブラリにある関数array(list)を使って定義する。 同じ</description>
-    </item>
-    
-    <item>
-      <title>ベクトルの大きさ(ノルム)</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/norm-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/norm-2/</guid>
-      <description>ベクトルの大きさ(ノルム) Python ベクトルの大きさ(ノルム)を算出したいときは、numpy.linalgモジュールにある関数normを使用する。 n</description>
     </item>
     
     <item>
@@ -1660,15 +1633,6 @@
     
     <item>
       <title>行列の型(サイズ)</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/matrix_size-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/matrix_size-2/</guid>
-      <description>行列の型(サイズ) 行列の型(サイズ)を調べる方法についてを示す。 Python 行列(2次元配列)のサイズはnumpy.ndarray型の変数.shape</description>
-    </item>
-    
-    <item>
-      <title>行列の型(サイズ)</title>
       <link>https://WAT36.github.io/pages/docs/programming/math/matrix_size/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1710,15 +1674,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/math/ones/</guid>
       <description>要素が全て１の行列 要素が全て１の行列を生成する方法についてを示す。 Python numpyの関数onesを使うと、要素が全て１の行列を生成できる。 零行列</description>
-    </item>
-    
-    <item>
-      <title>要素が等間隔になるベクトル</title>
-      <link>https://WAT36.github.io/pages/docs/programming/math/arange-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/math/arange-2/</guid>
-      <description>要素が等間隔になるベクトル 指定した範囲内で、全ての要素の感覚が等しくなるようなベクトルを生成する方法についてを示す。 Python 主に方法は二つある。 numpy.arange()</description>
     </item>
     
     <item>

@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.87887c3c49aa3335f848a829db76cb167bcc654ed2a05f60a7f5b6ea918679ed.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.03064552b36116e847c2400782f94d26ebc0006c082a27bfc0c14d1445138315.js"></script>
 
 
 
@@ -176,6 +176,18 @@ https://github.com/alex-shpak/hugo-book
 <p>例えばi=7の時は以下の通り。</p>
 
 <p><img src="https://WAT36.github.io/pages/img/procon/bit5.png" alt="BIT例5" /></p>
+
+<p>次に、「i,xが与えられた時、a<sub>i</sub>+=xとする。」方法だが、これは先ほどと逆で、iに一番下の&rdquo;1&rdquo;を加算していく。以下にその手順を示す。</p>
+
+<ol>
+<li>a[i]にxを加える。</li>
+<li>i==len(a)なら、1.で加えた値を出力して終了する。</li>
+<li>iの２進数表記において、一番下の&rdquo;1&rdquo;のビットに1を加算する。(i += i &amp; -i)</li>
+</ol>
+
+<p>例えばi=5の時は以下の通り。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/procon/bit6.png" alt="BIT例6" /></p>
 </article>
 
       
@@ -183,7 +195,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/1e98d6484915cc8f3ed3c28544dc00a3d4d66049" title='Last modified Oct 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/0fdd2d335b769cb76be0fa34383183a7832948ad" title='Last modified Oct 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 26, 2020
     </a>
   </div>
