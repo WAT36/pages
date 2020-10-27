@@ -65,3 +65,25 @@ a<sub>i</sub>までの和を求めるには、iの２進数表記の数を利用
 
 ![BIT例6](/img/procon/bit6.png)
 
+では、これら一連のデータ構造と動作をコードで実装してみよう。例を以下に示す。
+
+```python
+class BinaryIndexedTree:
+    def __init__(self,a):
+        #BITを表すリストaを入力
+        #ただしaの長さは2**nとする
+        #数合わせのためにa[1]~a[len(a)]をBITとする
+        self.bit=[0 for _ in range(len(a)+1)]
+
+    def sum(i):
+        ans=0
+        while i>0:
+            ans+=self.bit[i]
+            i -= i & -i
+        return ans
+    
+    def add(i,x):
+        while i<=n:
+            self.bit[i]+=x
+            i += i & -i
+```
