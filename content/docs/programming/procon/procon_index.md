@@ -19,6 +19,7 @@ bookToc: false
  - [優先度付きキュー(Pythonで実装するライブラリ「heapq」)]({{< relref "/posts/heapq.md" >}})
  - [Union-Find木]({{< relref "/docs/programming/procon/union-find.md" >}})
  - [セグメント木]({{< relref "/docs/programming/procon/segment_tree.md" >}})
+ - [Binary Indexed Tree]({{< relref "/docs/programming/procon/binary_indexed_tree.md" >}})
 - グラフ 
  - [グラフの表現方法]({{< relref "/docs/programming/procon/graph.md" >}})
  - [二部グラフ]({{< relref "/docs/programming/procon/bipartite_graph.md" >}})

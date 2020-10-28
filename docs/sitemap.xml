@@ -68,6 +68,11 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/procon/binary_indexed_tree/</loc>
+    <lastmod>2020-10-28T21:51:10+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/control/break/</loc>
     <lastmod>2020-01-22T22:17:02+09:00</lastmod>
   </url>
@@ -148,6 +153,11 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/save/</loc>
+    <lastmod>2020-01-16T00:24:34+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/other/null/</loc>
     <lastmod>2020-07-15T20:15:42+09:00</lastmod>
   </url>
@@ -165,6 +175,11 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/control/pass/</loc>
     <lastmod>2020-01-24T23:44:43+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/rand/</loc>
+    <lastmod>2020-01-11T22:25:42+09:00</lastmod>
   </url>
   
   <url>
@@ -228,13 +243,13 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/gauss/</loc>
-    <lastmod>2020-10-26T22:31:30+09:00</lastmod>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/gauss/</loc>
+    <lastmod>2020-02-21T22:09:01+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/gauss_2D/</loc>
-    <lastmod>2020-10-26T22:31:30+09:00</lastmod>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/gauss_2D/</loc>
+    <lastmod>2020-02-27T20:58:51+09:00</lastmod>
   </url>
   
   <url>
@@ -303,13 +318,13 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/sigmoid/</loc>
-    <lastmod>2020-10-26T22:31:30+09:00</lastmod>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/sigmoid/</loc>
+    <lastmod>2020-02-08T23:05:45+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/softmax_sigmoid/</loc>
-    <lastmod>2020-10-26T22:31:30+09:00</lastmod>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/softmax_sigmoid/</loc>
+    <lastmod>2020-02-21T22:09:01+09:00</lastmod>
   </url>
   
   <url>
@@ -320,6 +335,11 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/other/generics/</loc>
     <lastmod>2020-07-21T21:11:08+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/scalar/</loc>
+    <lastmod>2020-01-13T09:52:52+09:00</lastmod>
   </url>
   
   <url>
@@ -343,8 +363,8 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/softmax/</loc>
-    <lastmod>2020-10-26T22:31:30+09:00</lastmod>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/softmax/</loc>
+    <lastmod>2020-02-17T22:03:21+09:00</lastmod>
   </url>
   
   <url>
@@ -395,6 +415,16 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/form/</loc>
     <lastmod>2020-08-29T12:52:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/vector/</loc>
+    <lastmod>2020-01-06T22:40:20+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/norm/</loc>
+    <lastmod>2020-02-05T08:12:58+09:00</lastmod>
   </url>
   
   <url>
@@ -623,6 +653,11 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/identity/</loc>
+    <lastmod>2020-02-06T20:33:14+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/class_func/variablelength_arg/</loc>
     <lastmod>2020-07-19T02:20:22+09:00</lastmod>
   </url>
@@ -758,6 +793,11 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/math_index/</loc>
+    <lastmod>2020-05-22T21:41:48+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/string/length/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
   </url>
@@ -778,18 +818,18 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/maximum_likelihood/</loc>
-    <lastmod>2020-10-26T22:31:30+09:00</lastmod>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/maximum_likelihood/</loc>
+    <lastmod>2020-06-10T23:31:55+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/conditional_probability/</loc>
-    <lastmod>2020-10-26T22:31:30+09:00</lastmod>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/conditional_probability/</loc>
+    <lastmod>2020-06-10T23:31:55+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/</loc>
-    <lastmod>2020-10-26T22:31:30+09:00</lastmod>
+    <lastmod>2020-09-27T20:50:37+09:00</lastmod>
   </url>
   
   <url>
@@ -824,7 +864,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/procon/procon_index/</loc>
-    <lastmod>2020-10-20T18:26:21+09:00</lastmod>
+    <lastmod>2020-10-24T11:20:21+09:00</lastmod>
   </url>
   
   <url>
@@ -853,6 +893,26 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/matrix/</loc>
+    <lastmod>2020-01-07T08:27:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/reshape/</loc>
+    <lastmod>2020-01-11T22:10:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/matrix_size/</loc>
+    <lastmod>2020-01-08T08:23:27+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/dot/</loc>
+    <lastmod>2020-01-13T11:09:38+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/max/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
   </url>
@@ -860,6 +920,16 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/min/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/ones/</loc>
+    <lastmod>2020-01-10T07:54:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/arange/</loc>
+    <lastmod>2020-01-18T14:17:05+09:00</lastmod>
   </url>
   
   <url>
@@ -895,6 +965,11 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/and_bit/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/transpose/</loc>
+    <lastmod>2020-02-04T08:23:33+09:00</lastmod>
   </url>
   
   <url>
@@ -963,6 +1038,11 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/inv/</loc>
+    <lastmod>2020-02-07T08:02:13+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/list/array/</loc>
     <lastmod>2020-09-12T18:15:16+09:00</lastmod>
   </url>
@@ -988,6 +1068,11 @@
   </url>
   
   <url>
+    <loc>https://WAT36.github.io/pages/docs/programming/math/zero/</loc>
+    <lastmod>2020-01-09T08:29:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class/</loc>
     <lastmod>2020-06-10T23:31:55+09:00</lastmod>
   </url>
@@ -999,7 +1084,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_3class/</loc>
-    <lastmod>2020-10-26T22:31:30+09:00</lastmod>
+    <lastmod>2020-07-06T21:35:28+09:00</lastmod>
   </url>
   
   <url>
@@ -1079,7 +1164,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2020-10-26T22:43:57+09:00</lastmod>
+    <lastmod>2020-10-28T21:51:10+09:00</lastmod>
   </url>
   
   <url>
@@ -1258,7 +1343,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/</loc>
-    <lastmod>2020-10-26T22:43:57+09:00</lastmod>
+    <lastmod>2020-10-13T00:20:33+09:00</lastmod>
   </url>
   
   <url>
@@ -1272,7 +1357,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/jp_index/</loc>
-    <lastmod>2020-10-26T22:43:57+09:00</lastmod>
+    <lastmod>2020-04-29T13:52:21+09:00</lastmod>
   </url>
   
 </urlset>
