@@ -20,6 +20,7 @@ bookToc: false
  - [Union-Find木]({{< relref "/docs/programming/procon/union-find.md" >}})
  - [セグメント木]({{< relref "/docs/programming/procon/segment_tree.md" >}})
  - [Binary Indexed Tree]({{< relref "/docs/programming/procon/binary_indexed_tree.md" >}})
+ - [バケット法と平方分割]({{< relref "/docs/programming/procon/bucket.md" >}})
 - グラフ 
  - [グラフの表現方法]({{< relref "/docs/programming/procon/graph.md" >}})
  - [二部グラフ]({{< relref "/docs/programming/procon/bipartite_graph.md" >}})
