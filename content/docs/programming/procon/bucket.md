@@ -12,3 +12,85 @@ weight: 1
 ![バケット例1](/img/procon/bucket1.png)
 
 平方分割とは、n個の要素を√n個のバケットにまとめて管理する方法のことを言う。
+
+ここでは、セグメント木の時と同様に、RMQをこの平方分割で実装する方法についてを考えよう。
+
+数列a<sub>0</sub>,a<sub>0</sub>,・・・,a<sub>n-1</sub>がある時、次の2つの処理について√n個のバケットを用いて解くことを考える。
+
+- s,tが与えられた時、a<sub>s</sub>,・・・,a<sub>t</sub>の最小値を求める。
+- i,xが与えられた時、a<sub>i</sub>の値をxに変更する。
+
+まず、長さnの数列aを、[√n]個のバケットに分割する。
+
+前者の最小値を求める処理については、求めたい区間内に完全に含まれているバケットについてはそのバケットの最小値を利用し、求めたい区間にあってかつ属するバケットが完全にその区間に含まれていない要素については、個々の最小値を見る。
+
+そうすることにより得た値の最小値が、求める区間内での最小値になる。
+
+後者の値を更新する処理については、要素の値を更新したら、そのバケットの最小値も再度計算し直さなければならないため、バケット内の全要素を見て計算する。
+
+以上が、平方分割(バケット法)の方法になる。では、これをコードで実装してみよう。実装例を以下に示す。(今回は合っているか不安・・)
+
+```python
+import math
+INF=float("inf")
+
+class Bucket:
+    def __init__(self,a):
+        #元のリスト
+        self.a=a
+        #平方分割用バケット用意
+        b=int(math.sqrt(b)//1)
+        #１バケットあたりのデータの個数
+        self.b=b
+        bucket=[]
+        b_start=0
+        b_end=b
+        while True:
+            if(b_end>=len(a)):
+                bucket.append(min(a[b_start:]))
+                break
+            else:
+                bucket.append(min(a[b_start:b_end]))
+                b_start+=b
+                b_end+=b
+        #バケット
+        self.bucket=bucket
+    
+    #a[s]~a[t]の最小値を求める
+    def query(s,t):
+        ans=INF
+        x=s
+
+        #(a[s]~)個々の要素の計算
+        if(x%self.b != 0 and x<=t):
+            ans=min(ans,self.a[x])
+            x+=1
+        
+        #(a[s]~a[t]が１バケット内のとき)最小値を返す
+        if(x>t):
+            return ans
+        #(そうでないとき)バケット計算
+        else:
+            while (x+b<=t):
+                ans=min(ans,self.bucket[x//b])
+                x+=b
+        
+        #(~a[t])個々の要素の計算
+        if(t-x+1==b):
+            #(a[t]がバケット内の最後の要素であったとき)
+            ans=min(ans,self.bucket[x//b])
+            return ans
+        else:
+            #そうでないときは１個ずつ見る
+            while x<=t:
+                ans=min(ans,self.a[x])
+                x+=1
+            return ans
+
+    #a[i]をxに変更
+    def update(i,x):
+        self.a[i]=x
+        #a[i]があるバケットのインデックスを取得し変更
+        j=i//self.b
+        self.bucket[j]=min(self.bucket[j],x)
+```
