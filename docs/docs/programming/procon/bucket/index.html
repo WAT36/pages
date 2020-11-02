@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.1844aa96f479f8558658fe064ca0f54b9506516bb0908c3011aff3fb4306dcc5.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.70ade7669f7b6c8ba9a354696436546954c132f4852ba7e17dbd356c3db4367b.js"></script>
 
 
 
@@ -144,7 +144,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p>後者の値を更新する処理については、要素の値を更新したら、そのバケットの最小値も再度計算し直さなければならないため、バケット内の全要素を見て計算する。</p>
 
-<p>以上が、平方分割(バケット法)の方法になる。では、これをコードで実装してみよう。実装例を以下に示す。(今回は合っているか不安・・)</p>
+<p>以上が、平方分割(バケット法)の方法になる。では、これをコードで実装してみよう。実装例を以下に示す。(合っているか不安・・)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> math
 INF<span style="color:#f92672">=</span>float(<span style="color:#e6db74">&#34;inf&#34;</span>)
 
@@ -153,7 +153,7 @@ INF<span style="color:#f92672">=</span>float(<span style="color:#e6db74">&#34;in
         <span style="color:#75715e">#元のリスト</span>
         self<span style="color:#f92672">.</span>a<span style="color:#f92672">=</span>a
         <span style="color:#75715e">#平方分割用バケット用意</span>
-        b<span style="color:#f92672">=</span>int(math<span style="color:#f92672">.</span>sqrt(b)<span style="color:#f92672">//</span><span style="color:#ae81ff">1</span>)
+        b<span style="color:#f92672">=</span>int(math<span style="color:#f92672">.</span>sqrt(len(a))<span style="color:#f92672">//</span><span style="color:#ae81ff">1</span>)
         <span style="color:#75715e">#１バケットあたりのデータの個数</span>
         self<span style="color:#f92672">.</span>b<span style="color:#f92672">=</span>b
         bucket<span style="color:#f92672">=</span>[]
@@ -171,7 +171,7 @@ INF<span style="color:#f92672">=</span>float(<span style="color:#e6db74">&#34;in
         self<span style="color:#f92672">.</span>bucket<span style="color:#f92672">=</span>bucket
     
     <span style="color:#75715e">#a[s]~a[t]の最小値を求める</span>
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">query</span>(s,t):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">query</span>(self,s,t):
         ans<span style="color:#f92672">=</span>INF
         x<span style="color:#f92672">=</span>s
 
@@ -185,14 +185,14 @@ INF<span style="color:#f92672">=</span>float(<span style="color:#e6db74">&#34;in
             <span style="color:#66d9ef">return</span> ans
         <span style="color:#75715e">#(そうでないとき)バケット計算</span>
         <span style="color:#66d9ef">else</span>:
-            <span style="color:#66d9ef">while</span> (x<span style="color:#f92672">+</span>b<span style="color:#f92672">&lt;=</span>t):
-                ans<span style="color:#f92672">=</span>min(ans,self<span style="color:#f92672">.</span>bucket[x<span style="color:#f92672">//</span>b])
-                x<span style="color:#f92672">+=</span>b
+            <span style="color:#66d9ef">while</span> (x<span style="color:#f92672">+</span>self<span style="color:#f92672">.</span>b<span style="color:#f92672">&lt;=</span>t):
+                ans<span style="color:#f92672">=</span>min(ans,self<span style="color:#f92672">.</span>bucket[x<span style="color:#f92672">//</span>self<span style="color:#f92672">.</span>b])
+                x<span style="color:#f92672">+=</span>self<span style="color:#f92672">.</span>b
         
         <span style="color:#75715e">#(~a[t])個々の要素の計算</span>
-        <span style="color:#66d9ef">if</span>(t<span style="color:#f92672">-</span>x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#f92672">==</span>b):
+        <span style="color:#66d9ef">if</span>(t<span style="color:#f92672">-</span>x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#f92672">==</span>self<span style="color:#f92672">.</span>b):
             <span style="color:#75715e">#(a[t]がバケット内の最後の要素であったとき)</span>
-            ans<span style="color:#f92672">=</span>min(ans,self<span style="color:#f92672">.</span>bucket[x<span style="color:#f92672">//</span>b])
+            ans<span style="color:#f92672">=</span>min(ans,self<span style="color:#f92672">.</span>bucket[x<span style="color:#f92672">//</span>self<span style="color:#f92672">.</span>b])
             <span style="color:#66d9ef">return</span> ans
         <span style="color:#66d9ef">else</span>:
             <span style="color:#75715e">#そうでないときは１個ずつ見る</span>
@@ -202,19 +202,35 @@ INF<span style="color:#f92672">=</span>float(<span style="color:#e6db74">&#34;in
             <span style="color:#66d9ef">return</span> ans
 
     <span style="color:#75715e">#a[i]をxに変更</span>
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update</span>(i,x):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update</span>(self,i,x):
         self<span style="color:#f92672">.</span>a[i]<span style="color:#f92672">=</span>x
-        <span style="color:#75715e">#a[i]があるバケットのインデックスを取得し変更</span>
+        <span style="color:#75715e">#a[i]があるバケットのインデックス</span>
         j<span style="color:#f92672">=</span>i<span style="color:#f92672">//</span>self<span style="color:#f92672">.</span>b
-        self<span style="color:#f92672">.</span>bucket[j]<span style="color:#f92672">=</span>min(self<span style="color:#f92672">.</span>bucket[j],x)</code></pre></div></article>
+        self<span style="color:#f92672">.</span>bucket[j]<span style="color:#f92672">=</span>min(self<span style="color:#f92672">.</span>bucket[j],x)</code></pre></div>
+<p>試しに、セグメント木のページで利用した例と同じリストを使ってみよう。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a<span style="color:#f92672">=</span>[<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>]
+buc<span style="color:#f92672">=</span>Bucket(a)
+
+<span style="color:#75715e">#a[1]~a[4]までの最小値</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;a{0}~a{1}までの最小値:{2}&#34;</span><span style="color:#f92672">.</span>format(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">4</span>,buc<span style="color:#f92672">.</span>query(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">4</span>)))
+
+<span style="color:#75715e">#a[0]を0に変える</span>
+buc<span style="color:#f92672">.</span>update(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;バケット:{}&#34;</span><span style="color:#f92672">.</span>format(buc<span style="color:#f92672">.</span>a))</code></pre></div>
+<p>実行結果は以下の通り。</p>
+
+<pre><code>a1~a4までの最小値:2
+バケット:[0, 2, 3, 7, 4, 1, 9, 10]
+</code></pre>
+</article>
 
       
 <div class="book-footer justify-between">
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/fceb8d8af075c58d656f5ba50a399f7849cdc3d3" title='Last modified Oct 29, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 29, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/fcdf4093a24771cb92483273d3fa4f88195d6bff" title='Last modified Nov 1, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Nov 1, 2020
     </a>
   </div>
   
