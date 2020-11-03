@@ -129,15 +129,6 @@
     
     <item>
       <title>Binary Indexed Tree</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/binary_indexed_tree-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/binary_indexed_tree-2/</guid>
-      <description>Binary Indexed Tree Binary Indexed Tree(BIT)は、セグメント木を応用したデータ構造で、リスト(数列)anが与えられた時、次のことが行える。 iが与えられた時、a</description>
-    </item>
-    
-    <item>
-      <title>Binary Indexed Tree</title>
       <link>https://WAT36.github.io/pages/docs/programming/procon/binary_indexed_tree/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
