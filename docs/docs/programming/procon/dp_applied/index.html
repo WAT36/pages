@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.36c5fff9e858d11b0fe138c7438dc97d21194b17e447559e146fe2d3970712ba.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.94474150bb201d2c12fac8a21e4c5b91835ec1831d6dda07b0a8304097881c38.js"></script>
 
 
 
@@ -573,7 +573,28 @@ dp<span style="color:#f92672">=</span>[[<span style="color:#ae81ff">0</span> <sp
 0≦d(i,j)≦1000
 </code></pre>
 
-<p>あああ</p>
+<p><img src="https://WAT36.github.io/pages/img/procon/dp_applied4.png" width=60%></p>
+
+<p>実は、巡回セールスマン問題は一般的に計算時間がかかる問題となっており、大きい数での場合はプログラミングコンテストでの一般的な制限時間下では解けないことが多いが、この例題のような小さいサイズでなら解答可能であり、プログラミングコンテストでも出題されることがある。</p>
+
+<p>スタート地点を指定した時、頂点の訪問順は(n-1)!通りあるが、計算量が大きくなるためこれを律儀に計算することは不可能である。実は、この巡回セールスマン問題においてもDPが適用できる。</p>
+
+<p>すでに訪れた頂点の集合をS、現在頂点vにいる状態から残りの全ての頂点をめぐって頂点0(スタート地点)に変えるような経路の重みの最小値をdp[S][v]とおく。</p>
+
+<p>すると、Vを全ての頂点の集合とした時、以下の式が成り立つ。</p>
+
+
+
+<p class="katex">
+  $$ 
+\begin{aligned}
+dp[V][0] &= 0  \\
+dp[S][v] &= min( dp[S \cup {u}][u] + d(v,u) | u \notin S  ) 
+\end{aligned}
+ $$
+</p>
+
+
 </article>
 
       
@@ -581,8 +602,8 @@ dp<span style="color:#f92672">=</span>[[<span style="color:#ae81ff">0</span> <sp
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/450f54dc3a652fb8867bd62950c28d9b39e53f73" title='Last modified Nov 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Nov 3, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/02cf5d9908f70a1ca5a41ed0b8e6f7e40f32eff4" title='Last modified Nov 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Nov 4, 2020
     </a>
   </div>
   
