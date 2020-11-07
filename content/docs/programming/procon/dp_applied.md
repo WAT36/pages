@@ -462,3 +462,40 @@ dp[V][0] &= 0  \\
 dp[S][v] &= min( dp[S \cup {u}][u] + d(v,u) | u \notin S  ) 
 \end{aligned}
 {{< /katex >}}
+
+ここで、リストdpのインデックスには集合が使われているが、これをどのように表現すれば良いだろうか？
+
+これには一例として、整数のビット表現を用いて表す方法がある。今回の例では頂点が5つなので、0b00000~0b11111の数字で集合を表す。例えば頂点0のみが訪問済みの場合は、2^0の位のみを1、あとは全て0とした数の0b00001、頂点4のみ訪れてない場合は2^4の位を0、あとは全部1の0b10000とする。
+
+コードでの実装例を以下に示す。
+
+```python
+INF=float("inf")
+
+#入力
+n=5
+d=[[INF for _ in range(n)] for _ in range(n)]
+
+#DP
+dp=[[-1 for _ in range(n)] for _ in range(2**n - 1)]
+
+def rec(S,v):
+    if(dp[S][v] >= 0):
+        return dp[S][v]
+    
+    if(S == (1 << n) - 1 and v == 0):
+        #全ての頂点を訪れて戻ってきた
+        return dp[S][v] = 0
+    
+    res = INF
+    for u in range(n):
+        #uがまだ訪れてない? -> Sの2^u桁目が0
+        if not (S >> u & 1):
+            #次にuに移動する
+            res = min(res,rec(S | 1 << u , u) + d[v][u])
+    
+    return dp[S][v] = res
+
+ans=rec(0,0)
+print(ans)
+```
