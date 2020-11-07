@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.bb509c75cb1aaa588cea5589ad814128e148aad193d64523fbd697854d9823bd.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.360ab916c1a5d260dc5f10ec0a7878d40414a02c348bee9021c2b4ea48ad9447.js"></script>
 
 
 
@@ -598,7 +598,7 @@ dp[S][v] &= min( dp[S \cup {u}][u] + d(v,u) | u \notin S  )
 
 <p>ここで、リストdpのインデックスには集合が使われているが、これをどのように表現すれば良いだろうか？</p>
 
-<p>これには一例として、整数のビット表現を用いて表す方法がある。今回の例では頂点が5つなので、0b00000~0b11111の数字で集合を表す。例えば頂点0のみが訪問済みの場合は、2^0の位のみを1、あとは全て0とした数の0b00001、頂点4のみ訪れてない場合は2^4の位を0、あとは全部1の0b10000とする。</p>
+<p>これには一例として、整数のビット表現を用いて表す方法がある。今回の例では頂点が5つなので、0b00000~0b11111の数字で集合を表す。例えば頂点0のみが訪問済みの場合は、2^0の位のみを1、あとは全て0とした数の0b00001、頂点4のみ訪れてない場合は2^4の位を0、あとは全部1の0b01111とする。</p>
 
 <p>コードでの実装例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">INF<span style="color:#f92672">=</span>float(<span style="color:#e6db74">&#34;inf&#34;</span>)
@@ -651,7 +651,7 @@ d<span style="color:#f92672">=</span>[[INF,<span style="color:#ae81ff">3</span>,
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/0aed6373b371fdd2fd44ab43bc674dcb5b592cf8" title='Last modified Nov 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/15d2854807dd81e93cf3a1d636ebbbcfc8f646e2" title='Last modified Nov 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Nov 7, 2020
     </a>
   </div>
