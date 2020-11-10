@@ -29,6 +29,7 @@ bookToc: false
  - [ワーシャル・フロイド法]({{< relref "/posts/warshall_floyd.md" >}})
  - [ダイクストラ法]({{< relref "/docs/programming/procon/dijkstra.md" >}})
  - [最小全域木]({{< relref "/docs/programming/procon/minimum_spanning_tree.md" >}})
+ - [ネットワークフロー]({{< relref "/docs/programming/procon/network_flow.md" >}})
 - [動的計画法]({{< relref "/docs/programming/procon/dynamic_planning.md" >}})
  - [動的計画法の応用題]({{< relref "/docs/programming/procon/dp_applied.md" >}})
 - [合同式(mod)・逆元]({{< relref "/docs/programming/procon/inverse_mod.md" >}})
