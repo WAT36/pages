@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.ff0c8693ca07177eb0851b7c57947ae96f7c41ff37fef1525b7cefb5d1659c75.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.d82cf7d7439d11a1678ef469eae2addb6a04a522f30cd09deadd50c82bebfafb.js"></script>
 
 
 
@@ -129,11 +129,15 @@ https://github.com/alex-shpak/hugo-book
 ネットワーク上の2台のコンピュータS,Tがあり、SからTにデータを送りたいとする。
 このネットワークには全部でN台のコンピュータがあり、いくつかのコンピュータの間は一方向性の通信ケーブルで接続されていて、
 それぞれ１秒間に通信できる最大のデータ量が決まっています。他のコンピュータが通信を行なっていない時、
-sからtへどれだけのデータを送信することができますでしょうか。
+sからtへどれだけのデータを送信することができるでしょうか。
 
 </code></pre>
 
 <p><img src="https://WAT36.github.io/pages/img/procon/networkflow1.png" alt="ネットワークフロー" /></p>
+
+<p>まずは、貪欲法を用いて流せるところに目一杯データを流すという方法が考えられる。</p>
+
+<p>その方法で試した場合、以下のような流れになる。</p>
 </article>
 
       
@@ -141,8 +145,8 @@ sからtへどれだけのデータを送信することができますでしょ
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/554a1962cd6fc1b0aca875aac2fc7d6d7ccd9ef1" title='Last modified Nov 10, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Nov 10, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/c80a28a1582b6d3fd0e456442bb6df7915b6d0da" title='Last modified Nov 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Nov 11, 2020
     </a>
   </div>
   
