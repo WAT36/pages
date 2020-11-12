@@ -25,3 +25,8 @@ sからtへどれだけのデータを送信することができるでしょう
 まずは、貪欲法を用いて流せるところに目一杯データを流すという方法が考えられる。
 
 その方法で試した場合、以下のような流れになる。
+
+<img src="/img/procon/networkflow2.png" width=50%>
+
+<img src="/img/procon/networkflow3.png" width=50%>
+
