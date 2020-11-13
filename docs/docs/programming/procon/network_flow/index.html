@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.a0c8576f0aa6c91fbfd419937ce216d179ce4134e7f97dd80f4f98ba7d993d3e.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.af6d6d39cc97815058fc4b0cfb92a3c537cfd16f466cfe1badf8cdaed00bd49c.js"></script>
 
 
 
@@ -135,9 +135,14 @@ sからtへどれだけのデータを送信することができるでしょう
 
 <p><img src="https://WAT36.github.io/pages/img/procon/networkflow1.png" alt="ネットワークフロー" /></p>
 
-<p>まずは、貪欲法を用いて流せるところに目一杯データを流すという方法が考えられる。</p>
+<p>まずは、貪欲法を用いて流せるところに目一杯データを流すという方法が考えられる。以下のアルゴリズムを考える。</p>
 
-<p>その方法で試した場合、以下のような流れになる。</p>
+<ol>
+<li>流れているデータ量が最大に達していない辺のみを用いたsからtへのパスを見つける</li>
+<li>そのようなパスが存在しなければ終了。存在すれば、そのパスに沿って目一杯流し、1.へ戻る</li>
+</ol>
+
+<p>このアルゴリズムで試した場合、以下のような流れになる。</p>
 
 <p><img src="https://WAT36.github.io/pages/img/procon/networkflow2.png" width=50%></p>
 
@@ -152,6 +157,15 @@ sからtへどれだけのデータを送信することができるでしょう
 <p>ここで、最適解と貪欲法で導いた解との、各辺におけるフローの差をとると以下の通りになる。</p>
 
 <p><img src="https://WAT36.github.io/pages/img/procon/networkflow5.png" width=50%></p>
+
+<p>この図から、最適解は貪欲法で求めた解から更に一部のフローを押し戻す(図中の-1の辺)形で、新たにフローを足していると見ることができる。</p>
+
+<p>ここで、先程のアルゴリズムを改良し、以下のように考えてみよう。</p>
+
+<ol>
+<li>流れているデータ量が最大に達していない辺、またはすでにデータが流れている辺の逆辺を用いたsからtへのパスを見つける</li>
+<li>そのようなパスが存在しなければ終了。存在すれば、そのパスに沿って目一杯流し、1.へ戻る</li>
+</ol>
 </article>
 
       
@@ -159,8 +173,8 @@ sからtへどれだけのデータを送信することができるでしょう
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/c6ae56bcf45655a5a81c958b47c4bf9fbf615eb5" title='Last modified Nov 12, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Nov 12, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/02ea54407c0bfd023343af101b6b0e27feddb2f2" title='Last modified Nov 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Nov 13, 2020
     </a>
   </div>
   
