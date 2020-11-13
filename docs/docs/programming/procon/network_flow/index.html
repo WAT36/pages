@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.af6d6d39cc97815058fc4b0cfb92a3c537cfd16f466cfe1badf8cdaed00bd49c.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.ea9376be5b5d954ae8cabfd6c64fb80a8878a352a986745b905b50f38b14095c.js"></script>
 
 
 
@@ -166,6 +166,10 @@ sからtへどれだけのデータを送信することができるでしょう
 <li>流れているデータ量が最大に達していない辺、またはすでにデータが流れている辺の逆辺を用いたsからtへのパスを見つける</li>
 <li>そのようなパスが存在しなければ終了。存在すれば、そのパスに沿って目一杯流し、1.へ戻る</li>
 </ol>
+
+<p>これを最初の貪欲法で求めた状態から適用すると、s→2→1→3→tと大きさ1のフローを流せば最適解になる。(2→1は逆辺)</p>
+
+<p>このアルゴリズムをコードで実装した例を以下に記載する。</p>
 </article>
 
       
@@ -173,7 +177,7 @@ sからtへどれだけのデータを送信することができるでしょう
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/02ea54407c0bfd023343af101b6b0e27feddb2f2" title='Last modified Nov 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/733337879e96d0057d4eba97fedc2b984e61f9ef" title='Last modified Nov 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Nov 13, 2020
     </a>
   </div>
