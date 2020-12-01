@@ -36,3 +36,5 @@ DOMツリーとは、HTMLやXMLの内容をツリー状に表現したもので�
 ```
 
 これをDOMツリーで書き表すと以下のようになる。
+
+<img src="/img/front-end/dom.png" width=100%>
