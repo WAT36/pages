@@ -26,7 +26,7 @@ DOMツリーとは、HTMLやXMLの内容をツリー状に表現したもので�
 
 <body>
     <h1>見出し1</h1>
-    <div>
+    <div id="main">
         <p>Hello!</p>
         <p>World!</p>
     </div>
@@ -38,3 +38,5 @@ DOMツリーとは、HTMLやXMLの内容をツリー状に表現したもので�
 これをDOMツリーで書き表すと以下のようになる。
 
 <img src="/img/front-end/dom.png" width=100%>
+
+また、このDOMツリー内の各要素を**ノード**と言う。
