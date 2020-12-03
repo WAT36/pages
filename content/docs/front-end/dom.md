@@ -40,3 +40,16 @@ DOMツリーとは、HTMLやXMLの内容をツリー状に表現したもので�
 <img src="/img/front-end/dom.png" width=100%>
 
 また、このDOMツリー内の各要素を**ノード**と言う。
+
+### 要素の取得方法
+
+では、JavascriptからこのDOMをどのように操作するのか？まずは、このノード(要素)を取得する方法についてを述べる。
+
+#### ID名で取得
+
+Javascriptから、要素のID名を使ってノードを取得する方法は以下の通り。
+
+```javascript
+document.getElementById('ID名')
+```
+
