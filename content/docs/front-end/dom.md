@@ -69,7 +69,7 @@ document.getElementsByClassName('クラス名');
 document.getElementsByTagName('タグ名');
 ```
 
-### 親要素を取得
+#### 親要素を取得
 
 Javascriptで取得したノードの親要素を取得するには、**parentNode**を使用する。
 
@@ -82,3 +82,24 @@ var id = document.getElementById('ID名');
 //親要素の取得
 var parent = id.parentNode;
 ```
+
+#### 子要素の取得
+
+子要素を取得する関数はいくつかある。
+
+子要素のうち最初の要素を取得するには**firstChild**、最後の要素は**lastChild**、子要素を全て配列として取得するには**childNodes**を利用する。
+
+```javascript
+//例、ID名で取得
+var id = document.getElementById('ID名');
+
+//子要素のうち最初の要素を取得
+var first = id.firstChild;
+
+//子要素のうち最後の要素を取得
+var last = id.lastChild;
+
+//子要素を全て配列として取得
+var child = id.childNodes;
+```
+
