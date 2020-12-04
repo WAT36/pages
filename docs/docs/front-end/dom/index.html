@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.8fa201687aabe5045207614e779adcc68a744005fa4b3e35fee5cb47230185fb.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.c72569e9e6363502328236fc0a48313241f87fa0186abf6cc80583d3491bc3ca.js"></script>
 
 
 
@@ -170,6 +170,17 @@ https://github.com/alex-shpak/hugo-book
 
 <p>同様に、要素のクラス名を使ってノードを取得する方法は以下の通り。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#39;クラス名&#39;</span>)
+</code></pre></div>
+<h3 id="親要素を取得">親要素を取得</h3>
+
+<p>Javascriptで取得したノードの親要素を取得するには、<strong>parentNode</strong>を使用する。</p>
+
+<p>先程の&rsquo;ID名で取得&rsquo;で取得したノードの親要素を取得する例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//ID名で取得
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;ID名&#39;</span>);
+
+<span style="color:#75715e">//親要素の取得
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">parent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">id</span>.<span style="color:#a6e22e">parentNode</span>;
 </code></pre></div></article>
 
       
@@ -177,7 +188,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/6703d98ed3bb0ab7c325cef203e154c34d55e1cd" title='Last modified Dec 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/097ca9176108c862356e2209f98e067346de9b0a" title='Last modified Dec 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Dec 3, 2020
     </a>
   </div>
@@ -202,6 +213,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#id名で取得">ID名で取得</a></li>
 <li><a href="#クラス名で取得">クラス名で取得</a></li>
 </ul></li>
+<li><a href="#親要素を取得">親要素を取得</a></li>
 </ul></li>
 </ul></li>
 </ul>

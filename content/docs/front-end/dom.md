@@ -60,3 +60,17 @@ document.getElementById('ID名')
 ```javascript
 document.getElementsByClassName('クラス名')
 ```
+
+### 親要素を取得
+
+Javascriptで取得したノードの親要素を取得するには、**parentNode**を使用する。
+
+先程の'ID名で取得'で取得したノードの親要素を取得する例を以下に示す。
+
+```javascript
+//ID名で取得
+var id = document.getElementById('ID名');
+
+//親要素の取得
+var parent = id.parentNode;
+```
