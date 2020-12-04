@@ -58,7 +58,15 @@ document.getElementById('ID名')
 同様に、要素のクラス名を使ってノードを取得する方法は以下の通り。
 
 ```javascript
-document.getElementsByClassName('クラス名')
+document.getElementsByClassName('クラス名');
+```
+
+#### タグ名での取得
+
+タグ名での取得は以下の通り。
+
+```javascript
+document.getElementsByTagName('タグ名');
 ```
 
 ### 親要素を取得
