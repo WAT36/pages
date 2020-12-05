@@ -85,7 +85,7 @@ var parent = id.parentNode;
 
 #### 子要素の取得
 
-子要素を取得する関数はいくつかある。
+子要素を取得する方法はいくつかある。
 
 子要素のうち最初の要素を取得するには**firstChild**、最後の要素は**lastChild**、子要素を全て配列として取得するには**childNodes**を利用する。
 
@@ -103,3 +103,13 @@ var last = id.lastChild;
 var child = id.childNodes;
 ```
 
+#### フォームの取得
+
+HTMLのフォームを取得するには、**forms**を利用する。
+
+document.formsとする事で、HTML文書内のフォームを全て取得できる。フォームが複数あった場合は、配列として取得できる。
+
+```javascript
+//フォームを全て取得
+var forms = document.forms;
+```

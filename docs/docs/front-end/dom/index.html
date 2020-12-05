@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.9f642fcac7145a4e6b85bbcd47a24ef512124a155355e1e64f5a34a1e05e3907.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.e98b27f78dfbd6db246bf7cbc068fbd75d1a94ba862b63ab01681434b5be3ce7.js"></script>
 
 
 
@@ -189,7 +189,7 @@ https://github.com/alex-shpak/hugo-book
 </code></pre></div>
 <h4 id="子要素の取得">子要素の取得</h4>
 
-<p>子要素を取得する関数はいくつかある。</p>
+<p>子要素を取得する方法はいくつかある。</p>
 
 <p>子要素のうち最初の要素を取得するには<strong>firstChild</strong>、最後の要素は<strong>lastChild</strong>、子要素を全て配列として取得するには<strong>childNodes</strong>を利用する。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//例、ID名で取得
@@ -203,6 +203,14 @@ https://github.com/alex-shpak/hugo-book
 
 <span style="color:#75715e">//子要素を全て配列として取得
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">child</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">id</span>.<span style="color:#a6e22e">childNodes</span>;
+</code></pre></div>
+<h4 id="フォームの取得">フォームの取得</h4>
+
+<p>HTMLのフォームを取得するには、<strong>forms</strong>を利用する。</p>
+
+<p>document.formsとする事で、HTML文書内のフォームを全て取得できる。フォームが複数あった場合は、配列として取得できる。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//フォームを全て取得
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">forms</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">forms</span>;
 </code></pre></div></article>
 
       
@@ -210,7 +218,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/e1154c6f3e30f8fedfdeacb0c2e6505d200caa0b" title='Last modified Dec 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/1c940eca9362cfd1e9d5c4045aef08821ead40c2" title='Last modified Dec 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Dec 5, 2020
     </a>
   </div>
@@ -237,6 +245,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#タグ名での取得">タグ名での取得</a></li>
 <li><a href="#親要素を取得">親要素を取得</a></li>
 <li><a href="#子要素の取得">子要素の取得</a></li>
+<li><a href="#フォームの取得">フォームの取得</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
