@@ -41,11 +41,11 @@ DOMツリーとは、HTMLやXMLの内容をツリー状に表現したもので�
 
 また、このDOMツリー内の各要素を**ノード**と言う。
 
-### 要素の取得方法
+## 要素の取得方法
 
 では、JavascriptからこのDOMをどのように操作するのか？まずは、このノード(要素)を取得する方法についてを述べる。
 
-#### ID名で取得
+### ID名で取得
 
 Javascriptから、要素のID名を使ってノードを取得する方法は以下の通り。
 
@@ -53,7 +53,7 @@ Javascriptから、要素のID名を使ってノードを取得する方法は�
 document.getElementById('ID名')
 ```
 
-#### クラス名で取得
+### クラス名で取得
 
 同様に、要素のクラス名を使ってノードを取得する方法は以下の通り。
 
@@ -61,7 +61,7 @@ document.getElementById('ID名')
 document.getElementsByClassName('クラス名');
 ```
 
-#### タグ名での取得
+### タグ名での取得
 
 タグ名での取得は以下の通り。
 
@@ -69,7 +69,7 @@ document.getElementsByClassName('クラス名');
 document.getElementsByTagName('タグ名');
 ```
 
-#### 親要素を取得
+### 親要素を取得
 
 Javascriptで取得したノードの親要素を取得するには、**parentNode**を使用する。
 
@@ -83,7 +83,7 @@ var id = document.getElementById('ID名');
 var parent = id.parentNode;
 ```
 
-#### 子要素の取得
+### 子要素の取得
 
 子要素を取得する方法はいくつかある。
 
@@ -113,3 +113,8 @@ document.formsとする事で、HTML文書内のフォームを全て取得で�
 //フォームを全て取得
 var forms = document.forms;
 ```
+
+## DOMの操作方法
+
+DOMで取得した要素の操作方法について述べる。
+
