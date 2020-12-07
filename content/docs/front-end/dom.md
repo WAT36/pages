@@ -118,3 +118,14 @@ var forms = document.forms;
 
 DOMで取得した要素の操作方法について述べる。
 
+### 要素の情報の取得
+
+例で示したHTMLにおいて、取得した要素の内部の情報は、**innerText**を使うことで取得できる。
+
+```javascript
+var target = document.getElementById('main').firstElementChild;
+
+//要素の内部の情報(テキスト)を取得
+var text = target.innerText;
+console.log(text);
+```
