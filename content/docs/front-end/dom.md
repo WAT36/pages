@@ -156,3 +156,23 @@ var target = document.getElementById('main').firstElementChild;
 //要素を削除する
 target.parentNode.removeChild(target);
 ```
+
+
+### 要素の追加
+
+要素を追加したい時は、<u>要素の作成</u>と<u>要素の挿入</u>の２ステップが必要になる。
+
+要素の作成には、**createElement('タグ名')**を利用する。
+
+その後、要素を挿入するには**appendChild(子要素)**を利用する。
+
+このメソッドは、その名の通り、呼び出した要素の子要素を追加するメソッドである。
+
+```javascript
+var target = document.createElement('p');
+target.innerText = '追加された要素';
+
+//要素を挿入する
+var main = document.getElementById('main');
+main.appendChild(target);
+```

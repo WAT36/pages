@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.ca8a66c96a6abb8f1486ca7c8ecc0000c9b5f9db22d0dcd1aa71f3442c155a42.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.28ae2fda5a033ce865b96f04076f8a3b9e7b304ba8a8da2267c30d6af9c25b67.js"></script>
 
 
 
@@ -244,6 +244,22 @@ https://github.com/alex-shpak/hugo-book
 
 <span style="color:#75715e">//要素を削除する
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">parentNode</span>.<span style="color:#a6e22e">removeChild</span>(<span style="color:#a6e22e">target</span>);
+</code></pre></div>
+<h3 id="要素の追加">要素の追加</h3>
+
+<p>要素を追加したい時は、<u>要素の作成</u>と<u>要素の挿入</u>の２ステップが必要になる。</p>
+
+<p>要素の作成には、<strong>createElement(&lsquo;タグ名&rsquo;)</strong>を利用する。</p>
+
+<p>その後、要素を挿入するには<strong>appendChild(子要素)</strong>を利用する。</p>
+
+<p>このメソッドは、その名の通り、呼び出した要素の子要素を追加するメソッドである。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;p&#39;</span>);
+<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;追加された要素&#39;</span>;
+
+<span style="color:#75715e">//要素を挿入する
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;main&#39;</span>);
+<span style="color:#a6e22e">main</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">target</span>);
 </code></pre></div></article>
 
       
@@ -251,7 +267,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/eeaeeb1db56fc8a10740ad2cd237369ad2ea8fba" title='Last modified Dec 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/de53f2aede40f13e8ccc8e38672f04d417ebb213" title='Last modified Dec 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Dec 11, 2020
     </a>
   </div>
@@ -286,6 +302,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#要素の情報の取得">要素の情報の取得</a></li>
 <li><a href="#要素の情報の変更">要素の情報の変更</a></li>
 <li><a href="#要素の削除">要素の削除</a></li>
+<li><a href="#要素の追加">要素の追加</a></li>
 </ul></li>
 </ul></li>
 </ul>
