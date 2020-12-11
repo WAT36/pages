@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.d71d1b6501d09553ea51a8296ec0b98ddb8c66b226cf7ce2501d531d99f7ecfc.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.ca8a66c96a6abb8f1486ca7c8ecc0000c9b5f9db22d0dcd1aa71f3442c155a42.js"></script>
 
 
 
@@ -232,6 +232,18 @@ https://github.com/alex-shpak/hugo-book
 
 <span style="color:#75715e">//要素の内部の情報(テキスト)を変更する
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;テキストを変更しました&#39;</span>;
+</code></pre></div>
+<h3 id="要素の削除">要素の削除</h3>
+
+<p>取得した要素を削除したいときは<strong>removeChild()</strong>メソッドを利用する。</p>
+
+<p>ただし、removeChild()メソッドは、その名の通り消したい要素の親要素で利用する。消したい要素から呼び出すのではないので注意。</p>
+
+<p>親要素を呼び出したい時は、<strong>parentNode</strong>を利用する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;main&#39;</span>).<span style="color:#a6e22e">firstElementChild</span>;
+
+<span style="color:#75715e">//要素を削除する
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">parentNode</span>.<span style="color:#a6e22e">removeChild</span>(<span style="color:#a6e22e">target</span>);
 </code></pre></div></article>
 
       
@@ -239,8 +251,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/fa346f3eb03c2e79bc30dd677eef29e7e326fbe0" title='Last modified Dec 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Dec 7, 2020
+    <a href="https://github.com/alex-shpak/hugo-book/commit/eeaeeb1db56fc8a10740ad2cd237369ad2ea8fba" title='Last modified Dec 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Dec 11, 2020
     </a>
   </div>
   
@@ -273,6 +285,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#要素の情報の取得">要素の情報の取得</a></li>
 <li><a href="#要素の情報の変更">要素の情報の変更</a></li>
+<li><a href="#要素の削除">要素の削除</a></li>
 </ul></li>
 </ul></li>
 </ul>

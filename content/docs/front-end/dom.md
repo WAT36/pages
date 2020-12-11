@@ -141,3 +141,18 @@ var target = document.getElementById('main').firstElementChild;
 //要素の内部の情報(テキスト)を変更する
 target.innerText = 'テキストを変更しました';
 ```
+
+### 要素の削除
+
+取得した要素を削除したいときは**removeChild()**メソッドを利用する。
+
+ただし、removeChild()メソッドは、その名の通り消したい要素の親要素で利用する。消したい要素から呼び出すのではないので注意。
+
+親要素を呼び出したい時は、**parentNode**を利用する。
+
+```javascript
+var target = document.getElementById('main').firstElementChild;
+
+//要素を削除する
+target.parentNode.removeChild(target);
+```
