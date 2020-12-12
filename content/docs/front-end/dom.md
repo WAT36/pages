@@ -83,6 +83,22 @@ document.getElementById('ID名')
 document.getElementsByClassName('クラス名');
 ```
 
+先程記載した例のHTMLに適用すると以下のようになる。
+
+```
+> var p = document.getElementsByTagName('p');
+< undefined
+> console.log(p)
+[Log] HTMLCollection (2)
+0 
+<p>Hello!</p>
+1 
+<p>World!</p>
+
+< undefined
+```
+
+
 ### タグ名での取得
 
 タグ名での取得は以下の通り。

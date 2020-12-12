@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.b407a30de2101fd5192a917791ce4ad1697dda724356e66478d8d4aff57160f1.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.d29593777649e1fb87ab09f90f705e20eea73f042cab954c9902a98d306c497d.js"></script>
 
 
 
@@ -191,6 +191,20 @@ https://github.com/alex-shpak/hugo-book
 <p>同様に、要素のクラス名を使ってノードを取得する方法は以下の通り。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#39;クラス名&#39;</span>);
 </code></pre></div>
+<p>先程記載した例のHTMLに適用すると以下のようになる。</p>
+
+<pre><code>&gt; var p = document.getElementsByTagName('p');
+&lt; undefined
+&gt; console.log(p)
+[Log] HTMLCollection (2)
+0 
+&lt;p&gt;Hello!&lt;/p&gt;
+1 
+&lt;p&gt;World!&lt;/p&gt;
+
+&lt; undefined
+</code></pre>
+
 <h3 id="タグ名での取得">タグ名での取得</h3>
 
 <p>タグ名での取得は以下の通り。</p>
@@ -299,7 +313,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/7c388ab5c1ded35f2a7034bfe9245b41a077f8fd" title='Last modified Dec 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/c2ed98d19743bb00324323bb87eb2c3cf7062e03" title='Last modified Dec 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Dec 13, 2020
     </a>
   </div>
