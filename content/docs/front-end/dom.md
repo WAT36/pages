@@ -103,7 +103,7 @@ var last = id.lastChild;
 var child = id.childNodes;
 ```
 
-#### フォームの取得
+### フォームの取得
 
 HTMLのフォームを取得するには、**forms**を利用する。
 
@@ -176,3 +176,20 @@ target.innerText = '追加された要素';
 var main = document.getElementById('main');
 main.appendChild(target);
 ```
+
+
+### セレクタAPI
+
+セレクタAPIと言うメソッドを使って要素を取得する方法がある。
+
+例としては、**querySelectorAll()**メソッドを使う。引数にセレクタを入力すると、その要素を全て取得する。
+
+```javascript
+var target = document.querySelectorAll('p.main');
+
+//要素を挿入する
+for(var i=0,l=target.length;i<l;i++){
+    target[i].style.color='red';
+}
+```
+
