@@ -35,6 +35,14 @@ DOMツリーとは、HTMLやXMLの内容をツリー状に表現したもので�
 </html>
 ```
 
+表示例
+
+<hr>
+<iframe width="400" height="300" src="/js_sample_pages/dom_sample.html">
+</iframe>
+<hr>
+
+
 これをDOMツリーで書き表すと以下のようになる。
 
 <img src="/img/front-end/dom.png" width=100%>
