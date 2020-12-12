@@ -61,6 +61,20 @@ Javascriptから、要素のID名を使ってノードを取得する方法は�
 document.getElementById('ID名')
 ```
 
+先程記載した例のHTMLに適用すると以下のようになる。
+
+```
+> var main = document.getElementById('main')
+< undefined
+> console.log(main)
+[Log] <div id="main">
+<p>Hello!</p>
+<p>World!</p>
+</div>
+< undefined
+```
+
+
 ### クラス名で取得
 
 同様に、要素のクラス名を使ってノードを取得する方法は以下の通り。
