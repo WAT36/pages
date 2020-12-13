@@ -74,13 +74,12 @@ document.getElementById('ID名')
 < undefined
 ```
 
+### タグ名での取得
 
-### クラス名で取得
-
-同様に、要素のクラス名を使ってノードを取得する方法は以下の通り。
+タグ名での取得は以下の通り。
 
 ```javascript
-document.getElementsByClassName('クラス名');
+document.getElementsByTagName('タグ名');
 ```
 
 先程記載した例のHTMLに適用すると以下のようになる。
@@ -98,13 +97,12 @@ document.getElementsByClassName('クラス名');
 < undefined
 ```
 
+### クラス名で取得
 
-### タグ名での取得
-
-タグ名での取得は以下の通り。
+同様に、要素のクラス名を使ってノードを取得する方法は以下の通り。
 
 ```javascript
-document.getElementsByTagName('タグ名');
+document.getElementsByClassName('クラス名');
 ```
 
 ### 親要素を取得
