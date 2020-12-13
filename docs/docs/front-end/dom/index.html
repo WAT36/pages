@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.6b1c8f5cc3268d87c795cf2b8ede268af84677f420a9d6c11d4cb4f9d0b0d62f.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.fb529c5d0b7fe63537c9a28457a3b15cc1dd146c25f35d0a1ba993bd587d1151.js"></script>
 
 
 
@@ -221,6 +221,24 @@ https://github.com/alex-shpak/hugo-book
 <span style="color:#75715e">//親要素の取得
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">parent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">id</span>.<span style="color:#a6e22e">parentNode</span>;
 </code></pre></div>
+<p>使用例</p>
+
+<pre><code>&gt; var id = document.getElementById('main')
+&lt; undefined
+&gt; var parent = id.parentNode
+&lt; undefined
+&gt; console.log(parent)
+[Log] &lt;body&gt;
+&lt;h1&gt;見出し1&lt;/h1&gt;
+&lt;div id=&quot;main&quot;&gt;
+&lt;p&gt;Hello!&lt;/p&gt;
+&lt;p&gt;World!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+
+&lt; undefined
+</code></pre>
+
 <h3 id="子要素の取得">子要素の取得</h3>
 
 <p>子要素を取得する方法はいくつかある。</p>
@@ -313,7 +331,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/e15d708910fd52e6cac946b54b51f608ea7db245" title='Last modified Dec 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/44ca7c05a312e45fcde67421c40820678f06ee38" title='Last modified Dec 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Dec 13, 2020
     </a>
   </div>

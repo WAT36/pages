@@ -119,6 +119,25 @@ var id = document.getElementById('ID名');
 var parent = id.parentNode;
 ```
 
+使用例
+
+```
+> var id = document.getElementById('main')
+< undefined
+> var parent = id.parentNode
+< undefined
+> console.log(parent)
+[Log] <body>
+<h1>見出し1</h1>
+<div id="main">
+<p>Hello!</p>
+<p>World!</p>
+</div>
+</body>
+
+< undefined
+```
+
 ### 子要素の取得
 
 子要素を取得する方法はいくつかある。
