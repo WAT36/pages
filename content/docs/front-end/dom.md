@@ -158,6 +158,39 @@ var last = id.lastChild;
 var child = id.childNodes;
 ```
 
+使用例
+
+```
+> var id = document.getElementById('main');
+< undefined
+> var first = id.firstChild;
+< undefined
+> console.log(first)
+[Log] #text "
+        "
+< undefined
+> var last = id.lastChild;
+< undefined
+> console.log(last);
+[Log] #text "
+    "
+< undefined
+> var child = id.childNodes;
+< undefined
+> console.log(child)
+[Log] NodeList (5)
+0 #text " "
+1 
+<p>Hello!</p>
+2 #text " "
+3 
+<p>World!</p>
+4 #text " "
+
+< undefined
+```
+
+
 ### フォームの取得
 
 HTMLのフォームを取得するには、**forms**を利用する。
