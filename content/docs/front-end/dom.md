@@ -218,7 +218,6 @@ var text = target.innerText;
 console.log(text);
 ```
 
-
 ### 要素の情報の変更
 
 同様に、取得した要素の内部の情報を変更するには、**innerText**を使うことで変更できる。
@@ -229,6 +228,21 @@ var target = document.getElementById('main').firstElementChild;
 //要素の内部の情報(テキスト)を変更する
 target.innerText = 'テキストを変更しました';
 ```
+
+使用例
+
+```
+> var target = document.getElementById('main').firstElementChild;
+< undefined
+> target.innerText = 'テキストが変更されました'
+< "テキストが変更されました"
+```
+
+適用後の画面(スクショ)
+
+<img src="/img/front-end/dom_changed.png">
+
+
 
 ### 要素の削除
 
