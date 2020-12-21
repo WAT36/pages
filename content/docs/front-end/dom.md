@@ -259,6 +259,15 @@ var target = document.getElementById('main').firstElementChild;
 target.parentNode.removeChild(target);
 ```
 
+使用例
+
+```
+> var target = document.getElementById('main').firstElementChild;
+< undefined
+> target.parentNode.removeChild(target);
+< <p>Hello!</p>
+```
+
 
 ### 要素の追加
 
