@@ -268,6 +268,11 @@ target.parentNode.removeChild(target);
 < <p>Hello!</p>
 ```
 
+適用後の画面(スクショ)
+
+<img src="/img/front-end/dom_changed2.png">
+
+
 
 ### 要素の追加
 
