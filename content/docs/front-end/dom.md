@@ -293,6 +293,18 @@ var main = document.getElementById('main');
 main.appendChild(target);
 ```
 
+使用例
+
+```
+> var target = document.createElement('p');
+< undefined
+> target.innerText = '追加された要素';
+< "追加された要素"
+> var main = document.getElementById('main');
+< undefined
+> main.appendChild(target);
+< <p>追加された要素</p>
+```
 
 ### セレクタAPI
 
