@@ -325,3 +325,13 @@ for(var i=0,l=target.length;i<l;i++){
 }
 ```
 
+使用例
+
+```
+> var target = document.querySelectorAll('p');
+< undefined
+> for(var i=0,l=target.length;i<l;i++){
+    target[i].style.color='red';
+}
+< "red"
+```
