@@ -317,7 +317,7 @@ main.appendChild(target);
 例としては、**querySelectorAll()**メソッドを使う。引数にセレクタを入力すると、その要素を全て取得する。
 
 ```javascript
-var target = document.querySelectorAll('p.main');
+var target = document.querySelectorAll('p');
 
 //要素を挿入する
 for(var i=0,l=target.length;i<l;i++){
