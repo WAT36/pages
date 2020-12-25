@@ -306,6 +306,10 @@ main.appendChild(target);
 < <p>追加された要素</p>
 ```
 
+適用後の画面(スクショ)
+
+<img src="/img/front-end/dom_changed3.png">
+
 ### セレクタAPI
 
 セレクタAPIと言うメソッドを使って要素を取得する方法がある。
