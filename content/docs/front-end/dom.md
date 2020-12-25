@@ -335,3 +335,7 @@ for(var i=0,l=target.length;i<l;i++){
 }
 < "red"
 ```
+
+適用後の画面(スクショ)
+
+<img src="/img/front-end/dom_changed4.png">
