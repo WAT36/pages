@@ -74,6 +74,8 @@ document.getElementById('ID名')
 < undefined
 ```
 
+最後のconsole.logにおいて、idが'main'の要素を取得し表示している。
+
 ### タグ名での取得
 
 タグ名での取得は以下の通り。
@@ -82,7 +84,7 @@ document.getElementById('ID名')
 document.getElementsByTagName('タグ名');
 ```
 
-先程記載した例のHTMLに適用すると以下のようになる。
+同様に、先程記載した例のHTMLに適用すると以下のようになり、p要素を取得している。
 
 ```
 > var p = document.getElementsByTagName('p');
@@ -220,7 +222,7 @@ console.log(text);
 
 ### 要素の情報の変更
 
-同様に、取得した要素の内部の情報を変更するには、**innerText**を使うことで変更できる。
+取得した要素の内部の情報を変更するのも、**innerText**を使うことで行える。
 
 ```javascript
 var target = document.getElementById('main').firstElementChild;
