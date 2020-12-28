@@ -116,7 +116,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/about/aboutme/</guid>
-      <description>About Me 自己紹介 HN WAT 昔から使っているHNのWATで通しています。Github等一部のSNSではTatsuroh Wakasugiの名を使っています</description>
+      <description>About Me 自己紹介 HN Tatsuroh Wakasugi 念のため言うと本名ではありません。由来は本名のスペルを並び替えてなんかいい名前できないかなと色々試行錯誤して行った末にたど</description>
     </item>
     
     <item>
@@ -126,15 +126,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/front-end/api/</guid>
       <description>API HTMLに関連する各種APIについて。 マルチメディアグラフィックスAPI HTMLでの音声・動画といったマルチメディアに関する設定や操作を、</description>
-    </item>
-    
-    <item>
-      <title>Binary Indexed Tree</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/binary_indexed_tree/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/binary_indexed_tree/</guid>
-      <description>Binary Indexed Tree Binary Indexed Tree(BIT)は、セグメント木を応用したデータ構造で、リスト(数列)anが与えられた時、次のことが行える。 iが与えられた時、a</description>
     </item>
     
     <item>
@@ -228,6 +219,24 @@
     </item>
     
     <item>
+      <title>csvファイルからデータを読み込む</title>
+      <link>https://WAT36.github.io/pages/docs/programming/graph/read/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/graph/read/</guid>
+      <description>csvファイルからデータを読み込む Pythonで機械学習やグラフ描画を行いたい時に、元となるデータがcsvなどのファイルに書かれている場合、</description>
+    </item>
+    
+    <item>
+      <title>DOM</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/dom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/dom/</guid>
+      <description>DOM DOMとはDocument Object Modelの略で、HTML(またはXML)の各要素にアクセスするための仕組みである。Javascriptではこ</description>
+    </item>
+    
+    <item>
       <title>for文</title>
       <link>https://WAT36.github.io/pages/docs/programming/control/for/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -282,6 +291,15 @@
     </item>
     
     <item>
+      <title>ndarray型のデータをファイルに保存する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/save/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/save/</guid>
+      <description>ndarray型のデータをファイルに保存する ndarray型変数をファイルに保存する方法についてを示す。 Python ndarray型変数をファイルに保</description>
+    </item>
+    
+    <item>
       <title>Null</title>
       <link>https://WAT36.github.io/pages/docs/programming/other/null/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -315,6 +333,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/control/pass/</guid>
       <description>pass文 何も処理をしない文、pass文についてを示す。 構文としては何か記述が必要だが、特に処理をする必要がないという時に使う。 言語によりあ</description>
+    </item>
+    
+    <item>
+      <title>Rand</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/rand/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/rand/</guid>
+      <description>要素がランダムの行列 要素がランダムの行列を生成する方法を示す。 Python 要素がランダムな行列(2次元配列)を生成するにはnumpy.random.r</description>
     </item>
     
     <item>
@@ -427,19 +454,19 @@
     
     <item>
       <title>ガウス関数</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/gauss/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/math/gauss/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/gauss/</guid>
+      <guid>https://WAT36.github.io/pages/docs/programming/math/gauss/</guid>
       <description>ガウス関数 Python ガウス関数は以下の式で表される関数である。 a exp ( - (x - &amp;mu; ) 2 &amp;sigma; 2 ) ここで、式中の変数は以下の意味を持つ。 μ：中心(平均) σ：標準</description>
     </item>
     
     <item>
       <title>ガウス関数(2次元)</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/gauss_2D/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/math/gauss_2D/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/gauss_2D/</guid>
+      <guid>https://WAT36.github.io/pages/docs/programming/math/gauss_2D/</guid>
       <description>ガウス関数(2次元) Python ガウス関数 a exp ( - (x - &amp;mu; ) 2 &amp;sigma; 2 ) において、入力xを2次元ベクトルとした時の場合を考える。(以下) x = x 0 x 1 この時、</description>
     </item>
     
@@ -562,19 +589,19 @@
     
     <item>
       <title>シグモイド関数</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/sigmoid/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/math/sigmoid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/sigmoid/</guid>
+      <guid>https://WAT36.github.io/pages/docs/programming/math/sigmoid/</guid>
       <description>シグモイド関数 機械学習でよく用いられるシグモイド関数についてを述べる。 シグモイド関数とは以下の式で定義される関数である。 Python シグモイド関数をプ</description>
     </item>
     
     <item>
       <title>シグモイド関数とソフトマックス関数</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/softmax_sigmoid/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/math/softmax_sigmoid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/softmax_sigmoid/</guid>
+      <guid>https://WAT36.github.io/pages/docs/programming/math/softmax_sigmoid/</guid>
       <description>シグモイド関数とソフトマックス関数 シグモイド関数とソフトマックス関数は類似しているところがある。 2変数(x0、x1)の時のソフトマックス関数</description>
     </item>
     
@@ -597,6 +624,15 @@
     </item>
     
     <item>
+      <title>スカラー*行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/scalar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/scalar/</guid>
+      <description>スカラー*行列 スカラーと行列を書ける方法についてを示す。 Python スカラーと行列をかけたいときは、普通にスカラーとnumpy.ndarray型の変数</description>
+    </item>
+    
+    <item>
       <title>スマートフォン最適化</title>
       <link>https://WAT36.github.io/pages/docs/front-end/smartphone_optimization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -615,15 +651,6 @@
     </item>
     
     <item>
-      <title>セグメント木</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/segment_tree/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/segment_tree/</guid>
-      <description>セグメント木 セグメント木は区間と二分木を組み合わせたようなデータ構造である。例えば長さ8のリストをセグメント木で表すと以下のようになる。 ここ</description>
-    </item>
-    
-    <item>
       <title>セレクタ</title>
       <link>https://WAT36.github.io/pages/docs/front-end/css_selector/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -634,10 +661,10 @@
     
     <item>
       <title>ソフトマックス関数</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/softmax/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/math/softmax/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/softmax/</guid>
+      <guid>https://WAT36.github.io/pages/docs/programming/math/softmax/</guid>
       <description>ソフトマックス関数 Python 複数の数x1,x2,&amp;hellip;xiがあり、それらの数の大小関係を保ったままそれぞれを確率を表す数y1,y2,&amp;he</description>
     </item>
     
@@ -675,15 +702,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/neural_network/</guid>
       <description>ニューラルネットワーク ニューラルネットワークとは、人間の神経細胞を模した数理モデルであるニューロンモデルを利用した機械学習のアルゴリズムであ</description>
-    </item>
-    
-    <item>
-      <title>バケット法と平方分割</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/bucket/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/bucket/</guid>
-      <description>バケット法と平方分割 まずバケット法とは、列、または平面状に散らばったデータをバケットと呼ばれる単位に分割して、バケットにデータを管理させる方</description>
     </item>
     
     <item>
@@ -741,12 +759,21 @@
     </item>
     
     <item>
-      <title>ベルマンフォード法</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/bellman_ford/</link>
+      <title>ベクトル</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/vector/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/bellman_ford/</guid>
-      <description>ベルマンフォード法 ベルマンフォード法とは、最短路問題(ある点から他の全ての頂点との間の最短路を求める問題)を解く手法の一つである。 始点sから</description>
+      <guid>https://WAT36.github.io/pages/docs/programming/math/vector/</guid>
+      <description>ベクトル ベクトルの定義についてを示す。 Python ベクトル(1次元配列)は、numpyライブラリにある関数array(list)を使って定義する。 同じ</description>
+    </item>
+    
+    <item>
+      <title>ベクトルの大きさ(ノルム)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/norm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/norm/</guid>
+      <description>ベクトルの大きさ(ノルム) Python ベクトルの大きさ(ノルム)を算出したいときは、numpy.linalgモジュールにある関数normを使用する。 n</description>
     </item>
     
     <item>
@@ -1029,15 +1056,6 @@
     </item>
     
     <item>
-      <title>二部グラフ</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/bipartite_graph/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/bipartite_graph/</guid>
-      <description>二部グラフ 前述のグラフの彩色問題において、彩色数(グラフの頂点を彩色するのに必要な最小の色数)が2であるグラフを二部グラフという。 グラフが与</description>
-    </item>
-    
-    <item>
       <title>交差エントロピー誤差</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/cross_entropy_error/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1128,21 +1146,21 @@
     </item>
     
     <item>
-      <title>動的計画法の応用題</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/dp_applied/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/dp_applied/</guid>
-      <description>動的計画法の応用題 動的計画法の応用問題をいくつか紹介する。 最長共通部分列問題 例えば以下のような問題。 ２つの文字列s,tの共通部分文字列の長さ</description>
-    </item>
-    
-    <item>
       <title>勾配法(最急降下法)</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/steepest_descent_method/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/steepest_descent_method/</guid>
       <description>勾配法(最急降下法) 前述の平均二乗誤差で最も誤差が小さくなるw0,w1を正確に求めるにはどうすればよいのか？ その一例として、ここでは勾配法と</description>
+    </item>
+    
+    <item>
+      <title>単位行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/identity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/identity/</guid>
+      <description>単位行列 単位行列を生成する方法を述べる。 Python 単位行列を算出したいときは、numpyモジュールにある関数identityを使用する。 numpy.identity(n) 上記の式に</description>
     </item>
     
     <item>
@@ -1389,6 +1407,15 @@
     </item>
     
     <item>
+      <title>数学系</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/math_index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/math_index/</guid>
+      <description>数学系 数学に関する手法などをまとめる。 都合上、現在はPythonのみ記載。 線形代数ではnumpyというライブラリを利用する。 線形代数 ベクトル</description>
+    </item>
+    
+    <item>
       <title>文字列の長さ（文字数）を調べる</title>
       <link>https://WAT36.github.io/pages/docs/programming/string/length/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1416,29 +1443,20 @@
     </item>
     
     <item>
-      <title>最小全域木</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/minimum_spanning_tree/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/minimum_spanning_tree/</guid>
-      <description>最小全域木 無向グラフが与えられたときに、その内のある辺だけを用いてグラフ中の任意の２頂点を連結(ある頂点から他のどの頂点への経路が存在する)</description>
-    </item>
-    
-    <item>
       <title>最尤推定</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/maximum_likelihood/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/math/maximum_likelihood/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/maximum_likelihood/</guid>
+      <guid>https://WAT36.github.io/pages/docs/programming/math/maximum_likelihood/</guid>
       <description>最尤推定 当たりとハズレがそれぞれ何個か入ったくじがあり、当たりが出た時を１、ハズレが出た時を０と設定する。 この時、n回目にくじを引いた時の結</description>
     </item>
     
     <item>
       <title>条件付き確率</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/conditional_probability/</link>
+      <link>https://WAT36.github.io/pages/docs/programming/math/conditional_probability/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/conditional_probability/</guid>
+      <guid>https://WAT36.github.io/pages/docs/programming/math/conditional_probability/</guid>
       <description>条件付き確率 私は高校で条件付き確率を学んでこなかったゆとり世代なので、改めて条件付き確率において書き記していく。 事象A,Bにおいて、ある事象</description>
     </item>
     
@@ -1560,6 +1578,42 @@
     </item>
     
     <item>
+      <title>行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/matrix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/matrix/</guid>
+      <description>行列 行列の定義についてを示す。 Python 行列(2次元配列)もベクトルと同様、numpyライブラリにある関数array(list)を使って定義する。引</description>
+    </item>
+    
+    <item>
+      <title>行列のサイズを変更する</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/reshape/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/reshape/</guid>
+      <description>行列のサイズを変更する 行列のサイズを変更する方法についてを示す。 Python 行列のサイズを変更したい場合は変数名.reshape(n,m)を使う。 変更</description>
+    </item>
+    
+    <item>
+      <title>行列の型(サイズ)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/matrix_size/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/matrix_size/</guid>
+      <description>行列の型(サイズ) 行列の型(サイズ)を調べる方法についてを示す。 Python 行列(2次元配列)のサイズはnumpy.ndarray型の変数.shape</description>
+    </item>
+    
+    <item>
+      <title>行列積(ベクトルの内積)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/dot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/dot/</guid>
+      <description>行列積(ベクトルの内積) 行列積、ベクトルでいう内積を算出する方法についてを示す。 Python 行列積を算出したいときは、numpy変数の関数dotを使用</description>
+    </item>
+    
+    <item>
       <title>複数の数字のうち最も大きい数字をとる</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/max/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1575,6 +1629,24 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/min/</guid>
       <description>複数の数字のうち最も小さい数字をとる 複数の数値から一番小さい数値を取り出したい時の方法を示す。 Java Javaではjava.lang.Mathクラ</description>
+    </item>
+    
+    <item>
+      <title>要素が全て１の行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/ones/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/ones/</guid>
+      <description>要素が全て１の行列 要素が全て１の行列を生成する方法についてを示す。 Python numpyの関数onesを使うと、要素が全て１の行列を生成できる。 零行列</description>
+    </item>
+    
+    <item>
+      <title>要素が等間隔になるベクトル</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/arange/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/arange/</guid>
+      <description>要素が等間隔になるベクトル 指定した範囲内で、全ての要素の感覚が等しくなるようなベクトルを生成する方法についてを示す。 Python 主に方法は二つある。 numpy.arange()</description>
     </item>
     
     <item>
@@ -1638,6 +1710,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/and_bit/</guid>
       <description>論理積(AND) ANDのビット演算をする方法についてを示す。 Java JavaではANDのビット演算子 &amp;amp; を使用する。論理演算の時とは違い、こちらは&amp;</description>
+    </item>
+    
+    <item>
+      <title>転置行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/transpose/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/transpose/</guid>
+      <description>転置行列 転置行列を算出する方法についてを示す。 Python 転置行列を算出したい時は、(ndarray型の変数).Tで行う。 &amp;gt;&amp;gt;&amp;gt; import numpy as np &amp;gt;&amp;gt;&amp;gt; &amp;gt;&amp;gt;&amp;gt; a = np.array([[1, 2]]) &amp;gt;&amp;gt;&amp;gt; &amp;gt;&amp;gt;&amp;gt; print(a)</description>
     </item>
     
     <item>
@@ -1758,6 +1839,15 @@
     </item>
     
     <item>
+      <title>逆行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/inv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/inv/</guid>
+      <description>逆行列 逆行列を算出する方法についてを述べる。 Python 逆行列を算出したいときは、numpy.linalgモジュールにある関数invを使用する。 numpy.linalg.inv(A) 上記</description>
+    </item>
+    
+    <item>
       <title>配列</title>
       <link>https://WAT36.github.io/pages/docs/programming/list/array/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1800,6 +1890,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/ctf/esolang/</guid>
       <description>難解プログラミング言語 難解プログラミング言語とは、意図的に解読が困難になるように設計されたプログラミング言語である。 実用性を考慮して作られた</description>
+    </item>
+    
+    <item>
+      <title>零行列</title>
+      <link>https://WAT36.github.io/pages/docs/programming/math/zero/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/math/zero/</guid>
+      <description>零行列 零行列を生成する方法についてを示す。 Python 零行列はnumpyの関数zerosで生成できる。 引数に１つの整数を渡した場合は1次元(ベクトル)</description>
     </item>
     
     <item>
