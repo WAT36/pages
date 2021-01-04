@@ -39,4 +39,5 @@ bookToc: false
 - [その他のWeb関連技術]({{< relref "/docs/front-end/web_other.md" >}})
 - Javascript
  - [DOM]({{< relref "/docs/front-end/dom.md" >}})
+ - [イベント]({{< relref "/docs/front-end/event.md" >}})
 

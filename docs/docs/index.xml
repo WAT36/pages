@@ -237,15 +237,6 @@
     </item>
     
     <item>
-      <title>Event</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/event/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/event/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>for文</title>
       <link>https://WAT36.github.io/pages/docs/programming/control/for/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -432,6 +423,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/front-end/css_animation/</guid>
       <description>CSSのアニメーション CSSで行えるアニメーションについてを述べる。 回転・拡大縮小・移動 ボックスを回転・拡大縮小・移動などさせるプロパティに</description>
+    </item>
+    
+    <item>
+      <title>イベント</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/event/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/event/</guid>
+      <description>イベント</description>
     </item>
     
     <item>
