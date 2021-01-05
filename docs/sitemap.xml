@@ -153,10 +153,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/keras-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/keras/</loc>
     <lastmod>2020-09-23T19:38:49+09:00</lastmod>
   </url>
@@ -233,11 +229,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/event/</loc>
-    <lastmod>2021-01-03T22:47:26+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/class_func/object-2/</loc>
+    <lastmod>2021-01-04T23:42:03+09:00</lastmod>
   </url>
   
   <url>
@@ -386,10 +378,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/neural_network-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/neural_network/</loc>
     <lastmod>2020-09-17T22:34:25+09:00</lastmod>
   </url>
@@ -412,10 +400,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/file_io/fileopen/</loc>
     <lastmod>2020-02-25T17:43:35+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/filter-2/</loc>
   </url>
   
   <url>
@@ -689,10 +673,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/list/multi_array-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/list/multi_array/</loc>
     <lastmod>2020-09-14T22:09:54+09:00</lastmod>
   </url>
@@ -730,10 +710,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/root/</loc>
     <lastmod>2020-01-08T20:18:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/mnist-2/</loc>
   </url>
   
   <url>
@@ -789,10 +765,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/str/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/numerical_differentiation-2/</loc>
   </url>
   
   <url>
@@ -853,10 +825,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/procon/dfs/</loc>
     <lastmod>2020-04-16T00:22:40+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/gaussian_mixture_model-2/</loc>
   </url>
   
   <url>
@@ -930,10 +898,6 @@
   </url>
   
   <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/back_propagation-2/</loc>
-  </url>
-  
-  <url>
     <loc>https://WAT36.github.io/pages/docs/programming/machine_learning/back_propagation/</loc>
     <lastmod>2020-09-17T22:34:25+09:00</lastmod>
   </url>
@@ -941,10 +905,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/number/or_bit/</loc>
     <lastmod>2020-01-05T16:37:57+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/number/logical_operator-2/</loc>
   </url>
   
   <url>
@@ -1020,10 +980,6 @@
   <url>
     <loc>https://WAT36.github.io/pages/docs/programming/map/map_index/</loc>
     <lastmod>2020-10-03T01:18:42+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://WAT36.github.io/pages/docs/programming/list/array-2/</loc>
   </url>
   
   <url>
@@ -1143,7 +1099,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/</loc>
-    <lastmod>2021-01-03T22:47:26+09:00</lastmod>
+    <lastmod>2021-01-04T23:42:03+09:00</lastmod>
   </url>
   
   <url>
@@ -1331,7 +1287,7 @@
   
   <url>
     <loc>https://WAT36.github.io/pages/docs/front-end/front_index/</loc>
-    <lastmod>2020-10-06T08:30:47+09:00</lastmod>
+    <lastmod>2021-01-04T23:42:03+09:00</lastmod>
   </url>
   
   <url>
