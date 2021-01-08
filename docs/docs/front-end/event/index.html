@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.46ba0fe9f369945b1a16b04beb396f9a379a5de5eb36071e08b3a58a5eeb1498.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.e3e724d02228b6a7f542da885b4961eb3bdb6f08b1a1fc0643ad879075af97b7.js"></script>
 
 
 
@@ -128,39 +128,25 @@ https://github.com/alex-shpak/hugo-book
 <p>画面上での操作とは、例えばあるボタンを押した、あるテキストをフォーカスした、などがある。</p>
 
 <p>例として、以下のようなコードを記載する。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="color:#f92672">html</span>&gt;
-
-&lt;<span style="color:#f92672">head</span>&gt;
-    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
-    &lt;<span style="color:#f92672">title</span>&gt;タイトル&lt;/<span style="color:#f92672">title</span>&gt;
-&lt;/<span style="color:#f92672">head</span>&gt;
-
-&lt;<span style="color:#f92672">body</span>&gt;
-    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;event_sample&#34;</span>&gt;
-        &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;target&#34;</span>&gt;ここにカーソルを持ってくると・・&lt;/<span style="color:#f92672">p</span>&gt;
-    &lt;/<span style="color:#f92672">div</span>&gt;
-    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/js_sample_pages/event_sample.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-&lt;/<span style="color:#f92672">body</span>&gt;
-
-&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;target&#34;</span>&gt;ここにカーソルを持ってくると・・&lt;/<span style="color:#f92672">p</span>&gt;</code></pre></div>
 <p>javascript</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
     <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;target&#39;</span>);
 
-    <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>,<span style="color:#66d9ef">function</span>(){
+    <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;mousemove&#39;</span>,<span style="color:#66d9ef">function</span>(){
         <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ここにカーソルを持ってくると・・　→　赤くなる！&#39;</span>;
-        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;red&#39;</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;red&#34;</span>;
     });
-}
+};
 </code></pre></div>
 <p>表示例</p>
 
-<hr>
+<hr />
 
-<p><iframe width="400" height="300" src="https://WAT36.github.io/pages/js_sample_pages/event_sample.html">
-</iframe>
-<hr></p>
+<p><p id="target">ここにカーソルを持ってくると・・</p>
+<script type="text/javascript" src="https://WAT36.github.io/pages/js_sample_pages/event_sample.js"></script></p>
+
+<hr />
 </article>
 
       
@@ -168,8 +154,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/e9c1bb1460823f3ad7819a6fc77d529451a236f3" title='Last modified Jan 7, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 7, 2021
+    <a href="https://github.com/alex-shpak/hugo-book/commit/61364bfac5a1ce676ac2d2d56fd458cb95a6c3d9" title='Last modified Jan 8, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 8, 2021
     </a>
   </div>
   

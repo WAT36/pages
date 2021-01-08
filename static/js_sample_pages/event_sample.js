@@ -1,7 +1,8 @@
 window.onload = function() {
     var target = document.getElementById('target');
 
-    target.addEventListener('click',function(){
+    target.addEventListener('mousemove',function(){
         this.innerText = 'ここにカーソルを持ってくると・・　→　赤くなる！';
-    },false);
-}
+        this.style.color = "red";
+    });
+};
