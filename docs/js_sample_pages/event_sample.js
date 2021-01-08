@@ -1,8 +1,7 @@
 window.onload = function() {
-    var target = document.getElementsByTagName('p');
+    var target = document.getElementById('target');
 
-    target.addEventListener('',function(){
-        this.innerText = 'ここにカーソルを持ってくると・・　→　赤くなる！'
-        this.style.color = "red";
-    });
+    target.addEventListener('click',function(){
+        this.innerText = 'ここにカーソルを持ってくると・・　→　赤くなる！';
+    },false);
 }

@@ -26,8 +26,10 @@ Javascriptの**イベント**についてを記す。
 </head>
 
 <body>
-    <p>ここにカーソルを持ってくると・・</p>
-    <script src="event_sample.js"></script>
+    <div id="event_sample">
+        <p id="target">ここにカーソルを持ってくると・・</p>
+    </div>
+    <script type="text/javascript" src="/js_sample_pages/event_sample.js"></script>
 </body>
 
 </html>
@@ -37,11 +39,18 @@ javascript
 
 ```javascript
 window.onload = function() {
-    var target = document.getElementsByTagName('p');
+    var target = document.getElementById('target');
 
-    target.addEventListener('',function(){
-        this.innerText = 'ここにカーソルを持ってくると・・　→　赤くなる！'
-        this.style.color = "red";
+    target.addEventListener('click',function(){
+        this.innerText = 'ここにカーソルを持ってくると・・　→　赤くなる！';
+        this.style.color = 'red';
     });
 }
 ```
+
+表示例
+
+<hr>
+<iframe width="400" height="300" src="/js_sample_pages/event_sample.html">
+</iframe>
+<hr>
