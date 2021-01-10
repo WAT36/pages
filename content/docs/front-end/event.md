@@ -41,3 +41,12 @@ window.onload = function() {
 <script type="text/javascript" src="/js_sample_pages/event_sample.js"></script>
 
 ---
+
+上記のテキストの上にカーソルを持ってくると、指定したイベントが発動してテキストの内容と色が変化する。
+
+イベントを登録するには、DOMで取って来た要素に**addEventListener**関数を利用して行う。
+
+第１引数にはイベントの種類を示す文字列、第２引数にはイベントによって実行される処理を記述する。
+
+
+ちなみに、javascriptコード内にあるwindow.onloadは、「ウィンドウ」の「読み込みが完了したらこの処理をする」という意味である。ここでは、ページの読み込みが完了したらイベントを登録するという意味になる。
