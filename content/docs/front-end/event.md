@@ -50,3 +50,49 @@ window.onload = function() {
 
 
 ちなみに、javascriptコード内にあるwindow.onloadは、「ウィンドウ」の「読み込みが完了したらこの処理をする」という意味である。ここでは、ページの読み込みが完了したらイベントを登録するという意味になる。
+
+
+# イベントの発火と伝播
+
+今度は以下のような例を考えてみる。
+
+html
+
+```html
+<div id="main">
+    <p>このp要素にカーソルを置くと・・・・</p>
+    <p id="target">このp要素(target)にカーソルを持ってくると・・</p>
+</div>
+```
+
+javascript
+
+```javascript
+window.onload = function() {
+    var target = document.getElementById('target');
+
+    target.addEventListener('mousemove',function(){
+        this.innerText = 'このp要素(target)にカーソルを持ってくると・・　→　赤くなる！';
+        this.style.color = "red";
+    });
+
+    var main = document.getElementById('main');
+
+    main.addEventListener('mousemove',function(){
+        this.innerText = 'このp要素にカーソルを置くと・・・・　→　青くなる！';
+        this.style.color = "blue";
+    });
+};
+```
+
+表示例
+
+---
+
+<div id="main">
+    <p>このp要素にカーソルを置くと・・・・</p>
+    <p id="target">このp要素(target)にカーソルを持ってくると・・</p>
+</div>
+<script type="text/javascript" src="/js_sample_pages/event_sample2.js"></script>
+
+---
