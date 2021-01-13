@@ -118,3 +118,38 @@ window.onload = function() {
 
 <img src="/img/front-end/event_propagation.png">
 
+
+このような、イベントの伝播をさせたくない場合は、javascriptのaddEventListenerでの処理関数の引数に**event**を指定し、さらに処理内容に**event.stopPropagation()**を追加させる。これにより、伝播をストップできる。
+
+javascript例（main->main2,target->target2と変更）
+
+```javascript
+window.onload = function() {
+    var target = document.getElementById('target2');
+
+    target.addEventListener('mousemove',function(event){
+        this.innerText = 'このp要素(target)にカーソルを持ってくると・・　→　赤くなる！';
+        this.style.color = "red";
+        event.stopPropagation();  //伝播をストップさせる。
+    });
+
+    var main = document.getElementById('main2');
+
+    main.addEventListener('mousemove',function(){
+        this.innerText = 'このp要素にカーソルを置くと・・・・　→　青くなる！';
+        this.style.color = "blue";
+    });
+};
+```
+
+表示例
+
+---
+
+<div id="main2">
+    <p>このp要素にカーソルを置くと・・・・</p>
+    <p id="target2">このp要素(target)にカーソルを持ってくると・・</p>
+</div>
+<script type="text/javascript" src="/js_sample_pages/event_stopPropagation.js"></script>
+
+---
