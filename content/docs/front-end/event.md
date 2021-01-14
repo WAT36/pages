@@ -16,6 +16,8 @@ Javascriptの**イベント**についてを記す。
 
 例として、以下のようなコードを記載する。
 
+html
+
 ```html
 <p id="target">ここにカーソルを持ってくると・・</p>
 ```
@@ -59,24 +61,24 @@ window.onload = function() {
 html
 
 ```html
-<div id="main">
+<div id="main2">
     <p>このp要素にカーソルを置くと・・・・</p>
-    <p id="target">このp要素(target)にカーソルを持ってくると・・</p>
+    <p id="target2">このp要素(target)にカーソルを持ってくると・・</p>
 </div>
 ```
 
-javascript
+javascript（main->main2,target->target2と変更）
 
 ```javascript
 window.onload = function() {
-    var target = document.getElementById('target');
+    var target = document.getElementById('target2');
 
     target.addEventListener('mousemove',function(){
         this.innerText = 'このp要素(target)にカーソルを持ってくると・・　→　赤くなる！';
         this.style.color = "red";
     });
 
-    var main = document.getElementById('main');
+    var main = document.getElementById('main2');
 
     main.addEventListener('mousemove',function(){
         this.innerText = 'このp要素にカーソルを置くと・・・・　→　青くなる！';
@@ -89,11 +91,11 @@ window.onload = function() {
 
 ---
 
-<div id="main">
+<div id="main2">
     <p>このp要素にカーソルを置くと・・・・</p>
-    <p id="target">このp要素(target)にカーソルを持ってくると・・</p>
+    <p id="target2">このp要素(target)にカーソルを持ってくると・・</p>
 </div>
-<script type="text/javascript" src="/js_sample_pages/event_sample2.js"></script>
+<script type="text/javascript" src="/js_sample_pages/event_sample.js"></script>
 
 ---
 
@@ -121,11 +123,11 @@ window.onload = function() {
 
 このような、イベントの伝播をさせたくない場合は、javascriptのaddEventListenerでの処理関数の引数に**event**を指定し、さらに処理内容に**event.stopPropagation()**を追加させる。これにより、伝播をストップできる。
 
-javascript例（main->main2,target->target2と変更）
+javascript例（main->main3,target->target3と変更）
 
 ```javascript
 window.onload = function() {
-    var target = document.getElementById('target2');
+    var target = document.getElementById('target3');
 
     target.addEventListener('mousemove',function(event){
         this.innerText = 'このp要素(target)にカーソルを持ってくると・・　→　赤くなる！';
@@ -133,7 +135,7 @@ window.onload = function() {
         event.stopPropagation();  //伝播をストップさせる。
     });
 
-    var main = document.getElementById('main2');
+    var main = document.getElementById('main3');
 
     main.addEventListener('mousemove',function(){
         this.innerText = 'このp要素にカーソルを置くと・・・・　→　青くなる！';
@@ -146,10 +148,10 @@ window.onload = function() {
 
 ---
 
-<div id="main2">
+<div id="main3">
     <p>このp要素にカーソルを置くと・・・・</p>
-    <p id="target2">このp要素(target)にカーソルを持ってくると・・</p>
+    <p id="target3">このp要素(target)にカーソルを持ってくると・・</p>
 </div>
-<script type="text/javascript" src="/js_sample_pages/event_stopPropagation.js"></script>
+<script type="text/javascript" src="/js_sample_pages/event_sample.js"></script>
 
 ---

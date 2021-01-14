@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.4458e89d512e2491c2f6677d7f20d97bccaccc8851777d7c8d240ff6164f58f5.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.e89decb3f43bf9242684e7d092238a64f161109a6e85745003e931b96ee6175e.js"></script>
 
 
 
@@ -128,6 +128,8 @@ https://github.com/alex-shpak/hugo-book
 <p>画面上での操作とは、例えばあるボタンを押した、あるテキストをフォーカスした、などがある。</p>
 
 <p>例として、以下のようなコードを記載する。</p>
+
+<p>html</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;target&#34;</span>&gt;ここにカーソルを持ってくると・・&lt;/<span style="color:#f92672">p</span>&gt;</code></pre></div>
 <p>javascript</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
@@ -161,20 +163,20 @@ https://github.com/alex-shpak/hugo-book
 <p>今度は以下のような例を考えてみる。</p>
 
 <p>html</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;main&#34;</span>&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;main2&#34;</span>&gt;
     &lt;<span style="color:#f92672">p</span>&gt;このp要素にカーソルを置くと・・・・&lt;/<span style="color:#f92672">p</span>&gt;
-    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;target&#34;</span>&gt;このp要素(target)にカーソルを持ってくると・・&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;target2&#34;</span>&gt;このp要素(target)にカーソルを持ってくると・・&lt;/<span style="color:#f92672">p</span>&gt;
 &lt;/<span style="color:#f92672">div</span>&gt;</code></pre></div>
-<p>javascript</p>
+<p>javascript（main-&gt;main2,target-&gt;target2と変更）</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;target&#39;</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;target2&#39;</span>);
 
     <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;mousemove&#39;</span>,<span style="color:#66d9ef">function</span>(){
         <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;このp要素(target)にカーソルを持ってくると・・　→　赤くなる！&#39;</span>;
         <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;red&#34;</span>;
     });
 
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;main&#39;</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;main2&#39;</span>);
 
     <span style="color:#a6e22e">main</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;mousemove&#39;</span>,<span style="color:#66d9ef">function</span>(){
         <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;このp要素にカーソルを置くと・・・・　→　青くなる！&#39;</span>;
@@ -186,11 +188,11 @@ https://github.com/alex-shpak/hugo-book
 
 <hr />
 
-<p><div id="main">
+<p><div id="main2">
     <p>このp要素にカーソルを置くと・・・・</p>
-    <p id="target">このp要素(target)にカーソルを持ってくると・・</p>
+    <p id="target2">このp要素(target)にカーソルを持ってくると・・</p>
 </div>
-<script type="text/javascript" src="https://WAT36.github.io/pages/js_sample_pages/event_sample2.js"></script></p>
+<script type="text/javascript" src="https://WAT36.github.io/pages/js_sample_pages/event_sample.js"></script></p>
 
 <hr />
 
@@ -216,9 +218,9 @@ https://github.com/alex-shpak/hugo-book
 
 <p>このような、イベントの伝播をさせたくない場合は、javascriptのaddEventListenerでの処理関数の引数に<strong>event</strong>を指定し、さらに処理内容に<strong>event.stopPropagation()</strong>を追加させる。これにより、伝播をストップできる。</p>
 
-<p>javascript例（main-&gt;main2,target-&gt;target2と変更）</p>
+<p>javascript例（main-&gt;main3,target-&gt;target3と変更）</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;target2&#39;</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;target3&#39;</span>);
 
     <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;mousemove&#39;</span>,<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">event</span>){
         <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;このp要素(target)にカーソルを持ってくると・・　→　赤くなる！&#39;</span>;
@@ -226,7 +228,7 @@ https://github.com/alex-shpak/hugo-book
         <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">stopPropagation</span>();  <span style="color:#75715e">//伝播をストップさせる。
 </span><span style="color:#75715e"></span>    });
 
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;main2&#39;</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;main3&#39;</span>);
 
     <span style="color:#a6e22e">main</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;mousemove&#39;</span>,<span style="color:#66d9ef">function</span>(){
         <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;このp要素にカーソルを置くと・・・・　→　青くなる！&#39;</span>;
@@ -238,11 +240,11 @@ https://github.com/alex-shpak/hugo-book
 
 <hr />
 
-<p><div id="main2">
+<p><div id="main3">
     <p>このp要素にカーソルを置くと・・・・</p>
-    <p id="target2">このp要素(target)にカーソルを持ってくると・・</p>
+    <p id="target3">このp要素(target)にカーソルを持ってくると・・</p>
 </div>
-<script type="text/javascript" src="https://WAT36.github.io/pages/js_sample_pages/event_stopPropagation.js"></script></p>
+<script type="text/javascript" src="https://WAT36.github.io/pages/js_sample_pages/event_sample.js"></script></p>
 
 <hr />
 </article>
@@ -252,8 +254,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f62b44afddc04cd46223baa0b2381b6e9617906f" title='Last modified Jan 13, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 13, 2021
+    <a href="https://github.com/alex-shpak/hugo-book/commit/165922bed5b805835138d9b6ae37f7a2d98f63b2" title='Last modified Jan 14, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 14, 2021
     </a>
   </div>
   
