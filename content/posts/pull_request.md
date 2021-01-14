@@ -40,6 +40,8 @@ $git clone (レポジトリのアドレス)
 UIがよく変わるが、2021/1現在ではCodeのボタンを押すとclone用のアドレスが表示される。
 GithubにSSHキーを登録してあるならば、ssh用のアドレスを利用する。
 
+<img src="/img/blog/clone.png" width=100%>
+
 
 3. ローカルでプルリク用のブランチを作成する
 
