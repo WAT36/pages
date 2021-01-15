@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.fe1494560f5932f400a15aeeefaf5436d3ce0c41fbece5843685bdc205e192f3.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.6cef27256892a8e1a1c6902a1659aaff19469dabc9835a3f6a213003791cbbe7.js"></script>
 
 
 
@@ -125,90 +125,76 @@ https://github.com/alex-shpak/hugo-book
 </header>
 <article class="markdown">
 
-<h1 id="githubで初めてプルリクエストをやったのでその手順を書いておく">Githubで初めてプルリクエストをやったのでその手順を書いておく</h1>
-
 <p>GitHubにおいて、OSS活動では必須の手順である「プルリクエスト」。</p>
 
 <p>簡単にできるものだと思ってたが、意外とややこしいところもあったりで。。（ワンクリックでできる物だと思ってた）</p>
 
-<p>今までやった事がなかったため、今回個人内だが行ってみたので、その手順を記録しておいた。</p>
+<p>今までやった事がなかったため、今回個人のアカウント間だが行ってみたので、その手順を記録しておいた。</p>
 
-<ol>
-<li>プルリクしたいレポジトリをforkする</li>
-</ol>
+<h2 id="1-プルリクしたいレポジトリをforkする">1. プルリクしたいレポジトリをforkする</h2>
 
 <p>Githubのプルリクしたいレポジトリのページに行き、
 Forkボタンを押す。</p>
 
-<p><img src="https://WAT36.github.io/pages/img/blog/fork.png" width=100%></p>
+<p><img src="https://WAT36.github.io/pages/img/blog/fork.png"></p>
 
 <p>Forkとは、他の人のアカウントにあるレポジトリをコピーして、自分のアカウントに持ってくる事である。</p>
 
 <p>すると、自分のアカウントにそのリポジトリがコピーされる。</p>
 
-<p><img src="https://WAT36.github.io/pages/img/blog/forked.png" width=100%></p>
+<p><img src="https://WAT36.github.io/pages/img/blog/forked.png"></p>
 
-<ol>
-<li>Forkしたレポジトリをcloneしてローカルに持ってくる</li>
-</ol>
+<h2 id="2-forkしたレポジトリをcloneしてローカルに持ってくる">2. Forkしたレポジトリをcloneしてローカルに持ってくる</h2>
 
 <p>Forkしたレポジトリのページに行き、
 まずはそのレポジトリをローカルにダウンロードする。
 ダウンロードはgit cloneで行う。
 やり方は以下の通り。</p>
 
-<pre><code>$git clone (レポジトリのアドレス)
+<pre><code>$ git clone (レポジトリのアドレス)
 </code></pre>
 
-<p>レポジトリのアドレスは、大体Githubのレポジトリのページに書いてある。
-UIがよく変わるが、2021/1現在ではCodeのボタンを押すとclone用のアドレスが表示される。
+<p>レポジトリのアドレスは、大体Githubのレポジトリのページに書いてある「Code」のボタンを押すとclone用のアドレスが表示される。
 GithubにSSHキーを登録してあるならば、ssh用のアドレスを利用する。</p>
 
-<p><img src="https://WAT36.github.io/pages/img/blog/clone.png" width=100%></p>
+<p><img src="https://WAT36.github.io/pages/img/blog/clone.png"></p>
 
-<ol>
-<li>ローカルでプルリク用のブランチを作成する</li>
-</ol>
+<h2 id="3-ローカルでプルリク用のブランチを作成する">3. ローカルでプルリク用のブランチを作成する</h2>
 
 <p>cloneした状態ではmasterブランチとなっているので、
 プルリク用のブランチを作成し、そこで修正する。</p>
 
-<pre><code>$git branch (ブランチ名)
+<pre><code>$ git branch (ブランチ名)
+$ git checkout (ブランチ名)
 </code></pre>
 
-<ol>
-<li>ローカルでコード類を変更する</li>
-</ol>
+<h2 id="4-ローカルでコード類を変更する">4. ローカルでコード類を変更する</h2>
 
 <p>プルリクを送るために変更したい箇所を修正して保存する</p>
 
-<ol>
-<li>変更したコードをコミット、プッシュする</li>
-</ol>
+<h2 id="5-変更したコードをコミット-プッシュする">5. 変更したコードをコミット、プッシュする</h2>
 
 <p>コミットしたいファイルをaddする</p>
 
-<pre><code>$git add (修正したコミットしたいファイル)
+<pre><code>$ git add (修正したコミットしたいファイル)
 </code></pre>
 
 <p>その後コミット・プッシュする</p>
 
-<pre><code>$git commit -m &quot;コミットメッセージ&quot;
-$git push origin (ブランチ名)
+<pre><code>$ git commit -m &quot;コミットメッセージ&quot;
+$ git push origin (ブランチ名)
 </code></pre>
 
-<ol>
-<li>Githubから「New Pull Request」を押す</li>
-</ol>
+<h2 id="6-githubから-new-pull-request-を押す">6. Githubから「New Pull Request」を押す</h2>
 
 <p>GithubのForkしたレポジトリのページに行くと、
 緑色の「Compare &amp; Pull Request」のボタンがあるのでそれを押す。</p>
 
-<p><img src="https://WAT36.github.io/pages/img/blog/pull_request.png" width=100%></p>
+<p><img src="https://WAT36.github.io/pages/img/blog/pull_request.png"></p>
 
 <p>するとプルリクエストの題名、説明の入力を求められるので、そこに説明等を書いて「Create Pull Request」を押す。</p>
 
-<p><img src="https://WAT36.github.io/pages/img/blog/pull_request2.png" width=100%></p>
+<p><img src="https://WAT36.github.io/pages/img/blog/pull_request2.png"></p>
 
 <p>これでプルリクエストの送信が完了。後は送り先がマージしてくれるのを祈る。</p>
 

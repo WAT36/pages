@@ -1,30 +1,29 @@
 ---
 title: "Githubで初めてプルリクエストをやったのでその手順を書いておく"
 date: 2021-01-09T23:21:48+09:00
+bookToc: false
 ---
-
-# Githubで初めてプルリクエストをやったのでその手順を書いておく
 
 GitHubにおいて、OSS活動では必須の手順である「プルリクエスト」。
 
 簡単にできるものだと思ってたが、意外とややこしいところもあったりで。。（ワンクリックでできる物だと思ってた）
 
-今までやった事がなかったため、今回個人内だが行ってみたので、その手順を記録しておいた。
+今までやった事がなかったため、今回個人のアカウント間だが行ってみたので、その手順を記録しておいた。
 
-1. プルリクしたいレポジトリをforkする
+## 1. プルリクしたいレポジトリをforkする
 
 Githubのプルリクしたいレポジトリのページに行き、
 Forkボタンを押す。
 
-<img src="/img/blog/fork.png" width=100%>
+<img src="/img/blog/fork.png">
 
 Forkとは、他の人のアカウントにあるレポジトリをコピーして、自分のアカウントに持ってくる事である。
 
 すると、自分のアカウントにそのリポジトリがコピーされる。
 
-<img src="/img/blog/forked.png" width=100%>
+<img src="/img/blog/forked.png">
 
-2. Forkしたレポジトリをcloneしてローカルに持ってくる
+## 2. Forkしたレポジトリをcloneしてローカルに持ってくる
 
 Forkしたレポジトリのページに行き、
 まずはそのレポジトリをローカルにダウンロードする。
@@ -32,65 +31,58 @@ Forkしたレポジトリのページに行き、
 やり方は以下の通り。
 
 ```
-$git clone (レポジトリのアドレス)
+$ git clone (レポジトリのアドレス)
 ```
 
 
-レポジトリのアドレスは、大体Githubのレポジトリのページに書いてある。
-UIがよく変わるが、2021/1現在ではCodeのボタンを押すとclone用のアドレスが表示される。
+レポジトリのアドレスは、大体Githubのレポジトリのページに書いてある「Code」のボタンを押すとclone用のアドレスが表示される。
 GithubにSSHキーを登録してあるならば、ssh用のアドレスを利用する。
 
-<img src="/img/blog/clone.png" width=100%>
+<img src="/img/blog/clone.png">
 
 
-3. ローカルでプルリク用のブランチを作成する
+## 3. ローカルでプルリク用のブランチを作成する
 
 cloneした状態ではmasterブランチとなっているので、
 プルリク用のブランチを作成し、そこで修正する。
 
 ```
-$git branch (ブランチ名)
+$ git branch (ブランチ名)
+$ git checkout (ブランチ名)
 ```
 
 
-4. ローカルでコード類を変更する
+## 4. ローカルでコード類を変更する
 
 プルリクを送るために変更したい箇所を修正して保存する
 
-4. 変更したコードをコミット、プッシュする
+## 5. 変更したコードをコミット、プッシュする
 
 コミットしたいファイルをaddする
 
 ```
-$git add (修正したコミットしたいファイル)
+$ git add (修正したコミットしたいファイル)
 ```
 
 その後コミット・プッシュする
 
 ```
-$git commit -m "コミットメッセージ"
-$git push origin (ブランチ名)
+$ git commit -m "コミットメッセージ"
+$ git push origin (ブランチ名)
 ```
 
-5. Githubから「New Pull Request」を押す
+## 6. Githubから「New Pull Request」を押す
 
 GithubのForkしたレポジトリのページに行くと、
 緑色の「Compare & Pull Request」のボタンがあるのでそれを押す。
 
-<img src="/img/blog/pull_request.png" width=100%>
+<img src="/img/blog/pull_request.png">
 
 するとプルリクエストの題名、説明の入力を求められるので、そこに説明等を書いて「Create Pull Request」を押す。
 
-<img src="/img/blog/pull_request2.png" width=100%>
+<img src="/img/blog/pull_request2.png">
 
 これでプルリクエストの送信が完了。後は送り先がマージしてくれるのを祈る。
 
 ※UIは2021/1当時。ちょくちょく変わります
-
-
-
-
-
-
-
 
