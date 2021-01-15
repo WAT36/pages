@@ -106,6 +106,32 @@ ctx.fill();
 <hr>
 <hr>
 
+また、ベクター形式の画像である**SVG (Scalable Vector Graphics)**という方式もある。
+
+SVGはベクター形式のため、拡大縮小などしても画像が粗くならないという特徴がある。SVGではXML形式で画像を作成する。
+
+SVGを有効活用したライブラリとして、**D3.js**などがある。以下にSVGの例を示す。
+
+html
+
+```html
+<p>svg例</p>
+<svg width="200" height="200">
+    <circle cx="100" cy="100" r="50" stroke="red" fill="yellow" />
+</svg>
+```
+
+表示例
+
+<hr>
+<hr>
+<p>svg例</p>
+<svg width="200" height="200">
+    <circle cx="100" cy="100" r="50" stroke="red" fill="yellow" />
+</svg>
+<hr>
+<hr>
+
 # デバイスアクセスAPI
 
 デバイスに関する情報を取得できるAPIについてを述べる。
