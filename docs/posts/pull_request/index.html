@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Githubで初めてプルリクエストをやったのでその手順を書いておく | WAT Notes</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
+
+
+<script defer src="https://WAT36.github.io/pages/search.min.6cef27256892a8e1a1c6902a1659aaff19469dabc9835a3f6a213003791cbbe7.js"></script>
+
+
+
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2fposts\2fpull_request\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+
+<p><details>
+ <summary>Notes</summary></p>
+
+<ul>
+<li>
+
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul></li>
+</ul>
+
+<p></details></p>
+
+<ul>
+<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
+
+<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-posts">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>Githubで初めてプルリクエストをやったのでその手順を書いておく</strong>
+</header>
+
+      
+
+<header class="markdown">
+  <h1>Githubで初めてプルリクエストをやったのでその手順を書いておく</h1>
+  <h5>
+    <strong>Jan 9, 2021</strong>
+  </h5>
+</header>
+<article class="markdown">
+
+<p>GitHubにおいて、OSS活動では必須の手順である「プルリクエスト」。</p>
+
+<p>簡単にできるものだと思ってたが、意外とややこしいところもあったりで。。（ワンクリックでできる物だと思ってた）</p>
+
+<p>今までやった事がなかったため、今回個人のアカウント間だが行ってみたので、その手順を記録しておいた。</p>
+
+<h2 id="1-プルリクしたいレポジトリをforkする">1. プルリクしたいレポジトリをforkする</h2>
+
+<p>Githubのプルリクしたいレポジトリのページに行き、
+Forkボタンを押す。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/blog/fork.png"></p>
+
+<p>Forkとは、他の人のアカウントにあるレポジトリをコピーして、自分のアカウントに持ってくる事である。</p>
+
+<p>すると、自分のアカウントにそのリポジトリがコピーされる。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/blog/forked.png"></p>
+
+<h2 id="2-forkしたレポジトリをcloneしてローカルに持ってくる">2. Forkしたレポジトリをcloneしてローカルに持ってくる</h2>
+
+<p>Forkしたレポジトリのページに行き、
+まずはそのレポジトリをローカルにダウンロードする。
+ダウンロードはgit cloneで行う。
+やり方は以下の通り。</p>
+
+<pre><code>$ git clone (レポジトリのアドレス)
+</code></pre>
+
+<p>レポジトリのアドレスは、大体Githubのレポジトリのページに書いてある「Code」のボタンを押すとclone用のアドレスが表示される。
+GithubにSSHキーを登録してあるならば、ssh用のアドレスを利用する。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/blog/clone.png"></p>
+
+<h2 id="3-ローカルでプルリク用のブランチを作成する">3. ローカルでプルリク用のブランチを作成する</h2>
+
+<p>cloneした状態ではmasterブランチとなっているので、
+プルリク用のブランチを作成し、そこで修正する。</p>
+
+<pre><code>$ git branch (ブランチ名)
+$ git checkout (ブランチ名)
+</code></pre>
+
+<h2 id="4-ローカルでコード類を変更する">4. ローカルでコード類を変更する</h2>
+
+<p>プルリクを送るために変更したい箇所を修正して保存する</p>
+
+<h2 id="5-変更したコードをコミット-プッシュする">5. 変更したコードをコミット、プッシュする</h2>
+
+<p>コミットしたいファイルをaddする</p>
+
+<pre><code>$ git add (修正したコミットしたいファイル)
+</code></pre>
+
+<p>その後コミット・プッシュする</p>
+
+<pre><code>$ git commit -m &quot;コミットメッセージ&quot;
+$ git push origin (ブランチ名)
+</code></pre>
+
+<h2 id="6-githubから-new-pull-request-を押す">6. Githubから「New Pull Request」を押す</h2>
+
+<p>GithubのForkしたレポジトリのページに行くと、
+緑色の「Compare &amp; Pull Request」のボタンがあるのでそれを押す。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/blog/pull_request.png"></p>
+
+<p>するとプルリクエストの題名、説明の入力を求められるので、そこに説明等を書いて「Create Pull Request」を押す。</p>
+
+<p><img src="https://WAT36.github.io/pages/img/blog/pull_request2.png"></p>
+
+<p>これでプルリクエストの送信が完了。後は送り先がマージしてくれるのを祈る。</p>
+
+<p>※UIは2021/1当時。ちょくちょく変わります</p>
+</article>
+
+      
+    </div>
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>
