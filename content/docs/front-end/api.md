@@ -53,7 +53,7 @@ Adaptive Streaming技術には、Apple社が開発したプロトコルである
 
 画像ファイルは、jpegやpngファイルを用意して表示するが、HTML5ではJavascript等の外部ソースを利用しても表示できる。
 
-JavaScriptを使って画像を描画し、HTMLで表示するには**Canvas要素**を利用する。canvasは画像をビットマップ形式で描画する。そのため、拡大縮小すると画像が粗くなる。
+JavaScriptを使って画像を描画し、HTMLで表示するには**canvas要素**を利用する。canvasは画像をビットマップ形式（１ピクセル毎に色を指定する方式）で描画する。そのため、拡大縮小すると画像が粗くなる。
 
 利用方法は以下の通り。
 
@@ -70,6 +70,41 @@ Javascriptを使った描画では、以下のような操作が可能である�
 - 画像ファイルを読み込む
 - 拡大・縮小・回転する
 
+canvasを使ったコード例を以下に示す。
+
+html
+
+```html
+<p>canvas例</p>
+<canvas id="sample" width="100" height="100"></canvas>
+<script src="/js_sample_pages/api.js"></script>
+```
+
+javascript
+
+```javascript
+var canvas = document.getElementById('sample');
+var ctx = canvas.getContext('2d');
+
+ctx.beginPath();
+ctx.rect(0,0,100,100);
+ctx.strokeStyle = '#F00';
+ctx.fillStyle = '#FF0';
+ctx.stroke();
+ctx.fill();
+```
+
+表示例(canvas)
+
+<hr>
+<hr>
+
+<p>canvas例</p>
+<canvas id="sample" width="100" height="100"></canvas>
+<script src="/js_sample_pages/api.js"></script>
+
+<hr>
+<hr>
 
 # デバイスアクセスAPI
 
