@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.d8e162af0a80e3d19ca917a7923a605c676f6f7318cc5a9de2eda4af16262182.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.7b00723a894d9f9efd00b011e87a731ca969cb386ac328fbdec4c4d1c663d519.js"></script>
 
 
 
@@ -344,6 +344,44 @@ https://github.com/alex-shpak/hugo-book
 
 <p>Web Storageは、大きく<strong>セッションストレージ</strong>と<strong>ローカルストレージ</strong>の２種類に分けられる。セッションストレージはウィンドウやタブが閉じられるとデータも消失するが、ローカルストレージはデータが消失されず、次にページを開いたときにでもそのデータを利用することができる。</p>
 
+<h3 id="ローカルストレージ">ローカルストレージ</h3>
+
+<p>ローカルストレージを使うと、Webブラウザ自体に情報を記憶し、再度そのページに訪れたときにその保存しておいた情報を使うことが可能になる。</p>
+
+<p>以下にサンプルを載せる。</p>
+
+<p>html</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;ローカルストレージの学習。色が変化します。&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span>   <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width: 50px; height: 50px; margin: 20px; background: red&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;green&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width: 50px; height: 50px; margin: 20px; background: green&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span>  <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width: 50px; height: 50px; margin: 20px; background: blue&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/js_sample_pages/api.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;</code></pre></div>
+<p>javascript</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;title&#39;</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">boxes</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#39;box&#39;</span>);
+
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,<span style="color:#a6e22e">l</span><span style="color:#f92672">=</span><span style="color:#a6e22e">boxes</span>.<span style="color:#a6e22e">length</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">l</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+        <span style="color:#a6e22e">boxes</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>,<span style="color:#66d9ef">function</span>(){
+            <span style="color:#a6e22e">title</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">id</span>;
+        })
+    }
+}
+</code></pre></div>
+<p>表示例</p>
+
+<hr>
+
+<hr>
+
+<p><h1 id="title">ローカルストレージの学習。色が変化します。</h1>
+<div id="red"   class="box" style="width: 50px; height: 50px; margin: 20px; background: red"></div>
+<div id="green" class="box" style="width: 50px; height: 50px; margin: 20px; background: green"></div>
+<div id="blue"  class="box" style="width: 50px; height: 50px; margin: 20px; background: blue"></div>
+<script src="https://WAT36.github.io/pages/js_sample_pages/api.js"></script>
+<hr>
+<hr></p>
+
 <h2 id="indexed-database-api">Indexed Database API</h2>
 
 <p>Indexed Database APIはWeb Storageと同様にキーと値のペアによってデータを蓄積するAPIである。蓄積するのはJavaScriptのオブジェクトである。</p>
@@ -420,8 +458,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/cf158d0bd54c8565aa3ae0738a5c9cf8f02b361d" title='Last modified Jan 15, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 15, 2021
+    <a href="https://github.com/alex-shpak/hugo-book/commit/189a8dafb7636922f2ac01b531a398a3f7562e5a" title='Last modified Jan 16, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 16, 2021
     </a>
   </div>
   
@@ -452,7 +490,10 @@ https://github.com/alex-shpak/hugo-book
 </ul></li>
 <li><a href="#オフラインストレージapi">オフラインストレージAPI</a>
 <ul>
-<li><a href="#web-storage">Web Storage</a></li>
+<li><a href="#web-storage">Web Storage</a>
+<ul>
+<li><a href="#ローカルストレージ">ローカルストレージ</a></li>
+</ul></li>
 <li><a href="#indexed-database-api">Indexed Database API</a></li>
 <li><a href="#application-cache">Application cache</a></li>
 <li><a href="#web-workers">Web Workers</a></li>

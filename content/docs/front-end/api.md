@@ -230,6 +230,48 @@ Web Storageは、キーと値の組み合わせによってブラウザにデー
 
 Web Storageは、大きく**セッションストレージ**と**ローカルストレージ**の２種類に分けられる。セッションストレージはウィンドウやタブが閉じられるとデータも消失するが、ローカルストレージはデータが消失されず、次にページを開いたときにでもそのデータを利用することができる。
 
+### ローカルストレージ
+
+ローカルストレージを使うと、Webブラウザ自体に情報を記憶し、再度そのページに訪れたときにその保存しておいた情報を使うことが可能になる。
+
+以下にサンプルを載せる。
+
+html
+
+```html
+<h2 id="title">ローカルストレージの学習。下のボックスをクリックすると色が変化します。</h1>
+<div id="red"   class="box" style="width: 50px; height: 50px; margin: 20px; background: red"></div>
+<div id="green" class="box" style="width: 50px; height: 50px; margin: 20px; background: green"></div>
+<div id="blue"  class="box" style="width: 50px; height: 50px; margin: 20px; background: blue"></div>
+<script src="/js_sample_pages/api.js"></script>
+```
+
+javascript
+
+```javascript
+window.onload = function(){
+    var title = document.getElementById('title');
+    var boxes = document.getElementsByClassName('box');
+
+    for(var i=0,l=boxes.length;i<l;i++){
+        boxes[i].addEventListener('click',function(){
+            title.style.color = this.id;
+        })
+    }
+}
+```
+
+表示例
+
+<hr>
+<hr>
+<h2 id="title">ローカルストレージの学習。下のボックスをクリックすると色が変化します。</h1>
+<div id="red"   class="box" style="width: 50px; height: 50px; margin: 20px; background: red"></div>
+<div id="green" class="box" style="width: 50px; height: 50px; margin: 20px; background: green"></div>
+<div id="blue"  class="box" style="width: 50px; height: 50px; margin: 20px; background: blue"></div>
+<script src="/js_sample_pages/api.js"></script>
+<hr>
+<hr>
 
 ## Indexed Database API
 
