@@ -239,7 +239,8 @@ Web Storageは、大きく**セッションストレージ**と**ローカルス
 html
 
 ```html
-<h2 id="title">ローカルストレージの学習。下のボックスをクリックすると色が変化します。</h1>
+<h2 id="title">ローカルストレージありの場合。下のボックスをクリックすると色が変化します。ページを更新しても変わらないはず。</h2>
+<h2 id="title_nonstorage">ローカルストレージなしの場合。ページを更新すると戻ります。</h2>
 <div id="red"   class="box" style="width: 50px; height: 50px; margin: 20px; background: red"></div>
 <div id="green" class="box" style="width: 50px; height: 50px; margin: 20px; background: green"></div>
 <div id="blue"  class="box" style="width: 50px; height: 50px; margin: 20px; background: blue"></div>
@@ -251,11 +252,23 @@ javascript
 ```javascript
 window.onload = function(){
     var title = document.getElementById('title');
+    var title_nonstorage = document.getElementById('title_nonstorage');
     var boxes = document.getElementsByClassName('box');
+
+    // localStorageを変数に格納
+    var storage = localStorage;
+    // localStorageから'textcolor'の値を取得
+    var tc = storage.getItem('textcolor');
+    // localStorageに'textcolor'の値があれば、文字色を書き換え
+    if(tc){
+        title.style.color = tc;
+    }
 
     for(var i=0,l=boxes.length;i<l;i++){
         boxes[i].addEventListener('click',function(){
             title.style.color = this.id;
+            storage.setItem('textcolor',this.id);
+            title_nonstorage.style.color = this.id;
         })
     }
 }
@@ -265,13 +278,18 @@ window.onload = function(){
 
 <hr>
 <hr>
-<h2 id="title">ローカルストレージの学習。下のボックスをクリックすると色が変化します。</h1>
+<h2 id="title">ローカルストレージありの場合。下のボックスをクリックすると色が変化します。ページを更新しても変わらないはず。</h2>
+<h2 id="title_nonstorage">ローカルストレージなしの場合。ページを更新すると戻ります。</h2>
 <div id="red"   class="box" style="width: 50px; height: 50px; margin: 20px; background: red"></div>
 <div id="green" class="box" style="width: 50px; height: 50px; margin: 20px; background: green"></div>
 <div id="blue"  class="box" style="width: 50px; height: 50px; margin: 20px; background: blue"></div>
 <script src="/js_sample_pages/api.js"></script>
 <hr>
 <hr>
+
+色付きのボックスをクリックすると文字の色が変化する。色を変えた後にページを更新すると、ローカルストレージを設定してないものは最初の状態に戻ってしまうが、ローカルストレージを利用している物は色を保持させているので、更新しても色は変わらない。
+
+
 
 ## Indexed Database API
 

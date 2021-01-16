@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.7b00723a894d9f9efd00b011e87a731ca969cb386ac328fbdec4c4d1c663d519.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.d8a2df0fe05344ca1a1d42bba8da420819da358273e0fb468e631682fde5dd3e.js"></script>
 
 
 
@@ -351,7 +351,8 @@ https://github.com/alex-shpak/hugo-book
 <p>以下にサンプルを載せる。</p>
 
 <p>html</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;ローカルストレージの学習。色が変化します。&lt;/<span style="color:#f92672">h1</span>&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;ローカルストレージありの場合。下のボックスをクリックすると色が変化します。ページを更新しても変わらないはず。&lt;/<span style="color:#f92672">h2</span>&gt;
+&lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title_nonstorage&#34;</span>&gt;ローカルストレージなしの場合。ページを更新すると戻ります。&lt;/<span style="color:#f92672">h2</span>&gt;
 &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span>   <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width: 50px; height: 50px; margin: 20px; background: red&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
 &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;green&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width: 50px; height: 50px; margin: 20px; background: green&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
 &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span>  <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width: 50px; height: 50px; margin: 20px; background: blue&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
@@ -359,11 +360,23 @@ https://github.com/alex-shpak/hugo-book
 <p>javascript</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){
     <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;title&#39;</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">title_nonstorage</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;title_nonstorage&#39;</span>);
     <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">boxes</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#39;box&#39;</span>);
+
+    <span style="color:#75715e">// localStorageを変数に格納
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">storage</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">localStorage</span>;
+    <span style="color:#75715e">// localStorageから&#39;textcolor&#39;の値を取得
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tc</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">storage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#39;textcolor&#39;</span>);
+    <span style="color:#75715e">// localStorageに&#39;textcolor&#39;の値があれば、文字色を書き換え
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">tc</span>){
+        <span style="color:#a6e22e">title</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tc</span>;
+    }
 
     <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,<span style="color:#a6e22e">l</span><span style="color:#f92672">=</span><span style="color:#a6e22e">boxes</span>.<span style="color:#a6e22e">length</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">l</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
         <span style="color:#a6e22e">boxes</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>,<span style="color:#66d9ef">function</span>(){
             <span style="color:#a6e22e">title</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">id</span>;
+            <span style="color:#a6e22e">storage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#39;textcolor&#39;</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">id</span>);
+            <span style="color:#a6e22e">title_nonstorage</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">id</span>;
         })
     }
 }
@@ -374,13 +387,16 @@ https://github.com/alex-shpak/hugo-book
 
 <hr>
 
-<p><h1 id="title">ローカルストレージの学習。色が変化します。</h1>
+<p><h2 id="title">ローカルストレージありの場合。下のボックスをクリックすると色が変化します。ページを更新しても変わらないはず。</h2>
+<h2 id="title_nonstorage">ローカルストレージなしの場合。ページを更新すると戻ります。</h2>
 <div id="red"   class="box" style="width: 50px; height: 50px; margin: 20px; background: red"></div>
 <div id="green" class="box" style="width: 50px; height: 50px; margin: 20px; background: green"></div>
 <div id="blue"  class="box" style="width: 50px; height: 50px; margin: 20px; background: blue"></div>
 <script src="https://WAT36.github.io/pages/js_sample_pages/api.js"></script>
 <hr>
 <hr></p>
+
+<p>色付きのボックスをクリックすると文字の色が変化する。色を変えた後にページを更新すると、ローカルストレージを設定してないものは最初の状態に戻ってしまうが、ローカルストレージを利用している物は色を保持させているので、更新しても色は変わらない。</p>
 
 <h2 id="indexed-database-api">Indexed Database API</h2>
 
@@ -458,7 +474,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/189a8dafb7636922f2ac01b531a398a3f7562e5a" title='Last modified Jan 16, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/e7e0549240bf8df39829996d8b7076a9eef4a0ee" title='Last modified Jan 16, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 16, 2021
     </a>
   </div>
