@@ -66,7 +66,9 @@ window.onload = function() {
 
 ## ウィンドウイベント
 
-ウィンドウイベントとは、ブラウザのボタンが押された時、ページが背にした時などといった、ウィンドウの状態が変化したときに発生する。
+ウィンドウイベントとは、ブラウザのボタンが押された時、ページが遷移した時などといった、ウィンドウの状態が変化したときに発生する。
+
+ウィンドウイベントのイベントハンドラの種類を以下に記載する。
 
 <table style="border:none;">
     <tr>
@@ -165,6 +167,51 @@ window.onload = function() {
         <td style="border:none;">他ページに移動した時</td>
     </tr>
 </table>
+
+## フォームイベント
+
+フォームイベントとは、フォーム上をフォーカスした、フォームを入力した場合など、フォームの状態が変化した場合に発生するイベントである。
+
+フォームイベントのイベントハンドラの種類を以下に記載する。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">onblur</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">フォーカスが外れた時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onchange</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">変更された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onfocus</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">フォーカスされた</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onformchange</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">フォームの値が変更された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onforminput</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">フォームの値が入力された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onselect</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">要素が選択された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onsubmit</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">送信(submit)ボタンが押された時</td>
+    </tr>
+</table>
+
 
 # イベントの発火と伝播
 
