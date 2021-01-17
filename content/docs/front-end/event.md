@@ -58,12 +58,113 @@ window.onload = function() {
 
 イベントの種類としては、主に以下のようなものがある。
 
-- ウインドウイベント
+- ウィンドウイベント
 - フォームイベント
 - キーボードイベント
 - マウスイベント
 - タッチイベント
 
+## ウィンドウイベント
+
+ウィンドウイベントとは、ブラウザのボタンが押された時、ページが背にした時などといった、ウィンドウの状態が変化したときに発生する。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">onafterprint</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">印刷直後</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onbeforeprint</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">印刷直前</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onbeforeunload</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ページ遷移直前</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onblur</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">フォーカスが外れた時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onerror</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">Javascriptエラーが発生した時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onfocus</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">フォーカスされた</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onhashchange</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">URLのハッシュが変更</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onload</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ページの読み込みが完了した時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onmessage</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">メッセージを受信</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onoffline</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ネットワークがオンラインからオフラインになった時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ononline</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ネットワークがオフラインからオンラインになった時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onpagehide</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">他のページへの遷移などで元のページが隠された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onpageshow</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ページの読み込みが完了した時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onpopstate</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">履歴が取り出された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onredo</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">やり直す(redo)ボタンが押された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onresize</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ウィンドウのサイズが変更された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onstorage</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ローカルストレージまたはセッションストレージが変更された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onundo</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">やり直す(redo)ボタンが押された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onunload</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">他ページに移動した時</td>
+    </tr>
+</table>
 
 # イベントの発火と伝播
 
