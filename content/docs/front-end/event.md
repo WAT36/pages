@@ -212,6 +212,30 @@ window.onload = function() {
     </tr>
 </table>
 
+## キーボードイベント
+
+キーボードイベントとはキーを押すなど、キーボードの状態が変化した場合に発生するイベントである。
+
+イベントハンドラは以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">onkeydown</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">キーが押された</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onkeypress</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">キーが押して離された</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onkeyup</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">キーが離された</td>
+    </tr>
+</table>
+
 
 # イベントの発火と伝播
 
