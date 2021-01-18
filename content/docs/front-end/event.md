@@ -236,6 +236,75 @@ window.onload = function() {
     </tr>
 </table>
 
+## マウスイベント
+
+マウスイベントはマウスのボタンを押す、ドラッグするなど、マウスの状態が変化した場合に生ずるイベントである。
+
+イベントハンドラは以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">onclick</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ボタンがクリックされた</td>
+    </tr>
+    <tr>
+        <td style="border:none;">oncontextmenu</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">マウスの右ボタンが押された</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ondblclick</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ダブルクリックされた時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ondrag</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ドラッグされた時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ondragend</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ドラッグが終わった時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ondragstart</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ドラッグが始まった時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onmousedown</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ボタンが押された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onmousemove</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">マウスポインタが移動された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onmouseout</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">マウスポインタが要素から外れた時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onmouseover</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">マウスポインタが要素上に入った時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onmousemove</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">マウスポインタが移動された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onscroll</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">スクロールバーを操作した時</td>
+    </tr>
+</table>
+
 
 # イベントの発火と伝播
 
