@@ -306,6 +306,30 @@ window.onload = function() {
 </table>
 
 
+## タッチイベント
+
+タッチイベントは、タッチパネルの画面を触るなど、タッチパネルの状態が変化した場合に発生する。
+
+イベントハンドラを以下に示す。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">ontouchstart</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">指が置かれた時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ontouchmove</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">指がドラッグされた時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ontouchend</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">指が離れた時</td>
+    </tr>
+</table>
+
 # イベントの発火と伝播
 
 今度は以下のような例を考えてみる。
