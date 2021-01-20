@@ -340,7 +340,22 @@ window.onload = function() {
 - ドラッグする要素にドラッグ開始時のハンドラを設定
 - ハンドラにドラッグ(・ドロップ)時の処理を記述
 
+サンプルコードを以下に示す。
 
+html
+
+```html
+<div id="from" draggable="true" ondragstart="dragHandler(event);">
+<p>この要素を下にドラッグして・・</p>
+</div>
+<br>
+<div id="to" ondragover="event.preventDefault();" ondrop="dropHandler(event);">
+<p>ここにドロップしてみよう！</p>
+</div>
+<div>
+<p id="status">まだドラッグ&ドロップされてません</p>
+</div>
+```
 
 # イベントの発火と伝播
 

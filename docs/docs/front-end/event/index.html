@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.1cf538f3888100e98c31185219732fa4afaefa29d0125704e60165028487a19d.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.6c851b0df44ff27ae00306a30616b50e74a3baed03457bc78789a2ab08b3d5e9.js"></script>
 
 
 
@@ -447,6 +447,19 @@ https://github.com/alex-shpak/hugo-book
 <li>ハンドラにドラッグ(・ドロップ)時の処理を記述</li>
 </ul>
 
+<p>サンプルコードを以下に示す。</p>
+
+<p>html</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;from&#34;</span> <span style="color:#a6e22e">draggable</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">ondragstart</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dragHandler(event);&#34;</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;この要素を下にドラッグして・・&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;to&#34;</span> <span style="color:#a6e22e">ondragover</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;event.preventDefault();&#34;</span> <span style="color:#a6e22e">ondrop</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropHandler(event);&#34;</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;ここにドロップしてみよう！&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;status&#34;</span>&gt;まだドラッグ<span style="color:#960050;background-color:#1e0010">&amp;</span>ドロップされてません&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;</code></pre></div>
 <h1 id="イベントの発火と伝播">イベントの発火と伝播</h1>
 
 <p>今度は以下のような例を考えてみる。</p>
@@ -543,7 +556,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/c743aed16240230669d79726f371ade5140b90a9" title='Last modified Jan 20, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/69ae2a02cfae04c56e4d67728dedee7b8d2dd014" title='Last modified Jan 20, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 20, 2021
     </a>
   </div>
