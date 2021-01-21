@@ -342,6 +342,28 @@ window.onload = function() {
 
 サンプルコードを以下に示す。
 
+javascript
+
+```javascript
+function dragHandler(event){
+    //動作結果を表示するオブジェクトを取得
+    var p = document.getElementById("status");
+
+    //ドラッグするデータの識別子をDataTransferオブジェクトにセット
+    event.dataTransfer.setData("text","COIN");
+
+    //動作結果を表示
+    p.innerHTML="ドラッグされました！";
+}
+
+function dropHandler(event){
+    var p = document.getElementById("status");
+    id = event.dataTransfer.getData('text');
+    p.innerHTML = id + ' → ドロップされました！'
+    event.preventDefault();
+}
+```
+
 html
 
 ```html
