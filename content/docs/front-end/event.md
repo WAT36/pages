@@ -379,6 +379,23 @@ html
 </div>
 ```
 
+表示例
+
+<hr>
+<hr>
+<div id="from" draggable="true" ondragstart="dragHandler(event);">
+<p>この要素を下にドラッグして・・</p>
+</div>
+<br>
+<div id="to" ondragover="event.preventDefault();" ondrop="dropHandler(event);">
+<p>ここにドロップしてみよう！</p>
+</div>
+<div>
+<p id="status">まだドラッグ&ドロップされてません</p>
+</div>
+<hr>
+<hr>
+
 # イベントの発火と伝播
 
 今度は以下のような例を考えてみる。
