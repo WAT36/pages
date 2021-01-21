@@ -129,15 +129,6 @@
     
     <item>
       <title>Binary Indexed Tree</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/binary_indexed_tree-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/binary_indexed_tree-2/</guid>
-      <description>Binary Indexed Tree Binary Indexed Tree(BIT)は、セグメント木を応用したデータ構造で、リスト(数列)anが与えられた時、次のことが行える。 iが与えられた時、a</description>
-    </item>
-    
-    <item>
-      <title>Binary Indexed Tree</title>
       <link>https://WAT36.github.io/pages/docs/programming/procon/binary_indexed_tree/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -233,15 +224,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/front-end/css_priority/</guid>
       <description>CSS適用の優先順位 指定元による優先順位 CSSはWebページの製作者だけが指定できるものではなく、閲覧しているユーザも独自に指定でき、また使</description>
-    </item>
-    
-    <item>
-      <title>DOM</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/dom-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/dom-2/</guid>
-      <description>DOM DOMとはDocument Object Modelの略で、HTML(またはXML)の各要素にアクセスするための仕組みである。Javascriptではこ</description>
     </item>
     
     <item>
@@ -431,15 +413,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/front-end/css_animation/</guid>
       <description>CSSのアニメーション CSSで行えるアニメーションについてを述べる。 回転・拡大縮小・移動 ボックスを回転・拡大縮小・移動などさせるプロパティに</description>
-    </item>
-    
-    <item>
-      <title>イベント</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/event-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/event-2/</guid>
-      <description>イベント Javascriptのイベントについてを記す。 イベントとは、ユーザーの画面上での何らかの操作を、プログラム上で検知し、利用できるよう</description>
     </item>
     
     <item>
@@ -719,15 +692,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/neural_network/</guid>
       <description>ニューラルネットワーク ニューラルネットワークとは、人間の神経細胞を模した数理モデルであるニューロンモデルを利用した機械学習のアルゴリズムであ</description>
-    </item>
-    
-    <item>
-      <title>バケット法と平方分割</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/bucket-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/bucket-2/</guid>
-      <description>バケット法と平方分割 まずバケット法とは、列、または平面状に散らばったデータをバケットと呼ばれる単位に分割して、バケットにデータを管理させる方</description>
     </item>
     
     <item>
@@ -1910,15 +1874,6 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
-    </item>
-    
-    <item>
-      <title>Githubで初めてプルリクエストをやったのでその手順を書いておく</title>
-      <link>https://WAT36.github.io/pages/posts/pull_request-2/</link>
-      <pubDate>Sat, 09 Jan 2021 23:21:48 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/posts/pull_request-2/</guid>
-      <description>GitHubにおいて、OSS活動では必須の手順である「プルリクエスト」。 簡単にできるものだと思ってたが、意外とややこしいところもあったりで。</description>
     </item>
     
     <item>

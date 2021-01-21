@@ -393,6 +393,7 @@ html
 <div>
 <p id="status">まだドラッグ&ドロップされてません</p>
 </div>
+<script type="text/javascript" src="/js_sample_pages/event_sample.js"></script>
 <hr>
 <hr>
 
