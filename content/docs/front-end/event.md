@@ -350,7 +350,7 @@ function dragHandler(event){
     var p = document.getElementById("status");
 
     //ドラッグするデータの識別子をDataTransferオブジェクトにセット
-    event.dataTransfer.setData("text","COIN");
+    event.dataTransfer.setData("text","ドラッグされました！");
 
     //動作結果を表示
     p.innerHTML="ドラッグされました！";
@@ -358,8 +358,8 @@ function dragHandler(event){
 
 function dropHandler(event){
     var p = document.getElementById("status");
-    id = event.dataTransfer.getData('text');
-    p.innerHTML = id + ' → ドロップされました！'
+    textdata = event.dataTransfer.getData('text');
+    p.innerHTML = textdata + ' → ドロップされました！'
     event.preventDefault();
 }
 ```
@@ -374,6 +374,7 @@ html
 <div id="to" ondragover="event.preventDefault();" ondrop="dropHandler(event);">
 <p>ここにドロップしてみよう！</p>
 </div>
+<br>
 <div>
 <p id="status">まだドラッグ&ドロップされてません</p>
 </div>
@@ -390,6 +391,7 @@ html
 <div id="to" ondragover="event.preventDefault();" ondrop="dropHandler(event);">
 <p>ここにドロップしてみよう！</p>
 </div>
+<br>
 <div>
 <p id="status">まだドラッグ&ドロップされてません</p>
 </div>
