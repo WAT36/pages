@@ -401,11 +401,58 @@ html
 
 先程の例でもあったように、イベントハンドラでは処理を1つしか定義できない。複数定義するにはどうすれば良いか。
 
-ここで、**addEventListener()**を利用すると、1つnのイベントに複数の処理を登録できる。
+ここで、**addEventListener()**を利用すると、1つのイベントに複数の処理を登録できる。
 
+先述したドラッグ&ドロップの例をイベントリスナで実装してみよう。以下のようになる。
 
+javascript
 
+```javascript
+function dragHandler(event){
+    //動作結果を表示するオブジェクトを取得
+    var p = document.getElementById("status2");
 
+    //ドラッグするデータの識別子をDataTransferオブジェクトにセット
+    event.dataTransfer.setData("text2","ドラッグされました！");
+
+    //動作結果を表示
+    p.innerHTML="ドラッグされました！";
+}
+
+function dropHandler(event){
+    var p = document.getElementById("status2");
+    textdata = event.dataTransfer.getData('text');
+    p.innerHTML = textdata + ' → ドロップされました！'
+    event.preventDefault();
+}
+
+//追加処理、テキストを緑色に変更
+function dropHandler2(event){
+    var p = document.getElementById("status2").style.color = "green";
+}
+
+//イベントリスナを追加する
+function addHandler(){
+    var to = document.getElementById("to2");
+    to.addEventListener("drop",dropHandler2,false)
+}
+```
+
+html
+
+```html
+<div id="from2" draggable="true" ondragstart="dragHandler(event);">
+<p>この要素を下にドラッグして・・</p>
+</div>
+<br>
+<div id="to2" ondragover="event.preventDefault();" ondrop="dropHandler(event);">
+<p>ここにドロップしてみよう！</p>
+</div>
+<br>
+<div>
+<p id="status2">まだドラッグ&ドロップされてません</p>
+</div>
+```
 
 # イベントの発火と伝播
 
