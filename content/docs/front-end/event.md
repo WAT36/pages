@@ -408,44 +408,49 @@ html
 javascript
 
 ```javascript
-function dragHandler(event){
+window.onload = function() {
+    addHandler();
+}
+
+function dragHandler2(event){
     //動作結果を表示するオブジェクトを取得
     var p = document.getElementById("status2");
 
     //ドラッグするデータの識別子をDataTransferオブジェクトにセット
-    event.dataTransfer.setData("text2","ドラッグされました！");
+    event.dataTransfer.setData("text","ドラッグされました！");
 
     //動作結果を表示
     p.innerHTML="ドラッグされました！";
 }
 
-function dropHandler(event){
+function dropHandler2(event){
     var p = document.getElementById("status2");
     textdata = event.dataTransfer.getData('text');
-    p.innerHTML = textdata + ' → ドロップされました！'
+    p.innerHTML = textdata + ' → ドロップされました！';
     event.preventDefault();
 }
 
 //追加処理、テキストを緑色に変更
-function dropHandler2(event){
-    var p = document.getElementById("status2").style.color = "green";
+function dropHandler2_2(event){
+    var p = document.getElementById("status2");
+    p.style.color = 'green';
 }
 
 //イベントリスナを追加する
 function addHandler(){
-    var to = document.getElementById("to2");
-    to.addEventListener("drop",dropHandler2,false)
+    var to2 = document.getElementById("to2");
+    to2.addEventListener("drop",dropHandler2_2,false);
 }
 ```
 
 html
 
 ```html
-<div id="from2" draggable="true" ondragstart="dragHandler(event);">
+<div id="from2" draggable="true" ondragstart="dragHandler2(event);">
 <p>この要素を下にドラッグして・・</p>
 </div>
 <br>
-<div id="to2" ondragover="event.preventDefault();" ondrop="dropHandler(event);">
+<div id="to2" ondragover="event.preventDefault();" ondrop="dropHandler2(event);">
 <p>ここにドロップしてみよう！</p>
 </div>
 <br>
@@ -458,11 +463,11 @@ html
 
 <hr>
 <hr>
-<div id="from2" draggable="true" ondragstart="dragHandler(event);">
+<div id="from2" draggable="true" ondragstart="dragHandler2(event);">
 <p>この要素を下にドラッグして・・</p>
 </div>
 <br>
-<div id="to2" ondragover="event.preventDefault();" ondrop="dropHandler(event);">
+<div id="to2" ondragover="event.preventDefault();" ondrop="dropHandler2(event);">
 <p>ここにドロップしてみよう！</p>
 </div>
 <br>

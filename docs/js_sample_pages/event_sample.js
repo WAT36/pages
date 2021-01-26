@@ -34,6 +34,8 @@ window.onload = function() {
         this.innerText = 'このp要素にカーソルを置くと・・・・　→　青くなる！';
         this.style.color = "blue";
     });
+
+    addHandler();
 };
 
 function dragHandler(event){
@@ -50,6 +52,36 @@ function dragHandler(event){
 function dropHandler(event){
     var p = document.getElementById("status");
     textdata = event.dataTransfer.getData('text');
-    p.innerHTML = textdata + ' → ドロップされました！'
+    p.innerHTML = textdata + ' → ドロップされました！';
     event.preventDefault();
+}
+
+function dragHandler2(event){
+    //動作結果を表示するオブジェクトを取得
+    var p = document.getElementById("status2");
+
+    //ドラッグするデータの識別子をDataTransferオブジェクトにセット
+    event.dataTransfer.setData("text","ドラッグされました！");
+
+    //動作結果を表示
+    p.innerHTML="ドラッグされました！";
+}
+
+function dropHandler2(event){
+    var p = document.getElementById("status2");
+    textdata = event.dataTransfer.getData('text');
+    p.innerHTML = textdata + ' → ドロップされました！';
+    event.preventDefault();
+}
+
+//追加処理、テキストを緑色に変更
+function dropHandler2_2(event){
+    var p = document.getElementById("status2");
+    p.style.color = 'green';
+}
+
+//イベントリスナを追加する
+function addHandler(){
+    var to2 = document.getElementById("to2");
+    to2.addEventListener("drop",dropHandler2_2,false);
 }
