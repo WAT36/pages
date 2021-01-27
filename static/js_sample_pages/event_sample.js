@@ -36,6 +36,26 @@ window.onload = function() {
     });
 
     addHandler();
+
+
+    //イベントリスナ登録(dragHandlerと同じ)
+    document.getElementById("from3").addEventListener('drag',function(){
+        //動作対象のオブジェクトを取得
+        var p = document.getElementById("status3");
+    
+        //ドラッグするデータの識別子をDataTransferオブジェクトにセット
+        //event.dataTransfer.setData("text","ドラッグされました！");
+    
+        //動作結果を表示
+        p.innerHTML="ドラッグされました！";
+    
+    },false);
+    
+    //ドラッグイベントの作成
+    var customEvent = new Event('drag');
+    
+    //イベント発生
+    document.getElementById('from3').dispatchEvent(customEvent);
 };
 
 function dragHandler(event){

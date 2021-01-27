@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.e5f4a1cb739d78d1f55083e6e3323fc4461756890f14e59ac58143074d395446.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.f0289352a2d19bc30997e87263e4bf8d3b337f34a8c883406adae9ab7497db03.js"></script>
 
 
 
@@ -691,13 +691,13 @@ https://github.com/alex-shpak/hugo-book
 <pre><code>要素.dispatchEvent(イベントオブジェクト)
 </code></pre>
 
-<p>例えば先程の例において、カスタムイベントを適用してみよう。下の例では、指定した要素がドラッグされると、テキストが「ドラッグされました」と変わるが、ここではウィンドウがロードされると同時にドラッグイベントが発生するので、ドラッグしなくても処理が実行される。</p>
+<p>例えば先程の例において、カスタムイベントを適用してみよう。下の例では、指定した要素がドラッグされると、テキストが「ドラッグされました」と変わるが、ここではウィンドウがロードされると同時にドラッグイベントが発生するので、ドラッグしなくても処理が実行されるので、自動で「ドラッグされました」に変わる。</p>
 
 <p>javascript</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
     
     <span style="color:#75715e">//イベントリスナ登録(dragHandlerと同じ)
-</span><span style="color:#75715e"></span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;from3&#34;</span>).<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;&#39;</span>,<span style="color:#66d9ef">function</span>(){
+</span><span style="color:#75715e"></span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;from3&#34;</span>).<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;drag&#39;</span>,<span style="color:#66d9ef">function</span>(){
         <span style="color:#75715e">//動作対象のオブジェクトを取得
 </span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;status3&#34;</span>);
 
@@ -713,7 +713,7 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">customEvent</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Event</span>(<span style="color:#e6db74">&#39;drag&#39;</span>);
 
     <span style="color:#75715e">//イベント発生
-</span><span style="color:#75715e"></span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;level1&#39;</span>).<span style="color:#a6e22e">dispatchEvent</span>(<span style="color:#a6e22e">customEvent</span>);
+</span><span style="color:#75715e"></span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;from3&#39;</span>).<span style="color:#a6e22e">dispatchEvent</span>(<span style="color:#a6e22e">customEvent</span>);
 }
 </code></pre></div>
 <p>html</p>
@@ -746,7 +746,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f7f083ecde5b5333ccd60c19a35949b319f48c15" title='Last modified Jan 27, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/1033572cd261573a41752e874f9c6ec29629dade" title='Last modified Jan 27, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 27, 2021
     </a>
   </div>

@@ -608,7 +608,7 @@ window.onload = function() {
 要素.dispatchEvent(イベントオブジェクト)
 ```
 
-例えば先程の例において、カスタムイベントを適用してみよう。下の例では、指定した要素がドラッグされると、テキストが「ドラッグされました」と変わるが、ここではウィンドウがロードされると同時にドラッグイベントが発生するので、ドラッグしなくても処理が実行される。
+例えば先程の例において、カスタムイベントを適用してみよう。下の例では、指定した要素がドラッグされると、テキストが「ドラッグされました」と変わるが、ここではウィンドウがロードされると同時にドラッグイベントが発生するので、ドラッグしなくても処理が実行されるので、自動で「ドラッグされました」に変わる。
 
 javascript
 
@@ -616,7 +616,7 @@ javascript
 window.onload = function() {
     
     //イベントリスナ登録(dragHandlerと同じ)
-    document.getElementById("from3").addEventListener('',function(){
+    document.getElementById("from3").addEventListener('drag',function(){
         //動作対象のオブジェクトを取得
         var p = document.getElementById("status3");
 
@@ -632,7 +632,7 @@ window.onload = function() {
     var customEvent = new Event('drag');
 
     //イベント発生
-    document.getElementById('level1').dispatchEvent(customEvent);
+    document.getElementById('from3').dispatchEvent(customEvent);
 }
 
 ```
