@@ -595,16 +595,71 @@ window.onload = function() {
 
 # カスタムイベント
 
-これまで述べたものではイベントの発生はブラウザ上での特定の操作が行われた時に限られていたが、任意のタイミングでイベントを発生させることもできる。
+これまで述べたものではイベントの発生はブラウザ上での特定の操作が行われた時に限られていたが、任意のタイミングでイベントを発生させることもできる。(テストなどで利用する)
 
 その方法がここで述べる**カスタムイベント**であり、やり方は以下の2つである。
 
 - Eventコンストラクタでイベントオブジェクトを生成
 - イベントリスナを登録した要素オブジェクトのdispatchEvent()でイベントを発生させる
 
-**dispatchEvent()**は、要素に任意にイベントを発生するメソッドである。
+**dispatchEvent()**は、任意にイベントを発生するメソッドである。
 
 ```
 要素.dispatchEvent(イベントオブジェクト)
 ```
+
+例えば先程の例において、カスタムイベントを適用してみよう。下の例では、指定した要素がドラッグされると、テキストが「ドラッグされました」と変わるが、ここではウィンドウがロードされると同時にドラッグイベントが発生するので、ドラッグしなくても処理が実行される。
+
+javascript
+
+```javascript
+window.onload = function() {
+    
+    //イベントリスナ登録(dragHandlerと同じ)
+    document.getElementById("from3").addEventListener('',function(){
+        //動作対象のオブジェクトを取得
+        var p = document.getElementById("status3");
+
+        //ドラッグするデータの識別子をDataTransferオブジェクトにセット
+        event.dataTransfer.setData("text","ドラッグされました！");
+
+        //動作結果を表示
+        p.innerHTML="ドラッグされました！";
+
+    },false);
+
+    //ドラッグイベントの作成
+    var customEvent = new Event('drag');
+
+    //イベント発生
+    document.getElementById('level1').dispatchEvent(customEvent);
+}
+
+```
+
+html
+
+```html
+<div id="from3" draggable="true">
+<p>この要素をドラッグすると・・</p>
+</div>
+<br>
+<div>
+<p id="status3">まだドラッグされてません</p>
+</div>
+```
+
+表示例
+
+<hr>
+<hr>
+<div id="from3" draggable="true">
+<p>この要素をドラッグすると・・</p>
+</div>
+<br>
+<div>
+<p id="status3">まだドラッグされてません</p>
+</div>
+<hr>
+<hr>
 

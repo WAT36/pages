@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.f742b73aa4724abe94a049eaf9c0978085c015f746e3d17b1123d79a848ae449.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.e5f4a1cb739d78d1f55083e6e3323fc4461756890f14e59ac58143074d395446.js"></script>
 
 
 
@@ -677,7 +677,7 @@ https://github.com/alex-shpak/hugo-book
 
 <h1 id="カスタムイベント">カスタムイベント</h1>
 
-<p>これまで述べたものではイベントの発生はブラウザ上での特定の操作が行われた時に限られていたが、任意のタイミングでイベントを発生させることもできる。</p>
+<p>これまで述べたものではイベントの発生はブラウザ上での特定の操作が行われた時に限られていたが、任意のタイミングでイベントを発生させることもできる。(テストなどで利用する)</p>
 
 <p>その方法がここで述べる<strong>カスタムイベント</strong>であり、やり方は以下の2つである。</p>
 
@@ -686,10 +686,59 @@ https://github.com/alex-shpak/hugo-book
 <li>イベントリスナを登録した要素オブジェクトのdispatchEvent()でイベントを発生させる</li>
 </ul>
 
-<p><strong>dispatchEvent()</strong>は、要素に任意にイベントを発生するメソッドである。</p>
+<p><strong>dispatchEvent()</strong>は、任意にイベントを発生するメソッドである。</p>
 
 <pre><code>要素.dispatchEvent(イベントオブジェクト)
 </code></pre>
+
+<p>例えば先程の例において、カスタムイベントを適用してみよう。下の例では、指定した要素がドラッグされると、テキストが「ドラッグされました」と変わるが、ここではウィンドウがロードされると同時にドラッグイベントが発生するので、ドラッグしなくても処理が実行される。</p>
+
+<p>javascript</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+    
+    <span style="color:#75715e">//イベントリスナ登録(dragHandlerと同じ)
+</span><span style="color:#75715e"></span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;from3&#34;</span>).<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;&#39;</span>,<span style="color:#66d9ef">function</span>(){
+        <span style="color:#75715e">//動作対象のオブジェクトを取得
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;status3&#34;</span>);
+
+        <span style="color:#75715e">//ドラッグするデータの識別子をDataTransferオブジェクトにセット
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">dataTransfer</span>.<span style="color:#a6e22e">setData</span>(<span style="color:#e6db74">&#34;text&#34;</span>,<span style="color:#e6db74">&#34;ドラッグされました！&#34;</span>);
+
+        <span style="color:#75715e">//動作結果を表示
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">innerHTML</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ドラッグされました！&#34;</span>;
+
+    },<span style="color:#66d9ef">false</span>);
+
+    <span style="color:#75715e">//ドラッグイベントの作成
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">customEvent</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Event</span>(<span style="color:#e6db74">&#39;drag&#39;</span>);
+
+    <span style="color:#75715e">//イベント発生
+</span><span style="color:#75715e"></span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;level1&#39;</span>).<span style="color:#a6e22e">dispatchEvent</span>(<span style="color:#a6e22e">customEvent</span>);
+}
+</code></pre></div>
+<p>html</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;from3&#34;</span> <span style="color:#a6e22e">draggable</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;この要素をドラッグすると・・&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;status3&#34;</span>&gt;まだドラッグされてません&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;</code></pre></div>
+<p>表示例</p>
+
+<hr>
+
+<hr>
+
+<p><div id="from3" draggable="true">
+<p>この要素をドラッグすると・・</p>
+</div>
+<br>
+<div>
+<p id="status3">まだドラッグされてません</p>
+</div>
+<hr>
+<hr></p>
 </article>
 
       
@@ -697,7 +746,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/3afc0993e8412c0ff10f27206138559bee90936b" title='Last modified Jan 27, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/f7f083ecde5b5333ccd60c19a35949b319f48c15" title='Last modified Jan 27, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 27, 2021
     </a>
   </div>
