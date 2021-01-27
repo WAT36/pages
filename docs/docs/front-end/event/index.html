@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.ec3f5a41276d52dd2f110113e22f3c22dd618f3048c25451af0c622ccec19374.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.f742b73aa4724abe94a049eaf9c0978085c015f746e3d17b1123d79a848ae449.js"></script>
 
 
 
@@ -674,6 +674,22 @@ https://github.com/alex-shpak/hugo-book
 <script type="text/javascript" src="https://WAT36.github.io/pages/js_sample_pages/event_sample.js"></script></p>
 
 <hr />
+
+<h1 id="カスタムイベント">カスタムイベント</h1>
+
+<p>これまで述べたものではイベントの発生はブラウザ上での特定の操作が行われた時に限られていたが、任意のタイミングでイベントを発生させることもできる。</p>
+
+<p>その方法がここで述べる<strong>カスタムイベント</strong>であり、やり方は以下の2つである。</p>
+
+<ul>
+<li>Eventコンストラクタでイベントオブジェクトを生成</li>
+<li>イベントリスナを登録した要素オブジェクトのdispatchEvent()でイベントを発生させる</li>
+</ul>
+
+<p><strong>dispatchEvent()</strong>は、要素に任意にイベントを発生するメソッドである。</p>
+
+<pre><code>要素.dispatchEvent(イベントオブジェクト)
+</code></pre>
 </article>
 
       
@@ -681,8 +697,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/43cbda4c74cfcda5cdb2b740b293c3d4232ff06e" title='Last modified Jan 26, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 26, 2021
+    <a href="https://github.com/alex-shpak/hugo-book/commit/3afc0993e8412c0ff10f27206138559bee90936b" title='Last modified Jan 27, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 27, 2021
     </a>
   </div>
   
@@ -712,6 +728,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#イベントリスナの削除">イベントリスナの削除</a></li>
 </ul></li>
 <li><a href="#イベントの発火と伝播">イベントの発火と伝播</a></li>
+<li><a href="#カスタムイベント">カスタムイベント</a></li>
 </ul>
 </nav>
   </aside>
