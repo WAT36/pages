@@ -30,15 +30,15 @@ Slackアプリのコマンドはスラッシュコマンドと言われる（ス
 
 ページ左側にある「Slash Command」をクリックする。
 
-![Slack App](/img/slackapp_config.png)
+![Slack App](/img/blog/slackapp_config.png)
 
 その後、「Create New Command」をクリックする。
 
-![Slack App](/img/slack_slashcommand.png)
+![Slack App](/img/blog/slack_slashcommand.png)
 
 するとコマンド名、リクエスト先のURL等の入力を求められるので、入力する。
 
-![Slack App](/img/slack_createnewcommand.png)
+![Slack App](/img/blog/slack_createnewcommand.png)
 
 入力後、右下の「Save」を押すとコマンドが作成される。
 
