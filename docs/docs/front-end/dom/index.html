@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.89d6338e565dcddb75ddee8a172d42ca8e84a04566a8ffefe6c4cf330f4c9e56.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.73ead9038d7d11fecdabb3cabe9ed725f60ed403a03c4d9313e86c8bcbec5b5c.js"></script>
 
 
 
@@ -291,6 +291,117 @@ https://github.com/alex-shpak/hugo-book
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//フォームを全て取得
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">forms</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">forms</span>;
 </code></pre></div>
+<h3 id="その他の要素を取得する関数">その他の要素を取得する関数</h3>
+
+<p>その他、DOMの特定の要素を取得するプロパティは以下の通り。</p>
+
+<table style="border:none;">
+    <th>
+        <td style="border:none;">プロパティ名</td>
+        <td style="border:none;">意味</td>
+    </th>
+    <tr>
+        <td style="border:none;">parentNode</td>
+        <td style="border:none;">親(一段上)の要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">previousSibling</td>
+        <td style="border:none;">同じ階層で前にある要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">nextSibling</td>
+        <td style="border:none;">同じ階層で後にある要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">firstChild</td>
+        <td style="border:none;">子(一段下)要素で最初の要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lastChild</td>
+        <td style="border:none;">子(一段下)要素で最後の要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">attributes[]</td>
+        <td style="border:none;">ノードの属性リスト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">childNodes[]</td>
+        <td style="border:none;">子要素のリスト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">className</td>
+        <td style="border:none;">クラス名</td>
+    </tr>
+    <tr>
+        <td style="border:none;">clientWidth</td>
+        <td style="border:none;">要素の幅</td>
+    </tr>
+    <tr>
+        <td style="border:none;">clientHeight</td>
+        <td style="border:none;">要素の高さ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">clientLeft</td>
+        <td style="border:none;">要素の左ボーダーの幅</td>
+    </tr>
+    <tr>
+        <td style="border:none;">clientTop</td>
+        <td style="border:none;">要素の上ボーダーの幅</td>
+    </tr>
+    <tr>
+        <td style="border:none;">dir</td>
+        <td style="border:none;">テキストの方向</td>
+    </tr>
+    <tr>
+        <td style="border:none;">innerHTML</td>
+        <td style="border:none;">ノード内のHTML要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">innerText,textContent</td>
+        <td style="border:none;">ノード内のプレーンテキスト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lang</td>
+        <td style="border:none;">言語</td>
+    </tr>
+    <tr>
+        <td style="border:none;">namespaceURI</td>
+        <td style="border:none;">名前空間のURI</td>
+    </tr>
+    <tr>
+        <td style="border:none;">nodeName</td>
+        <td style="border:none;">ノードの名前</td>
+    </tr>
+    <tr>
+        <td style="border:none;">nodeType</td>
+        <td style="border:none;">ノードの型</td>
+    </tr>
+    <tr>
+        <td style="border:none;">nodeValue</td>
+        <td style="border:none;">ノードの値</td>
+    </tr>
+    <tr>
+        <td style="border:none;">prefix</td>
+        <td style="border:none;">名前空間の識別子</td>
+    </tr>
+    <tr>
+        <td style="border:none;">style</td>
+        <td style="border:none;">要素のstyle属性の宣言オブジェクト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">tagName</td>
+        <td style="border:none;">要素名</td>
+    </tr>
+    <tr>
+        <td style="border:none;">tabIndex</td>
+        <td style="border:none;">要素のタブインデックス番号</td>
+    </tr>
+    <tr>
+        <td style="border:none;">title</td>
+        <td style="border:none;">タイトル属性</td>
+    </tr>
+</table>
+
 <h2 id="domの操作方法">DOMの操作方法</h2>
 
 <p>DOMで取得した要素の操作方法について述べる。</p>
@@ -439,6 +550,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#親要素を取得">親要素を取得</a></li>
 <li><a href="#子要素の取得">子要素の取得</a></li>
 <li><a href="#フォームの取得">フォームの取得</a></li>
+<li><a href="#その他の要素を取得する関数">その他の要素を取得する関数</a></li>
 </ul></li>
 <li><a href="#domの操作方法">DOMの操作方法</a>
 <ul>

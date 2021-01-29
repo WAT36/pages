@@ -204,6 +204,117 @@ document.formsとする事で、HTML文書内のフォームを全て取得で�
 var forms = document.forms;
 ```
 
+### その他の要素を取得する関数
+
+その他、DOMの特定の要素を取得するプロパティは以下の通り。
+
+<table style="border:none;">
+    <th>
+        <td style="border:none;">プロパティ名</td>
+        <td style="border:none;">意味</td>
+    </th>
+    <tr>
+        <td style="border:none;">parentNode</td>
+        <td style="border:none;">親(一段上)の要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">previousSibling</td>
+        <td style="border:none;">同じ階層で前にある要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">nextSibling</td>
+        <td style="border:none;">同じ階層で後にある要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">firstChild</td>
+        <td style="border:none;">子(一段下)要素で最初の要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lastChild</td>
+        <td style="border:none;">子(一段下)要素で最後の要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">attributes[]</td>
+        <td style="border:none;">ノードの属性リスト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">childNodes[]</td>
+        <td style="border:none;">子要素のリスト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">className</td>
+        <td style="border:none;">クラス名</td>
+    </tr>
+    <tr>
+        <td style="border:none;">clientWidth</td>
+        <td style="border:none;">要素の幅</td>
+    </tr>
+    <tr>
+        <td style="border:none;">clientHeight</td>
+        <td style="border:none;">要素の高さ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">clientLeft</td>
+        <td style="border:none;">要素の左ボーダーの幅</td>
+    </tr>
+    <tr>
+        <td style="border:none;">clientTop</td>
+        <td style="border:none;">要素の上ボーダーの幅</td>
+    </tr>
+    <tr>
+        <td style="border:none;">dir</td>
+        <td style="border:none;">テキストの方向</td>
+    </tr>
+    <tr>
+        <td style="border:none;">innerHTML</td>
+        <td style="border:none;">ノード内のHTML要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">innerText,textContent</td>
+        <td style="border:none;">ノード内のプレーンテキスト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lang</td>
+        <td style="border:none;">言語</td>
+    </tr>
+    <tr>
+        <td style="border:none;">namespaceURI</td>
+        <td style="border:none;">名前空間のURI</td>
+    </tr>
+    <tr>
+        <td style="border:none;">nodeName</td>
+        <td style="border:none;">ノードの名前</td>
+    </tr>
+    <tr>
+        <td style="border:none;">nodeType</td>
+        <td style="border:none;">ノードの型</td>
+    </tr>
+    <tr>
+        <td style="border:none;">nodeValue</td>
+        <td style="border:none;">ノードの値</td>
+    </tr>
+    <tr>
+        <td style="border:none;">prefix</td>
+        <td style="border:none;">名前空間の識別子</td>
+    </tr>
+    <tr>
+        <td style="border:none;">style</td>
+        <td style="border:none;">要素のstyle属性の宣言オブジェクト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">tagName</td>
+        <td style="border:none;">要素名</td>
+    </tr>
+    <tr>
+        <td style="border:none;">tabIndex</td>
+        <td style="border:none;">要素のタブインデックス番号</td>
+    </tr>
+    <tr>
+        <td style="border:none;">title</td>
+        <td style="border:none;">タイトル属性</td>
+    </tr>
+</table>
+
 ## DOMの操作方法
 
 DOMで取得した要素の操作方法について述べる。
