@@ -452,3 +452,64 @@ for(var i=0,l=target.length;i<l;i++){
 適用後の画面(スクショ)
 
 <img src="/img/front-end/dom_changed4.png">
+
+
+### その他のDOMを操作するメソッド
+
+その他、DOMを操作するメソッドは以下の通り。
+
+
+<table style="border:none;">
+    <th>
+        <td style="border:none;">メソッド名</td>
+        <td style="border:none;">意味</td>
+    </th>
+    <tr>
+        <td style="border:none;">createElement()</td>
+        <td style="border:none;">要素のノードを作成</td>
+    </tr>
+    <tr>
+        <td style="border:none;">createAttribute()</td>
+        <td style="border:none;">属性のノードを作成</td>
+    </tr>
+    <tr>
+        <td style="border:none;">createTextNode()</td>
+        <td style="border:none;">テキストのノードを作成</td>
+    </tr>
+    <tr>
+        <td style="border:none;">createComment()</td>
+        <td style="border:none;">HTMLのコメントのノードを作成</td>
+    </tr>
+    <tr>
+        <td style="border:none;">createEntryReference()</td>
+        <td style="border:none;">実態を参照するノードを作成</td>
+    </tr>
+    <tr>
+        <td style="border:none;">createProcessingInstruction()</td>
+        <td style="border:none;">処理命令のノードを作成</td>
+    </tr>
+    <tr>
+        <td style="border:none;">appendChild()</td>
+        <td style="border:none;">最後に子要素を追加</td>
+    </tr>
+    <tr>
+        <td style="border:none;">insertBefore()</td>
+        <td style="border:none;">指定したノードの直前に追加</td>
+    </tr>
+    <tr>
+        <td style="border:none;">removeChild()</td>
+        <td style="border:none;">一番後にある子要素を削除</td>
+    </tr>
+    <tr>
+        <td style="border:none;">setAttributeNode()</td>
+        <td style="border:none;">指定された属性ノードを追加</td>
+    </tr>
+    <tr>
+        <td style="border:none;">hasAttribute()</td>
+        <td style="border:none;">指定された属性の有無を返す</td>
+    </tr>
+    <tr>
+        <td style="border:none;">removeAttribute()</td>
+        <td style="border:none;">指定された属性の削除</td>
+    </tr>
+</table>
