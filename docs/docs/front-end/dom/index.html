@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.73ef11e9de0744d4b97197d4e242b9123fc79c182344fd3fe58cf8eeca328471.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.170a8998d5604501f4be7102f011906ce9211f440292d9dbbe703ae4d03fbb29.js"></script>
 
 
 
@@ -283,6 +283,15 @@ https://github.com/alex-shpak/hugo-book
 &lt; undefined
 </code></pre>
 
+<h3 id="要素の情報の取得">要素の情報の取得</h3>
+
+<p>例で示したHTMLにおいて、取得した要素の内部の情報は、<strong>innerText</strong>を使うことで取得できる。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;main&#39;</span>).<span style="color:#a6e22e">firstElementChild</span>;
+
+<span style="color:#75715e">//要素の内部の情報(テキスト)を取得
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">innerText</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">text</span>);
+</code></pre></div>
 <h3 id="フォームの取得">フォームの取得</h3>
 
 <p>HTMLのフォームを取得するには、<strong>forms</strong>を利用する。</p>
@@ -291,18 +300,14 @@ https://github.com/alex-shpak/hugo-book
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//フォームを全て取得
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">forms</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">forms</span>;
 </code></pre></div>
-<h3 id="その他の要素を取得する関数">その他の要素を取得する関数</h3>
+<h3 id="その他の要素を取得するプロパティ">その他の要素を取得するプロパティ</h3>
 
 <p>その他、DOMの特定の要素を取得するプロパティは以下の通り。</p>
 
 <table style="border:none;">
-    <th>
-        <td style="border:none;">プロパティ名</td>
-        <td style="border:none;">意味</td>
-    </th>
     <tr>
-        <td style="border:none;">parentNode</td>
-        <td style="border:none;">親(一段上)の要素</td>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
     </tr>
     <tr>
         <td style="border:none;">previousSibling</td>
@@ -313,20 +318,8 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">同じ階層で後にある要素</td>
     </tr>
     <tr>
-        <td style="border:none;">firstChild</td>
-        <td style="border:none;">子(一段下)要素で最初の要素</td>
-    </tr>
-    <tr>
-        <td style="border:none;">lastChild</td>
-        <td style="border:none;">子(一段下)要素で最後の要素</td>
-    </tr>
-    <tr>
-        <td style="border:none;">attributes[]</td>
+        <td style="border:none;">attributes</td>
         <td style="border:none;">ノードの属性リスト</td>
-    </tr>
-    <tr>
-        <td style="border:none;">childNodes[]</td>
-        <td style="border:none;">子要素のリスト</td>
     </tr>
     <tr>
         <td style="border:none;">className</td>
@@ -406,15 +399,6 @@ https://github.com/alex-shpak/hugo-book
 
 <p>DOMで取得した要素の操作方法について述べる。</p>
 
-<h3 id="要素の情報の取得">要素の情報の取得</h3>
-
-<p>例で示したHTMLにおいて、取得した要素の内部の情報は、<strong>innerText</strong>を使うことで取得できる。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;main&#39;</span>).<span style="color:#a6e22e">firstElementChild</span>;
-
-<span style="color:#75715e">//要素の内部の情報(テキスト)を取得
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">innerText</span>;
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">text</span>);
-</code></pre></div>
 <h3 id="要素の情報の変更">要素の情報の変更</h3>
 
 <p>取得した要素の内部の情報を変更するのも、<strong>innerText</strong>を使うことで行える。</p>
@@ -522,13 +506,9 @@ https://github.com/alex-shpak/hugo-book
 <p>その他、DOMを操作するメソッドは以下の通り。</p>
 
 <table style="border:none;">
-    <th>
-        <td style="border:none;">メソッド名</td>
-        <td style="border:none;">意味</td>
-    </th>
     <tr>
-        <td style="border:none;">createElement()</td>
-        <td style="border:none;">要素のノードを作成</td>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
     </tr>
     <tr>
         <td style="border:none;">createAttribute()</td>
@@ -551,16 +531,8 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">処理命令のノードを作成</td>
     </tr>
     <tr>
-        <td style="border:none;">appendChild()</td>
-        <td style="border:none;">最後に子要素を追加</td>
-    </tr>
-    <tr>
         <td style="border:none;">insertBefore()</td>
         <td style="border:none;">指定したノードの直前に追加</td>
-    </tr>
-    <tr>
-        <td style="border:none;">removeChild()</td>
-        <td style="border:none;">一番後にある子要素を削除</td>
     </tr>
     <tr>
         <td style="border:none;">setAttributeNode()</td>
@@ -582,8 +554,8 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/2b9b10b5261755eae19083f5fc14d139041f9e76" title='Last modified Jan 29, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 29, 2021
+    <a href="https://github.com/alex-shpak/hugo-book/commit/f159e503a56a041e0e4bd882e185ce2cccb09fdb" title='Last modified Jan 30, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 30, 2021
     </a>
   </div>
   
@@ -608,12 +580,12 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#クラス名で取得">クラス名で取得</a></li>
 <li><a href="#親要素を取得">親要素を取得</a></li>
 <li><a href="#子要素の取得">子要素の取得</a></li>
+<li><a href="#要素の情報の取得">要素の情報の取得</a></li>
 <li><a href="#フォームの取得">フォームの取得</a></li>
-<li><a href="#その他の要素を取得する関数">その他の要素を取得する関数</a></li>
+<li><a href="#その他の要素を取得するプロパティ">その他の要素を取得するプロパティ</a></li>
 </ul></li>
 <li><a href="#domの操作方法">DOMの操作方法</a>
 <ul>
-<li><a href="#要素の情報の取得">要素の情報の取得</a></li>
 <li><a href="#要素の情報の変更">要素の情報の変更</a></li>
 <li><a href="#要素の削除">要素の削除</a></li>
 <li><a href="#要素の追加">要素の追加</a></li>

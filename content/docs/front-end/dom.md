@@ -192,6 +192,19 @@ var child = id.childNodes;
 < undefined
 ```
 
+### 要素の情報の取得
+
+例で示したHTMLにおいて、取得した要素の内部の情報は、**innerText**を使うことで取得できる。
+
+```javascript
+var target = document.getElementById('main').firstElementChild;
+
+//要素の内部の情報(テキスト)を取得
+var text = target.innerText;
+console.log(text);
+```
+
+
 
 ### フォームの取得
 
@@ -204,18 +217,14 @@ document.formsとする事で、HTML文書内のフォームを全て取得で�
 var forms = document.forms;
 ```
 
-### その他の要素を取得する関数
+### その他の要素を取得するプロパティ
 
 その他、DOMの特定の要素を取得するプロパティは以下の通り。
 
 <table style="border:none;">
-    <th>
-        <td style="border:none;">プロパティ名</td>
-        <td style="border:none;">意味</td>
-    </th>
     <tr>
-        <td style="border:none;">parentNode</td>
-        <td style="border:none;">親(一段上)の要素</td>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
     </tr>
     <tr>
         <td style="border:none;">previousSibling</td>
@@ -226,20 +235,8 @@ var forms = document.forms;
         <td style="border:none;">同じ階層で後にある要素</td>
     </tr>
     <tr>
-        <td style="border:none;">firstChild</td>
-        <td style="border:none;">子(一段下)要素で最初の要素</td>
-    </tr>
-    <tr>
-        <td style="border:none;">lastChild</td>
-        <td style="border:none;">子(一段下)要素で最後の要素</td>
-    </tr>
-    <tr>
-        <td style="border:none;">attributes[]</td>
+        <td style="border:none;">attributes</td>
         <td style="border:none;">ノードの属性リスト</td>
-    </tr>
-    <tr>
-        <td style="border:none;">childNodes[]</td>
-        <td style="border:none;">子要素のリスト</td>
     </tr>
     <tr>
         <td style="border:none;">className</td>
@@ -318,18 +315,6 @@ var forms = document.forms;
 ## DOMの操作方法
 
 DOMで取得した要素の操作方法について述べる。
-
-### 要素の情報の取得
-
-例で示したHTMLにおいて、取得した要素の内部の情報は、**innerText**を使うことで取得できる。
-
-```javascript
-var target = document.getElementById('main').firstElementChild;
-
-//要素の内部の情報(テキスト)を取得
-var text = target.innerText;
-console.log(text);
-```
 
 ### 要素の情報の変更
 
@@ -460,13 +445,9 @@ for(var i=0,l=target.length;i<l;i++){
 
 
 <table style="border:none;">
-    <th>
-        <td style="border:none;">メソッド名</td>
-        <td style="border:none;">意味</td>
-    </th>
     <tr>
-        <td style="border:none;">createElement()</td>
-        <td style="border:none;">要素のノードを作成</td>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
     </tr>
     <tr>
         <td style="border:none;">createAttribute()</td>
@@ -489,16 +470,8 @@ for(var i=0,l=target.length;i<l;i++){
         <td style="border:none;">処理命令のノードを作成</td>
     </tr>
     <tr>
-        <td style="border:none;">appendChild()</td>
-        <td style="border:none;">最後に子要素を追加</td>
-    </tr>
-    <tr>
         <td style="border:none;">insertBefore()</td>
         <td style="border:none;">指定したノードの直前に追加</td>
-    </tr>
-    <tr>
-        <td style="border:none;">removeChild()</td>
-        <td style="border:none;">一番後にある子要素を削除</td>
     </tr>
     <tr>
         <td style="border:none;">setAttributeNode()</td>
