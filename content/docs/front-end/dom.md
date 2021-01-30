@@ -11,7 +11,7 @@ DOMとはDocument Object Modelの略で、HTML(またはXML)の各要素にア�
 
 ## DOMツリー
 
-DOMツリーとは、HTMLやXMLの内容をツリー状に表現したものである。
+DOMツリーとは、HTMLやXMLの構成をツリー状に表現したものである。
 
 例えば、以下のようなHTMLがあったとする。
 
