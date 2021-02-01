@@ -371,15 +371,6 @@
     </item>
     
     <item>
-      <title>Window</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/window/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/window/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>x,y軸の表示範囲を指定する</title>
       <link>https://WAT36.github.io/pages/docs/programming/graph/lim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -431,6 +422,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/front-end/event/</guid>
       <description>イベント Javascriptのイベントについてを記す。 イベントとは、ユーザーの画面上での何らかの操作を、プログラム上で検知し、利用できるよう</description>
+    </item>
+    
+    <item>
+      <title>ウィンドウ</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/window/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/window/</guid>
+      <description>ウィンドウ ウィンドウオブジェクトとは、ブラウザ上の各ウィンドウを示すオブジェクトである。このオブジェクトには様々なプロパティ、メソッドなどを</description>
     </item>
     
     <item>
