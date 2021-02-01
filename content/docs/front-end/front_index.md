@@ -40,4 +40,5 @@ bookToc: false
 - Javascript
  - [DOM]({{< relref "/docs/front-end/dom.md" >}})
  - [イベント]({{< relref "/docs/front-end/event.md" >}})
+ - [ウィンドウ]({{< relref "/docs/front-end/window.md" >}})
 
