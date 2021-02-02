@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
 
 
-<script defer src="https://WAT36.github.io/pages/search.min.52eaf330ed494d929bda742cfd2a5f0273894a2bfb36340f33d09a7dc9d97fbe.js"></script>
+<script defer src="https://WAT36.github.io/pages/search.min.bc48a4bfa0a926d3b722596a8c5a0129279b34426ac832bc94c98a7602039967.js"></script>
 
 
 
@@ -174,6 +174,47 @@ https://github.com/alex-shpak/hugo-book
     </tr>
 
 </table>
+
+<p>例えばウィンドウの縦横の長さを表示するプログラムを作ってみる。</p>
+
+<p>javascript</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">h</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;height&#39;</span>);
+    <span style="color:#a6e22e">h</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">innerHeight</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;px&#39;</span>;
+
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;length&#39;</span>);
+    <span style="color:#a6e22e">l</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">innerWidth</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;px&#39;</span>;
+
+};
+
+window.<span style="color:#a6e22e">onresize</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">h</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;height&#39;</span>);
+    <span style="color:#a6e22e">h</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">innerHeight</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;px&#39;</span>;
+
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;length&#39;</span>);
+    <span style="color:#a6e22e">l</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">innerWidth</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;px&#39;</span>;
+};
+</code></pre></div>
+<p>html</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span>&gt;ウィンドウの高さ&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;height&#34;</span>&gt;x px&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">div</span>&gt;ウィンドウの幅&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;length&#34;</span>&gt;x px&lt;/<span style="color:#f92672">div</span>&gt;</code></pre></div>
+<p>表示例</p>
+
+<hr>
+
+<hr>
+
+<p><div>ウィンドウの高さ</div>
+<div id="height">x px</div>
+<br>
+<div>ウィンドウの幅</div>
+<div id="length">x px</div>
+<script type="text/javascript" src="https://WAT36.github.io/pages/js_sample_pages/window_sample.js"></script>
+<hr>
+<hr></p>
 </article>
 
       
@@ -181,7 +222,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div>
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/c16a6ad0ac58652261d24a71725d311c14d4f10d" title='Last modified Feb 1, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+    <a href="https://github.com/alex-shpak/hugo-book/commit/3fcf78bc85fb4bb12cff2f605a2bb62d00b8ec80" title='Last modified Feb 1, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Feb 1, 2021
     </a>
   </div>
