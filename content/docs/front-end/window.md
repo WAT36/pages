@@ -108,3 +108,10 @@ html
 <script type="text/javascript" src="/js_sample_pages/window_sample.js"></script>
 <hr>
 <hr>
+
+
+# 主なメソッド
+
+ウィンドウオブジェクトの主なメソッドは以下の通り。
+
+
