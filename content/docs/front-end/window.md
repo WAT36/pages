@@ -115,3 +115,70 @@ html
 ウィンドウオブジェクトの主なメソッドは以下の通り。
 
 
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">alert()</td>
+        <td style="border:none;">引数に指定したメッセージを警告ダイアログに出力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">blur()</td>
+        <td style="border:none;">ウィンドウからフォーカスを外す</td>
+    </tr>
+    <tr>
+        <td style="border:none;">close()</td>
+        <td style="border:none;">ウィンドウを閉じる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">confirm()</td>
+        <td style="border:none;">パラメータに指定されたメッセージを確認ダイアログに出力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">createPopup()</td>
+        <td style="border:none;">ポップアップウィンドウを作成</td>
+    </tr>
+    <tr>
+        <td style="border:none;">focus()</td>
+        <td style="border:none;">ウィンドウをフォーカスする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">moveBy()</td>
+        <td style="border:none;">現在位置からウィンドウを移動（相対指定）</td>
+    </tr>
+    <tr>
+        <td style="border:none;">moveTo()</td>
+        <td style="border:none;">ウィンドウを移動する（絶対指定）</td>
+    </tr>
+    <tr>
+        <td style="border:none;">open()</td>
+        <td style="border:none;">ウィンドウを作成</td>
+    </tr>
+    <tr>
+        <td style="border:none;">resizeBy()</td>
+        <td style="border:none;">現在のウィンドウサイズを変更（相対指定）</td>
+    </tr>
+    <tr>
+        <td style="border:none;">resizeTo()</td>
+        <td style="border:none;">現在のウィンドウサイズを変更（絶対指定）</td>
+    </tr>
+    <tr>
+        <td style="border:none;">scrollBy()</td>
+        <td style="border:none;">ウィンドウをスクロール（相対指定）</td>
+    </tr>
+    <tr>
+        <td style="border:none;">scrollTo()</td>
+        <td style="border:none;">ウィンドウをスクロール（絶対指定）</td>
+    </tr>
+    <tr>
+        <td style="border:none;">setInterval()</td>
+        <td style="border:none;">指定した処理を定期的に実行</td>
+    </tr>
+    <tr>
+        <td style="border:none;">setTimeout()</td>
+        <td style="border:none;">指定した処理を指定時間後に一度実行する</td>
+    </tr>
+
+</table>
