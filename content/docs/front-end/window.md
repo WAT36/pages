@@ -189,3 +189,37 @@ html
 先述のメソッドのうち、**setInterval()**と**setTimeout()**は指定時間後に実行するメソッドである。
 
 以下に、その一例を示す。
+
+javascript
+
+```javascript
+window.onload = function() {
+    var t = document.getElementById('time');
+    var interval = window.setInterval(
+        function() {
+            var nowDate = new Date();
+            t.innerHTML = nowDate.toLocaleTimeString();
+        }
+        ,1000
+    );
+};
+```
+
+html
+
+```html
+<p>現在時刻</p>
+<p id="time">XX:XX:XX</p>
+```
+
+表示例
+
+<hr>
+<hr>
+<p>現在時刻</p>
+<p id="time">XX:XX:XX</p>
+<script type="text/javascript" src="/js_sample_pages/window_sample.js"></script>
+<hr>
+<hr>
+
+これは、１秒毎に現在時刻を取得して更新するプログラムである。１秒毎に現在時刻を取得する仕組みをタイマー処理(setInterval)で表現している。

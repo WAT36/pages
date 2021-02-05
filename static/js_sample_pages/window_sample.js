@@ -4,6 +4,15 @@ window.onload = function() {
 
     var l = document.getElementById('length');
     l.innerText = window.innerWidth + 'px';
+
+    var t = document.getElementById('time');
+    var interval = window.setInterval(
+        function() {
+            var nowDate = new Date();
+            t.innerHTML = nowDate.toLocaleTimeString();
+        }
+        ,1000
+    );
 };
 
 window.onresize = function() {
