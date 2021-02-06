@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DOM # DOMとはDocument Object Modelの略で、HTML(またはXML)の各要素にアクセスするための仕組みである。Javascriptでは">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="DOM" />
+<meta property="og:description" content="DOM # DOMとはDocument Object Modelの略で、HTML(またはXML)の各要素にアクセスするための仕組みである。Javascriptでは" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/dom/" />
+<meta property="article:modified_time" content="2021-01-31T00:05:58+09:00" />
 <title>DOM | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.471b86456e1ab598448a262e7ccbf98480e2cffe0560a410bc367f17a8128db8.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2f front-end\2f dom\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,37 +102,83 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>DOM</strong>
-</header>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#domツリー">DOMツリー</a></li>
+    <li><a href="#要素の取得方法">要素の取得方法</a>
+      <ul>
+        <li><a href="#id名で取得">ID名で取得</a></li>
+        <li><a href="#タグ名での取得">タグ名での取得</a></li>
+        <li><a href="#クラス名で取得">クラス名で取得</a></li>
+        <li><a href="#親要素を取得">親要素を取得</a></li>
+        <li><a href="#子要素の取得">子要素の取得</a></li>
+        <li><a href="#要素の情報の取得">要素の情報の取得</a></li>
+        <li><a href="#フォームの取得">フォームの取得</a></li>
+        <li><a href="#その他の要素を取得するプロパティ">その他の要素を取得するプロパティ</a></li>
+      </ul>
+    </li>
+    <li><a href="#domの操作方法">DOMの操作方法</a>
+      <ul>
+        <li><a href="#要素の情報の変更">要素の情報の変更</a></li>
+        <li><a href="#要素の削除">要素の削除</a></li>
+        <li><a href="#要素の追加">要素の追加</a></li>
+        <li><a href="#セレクタapi">セレクタAPI</a></li>
+        <li><a href="#その他のdomを操作するメソッド">その他のDOMを操作するメソッド</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="dom">DOM</h1>
-
+      
+  <article class="markdown"><h1 id="dom">
+  DOM
+  <a class="anchor" href="#dom">#</a>
+</h1>
 <p>DOMとはDocument Object Modelの略で、HTML(またはXML)の各要素にアクセスするための仕組みである。Javascriptではこれを用いて、HTMLを操作することが可能になる。</p>
-
-<h2 id="domツリー">DOMツリー</h2>
-
+<h2 id="domツリー">
+  DOMツリー
+  <a class="anchor" href="#dom%e3%83%84%e3%83%aa%e3%83%bc">#</a>
+</h2>
 <p>DOMツリーとは、HTMLやXMLの構成をツリー状に表現したものである。</p>
-
 <p>例えば、以下のようなHTMLがあったとする。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#f92672">html</span>&gt;
@@ -144,32 +196,27 @@ https://github.com/alex-shpak/hugo-book
     &lt;/<span style="color:#f92672">div</span>&gt;
 &lt;/<span style="color:#f92672">body</span>&gt;
 
-&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
-<p>表示例</p>
-
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>表示例</p>
 <hr>
-
-<p><iframe width="400" height="300" src="https://WAT36.github.io/pages/js_sample_pages/dom_sample.html">
+<iframe width="400" height="300" src="https://WAT36.github.io/pages/js_sample_pages/dom_sample.html">
 </iframe>
-<hr></p>
-
+<hr>
 <p>これをDOMツリーで書き表すと以下のようになる。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/front-end/dom.png" width=100%></p>
-
+<img src="https://WAT36.github.io/pages/img/front-end/dom.png" width=100%>
 <p>また、このDOMツリー内の各要素を<strong>ノード</strong>と言う。</p>
-
-<h2 id="要素の取得方法">要素の取得方法</h2>
-
+<h2 id="要素の取得方法">
+  要素の取得方法
+  <a class="anchor" href="#%e8%a6%81%e7%b4%a0%e3%81%ae%e5%8f%96%e5%be%97%e6%96%b9%e6%b3%95">#</a>
+</h2>
 <p>では、JavascriptからこのDOMをどのように操作するのか？まずは、このノード(要素)を取得する方法についてを述べる。</p>
-
-<h3 id="id名で取得">ID名で取得</h3>
-
+<h3 id="id名で取得">
+  ID名で取得
+  <a class="anchor" href="#id%e5%90%8d%e3%81%a7%e5%8f%96%e5%be%97">#</a>
+</h3>
 <p>Javascriptから、要素のID名を使ってノードを取得する方法は以下の通り。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;ID名&#39;</span>)
-</code></pre></div>
-<p>実際に実行してみよう。先程のサンプルページをブラウザで開き、Javascriptコンソールを起動して入力・適用すると以下のようになる。</p>
-
+</code></pre></div><p>実際に実行してみよう。先程のサンプルページをブラウザで開き、Javascriptコンソールを起動して入力・適用すると以下のようになる。</p>
 <pre><code>&gt; var main = document.getElementById('main')
 &lt; undefined
 &gt; console.log(main)
@@ -178,17 +225,14 @@ https://github.com/alex-shpak/hugo-book
 &lt;p&gt;World!&lt;/p&gt;
 &lt;/div&gt;
 &lt; undefined
-</code></pre>
-
-<p>最後のconsole.logにおいて、idが&rsquo;main&rsquo;の要素を取得し表示している。</p>
-
-<h3 id="タグ名での取得">タグ名での取得</h3>
-
+</code></pre><p>最後のconsole.logにおいて、idが&rsquo;main&rsquo;の要素を取得し表示している。</p>
+<h3 id="タグ名での取得">
+  タグ名での取得
+  <a class="anchor" href="#%e3%82%bf%e3%82%b0%e5%90%8d%e3%81%a7%e3%81%ae%e5%8f%96%e5%be%97">#</a>
+</h3>
 <p>タグ名での取得は以下の通り。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">document.<span style="color:#a6e22e">getElementsByTagName</span>(<span style="color:#e6db74">&#39;タグ名&#39;</span>);
-</code></pre></div>
-<p>同様に、先程記載した例のHTMLに適用すると以下のようになり、p要素を取得している。</p>
-
+</code></pre></div><p>同様に、先程記載した例のHTMLに適用すると以下のようになり、p要素を取得している。</p>
 <pre><code>&gt; var p = document.getElementsByTagName('p');
 &lt; undefined
 &gt; console.log(p)
@@ -199,26 +243,24 @@ https://github.com/alex-shpak/hugo-book
 &lt;p&gt;World!&lt;/p&gt;
 
 &lt; undefined
-</code></pre>
-
-<h3 id="クラス名で取得">クラス名で取得</h3>
-
+</code></pre><h3 id="クラス名で取得">
+  クラス名で取得
+  <a class="anchor" href="#%e3%82%af%e3%83%a9%e3%82%b9%e5%90%8d%e3%81%a7%e5%8f%96%e5%be%97">#</a>
+</h3>
 <p>同様に、要素のクラス名を使ってノードを取得する方法は以下の通り。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#39;クラス名&#39;</span>);
-</code></pre></div>
-<h3 id="親要素を取得">親要素を取得</h3>
-
+</code></pre></div><h3 id="親要素を取得">
+  親要素を取得
+  <a class="anchor" href="#%e8%a6%aa%e8%a6%81%e7%b4%a0%e3%82%92%e5%8f%96%e5%be%97">#</a>
+</h3>
 <p>Javascriptで取得したノードの親要素を取得するには、<strong>parentNode</strong>を使用する。</p>
-
 <p>先程の&rsquo;ID名で取得&rsquo;で取得したノードの親要素を取得する例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//ID名で取得
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;ID名&#39;</span>);
 
 <span style="color:#75715e">//親要素の取得
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">parent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">id</span>.<span style="color:#a6e22e">parentNode</span>;
-</code></pre></div>
-<p>使用例</p>
-
+</code></pre></div><p>使用例</p>
 <pre><code>&gt; var id = document.getElementById('main')
 &lt; undefined
 &gt; var parent = id.parentNode
@@ -233,12 +275,11 @@ https://github.com/alex-shpak/hugo-book
 &lt;/body&gt;
 
 &lt; undefined
-</code></pre>
-
-<h3 id="子要素の取得">子要素の取得</h3>
-
+</code></pre><h3 id="子要素の取得">
+  子要素の取得
+  <a class="anchor" href="#%e5%ad%90%e8%a6%81%e7%b4%a0%e3%81%ae%e5%8f%96%e5%be%97">#</a>
+</h3>
 <p>子要素を取得する方法はいくつかある。</p>
-
 <p>子要素のうち最初の要素を取得するには<strong>firstChild</strong>、最後の要素は<strong>lastChild</strong>、子要素を全て配列として取得するには<strong>childNodes</strong>を利用する。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//例、ID名で取得
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;ID名&#39;</span>);
@@ -251,9 +292,7 @@ https://github.com/alex-shpak/hugo-book
 
 <span style="color:#75715e">//子要素を全て配列として取得
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">child</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">id</span>.<span style="color:#a6e22e">childNodes</span>;
-</code></pre></div>
-<p>使用例</p>
-
+</code></pre></div><p>使用例</p>
 <pre><code>&gt; var id = document.getElementById('main');
 &lt; undefined
 &gt; var first = id.firstChild;
@@ -281,29 +320,29 @@ https://github.com/alex-shpak/hugo-book
 4 #text &quot; &quot;
 
 &lt; undefined
-</code></pre>
-
-<h3 id="要素の情報の取得">要素の情報の取得</h3>
-
+</code></pre><h3 id="要素の情報の取得">
+  要素の情報の取得
+  <a class="anchor" href="#%e8%a6%81%e7%b4%a0%e3%81%ae%e6%83%85%e5%a0%b1%e3%81%ae%e5%8f%96%e5%be%97">#</a>
+</h3>
 <p>例で示したHTMLにおいて、取得した要素の内部の情報は、<strong>innerText</strong>を使うことで取得できる。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;main&#39;</span>).<span style="color:#a6e22e">firstElementChild</span>;
 
 <span style="color:#75715e">//要素の内部の情報(テキスト)を取得
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">innerText</span>;
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">text</span>);
-</code></pre></div>
-<h3 id="フォームの取得">フォームの取得</h3>
-
+</code></pre></div><h3 id="フォームの取得">
+  フォームの取得
+  <a class="anchor" href="#%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%e3%81%ae%e5%8f%96%e5%be%97">#</a>
+</h3>
 <p>HTMLのフォームを取得するには、<strong>forms</strong>を利用する。</p>
-
 <p>document.formsとする事で、HTML文書内のフォームを全て取得できる。フォームが複数あった場合は、配列として取得できる。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//フォームを全て取得
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">forms</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">forms</span>;
-</code></pre></div>
-<h3 id="その他の要素を取得するプロパティ">その他の要素を取得するプロパティ</h3>
-
+</code></pre></div><h3 id="その他の要素を取得するプロパティ">
+  その他の要素を取得するプロパティ
+  <a class="anchor" href="#%e3%81%9d%e3%81%ae%e4%bb%96%e3%81%ae%e8%a6%81%e7%b4%a0%e3%82%92%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h3>
 <p>その他、DOMの特定の要素を取得するプロパティは以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <th style="border:none;">プロパティ名</td>
@@ -394,63 +433,52 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">タイトル属性</td>
     </tr>
 </table>
-
-<h2 id="domの操作方法">DOMの操作方法</h2>
-
+<h2 id="domの操作方法">
+  DOMの操作方法
+  <a class="anchor" href="#dom%e3%81%ae%e6%93%8d%e4%bd%9c%e6%96%b9%e6%b3%95">#</a>
+</h2>
 <p>DOMで取得した要素の操作方法について述べる。</p>
-
-<h3 id="要素の情報の変更">要素の情報の変更</h3>
-
+<h3 id="要素の情報の変更">
+  要素の情報の変更
+  <a class="anchor" href="#%e8%a6%81%e7%b4%a0%e3%81%ae%e6%83%85%e5%a0%b1%e3%81%ae%e5%a4%89%e6%9b%b4">#</a>
+</h3>
 <p>取得した要素の内部の情報を変更するのも、<strong>innerText</strong>を使うことで行える。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;main&#39;</span>).<span style="color:#a6e22e">firstElementChild</span>;
 
 <span style="color:#75715e">//要素の内部の情報(テキスト)を変更する
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;テキストを変更しました&#39;</span>;
-</code></pre></div>
-<p>使用例</p>
-
+</code></pre></div><p>使用例</p>
 <pre><code>&gt; var target = document.getElementById('main').firstElementChild;
 &lt; undefined
 &gt; target.innerText = 'テキストが変更されました'
 &lt; &quot;テキストが変更されました&quot;
-</code></pre>
-
-<p>適用後の画面(スクショ)</p>
-
-<p><img src="https://WAT36.github.io/pages/img/front-end/dom_changed.png"></p>
-
-<h3 id="要素の削除">要素の削除</h3>
-
-<p>取得した要素を削除したいときは<strong>removeChild()</strong>メソッドを利用する。</p>
-
+</code></pre><p>適用後の画面(スクショ)</p>
+<img src="https://WAT36.github.io/pages/img/front-end/dom_changed.png">
+<h3 id="要素の削除">
+  要素の削除
+  <a class="anchor" href="#%e8%a6%81%e7%b4%a0%e3%81%ae%e5%89%8a%e9%99%a4">#</a>
+</h3>
+<p>取得した要素を削除したいときは**removeChild()**メソッドを利用する。</p>
 <p>ただし、removeChild()メソッドは、その名の通り消したい要素の親要素で利用する。消したい要素から呼び出すのではないので注意。</p>
-
 <p>親要素を呼び出したい時は、<strong>parentNode</strong>を利用する。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;main&#39;</span>).<span style="color:#a6e22e">firstElementChild</span>;
 
 <span style="color:#75715e">//要素を削除する
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">parentNode</span>.<span style="color:#a6e22e">removeChild</span>(<span style="color:#a6e22e">target</span>);
-</code></pre></div>
-<p>使用例</p>
-
+</code></pre></div><p>使用例</p>
 <pre><code>&gt; var target = document.getElementById('main').firstElementChild;
 &lt; undefined
 &gt; target.parentNode.removeChild(target);
 &lt; &lt;p&gt;Hello!&lt;/p&gt;
-</code></pre>
-
-<p>適用後の画面(スクショ)</p>
-
-<p><img src="https://WAT36.github.io/pages/img/front-end/dom_changed2.png"></p>
-
-<h3 id="要素の追加">要素の追加</h3>
-
+</code></pre><p>適用後の画面(スクショ)</p>
+<img src="https://WAT36.github.io/pages/img/front-end/dom_changed2.png">
+<h3 id="要素の追加">
+  要素の追加
+  <a class="anchor" href="#%e8%a6%81%e7%b4%a0%e3%81%ae%e8%bf%bd%e5%8a%a0">#</a>
+</h3>
 <p>要素を追加したい時は、<u>要素の作成</u>と<u>要素の挿入</u>の２ステップが必要になる。</p>
-
-<p>要素の作成には、<strong>createElement(&lsquo;タグ名&rsquo;)</strong>を利用する。</p>
-
-<p>その後、要素を挿入するには<strong>appendChild(子要素)</strong>を利用する。</p>
-
+<p>要素の作成には、**createElement(&lsquo;タグ名&rsquo;)**を利用する。</p>
+<p>その後、要素を挿入するには**appendChild(子要素)**を利用する。</p>
 <p>このメソッドは、その名の通り、呼び出した要素の子要素を追加するメソッドである。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;p&#39;</span>);
 <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;追加された要素&#39;</span>;
@@ -458,9 +486,7 @@ https://github.com/alex-shpak/hugo-book
 <span style="color:#75715e">//要素を挿入する
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;main&#39;</span>);
 <span style="color:#a6e22e">main</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">target</span>);
-</code></pre></div>
-<p>使用例</p>
-
+</code></pre></div><p>使用例</p>
 <pre><code>&gt; var target = document.createElement('p');
 &lt; undefined
 &gt; target.innerText = '追加された要素';
@@ -469,42 +495,34 @@ https://github.com/alex-shpak/hugo-book
 &lt; undefined
 &gt; main.appendChild(target);
 &lt; &lt;p&gt;追加された要素&lt;/p&gt;
-</code></pre>
-
-<p>適用後の画面(スクショ)</p>
-
-<p><img src="https://WAT36.github.io/pages/img/front-end/dom_changed3.png"></p>
-
-<h3 id="セレクタapi">セレクタAPI</h3>
-
+</code></pre><p>適用後の画面(スクショ)</p>
+<img src="https://WAT36.github.io/pages/img/front-end/dom_changed3.png">
+<h3 id="セレクタapi">
+  セレクタAPI
+  <a class="anchor" href="#%e3%82%bb%e3%83%ac%e3%82%af%e3%82%bfapi">#</a>
+</h3>
 <p>セレクタAPIと言うメソッドを使って要素を取得する方法がある。</p>
-
-<p>例としては、<strong>querySelectorAll()</strong>メソッドを使う。引数にセレクタを入力すると、その要素を全て取得する。</p>
+<p>例としては、**querySelectorAll()**メソッドを使う。引数にセレクタを入力すると、その要素を全て取得する。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;p&#39;</span>);
 
 <span style="color:#75715e">//要素を挿入する
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,<span style="color:#a6e22e">l</span><span style="color:#f92672">=</span><span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">length</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">l</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
     <span style="color:#a6e22e">target</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>;
 }
-</code></pre></div>
-<p>使用例</p>
-
+</code></pre></div><p>使用例</p>
 <pre><code>&gt; var target = document.querySelectorAll('p');
 &lt; undefined
 &gt; for(var i=0,l=target.length;i&lt;l;i++){
     target[i].style.color='red';
 }
 &lt; &quot;red&quot;
-</code></pre>
-
-<p>適用後の画面(スクショ)</p>
-
-<p><img src="https://WAT36.github.io/pages/img/front-end/dom_changed4.png"></p>
-
-<h3 id="その他のdomを操作するメソッド">その他のDOMを操作するメソッド</h3>
-
+</code></pre><p>適用後の画面(スクショ)</p>
+<img src="https://WAT36.github.io/pages/img/front-end/dom_changed4.png">
+<h3 id="その他のdomを操作するメソッド">
+  その他のDOMを操作するメソッド
+  <a class="anchor" href="#%e3%81%9d%e3%81%ae%e4%bb%96%e3%81%aedom%e3%82%92%e6%93%8d%e4%bd%9c%e3%81%99%e3%82%8b%e3%83%a1%e3%82%bd%e3%83%83%e3%83%89">#</a>
+</h3>
 <p>その他、DOMを操作するメソッドは以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <th style="border:none;">メソッド名</td>
@@ -546,74 +564,100 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">removeAttribute()</td>
         <td style="border:none;">指定された属性の削除</td>
     </tr>
-</table>
-</article>
-
+</table></article>
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/206e3906443769f3ece27d631a1d8aaf14ff8810" title='Last modified Jan 31, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 31, 2021
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/206e3906443769f3ece27d631a1d8aaf14ff8810" title='Last modified by Wataru Tsukagoshi | Jan 31, 2021' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jan 31, 2021</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/dom.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#dom">DOM</a>
-<ul>
-<li><a href="#domツリー">DOMツリー</a></li>
-<li><a href="#要素の取得方法">要素の取得方法</a>
-<ul>
-<li><a href="#id名で取得">ID名で取得</a></li>
-<li><a href="#タグ名での取得">タグ名での取得</a></li>
-<li><a href="#クラス名で取得">クラス名で取得</a></li>
-<li><a href="#親要素を取得">親要素を取得</a></li>
-<li><a href="#子要素の取得">子要素の取得</a></li>
-<li><a href="#要素の情報の取得">要素の情報の取得</a></li>
-<li><a href="#フォームの取得">フォームの取得</a></li>
-<li><a href="#その他の要素を取得するプロパティ">その他の要素を取得するプロパティ</a></li>
-</ul></li>
-<li><a href="#domの操作方法">DOMの操作方法</a>
-<ul>
-<li><a href="#要素の情報の変更">要素の情報の変更</a></li>
-<li><a href="#要素の削除">要素の削除</a></li>
-<li><a href="#要素の追加">要素の追加</a></li>
-<li><a href="#セレクタapi">セレクタAPI</a></li>
-<li><a href="#その他のdomを操作するメソッド">その他のDOMを操作するメソッド</a></li>
-</ul></li>
-</ul></li>
-</ul>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#domツリー">DOMツリー</a></li>
+    <li><a href="#要素の取得方法">要素の取得方法</a>
+      <ul>
+        <li><a href="#id名で取得">ID名で取得</a></li>
+        <li><a href="#タグ名での取得">タグ名での取得</a></li>
+        <li><a href="#クラス名で取得">クラス名で取得</a></li>
+        <li><a href="#親要素を取得">親要素を取得</a></li>
+        <li><a href="#子要素の取得">子要素の取得</a></li>
+        <li><a href="#要素の情報の取得">要素の情報の取得</a></li>
+        <li><a href="#フォームの取得">フォームの取得</a></li>
+        <li><a href="#その他の要素を取得するプロパティ">その他の要素を取得するプロパティ</a></li>
+      </ul>
+    </li>
+    <li><a href="#domの操作方法">DOMの操作方法</a>
+      <ul>
+        <li><a href="#要素の情報の変更">要素の情報の変更</a></li>
+        <li><a href="#要素の削除">要素の削除</a></li>
+        <li><a href="#要素の追加">要素の追加</a></li>
+        <li><a href="#セレクタapi">セレクタAPI</a></li>
+        <li><a href="#その他のdomを操作するメソッド">その他のDOMを操作するメソッド</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
-  </aside>
 
 
-
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

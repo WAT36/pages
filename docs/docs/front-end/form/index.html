@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="フォーム # フォームを作成するための要素についてを述べる。 form要素 # form要素はフォームを構成する要素である。 使用する主な属性は以下の通">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="フォーム" />
+<meta property="og:description" content="フォーム # フォームを作成するための要素についてを述べる。 form要素 # form要素はフォームを構成する要素である。 使用する主な属性は以下の通" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/form/" />
+<meta property="article:modified_time" content="2020-08-29T12:52:01+09:00" />
 <title>フォーム | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.471b86456e1ab598448a262e7ccbf98480e2cffe0560a410bc367f17a8128db8.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2f front-end\2f form\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,39 +102,77 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>フォーム</strong>
-</header>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#form要素">form要素</a></li>
+    <li><a href="#input要素">input要素</a></li>
+    <li><a href="#textarea要素">textarea要素</a></li>
+    <li><a href="#button要素">button要素</a></li>
+    <li><a href="#select要素">select要素</a></li>
+    <li><a href="#option要素">option要素</a></li>
+    <li><a href="#optgroup要素">optgroup要素</a></li>
+    <li><a href="#datalist要素">datalist要素</a></li>
+    <li><a href="#meter要素">meter要素</a></li>
+    <li><a href="#progress要素">progress要素</a></li>
+    <li><a href="#output要素">output要素</a></li>
+    <li><a href="#keygen要素">keygen要素</a></li>
+    <li><a href="#label要素">label要素</a></li>
+    <li><a href="#fieldset要素">fieldset要素</a></li>
+    <li><a href="#legend要素">legend要素</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="フォーム">フォーム</h1>
-
+      
+  <article class="markdown"><h1 id="フォーム">
+  フォーム
+  <a class="anchor" href="#%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0">#</a>
+</h1>
 <p>フォームを作成するための要素についてを述べる。</p>
-
-<h2 id="form要素">form要素</h2>
-
+<h2 id="form要素">
+  form要素
+  <a class="anchor" href="#form%e8%a6%81%e7%b4%a0">#</a>
+</h2>
 <p>form要素はフォームを構成する要素である。</p>
-
 <p>使用する主な属性は以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">・</td>
@@ -167,17 +211,14 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">フォームの送信結果を表示させるウィンドウやタブなどの名前</td>
     </tr>
 </table>
-
 <p>実際の使用例は以下の要素のところで述べる。</p>
-
-<h2 id="input要素">input要素</h2>
-
+<h2 id="input要素">
+  input要素
+  <a class="anchor" href="#input%e8%a6%81%e7%b4%a0">#</a>
+</h2>
 <p>input要素はform要素内で使われる要素で、フォームの入力を示すための要素である。</p>
-
 <p>フォームの入力にはいくつか種類があり、input要素で<strong>type</strong>属性の値を利用することで使い分ける。</p>
-
 <p>type属性に指定できる値と意味は以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">・</td>
@@ -312,9 +353,7 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">表示させずに送信するテキスト</td>
     </tr>
 </table>
-
 <p>また、type属性の他に指定できる属性はと意味は以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">・</td>
@@ -419,9 +458,7 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">入力を必須にする</td>
     </tr>
 </table>
-
 <p>使用例</p>
-
 <pre><code>&lt;form&gt;
     &lt;table style=&quot;border:none;&quot;&gt;
     &lt;tr&gt;
@@ -506,13 +543,9 @@ https://github.com/alex-shpak/hugo-book
     &lt;/tr&gt;
 &lt;/table&gt;
 &lt;/form&gt;
-</code></pre>
-
-<p>表示例（ブラウザによっては正しく表示されない場合もあります）</p>
-
+</code></pre><p>表示例（ブラウザによっては正しく表示されない場合もあります）</p>
 <hr>
-
-<p><form>
+<form>
     <table style="border:none;">
     <tr>
         <td style="border:none;">text:</td>
@@ -596,14 +629,13 @@ https://github.com/alex-shpak/hugo-book
     </tr>
 </table>
 </form>
-<hr></p>
-
-<h2 id="textarea要素">textarea要素</h2>
-
+<hr>
+<h2 id="textarea要素">
+  textarea要素
+  <a class="anchor" href="#textarea%e8%a6%81%e7%b4%a0">#</a>
+</h2>
 <p>textarea要素は、複数行のテキスト入力フィールドとなる要素である。</p>
-
 <p>使用する主な属性は以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">・</td>
@@ -642,27 +674,20 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">プレースホルダー(入力欄に薄く表示する説明のようなもの)</td>
     </tr>
 </table>
-
 <p>使用例</p>
-
 <pre><code>入力：
 &lt;textarea cols=&quot;20&quot; rows=&quot;5&quot; autocomplete=&quot;on&quot; maxlength=&quot;80&quot; placeholder=&quot;20文字/行 5列まで、最大80文字&quot;&gt;&lt;/textarea&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p>入力：
+入力：
 <textarea cols="20" rows="5" autocomplete="on" maxlength="80" placeholder="20文字/行 5列まで、最大80文字"></textarea>
-<hr></p>
-
-<h2 id="button要素">button要素</h2>
-
+<hr>
+<h2 id="button要素">
+  button要素
+  <a class="anchor" href="#button%e8%a6%81%e7%b4%a0">#</a>
+</h2>
 <p>button要素は、ボタンを表示させる要素である。要素内の内容はラベルとして、ボタンに表示される。</p>
-
 <p>使用する主な属性は以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">・</td>
@@ -707,9 +732,7 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">フォームのデータを送信する際に使用される値</td>
     </tr>
 </table>
-
 <p>使用例</p>
-
 <pre><code>&lt;form id=&quot;button&quot;&gt;
 &lt;textarea cols=&quot;20&quot; rows=&quot;4&quot; placeholder=&quot;何か書いてresetボタンを押すと？&quot; form=&quot;button&quot;&gt;&lt;/textarea&gt;
 
@@ -721,33 +744,25 @@ buttonテスト
 resetテスト
 &lt;/button&gt;
 &lt;/form&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><form id="button">
-<textarea cols="20" rows="4" placeholder="何か書いてresetボタンを押すと？" form="button"></textarea></p>
-
-<p><button type="button" name="test" form="button">
+<form id="button">
+<textarea cols="20" rows="4" placeholder="何か書いてresetボタンを押すと？" form="button"></textarea>
+<button type="button" name="test" form="button">
 buttonテスト
-</button></p>
-
-<p><button type="reset" name="resettest" form="button">
+</button>
+<button type="reset" name="resettest" form="button">
 resetテスト
 </button>
 </form>
-<hr></p>
-
-<h2 id="select要素">select要素</h2>
-
+<hr>
+<h2 id="select要素">
+  select要素
+  <a class="anchor" href="#select%e8%a6%81%e7%b4%a0">#</a>
+</h2>
 <p>select要素は、選択肢の中から選ぶ形式のフォーム部品を示す要素である。</p>
-
 <p>フォーム部品自体はselect要素で示し、中身の選択肢は後述するoption要素・optgroup要素で示す。</p>
-
 <p>select要素で使用する主な属性は以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">・</td>
@@ -786,17 +801,14 @@ resetテスト
         <td style="border:none;">入力・選択が必須であることを示す</td>
     </tr>
 </table>
-
 <p>使用例は下記、option要素の所で示す。</p>
-
-<h2 id="option要素">option要素</h2>
-
+<h2 id="option要素">
+  option要素
+  <a class="anchor" href="#option%e8%a6%81%e7%b4%a0">#</a>
+</h2>
 <p>option要素は、前述のselect要素またはdatalist要素の選択肢となる要素である。</p>
-
 <p>要素の内容には、表示させたい内容を入力する。</p>
-
 <p>使用する主な属性は以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">・</td>
@@ -817,65 +829,50 @@ resetテスト
         <td style="border:none;">submit等でサーバーに送信する値(要素内容よりも優先する)</td>
     </tr>
 </table>
-
 <p>前述のselect要素を使って、例を示す。</p>
-
 <pre><code>&lt;select&gt;
     &lt;option selected &gt;選択肢その１&lt;/option&gt;
     &lt;option label=&quot;ラベルに書いた選択肢その２&quot;&gt;選択肢その２&lt;/option&gt;
     &lt;option&gt;選択肢その３&lt;/option&gt;
 &lt;/select&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><select>
+<select>
     <option selected >選択肢その１</option>
     <option label="ラベルに書いた選択肢その２">選択肢その２</option>
     <option>選択肢その３</option>
 </select>
-<hr></p>
-
-<h2 id="optgroup要素">optgroup要素</h2>
-
+<hr>
+<h2 id="optgroup要素">
+  optgroup要素
+  <a class="anchor" href="#optgroup%e8%a6%81%e7%b4%a0">#</a>
+</h2>
 <p>optgroup要素は、select要素内のoption要素をグループ化して、そこにグループの名前（ラベル）をつける要素である。</p>
-
 <p>グループに名前をつけるにはlabel属性を利用する。</p>
-
 <p>使用例</p>
-
 <pre><code>&lt;select&gt;
     &lt;optgroup label=&quot;選択肢&quot;&gt;
         &lt;option selected &gt;選択肢その１&lt;/option&gt;
         &lt;option label=&quot;ラベルに書いた選択肢その２&quot;&gt;選択肢その２&lt;/option&gt;
         &lt;option&gt;選択肢その３&lt;/option&gt;
 &lt;/select&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><select>
+<select>
     <optgroup label="選択肢">
         <option selected >選択肢その１</option>
         <option label="ラベルに書いた選択肢その２">選択肢その２</option>
         <option>選択肢その３</option>
 </select>
-<hr></p>
-
-<h2 id="datalist要素">datalist要素</h2>
-
+<hr>
+<h2 id="datalist要素">
+  datalist要素
+  <a class="anchor" href="#datalist%e8%a6%81%e7%b4%a0">#</a>
+</h2>
 <p>datalist要素は、input要素にサジェストを追加するための要素である。</p>
-
 <p>実際のサジェストの内容は、前述の<strong>option要素・optgroup要素</strong>を利用して表現する。</p>
-
 <p>datalist要素とinput要素を関連付けるには、datalist要素のid属性の値をinput要素のlist属性に指定する。</p>
-
 <p>使用例</p>
-
 <pre><code>&lt;p&gt;行きたい場所は?
 &lt;input type=&quot;text&quot; list=&quot;place&quot;&gt;
     &lt;datalist id=&quot;place&quot;&gt;
@@ -884,13 +881,9 @@ resetテスト
         &lt;option&gt;京都&lt;/option&gt;
     &lt;/datalist&gt;
 &lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><p>行きたい場所は?
+<p>行きたい場所は?
 <input type="text" list="place">
     <datalist id="place">
         <option>東京</option>
@@ -898,16 +891,14 @@ resetテスト
         <option>京都</option>
     </datalist>
 </p>
-<hr></p>
-
-<h2 id="meter要素">meter要素</h2>
-
+<hr>
+<h2 id="meter要素">
+  meter要素
+  <a class="anchor" href="#meter%e8%a6%81%e7%b4%a0">#</a>
+</h2>
 <p>meter要素は、メーター（ゲージ)を示すための要素である。</p>
-
 <p>具体的には、特定の範囲内で指定した位置を示すときに利用する。</p>
-
 <p>使用する主な属性は以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">・</td>
@@ -928,31 +919,24 @@ resetテスト
         <td style="border:none;">メータの範囲の上限</td>
     </tr>
 </table>
-
 <p>使用例</p>
-
 <pre><code>&lt;p&gt;使用量状況：
 &lt;meter min=&quot;0&quot; max=&quot;100&quot; value=&quot;45&quot;&gt;
 &lt;/meter&gt;
 &lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><p>使用量状況：
+<p>使用量状況：
 <meter min="0" max="100" value="45">
 </meter>
 </p>
-<hr></p>
-
-<h2 id="progress要素">progress要素</h2>
-
+<hr>
+<h2 id="progress要素">
+  progress要素
+  <a class="anchor" href="#progress%e8%a6%81%e7%b4%a0">#</a>
+</h2>
 <p>progress要素は、タスクの進み具合を示すゲージを示すための要素である。</p>
-
 <p>使用する属性は以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">・</td>
@@ -967,27 +951,20 @@ resetテスト
         <td style="border:none;">全体量</td>
     </tr>
 </table>
-
 <p>使用例</p>
-
 <pre><code>Now loading...:
 &lt;progress value=&quot;45&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p>Now loading&hellip;:
+Now loading...:
 <progress value="45" max="100"></progress>
-<hr></p>
-
-<h2 id="output要素">output要素</h2>
-
+<hr>
+<h2 id="output要素">
+  output要素
+  <a class="anchor" href="#output%e8%a6%81%e7%b4%a0">#</a>
+</h2>
 <p>output要素は、計算式の計算結果、またはユーザーの操作結果を示すための要素である。</p>
-
 <p>使用する属性は以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">・</td>
@@ -1002,33 +979,26 @@ resetテスト
         <td style="border:none;">フォーム部品の名前</td>
     </tr>
 </table>
-
 <p>使用例</p>
-
 <pre><code>&lt;form oninput=&quot;result.value=a.valueAsNumber+b.valueAsNumber&quot;&gt;
 	&lt;input name=&quot;a&quot; value=&quot;20&quot; type=&quot;number&quot;&gt; +
 	&lt;input name=&quot;b&quot; value=&quot;30&quot; type=&quot;number&quot;&gt; =
 	&lt;output for=&quot;a b&quot; name=&quot;result&quot;&gt;&lt;/output&gt;	
 &lt;/form&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><form oninput="result.value=a.valueAsNumber+b.valueAsNumber">
-    <input name="a" value="20" type="number"> +
-    <input name="b" value="30" type="number"> =
-    <output for="a b" name="result"></output><br />
+<form oninput="result.value=a.valueAsNumber+b.valueAsNumber">
+	<input name="a" value="20" type="number"> +
+	<input name="b" value="30" type="number"> =
+	<output for="a b" name="result"></output>	
 </form>
-<hr></p>
-
-<h2 id="keygen要素">keygen要素</h2>
-
+<hr>
+<h2 id="keygen要素">
+  keygen要素
+  <a class="anchor" href="#keygen%e8%a6%81%e7%b4%a0">#</a>
+</h2>
 <p>keygen要素は、公開鍵・秘密鍵のペアを生成するための要素である。</p>
-
 <p>実行すると、秘密鍵はローカルに保存され、公開鍵はサーバー側に送られる。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">・</td>
@@ -1049,48 +1019,37 @@ resetテスト
         <td style="border:none;">form要素と関連づけるための値</td>
     </tr>
 </table>
-
 <p>(実行例略)</p>
-
-<h2 id="label要素">label要素</h2>
-
+<h2 id="label要素">
+  label要素
+  <a class="anchor" href="#label%e8%a6%81%e7%b4%a0">#</a>
+</h2>
 <p>label要素は、その要素内容をフォームの部品と紐づけるための要素である。</p>
-
 <p>紐づけられたラベルは、フォームの部品と一体化してユーザの操作に一緒に反応されるようになる。</p>
-
 <p>紐づけるための方法は</p>
-
 <ul>
 <li>label要素の中に、要素内容と一緒に関連づけたいフォームの部品の要素を入れる</li>
 <li>フォーム部品の要素にid属性を指定し、label要素のfor属性にもそのid属性と同じ値を指定する</li>
 </ul>
-
 <p>である。</p>
-
 <p>使用例</p>
-
 <pre><code>&lt;form&gt;
 &lt;label for=&quot;yes&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;ans&quot; id=&quot;yes&quot;&gt;はい&lt;/label&gt;
 &lt;label for=&quot;no&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;ans&quot; id=&quot;no&quot;&gt;いいえ&lt;/label&gt;
 &lt;/form&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><form>
+<form>
 <label for="yes"><input type="radio" name="ans" id="yes">はい</label>
 <label for="no"><input type="radio" name="ans" id="no">いいえ</label>
 </form>
-<hr></p>
-
-<h2 id="fieldset要素">fieldset要素</h2>
-
+<hr>
+<h2 id="fieldset要素">
+  fieldset要素
+  <a class="anchor" href="#fieldset%e8%a6%81%e7%b4%a0">#</a>
+</h2>
 <p>fieldset要素は、formに関する要素をグループ化するための要素である。</p>
-
 <p>使用する属性は以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">・</td>
@@ -1105,9 +1064,7 @@ resetテスト
         <td style="border:none;">form要素と関連づけるための値</td>
     </tr>
 </table>
-
 <p>使用例</p>
-
 <pre><code>&lt;form id=&quot;ticket&quot;&gt;
 &lt;fieldset form=&quot;ticket&quot;&gt;
 &lt;p&gt;
@@ -1127,13 +1084,9 @@ resetテスト
 &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;child&quot; id=&quot;two&quot;&gt;２人&lt;/label&gt;
 &lt;/fieldset&gt;
 &lt;/form&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><form id="ticket">
+<form id="ticket">
 <fieldset form="ticket">
 <p>
 乗車駅→降車駅<br>
@@ -1152,16 +1105,14 @@ resetテスト
 <label><input type="radio" name="child" id="two">２人</label>
 </fieldset>
 </form>
-<hr></p>
-
-<h2 id="legend要素">legend要素</h2>
-
+<hr>
+<h2 id="legend要素">
+  legend要素
+  <a class="anchor" href="#legend%e8%a6%81%e7%b4%a0">#</a>
+</h2>
 <p>legend要素は、fieldset要素でグループ化されたフォーム部品にキャプションをつけて表示させるための要素である。</p>
-
 <p>legend要素を使用する場合は、必ずfieldset要素の中で使用し、かつその先頭に指定する必要がある。</p>
-
 <p>使用例</p>
-
 <pre><code>&lt;form id=&quot;ticket&quot;&gt;
 &lt;fieldset form=&quot;ticket&quot;&gt;
 &lt;legend&gt;乗車券&lt;/legend&gt;
@@ -1182,13 +1133,9 @@ resetテスト
 &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;child&quot; id=&quot;two&quot;&gt;２人&lt;/label&gt;
 &lt;/fieldset&gt;
 &lt;/form&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><form id="ticket">
+<form id="ticket">
 <fieldset form="ticket">
 <legend>乗車券</legend>
 <p>
@@ -1208,69 +1155,93 @@ resetテスト
 <label><input type="radio" name="child" id="two">２人</label>
 </fieldset>
 </form>
-<hr></p>
-</article>
-
+<hr></article>
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/7931ac009970674ab4f1617db3970f7bf7d1ab00" title='Last modified Aug 29, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 29, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/7931ac009970674ab4f1617db3970f7bf7d1ab00" title='Last modified by Wataru Tsukagoshi | Aug 29, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Aug 29, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/form.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#フォーム">フォーム</a>
-<ul>
-<li><a href="#form要素">form要素</a></li>
-<li><a href="#input要素">input要素</a></li>
-<li><a href="#textarea要素">textarea要素</a></li>
-<li><a href="#button要素">button要素</a></li>
-<li><a href="#select要素">select要素</a></li>
-<li><a href="#option要素">option要素</a></li>
-<li><a href="#optgroup要素">optgroup要素</a></li>
-<li><a href="#datalist要素">datalist要素</a></li>
-<li><a href="#meter要素">meter要素</a></li>
-<li><a href="#progress要素">progress要素</a></li>
-<li><a href="#output要素">output要素</a></li>
-<li><a href="#keygen要素">keygen要素</a></li>
-<li><a href="#label要素">label要素</a></li>
-<li><a href="#fieldset要素">fieldset要素</a></li>
-<li><a href="#legend要素">legend要素</a></li>
-</ul></li>
-</ul>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#form要素">form要素</a></li>
+    <li><a href="#input要素">input要素</a></li>
+    <li><a href="#textarea要素">textarea要素</a></li>
+    <li><a href="#button要素">button要素</a></li>
+    <li><a href="#select要素">select要素</a></li>
+    <li><a href="#option要素">option要素</a></li>
+    <li><a href="#optgroup要素">optgroup要素</a></li>
+    <li><a href="#datalist要素">datalist要素</a></li>
+    <li><a href="#meter要素">meter要素</a></li>
+    <li><a href="#progress要素">progress要素</a></li>
+    <li><a href="#output要素">output要素</a></li>
+    <li><a href="#keygen要素">keygen要素</a></li>
+    <li><a href="#label要素">label要素</a></li>
+    <li><a href="#fieldset要素">fieldset要素</a></li>
+    <li><a href="#legend要素">legend要素</a></li>
+  </ul>
 </nav>
-  </aside>
 
 
-
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

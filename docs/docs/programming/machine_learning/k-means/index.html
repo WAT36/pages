@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="K-Means法 # クラスタリングの手法の一つ、K-means法についてを述べる。 先ほども示した以下のデータを例にとって、大まかな手順を、以下">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="K-Means法" />
+<meta property="og:description" content="K-Means法 # クラスタリングの手法の一つ、K-means法についてを述べる。 先ほども示した以下のデータを例にとって、大まかな手順を、以下" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/machine_learning/k-means/" />
+<meta property="article:modified_time" content="2020-07-22T23:13:57+09:00" />
 <title>K-Means法 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.471b86456e1ab598448a262e7ccbf98480e2cffe0560a410bc367f17a8128db8.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2fk-means\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,89 +102,80 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>K-Means法</strong>
-</header>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="k-means法">K-Means法</h1>
-
+      
+  <article class="markdown"><h1 id="k-means法">
+  K-Means法
+  <a class="anchor" href="#k-means%e6%b3%95">#</a>
+</h1>
 <p>クラスタリングの手法の一つ、K-means法についてを述べる。</p>
-
 <p>先ほども示した以下のデータを例にとって、大まかな手順を、以下に記載しながら進める。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_39.png" width=50%></p>
-
-<h2 id="1-クラスタの数を定める">1. クラスタの数を定める</h2>
-
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_39.png" width=50%>
+<h2 id="1-クラスタの数を定める">
+  1. クラスタの数を定める
+  <a class="anchor" href="#1-%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e3%81%ae%e6%95%b0%e3%82%92%e5%ae%9a%e3%82%81%e3%82%8b">#</a>
+</h2>
 <p>K-means法では、まずデータを分けるクラスタの数を定める。</p>
-
 <p>例として、ここでは分けるクラスタを３つと設定しよう。</p>
-
-<h2 id="2-各クラスタの中心位置を定める">2. 各クラスタの中心位置を定める</h2>
-
+<h2 id="2-各クラスタの中心位置を定める">
+  2. 各クラスタの中心位置を定める
+  <a class="anchor" href="#2-%e5%90%84%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e3%81%ae%e4%b8%ad%e5%bf%83%e4%bd%8d%e7%bd%ae%e3%82%92%e5%ae%9a%e3%82%81%e3%82%8b">#</a>
+</h2>
 <p>次に、それぞれのクラスタの中心位置を示す座標(ベクトル)を定める。</p>
-
 <p>中心位置を示すベクトルを<b>μ</b>とし、1.で定めた数だけ用意する。</p>
-
 <p>k番目のクラスタの中心ベクトルは以下のように表す。</p>
 
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-
-
-
-<p class="katex">
-  $$ 
-\tag{1}  {\bf \mu}_{k}  =  
+<link rel="stylesheet" href="https://WAT36.github.io/pages/katex/katex.min.css" />
+<script defer src="https://WAT36.github.io/pages/katex/katex.min.js"></script>
+<script defer src="https://WAT36.github.io/pages/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \(\tag{1}  {\bf \mu}_{k}  =  
                 \left[
                     \begin{array}{cc}
-                    \mu_{k0}  & \mu_{k1} 
+                    \mu_{k0}  &amp; \mu_{k1} 
                     \end{array}
-                \right]
- $$
-</p>
-
-
+                \right]\)
+</span>
 
 <p>ここでは入力データの次元が２次元なので、μ<sub>k</sub>も２次元ベクトルとなる。</p>
-
 <p>また、クラスタは３つと定めたので、k=0,1,2となる。</p>
-
 <p>例として、μを以下のように定めてみよう。</p>
-
 <p>μ<sub>0</sub> = [38,6],μ<sub>1</sub> = [40,6],μ<sub>2</sub> = [42,6]</p>
-
-<h2 id="3-入力データが属するクラスタ-ベクトル-の用意">3. 入力データが属するクラスタ(ベクトル)の用意</h2>
-
+<h2 id="3-入力データが属するクラスタベクトルの用意">
+  3. 入力データが属するクラスタ(ベクトル)の用意
+  <a class="anchor" href="#3-%e5%85%a5%e5%8a%9b%e3%83%87%e3%83%bc%e3%82%bf%e3%81%8c%e5%b1%9e%e3%81%99%e3%82%8b%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e3%83%99%e3%82%af%e3%83%88%e3%83%ab%e3%81%ae%e7%94%a8%e6%84%8f">#</a>
+</h2>
 <p>次に、各入力データが属するクラスタを示すベクトル<b>R</b>を用意する。</p>
-
-
-
-<p class="katex">
-  $$ 
-\tag{2}  {\bf R}  =  
+<span>
+  \(\tag{2}  {\bf R}  =  
                 \left[
                     \begin{array}{c}
                     {\bf r}_{0} \\
@@ -186,124 +183,81 @@ https://github.com/alex-shpak/hugo-book
                     \vdots \\
                     {\bf r}_{N-1} \\
                     \end{array}
-                \right]
- $$
-</p>
-
-
+                \right]\)
+</span>
 
 <p>また、</p>
-
-
-
-<p class="katex">
-  $$ 
-\tag{3}  {\bf r}_{k}  =  
+<span>
+  \(\tag{3}  {\bf r}_{k}  =  
                 \left[
                     \begin{array}{cc}
-                    r_{k0}  & r_{k1} & r_{k2}
+                    r_{k0}  &amp; r_{k1} &amp; r_{k2}
                     \end{array}
-                \right]
- $$
-</p>
-
-
+                \right]\)
+</span>
 
 <p>とする。<b>r</b><sub>k</sub>の要素数はクラスタの数に一致する。今回はクラスタは３つなので、<b>r</b><sub>k</sub>はr<sub>k2</sub>まで用意する。</p>
-
 <p>また、r<sub>ki</sub>は、k番目の入力データがクラスタiに属する場合に1,そうでない場合0をとる変数とする。</p>
-
-
-
-<p class="katex">
-  $$ 
-\tag{4}
+<span>
+  \(\tag{4}
 r_{nk} = 
 \begin{cases}
-    1 & (入力データkがクラスタiに属する場合)  \\
-    0 & (入力データkがクラスタiに属さない場合)
-\end{cases}
- $$
-</p>
-
-
+    1 &amp; (入力データkがクラスタiに属する場合)  \\
+    0 &amp; (入力データkがクラスタiに属さない場合)
+\end{cases}\)
+</span>
 
 <p>これらにより、<b>R</b>は以下のように表される。</p>
-
-
-
-<p class="katex">
-  $$ 
-\tag{5}  {\bf R}  =  
+<span>
+  \(\tag{5}  {\bf R}  =  
                 \left[
                     \begin{array}{ccc}
-                    r_{00} & r_{01} & r_{02} \\
-                    r_{10} & r_{11} & r_{12} \\
-                    \vdots & \vdots & \vdots \\
-                    r_{n-1,0} & r_{n-1,1} & r_{n-1,2} \\
+                    r_{00} &amp; r_{01} &amp; r_{02} \\
+                    r_{10} &amp; r_{11} &amp; r_{12} \\
+                    \vdots &amp; \vdots &amp; \vdots \\
+                    r_{n-1,0} &amp; r_{n-1,1} &amp; r_{n-1,2} \\
                     \end{array}
-                \right]
- $$
-</p>
-
-
+                \right]\)
+</span>
 
 <p>最初は、全ての入力データがクラスタ0に属する(r<sub>k0</sub>=1)として初期化する。</p>
-
 <p>以上により、クラスタの中心位置を示すベクトル<b>μ</b>、入力データが属するクラスタの行列<b>R</b>の準備が完了した。</p>
-
 <p>ここから、行列<b>R</b>を計算していくことにより各入力データが属するクラスタを決定していく。</p>
-
-<h2 id="4-入力データが属するクラスタを導出する">4. 入力データが属するクラスタを導出する</h2>
-
+<h2 id="4-入力データが属するクラスタを導出する">
+  4. 入力データが属するクラスタを導出する
+  <a class="anchor" href="#4-%e5%85%a5%e5%8a%9b%e3%83%87%e3%83%bc%e3%82%bf%e3%81%8c%e5%b1%9e%e3%81%99%e3%82%8b%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e3%82%92%e5%b0%8e%e5%87%ba%e3%81%99%e3%82%8b">#</a>
+</h2>
 <p>各入力データが属するクラスタはどのように計算し決定すれば良いのか？</p>
-
 <p>方法としては、</p>
-
 <p><strong>各入力データを、最も中心位置が近いクラスターに属させる</strong></p>
-
 <p>とする。</p>
-
 <p>そこで、各入力データに対し、各クラスターの中心との距離を計算し、一番距離が近いクラスターに属させる、という事を全データに対して行う。</p>
-
 <p>これにより、行列<b>R</b>の値を定めていく。</p>
-
-<h2 id="5-クラスタの中心位置を調整する">5. クラスタの中心位置を調整する</h2>
-
+<h2 id="5-クラスタの中心位置を調整する">
+  5. クラスタの中心位置を調整する
+  <a class="anchor" href="#5-%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bf%e3%81%ae%e4%b8%ad%e5%bf%83%e4%bd%8d%e7%bd%ae%e3%82%92%e8%aa%bf%e6%95%b4%e3%81%99%e3%82%8b">#</a>
+</h2>
 <p>次に、クラスタの中心位置<b>μ</b>を、先ほど決定した入力データの値に基づき、更新していく。</p>
-
 <p>方法としては、</p>
-
 <p><strong>クラスタの中心位置を、そのクラスタに属している入力データの平均値にする</strong></p>
-
 <p>とする。</p>
-
 <p>i番目の入力データを<b>x<sub>i</sub></b> = [x<sub>i,0</sub>,x<sub>i,1</sub>]とおくと、計算式としては以下の通りになる。</p>
-
-
-
-<p class="katex">
-  $$ 
-\tag{6}
+<span>
+  \(\tag{6}
 \begin{aligned}
     \mu_{k,0} = \frac{1}{N_{k}}  \sum_{x_{i} \in クラスタk}^{} x_{i0} \\
     \mu_{k,1} = \frac{1}{N_{k}}  \sum_{x_{i} \in クラスタk}^{} x_{i1} \\
-\end{aligned}
- $$
-</p>
-
-
+\end{aligned}\)
+</span>
 
 <p>ここで、N<sub>k</sub>はクラスタkに属する入力データの個数とする。</p>
-
-<h2 id="6-手順4-5を繰り返し行う">6. 手順4・5を繰り返し行う</h2>
-
+<h2 id="6-手順45を繰り返し行う">
+  6. 手順4・5を繰り返し行う
+  <a class="anchor" href="#6-%e6%89%8b%e9%a0%8645%e3%82%92%e7%b9%b0%e3%82%8a%e8%bf%94%e3%81%97%e8%a1%8c%e3%81%86">#</a>
+</h2>
 <p>手順4,5を繰り返し行い、手順4により属するクラスタが変わる入力データが一つも無くなったときに終了する。</p>
-
 <p>以上の手順により、K-means法によるクラスタリングが行える。</p>
-
 <p>では、コードを実装して実際にクラスタリングを行ってみよう。</p>
-
 <p>クラスタリングを行うコードを以下に示す。(k_means.py)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 
@@ -350,8 +304,8 @@ R<span style="color:#f92672">=</span>[]
         
         count<span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>
     
-    <span style="color:#66d9ef">return</span> mu,R</code></pre></div>
-<p>これを使いプロットを行うコードを示す。(do_k_means.py)</p>
+    <span style="color:#66d9ef">return</span> mu,R
+</code></pre></div><p>これを使いプロットを行うコードを示す。(do_k_means.py)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> k_means <span style="color:#f92672">import</span> calc_r
 <span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
 <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
@@ -383,49 +337,68 @@ plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;t
 plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;pH&#39;</span>)
 
 plt<span style="color:#f92672">.</span>grid(True)
-plt<span style="color:#f92672">.</span>show()</code></pre></div>
-<p>実行結果</p>
-
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_40.png" width=75%></p>
-
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p>実行結果</p>
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_40.png" width=75%>
 <p>これにより、k-means法によるクラスタリングが行えた。</p>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/5a9656cdb76b2996281373650a2204aab183a9a7" title='Last modified Jul 22, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 22, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/5a9656cdb76b2996281373650a2204aab183a9a7" title='Last modified by Wataru Tsukagoshi | Jul 22, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jul 22, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/machine_learning/k-means.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
+</div>
+  
+ 
 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
 
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CSSのアニメーション # CSSで行えるアニメーションについてを述べる。 回転・拡大縮小・移動 # ボックスを回転・拡大縮小・移動などさせるプロパテ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="アニメーション" />
+<meta property="og:description" content="CSSのアニメーション # CSSで行えるアニメーションについてを述べる。 回転・拡大縮小・移動 # ボックスを回転・拡大縮小・移動などさせるプロパテ" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/css_animation/" />
+<meta property="article:modified_time" content="2020-08-03T23:31:46+09:00" />
 <title>アニメーション | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.471b86456e1ab598448a262e7ccbf98480e2cffe0560a410bc367f17a8128db8.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2f front-end\2f css_animation\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,41 +102,89 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>アニメーション</strong>
-</header>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#transformプロパティ">transformプロパティ</a></li>
+    <li><a href="#transform-originプロパティ">transform-originプロパティ</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#transition-property-プロパティ">transition-property プロパティ</a></li>
+    <li><a href="#transition-duration-プロパティ">transition-duration プロパティ</a></li>
+    <li><a href="#transition-timing-function-プロパティ">transition-timing-function プロパティ</a></li>
+    <li><a href="#transition-delay-プロパティ">transition-delay プロパティ</a></li>
+    <li><a href="#transition-プロパティ">transition プロパティ</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#keyframes-キーフレーム">@keyframes (キーフレーム)</a></li>
+    <li><a href="#animation-name-プロパティ">animation-name プロパティ</a></li>
+    <li><a href="#animation-duration-プロパティ">animation-duration プロパティ</a></li>
+    <li><a href="#animation-timing-function-プロパティ">animation-timing-function プロパティ</a></li>
+    <li><a href="#animation-delayプロパティ">animation-delayプロパティ</a></li>
+    <li><a href="#animation-iteration-countプロパティ">animation-iteration-countプロパティ</a></li>
+    <li><a href="#animation-direction-プロパティ">animation-direction プロパティ</a></li>
+    <li><a href="#animation-play-state-プロパティ">animation-play-state プロパティ</a></li>
+    <li><a href="#animation-fill-modeプロパティ">animation-fill-modeプロパティ</a></li>
+    <li><a href="#animationプロパティ">animationプロパティ</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="cssのアニメーション">CSSのアニメーション</h1>
-
+      
+  <article class="markdown"><h1 id="cssのアニメーション">
+  CSSのアニメーション
+  <a class="anchor" href="#css%e3%81%ae%e3%82%a2%e3%83%8b%e3%83%a1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3">#</a>
+</h1>
 <p>CSSで行えるアニメーションについてを述べる。</p>
-
-<h1 id="回転-拡大縮小-移動">回転・拡大縮小・移動</h1>
-
+<h1 id="回転拡大縮小移動">
+  回転・拡大縮小・移動
+  <a class="anchor" href="#%e5%9b%9e%e8%bb%a2%e6%8b%a1%e5%a4%a7%e7%b8%ae%e5%b0%8f%e7%a7%bb%e5%8b%95">#</a>
+</h1>
 <p>ボックスを回転・拡大縮小・移動などさせるプロパティについてを述べる。</p>
-
-<h2 id="transformプロパティ">transformプロパティ</h2>
-
+<h2 id="transformプロパティ">
+  transformプロパティ
+  <a class="anchor" href="#transform%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>transformプロパティは、ボックスを回転・拡大縮小・移動・変形を行うプロパティである。</p>
-
 <table style="border:none;">
     <thead>
         <th style="border:none;">値</th>
@@ -181,9 +235,7 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">指定した数値分、y軸に沿った分傾斜させる</td>
     </tr>
 </table>
-
 <p>ここで、角度とは数値に以下の単位をつけたものである。</p>
-
 <table style="border:none;">
     <thead>
         <th style="border:none;">値</th>
@@ -206,9 +258,7 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">ターン(円周を1とする単位)</td>
     </tr>
 </table>
-
 <p>使用例</p>
-
 <pre><code>&lt;p style=&quot;background-color:red; width:200px; height:200px;&quot;&gt;０度&lt;/p&gt;
 &lt;p style=&quot;background-color:red; width:200px; height:200px; transform:rotate(30deg)&quot;&gt;３０度&lt;/p&gt;
 &lt;p style=&quot;background-color:red; width:200px; height:200px; transform:rotate(45deg)&quot;&gt;４５度&lt;/p&gt;
@@ -218,29 +268,23 @@ https://github.com/alex-shpak/hugo-book
 &lt;p style=&quot;background-color:green; width:200px; height:200px; transform:skewX(30deg);&quot;&gt;３０度&lt;/p&gt;
 &lt;p style=&quot;background-color:green; width:200px; height:200px; transform:skewX(45deg);&quot;&gt;４５度&lt;/p&gt;
 &lt;p style=&quot;background-color:green; width:200px; height:200px; transform:skewX(60deg);&quot;&gt;６０度&lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
 <p style="background-color:red; width:200px; height:200px;">０度</p>
 <p style="background-color:red; width:200px; height:200px; transform:rotate(30deg)">３０度</p>
 <p style="background-color:red; width:200px; height:200px; transform:rotate(45deg)">４５度</p>
 <p style="background-color:red; width:200px; height:200px; transform:rotate(90deg)">９０度</p>
-
-<p><p style="background-color:green; width:200px; height:200px;">０度</p>
+<p style="background-color:green; width:200px; height:200px;">０度</p>
 <p style="background-color:green; width:200px; height:200px; transform:skewX(30deg);">３０度</p>
 <p style="background-color:green; width:200px; height:200px; transform:skewX(45deg);">４５度</p>
 <p style="background-color:green; width:200px; height:200px; transform:skewX(60deg);">６０度</p>
-<hr></p>
-
-<h2 id="transform-originプロパティ">transform-originプロパティ</h2>
-
+<hr>
+<h2 id="transform-originプロパティ">
+  transform-originプロパティ
+  <a class="anchor" href="#transform-origin%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>transform-originプロパティは、transformプロパティでボックスを回転・移動・変形させる時に、原点とする位置を設定するプロパティである。</p>
-
 <p>指定する値と意味は以下の通り。なお、値は1~3つまで指定出来る。1つ目は横方向の左からの位置、2つ目は縦方向の上からの位置、3つ目は3D用のz方向の位置を示す。</p>
-
 <table style="border:none;">
     <thead>
         <th style="border:none;">値</th>
@@ -275,9 +319,7 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">横方向の100%</td>
     </tr>
 </table>
-
 <p>使用例</p>
-
 <pre><code>&lt;div style=&quot;border-style: double; height: 100px; width: 100px; padding: 0px; margin:0px&quot;&gt;
 &lt;p style=&quot;background-color:red; width:95px; height:95px; padding:0px; margin:0px; transform:rotate(45deg);&quot;&gt;center center(デフォルト)を中心に45度回転&lt;/p&gt;
 &lt;/div&gt;
@@ -286,13 +328,9 @@ https://github.com/alex-shpak/hugo-book
 &lt;div style=&quot;border-style: double; height: 100px; width: 100px; padding: 0px; margin:0px&quot;&gt;
 &lt;p style=&quot;background-color:red; width:95px; height:95px; padding:0px; margin:0px; transform:rotate(45deg); transform-origin:right bottom;&quot;&gt;right bottom(右下)を中心に45度回転&lt;/p&gt;
 &lt;/div&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><div style="border-style: double; height: 100px; width: 100px; padding: 0px; margin:0px">
+<div style="border-style: double; height: 100px; width: 100px; padding: 0px; margin:0px">
 <p style="background-color:red; width:95px; height:95px; padding:0px; margin:0px; transform:rotate(45deg);">center center(デフォルト)を中心に45度回転</p>
 </div>
 <br>
@@ -300,18 +338,18 @@ https://github.com/alex-shpak/hugo-book
 <div style="border-style: double; height: 100px; width: 100px; padding: 0px; margin:0px">
 <p style="background-color:red; width:95px; height:95px; padding:0px; margin:0px; transform:rotate(45deg); transform-origin:right bottom;">right bottom(右下)を中心に45度回転</p>
 </div>
-<hr></p>
-
-<h1 id="トランジション">トランジション</h1>
-
+<hr>
+<h1 id="トランジション">
+  トランジション
+  <a class="anchor" href="#%e3%83%88%e3%83%a9%e3%83%b3%e3%82%b8%e3%82%b7%e3%83%a7%e3%83%b3">#</a>
+</h1>
 <p>例えばセレクタの:hoverを使うとカーソルが上に来た時に、:activeを使うとクリックした時に、そこの表示が別の状態に切り替わる。その切り替わりを滑らかに変化させるのがCSSで言う<strong>トランジション</strong>である。</p>
-
 <p>トランジションは、ある状態から別のある状態へと移る二状態の変化を表現できる。このセクションでは、トランジションに関するプロパティについてを述べる。</p>
-
-<h2 id="transition-property-プロパティ">transition-property プロパティ</h2>
-
+<h2 id="transition-property-プロパティ">
+  transition-property プロパティ
+  <a class="anchor" href="#transition-property-%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>transition-propertyは、トランジションを適用するプロパティ名を指定するプロパティである<sub style="color:gray">(ややこしい・・)</sub></p>
-
 <table style="border:none;">
     <thead>
         <th style="border:none;">値</th>
@@ -330,15 +368,13 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">適用しない</td>
     </tr>
 </table>
-
 <p>(使用例は次にまとめる)</p>
-
-<h2 id="transition-duration-プロパティ">transition-duration プロパティ</h2>
-
+<h2 id="transition-duration-プロパティ">
+  transition-duration プロパティ
+  <a class="anchor" href="#transition-duration-%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>transition-durationプロパティは、トランジションをどれほどの時間をかけて実行するかを設定するプロパティである。</p>
-
 <p>値は単位付きの数値で、単位はs（秒）,ms（ミリ秒）のいずれかで指定する。</p>
-
 <p>使用例(css)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">div</span>.<span style="color:#a6e22e">duration</span> {
     <span style="color:#66d9ef">border-style</span>: <span style="color:#66d9ef">double</span>; <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; 
@@ -365,25 +401,21 @@ https://github.com/alex-shpak/hugo-book
 
 <span style="color:#f92672">p</span>.<span style="color:#a6e22e">sample2</span>:<span style="color:#a6e22e">active</span>{
     <span style="color:#66d9ef">background-color</span>:<span style="color:#66d9ef">yellow</span>;
-}</code></pre></div>
-<p>使用例（html、コード載せると何故か変になる・・のでスクショを記載）</p>
+}
 
-<p><img src="https://WAT36.github.io/pages/img/front-end/transition-duration.png" width=100%></p>
-
+</code></pre></div><p>使用例（html、コード載せると何故か変になる・・のでスクショを記載）</p>
+<img src="https://WAT36.github.io/pages/img/front-end/transition-duration.png" width=100%>
 <p>表示例</p>
-
 <hr>
-
-<p><iframe width="400" height="300" src="https://WAT36.github.io/pages/css_sample_pages/transition-duration.html">
+<iframe width="400" height="300" src="https://WAT36.github.io/pages/css_sample_pages/transition-duration.html">
 </iframe>
-<hr></p>
-
-<h2 id="transition-timing-function-プロパティ">transition-timing-function プロパティ</h2>
-
+<hr>
+<h2 id="transition-timing-function-プロパティ">
+  transition-timing-function プロパティ
+  <a class="anchor" href="#transition-timing-function-%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>transition-timing-functionプロパティは、トランジションの速度を一定にしたり、変化をつけた速度に設定するプロパティである。</p>
-
 <p>指定する値と意味は以下の通り。</p>
-
 <table style="border:none;">
     <thead>
         <th style="border:none;">値</th>
@@ -410,7 +442,6 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">最初から最後まで一定速度</td>
     </tr>
 </table>
-
 <p>使用例（css）</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">div</span>.<span style="color:#a6e22e">timing</span> {
     <span style="color:#66d9ef">border-style</span>: <span style="color:#66d9ef">double</span>; <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; 
@@ -435,25 +466,20 @@ https://github.com/alex-shpak/hugo-book
 
 <span style="color:#f92672">p</span><span style="color:#f92672">[</span><span style="color:#f92672">class</span><span style="color:#f92672">^=</span><span style="color:#e6db74">&#34;timing&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">hover</span>{
     <span style="color:#66d9ef">transform</span>:rotate(<span style="color:#ae81ff">360</span><span style="color:#66d9ef">deg</span>);
-}</code></pre></div>
-<p>使用例（html、スクショを記載）</p>
-
-<p><img src="https://WAT36.github.io/pages/img/front-end/transition-timing-function.png" width=100%></p>
-
+}
+</code></pre></div><p>使用例（html、スクショを記載）</p>
+<img src="https://WAT36.github.io/pages/img/front-end/transition-timing-function.png" width=100%>
 <p>表示例</p>
-
 <hr>
-
-<p><iframe width="400" height="300" src="https://WAT36.github.io/pages/css_sample_pages/transition-timing-function.html">
+<iframe width="400" height="300" src="https://WAT36.github.io/pages/css_sample_pages/transition-timing-function.html">
 </iframe>
-<hr></p>
-
-<h2 id="transition-delay-プロパティ">transition-delay プロパティ</h2>
-
+<hr>
+<h2 id="transition-delay-プロパティ">
+  transition-delay プロパティ
+  <a class="anchor" href="#transition-delay-%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>transition-delayプロパティは、トランジションの開始を遅らせるプロパティである。</p>
-
 <p>値には、時間の単位をつけた数値を指定する。</p>
-
 <p>使用例（css）</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">div</span>.<span style="color:#a6e22e">delay</span> {
     <span style="color:#66d9ef">border-style</span>: <span style="color:#66d9ef">double</span>; <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; 
@@ -477,25 +503,20 @@ https://github.com/alex-shpak/hugo-book
 
 <span style="color:#f92672">p</span><span style="color:#f92672">[</span><span style="color:#f92672">class</span><span style="color:#f92672">^=</span><span style="color:#e6db74">&#34;delay&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">hover</span>{
     <span style="color:#66d9ef">transform</span>:rotate(<span style="color:#ae81ff">360</span><span style="color:#66d9ef">deg</span>);
-}</code></pre></div>
-<p>使用例（html、スクショを記載）</p>
-
-<p><img src="https://WAT36.github.io/pages/img/front-end/transition-delay.png" width=100%></p>
-
+}
+</code></pre></div><p>使用例（html、スクショを記載）</p>
+<img src="https://WAT36.github.io/pages/img/front-end/transition-delay.png" width=100%>
 <p>表示例</p>
-
 <hr>
-
-<p><iframe width="400" height="300" src="https://WAT36.github.io/pages/css_sample_pages/transition-delay.html">
+<iframe width="400" height="300" src="https://WAT36.github.io/pages/css_sample_pages/transition-delay.html">
 </iframe>
-<hr></p>
-
-<h2 id="transition-プロパティ">transition プロパティ</h2>
-
+<hr>
+<h2 id="transition-プロパティ">
+  transition プロパティ
+  <a class="anchor" href="#transition-%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>transitionプロパティは、これまでのtransition関連のプロパティの値をまとめて指定出来るプロパティである。</p>
-
 <p>値は空白で区切って複数指定可能である。</p>
-
 <p>使用例（css）</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">p</span> {
     <span style="color:#66d9ef">background-color</span>:<span style="color:#66d9ef">red</span>; <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; 
@@ -505,33 +526,28 @@ https://github.com/alex-shpak/hugo-book
 
 <span style="color:#f92672">p</span>:<span style="color:#a6e22e">hover</span>{
     <span style="color:#66d9ef">transform</span>:rotate(<span style="color:#ae81ff">360</span><span style="color:#66d9ef">deg</span>);
-}</code></pre></div>
-<p>（html）</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;カーソル乗せると一回転！(linear)&lt;/<span style="color:#f92672">p</span>&gt;</code></pre></div>
-<p>表示例</p>
-
+}
+</code></pre></div><p>（html）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;カーソル乗せると一回転！(linear)&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>表示例</p>
 <hr>
-
-<p><iframe width="400" height="300" src="https://WAT36.github.io/pages/css_sample_pages/transition.html">
+<iframe width="400" height="300" src="https://WAT36.github.io/pages/css_sample_pages/transition.html">
 </iframe>
-<hr></p>
-
-<h1 id="アニメーション">アニメーション</h1>
-
+<hr>
+<h1 id="アニメーション">
+  アニメーション
+  <a class="anchor" href="#%e3%82%a2%e3%83%8b%e3%83%a1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3">#</a>
+</h1>
 <p>CSSで言うアニメーションとは、トランジションを連続して行わせたような動きのことを言う。</p>
-
 <p>それを実現するために、CSSではキーフレームという書式を使って表現する。</p>
-
-<h2 id="keyframes-キーフレーム">@keyframes (キーフレーム)</h2>
-
+<h2 id="keyframes-キーフレーム">
+  @keyframes (キーフレーム)
+  <a class="anchor" href="#keyframes-%e3%82%ad%e3%83%bc%e3%83%95%e3%83%ac%e3%83%bc%e3%83%a0">#</a>
+</h2>
 <p>CSSのアニメーションでは、いつのタイミングでどのような動作をさせるかの指定を、<strong>キーフレーム</strong>と呼ばれる書式で記述する。</p>
-
 <p>書式としては、まず最初に@keyframesと書き、その後にキーフレームの名前を書く。</p>
-
 <p>その後は中括弧{}で囲み、その中に動作させるタイミングを開始時を0%としたパーセンテージで指定して記載する。</p>
-
 <p>その後にまた中括弧{}を書いて囲み、その中に動作させる内容を記載させる、と言う書式である。</p>
-
 <pre><code>@keyframe (キーフレームの名前) {
 
     0% {
@@ -546,20 +562,18 @@ https://github.com/alex-shpak/hugo-book
 
     ・・・
 }
-</code></pre>
-
-<h2 id="animation-name-プロパティ">animation-name プロパティ</h2>
-
+</code></pre><h2 id="animation-name-プロパティ">
+  animation-name プロパティ
+  <a class="anchor" href="#animation-name-%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>animation-nameプロパティは、キーフレーム名を指定して実行させるためのプロパティである。</p>
-
 <p>（使用例は次節でまとめて記載）</p>
-
-<h2 id="animation-duration-プロパティ">animation-duration プロパティ</h2>
-
+<h2 id="animation-duration-プロパティ">
+  animation-duration プロパティ
+  <a class="anchor" href="#animation-duration-%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>animation-durationプロパティは、アニメーションの再生時間を設定するプロパティである。</p>
-
 <p>値は単位付きの数値で、単位はs（秒）,ms（ミリ秒）のいずれかで指定する。</p>
-
 <p>使用例（css）</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">key1</span> {
     <span style="color:#f92672">0</span><span style="color:#f92672">%</span>{
@@ -592,23 +606,20 @@ https://github.com/alex-shpak/hugo-book
     <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>; 
     <span style="color:#66d9ef">animation-name</span>: key1; 
     <span style="color:#66d9ef">animation-duration</span>: <span style="color:#ae81ff">30</span><span style="color:#66d9ef">s</span>; 
-}</code></pre></div>
-<p>使用例（html）</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;色変化！（一回のみ）&lt;/<span style="color:#f92672">p</span>&gt;</code></pre></div>
-<p>表示例</p>
-
+}
+</code></pre></div><p>使用例（html）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;色変化！（一回のみ）&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>表示例</p>
 <hr>
-
-<p><iframe width="400" height="300" src="https://WAT36.github.io/pages/css_sample_pages/animation-duration.html">
+<iframe width="400" height="300" src="https://WAT36.github.io/pages/css_sample_pages/animation-duration.html">
 </iframe>
-<hr></p>
-
-<h2 id="animation-timing-function-プロパティ">animation-timing-function プロパティ</h2>
-
+<hr>
+<h2 id="animation-timing-function-プロパティ">
+  animation-timing-function プロパティ
+  <a class="anchor" href="#animation-timing-function-%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>animation-timing-functionプロパティは、トランジションの時と同様に、アニメーションにおける速度を一定にしたり、変化をつけた速度に設定するプロパティである。</p>
-
 <p>指定する値と意味は以下の通り。</p>
-
 <table style="border:none;">
     <thead>
         <th style="border:none;">値</th>
@@ -635,9 +646,9 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">最初から最後まで一定速度</td>
     </tr>
 </table>
-
 <p>使用例（css）</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">key1</span> {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">
+@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">key1</span> {
     <span style="color:#f92672">0</span><span style="color:#f92672">%</span>{
         <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>);
     }
@@ -666,28 +677,24 @@ https://github.com/alex-shpak/hugo-book
     <span style="color:#66d9ef">animation-name</span>: key1; 
     <span style="color:#66d9ef">animation-duration</span>: <span style="color:#ae81ff">30</span><span style="color:#66d9ef">s</span>; 
     <span style="color:#66d9ef">animation-timing-function</span>: <span style="color:#66d9ef">linear</span>;
-}</code></pre></div>
-<p>使用例（html）</p>
+}
 
+</code></pre></div><p>使用例（html）</p>
 <pre><code>&lt;p&gt;一回転！（一回のみ）&lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><iframe width="400" height="400" src="https://WAT36.github.io/pages/css_sample_pages/animation-timing-function.html">
+<iframe width="400" height="400" src="https://WAT36.github.io/pages/css_sample_pages/animation-timing-function.html">
 </iframe>
-<hr></p>
-
-<h2 id="animation-delayプロパティ">animation-delayプロパティ</h2>
-
+<hr>
+<h2 id="animation-delayプロパティ">
+  animation-delayプロパティ
+  <a class="anchor" href="#animation-delay%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>animation-delayプロパティは、アニメーションの開始を遅らせるプロパティである。</p>
-
 <p>値は単位付きの数値で、単位はs（秒）,ms（ミリ秒）のいずれかで指定する。</p>
-
 <p>使用例（css）</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">key1</span> {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">
+@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">key1</span> {
     <span style="color:#f92672">0</span><span style="color:#f92672">%</span>{
         <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>);
     }
@@ -717,24 +724,20 @@ https://github.com/alex-shpak/hugo-book
     <span style="color:#66d9ef">animation-duration</span>: <span style="color:#ae81ff">30</span><span style="color:#66d9ef">s</span>; 
     <span style="color:#66d9ef">animation-timing-function</span>: <span style="color:#66d9ef">linear</span>;
     <span style="color:#66d9ef">animation-delay</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">s</span>;
-}</code></pre></div>
-<p>使用例（html）</p>
+}
 
+</code></pre></div><p>使用例（html）</p>
 <pre><code>&lt;p&gt;5秒後に一回転！（一回のみ）&lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><iframe width="400" height="400" src="https://WAT36.github.io/pages/css_sample_pages/animation-delay.html">
+<iframe width="400" height="400" src="https://WAT36.github.io/pages/css_sample_pages/animation-delay.html">
 </iframe>
-<hr></p>
-
-<h2 id="animation-iteration-countプロパティ">animation-iteration-countプロパティ</h2>
-
+<hr>
+<h2 id="animation-iteration-countプロパティ">
+  animation-iteration-countプロパティ
+  <a class="anchor" href="#animation-iteration-count%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>animation-iteration-countプロパティは、アニメーションを何回繰り返して再生させるかを設定するプロパティである。</p>
-
 <table style="border:none;">
     <thead>
         <th style="border:none;">値</th>
@@ -749,9 +752,9 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">無限に繰り返す</td>
     </tr>
 </table>
-
 <p>使用例（css）</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">key1</span> {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">
+@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">key1</span> {
     <span style="color:#f92672">0</span><span style="color:#f92672">%</span>{
         <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>);
     }
@@ -781,26 +784,21 @@ https://github.com/alex-shpak/hugo-book
     <span style="color:#66d9ef">animation-duration</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">s</span>; 
     <span style="color:#66d9ef">animation-timing-function</span>: <span style="color:#66d9ef">linear</span>;
     <span style="color:#66d9ef">animation-iteration-count</span>: <span style="color:#66d9ef">infinite</span>;
-}</code></pre></div>
-<p>使用例（html）</p>
+}
 
+</code></pre></div><p>使用例（html）</p>
 <pre><code>&lt;p&gt;無限に一回転！&lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><iframe width="400" height="400" src="https://WAT36.github.io/pages/css_sample_pages/animation-iteration-count.html">
+<iframe width="400" height="400" src="https://WAT36.github.io/pages/css_sample_pages/animation-iteration-count.html">
 </iframe>
-<hr></p>
-
-<h2 id="animation-direction-プロパティ">animation-direction プロパティ</h2>
-
+<hr>
+<h2 id="animation-direction-プロパティ">
+  animation-direction プロパティ
+  <a class="anchor" href="#animation-direction-%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>animation-directionプロパティは、再生・逆再生の指定を行えるプロパティである。</p>
-
 <p>指定する値と意味は以下の通り。</p>
-
 <table style="border:none;">
     <thead>
         <th style="border:none;">値</th>
@@ -823,9 +821,9 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">逆再生と再生を繰り返して行う</td>
     </tr>
 </table>
-
 <p>使用例（css）</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">key1</span> {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">
+@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">key1</span> {
     <span style="color:#f92672">0</span><span style="color:#f92672">%</span>{
         <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>);
     }
@@ -856,26 +854,21 @@ https://github.com/alex-shpak/hugo-book
     <span style="color:#66d9ef">animation-timing-function</span>: <span style="color:#66d9ef">linear</span>;
     <span style="color:#66d9ef">animation-iteration-count</span>: <span style="color:#66d9ef">infinite</span>;
     <span style="color:#66d9ef">animation-direction</span>: <span style="color:#66d9ef">alternate</span>;
-}</code></pre></div>
-<p>使用例（html）</p>
+}
 
+</code></pre></div><p>使用例（html）</p>
 <pre><code>&lt;p&gt;alternate:右回転と左回転順々&lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><iframe width="400" height="400" src="https://WAT36.github.io/pages/css_sample_pages/animation-direction.html">
+<iframe width="400" height="400" src="https://WAT36.github.io/pages/css_sample_pages/animation-direction.html">
 </iframe>
-<hr></p>
-
-<h2 id="animation-play-state-プロパティ">animation-play-state プロパティ</h2>
-
+<hr>
+<h2 id="animation-play-state-プロパティ">
+  animation-play-state プロパティ
+  <a class="anchor" href="#animation-play-state-%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>animation-play-stateプロパティは、アニメーションの再生を一時停止させる際に使用するプロパティである。</p>
-
 <p>指定する値と意味は以下の通り。</p>
-
 <table style="border:none;">
     <thead>
         <th style="border:none;">値</th>
@@ -890,9 +883,9 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">アニメーションを一時停止させる</td>
     </tr>
 </table>
-
 <p>使用例（css）</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">key1</span> {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">
+@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">key1</span> {
     <span style="color:#f92672">0</span><span style="color:#f92672">%</span>{
         <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>);
     }
@@ -924,24 +917,20 @@ https://github.com/alex-shpak/hugo-book
     <span style="color:#66d9ef">animation-iteration-count</span>: <span style="color:#66d9ef">infinite</span>;
     <span style="color:#66d9ef">animation-direction</span>: <span style="color:#66d9ef">alternate</span>;
     <span style="color:#66d9ef">animation-play-state</span>: <span style="color:#66d9ef">paused</span>;
-}</code></pre></div>
-<p>使用例（html）</p>
+}
 
+</code></pre></div><p>使用例（html）</p>
 <pre><code>&lt;p&gt;alternate:右回転と左回転順々せずにポーズ状態&lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><iframe width="400" height="400" src="https://WAT36.github.io/pages/css_sample_pages/animation-play-state.html">
+<iframe width="400" height="400" src="https://WAT36.github.io/pages/css_sample_pages/animation-play-state.html">
 </iframe>
-<hr></p>
-
-<h2 id="animation-fill-modeプロパティ">animation-fill-modeプロパティ</h2>
-
+<hr>
+<h2 id="animation-fill-modeプロパティ">
+  animation-fill-modeプロパティ
+  <a class="anchor" href="#animation-fill-mode%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>animation-fill-modeプロパティは、animation-delayプロパティによって再生が遅延されている間の表示、及び再生終了時の表示を設定するプロパティである。</p>
-
 <table style="border:none;">
     <thead>
         <th style="border:none;">値</th>
@@ -964,9 +953,9 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">キーフレームとは無関係に表示する</td>
     </tr>
 </table>
-
 <p>使用例（css）</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">key1</span> {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">
+@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">key1</span> {
     <span style="color:#f92672">0</span><span style="color:#f92672">%</span>{
         <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">black</span>;
         <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">white</span>;
@@ -1006,28 +995,24 @@ https://github.com/alex-shpak/hugo-book
     <span style="color:#66d9ef">animation-timing-function</span>: <span style="color:#66d9ef">linear</span>;
     <span style="color:#66d9ef">animation-delay</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">s</span>;
     <span style="color:#66d9ef">animation-fill-mode</span>: <span style="color:#66d9ef">both</span>;
-}</code></pre></div>
-<p>使用例（html）</p>
+}
 
+</code></pre></div><p>使用例（html）</p>
 <pre><code>&lt;p&gt;10秒後に開始・最後は白ボックスのまま&lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><iframe width="400" height="400" src="https://WAT36.github.io/pages/css_sample_pages/animation-fill-mode.html">
+<iframe width="400" height="400" src="https://WAT36.github.io/pages/css_sample_pages/animation-fill-mode.html">
 </iframe>
-<hr></p>
-
-<h2 id="animationプロパティ">animationプロパティ</h2>
-
+<hr>
+<h2 id="animationプロパティ">
+  animationプロパティ
+  <a class="anchor" href="#animation%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>animationプロパティは、これまでのアニメーション関連のプロパティの値をまとめて指定出来るプロパティである。</p>
-
 <p>時間を表す値については、1つ目がanimation-durationプロパティ、2つ目がanimation-delayプロパティの値を示す。</p>
-
 <p>使用例（css）</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">key1</span> {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">
+@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">key1</span> {
     <span style="color:#f92672">0</span><span style="color:#f92672">%</span>{
         <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">white</span>;
         <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>);
@@ -1058,90 +1043,110 @@ https://github.com/alex-shpak/hugo-book
     <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; 
     <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>; 
     <span style="color:#66d9ef">animation</span>: key1 <span style="color:#ae81ff">10</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">linear</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">infinite</span>;
-}</code></pre></div>
-<p>使用例（html）</p>
+}
 
+</code></pre></div><p>使用例（html）</p>
 <pre><code>&lt;p&gt;10秒後に開始して無限に一回転&lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><iframe width="400" height="400" src="https://WAT36.github.io/pages/css_sample_pages/animation.html">
+<iframe width="400" height="400" src="https://WAT36.github.io/pages/css_sample_pages/animation.html">
 </iframe>
-<hr></p>
+<hr>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/fbc6d2b068043e426378cc6450ca0fd42d67887f" title='Last modified Aug 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 3, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/fbc6d2b068043e426378cc6450ca0fd42d67887f" title='Last modified by Wataru Tsukagoshi | Aug 3, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Aug 3, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/css_animation.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#cssのアニメーション">CSSのアニメーション</a></li>
-<li><a href="#回転-拡大縮小-移動">回転・拡大縮小・移動</a>
-<ul>
-<li><a href="#transformプロパティ">transformプロパティ</a></li>
-<li><a href="#transform-originプロパティ">transform-originプロパティ</a></li>
-</ul></li>
-<li><a href="#トランジション">トランジション</a>
-<ul>
-<li><a href="#transition-property-プロパティ">transition-property プロパティ</a></li>
-<li><a href="#transition-duration-プロパティ">transition-duration プロパティ</a></li>
-<li><a href="#transition-timing-function-プロパティ">transition-timing-function プロパティ</a></li>
-<li><a href="#transition-delay-プロパティ">transition-delay プロパティ</a></li>
-<li><a href="#transition-プロパティ">transition プロパティ</a></li>
-</ul></li>
-<li><a href="#アニメーション">アニメーション</a>
-<ul>
-<li><a href="#keyframes-キーフレーム">@keyframes (キーフレーム)</a></li>
-<li><a href="#animation-name-プロパティ">animation-name プロパティ</a></li>
-<li><a href="#animation-duration-プロパティ">animation-duration プロパティ</a></li>
-<li><a href="#animation-timing-function-プロパティ">animation-timing-function プロパティ</a></li>
-<li><a href="#animation-delayプロパティ">animation-delayプロパティ</a></li>
-<li><a href="#animation-iteration-countプロパティ">animation-iteration-countプロパティ</a></li>
-<li><a href="#animation-direction-プロパティ">animation-direction プロパティ</a></li>
-<li><a href="#animation-play-state-プロパティ">animation-play-state プロパティ</a></li>
-<li><a href="#animation-fill-modeプロパティ">animation-fill-modeプロパティ</a></li>
-<li><a href="#animationプロパティ">animationプロパティ</a></li>
-</ul></li>
-</ul>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#transformプロパティ">transformプロパティ</a></li>
+    <li><a href="#transform-originプロパティ">transform-originプロパティ</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#transition-property-プロパティ">transition-property プロパティ</a></li>
+    <li><a href="#transition-duration-プロパティ">transition-duration プロパティ</a></li>
+    <li><a href="#transition-timing-function-プロパティ">transition-timing-function プロパティ</a></li>
+    <li><a href="#transition-delay-プロパティ">transition-delay プロパティ</a></li>
+    <li><a href="#transition-プロパティ">transition プロパティ</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#keyframes-キーフレーム">@keyframes (キーフレーム)</a></li>
+    <li><a href="#animation-name-プロパティ">animation-name プロパティ</a></li>
+    <li><a href="#animation-duration-プロパティ">animation-duration プロパティ</a></li>
+    <li><a href="#animation-timing-function-プロパティ">animation-timing-function プロパティ</a></li>
+    <li><a href="#animation-delayプロパティ">animation-delayプロパティ</a></li>
+    <li><a href="#animation-iteration-countプロパティ">animation-iteration-countプロパティ</a></li>
+    <li><a href="#animation-direction-プロパティ">animation-direction プロパティ</a></li>
+    <li><a href="#animation-play-state-プロパティ">animation-play-state プロパティ</a></li>
+    <li><a href="#animation-fill-modeプロパティ">animation-fill-modeプロパティ</a></li>
+    <li><a href="#animationプロパティ">animationプロパティ</a></li>
+  </ul>
 </nav>
-  </aside>
 
 
-
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

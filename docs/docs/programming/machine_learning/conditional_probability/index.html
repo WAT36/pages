@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="条件付き確率 # 私は高校で条件付き確率を学んでこなかったゆとり世代なので、改めて条件付き確率において書き記していく。 事象A,Bにおいて、ある事">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="条件付き確率" />
+<meta property="og:description" content="条件付き確率 # 私は高校で条件付き確率を学んでこなかったゆとり世代なので、改めて条件付き確率において書き記していく。 事象A,Bにおいて、ある事" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/machine_learning/conditional_probability/" />
+<meta property="article:modified_time" content="2020-10-26T22:31:30+09:00" />
 <title>条件付き確率 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.471b86456e1ab598448a262e7ccbf98480e2cffe0560a410bc367f17a8128db8.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2f conditional_probability\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,117 +102,127 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>条件付き確率</strong>
-</header>
 
-      
-<article class="markdown">
-
-<h1 id="条件付き確率">条件付き確率</h1>
-
-<p>私は高校で条件付き確率を学んでこなかったゆとり世代なので、改めて条件付き確率において書き記していく。</p>
-
-<p>事象A,Bにおいて、ある事象Bが起こったという条件下での事象Aが起こる確率のことを、Bを<strong>条件</strong>とするAの<strong>条件付き確率</strong>と呼び、P(A|B)と表す。</p>
-
-<p>P(A|B)の求め方は、Bが起こった中のうちAが起こりうる確率であるから、以下の式で表される。</p>
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-
-
-
-<p class="katex">
-  $$ 
-\tag{1}  P(A|B) = \frac{ P( A \cap B ) }{ P(B) } 
- $$
-</p>
-
-
-
-<h2 id="例題">例題</h2>
-
-<p><img src="https://WAT36.github.io/pages/img/math/conditional_probability1.png" width=20%></p>
-
-<p>袋の中に1,2,3の数字が書かれた赤玉と白玉の計６個の玉が入っている。</p>
-
-<p>この中から、２以上の数字が書かれた球を取り出す事象をAとおく。事象Aが起こる確率P(A)はいくらか？</p>
-
-<p>答えは2/3である。</p>
-
-<p>では、球を取り出した時に球の色が赤だった事が判明したとする。この時球に書かれた数字が２以上である確率はいくらか？</p>
-
-<p>先ほどの事象Aに加え、赤い球を取り出す事象をBとおく。この場合は事象Bが起こった上での事象Aが起こる確率であるため、Bを条件とするAの条件付き確率となり、その確率P(A|B)は以下のようになる。</p>
-
-
-
-<p class="katex">
-  $$ 
-\begin{aligned}
-\tag{2}  P(A|B) &= \frac{ P( A \cap B ) }{ P(B) } \\ 
-                &= \frac{ \frac{ 2 }{ 6 } }{ \frac{ 3 }{ 6 } } \\
-                &= \frac{ 2 }{ 3 }
-\end{aligned}
- $$
-</p>
-
-
-</article>
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
+  <label for="toc-control">
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f23a5407ef8289d460b2d5977c53174986214e79" title='Last modified Oct 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 26, 2020
-    </a>
-  </div>
-  
+  </label>
 </div>
 
 
-      
-    </div>
-    
   
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="条件付き確率">
+  条件付き確率
+  <a class="anchor" href="#%e6%9d%a1%e4%bb%b6%e4%bb%98%e3%81%8d%e7%a2%ba%e7%8e%87">#</a>
+</h1>
+<p>私は高校で条件付き確率を学んでこなかったゆとり世代なので、改めて条件付き確率において書き記していく。</p>
+<p>事象A,Bにおいて、ある事象Bが起こったという条件下での事象Aが起こる確率のことを、Bを<strong>条件</strong>とするAの<strong>条件付き確率</strong>と呼び、P(A|B)と表す。</p>
+<p>P(A|B)の求め方は、Bが起こった中のうちAが起こりうる確率であるから、以下の式で表される。</p>
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/katex/katex.min.css" />
+<script defer src="https://WAT36.github.io/pages/katex/katex.min.js"></script>
+<script defer src="https://WAT36.github.io/pages/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \(\tag{1}  P(A|B) = \frac{ P( A \cap B ) }{ P(B) } \)
+</span>
+
+<h2 id="例題">
+  例題
+  <a class="anchor" href="#%e4%be%8b%e9%a1%8c">#</a>
+</h2>
+<img src="https://WAT36.github.io/pages/img/math/conditional_probability1.png" width=20%>
+<p>袋の中に1,2,3の数字が書かれた赤玉と白玉の計６個の玉が入っている。</p>
+<p>この中から、２以上の数字が書かれた球を取り出す事象をAとおく。事象Aが起こる確率P(A)はいくらか？</p>
+<p>答えは2/3である。</p>
+<p>では、球を取り出した時に球の色が赤だった事が判明したとする。この時球に書かれた数字が２以上である確率はいくらか？</p>
+<p>先ほどの事象Aに加え、赤い球を取り出す事象をBとおく。この場合は事象Bが起こった上での事象Aが起こる確率であるため、Bを条件とするAの条件付き確率となり、その確率P(A|B)は以下のようになる。</p>
+<span>
+  \(\begin{aligned}
+\tag{2}  P(A|B) &amp;= \frac{ P( A \cap B ) }{ P(B) } \\ 
+                &amp;= \frac{ \frac{ 2 }{ 6 } }{ \frac{ 3 }{ 6 } } \\
+                &amp;= \frac{ 2 }{ 3 }
+\end{aligned}\)
+</span>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
 
 
 
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/f23a5407ef8289d460b2d5977c53174986214e79" title='Last modified by Wataru Tsukagoshi | Oct 26, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Oct 26, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/machine_learning/conditional_probability.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

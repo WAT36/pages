@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="勾配法(最急降下法) # 前述の平均二乗誤差で最も誤差が小さくなるw0,w1を正確に求めるにはどうすればよいのか？ その一例として、ここでは勾配法">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="勾配法(最急降下法)" />
+<meta property="og:description" content="勾配法(最急降下法) # 前述の平均二乗誤差で最も誤差が小さくなるw0,w1を正確に求めるにはどうすればよいのか？ その一例として、ここでは勾配法" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/machine_learning/steepest_descent_method/" />
+<meta property="article:modified_time" content="2020-04-01T19:33:43+09:00" />
 <title>勾配法(最急降下法) | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.471b86456e1ab598448a262e7ccbf98480e2cffe0560a410bc367f17a8128db8.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2fsteepest_descent_method\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,41 +102,46 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>勾配法(最急降下法)</strong>
-</header>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="勾配法-最急降下法">勾配法(最急降下法)</h1>
-
+      
+  <article class="markdown"><h1 id="勾配法最急降下法">
+  勾配法(最急降下法)
+  <a class="anchor" href="#%e5%8b%be%e9%85%8d%e6%b3%95%e6%9c%80%e6%80%a5%e9%99%8d%e4%b8%8b%e6%b3%95">#</a>
+</h1>
 <p>前述の平均二乗誤差で最も誤差が小さくなるw<sub>0</sub>,w<sub>1</sub>を正確に求めるにはどうすればよいのか？</p>
-
 <p>その一例として、ここでは<strong>勾配法</strong>という方法についてを述べる。</p>
-
 <p>勾配法とは曲面(2変数関数のグラフ)において、最初にある座標を定めて曲面の傾きを求め、そこから傾きの方向(=曲面の座標が低くなる方向)へ座標を移していく、という動作を繰り返し、最終的に傾き0の座標にたどり着くことで曲面が最も小さくなる座標を求めるという方法である。</p>
-
 <p>前述の平均二乗誤差Jにおいて、この勾配法を利用し最もJが小さくなるw<sub>0</sub>,w<sub>1</sub>の組み合わせを求めることを考える。</p>
-
 <p>平均二乗誤差Jの(w<sub>0</sub>,w<sub>1</sub>)での傾きは以下のように表される。</p>
-
 <math style="display:block">
 <mi>∇</mi>
 <mi>J</mi>
@@ -220,13 +231,9 @@ https://github.com/alex-shpak/hugo-book
 </mtable> 
 </mfenced>
 </math>
-
 <p>この値はそれぞれJのw<sub>0</sub>,w<sub>1</sub>に関する傾きを示している。</p>
-
 <p>これを利用し、w<sub>0</sub>,w<sub>1</sub>の座標を移動させることで、傾きが0かつJの値が低くなる方向へと近づけていく。</p>
-
 <p><b>w</b> = [w<sub>0</sub>,w<sub>1</sub>] とし、t回移動させた後の<b>w</b>を<b>w</b>(t)とすると、以下の漸化式が成り立つ。</p>
-
 <math>
 <mi mathvariant="bold-italic">w</mi>
 <mo>(</mo>
@@ -254,13 +261,9 @@ https://github.com/alex-shpak/hugo-book
     <mo>)</mo>
 </mrow>
 </msub>
-
 </math>
-
 <p>ここでαは<strong>学習率</strong>と呼ばれるパラメータで、1回の移動で<b>w</b>をどれだけ移動させるかの度合を示す。</p>
-
 <p>w<sub>0</sub>,w<sub>1</sub>それぞれで表すと以下のようになる。</p>
-
 <math>
 <msub>
 <mi>w</mi>
@@ -359,11 +362,8 @@ https://github.com/alex-shpak/hugo-book
 </mrow>
 </msub>
 </math>
-
 <p>それではこの式を利用するために、この式に出てくるJをw<sub>0</sub>,w<sub>1</sub>で偏微分した値を求めてみよう。</p>
-
 <p>まずJは前述の平均二乗誤差の定義から以下のような式である。</p>
-
 <math>
 <mi>J</mi>
 <mo>=</mo>
@@ -396,9 +396,7 @@ https://github.com/alex-shpak/hugo-book
         </mrow>
         <mn>2</mn> 
     </msup>
-
 </math>
-
 <p>ここで
 <math>
 <msub>
@@ -418,7 +416,6 @@ https://github.com/alex-shpak/hugo-book
 </msub>
 </math>
 より</p>
-
 <math>
 <mi>J</mi>
 <mo>=</mo>
@@ -461,9 +458,7 @@ https://github.com/alex-shpak/hugo-book
         <mn>2</mn> 
     </msup>
 </math>
-
 <p>これをw<sub>0</sub>,w<sub>1</sub>でそれぞれ偏微分すると</p>
-
 <math>
     <mfrac> 
         <mrow><mo>&part;</mo><mi>J</mi></mrow> 
@@ -603,9 +598,7 @@ https://github.com/alex-shpak/hugo-book
             </msub>
             <mn>)</mn>
 </math>
-
 <p>になる。これより、上式は</p>
-
 <math>
 <msub>
     <mi>w</mi>
@@ -705,19 +698,16 @@ https://github.com/alex-shpak/hugo-book
                 <mi>n</mi> 
             </msub>
 </math>
-
 <p>となる。これを利用して求めてみよう。</p>
-
 <p>コード例を以下に記載する。</p>
-
 <p>まずは平均二乗誤差Jのw<sub>0</sub>,<sub>1</sub>における勾配を求める関数をd_mseとおくと以下のようになる。(w,x,tを入力とする)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">d_mse</span>(w,x,t):
     y <span style="color:#f92672">=</span> w[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> x <span style="color:#f92672">+</span> w[<span style="color:#ae81ff">1</span>]
     d_w0 <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>mean((y<span style="color:#f92672">-</span>t)<span style="color:#f92672">*</span>x)
     d_w1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>mean(y<span style="color:#f92672">-</span>t)
-    <span style="color:#66d9ef">return</span> d_w0,d_w1</code></pre></div>
-<p>試しに、w=[10,10]での平均二乗誤差を算出してみる。データは前章で使ったデータを利用する。</p>
+    <span style="color:#66d9ef">return</span> d_w0,d_w1
+</code></pre></div><p>試しに、w=[10,10]での平均二乗誤差を算出してみる。データは前章で使ったデータを利用する。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 <span style="color:#75715e">#入力値  </span>
 x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">167.9</span>,<span style="color:#ae81ff">164.3</span>,<span style="color:#ae81ff">171.6</span>,<span style="color:#ae81ff">172.7</span>,<span style="color:#ae81ff">162.8</span>,<span style="color:#ae81ff">170.2</span>,<span style="color:#ae81ff">172.3</span>,<span style="color:#ae81ff">163.8</span>,<span style="color:#ae81ff">168.8</span>,<span style="color:#ae81ff">167.2</span>,<span style="color:#ae81ff">172.3</span>,<span style="color:#ae81ff">166.4</span>,<span style="color:#ae81ff">173.1</span>,<span style="color:#ae81ff">176.9</span>,<span style="color:#ae81ff">178.4</span>,<span style="color:#ae81ff">167.1</span>,<span style="color:#ae81ff">177.4</span>,<span style="color:#ae81ff">173.7</span>,<span style="color:#ae81ff">172.0</span>,<span style="color:#ae81ff">174.1</span>])
@@ -734,14 +724,10 @@ np<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#39;t.np
  
 d_w <span style="color:#f92672">=</span> d_mse([<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">10</span>],x,t)
  
-<span style="color:#66d9ef">print</span>(d_w)</code></pre></div>
-<p>実行結果</p>
-
+<span style="color:#66d9ef">print</span>(d_w)
+</code></pre></div><p>実行結果</p>
 <pre><code>(564976.373, 3308.6699999999996)
-</code></pre>
-
-<p>w=[10,10]ではw<sub>0</sub>方向への勾配が大きいことがわかる。</p>
-
+</code></pre><p>w=[10,10]ではw<sub>0</sub>方向への勾配が大きいことがわかる。</p>
 <p>ではこのJの勾配を算出する関数d_mseを利用した勾配法を行う関数steepest_descent_method(x,t)を実装してみよう。
 wは先ほどの[10,10]から始めるものとし、学習率αは今回は0.000034として行う。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
@@ -761,8 +747,8 @@ wは先ほどの[10,10]から始めるものとし、学習率αは今回は0.00
     w0<span style="color:#f92672">=</span>w_i[i,<span style="color:#ae81ff">0</span>]     
     w1<span style="color:#f92672">=</span>w_i[i,<span style="color:#ae81ff">1</span>]     
     w_i<span style="color:#f92672">=</span>w_i[:i,:]   
-    <span style="color:#66d9ef">return</span> w0,w1,dJ,w_i</code></pre></div>
-<p>これを利用し、平均二乗誤差Jの最小値を勾配法を用いて求めて見る。</p>
+    <span style="color:#66d9ef">return</span> w0,w1,dJ,w_i
+</code></pre></div><p>これを利用し、平均二乗誤差Jの最小値を勾配法を用いて求めて見る。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">d_mse</span>(w,x,t):
@@ -779,55 +765,73 @@ t <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>loa
 w0,w1,dJ,w_history <span style="color:#f92672">=</span> steepest_descent_method(x,t,<span style="color:#ae81ff">0.000034</span>,<span style="color:#ae81ff">10000000</span>)
 <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;繰り返し回数:&#34;</span><span style="color:#f92672">+</span>str(w_history<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]))
 <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;w0:{0:.9f} ,w1:{1:.9f}&#34;</span><span style="color:#f92672">.</span>format(w0,w1))
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;dJ:&#34;</span><span style="color:#f92672">+</span>str(dJ))</code></pre></div>
-<p>実行結果</p>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;dJ:&#34;</span><span style="color:#f92672">+</span>str(dJ))
 
+</code></pre></div><p>実行結果</p>
 <pre><code>繰り返し回数:6800910
 w0:0.464910324 ,w1:-17.121946810
 dJ:(-0.0005856056965058088, 0.09999999786601492)
-</code></pre>
-
-<p>となるように、一回ずつシミュレーションを行っていくことで、より最適な値を求めることが可能となる。</p>
-
-<p>しかし、実は勾配法のようなシミュレーションをせずとも、式の計算だけで最適なw0,w1が求められてしまうパターンもある。<br />
+</code></pre><p>となるように、一回ずつシミュレーションを行っていくことで、より最適な値を求めることが可能となる。</p>
+<p>しかし、実は勾配法のようなシミュレーションをせずとも、式の計算だけで最適なw0,w1が求められてしまうパターンもある。<br>
 それについては次章で解説する。</p>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/977787a5c92efb7f067f8a8d8ee44e103b7364b1" title='Last modified Apr 1, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 1, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/977787a5c92efb7f067f8a8d8ee44e103b7364b1" title='Last modified by Wataru Tsukagoshi | Apr 1, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Apr 1, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/machine_learning/steepest_descent_method.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
+</div>
+  
+ 
 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
 
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

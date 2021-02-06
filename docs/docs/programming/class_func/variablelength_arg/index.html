@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="可変長引数の関数 # 関数やメソッドを定義するとき、引数の数は事前に定義する必要があり、指定された数以外の数を入力することは普通はできない。 しか">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="可変長引数の関数" />
+<meta property="og:description" content="可変長引数の関数 # 関数やメソッドを定義するとき、引数の数は事前に定義する必要があり、指定された数以外の数を入力することは普通はできない。 しか" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/class_func/variablelength_arg/" />
+<meta property="article:modified_time" content="2020-07-19T02:20:22+09:00" />
 <title>可変長引数の関数 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.471b86456e1ab598448a262e7ccbf98480e2cffe0560a410bc367f17a8128db8.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2f class_func\2fvariablelength_arg\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,93 +102,82 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>可変長引数の関数</strong>
-</header>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="可変長引数の関数">可変長引数の関数</h1>
-
+      
+  <article class="markdown"><h1 id="可変長引数の関数">
+  可変長引数の関数
+  <a class="anchor" href="#%e5%8f%af%e5%a4%89%e9%95%b7%e5%bc%95%e6%95%b0%e3%81%ae%e9%96%a2%e6%95%b0">#</a>
+</h1>
 <p>関数やメソッドを定義するとき、引数の数は事前に定義する必要があり、指定された数以外の数を入力することは普通はできない。</p>
-
 <p>しかし、可変長引数を使うことで、関数やメソッドを任意の個数の引数で利用することができる。</p>
-
 <p>その方法を以下に示す。</p>
 
 
 
 
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-comment" style="display: none;" id="tabs-comment-0" checked="checked" />
-  <label for="tabs-comment-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Javaではメソッドに可変長引数を設定できる仕様がある。</p>
-
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-comment" id="tabs-comment-0" checked="checked" />
+  <label for="tabs-comment-0">Java</label>
+  <div class="book-tabs-content markdown-inner"><p>Javaではメソッドに可変長引数を設定できる仕様がある。</p>
 <p>その仕様は以下の通り。</p>
-
 <ul>
 <li>引数のデータ型の後に「&hellip;」と記述する</li>
 <li>引数の中で、可変長引数は一番最後に書く</li>
 <li>可変長引数は１種類しか利用できない</li>
 <li>可変長引数の値は配列としてメソッドに渡される。</li>
 </ul>
-
 <p>使用例は以下の通り。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> String <span style="color:#a6e22e">calendar</span>(String... <span style="color:#a6e22e">s</span>){
-        String <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> s[0]<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">+</span>s[1]<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">+</span>s[2];
-        <span style="color:#66d9ef">return</span> d;
-    }
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span><span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> String <span style="color:#a6e22e">calendar</span><span style="color:#f92672">(</span>String<span style="color:#f92672">...</span> s<span style="color:#f92672">){</span>
+        String d <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span>0<span style="color:#f92672">]+</span><span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">+</span>s<span style="color:#f92672">[</span>1<span style="color:#f92672">]+</span><span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">+</span>s<span style="color:#f92672">[</span>2<span style="color:#f92672">];</span>
+        <span style="color:#66d9ef">return</span> d<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-        Main <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Main();
-        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(m.<span style="color:#a6e22e">calendar</span>(<span style="color:#e6db74">&#34;2020&#34;</span>,<span style="color:#e6db74">&#34;7&#34;</span>,<span style="color:#e6db74">&#34;19&#34;</span>));
-    }
-}</code></pre></div>
-<p>実行結果</p>
-
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[]){</span>
+        Main m <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Main<span style="color:#f92672">();</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>m<span style="color:#f92672">.</span><span style="color:#a6e22e">calendar</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;2020&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;7&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;19&#34;</span><span style="color:#f92672">));</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>実行結果</p>
 <pre><code>$ javac Main.java 
 $ java Main
 2020/7/19
-</code></pre>
-
-  </div>
-
-  <input type="radio" name="tabs-comment" style="display: none;" id="tabs-comment-1"  />
-  <label for="tabs-comment-1">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Pythonでは関数を定義するときに引数の頭に*を付けたリストのアンパック型にすると、その部分に入力された値はその引数(タプル)の要素として扱われることになる。アンパック型なので、引数はいくらでも入れられることになり、結果これで可変長引数が実現できることになる。</p>
-
+</code></pre></div><input type="radio" class="toggle" name="tabs-comment" id="tabs-comment-1"  />
+  <label for="tabs-comment-1">Python</label>
+  <div class="book-tabs-content markdown-inner"><p>Pythonでは関数を定義するときに引数の頭に*を付けたリストのアンパック型にすると、その部分に入力された値はその引数(タプル)の要素として扱われることになる。アンパック型なので、引数はいくらでも入れられることになり、結果これで可変長引数が実現できることになる。</p>
 <p>実装例</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">variable_args</span>(<span style="color:#f92672">*</span>args,sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span>):
     <span style="color:#66d9ef">print</span>(args)
-    <span style="color:#66d9ef">print</span>(sep<span style="color:#f92672">.</span>join(args))</code></pre></div>
-<p>実行結果</p>
-
+    <span style="color:#66d9ef">print</span>(sep<span style="color:#f92672">.</span>join(args))
+</code></pre></div><p>実行結果</p>
 <pre><code>&gt;&gt;&gt; variable_args('2020','7','18')
 ('2020', '7', '18')
 2020/7/18
@@ -195,49 +190,66 @@ $ java Main
 ('2020',)
 2020
 &gt;&gt;&gt; 
-</code></pre>
-
-  </div>
-
-</div>
+</code></pre></div></div>
 
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/82a50760059f5190a6982e99112080a9706bd317" title='Last modified Jul 19, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 19, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/82a50760059f5190a6982e99112080a9706bd317" title='Last modified by Wataru Tsukagoshi | Jul 19, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jul 19, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/class_func/variablelength_arg.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
+</div>
+  
+ 
 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
 
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

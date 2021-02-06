@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="数値 # 数値についての記事。 数値の演算 対数 常用対数(底10) 自然対数(底e) 任意の底の対数 小数点以下切り捨て 小数点以下切り上げ 小数点以下四捨五">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="数値" />
+<meta property="og:description" content="数値 # 数値についての記事。 数値の演算 対数 常用対数(底10) 自然対数(底e) 任意の底の対数 小数点以下切り捨て 小数点以下切り上げ 小数点以下四捨五" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/number/number_index/" />
+<meta property="article:published_time" content="2019-11-03T08:07:28+09:00" />
+<meta property="article:modified_time" content="2020-09-09T23:42:45+09:00" />
 <title>数値 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.471b86456e1ab598448a262e7ccbf98480e2cffe0560a410bc367f17a8128db8.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +36,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +60,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fnumber\2fnumber_index\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,55 +103,63 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>数値</strong>
-</header>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="数値">数値</h1>
-
+      
+  <article class="markdown"><h1 id="数値">
+  数値
+  <a class="anchor" href="#%e6%95%b0%e5%80%a4">#</a>
+</h1>
 <p>数値についての記事。</p>
-
 <ul>
 <li>数値の演算
-
 <ul>
 <li>対数
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/log10/">常用対数(底10)</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/loge/">自然対数(底e)</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/log/">任意の底の対数</a></li>
-</ul></li>
+</ul>
+</li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/floor/">小数点以下切り捨て</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/ceil/">小数点以下切り上げ</a></li>
 <li>小数点以下四捨五入</li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/logical_operator/">論理演算</a></li>
 <li>ビット演算
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/or_bit/">論理和(OR)</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/and_bit/">論理積(AND)</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/xor/">排他的論理和(XOR)</a></li>
-</ul></li>
+</ul>
+</li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/ternary/">三項演算子</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/factorial/">階乗</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/abs/">絶対値</a></li>
@@ -152,70 +167,92 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/max/">複数の数字のうち最も大きい数字をとる</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/min/">複数の数字のうち最も小さい数字をとる</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/increment/">変数の値を1増やす・減らす（インクリメント・デクリメント）</a></li>
-</ul></li>
+</ul>
+</li>
 <li>数値の表記を変換する
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/str/">数値を文字列に変換する</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/zfill/">数字の頭をゼロ詰して表示する</a></li>
 <li>基数変換
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/bin/">２進数に変換して表示</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/oct/">８進数に変換して表示</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/hex/">１６進数に変換して表示</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/dec/">２、８、１６進数を１０進数に変換して表示</a></li>
-</ul></li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 <li>数値の定数
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/pi/">円周率(π)</a></li>
-</ul></li>
+</ul>
+</li>
 <li>その他
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/digits/">数値（整数）の桁数を調べる</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/number/random/">数値をランダムに取得する(乱数)</a></li>
-</ul></li>
+</ul>
+</li>
 </ul>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/c08789d2f6fad0a4e45a4d28d950742e7fdcca8e" title='Last modified Sep 9, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 9, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/c08789d2f6fad0a4e45a4d28d950742e7fdcca8e" title='Last modified by Wataru Tsukagoshi | Sep 9, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Sep 9, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/number/number_index.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
+</div>
+  
+ 
 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
 
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Binary Indexed Tree # Binary Indexed Tree(BIT)は、セグメント木を応用したデータ構造で、リスト(数列)anが与えられた時、次のことが行える。 iが与えられた時、">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Binary Indexed Tree" />
+<meta property="og:description" content="Binary Indexed Tree # Binary Indexed Tree(BIT)は、セグメント木を応用したデータ構造で、リスト(数列)anが与えられた時、次のことが行える。 iが与えられた時、" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/procon/binary_indexed_tree/" />
+<meta property="article:modified_time" content="2020-10-29T08:06:30+09:00" />
 <title>Binary Indexed Tree | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.471b86456e1ab598448a262e7ccbf98480e2cffe0560a410bc367f17a8128db8.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fprocon\2f binary_indexed_tree\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,93 +102,88 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>Binary Indexed Tree</strong>
-</header>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="binary-indexed-tree">Binary Indexed Tree</h1>
-
+      
+  <article class="markdown"><h1 id="binary-indexed-tree">
+  Binary Indexed Tree
+  <a class="anchor" href="#binary-indexed-tree">#</a>
+</h1>
 <p>Binary Indexed Tree(BIT)は、セグメント木を応用したデータ構造で、リスト(数列)a<sub>n</sub>が与えられた時、次のことが行える。</p>
-
 <ul>
 <li>iが与えられた時、a<sub>1</sub>&hellip;a<sub>i</sub>の和を計算する。</li>
 <li>i,xが与えられた時、a<sub>i</sub>+=xとする。</li>
 </ul>
-
 <p>BITをどのように表すかだが、セグメント木と同様に、リストの各要素を木の葉の要素にならべる。</p>
-
 <p>例として、以下のリストをBITで表すと、以下のような図で表される。</p>
-
 <pre><code>a=[5,2,3,7,4,1,9,10]
-</code></pre>
-
-<p><img src="https://WAT36.github.io/pages/img/procon/bit1.png" alt="BIT例1" /></p>
-
+</code></pre><p><img src="https://WAT36.github.io/pages/img/procon/bit1.png" alt="BIT例1" /></p>
 <p>BITでは、節点の値にその節点が示す区間の値の和を設定する。</p>
-
 <p>ここから、例えばi=5を入力した時、a<sub>1</sub>〜a<sub>5</sub>までの和を求めるが、この求め方もセグメント木の時と同様に、a<sub>1</sub>〜a<sub>5</sub>の区間を示す節点を取り出してきて、その値の和を求めれば良い。この例の時、以下のような図で表され、和は17+4=21が返る。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/bit2.png" alt="BIT例2" /></p>
-
 <p>ここで、BITにおいては、区間内の和を示しているので、実は各節点の2つ目の子になっている節点は必要ないことがわかる。(iが与えられた時は2つ目の子の要素は計算に使わない。i,xが与えられた時でa<sub>i</sub>が親節点の2つ目の子になっていた場合、a<sub>i</sub>を示す節点の値を書き換えなくても、その親節点から上の接点の要素を書き換えれば、その他の計算には影響を与えないため。)</p>
-
 <p>そのため、BITは以下のようにも置き換えられる。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/bit3.png" alt="BIT例3" /></p>
-
 <p>この図で、灰色の節点は必要のない節点を表す。</p>
-
 <p>ここで、BITを表すリスト(及び配列)とBITの節点を以下の図のように対応づける。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/bit4.png" alt="BIT例4" /></p>
-
 <p>ここで、リストのインデックスを２進数で表したとき、２進数の1桁目が1のところは一番深いところの要素(要素1つ分の区間の節点)を表し、その1つ上の要素はリストのインデックス(２進数)の1桁目が1で2桁目が1である・・・というように表せる。BITでは、この性質を用いて計算をすることが多い。</p>
-
 <p>ではまず、このデータ構造を用いて、「iが与えられた時、a<sub>1</sub>&hellip;a<sub>i</sub>の和を計算する」方法を以下に示す。</p>
-
 <p>a<sub>i</sub>までの和を求めるには、iの２進数表記の数を利用して、以下のように行う。</p>
-
 <ol>
 <li>a[i]の値を加える。</li>
-<li>iの２進数表記において、一番下の&rdquo;1&rdquo;を減算する。(i -= i &amp; -i)</li>
+<li>iの２進数表記において、一番下の&quot;1&quot;を減算する。(i -= i &amp; -i)</li>
 <li>i==0なら1.で加えた値を出力して終了する。そうでない場合は1.へ戻る</li>
 </ol>
-
 <p>例えばi=7の時は以下の通り。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/bit5.png" alt="BIT例5" /></p>
-
-<p>次に、「i,xが与えられた時、a<sub>i</sub>+=xとする。」方法だが、これは先ほどと逆で、iに一番下の&rdquo;1&rdquo;を加算していく。以下にその手順を示す。</p>
-
+<p>次に、「i,xが与えられた時、a<sub>i</sub>+=xとする。」方法だが、これは先ほどと逆で、iに一番下の&quot;1&quot;を加算していく。以下にその手順を示す。</p>
 <ol>
 <li>a[i]にxを加える。</li>
 <li>i==len(a)なら、1.で加えた値を出力して終了する。</li>
-<li>iの２進数表記において、一番下の&rdquo;1&rdquo;のビットに1を加算する。(i += i &amp; -i)</li>
+<li>iの２進数表記において、一番下の&quot;1&quot;のビットに1を加算する。(i += i &amp; -i)</li>
 </ol>
-
 <p>例えばi=5の時は以下の通り。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/bit6.png" alt="BIT例6" /></p>
-
 <p>では、これら一連のデータ構造と動作をコードで実装してみよう。例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BinaryIndexedTree</span>:
     <span style="color:#66d9ef">def</span> __init__(self,a):
@@ -202,8 +203,8 @@ https://github.com/alex-shpak/hugo-book
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add</span>(self,i,x):
         <span style="color:#66d9ef">while</span> i<span style="color:#f92672">&lt;</span>len(self<span style="color:#f92672">.</span>bit):
             self<span style="color:#f92672">.</span>bit[i]<span style="color:#f92672">+=</span>x
-            i <span style="color:#f92672">+=</span> i <span style="color:#f92672">&amp;</span> <span style="color:#f92672">-</span>i</code></pre></div>
-<p>例で用いたBITをこのコードに入力すると、以下のようになる。</p>
+            i <span style="color:#f92672">+=</span> i <span style="color:#f92672">&amp;</span> <span style="color:#f92672">-</span>i
+</code></pre></div><p>例で用いたBITをこのコードに入力すると、以下のようになる。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a<span style="color:#f92672">=</span>[<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">17</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">41</span>]
 bit_a<span style="color:#f92672">=</span>BinaryIndexedTree(a)
 
@@ -215,58 +216,80 @@ bit_a<span style="color:#f92672">=</span>BinaryIndexedTree(a)
 <span style="color:#75715e">#a[5]に1を足す</span>
 bit_a<span style="color:#f92672">.</span>add(<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">1</span>)
 
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;加えた後のBIT:{}&#34;</span><span style="color:#f92672">.</span>format(bit_a<span style="color:#f92672">.</span>bit[<span style="color:#ae81ff">1</span>:]))</code></pre></div>
-<p>実行結果</p>
-
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;加えた後のBIT:{}&#34;</span><span style="color:#f92672">.</span>format(bit_a<span style="color:#f92672">.</span>bit[<span style="color:#ae81ff">1</span>:]))
+</code></pre></div><p>実行結果</p>
 <pre><code>a[7]までの和:31
 加える前のBIT:[5, 7, 3, 17, 4, 5, 9, 41]
 加えた後のBIT:[5, 7, 3, 17, 5, 6, 9, 42]
-</code></pre>
-</article>
-
+</code></pre></article>
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/e6ef1c3703e6f0ffd5b2eec3adb9d75dd648fc6c" title='Last modified Oct 29, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 29, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/e6ef1c3703e6f0ffd5b2eec3adb9d75dd648fc6c" title='Last modified by Wataru Tsukagoshi | Oct 29, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Oct 29, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/procon/binary_indexed_tree.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#binary-indexed-tree">Binary Indexed Tree</a></li>
-</ul>
-</nav>
-  </aside>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
 
 
-
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

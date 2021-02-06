@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CSSでの色の表現 # CSSでの色の表現について述べる。 16進数の値 # 方法の一つとして、#(シャープ)と16進数6桁の値で色を表現する方法があ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="CSSでの色" />
+<meta property="og:description" content="CSSでの色の表現 # CSSでの色の表現について述べる。 16進数の値 # 方法の一つとして、#(シャープ)と16進数6桁の値で色を表現する方法があ" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/css_color/" />
+<meta property="article:modified_time" content="2020-07-11T17:19:46+09:00" />
 <title>CSSでの色 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.471b86456e1ab598448a262e7ccbf98480e2cffe0560a410bc367f17a8128db8.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2f front-end\2f css_color\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,52 +102,80 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>CSSでの色</strong>
-</header>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#16進数の値">16進数の値</a></li>
+    <li><a href="#色を示すキーワード">色を示すキーワード</a></li>
+    <li><a href="#rgbrgba-による指定">rgb(),rgba() による指定</a></li>
+    <li><a href="#hslhslaによる指定">hsl(),hsla()による指定</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#colorプロパティ">colorプロパティ</a></li>
+    <li><a href="#opacityプロパティ">opacityプロパティ</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="cssでの色の表現">CSSでの色の表現</h1>
-
+      
+  <article class="markdown"><h1 id="cssでの色の表現">
+  CSSでの色の表現
+  <a class="anchor" href="#css%e3%81%a7%e3%81%ae%e8%89%b2%e3%81%ae%e8%a1%a8%e7%8f%be">#</a>
+</h1>
 <p>CSSでの色の表現について述べる。</p>
-
-<h2 id="16進数の値">16進数の値</h2>
-
+<h2 id="16進数の値">
+  16進数の値
+  <a class="anchor" href="#16%e9%80%b2%e6%95%b0%e3%81%ae%e5%80%a4">#</a>
+</h2>
 <p>方法の一つとして、#(シャープ)と16進数6桁の値で色を表現する方法がある。</p>
-
 <p>6桁の内、上2桁をR(赤),中2桁をG(緑),下2桁をB(青)として、それぞれ0x00~0xff(255)の値で表現する。</p>
-
 <p>例えば、RGB値が10進数で0,0,255の場合は、</p>
-
 <pre><code>#0000ff
-</code></pre>
-
-<p>と示すことができる。</p>
-
-<h2 id="色を示すキーワード">色を示すキーワード</h2>
-
+</code></pre><p>と示すことができる。</p>
+<h2 id="色を示すキーワード">
+  色を示すキーワード
+  <a class="anchor" href="#%e8%89%b2%e3%82%92%e7%a4%ba%e3%81%99%e3%82%ad%e3%83%bc%e3%83%af%e3%83%bc%e3%83%89">#</a>
+</h2>
 <p>16進数による数値でなくとも、基本的な色を使いたい場合はその色を示すキーワードを指定することで、その色を使用できる。</p>
-
 <p>キーワードの例は以下のとおり。</p>
-
 <table>
     <tr>
         <th>キーワード</th>
@@ -194,17 +228,14 @@ https://github.com/alex-shpak/hugo-book
         <td>#00ffff</td>
     </tr>
 </table>
-
-<h2 id="rgb-rgba-による指定">rgb(),rgba() による指定</h2>
-
+<h2 id="rgbrgba-による指定">
+  rgb(),rgba() による指定
+  <a class="anchor" href="#rgbrgba-%e3%81%ab%e3%82%88%e3%82%8b%e6%8c%87%e5%ae%9a">#</a>
+</h2>
 <p>rgb(),rgba()という関数形式の書式を利用すると、RGBの値を10進数のまま指定できる。</p>
-
 <p>rgb()は、r、g、bの値(範囲は0~255)をそれぞれ引数として入力して利用する。</p>
-
 <p>rgba()は、rgb（）に加え不透明度を表すalphaの値(範囲は0.0~1.0)も引数として指定できるようにした関数である。</p>
-
 <p>使用例</p>
-
 <pre><code>&lt;table&gt;
     &lt;tr&gt;
         &lt;td style=&quot;background-color:rgb(255,0,0)&quot;&gt;　　&lt;/td&gt;
@@ -213,13 +244,9 @@ https://github.com/alex-shpak/hugo-book
         &lt;td style=&quot;background-color:rgba(255,0,0,0.5)&quot;&gt;　　&lt;/td&gt;
     &lt;/tr&gt;
 &lt;/table&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><table>
+<table>
     <tr>
         <td style="background-color:rgb(255,0,0)">　　</td>
     </tr>
@@ -227,18 +254,15 @@ https://github.com/alex-shpak/hugo-book
         <td style="background-color:rgba(255,0,0,0.5)">　　</td>
     </tr>
 </table>
-<hr></p>
-
-<h2 id="hsl-hsla-による指定">hsl(),hsla()による指定</h2>
-
-<p>rgb()と違い、hue(色相),saturation(彩度),lightness(明度)の組み合わせで色を表現する<strong>hsl()</strong>でも色を指定できる。</p>
-
+<hr>
+<h2 id="hslhslaによる指定">
+  hsl(),hsla()による指定
+  <a class="anchor" href="#hslhsla%e3%81%ab%e3%82%88%e3%82%8b%e6%8c%87%e5%ae%9a">#</a>
+</h2>
+<p>rgb()と違い、hue(色相),saturation(彩度),lightness(明度)の組み合わせで色を表現する**hsl()**でも色を指定できる。</p>
 <p>h(色相)は0~359,s(彩度),l(明度)は0%~100%の範囲で値を指定する。</p>
-
-<p>これに加え、不透明度を表すalphaの値(範囲は0.0~1.0)も引数として指定できるようにしたものが<strong>hsla()</strong>である。</p>
-
+<p>これに加え、不透明度を表すalphaの値(範囲は0.0~1.0)も引数として指定できるようにしたものが**hsla()**である。</p>
 <p>使用例</p>
-
 <pre><code>&lt;table&gt;
     &lt;tr&gt;
         &lt;td style=&quot;background-color:hsl(180,50%,50%)&quot;&gt;　　&lt;/td&gt;
@@ -247,13 +271,9 @@ https://github.com/alex-shpak/hugo-book
         &lt;td style=&quot;background-color:hsla(180,50%,50%,0.5)&quot;&gt;　　&lt;/td&gt;
     &lt;/tr&gt;
 &lt;/table&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><table>
+<table>
     <tr>
         <td style="background-color:hsl(180,50%,50%)">　　</td>
     </tr>
@@ -261,111 +281,125 @@ https://github.com/alex-shpak/hugo-book
         <td style="background-color:hsla(180,50%,50%,0.5)">　　</td>
     </tr>
 </table>
-<hr></p>
-
-<h1 id="cssでの色の設定">CSSでの色の設定</h1>
-
+<hr>
+<h1 id="cssでの色の設定">
+  CSSでの色の設定
+  <a class="anchor" href="#css%e3%81%a7%e3%81%ae%e8%89%b2%e3%81%ae%e8%a8%ad%e5%ae%9a">#</a>
+</h1>
 <p>ここで設定した色のHTML文書への適用方法を述べる。</p>
-
-<h2 id="colorプロパティ">colorプロパティ</h2>
-
+<h2 id="colorプロパティ">
+  colorプロパティ
+  <a class="anchor" href="#color%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>colorプロパティは、要素内容の文字色を設定するプロパティである。全ての要素で利用可能である。</p>
-
 <p>使用例</p>
-
 <pre><code>&lt;p style=&quot;color:red&quot;  &gt;ここは赤です。&lt;/p&gt;
 &lt;p style=&quot;color:green&quot;&gt;ここは緑です。&lt;/p&gt;
 &lt;p style=&quot;color:blue&quot; &gt;ここは青です。&lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><p style="color:red"  >ここは赤です。</p>
+<p style="color:red"  >ここは赤です。</p>
 <p style="color:green">ここは緑です。</p>
 <p style="color:blue" >ここは青です。</p>
-<hr></p>
-
-<h2 id="opacityプロパティ">opacityプロパティ</h2>
-
+<hr>
+<h2 id="opacityプロパティ">
+  opacityプロパティ
+  <a class="anchor" href="#opacity%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>opacityプロパティは、要素内容の文字の不透明度を設定するプロパティである。</p>
-
 <p>設定する値は、0.0 (透明) から1.0 (不透明) である。</p>
-
 <p>使用例</p>
-
 <pre><code>&lt;p style=&quot;opacity:0.2&quot;  &gt;不透明度20%です。&lt;/p&gt;
 &lt;p style=&quot;opacity:0.4&quot;  &gt;不透明度40%です。&lt;/p&gt;
 &lt;p style=&quot;opacity:0.6&quot;  &gt;不透明度60%です。&lt;/p&gt;
 &lt;p style=&quot;opacity:0.8&quot;  &gt;不透明度80%です。&lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><p style="opacity:0.2"  >不透明度20%です。</p>
+<p style="opacity:0.2"  >不透明度20%です。</p>
 <p style="opacity:0.4"  >不透明度40%です。</p>
 <p style="opacity:0.6"  >不透明度60%です。</p>
 <p style="opacity:0.8"  >不透明度80%です。</p>
-<hr></p>
-</article>
-
+<hr></article>
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/dcf1280ca8de1376c3763ee9aeabdcf295e213f3" title='Last modified Jul 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 11, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/dcf1280ca8de1376c3763ee9aeabdcf295e213f3" title='Last modified by Wataru Tsukagoshi | Jul 11, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jul 11, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/css_color.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#cssでの色の表現">CSSでの色の表現</a>
-<ul>
-<li><a href="#16進数の値">16進数の値</a></li>
-<li><a href="#色を示すキーワード">色を示すキーワード</a></li>
-<li><a href="#rgb-rgba-による指定">rgb(),rgba() による指定</a></li>
-<li><a href="#hsl-hsla-による指定">hsl(),hsla()による指定</a></li>
-</ul></li>
-<li><a href="#cssでの色の設定">CSSでの色の設定</a>
-<ul>
-<li><a href="#colorプロパティ">colorプロパティ</a></li>
-<li><a href="#opacityプロパティ">opacityプロパティ</a></li>
-</ul></li>
-</ul>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#16進数の値">16進数の値</a></li>
+    <li><a href="#色を示すキーワード">色を示すキーワード</a></li>
+    <li><a href="#rgbrgba-による指定">rgb(),rgba() による指定</a></li>
+    <li><a href="#hslhslaによる指定">hsl(),hsla()による指定</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#colorプロパティ">colorプロパティ</a></li>
+    <li><a href="#opacityプロパティ">opacityプロパティ</a></li>
+  </ul>
 </nav>
-  </aside>
 
 
-
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

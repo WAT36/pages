@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on WAT Notes</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Posts on WAT Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sat, 09 Jan 2021 23:21:48 +0900</lastBuildDate>
-    
-	<atom:link href="https://WAT36.github.io/pages/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 09 Jan 2021 23:21:48 +0900</lastBuildDate><atom:link href="https://WAT36.github.io/pages/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Githubで初めてプルリクエストをやったのでその手順を書いておく</title>
       <link>https://WAT36.github.io/pages/posts/pull_request/</link>
@@ -53,7 +49,7 @@
       <pubDate>Mon, 27 Apr 2020 00:02:47 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/posts/aws_create_api_gateway/</guid>
-      <description>AWSでのAPI GatewayでのAPI作成方法について、備忘がてら手順をのせる。 1. AWSマネジメントコンソールにログインする AWSマネジメ</description>
+      <description>AWSでのAPI GatewayでのAPI作成方法について、備忘がてら手順をのせる。 1. AWSマネジメントコンソールにログインする # AWSマネジ</description>
     </item>
     
     <item>
@@ -62,7 +58,7 @@
       <pubDate>Sun, 05 Apr 2020 20:04:12 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/posts/aws_create_lambda/</guid>
-      <description>AWSでLambdaの関数を作る方法について、またまた備忘がてら手順をのせておく。 1. AWSマネジメントコンソールにログインする AWSマネジメ</description>
+      <description>AWSでLambdaの関数を作る方法について、またまた備忘がてら手順をのせておく。 1. AWSマネジメントコンソールにログインする # AWSマネジ</description>
     </item>
     
     <item>
@@ -71,7 +67,7 @@
       <pubDate>Thu, 02 Apr 2020 22:50:12 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/posts/aws_create_dynamo_table/</guid>
-      <description>AWSでDynamoDBのテーブルを作る方法について、備忘がてら手順をのせる。 1. AWSマネジメントコンソールにログインする AWSマネジメント</description>
+      <description>AWSでDynamoDBのテーブルを作る方法について、備忘がてら手順をのせる。 1. AWSマネジメントコンソールにログインする # AWSマネジメン</description>
     </item>
     
     <item>
@@ -98,7 +94,7 @@
       <pubDate>Thu, 30 Jan 2020 22:09:35 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/posts/warshall_floyd/</guid>
-      <description>経路探索アルゴリズムの一つ「ワーシャル・フロイド法」についてを調べてみた。 ワーシャル・フロイド法とは？ ワーシャル・フロイド法とは、グラフのあ</description>
+      <description>経路探索アルゴリズムの一つ「ワーシャル・フロイド法」についてを調べてみた。 ワーシャル・フロイド法とは？ # ワーシャル・フロイド法とは、グラフの</description>
     </item>
     
     <item>
@@ -107,7 +103,7 @@
       <pubDate>Sat, 30 Nov 2019 15:05:05 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/posts/graph_coloring/</guid>
-      <description>競プロでグラフの彩色問題が出てきたので、今回はグラフの頂点彩色問題について、復習がてら記事を書いてみる。 グラフの彩色 そもそもグラフの彩色とは</description>
+      <description>競プロでグラフの彩色問題が出てきたので、今回はグラフの頂点彩色問題について、復習がてら記事を書いてみる。 グラフの彩色 # そもそもグラフの彩色と</description>
     </item>
     
     <item>

@@ -215,12 +215,8 @@ html
 
 表示例
 
-<hr>
-<hr>
 <p>現在時刻</p>
 <p id="time">XX:XX:XX</p>
 <script type="text/javascript" src="/js_sample_pages/window_sample.js"></script>
-<hr>
-<hr>
 
 上記は１秒毎に現在時刻を取得して更新するプログラムになる。１秒毎に現在時刻を取得する仕組みをタイマー処理(setInterval)で表現している。

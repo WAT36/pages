@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="グラフの表現方法 # グラフはコード上でどのように表現して作ればよいのか？ ここではいくつか方法を示す。 隣接行列 # まずは隣接行列という方法について">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="グラフの表現方法" />
+<meta property="og:description" content="グラフの表現方法 # グラフはコード上でどのように表現して作ればよいのか？ ここではいくつか方法を示す。 隣接行列 # まずは隣接行列という方法について" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/procon/graph/" />
+<meta property="article:modified_time" content="2020-04-02T20:47:39+09:00" />
 <title>グラフの表現方法 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.471b86456e1ab598448a262e7ccbf98480e2cffe0560a410bc367f17a8128db8.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fprocon\2fgraph\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,100 +102,122 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>グラフの表現方法</strong>
-</header>
 
-      
-<article class="markdown">
-
-<h1 id="グラフの表現方法">グラフの表現方法</h1>
-
-<p>グラフはコード上でどのように表現して作ればよいのか？</p>
-
-<p>ここではいくつか方法を示す。</p>
-
-<h2 id="隣接行列">隣接行列</h2>
-
-<p>まずは隣接行列という方法について。</p>
-
-<p>グラフの頂点の数をVとしたときに初期値が全て0、大きさ|V|*|V|の２次元リスト(行列)Gを用意し、頂点iと頂点jが結ばれているときにG[i][j]、G[j][i]を1にする、という形でグラフを表現する方法である。なお、有向グラフの場合は有効な方向のみに1を設定し、重み付きグラフのときは1ではなく具体的な重みの値を入力する、という形で表現できる。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/procon/graph1.png" alt="無向グラフと隣接行列" /></p>
-
-<p><br></p>
-
-<p><img src="https://WAT36.github.io/pages/img/procon/graph2.png" alt="有向グラフと隣接行列" /></p>
-
-<p>隣接行列はある2頂点が辺で結ばれているかがすぐわかるという利点があるが、|V|*|V|のリストを作るため、頂点の数が多く辺の数が少ないとリストの大きさや使われない領域がかなり大きくなってしまい、無駄にメモリを利用してしまうという欠点がある。</p>
-
-<h2 id="隣接リスト">隣接リスト</h2>
-
-<p>次に隣接リストという方法についてを述べる。</p>
-
-<p>隣接リストはリストのi番目の要素にグラフの頂点iが結んでいる頂点のインデックスのリストを入れたものである。<br />
-隣接行列と比べると、辺で結ばれていない頂点のデータが無いため、メモリ量が節約できる。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/procon/graph3.png" alt="無向グラフと隣接リスト" /></p>
-
-<p><br></p>
-
-<p><img src="https://WAT36.github.io/pages/img/procon/graph4.png" alt="有向グラフと隣接リスト" /></p>
-
-<p>他にも方法はある？と思うが、見つかったら随時追記いたします・・。</p>
-</article>
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
+  <label for="toc-control">
     
-    <a href="https://github.com/alex-shpak/hugo-book/commit/8958f7928b02095182aef7b5c36200055dfc78dd" title='Last modified Apr 2, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 2, 2020
-    </a>
-  </div>
-  
+  </label>
 </div>
 
 
-      
-    </div>
-    
   
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="グラフの表現方法">
+  グラフの表現方法
+  <a class="anchor" href="#%e3%82%b0%e3%83%a9%e3%83%95%e3%81%ae%e8%a1%a8%e7%8f%be%e6%96%b9%e6%b3%95">#</a>
+</h1>
+<p>グラフはコード上でどのように表現して作ればよいのか？</p>
+<p>ここではいくつか方法を示す。</p>
+<h2 id="隣接行列">
+  隣接行列
+  <a class="anchor" href="#%e9%9a%a3%e6%8e%a5%e8%a1%8c%e5%88%97">#</a>
+</h2>
+<p>まずは隣接行列という方法について。</p>
+<p>グラフの頂点の数をVとしたときに初期値が全て0、大きさ|V|*|V|の２次元リスト(行列)Gを用意し、頂点iと頂点jが結ばれているときにG[i][j]、G[j][i]を1にする、という形でグラフを表現する方法である。なお、有向グラフの場合は有効な方向のみに1を設定し、重み付きグラフのときは1ではなく具体的な重みの値を入力する、という形で表現できる。</p>
+<p><img src="https://WAT36.github.io/pages/img/procon/graph1.png" alt="無向グラフと隣接行列" /></p>
+<br>
+<p><img src="https://WAT36.github.io/pages/img/procon/graph2.png" alt="有向グラフと隣接行列" /></p>
+<p>隣接行列はある2頂点が辺で結ばれているかがすぐわかるという利点があるが、|V|*|V|のリストを作るため、頂点の数が多く辺の数が少ないとリストの大きさや使われない領域がかなり大きくなってしまい、無駄にメモリを利用してしまうという欠点がある。</p>
+<h2 id="隣接リスト">
+  隣接リスト
+  <a class="anchor" href="#%e9%9a%a3%e6%8e%a5%e3%83%aa%e3%82%b9%e3%83%88">#</a>
+</h2>
+<p>次に隣接リストという方法についてを述べる。</p>
+<p>隣接リストはリストのi番目の要素にグラフの頂点iが結んでいる頂点のインデックスのリストを入れたものである。<br>
+隣接行列と比べると、辺で結ばれていない頂点のデータが無いため、メモリ量が節約できる。</p>
+<p><img src="https://WAT36.github.io/pages/img/procon/graph3.png" alt="無向グラフと隣接リスト" /></p>
+<br>
+<p><img src="https://WAT36.github.io/pages/img/procon/graph4.png" alt="有向グラフと隣接リスト" /></p>
+<p>他にも方法はある？と思うが、見つかったら随時追記いたします・・。</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
 
 
 
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/8958f7928b02095182aef7b5c36200055dfc78dd" title='Last modified by Wataru Tsukagoshi | Apr 2, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Apr 2, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/procon/graph.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

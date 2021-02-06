@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="例外処理(try文) # 実行時エラー(例外)のハンドリングを行うtry文についてを示す。 言語により微妙に呼び名が違うところがあるので注意。 Java J">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="例外処理(try文)" />
+<meta property="og:description" content="例外処理(try文) # 実行時エラー(例外)のハンドリングを行うtry文についてを示す。 言語により微妙に呼び名が違うところがあるので注意。 Java J" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/exception/try/" />
+<meta property="article:modified_time" content="2020-01-26T01:35:02+09:00" />
 <title>例外処理(try文) | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.471b86456e1ab598448a262e7ccbf98480e2cffe0560a410bc367f17a8128db8.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2f exception\2ftry\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,48 +102,51 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>例外処理(try文)</strong>
-</header>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="例外処理-try文">例外処理(try文)</h1>
-
-<p>実行時エラー(例外)のハンドリングを行うtry文についてを示す。<br />
+      
+  <article class="markdown"><h1 id="例外処理try文">
+  例外処理(try文)
+  <a class="anchor" href="#%e4%be%8b%e5%a4%96%e5%87%a6%e7%90%86try%e6%96%87">#</a>
+</h1>
+<p>実行時エラー(例外)のハンドリングを行うtry文についてを示す。<br>
 言語により微妙に呼び名が違うところがあるので注意。</p>
 
 
 
 
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-try" style="display: none;" id="tabs-try-0" checked="checked" />
-  <label for="tabs-try-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Javaでは<strong>try-catch(-finally)</strong>文で実行時エラー(例外)のハンドリングを行う。<br />
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-try" id="tabs-try-0" checked="checked" />
+  <label for="tabs-try-0">Java</label>
+  <div class="book-tabs-content markdown-inner"><p>Javaでは**try-catch(-finally)**文で実行時エラー(例外)のハンドリングを行う。<br>
 記法は以下の通り。</p>
-
 <pre><code>try {
     //処理文
 }
@@ -148,41 +157,37 @@ catch(例外クラス名 変数名){
 finally{
     //try文またはcatch文の処理終了時に行う処理
 }
-</code></pre>
-
-<p>Javaでは例外が発生しうる箇所をtry{}で囲んでおくと、例外発生時に処理を中断してcatch文へと飛ぶ。<br />
-catch文は宣言時に、例外クラス名と(catch文内で利用する)変数を指定する。このcatch文はいくらでも宣言でき、try文内で発生した例外は対応するcatch文へと飛ぶ。try文内で発生した例外がcatch文で書かれていない場合はハンドリングができないので注意。<br />
+</code></pre><p>Javaでは例外が発生しうる箇所をtry{}で囲んでおくと、例外発生時に処理を中断してcatch文へと飛ぶ。<br>
+catch文は宣言時に、例外クラス名と(catch文内で利用する)変数を指定する。このcatch文はいくらでも宣言でき、try文内で発生した例外は対応するcatch文へと飛ぶ。try文内で発生した例外がcatch文で書かれていない場合はハンドリングができないので注意。<br>
 finally文はtry・catch文の処理が終わった後に実行される文である。実行時に例外が発生した場合・しなかった場合の両方の場合で実行する処理をここに記述する。ちなみにfinally文は宣言してもしなくても良い。</p>
-
 <p>実行例を以下に示す。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">lang</span>.<span style="color:#a6e22e">Math</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.lang.Math<span style="color:#f92672">;</span>
 
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
-  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span><span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[]){</span>
 
     <span style="color:#75715e">//a[0]~a[3]
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span>[] <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> {0,1,2,3};
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> a <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>0<span style="color:#f92672">,</span>1<span style="color:#f92672">,</span>2<span style="color:#f92672">,</span>3<span style="color:#f92672">};</span>
 
     <span style="color:#75715e">//0~7の間でランダムに数値生成
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">max</span> <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span>)(Math.<span style="color:#a6e22e">random</span>()<span style="color:#f92672">*</span>7);
-    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;random:&#34;</span><span style="color:#f92672">+</span>max);
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> max <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)(</span>Math<span style="color:#f92672">.</span><span style="color:#a6e22e">random</span><span style="color:#f92672">()*</span>7<span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;random:&#34;</span><span style="color:#f92672">+</span>max<span style="color:#f92672">);</span>
 
-    <span style="color:#66d9ef">try</span>{
+    <span style="color:#66d9ef">try</span><span style="color:#f92672">{</span>
       <span style="color:#75715e">//max&lt;3なら正常終了、3以上なら実行時エラー発生
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>max;i<span style="color:#f92672">++</span>){
-        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;a[&#34;</span><span style="color:#f92672">+</span>i<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;]:&#34;</span><span style="color:#f92672">+</span>a[i]);
-      }
-    }<span style="color:#66d9ef">catch</span>(ArrayIndexOutOfBoundsException <span style="color:#a6e22e">e</span>){
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span>i<span style="color:#f92672">&lt;</span>max<span style="color:#f92672">;</span>i<span style="color:#f92672">++){</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a[&#34;</span><span style="color:#f92672">+</span>i<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;]:&#34;</span><span style="color:#f92672">+</span>a<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+      <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span><span style="color:#66d9ef">catch</span><span style="color:#f92672">(</span>ArrayIndexOutOfBoundsException e<span style="color:#f92672">){</span>
       <span style="color:#75715e">//配列の範囲外参照エラー発生時の処理(ArrayIndexOutOfBoundsException)
-</span><span style="color:#75715e"></span>      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Error!!&#34;</span>);
-    }<span style="color:#66d9ef">finally</span>{
+</span><span style="color:#75715e"></span>      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Error!!&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span><span style="color:#66d9ef">finally</span><span style="color:#f92672">{</span>
       <span style="color:#75715e">//エラー発生してもしなくても実行される
-</span><span style="color:#75715e"></span>      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;finally&#34;</span>);
-    }
-  }
-}</code></pre></div>
-<p>実行結果</p>
-
+</span><span style="color:#75715e"></span>      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;finally&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>実行結果</p>
 <pre><code>$ java Main
 random:6
 a[0]:0
@@ -197,18 +202,10 @@ a[0]:0
 a[1]:1
 a[2]:2
 finally
-</code></pre>
-
-  </div>
-
-  <input type="radio" name="tabs-try" style="display: none;" id="tabs-try-1"  />
-  <label for="tabs-try-1">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Pythonでは<strong>try-except(-finally)</strong>文で実行時エラー(例外)のハンドリングを行う。<br />
+</code></pre></div><input type="radio" class="toggle" name="tabs-try" id="tabs-try-1"  />
+  <label for="tabs-try-1">Python</label>
+  <div class="book-tabs-content markdown-inner"><p>Pythonでは**try-except(-finally)**文で実行時エラー(例外)のハンドリングを行う。<br>
 記法は以下の通り。</p>
-
 <pre><code>try:
     # 処理文
 except (例外の型名):
@@ -216,13 +213,10 @@ except (例外の型名):
 #exceptは何個でも記述可能
 finally:
     # 処理文
-</code></pre>
-
-<p>try文の中に例外が発生しうる処理文を記述する。<br />
+</code></pre><p>try文の中に例外が発生しうる処理文を記述する。<br>
 例外が発生した場合は処理を中止しexcept文の該当する例外の所に飛ぶ。except文の宣言時には例外の型名を書く。
-発生した例外がexcept文で書かれていない場合はハンドリングができないので注意。<br />
+発生した例外がexcept文で書かれていない場合はハンドリングができないので注意。<br>
 finally文はjavaと同じく、例外が発生してもしなくても最後に実行される文である。finally文は記述しなくても良い。</p>
-
 <p>実行例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">//</span><span style="color:#ae81ff">0</span>
 Traceback (most recent call last):
@@ -238,51 +232,69 @@ Traceback (most recent call last):
 <span style="color:#f92672">...</span> 
 <span style="color:#960050;background-color:#1e0010">ゼロ除算例外発生</span>
 <span style="color:#66d9ef">finally</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
-<p>ここでは0で割ったときにゼロ除算の例外ZeroDivisionErrorが発生するが、try-exceptでハンドリングをすると、例外発生時にそれに対応したexcept文の内容が実行される。<br />
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+</code></pre></div><p>ここでは0で割ったときにゼロ除算の例外ZeroDivisionErrorが発生するが、try-exceptでハンドリングをすると、例外発生時にそれに対応したexcept文の内容が実行される。<br>
 その後、finally文の内容が実行される。</p>
-
-  </div>
-
-</div>
+</div></div>
 
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/17953e288350812e48940afb2408fd6baac0d2ed" title='Last modified Jan 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 26, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/17953e288350812e48940afb2408fd6baac0d2ed" title='Last modified by Wataru Tsukagoshi | Jan 26, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jan 26, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/exception/try.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
+</div>
+  
+ 
 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
 
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

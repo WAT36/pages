@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Slackには自作のアプリを作成でき、またコマンドを指定することで指定した動作を行える。 今回はSlackアプリの作成方法、及びコマンドの作成">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="指定URLにWebリクエストを送るSlack Appの作成" />
+<meta property="og:description" content="Slackには自作のアプリを作成でき、またコマンドを指定することで指定した動作を行える。 今回はSlackアプリの作成方法、及びコマンドの作成" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/posts/slack_request/" />
+<meta property="article:published_time" content="2020-05-09T15:13:17+09:00" />
+<meta property="article:modified_time" content="2021-01-29T18:48:26+09:00" />
 <title>指定URLにWebリクエストを送るSlack Appの作成 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.471b86456e1ab598448a262e7ccbf98480e2cffe0560a410bc367f17a8128db8.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,19 +36,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -47,42 +60,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2fposts\2fslack_request\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -95,96 +103,186 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
-    <div class="book-posts">
-      <header class="flex align-center justify-between book-header">
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>指定URLにWebリクエストを送るSlack Appの作成</strong>
-</header>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-slack-appを作成する">1. Slack Appを作成する</a></li>
+    <li><a href="#2-指定urlへwebリクエストを送るコマンドを作成する">2. (指定URLへWebリクエストを送る)コマンドを作成する</a>
+      <ul>
+        <li><a href="#21-slack-appのトップページへ行く">2.1 Slack Appのトップページへ行く</a></li>
+        <li><a href="#22-slash-commandを作成する">2.2 Slash Commandを作成する</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
-
-<header class="markdown">
-  <h1>指定URLにWebリクエストを送るSlack Appの作成</h1>
-  <h5>
-    <strong>May 9, 2020</strong>
-  </h5>
-</header>
+      
 <article class="markdown">
+  <h1>
+    <a href="https://WAT36.github.io/pages/posts/slack_request/">指定URLにWebリクエストを送るSlack Appの作成</a>
+  </h1>
+  
+  <h5>May 9, 2020</h5>
 
-<p>Slackには自作のアプリを作成でき、またコマンドを指定することで指定した動作を行える。</p>
 
+
+  
+
+  
+
+
+  <p><p>Slackには自作のアプリを作成でき、またコマンドを指定することで指定した動作を行える。</p>
 <p>今回はSlackアプリの作成方法、及びコマンドの作成方法、コマンド実行時に指定URLへWebリクエストを送信する方法をまとめる。</p>
-
-<h2 id="1-slack-appを作成する">1. Slack Appを作成する</h2>
-
+<h2 id="1-slack-appを作成する">
+  1. Slack Appを作成する
+  <a class="anchor" href="#1-slack-app%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">#</a>
+</h2>
 <ul>
 <li><a href="https://api.slack.com/apps">https://api.slack.com/apps</a>のページに行く。</li>
 </ul>
-
-<h2 id="2-指定urlへwebリクエストを送る-コマンドを作成する">2. (指定URLへWebリクエストを送る)コマンドを作成する</h2>
-
+<h2 id="2-指定urlへwebリクエストを送るコマンドを作成する">
+  2. (指定URLへWebリクエストを送る)コマンドを作成する
+  <a class="anchor" href="#2-%e6%8c%87%e5%ae%9aurl%e3%81%b8web%e3%83%aa%e3%82%af%e3%82%a8%e3%82%b9%e3%83%88%e3%82%92%e9%80%81%e3%82%8b%e3%82%b3%e3%83%9e%e3%83%b3%e3%83%89%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">#</a>
+</h2>
 <p>Slackアプリのコマンドはスラッシュコマンドと言われる（スラッシュから始まるので）</p>
-
 <p>ここではこの作成方法についてを示す。</p>
-
-<h3 id="2-1-slack-appのトップページへ行く">2.1 Slack Appのトップページへ行く</h3>
-
+<h3 id="21-slack-appのトップページへ行く">
+  2.1 Slack Appのトップページへ行く
+  <a class="anchor" href="#21-slack-app%e3%81%ae%e3%83%88%e3%83%83%e3%83%97%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%b8%e8%a1%8c%e3%81%8f">#</a>
+</h3>
 <p>スラッシュコマンドを作りたいSlack Appのページに行く。</p>
-
 <p>具体的には、<a href="https://api.slack.com/apps">https://api.slack.com/apps</a>のページに行くと、作成したSlack Appが表示されるので、そのアプリ名をクリックする。</p>
-
-<h3 id="2-2-slash-commandを作成する">2.2 Slash Commandを作成する</h3>
-
+<h3 id="22-slash-commandを作成する">
+  2.2 Slash Commandを作成する
+  <a class="anchor" href="#22-slash-command%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">#</a>
+</h3>
 <p>ページ左側にある「Slash Command」をクリックする。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/blog/slackapp_config.png" alt="Slack App" /></p>
-
 <p>その後、「Create New Command」をクリックする。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/blog/slack_slashcommand.png" alt="Slack App" /></p>
-
 <p>するとコマンド名、リクエスト先のURL等の入力を求められるので、入力する。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/blog/slack_createnewcommand.png" alt="Slack App" /></p>
-
 <p>入力後、右下の「Save」を押すとコマンドが作成される。</p>
-
 <p>なお、この形式で作ったSlash Commandは、指定URLにJSON形式のデータをPOSTで送る。</p>
-
-<p>コマンド実行時に引数も指定できるが、引数に指定したデータはJSONの&rdquo;text&rdquo;というキーに渡されて送られる。</p>
+<p>コマンド実行時に引数も指定できるが、引数に指定したデータはJSONの&quot;text&quot;というキーに渡されて送られる。</p>
+</p>
 </article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/4cd9501e1342aca184bced89b6226e4e7da6d19b" title='Last modified by Wataru Tsukagoshi | Jan 29, 2021' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jan 29, 2021</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//posts/slack_request.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
 
       
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-slack-appを作成する">1. Slack Appを作成する</a></li>
+    <li><a href="#2-指定urlへwebリクエストを送るコマンドを作成する">2. (指定URLへWebリクエストを送る)コマンドを作成する</a>
+      <ul>
+        <li><a href="#21-slack-appのトップページへ行く">2.1 Slack Appのトップページへ行く</a></li>
+        <li><a href="#22-slash-commandを作成する">2.2 Slash Commandを作成する</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
