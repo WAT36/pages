@@ -95,7 +95,6 @@ html
 <div id="length">x px</div>
 ```
 
-
 表示例
 
 <hr>
@@ -108,6 +107,8 @@ html
 <script type="text/javascript" src="/js_sample_pages/window_sample.js"></script>
 <hr>
 <hr>
+
+上記は、ウィンドウの大きさを変えると値が変化する。
 
 
 # 主なメソッド
@@ -222,4 +223,4 @@ html
 <hr>
 <hr>
 
-これは、１秒毎に現在時刻を取得して更新するプログラムである。１秒毎に現在時刻を取得する仕組みをタイマー処理(setInterval)で表現している。
+上記は１秒毎に現在時刻を取得して更新するプログラムになる。１秒毎に現在時刻を取得する仕組みをタイマー処理(setInterval)で表現している。
