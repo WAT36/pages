@@ -41,4 +41,5 @@ bookToc: false
      - [DOM]({{< relref "/docs/front-end/dom.md" >}})
      - [イベント]({{< relref "/docs/front-end/event.md" >}})
      - [ウィンドウ]({{< relref "/docs/front-end/window.md" >}})
+     - [ブラウザ関連API]({{< relref "/docs/front-end/browser_api.md" >}})
 
