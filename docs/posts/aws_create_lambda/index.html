@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="AWSでLambdaの関数を作る方法について、またまた備忘がてら手順をのせておく。 1. AWSマネジメントコンソールにログインする # AWSマネジ">
@@ -16,7 +15,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.bf977299820fc3e75a9332e0686384379e79c463fe25aa5ab6c4b9b8820d8d37.js" integrity="sha256-v5dymYIPw&#43;dakzLgaGOEN555xGP&#43;JapatsS5uIINjTc="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -36,14 +35,12 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body dir="ltr">
-  <input type="checkbox" class="hidden toggle" id="menu-control" />
-  <input type="checkbox" class="hidden toggle" id="toc-control" />
-  <main class="container flex">
-    <aside class="book-menu">
-      <div class="book-menu-content">
-        
-  <nav>
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
 <h2 class="book-brand">
   <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
   </a>
@@ -108,53 +105,16 @@ https://github.com/alex-shpak/hugo-book
   <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
- 
-      </div>
     </aside>
 
-    <div class="book-page">
-      <header class="book-header">
-        
-  <div class="flex align-center justify-between">
+    <div class="book-posts">
+      <header class="flex align-center justify-between book-header">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-
   <strong>Lambda関数の作成方法(AWS)</strong>
+</header>
 
-  <label for="toc-control">
-    
-    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
-  </label>
-</div>
-
-
-  
-  <aside class="hidden clearfix">
-    
-  
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#1-awsマネジメントコンソールにログインする">1. AWSマネジメントコンソールにログインする</a></li>
-    <li><a href="#2-lambdaのページを開く">2. Lambdaのページを開く</a></li>
-    <li><a href="#3-関数を作成する">3. 関数を作成する</a>
-      <ul>
-        <li><a href="#35-iamロールの作成方法">(3.5 IAMロールの作成方法)</a></li>
-      </ul>
-    </li>
-    <li><a href="#4-コードを設定する">4. コードを設定する</a></li>
-  </ul>
-</nav>
-
-
-
-  </aside>
-  
- 
-      </header>
-
-      
       
 <article class="markdown">
   <h1>
@@ -247,51 +207,31 @@ https://github.com/alex-shpak/hugo-book
 <p>以上、Lambda関数の作成方法である。</p>
 </p>
 </article>
- 
+
       
-
-      <footer class="book-footer">
-        
-  <div class="flex flex-wrap justify-between">
-
-
-
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/09aea77d234f39fb94de890338fba3deba22e1dd" title='Last modified by Wataru Tsukagoshi | Apr 5, 2020' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Apr 5, 2020</span>
-    </a>
-  </div>
-
-
-
+<div class="book-footer justify-between">
+  
   <div>
-    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//posts/aws_create_lambda.md" target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
-      <span>Edit this page</span>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/09aea77d234f39fb94de890338fba3deba22e1dd" title='Last modified Apr 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 5, 2020
     </a>
   </div>
-
+  
+  
+  <div>
+    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/posts/aws_create_lambda.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" alt="Edit" /> Edit this page
+    </a>
+  </div>
+  
 </div>
 
- 
-        
-      </footer>
 
       
-  
-  <div class="book-comments">
-
-</div>
-  
- 
-
-      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
     
-    <aside class="book-toc">
-      <div class="book-toc-content">
-        
   
 <nav id="TableOfContents">
   <ul>
@@ -307,25 +247,10 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
- 
-      </div>
-    </aside>
-    
+
   </main>
 
   
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

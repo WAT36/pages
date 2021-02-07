@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="動的計画法の応用題 # 動的計画法の応用問題をいくつか紹介する。 最長共通部分列問題 # 例えば以下のような問題。 ２つの文字列s,tの共通部分文字列の">
@@ -15,7 +14,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.bf977299820fc3e75a9332e0686384379e79c463fe25aa5ab6c4b9b8820d8d37.js" integrity="sha256-v5dymYIPw&#43;dakzLgaGOEN555xGP&#43;JapatsS5uIINjTc="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -35,14 +34,12 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body dir="ltr">
-  <input type="checkbox" class="hidden toggle" id="menu-control" />
-  <input type="checkbox" class="hidden toggle" id="toc-control" />
-  <main class="container flex">
-    <aside class="book-menu">
-      <div class="book-menu-content">
-        
-  <nav>
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
 <h2 class="book-brand">
   <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
   </a>
@@ -107,58 +104,18 @@ https://github.com/alex-shpak/hugo-book
   <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
- 
-      </div>
     </aside>
 
     <div class="book-page">
-      <header class="book-header">
-        
-  <div class="flex align-center justify-between">
+      <header class="flex align-center justify-between book-header">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
   </label>
-
   <strong>動的計画法の応用題</strong>
-
-  <label for="toc-control">
-    
-    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
-  </label>
-</div>
-
-
-  
-  <aside class="hidden clearfix">
-    
-  
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#最長共通部分列問題">最長共通部分列問題</a></li>
-    <li><a href="#個数制限なしナップザック問題">個数制限なしナップザック問題</a>
-      <ul>
-        <li><a href="#値が大きい時">値が大きい時</a></li>
-      </ul>
-    </li>
-    <li><a href="#個数制限付き部分和問題">個数制限付き部分和問題</a></li>
-    <li><a href="#最長増加部分列問題">最長増加部分列問題</a></li>
-    <li><a href="#分割数">分割数</a></li>
-    <li><a href="#重複組み合わせ">重複組み合わせ</a></li>
-    <li><a href="#ビットdp">ビットDP</a></li>
-  </ul>
-</nav>
-
-
-
-  </aside>
-  
- 
-      </header>
+</header>
 
       
-      
-  <article class="markdown"><h1 id="動的計画法の応用題">
+<article class="markdown"><h1 id="動的計画法の応用題">
   動的計画法の応用題
   <a class="anchor" href="#%e5%8b%95%e7%9a%84%e8%a8%88%e7%94%bb%e6%b3%95%e3%81%ae%e5%bf%9c%e7%94%a8%e9%a1%8c">#</a>
 </h1>
@@ -554,51 +511,31 @@ d<span style="color:#f92672">=</span>[[INF,<span style="color:#ae81ff">3</span>,
 </code></pre></div><p>実行結果は以下の通り。</p>
 <pre><code>答:22,経路:0 -&gt; 3 -&gt; 4 -&gt; 1 -&gt; 2 -&gt; 0
 </code></pre></article>
- 
+
       
-
-      <footer class="book-footer">
-        
-  <div class="flex flex-wrap justify-between">
-
-
-
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/02e5e4e9d8878de82f73e98849a37f04e788d16f" title='Last modified by Wataru Tsukagoshi | Nov 7, 2020' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Nov 7, 2020</span>
-    </a>
-  </div>
-
-
-
+<div class="book-footer justify-between">
+  
   <div>
-    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/procon/dp_applied.md" target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
-      <span>Edit this page</span>
+    
+    <a href="https://github.com/alex-shpak/hugo-book/commit/02e5e4e9d8878de82f73e98849a37f04e788d16f" title='Last modified Nov 7, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Nov 7, 2020
     </a>
   </div>
-
+  
+  
+  <div>
+    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/docs/programming/procon/dp_applied.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" alt="Edit" /> Edit this page
+    </a>
+  </div>
+  
 </div>
 
- 
-        
-      </footer>
 
       
-  
-  <div class="book-comments">
-
-</div>
-  
- 
-
-      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
     
-    <aside class="book-toc">
-      <div class="book-toc-content">
-        
   
 <nav id="TableOfContents">
   <ul>
@@ -617,25 +554,10 @@ d<span style="color:#f92672">=</span>[[INF,<span style="color:#ae81ff">3</span>,
 </nav>
 
 
- 
-      </div>
-    </aside>
-    
+
   </main>
 
   
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
