@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="if-else文 # 指定した条件に応じて処理を分岐させる時に使うのがif-else文である。 これはほぼ全てのプログラミング言語に実装されている">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="if-else文" />
+<meta property="og:description" content="if-else文 # 指定した条件に応じて処理を分岐させる時に使うのがif-else文である。 これはほぼ全てのプログラミング言語に実装されている" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/control/ifelse/" />
+<meta property="article:modified_time" content="2020-09-11T00:51:44+09:00" />
 <title>if-else文 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.56342249d2185a2718a58a56889f268bce80fac8169c64e2252cd63fef2cffff.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2f control\2fifelse\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,47 +102,50 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>if-else文</strong>
-</header>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="if-else文">if-else文</h1>
-
-<p>指定した条件に応じて処理を分岐させる時に使うのがif-else文である。<br />
+      
+  <article class="markdown"><h1 id="if-else文">
+  if-else文
+  <a class="anchor" href="#if-else%e6%96%87">#</a>
+</h1>
+<p>指定した条件に応じて処理を分岐させる時に使うのがif-else文である。<br>
 これはほぼ全てのプログラミング言語に実装されている。言語ごとの記法を示す。</p>
 
 
 
 
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-ifelse" style="display: none;" id="tabs-ifelse-0" checked="checked" />
-  <label for="tabs-ifelse-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Javaでの記法は以下の通り。</p>
-
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-ifelse" id="tabs-ifelse-0" checked="checked" />
+  <label for="tabs-ifelse-0">Java</label>
+  <div class="book-tabs-content markdown-inner"><p>Javaでの記法は以下の通り。</p>
 <pre><code>if(条件1){
     //条件1がtrueならこの処理実行
 }else if(条件2){
@@ -144,57 +153,42 @@ https://github.com/alex-shpak/hugo-book
 }else{
     //条件1,2ともfalseならこの処理実行
 }
-</code></pre>
-
-<p>if,else if後の()内にはboolean値またはbooleanを返すような式にする。<br />
+</code></pre><p>if,else if後の()内にはboolean値またはbooleanを返すような式にする。<br>
 else ifは限りなく設けることができる。</p>
-
 <p>実行例</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
-  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-    String <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> args[0];
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span><span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[]){</span>
+    String s <span style="color:#f92672">=</span> args<span style="color:#f92672">[</span>0<span style="color:#f92672">];</span>
 
-    <span style="color:#66d9ef">if</span>(s.<span style="color:#a6e22e">equals</span>(<span style="color:#e6db74">&#34;0&#34;</span>)){
-      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;ゼロ&#34;</span>);
-    }<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(s.<span style="color:#a6e22e">equals</span>(<span style="color:#e6db74">&#34;1&#34;</span>)){
-      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;ひとつ&#34;</span>);
-    }<span style="color:#66d9ef">else</span>{
-      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;それ以外&#34;</span>);
-    }
+    <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;0&#34;</span><span style="color:#f92672">)){</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;ゼロ&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span><span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">)){</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;ひとつ&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span><span style="color:#66d9ef">else</span><span style="color:#f92672">{</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;それ以外&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
 
-  }
-}</code></pre></div>
-<p>実行結果</p>
-
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>実行結果</p>
 <pre><code>$ java Main 0  
 ゼロ  
 $ java Main 1  
 ひとつ  
 $ java Main 2  
 それ以外  
-</code></pre>
-
-  </div>
-
-  <input type="radio" name="tabs-ifelse" style="display: none;" id="tabs-ifelse-1"  />
-  <label for="tabs-ifelse-1">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Pythonでの記法は以下の通り。</p>
-
+</code></pre></div><input type="radio" class="toggle" name="tabs-ifelse" id="tabs-ifelse-1"  />
+  <label for="tabs-ifelse-1">Python</label>
+  <div class="book-tabs-content markdown-inner"><p>Pythonでの記法は以下の通り。</p>
 <pre><code>if 条件1:
     #条件1がTrueならこの処理実行
 elif 条件2:
     #条件1がFalse、条件2がTrueならこの処理実行
 else:
     #条件1,2ともfalseならこの処理実行
-</code></pre>
-
-<p>条件にはbool値またはそれを返す式にする。<br />
-また、if,elif,elseの後にはコロン&rdquo;:&ldquo;をつける。<br />
+</code></pre><p>条件にはbool値またはそれを返す式にする。<br>
+また、if,elif,elseの後にはコロン&quot;:&ldquo;をつける。<br>
 elifは限りなく設定できる。</p>
-
 <p>実行例</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>  
 <span style="color:#f92672">&gt;&gt;&gt;</span>   
@@ -206,16 +200,10 @@ elifは限りなく設定できる。</p>
 <span style="color:#f92672">...</span>     <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;プラス&#34;</span>)
 <span style="color:#f92672">...</span> 
 <span style="color:#960050;background-color:#1e0010">ゼロ</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
-  </div>
-
-  <input type="radio" name="tabs-ifelse" style="display: none;" id="tabs-ifelse-2"  />
-  <label for="tabs-ifelse-2">
-    Javascript
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Javascriptでの記法は以下のとおり。</p>
-
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+</code></pre></div></div><input type="radio" class="toggle" name="tabs-ifelse" id="tabs-ifelse-2"  />
+  <label for="tabs-ifelse-2">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>Javascriptでの記法は以下のとおり。</p>
 <pre><code>if (条件式1) {
   //条件式1がtrueならこの処理実行
 }else if(条件式2){
@@ -223,55 +211,69 @@ elifは限りなく設定できる。</p>
 }else{
   //条件式1,2がfalseならこの処理実行
 }
-</code></pre>
-
-<p>なお、Javascriptでは、条件式のところに<strong>数値または文字列</strong>及びその値が入った変数を設定することもできる。</p>
-
+</code></pre><p>なお、Javascriptでは、条件式のところに<strong>数値または文字列</strong>及びその値が入った変数を設定することもできる。</p>
 <p>数値を設定した場合は、値が0の場合falseとみなし、それ以外の値は全てtrueとみなされる。</p>
-
-<p>文字列の場合は、空文字(&ldquo;)の場合falseとみなされ、それ以外の値の場合は全てtrueとみなされる。</p>
-
-  </div>
-
-</div>
+<p>文字列の場合は、空文字('')の場合falseとみなされ、それ以外の値の場合は全てtrueとみなされる。</p>
+</div></div>
 
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/29ed329f25643c2f8d8b8fe5d47359b3f96c5185" title='Last modified Sep 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 11, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/29ed329f25643c2f8d8b8fe5d47359b3f96c5185" title='Last modified by Wataru Tsukagoshi | Sep 11, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Sep 11, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/control/ifelse.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
+</div>
+  
+ 
 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
 
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

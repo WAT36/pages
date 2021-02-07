@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="正規表現 # 文字列に正規表現を適用してある文字列パターンを抽出・検索したいという場合があると思う。 その場合に利用する方法を示す。 ちなみに正規表">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="正規表現" />
+<meta property="og:description" content="正規表現 # 文字列に正規表現を適用してある文字列パターンを抽出・検索したいという場合があると思う。 その場合に利用する方法を示す。 ちなみに正規表" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/other/re/" />
+<meta property="article:modified_time" content="2020-03-31T23:28:17+09:00" />
 <title>正規表現 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.56342249d2185a2718a58a56889f268bce80fac8169c64e2252cd63fef2cffff.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fother\2fre\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,54 +102,54 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>正規表現</strong>
-</header>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="正規表現">正規表現</h1>
-
+      
+  <article class="markdown"><h1 id="正規表現">
+  正規表現
+  <a class="anchor" href="#%e6%ad%a3%e8%a6%8f%e8%a1%a8%e7%8f%be">#</a>
+</h1>
 <p>文字列に正規表現を適用してある文字列パターンを抽出・検索したいという場合があると思う。</p>
-
 <p>その場合に利用する方法を示す。</p>
-
 <p>ちなみに正規表現の文法についてはここでは割愛する。</p>
 
 
 
 
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-re" style="display: none;" id="tabs-re-0" checked="checked" />
-  <label for="tabs-re-0">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Pythonでは正規表現を扱う<strong>re</strong>モジュールがある。
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-re" id="tabs-re-0" checked="checked" />
+  <label for="tabs-re-0">Python</label>
+  <div class="book-tabs-content markdown-inner"><p>Pythonでは正規表現を扱う<strong>re</strong>モジュールがある。
 この中には色々関数があり、これらを利用して文字列パターンの抽出や検索を行う。</p>
-
 <p>また、reを使う時、条件として使う正規表現も文字列として入力するが、正規表現で使う文字は特殊文字が多く、そのまま入力すると正規表現として認識してくれない時がある。
-それを防ぐため、pythonの<strong>raw文字列</strong>を使って正規表現を書く。raw文字列を使うと、特殊文字を無視して一文字として扱ってくれるのでこの場合便利。使用法は文字列のクォーテーション(&lsquo;)の前にrを付ける。</p>
-
+それを防ぐため、pythonの<strong>raw文字列</strong>を使って正規表現を書く。raw文字列を使うと、特殊文字を無視して一文字として扱ってくれるのでこの場合便利。使用法は文字列のクォーテーション(')の前にrを付ける。</p>
 <p>(例)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;C:\Users\Downloads&#39;</span>) 
   File <span style="color:#e6db74">&#34;&lt;stdin&gt;&#34;</span>, line <span style="color:#ae81ff">1</span>
@@ -153,26 +159,17 @@ https://github.com/alex-shpak/hugo-book
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;C:\Users\Downloads&#39;</span>) 
 C:\Users\Downloads
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e"># \Uも\Dも特殊文字とは認識せずそのまま出力する</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
-<p>このraw文字列を使い、以下に正規表現の関数の例を示す。</p>
-
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+</code></pre></div><p>このraw文字列を使い、以下に正規表現の関数の例を示す。</p>
 <h2 id="正規表現の文字列を正規表現オブジェクトに変換する">正規表現の文字列を正規表現オブジェクトに変換する</h2>
-
-<p>pythonのreで正規表現を使うには、文字列で表した正規表現をそのまま使う方法と、正規表現オブジェクトに変換して使う方法の2つがある。<br />
+<p>pythonのreで正規表現を使うには、文字列で表した正規表現をそのまま使う方法と、正規表現オブジェクトに変換して使う方法の2つがある。<br>
 どちらでもよいが、正規表現の動作を何回も行わせるときは最初に文字列を正規表現オブジェクトに変換させてそれを繰り返し使わせた方が効率良く利用できる。</p>
-
 <p>文字列を正規表現オブジェクトに変換するには、reモジュールの<strong>compile</strong>関数を使う。</p>
-
 <pre><code>re.compile(pattern, flags=0)
-</code></pre>
-
-<p>引数patternに文字列で表した正規表現を入れると、それに対応した正規表現オブジェクトを返してくれる。</p>
-
-<h2 id="正規表現を使って文字列を検索-抽出する">正規表現を使って文字列を検索・抽出する</h2>
-
+</code></pre><p>引数patternに文字列で表した正規表現を入れると、それに対応した正規表現オブジェクトを返してくれる。</p>
+<h2 id="正規表現を使って文字列を検索抽出する">正規表現を使って文字列を検索・抽出する</h2>
 <p>実際に正規表現を使って文字列から該当する部分を検索・抽出するにはどうすればよいのか？
 それにはreモジュールの以下諸関数を利用する。</p>
-
 <table >
 <tr>
 <td style="border-style: none;">・re.<b>search</b>(pattern, string, flags=0) </td>
@@ -191,11 +188,9 @@ C:\Users\Downloads
 <td style="border-style: none;">#string中で正規表現patternにマッチしているものをリストにして全て返す</td>
 </tr>
 </table>
-
 <p>いずれの関数も、もし該当する部分がない場合はNoneが返される。
 また、これら諸関数の返り値は文字列ではなく、マッチオブジェクトと呼ばれる型のデータを返す(findallはリストを返す)。
 マッチオブジェクトから結果を取得したい場合は、以下の諸関数をさらに利用する。</p>
-
 <table>
 <tr>
 <td style="border-style: none;">・Match.<b>start</b>()</td>
@@ -248,13 +243,10 @@ None
 <span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(pattern,s)   
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(m)
 [<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>]
-<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
-<h2 id="正規表現を使って文字列を置換する">正規表現を使って文字列を置換する</h2>
-
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+</code></pre></div><h2 id="正規表現を使って文字列を置換する">正規表現を使って文字列を置換する</h2>
 <p>文字列中の正規表現に該当する箇所を別の文字列に置換するにはreモジュールの関数<strong>sub</strong>を使う。</p>
-
 <p><code>re.sub(pattern, repl, string, count=0, flags=0)</code></p>
-
 <p>この関数を使うと文字列stringの中で正規表現patternに該当する最も左の箇所をreplに置換した文字列を出力する。
 引数のcountには置換を行う最大回数(非負整数)を入力する。デフォルトは0だが、0の場合は回数制限なしに全てを置換する。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> re
@@ -268,48 +260,67 @@ None
 <span style="color:#f92672">&gt;&gt;&gt;</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;aa&#39;</span>,<span style="color:#e6db74">&#39;A&#39;</span>,s) 
 <span style="color:#e6db74">&#39;Aabbbcccdddeeefff&#39;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
-  </div>
-
-</div>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+</code></pre></div></div></div>
 
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/654420d361ba174bae745d8d4a2dd465c55199f9" title='Last modified Mar 31, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 31, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/654420d361ba174bae745d8d4a2dd465c55199f9" title='Last modified by Wataru Tsukagoshi | Mar 31, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Mar 31, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/other/re.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
+</div>
+  
+ 
 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
 
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

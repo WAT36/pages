@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="最小全域木 # 無向グラフが与えられたときに、その内のある辺だけを用いてグラフ中の任意の２頂点を連結(ある頂点から他のどの頂点への経路が存在する">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="最小全域木" />
+<meta property="og:description" content="最小全域木 # 無向グラフが与えられたときに、その内のある辺だけを用いてグラフ中の任意の２頂点を連結(ある頂点から他のどの頂点への経路が存在する" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/procon/minimum_spanning_tree/" />
+<meta property="article:modified_time" content="2020-10-19T23:04:10+09:00" />
 <title>最小全域木 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.56342249d2185a2718a58a56889f268bce80fac8169c64e2252cd63fef2cffff.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fprocon\2fminimum_spanning_tree\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,103 +102,99 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>最小全域木</strong>
-</header>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#プリム法">プリム法</a></li>
+    <li><a href="#クラスカル法">クラスカル法</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="最小全域木">最小全域木</h1>
-
-<p>無向グラフが与えられたときに、その内のある辺だけを用いてグラフ中の任意の２頂点を連結(ある頂点から他のどの頂点への経路が存在する)にした木のことを<strong>全域木(Spanning Tree)</strong>という。</p>
-
-<p>辺にコストがあったときに、使われる辺のコストの和を最小にした全域木のことを<strong>最小全域木(Minimum Spanning Tree)</strong>という。</p>
-
+      
+  <article class="markdown"><h1 id="最小全域木">
+  最小全域木
+  <a class="anchor" href="#%e6%9c%80%e5%b0%8f%e5%85%a8%e5%9f%9f%e6%9c%a8">#</a>
+</h1>
+<p>無向グラフが与えられたときに、その内のある辺だけを用いてグラフ中の任意の２頂点を連結(ある頂点から他のどの頂点への経路が存在する)にした木のことを**全域木(Spanning Tree)**という。</p>
+<p>辺にコストがあったときに、使われる辺のコストの和を最小にした全域木のことを**最小全域木(Minimum Spanning Tree)**という。</p>
 <p>例えばベルマンフォード・ダイクストラ法で用いたグラフの最小全域木は以下のように表される。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/spanning_tree1.png" alt="全域木例1" /></p>
-
 <p>最小全域木を求めるアルゴリズムとして、一般に<strong>プリム法</strong>と<strong>クラスカル法</strong>の2つが知られている。</p>
-
-<h2 id="プリム法">プリム法</h2>
-
+<h2 id="プリム法">
+  プリム法
+  <a class="anchor" href="#%e3%83%97%e3%83%aa%e3%83%a0%e6%b3%95">#</a>
+</h2>
 <p>プリム法は、グラフのある頂点から辺を付け足して行って最小全域木を求めていく手法である。</p>
-
 <p>始め、1つの頂点vからなるグラフTを考えたとき、ここからグラフTとその他の頂点を結ぶ最小コストの辺をグラフTに追加していく、と言う操作を繰り返すことにより、最小全域木が作成できる。</p>
-
 <p>プリム法のアルゴリズムは以下の通り。</p>
-
 <p>入出力：</p>
-
 <ul>
-<li>入力
-
-<ul>
+<li>入力</li>
 <li>グラフ G = (V,E)</li>
 <li>W(a,b):頂点aから頂点b(a,b∈V)を結ぶ辺の重み(コスト)。辺が存在しないときはW(a,b)=∞</li>
 <li>頂点s (s∈V)</li>
-</ul></li>
-<li>出力
-
-<ul>
-<li>最小全域木 X = (V&rsquo;,E&rsquo;)</li>
-</ul></li>
+<li>出力</li>
+<li>最小全域木 X = (V',E')</li>
 </ul>
-
 <p>アルゴリズム：</p>
-
 <ol>
 <li>X=a (a∈V)、Y=V-X とする。aは何でも良い。</li>
 <li>頂点x (x∈X) 、頂点y (y∈Y)を結ぶ辺で、Xに追加したときに閉路をなさない辺のうち、最小のコストを持つ辺eを探す。</li>
 <li>X=X+(eのY側の要素)、Y=Y-(eのY側の要素)とする。</li>
 <li>Y={} (|Y|=0) ならば、Xを出力して終了する。そうでない時は、2.に戻る。</li>
 </ol>
-
 <p>例として、以下のグラフに対しプリム法を適用した場合を追って説明する。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/dijkstra1.png" alt="ダイクストラ例1" /></p>
-
 <p>まずは頂点Aを最小全域木Xとし、その他の頂点をグラフYとする。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/prim1.png" alt="プリム例1" /></p>
-
 <p>次に、グラフXとグラフYを結ぶ辺のうち、Xに加えた時に閉路をなさず、最小コストである辺を探す。この場合は、頂点A-Bを結ぶ辺が該当する。</p>
-
 <p>この辺、及び、頂点BをXに加え、またYから除外する。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/prim2.png" alt="プリム例2" /></p>
-
 <p>この動作を繰り返していく。この状態において、グラフXとグラフYを結ぶ辺のうち、Xに加えた時に閉路をなさず、最小コストである辺は、頂点B-Cを結ぶ辺が該当する。よって、頂点CをXに加え、またYから除外する。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/prim3.png" alt="プリム例3" /></p>
-
 <p>次は、頂点A-Dを結ぶ辺が該当する。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/prim4.png" alt="プリム例4" /></p>
-
 <p>次は、頂点D-Eを結ぶ辺が該当する。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/prim5.png" alt="プリム例5" /></p>
-
 <p>Yの頂点がなくなったので、Xを出力して終了する。このXが、最小全域木である。</p>
-
 <p>以上が、プリム法による最小全域木の導出である。これをコードで実装した例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">INF<span style="color:#f92672">=</span>float(<span style="color:#e6db74">&#34;inf&#34;</span>)
 
@@ -235,72 +237,46 @@ y_nearest_x[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">=</
             min_cost[u]<span style="color:#f92672">=</span>cost[v][u]
             y_nearest_x[u]<span style="color:#f92672">=</span>v
 
-<span style="color:#66d9ef">print</span>(ans_cost)</code></pre></div>
-<p>このコードにおいて、先程の例で示したグラフを表す以下の値を入力する。</p>
+<span style="color:#66d9ef">print</span>(ans_cost)
+</code></pre></div><p>このコードにおいて、先程の例で示したグラフを表す以下の値を入力する。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">V<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
-cost<span style="color:#f92672">=</span>[[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,INF],[<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,INF,<span style="color:#ae81ff">9</span>],[<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>,INF,<span style="color:#ae81ff">10</span>],[<span style="color:#ae81ff">6</span>,INF,INF,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">4</span>],[INF,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">0</span>]]</code></pre></div>
-<p>すると、実行結果は以下のようになる。</p>
-
+cost<span style="color:#f92672">=</span>[[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,INF],[<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,INF,<span style="color:#ae81ff">9</span>],[<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>,INF,<span style="color:#ae81ff">10</span>],[<span style="color:#ae81ff">6</span>,INF,INF,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">4</span>],[INF,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">0</span>]]
+</code></pre></div><p>すると、実行結果は以下のようになる。</p>
 <pre><code>[[0, 2, inf, 6, inf], [2, 0, 1, inf, inf], [inf, 1, 0, inf, inf], [6, inf, inf, 0, 4], [inf, inf, inf, 4, 0]]
-</code></pre>
-
-<h2 id="クラスカル法">クラスカル法</h2>
-
+</code></pre><h2 id="クラスカル法">
+  クラスカル法
+  <a class="anchor" href="#%e3%82%af%e3%83%a9%e3%82%b9%e3%82%ab%e3%83%ab%e6%b3%95">#</a>
+</h2>
 <p>最小全域木を求める2つ目のアルゴリズムとして、クラスカル法を示す。</p>
-
 <p>クラスカル法は、辺をコストの低い順から、閉路ができないように全ての頂点が含まれるまで追加していくという手法である。この方法で、最小全域木が作成される。</p>
-
 <p>クラスカル法のアルゴリズムは以下の通り。</p>
-
 <p>入出力：</p>
-
 <ul>
-<li>入力
-
-<ul>
+<li>入力</li>
 <li>グラフ G = (V,E)</li>
 <li>W(a,b):頂点aから頂点b(a,b∈V)を結ぶ辺の重み(コスト)。辺が存在しないときはW(a,b)=∞</li>
-</ul></li>
-<li>出力
-
-<ul>
-<li>最小全域木 X = (V&rsquo;,E&rsquo;)</li>
-</ul></li>
+<li>出力</li>
+<li>最小全域木 X = (V',E')</li>
 </ul>
-
 <p>アルゴリズム：</p>
-
 <ol>
 <li>Eをコストの小さい順にソートする。</li>
 <li>コストが最小の辺e (e∈E)を取り出し、eをEから除外する(E=E-e)。</li>
 <li>eをXに追加したときに閉路ができなければ、eをXに追加する。結んでいる頂点もXに追加する。</li>
 <li>Xに全ての頂点が含まれたら、Xを出力して終了する。そうでない時は、2.に戻る。</li>
 </ol>
-
 <p>3.の閉路ができるかを判定する方法については、Union-FInd木を用いると判定しやすい。辺を追加するときに、結ぶ頂点が同じUnion-Find木にあるならば、閉路ができると判断できる。</p>
-
 <p>これも図を使って流れを説明してみよう。プリム法でも用いた以下のグラフを利用する。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/dijkstra1.png" alt="ダイクストラ例1" /></p>
-
 <p>まずは、辺も頂点もない以下の状態から始まる。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/kruskal1.png" alt="クラスカル例1" /></p>
-
 <p>次に、一番コストが低い辺を探して、最小全域木に加える。この場合は、頂点B-C間の辺である。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/kruskal2.png" alt="クラスカル例2" /></p>
-
 <p>同様にして、次に最もコストが低い頂点A-B間の辺、さらに次に最もコストが低い頂点D-E間の辺を加える。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/kruskal3.png" alt="クラスカル例3" /></p>
-
 <p>次だが、最もコストの低い頂点A-C間の辺は加えると閉路ができてしまうので、ここでは加えない。その次にコストの低い頂点A-D間の辺を加える。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/kruskal4.png" alt="クラスカル例4" /></p>
-
 <p>これで、全ての頂点が含まれたので、このグラフを出力して終了する。このグラフが、最小全域木となる。</p>
-
 <p>では次に、コードでの実装例を以下に示す。(なお、コード中で使用しているUnion-Find木のスクリプトは<a href="https://github.com/WAT36/python/blob/master/procon/union_find.py">こちら</a>を参照。)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> union_find <span style="color:#f92672">import</span> UnionFind_fast
 
@@ -334,63 +310,87 @@ uf<span style="color:#f92672">=</span>UnionFind_fast(V)
         ans_cost[ei<span style="color:#f92672">.</span>start][ei<span style="color:#f92672">.</span>end]<span style="color:#f92672">=</span>cost[ei<span style="color:#f92672">.</span>start][ei<span style="color:#f92672">.</span>end]
         ans_cost[ei<span style="color:#f92672">.</span>end][ei<span style="color:#f92672">.</span>start]<span style="color:#f92672">=</span>cost[ei<span style="color:#f92672">.</span>end][ei<span style="color:#f92672">.</span>start]
 
-<span style="color:#66d9ef">print</span>(ans_cost)</code></pre></div>
-<p>ここで、プリム法と同じく以下の設定値を入力して実行してみる。</p>
+<span style="color:#66d9ef">print</span>(ans_cost)
+
+</code></pre></div><p>ここで、プリム法と同じく以下の設定値を入力して実行してみる。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">V<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
-cost<span style="color:#f92672">=</span>[[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,INF],[<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,INF,<span style="color:#ae81ff">9</span>],[<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>,INF,<span style="color:#ae81ff">10</span>],[<span style="color:#ae81ff">6</span>,INF,INF,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">4</span>],[INF,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">0</span>]]</code></pre></div>
-<p>実行結果は以下の通り。</p>
-
+cost<span style="color:#f92672">=</span>[[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,INF],[<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,INF,<span style="color:#ae81ff">9</span>],[<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>,INF,<span style="color:#ae81ff">10</span>],[<span style="color:#ae81ff">6</span>,INF,INF,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">4</span>],[INF,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">0</span>]]
+</code></pre></div><p>実行結果は以下の通り。</p>
 <pre><code>[[inf, 2, inf, 6, inf], [2, inf, 1, inf, inf], [inf, 1, inf, inf, inf], [6, inf, inf, inf, 4], [inf, inf, inf, 4, inf]]
-</code></pre>
-</article>
-
+</code></pre></article>
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/a470f90711f8f0207fb9b4c8d368cd957e5da936" title='Last modified Oct 19, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 19, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/a470f90711f8f0207fb9b4c8d368cd957e5da936" title='Last modified by Wataru Tsukagoshi | Oct 19, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Oct 19, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/procon/minimum_spanning_tree.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#最小全域木">最小全域木</a>
-<ul>
-<li><a href="#プリム法">プリム法</a></li>
-<li><a href="#クラスカル法">クラスカル法</a></li>
-</ul></li>
-</ul>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#プリム法">プリム法</a></li>
+    <li><a href="#クラスカル法">クラスカル法</a></li>
+  </ul>
 </nav>
-  </aside>
 
 
-
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

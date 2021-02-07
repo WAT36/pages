@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ファイル書き込み # ファイルを書き込む方法についてを示す。 Java 読み込み時と同様に、ここではテキストファイルなど一般的なファイルに対する読み込み方">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="ファイル書き込み" />
+<meta property="og:description" content="ファイル書き込み # ファイルを書き込む方法についてを示す。 Java 読み込み時と同様に、ここではテキストファイルなど一般的なファイルに対する読み込み方" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/file_io/filewrite/" />
+<meta property="article:modified_time" content="2020-02-25T17:43:35+09:00" />
 <title>ファイル書き込み | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.56342249d2185a2718a58a56889f268bce80fac8169c64e2252cd63fef2cffff.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2f file_io\2f filewrite\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,99 +102,89 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>ファイル書き込み</strong>
-</header>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="ファイル書き込み">ファイル書き込み</h1>
-
+      
+  <article class="markdown"><h1 id="ファイル書き込み">
+  ファイル書き込み
+  <a class="anchor" href="#%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e6%9b%b8%e3%81%8d%e8%be%bc%e3%81%bf">#</a>
+</h1>
 <p>ファイルを書き込む方法についてを示す。</p>
 
 
 
 
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-fwrite" style="display: none;" id="tabs-fwrite-0" checked="checked" />
-  <label for="tabs-fwrite-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>読み込み時と同様に、ここではテキストファイルなど一般的なファイルに対する読み込み方法についてを示す。</p>
-
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-fwrite" id="tabs-fwrite-0" checked="checked" />
+  <label for="tabs-fwrite-0">Java</label>
+  <div class="book-tabs-content markdown-inner"><p>読み込み時と同様に、ここではテキストファイルなど一般的なファイルに対する読み込み方法についてを示す。</p>
 <p>Javaでファイルを書き込むには以下の2つの方法がある。</p>
-
 <ul>
 <li>java.io.<strong>FileOutputStream</strong>クラスを利用する</li>
 <li>java.io.<strong>FileWriter</strong>クラスを利用する</li>
 </ul>
-
 <p>それぞれについて示す。</p>
-
 <h2 id="fileoutputstream">FileOutputStream</h2>
-
-<p>FileOutputStreamクラスはファイルからbyte単位で書き込みを行うストリームである。<br />
+<p>FileOutputStreamクラスはファイルからbyte単位で書き込みを行うストリームである。<br>
 FileInputStreamと同様に、このクラスは宣言時(コンストラクタ)にString型でファイルのパスまたはFile型のオブジェクトを入力する。Fileクラスは宣言時(コンストラクタ)にファイルのパス(相対パス)を文字列型で入力してできるオブジェクトである。これにより、このファイルへの出力ストリームが得られる。</p>
-
 <p><code>FileOutputStream(String name) throws FileNotFoundException</code></p>
-
 <p><code>FileOutputStream(File file) throws FileNotFoundException</code></p>
-
-<p>作成した入力ストリームからバイトデータを書き込むメソッドとして、<strong>write()</strong>というメソッドがある。</p>
-
+<p>作成した入力ストリームからバイトデータを書き込むメソッドとして、**write()**というメソッドがある。</p>
 <p><code>void write(int b) throws IOException</code></p>
-
 <p><code>void write(byte[] b) throws IOException</code></p>
-
-<p>このメソッドは引数で指定されたバイトデータをファイル出力ストリームに書き出すメソッドである。<br />
+<p>このメソッドは引数で指定されたバイトデータをファイル出力ストリームに書き出すメソッドである。<br>
 FileOutputStreamクラスではこのメソッドを利用してファイルを書き込む。</p>
-
-<p>また、書き込みが終わったら入力時と同様にして、出力ストリームを閉じる<strong>close()</strong>メソッドを忘れずに行う。</p>
-
+<p>また、書き込みが終わったら入力時と同様にして、出力ストリームを閉じる**close()**メソッドを忘れずに行う。</p>
 <p>FileOutputStreamのjava実装例を示す。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">FileOutputStream</span>;
-<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">File</span>;
-<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">IOException</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.io.FileOutputStream<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.io.File<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
 
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
-  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-    FileOutputStream <span style="color:#a6e22e">fos</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
-    <span style="color:#66d9ef">try</span>{
-      fos <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileOutputStream(<span style="color:#66d9ef">new</span> File(<span style="color:#e6db74">&#34;testwrite.txt&#34;</span>));
-      fos.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;testwrite&#34;</span>.<span style="color:#a6e22e">getBytes</span>());
-      fos.<span style="color:#a6e22e">write</span>(99);
-    }<span style="color:#66d9ef">catch</span> (IOException <span style="color:#a6e22e">e</span>){
-      System.<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;IO Error&#34;</span>);
-    }<span style="color:#66d9ef">finally</span>{
-      <span style="color:#66d9ef">try</span>{
-        fos.<span style="color:#a6e22e">close</span>();
-      }<span style="color:#66d9ef">catch</span>(IOException <span style="color:#a6e22e">e</span>){
-      }
-    }
-  }
-}</code></pre></div>
-<p>実行例は以下の通り。</p>
-
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span><span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[]){</span>
+    FileOutputStream fos <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">try</span><span style="color:#f92672">{</span>
+      fos <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileOutputStream<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testwrite.txt&#34;</span><span style="color:#f92672">));</span>
+      fos<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testwrite&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getBytes</span><span style="color:#f92672">());</span>
+      fos<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>99<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span><span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">){</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">err</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;IO Error&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span><span style="color:#66d9ef">finally</span><span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">try</span><span style="color:#f92672">{</span>
+        fos<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+      <span style="color:#f92672">}</span><span style="color:#66d9ef">catch</span><span style="color:#f92672">(</span>IOException e<span style="color:#f92672">){</span>
+      <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>実行例は以下の通り。</p>
 <pre><code>$ ls *.txt
 $ 
 $ javac Main.java
@@ -197,56 +193,43 @@ $ ls *.txt
 testwrite.txt
 $ cat testwrite.txt 
 testwritec$ 
-</code></pre>
-
-<h2 id="filewriterクラス">FileWriterクラス</h2>
-
-<p>FileWriterクラスはファイルからchar単位で書き込みを行う出力ストリームである。<br />
+</code></pre><h2 id="filewriterクラス">FileWriterクラス</h2>
+<p>FileWriterクラスはファイルからchar単位で書き込みを行う出力ストリームである。<br>
 このクラスもFileOutputStreamクラスと同様に、宣言時(コンストラクタ)にFile型のオブジェクトを入力する。これにより、このファイルからの入力ストリームが得られる。</p>
-
 <p><code>FileWriter(File file) throws FileNotFoundException</code></p>
-
 <p><code>FileWriter(String name) throws FileNotFoundException</code></p>
-
-<p>作成した出力ストリームでバイトデータを書き込むメソッドとして、こちらも<strong>write()</strong>というメソッドがある。</p>
-
+<p>作成した出力ストリームでバイトデータを書き込むメソッドとして、こちらも**write()**というメソッドがある。</p>
 <p><code>void write(String str) throws IOException</code></p>
-
-<p>このメソッドは引数に入力した文字列をバッファに書き込むメソッドである。<br />
-この時点ではバッファへの書き込みなので、ファイルへの書き込みは行われていない。<br />
-ファイルに書き込むにはここから、<strong>flush()</strong>というメソッドを利用して書き込む。</p>
-
+<p>このメソッドは引数に入力した文字列をバッファに書き込むメソッドである。<br>
+この時点ではバッファへの書き込みなので、ファイルへの書き込みは行われていない。<br>
+ファイルに書き込むにはここから、**flush()**というメソッドを利用して書き込む。</p>
 <p><code>void flush() throws IOException</code></p>
-
 <p>FileWriterクラスではこれらのメソッドを利用して書き込みを行う。</p>
-
-<p>また、読み込みが終わったらこちらも入力ストリームを閉じる<strong>close()</strong>メソッドを忘れずに行う。</p>
-
+<p>また、読み込みが終わったらこちらも入力ストリームを閉じる**close()**メソッドを忘れずに行う。</p>
 <p>FileWriterのjava実装例を示す。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">FileWriter</span>;
-<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">File</span>;
-<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">IOException</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.io.FileWriter<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.io.File<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
 
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
-  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-    FileWriter <span style="color:#a6e22e">fw</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
-    <span style="color:#66d9ef">try</span>{
-      fw <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileWriter(<span style="color:#66d9ef">new</span> File(<span style="color:#e6db74">&#34;testwrite.txt&#34;</span>));
-      fw.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;テスト&#34;</span>);
-      fw.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;2行目&#34;</span>);
-      fw.<span style="color:#a6e22e">flush</span>();
-    }<span style="color:#66d9ef">catch</span> (IOException <span style="color:#a6e22e">e</span>){
-      System.<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;IO Error&#34;</span>);
-    }<span style="color:#66d9ef">finally</span>{
-      <span style="color:#66d9ef">try</span>{
-        fw.<span style="color:#a6e22e">close</span>();
-      }<span style="color:#66d9ef">catch</span>(IOException <span style="color:#a6e22e">e</span>){
-      }
-    }
-  }
-}</code></pre></div>
-<p>実行例は以下の通り。</p>
-
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span><span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[]){</span>
+    FileWriter fw <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">try</span><span style="color:#f92672">{</span>
+      fw <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileWriter<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testwrite.txt&#34;</span><span style="color:#f92672">));</span>
+      fw<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;テスト&#34;</span><span style="color:#f92672">);</span>
+      fw<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;2行目&#34;</span><span style="color:#f92672">);</span>
+      fw<span style="color:#f92672">.</span><span style="color:#a6e22e">flush</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span><span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">){</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">err</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;IO Error&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span><span style="color:#66d9ef">finally</span><span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">try</span><span style="color:#f92672">{</span>
+        fw<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+      <span style="color:#f92672">}</span><span style="color:#66d9ef">catch</span><span style="color:#f92672">(</span>IOException e<span style="color:#f92672">){</span>
+      <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>実行例は以下の通り。</p>
 <pre><code>$ ls
 $ javac Main.java
 $ 
@@ -258,28 +241,17 @@ $ javac Main.java
 $ java Main
 $ cat testwrite.txt 
 テスト2行目 $ 
-</code></pre>
-
-  </div>
-
-  <input type="radio" name="tabs-fwrite" style="display: none;" id="tabs-fwrite-1"  />
-  <label for="tabs-fwrite-1">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Pythonでは関数openでファイルを開いた後、ファイルオブジェクトの関数<strong>write()</strong>を利用してファイルを書き込む。</p>
-
+</code></pre></div><input type="radio" class="toggle" name="tabs-fwrite" id="tabs-fwrite-1"  />
+  <label for="tabs-fwrite-1">Python</label>
+  <div class="book-tabs-content markdown-inner"><p>Pythonでは関数openでファイルを開いた後、ファイルオブジェクトの関数**write()**を利用してファイルを書き込む。</p>
 <p><code>write(文字列)</code></p>
-
 <p>ファイルへの書き込みを行う際にはopenで開く時にモードを <strong>&lsquo;w&rsquo;</strong> または <strong>&lsquo;a&rsquo;</strong> と必ず指定する。それ以外の時はwrite関数実行時にエラーになる。
-モードが&rsquo;w&rsquo;のときはファイルに上書きされ、&rsquo;a&rsquo;の時はファイルの末尾に追記される形で書き込まれる。</p>
-
-<p>こちらも読み込みの時と同様に、作業が終わったら最後にファイルオブジェクトの関数<strong>close()</strong>を利用してファイルをクローズする。</p>
-
+モードが&rsquo;w&rsquo;のときはファイルに上書きされ、&lsquo;a&rsquo;の時はファイルの末尾に追記される形で書き込まれる。</p>
+<p>こちらも読み込みの時と同様に、作業が終わったら最後にファイルオブジェクトの関数**close()**を利用してファイルをクローズする。</p>
 <p>また、書き込みにおいても<strong>with</strong>文が利用できる。with文を抜け出したとき、自動でファイルクローズも行うので便利。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;ファイル名&#39;</span>,<span style="color:#e6db74">&#39;モード&#39;</span>) <span style="color:#66d9ef">as</span> f:
-    f<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;ファイルに書き込む文字列&#39;</span>)</code></pre></div>
-<p>実行例を以下に示す。</p>
+    f<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;ファイルに書き込む文字列&#39;</span>)
+</code></pre></div><p>実行例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> ls
 test<span style="color:#f92672">.</span>txt
 <span style="color:#960050;background-color:#1e0010">$</span> cat test<span style="color:#f92672">.</span>txt
@@ -322,48 +294,67 @@ overwrote<span style="color:#960050;background-color:#1e0010">!!</span>aaabbbccc
 <span style="color:#ae81ff">22</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> quit()
 <span style="color:#960050;background-color:#1e0010">$</span> cat test<span style="color:#f92672">.</span>txt
-use <span style="color:#66d9ef">with</span> <span style="color:#f92672">and</span> overwrite</code></pre></div>
-  </div>
-
-</div>
+use <span style="color:#66d9ef">with</span> <span style="color:#f92672">and</span> overwrite
+</code></pre></div></div></div>
 
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/e4eb34f13cc98375ddee8b920ffeb569185d76de" title='Last modified Feb 25, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Feb 25, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/e4eb34f13cc98375ddee8b920ffeb569185d76de" title='Last modified by Wataru Tsukagoshi | Feb 25, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Feb 25, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/file_io/filewrite.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
+</div>
+  
+ 
 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
 
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HTTP・HTTPS HTTP、HTTPSプロトコルについてを述べる。 HTTPプロトコル # HTTP(Hyper Text Transfer Protocol)とは、Webサーバとクライア">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="HTTP・HTTPS" />
+<meta property="og:description" content="HTTP・HTTPS HTTP、HTTPSプロトコルについてを述べる。 HTTPプロトコル # HTTP(Hyper Text Transfer Protocol)とは、Webサーバとクライア" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/http/" />
+<meta property="article:modified_time" content="2020-08-21T08:42:22+09:00" />
 <title>HTTP・HTTPS | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.56342249d2185a2718a58a56889f268bce80fac8169c64e2252cd63fef2cffff.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2f front-end\2fhttp\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,78 +102,92 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>HTTP・HTTPS</strong>
-</header>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#basic認証">Basic認証</a></li>
+    <li><a href="#digest認証">Digest認証</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1>HTTP・HTTPS</h1>
-
+      
+  <article class="markdown"><h1>HTTP・HTTPS</h1>
 <p>HTTP、HTTPSプロトコルについてを述べる。</p>
-
-<h1 id="httpプロトコル">HTTPプロトコル</h1>
-
+<h1 id="httpプロトコル">
+  HTTPプロトコル
+  <a class="anchor" href="#http%e3%83%97%e3%83%ad%e3%83%88%e3%82%b3%e3%83%ab">#</a>
+</h1>
 <p>HTTP(Hyper Text Transfer Protocol)とは、WebサーバとクライアントのWebブラウザ間でHTML文書などのテキストメッセージを受け渡すためのプロトコルである。</p>
-
 <p>HTTPの通信は、クライアントからサーバへの<strong>HTTPリクエスト</strong>と、サーバからクライアントへの<strong>HTTPレスポンス</strong>の2つに分けられる。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/front-end/http1.png"></p>
-
-<h1 id="httpsプロトコル">HTTPSプロトコル</h1>
-
+<img src="https://WAT36.github.io/pages/img/front-end/http1.png">
+<h1 id="httpsプロトコル">
+  HTTPSプロトコル
+  <a class="anchor" href="#https%e3%83%97%e3%83%ad%e3%83%88%e3%82%b3%e3%83%ab">#</a>
+</h1>
 <p>HTTPSプロトコルは、大まかにいうとセキュリティを確保した通信路上でHTTP通信を行うプロトコルである。</p>
-
 <p>HTTP通信を行う前に、セキュリティの確保として、データを暗号化して送受信するプロトコルであるSSLプロトコル(またはTLSプロトコル)を利用しセッションを確定する。その後に、HTTPセッションの接続を行う。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/front-end/https.png"></p>
-
-<h1 id="httpのメッセージ構造">HTTPのメッセージ構造</h1>
-
+<img src="https://WAT36.github.io/pages/img/front-end/https.png">
+<h1 id="httpのメッセージ構造">
+  HTTPのメッセージ構造
+  <a class="anchor" href="#http%e3%81%ae%e3%83%a1%e3%83%83%e3%82%bb%e3%83%bc%e3%82%b8%e6%a7%8b%e9%80%a0">#</a>
+</h1>
 <p>HTTPのメッセージは大きく開始行、ヘッダフィールド、CRLFの改行、メッセージボディの4つに分けられる。</p>
-
 <ul>
 <li>開始行 (リクエストライン/ステータスライン)</li>
-<li>ヘッダフィールド(０行以上、以下から構成)
-
-<ul>
+<li>ヘッダフィールド(０行以上、以下から構成)</li>
 <li>General-header</li>
 <li>Request-header</li>
 <li>Response-header</li>
 <li>Entity-header</li>
-</ul></li>
 <li>改行(CRLF)</li>
 <li>メッセージボディ</li>
 </ul>
-
-<h1 id="httpの開始行-リクエストメッセージ">HTTPの開始行(リクエストメッセージ)</h1>
-
+<h1 id="httpの開始行リクエストメッセージ">
+  HTTPの開始行(リクエストメッセージ)
+  <a class="anchor" href="#http%e3%81%ae%e9%96%8b%e5%a7%8b%e8%a1%8c%e3%83%aa%e3%82%af%e3%82%a8%e3%82%b9%e3%83%88%e3%83%a1%e3%83%83%e3%82%bb%e3%83%bc%e3%82%b8">#</a>
+</h1>
 <p>HTTPメッセージの一番最初に書く開始行は以下のような構造になる。</p>
-
 <pre><code>メソッド  /任意のパス(+クエリストリング)  HTTP/1.1
-</code></pre>
-
-<p>クエリストリングとはリクエストと同時に送るデータのことで、任意のパスの後に&rdquo;?&ldquo;を書き、その後にデータを記入する。</p>
-
+</code></pre><p>クエリストリングとはリクエストと同時に送るデータのことで、任意のパスの後に&quot;?&ldquo;を書き、その後にデータを記入する。</p>
 <p>また、メソッドとは以下のいずれかである。</p>
-
 <table>
     <thead>
         <th>メソッド名</th>
@@ -202,33 +222,22 @@ https://github.com/alex-shpak/hugo-book
         <td>自分宛にリクエストメッセージを要求するループバック試験に使用</td>
     </tr>
 </table>
-
 <p>このうちよく使われるのはGETとPOSTである。</p>
-
-<h1 id="httpのレスポンスメッセージ">HTTPのレスポンスメッセージ</h1>
-
+<h1 id="httpのレスポンスメッセージ">
+  HTTPのレスポンスメッセージ
+  <a class="anchor" href="#http%e3%81%ae%e3%83%ac%e3%82%b9%e3%83%9d%e3%83%b3%e3%82%b9%e3%83%a1%e3%83%83%e3%82%bb%e3%83%bc%e3%82%b8">#</a>
+</h1>
 <p>HTTPのレスポンスメッセージの例は以下の通り。上から開始行、ヘッダフィールド、改行、メッセージボディの順。</p>
-
 <pre><code>HTTP/1.1 200 OK
-</code></pre>
-
-<pre><code>Date:Wed,  19 Aug 2020 23:48:50 GMT
+</code></pre><pre><code>Date:Wed,  19 Aug 2020 23:48:50 GMT
 Server:Apache
 Content-type:text/html
-</code></pre>
-
-<pre><code>(改行)
-</code></pre>
-
-<pre><code>&lt;!DOCTYPE html&gt;
+</code></pre><pre><code>(改行)
+</code></pre><pre><code>&lt;!DOCTYPE html&gt;
 ・・・
 ・・・
-</code></pre>
-
-<p>ここで、レスポンスメッセージの開始行には、レスポンスの状態を示す3桁の数字「ステータスコード」が含まれている。</p>
-
+</code></pre><p>ここで、レスポンスメッセージの開始行には、レスポンスの状態を示す3桁の数字「ステータスコード」が含まれている。</p>
 <p>ステータスコードは以下のように分類される。</p>
-
 <table>
     <thead>
         <th>ステータスコード</th>
@@ -255,13 +264,12 @@ Content-type:text/html
         <td>Server Error(サーバーエラー)</td>
     </tr>
 </table>
-
-<h1 id="httpのヘッダフィールド">HTTPのヘッダフィールド</h1>
-
+<h1 id="httpのヘッダフィールド">
+  HTTPのヘッダフィールド
+  <a class="anchor" href="#http%e3%81%ae%e3%83%98%e3%83%83%e3%83%80%e3%83%95%e3%82%a3%e3%83%bc%e3%83%ab%e3%83%89">#</a>
+</h1>
 <p>ヘッダフィールドには、メッセージの外部情報（メタ情報）を扱うためのHTTPヘッダが含まれる。</p>
-
 <p>HTTPヘッダとして代表的なものを示す。</p>
-
 <table>
     <thead>
         <th>ヘッダ名</th>
@@ -320,100 +328,111 @@ Content-type:text/html
         <td>ユーザーエージェントの名前</td>
     </tr>
 </table>
-
-<h1 id="httpでの認証">HTTPでの認証</h1>
-
+<h1 id="httpでの認証">
+  HTTPでの認証
+  <a class="anchor" href="#http%e3%81%a7%e3%81%ae%e8%aa%8d%e8%a8%bc">#</a>
+</h1>
 <p>HTTPでは、特定のファイルへのアクセスを制限するために認証することが可能である。</p>
-
 <p>その種類は主に以下の２種類。</p>
-
-<h2 id="basic認証">Basic認証</h2>
-
+<h2 id="basic認証">
+  Basic認証
+  <a class="anchor" href="#basic%e8%aa%8d%e8%a8%bc">#</a>
+</h2>
 <p>Basic認証は、ユーザー名とパスワードをコロンで接続し、Base64でエンコードして送信することで認証を実施する方式である。</p>
-
 <p>盗聴や改竄が容易にできてしまう。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/front-end/basic.png" width="75%" height="75%"></p>
-
-<h2 id="digest認証">Digest認証</h2>
-
+<img src="https://WAT36.github.io/pages/img/front-end/basic.png" width="75%" height="75%">
+<h2 id="digest認証">
+  Digest認証
+  <a class="anchor" href="#digest%e8%aa%8d%e8%a8%bc">#</a>
+</h2>
 <p>Digest認証は、Basic認証に加えて、盗聴や改竄を防ぐためにユーザー名とパスワードをMDSでハッシュ化して送信し、認証を実施する。</p>
-
 <p>パスワードが暗号化されているので、盗聴できても解読しにくいという利点がある。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/front-end/digest.png" width="75%" height="75%"></p>
-
-<h1 id="http-cookie-クッキー">HTTP cookie (クッキー)</h1>
-
+<img src="https://WAT36.github.io/pages/img/front-end/digest.png" width="75%" height="75%">
+<h1 id="http-cookie-クッキー">
+  HTTP cookie (クッキー)
+  <a class="anchor" href="#http-cookie-%e3%82%af%e3%83%83%e3%82%ad%e3%83%bc">#</a>
+</h1>
 <p>HTTPは、システムの現在の状態を保持しない(ステートレスという)プロトコルであ利、クライアントとサーバ間の状態管理は行えないという点がある。</p>
-
 <p>そこで、Webブラウザにcookie(クッキー)と呼ばれるデータを保持しておくことで、HTTPでの状態管理を実現することができる。</p>
-
 <p>代表的な使用例としては、Webサイト上でのログイン状態の記録、ECサイト上でのカート情報の管理などがある。</p>
-
 <p>クッキーは、サーバからクライアントに返るときのHTTPレスポンスのヘッダ<strong>Set-Cookie</strong>にて指定される。</p>
-
 <p>これにより、Webサーバ上で指定された情報がWebブラウザに保存される。</p>
-
 <p>その後のWebページへのアクセス時には、保存していたクッキーをHTTPリクエストと同時にWebサーバに送ることで、状態管理を行う。</p>
-
 <p>また、クッキーはJavaScriptを利用して、クライアント側で操作することもできる。</p>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/52e0b606f60fd4cada9c1bcb16c70a8c8b4f6c08" title='Last modified Aug 21, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 21, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/52e0b606f60fd4cada9c1bcb16c70a8c8b4f6c08" title='Last modified by Wataru Tsukagoshi | Aug 21, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Aug 21, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/http.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#httpプロトコル">HTTPプロトコル</a></li>
-<li><a href="#httpsプロトコル">HTTPSプロトコル</a></li>
-<li><a href="#httpのメッセージ構造">HTTPのメッセージ構造</a></li>
-<li><a href="#httpの開始行-リクエストメッセージ">HTTPの開始行(リクエストメッセージ)</a></li>
-<li><a href="#httpのレスポンスメッセージ">HTTPのレスポンスメッセージ</a></li>
-<li><a href="#httpのヘッダフィールド">HTTPのヘッダフィールド</a></li>
-<li><a href="#httpでの認証">HTTPでの認証</a>
-<ul>
-<li><a href="#basic認証">Basic認証</a></li>
-<li><a href="#digest認証">Digest認証</a></li>
-</ul></li>
-<li><a href="#http-cookie-クッキー">HTTP cookie (クッキー)</a></li>
-</ul>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#basic認証">Basic認証</a></li>
+    <li><a href="#digest認証">Digest認証</a></li>
+  </ul>
 </nav>
-  </aside>
 
 
-
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

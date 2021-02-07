@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CSSでの背景 # CSSでの背景の設定方法についてを述べる。 background-colorプロパティ # background-colorプロパ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="CSSでの背景" />
+<meta property="og:description" content="CSSでの背景 # CSSでの背景の設定方法についてを述べる。 background-colorプロパティ # background-colorプロパ" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/css_background/" />
+<meta property="article:modified_time" content="2020-07-15T19:13:15+09:00" />
 <title>CSSでの背景 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.56342249d2185a2718a58a56889f268bce80fac8169c64e2252cd63fef2cffff.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2f front-end\2f css_background\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,59 +102,85 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>CSSでの背景</strong>
-</header>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#background-colorプロパティ">background-colorプロパティ</a></li>
+    <li><a href="#background-imageプロパティ">background-imageプロパティ</a></li>
+    <li><a href="#background-clipプロパティ">background-clipプロパティ</a></li>
+    <li><a href="#background-repeatプロパティ">background-repeatプロパティ</a></li>
+    <li><a href="#background-sizeプロパティ">background-sizeプロパティ</a></li>
+    <li><a href="#background-originプロパティ">background-originプロパティ</a></li>
+    <li><a href="#background-positionプロパティ">background-positionプロパティ</a></li>
+    <li><a href="#background-attachment-プロパティ">background-attachment プロパティ</a></li>
+    <li><a href="#backgroundプロパティ">backgroundプロパティ</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="cssでの背景">CSSでの背景</h1>
-
+      
+  <article class="markdown"><h1 id="cssでの背景">
+  CSSでの背景
+  <a class="anchor" href="#css%e3%81%a7%e3%81%ae%e8%83%8c%e6%99%af">#</a>
+</h1>
 <p>CSSでの背景の設定方法についてを述べる。</p>
-
-<h2 id="background-colorプロパティ">background-colorプロパティ</h2>
-
+<h2 id="background-colorプロパティ">
+  background-colorプロパティ
+  <a class="anchor" href="#background-color%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>background-colorプロパティは背景色を設定するプロパティである。</p>
-
 <p>iframeを使い、使用例を示す。</p>
-
 <pre><code>&lt;iframe width=&quot;200&quot; height=&quot;150&quot; style=&quot;background-color:red&quot;&gt;
 &lt;/iframe&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><iframe width="200" height="150" style="background-color:red">
+<iframe width="200" height="150" style="background-color:red">
 </iframe>
-<hr></p>
-
-<h2 id="background-imageプロパティ">background-imageプロパティ</h2>
-
+<hr>
+<h2 id="background-imageプロパティ">
+  background-imageプロパティ
+  <a class="anchor" href="#background-image%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>background-imageプロパティは、背景に画像を表示させるプロパティである。</p>
-
-<p>値には、<strong>url(画像のパス)</strong>の形で画像を指定し入力する。</p>
-
+<p>値には、**url(画像のパス)**の形で画像を指定し入力する。</p>
 <p>CSSで利用するには、body要素に適用させる。</p>
-
 <p>使用例として、下記のhtmlをiframeに組み込んで表示させてみる。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
 &lt;<span style="color:#f92672">html</span>&gt;
@@ -171,27 +203,21 @@ https://github.com/alex-shpak/hugo-book
 &lt;<span style="color:#f92672">h1</span>&gt;background-imageのサンプル&lt;/<span style="color:#f92672">h1</span>&gt;
 
 &lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
-<p>iframe使用例</p>
-
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>iframe使用例</p>
 <pre><code>&lt;iframe width=&quot;500&quot; height=&quot;400&quot; src=&quot;/css_sample_pages/background-image.html&quot;&gt;
 &lt;/iframe&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background-image.html">
+<iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background-image.html">
 </iframe>
-<hr></p>
-
-<h2 id="background-clipプロパティ">background-clipプロパティ</h2>
-
+<hr>
+<h2 id="background-clipプロパティ">
+  background-clipプロパティ
+  <a class="anchor" href="#background-clip%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>background-clipプロパティは、背景画像をボックスのどの領域に表示させるかを設定するプロパティである。</p>
-
 <p>設定できる値は以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">border-box</td>
@@ -209,7 +235,6 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">要素内容を表示させる領域に表示させる</td>
     </tr>
 </table>
-
 <p>使用例</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
 &lt;<span style="color:#f92672">html</span>&gt;
@@ -232,27 +257,21 @@ https://github.com/alex-shpak/hugo-book
 &lt;<span style="color:#f92672">p</span>&gt;background-clipのサンプル&lt;/<span style="color:#f92672">p</span>&gt;
 
 &lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
-<p>iframe使用例</p>
-
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>iframe使用例</p>
 <pre><code>&lt;iframe width=&quot;400&quot; height=&quot;300&quot; src=&quot;/css_sample_pages/background-clip.html&quot;&gt;
 &lt;/iframe&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><iframe width="400" height="300" src="https://WAT36.github.io/pages/css_sample_pages/background-clip.html">
+<iframe width="400" height="300" src="https://WAT36.github.io/pages/css_sample_pages/background-clip.html">
 </iframe>
-<hr></p>
-
-<h2 id="background-repeatプロパティ">background-repeatプロパティ</h2>
-
+<hr>
+<h2 id="background-repeatプロパティ">
+  background-repeatプロパティ
+  <a class="anchor" href="#background-repeat%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>background-repeatプロパティは、背景画像を繰り返して表示させるか、及びその表示のさせ方を設定するプロパティである。</p>
-
 <p>設定する値は以下の通り。デフォルトではrepeatである。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">repeat-x</td>
@@ -275,7 +294,6 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">画像を１つだけ表示させる</td>
     </tr>
 </table>
-
 <p>使用例</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
 &lt;<span style="color:#f92672">html</span>&gt;
@@ -299,27 +317,21 @@ https://github.com/alex-shpak/hugo-book
 &lt;<span style="color:#f92672">h1</span>&gt;background-repeatのサンプル&lt;/<span style="color:#f92672">h1</span>&gt;
 
 &lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
-<p>iframe使用例</p>
-
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>iframe使用例</p>
 <pre><code>&lt;iframe width=&quot;500&quot; height=&quot;400&quot; src=&quot;/css_sample_pages/background-repeat.html&quot;&gt;
 &lt;/iframe&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background-repeat.html">
+<iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background-repeat.html">
 </iframe>
-<hr></p>
-
-<h2 id="background-sizeプロパティ">background-sizeプロパティ</h2>
-
+<hr>
+<h2 id="background-sizeプロパティ">
+  background-sizeプロパティ
+  <a class="anchor" href="#background-size%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>background-sizeプロパティは、背景画像を表示するサイズを設定するプロパティである。</p>
-
 <p>値は以下のキーワードか、幅・高さを示す数値２つを指定する。（数値を１つ指定した場合は幅として認識される。）デフォルトはautoである。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">contain</td>
@@ -342,7 +354,6 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">背景の表示領域に対するパーセンテージ分のサイズにする</td>
     </tr>
 </table>
-
 <p>使用例</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
 &lt;<span style="color:#f92672">html</span>&gt;
@@ -366,27 +377,21 @@ https://github.com/alex-shpak/hugo-book
 &lt;<span style="color:#f92672">h1</span>&gt;background-sizeのサンプル&lt;/<span style="color:#f92672">h1</span>&gt;
 
 &lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
-<p>iframe使用例</p>
-
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>iframe使用例</p>
 <pre><code>&lt;iframe width=&quot;500&quot; height=&quot;400&quot; src=&quot;/css_sample_pages/background-size.html&quot;&gt;
 &lt;/iframe&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background-size.html">
+<iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background-size.html">
 </iframe>
-<hr></p>
-
-<h2 id="background-originプロパティ">background-originプロパティ</h2>
-
+<hr>
+<h2 id="background-originプロパティ">
+  background-originプロパティ
+  <a class="anchor" href="#background-origin%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>background-originプロパティは、ボックスにおいて画像を表示させる基準となる位置を設定する要素である。</p>
-
 <p>設定する値は以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">border-box</td>
@@ -404,7 +409,6 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">要素内容を表示させる領域の左上を基準とする</td>
     </tr>
 </table>
-
 <p>使用例</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
 &lt;<span style="color:#f92672">html</span>&gt;
@@ -427,27 +431,21 @@ https://github.com/alex-shpak/hugo-book
 &lt;<span style="color:#f92672">p</span>&gt;background-originのサンプル&lt;/<span style="color:#f92672">p</span>&gt;
 
 &lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
-<p>iframe使用例</p>
-
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>iframe使用例</p>
 <pre><code>&lt;iframe width=&quot;400&quot; height=&quot;300&quot; src=&quot;/css_sample_pages/background-origin.html&quot;&gt;
 &lt;/iframe&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><iframe width="400" height="300" src="https://WAT36.github.io/pages/css_sample_pages/background-origin.html">
+<iframe width="400" height="300" src="https://WAT36.github.io/pages/css_sample_pages/background-origin.html">
 </iframe>
-<hr></p>
-
-<h2 id="background-positionプロパティ">background-positionプロパティ</h2>
-
+<hr>
+<h2 id="background-positionプロパティ">
+  background-positionプロパティ
+  <a class="anchor" href="#background-position%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>background-positionプロパティは、背景に画像を表示させる位置を設定するプロパティである。画像が繰り返し表示される場合には、まずその位置に画像が表示され、そこから繰り返し表示される。</p>
-
 <p>設定する値は縦方向と横方向の２つで、以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">top</td>
@@ -480,7 +478,6 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">それぞれの方向に対するパーセンテージ。数値の後に%をつける</td>
     </tr>
 </table>
-
 <p>使用例</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
 &lt;<span style="color:#f92672">html</span>&gt;
@@ -511,27 +508,21 @@ https://github.com/alex-shpak/hugo-book
 &lt;<span style="color:#f92672">h1</span>&gt;background-positionのサンプル&lt;/<span style="color:#f92672">h1</span>&gt;
 &lt;<span style="color:#f92672">h1</span>&gt;↓100%↓&lt;/<span style="color:#f92672">h1</span>&gt;
 &lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
-<p>iframe使用例</p>
-
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>iframe使用例</p>
 <pre><code>&lt;iframe width=&quot;500&quot; height=&quot;400&quot; src=&quot;/css_sample_pages/background-position.html&quot;&gt;
 &lt;/iframe&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background-position.html">
+<iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background-position.html">
 </iframe>
-<hr></p>
-
-<h2 id="background-attachment-プロパティ">background-attachment プロパティ</h2>
-
+<hr>
+<h2 id="background-attachment-プロパティ">
+  background-attachment プロパティ
+  <a class="anchor" href="#background-attachment-%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>background-attachmentプロパティは、ページをスクロールしたときに背景画像も一緒にスクロールさせるか否かを設定する。</p>
-
 <p>設定する値は以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">scroll</td>
@@ -544,7 +535,6 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">スクロールしても背景画像を動かさない</td>
     </tr>
 </table>
-
 <p>使用例</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
 &lt;<span style="color:#f92672">html</span>&gt;
@@ -577,27 +567,21 @@ https://github.com/alex-shpak/hugo-book
 &lt;<span style="color:#f92672">h1</span>&gt;9&lt;/<span style="color:#f92672">h1</span>&gt;
 &lt;<span style="color:#f92672">h1</span>&gt;10&lt;/<span style="color:#f92672">h1</span>&gt;
 &lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
-<p>iframe使用例</p>
-
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>iframe使用例</p>
 <pre><code>&lt;iframe width=&quot;500&quot; height=&quot;200&quot; src=&quot;/css_sample_pages/background-attachment.html&quot; scrolling=&quot;yes&quot;&gt;
 &lt;/iframe&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background-attachment.html" scrolling="yes">
+<iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background-attachment.html" scrolling="yes">
 </iframe>
-<hr></p>
-
-<h2 id="backgroundプロパティ">backgroundプロパティ</h2>
-
+<hr>
+<h2 id="backgroundプロパティ">
+  backgroundプロパティ
+  <a class="anchor" href="#background%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>backgroundプロパティは、これまでに出てきた背景関連のプロパティの値をまとめて指定できるプロパティである。</p>
-
 <p>一部例外はあるが、値をスペースで区切れば複数指定できる。</p>
-
 <p>使用例</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
 &lt;<span style="color:#f92672">html</span>&gt;
@@ -628,76 +612,95 @@ https://github.com/alex-shpak/hugo-book
 &lt;<span style="color:#f92672">h1</span>&gt;backgroundのサンプル&lt;/<span style="color:#f92672">h1</span>&gt;
 &lt;<span style="color:#f92672">h1</span>&gt;↓100%↓&lt;/<span style="color:#f92672">h1</span>&gt;
 &lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
-<p>iframe使用例</p>
-
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>iframe使用例</p>
 <pre><code>&lt;iframe width=&quot;500&quot; height=&quot;400&quot; src=&quot;/css_sample_pages/background.html&quot;&gt;
 &lt;/iframe&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background.html">
+<iframe width="500" height="400" src="https://WAT36.github.io/pages/css_sample_pages/background.html">
 </iframe>
-<hr></p>
-</article>
-
+<hr></article>
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/51c0239cee8251c0d9b8b09735343b00f32a277d" title='Last modified Jul 15, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 15, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/51c0239cee8251c0d9b8b09735343b00f32a277d" title='Last modified by Wataru Tsukagoshi | Jul 15, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jul 15, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/css_background.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#cssでの背景">CSSでの背景</a>
-<ul>
-<li><a href="#background-colorプロパティ">background-colorプロパティ</a></li>
-<li><a href="#background-imageプロパティ">background-imageプロパティ</a></li>
-<li><a href="#background-clipプロパティ">background-clipプロパティ</a></li>
-<li><a href="#background-repeatプロパティ">background-repeatプロパティ</a></li>
-<li><a href="#background-sizeプロパティ">background-sizeプロパティ</a></li>
-<li><a href="#background-originプロパティ">background-originプロパティ</a></li>
-<li><a href="#background-positionプロパティ">background-positionプロパティ</a></li>
-<li><a href="#background-attachment-プロパティ">background-attachment プロパティ</a></li>
-<li><a href="#backgroundプロパティ">backgroundプロパティ</a></li>
-</ul></li>
-</ul>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#background-colorプロパティ">background-colorプロパティ</a></li>
+    <li><a href="#background-imageプロパティ">background-imageプロパティ</a></li>
+    <li><a href="#background-clipプロパティ">background-clipプロパティ</a></li>
+    <li><a href="#background-repeatプロパティ">background-repeatプロパティ</a></li>
+    <li><a href="#background-sizeプロパティ">background-sizeプロパティ</a></li>
+    <li><a href="#background-originプロパティ">background-originプロパティ</a></li>
+    <li><a href="#background-positionプロパティ">background-positionプロパティ</a></li>
+    <li><a href="#background-attachment-プロパティ">background-attachment プロパティ</a></li>
+    <li><a href="#backgroundプロパティ">backgroundプロパティ</a></li>
+  </ul>
 </nav>
-  </aside>
 
 
-
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="直線モデル # 回帰問題の手法の一つである直線モデルについて。 教師あり学習 で与えられた入力と結果から関係式を算出すると言うことを述べたが、 必ずし">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="直線モデル(線形回帰)" />
+<meta property="og:description" content="直線モデル # 回帰問題の手法の一つである直線モデルについて。 教師あり学習 で与えられた入力と結果から関係式を算出すると言うことを述べたが、 必ずし" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/machine_learning/linear_model/" />
+<meta property="article:modified_time" content="2020-04-04T17:21:13+09:00" />
 <title>直線モデル(線形回帰) | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.56342249d2185a2718a58a56889f268bce80fac8169c64e2252cd63fef2cffff.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2flinear_model\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,200 +102,161 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>直線モデル(線形回帰)</strong>
-</header>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="直線モデル">直線モデル</h1>
-
+      
+  <article class="markdown"><h1 id="直線モデル">
+  直線モデル
+  <a class="anchor" href="#%e7%9b%b4%e7%b7%9a%e3%83%a2%e3%83%87%e3%83%ab">#</a>
+</h1>
 <p>回帰問題の手法の一つである直線モデルについて。</p>
-
 <p><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/supervised_learning/">教師あり学習</a>
 で与えられた入力と結果から関係式を算出すると言うことを述べたが、
 必ずしも100%正確な式を算出すると言うことでは無いことを念頭においてほしい。（と言うよりどのような入力に対して100%正解と言えるような値を算出することは不可能である。勿論算出する式は正確性を高くする事を目標に算出するが）</p>
-
 <p>関係式は、現入力データに対して最も誤差が少ないような結果を出力するような式を算出すると言うやり方で考える。</p>
-
 <p>その関係式だが、基本となる数式を元に算出を行う。この基本となる数式を<strong>モデル</strong>と呼ぶ。</p>
-
 <p>今回は例として、以下の身長と体重からなるデータを用意する。</p>
-
 <table>
 <thead>
 <tr>
-<th align="left">身長</th>
-<th align="left">体重</th>
+<th style="text-align:left">身長</th>
+<th style="text-align:left">体重</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
-<td align="left">167.9</td>
-<td align="left">58.0</td>
+<td style="text-align:left">167.9</td>
+<td style="text-align:left">58.0</td>
 </tr>
-
 <tr>
-<td align="left">164.3</td>
-<td align="left">58.2</td>
+<td style="text-align:left">164.3</td>
+<td style="text-align:left">58.2</td>
 </tr>
-
 <tr>
-<td align="left">171.6</td>
-<td align="left">60.1</td>
+<td style="text-align:left">171.6</td>
+<td style="text-align:left">60.1</td>
 </tr>
-
 <tr>
-<td align="left">172.7</td>
-<td align="left">65.2</td>
+<td style="text-align:left">172.7</td>
+<td style="text-align:left">65.2</td>
 </tr>
-
 <tr>
-<td align="left">162.8</td>
-<td align="left">55.0</td>
+<td style="text-align:left">162.8</td>
+<td style="text-align:left">55.0</td>
 </tr>
-
 <tr>
-<td align="left">170.2</td>
-<td align="left">60.9</td>
+<td style="text-align:left">170.2</td>
+<td style="text-align:left">60.9</td>
 </tr>
-
 <tr>
-<td align="left">172.3</td>
-<td align="left">61.9</td>
+<td style="text-align:left">172.3</td>
+<td style="text-align:left">61.9</td>
 </tr>
-
 <tr>
-<td align="left">163.8</td>
-<td align="left">56.4</td>
+<td style="text-align:left">163.8</td>
+<td style="text-align:left">56.4</td>
 </tr>
-
 <tr>
-<td align="left">168.8</td>
-<td align="left">62.9</td>
+<td style="text-align:left">168.8</td>
+<td style="text-align:left">62.9</td>
 </tr>
-
 <tr>
-<td align="left">167.2</td>
-<td align="left">57.0</td>
+<td style="text-align:left">167.2</td>
+<td style="text-align:left">57.0</td>
 </tr>
-
 <tr>
-<td align="left">172.3</td>
-<td align="left">64.9</td>
+<td style="text-align:left">172.3</td>
+<td style="text-align:left">64.9</td>
 </tr>
-
 <tr>
-<td align="left">166.4</td>
-<td align="left">55.9</td>
+<td style="text-align:left">166.4</td>
+<td style="text-align:left">55.9</td>
 </tr>
-
 <tr>
-<td align="left">173.1</td>
-<td align="left">68.0</td>
+<td style="text-align:left">173.1</td>
+<td style="text-align:left">68.0</td>
 </tr>
-
 <tr>
-<td align="left">176.9</td>
-<td align="left">67.9</td>
+<td style="text-align:left">176.9</td>
+<td style="text-align:left">67.9</td>
 </tr>
-
 <tr>
-<td align="left">178.4</td>
-<td align="left">69.1</td>
+<td style="text-align:left">178.4</td>
+<td style="text-align:left">69.1</td>
 </tr>
-
 <tr>
-<td align="left">167.1</td>
-<td align="left">60.8</td>
+<td style="text-align:left">167.1</td>
+<td style="text-align:left">60.8</td>
 </tr>
-
 <tr>
-<td align="left">177.4</td>
-<td align="left">65.6</td>
+<td style="text-align:left">177.4</td>
+<td style="text-align:left">65.6</td>
 </tr>
-
 <tr>
-<td align="left">173.7</td>
-<td align="left">66.1</td>
+<td style="text-align:left">173.7</td>
+<td style="text-align:left">66.1</td>
 </tr>
-
 <tr>
-<td align="left">172.0</td>
-<td align="left">59.9</td>
+<td style="text-align:left">172.0</td>
+<td style="text-align:left">59.9</td>
 </tr>
-
 <tr>
-<td align="left">174.1</td>
-<td align="left">69.5</td>
+<td style="text-align:left">174.1</td>
+<td style="text-align:left">69.5</td>
 </tr>
 </tbody>
 </table>
-
 <p>プロットすると以下のような図になる。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_16.png" width=50%></p>
-
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_16.png" width=50%>
 <p>今回は基本となる数式として直線の式(<strong>直線モデル</strong>)を利用して予測を行ってみる。</p>
-
 <p>このデータに対して、なんとなくだが、以下のような直線を引くとそれらしい予測を行えそうである。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_17.png" width=50%></p>
-
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_17.png" width=50%>
 <p>直線の式は以下の式のように表すことができる。</p>
 
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-
-
-
-<p class="katex">
-  $$ 
-y(x) = w_{0} x + w_{1}
- $$
-</p>
-
-
+<link rel="stylesheet" href="https://WAT36.github.io/pages/katex/katex.min.css" />
+<script defer src="https://WAT36.github.io/pages/katex/katex.min.js"></script>
+<script defer src="https://WAT36.github.io/pages/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \(y(x) = w_{0} x &#43; w_{1}\)
+</span>
 
 <p>最適な直線モデルの式を求めるには、最適なw<sub>0</sub>とw<sub>1</sub>を求めれば良いのだが、どのように求めれば良いのか？</p>
-
 <p>そちらは次章で記載する。</p>
-
 <p>&lt;参考&gt;グラフのコード</p>
 
 
 
 
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-import" style="display: none;" id="tabs-import-0" checked="checked" />
-  <label for="tabs-import-0">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-import" id="tabs-import-0" checked="checked" />
+  <label for="tabs-import-0">Python</label>
+  <div class="book-tabs-content markdown-inner"><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
 <span style="color:#f92672">&gt;&gt;&gt;</span> x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">167.9</span>,<span style="color:#ae81ff">164.3</span>,<span style="color:#ae81ff">171.6</span>,<span style="color:#ae81ff">172.7</span>,<span style="color:#ae81ff">162.8</span>,<span style="color:#ae81ff">170.2</span>,<span style="color:#ae81ff">172.3</span>,<span style="color:#ae81ff">163.8</span>,<span style="color:#ae81ff">168.8</span>,<span style="color:#ae81ff">167.2</span>,<span style="color:#ae81ff">172.3</span>,<span style="color:#ae81ff">166.4</span>,<span style="color:#ae81ff">173.1</span>,<span style="color:#ae81ff">176.9</span>,<span style="color:#ae81ff">178.4</span>,<span style="color:#ae81ff">167.1</span>,<span style="color:#ae81ff">177.4</span>,<span style="color:#ae81ff">173.7</span>,<span style="color:#ae81ff">172.0</span>,<span style="color:#ae81ff">174.1</span>])
@@ -303,7 +270,8 @@ y(x) = w_{0} x + w_{1}
 (<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">75</span>)
 <span style="color:#f92672">&gt;&gt;&gt;</span> plt<span style="color:#f92672">.</span>grid(True)
 <span style="color:#f92672">&gt;&gt;&gt;</span> plt<span style="color:#f92672">.</span>show()
-<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#↑でplt.gridまで行う</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#↑でplt.gridまで行う</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(x):
 <span style="color:#f92672">...</span>     <span style="color:#66d9ef">return</span> (<span style="color:#ae81ff">0.9038</span> <span style="color:#f92672">*</span> x) <span style="color:#f92672">-</span> <span style="color:#ae81ff">92.1461</span>
 <span style="color:#f92672">...</span> 
@@ -313,48 +281,67 @@ y(x) = w_{0} x + w_{1}
 <span style="color:#f92672">&gt;&gt;&gt;</span> plt<span style="color:#f92672">.</span>plot(x2,y2,color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>)
 [<span style="color:#f92672">&lt;</span>matplotlib<span style="color:#f92672">.</span>lines<span style="color:#f92672">.</span>Line2D object at <span style="color:#ae81ff">0x120b47ba8</span><span style="color:#f92672">&gt;</span>]
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
-<span style="color:#f92672">&gt;&gt;&gt;</span> plt<span style="color:#f92672">.</span>show()</code></pre></div>
-  </div>
-
-</div>
+<span style="color:#f92672">&gt;&gt;&gt;</span> plt<span style="color:#f92672">.</span>show()
+</code></pre></div></div></div>
 
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/3b8cae811ca35c8b5b3c282ca771b56a8bf4c608" title='Last modified Apr 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 4, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/3b8cae811ca35c8b5b3c282ca771b56a8bf4c608" title='Last modified by Wataru Tsukagoshi | Apr 4, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Apr 4, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/machine_learning/linear_model.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
+</div>
+  
+ 
 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
 
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ファイル読み込み # ファイルを読み込む方法についてを示す。 Java Javaではプロパティファイル(.propertiesで終わるファイル)に関しては">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="ファイル読み込み" />
+<meta property="og:description" content="ファイル読み込み # ファイルを読み込む方法についてを示す。 Java Javaではプロパティファイル(.propertiesで終わるファイル)に関しては" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/file_io/fileopen/" />
+<meta property="article:modified_time" content="2020-02-25T17:43:35+09:00" />
 <title>ファイル読み込み | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.56342249d2185a2718a58a56889f268bce80fac8169c64e2252cd63fef2cffff.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2f file_io\2f fileopen\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,101 +102,92 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>ファイル読み込み</strong>
-</header>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="ファイル読み込み">ファイル読み込み</h1>
-
+      
+  <article class="markdown"><h1 id="ファイル読み込み">
+  ファイル読み込み
+  <a class="anchor" href="#%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e8%aa%ad%e3%81%bf%e8%be%bc%e3%81%bf">#</a>
+</h1>
 <p>ファイルを読み込む方法についてを示す。</p>
 
 
 
 
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-fopen" style="display: none;" id="tabs-fopen-0" checked="checked" />
-  <label for="tabs-fopen-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Javaではプロパティファイル(.propertiesで終わるファイル)に関しては専用のライブラリがありそれを利用して読み込むが、ここではテキストファイルなど一般的なファイルに対する読み込み方法についてを示す。</p>
-
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-fopen" id="tabs-fopen-0" checked="checked" />
+  <label for="tabs-fopen-0">Java</label>
+  <div class="book-tabs-content markdown-inner"><p>Javaではプロパティファイル(.propertiesで終わるファイル)に関しては専用のライブラリがありそれを利用して読み込むが、ここではテキストファイルなど一般的なファイルに対する読み込み方法についてを示す。</p>
 <p>Javaでファイルを読み込むには以下の2つの方法がある。</p>
-
 <ul>
 <li>java.io.<strong>FileInputStream</strong>クラスを利用する</li>
 <li>java.io.<strong>FileReader</strong>クラスを利用する</li>
 </ul>
-
 <p>それぞれについて示す。</p>
-
 <h2 id="fileinputstreamクラス">FileInputStreamクラス</h2>
-
-<p>FileInputStreamクラスはファイルからbyte単位で読み込みを行うストリームである。<br />
-ストリームとはデータの送受信を連続的に行うプログラムのことで、データを読み込む時のストリームは入力ストリームという。<br />
+<p>FileInputStreamクラスはファイルからbyte単位で読み込みを行うストリームである。<br>
+ストリームとはデータの送受信を連続的に行うプログラムのことで、データを読み込む時のストリームは入力ストリームという。 <br>
 このクラスは宣言時(コンストラクタ)にString型でファイルのパスまたはFile型のオブジェクトを入力する。Fileクラスは宣言時(コンストラクタ)にファイルのパス(相対パス)を文字列型で入力してできるオブジェクトである。これにより、このファイルからの入力ストリームが得られる。</p>
-
 <p><code>FileInputStream(String name) throws FileNotFoundException</code></p>
-
 <p><code>FileInputStream(File file) throws FileNotFoundException</code></p>
-
-<p>作成した入力ストリームからバイトデータを読み込むメソッドとして、<strong>read()</strong>というメソッドがある。</p>
-
+<p>作成した入力ストリームからバイトデータを読み込むメソッドとして、**read()**というメソッドがある。</p>
 <p><code>int read() throws IOException</code></p>
-
 <p>このメソッドは入力ストリームからバイトデータを読み込み、ファイルの終わりに達すると-1を返すメソッドである。
 FileInputStreamクラスではこのメソッドを利用してファイルを読み込む。</p>
-
-<p>また、読み込みが終わったら入力ストリームを閉じる<strong>close()</strong>メソッドを忘れずに行う。</p>
-
+<p>また、読み込みが終わったら入力ストリームを閉じる**close()**メソッドを忘れずに行う。</p>
 <p>FileInputStreamのjava実装例を示す。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">FileInputStream</span>;
-<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">File</span>;
-<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">IOException</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.io.FileInputStream<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.io.File<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
 
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
-  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-    FileInputStream <span style="color:#a6e22e">fis</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
-    <span style="color:#66d9ef">try</span>{
-      fis <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileInputStream(<span style="color:#66d9ef">new</span> File(<span style="color:#e6db74">&#34;test.txt&#34;</span>));
-      <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> 0;
-      <span style="color:#66d9ef">while</span>((data <span style="color:#f92672">=</span> fis.<span style="color:#a6e22e">read</span>()) <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span>1){
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span><span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[]){</span>
+    FileInputStream fis <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">try</span><span style="color:#f92672">{</span>
+      fis <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileInputStream<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;test.txt&#34;</span><span style="color:#f92672">));</span>
+      <span style="color:#66d9ef">int</span> data <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+      <span style="color:#66d9ef">while</span><span style="color:#f92672">((</span>data <span style="color:#f92672">=</span> fis<span style="color:#f92672">.</span><span style="color:#a6e22e">read</span><span style="color:#f92672">())</span> <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">){</span>
         <span style="color:#75715e">//ファイルから読み込んだバイトデータを表示
-</span><span style="color:#75715e"></span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(data);
-      }
-    }<span style="color:#66d9ef">catch</span> (IOException <span style="color:#a6e22e">e</span>){
-      System.<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;IO Error&#34;</span>);
-    }<span style="color:#66d9ef">finally</span>{
-      <span style="color:#66d9ef">try</span>{
-        fis.<span style="color:#a6e22e">close</span>();
-      }<span style="color:#66d9ef">catch</span>(IOException <span style="color:#a6e22e">e</span>){
-      }
-    }
-  }
-}</code></pre></div>
-<p>実行例は以下の通り。</p>
-
+</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>data<span style="color:#f92672">);</span>
+      <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span><span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">){</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">err</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;IO Error&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span><span style="color:#66d9ef">finally</span><span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">try</span><span style="color:#f92672">{</span>
+        fis<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+      <span style="color:#f92672">}</span><span style="color:#66d9ef">catch</span><span style="color:#f92672">(</span>IOException e<span style="color:#f92672">){</span>
+      <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>実行例は以下の通り。</p>
 <pre><code>$ ls
 test.txt    Main.java
 $ cat test.txt 
@@ -219,54 +216,43 @@ $ java Main
 101
 101
 101
-</code></pre>
-
-<h2 id="filereaderクラス">FileReaderクラス</h2>
-
-<p>FileReaderクラスはファイルからchar単位で読み込みを行う入力ストリームである。<br />
+</code></pre><h2 id="filereaderクラス">FileReaderクラス</h2>
+<p>FileReaderクラスはファイルからchar単位で読み込みを行う入力ストリームである。<br>
 このクラスもFileInputStreamクラスと同様に、宣言時(コンストラクタ)にString型でファイルパスまたはFile型のオブジェクトを入力する。これにより、このファイルからの入力ストリームが得られる。</p>
-
 <p><code>FileReader(File file) throws FileNotFoundException</code></p>
-
 <p><code>FileReader(String name) throws FileNotFoundException</code></p>
-
-<p>作成した入力ストリームからバイトデータを読み込むメソッドとして、こちらも<strong>read()</strong>というメソッドがある。</p>
-
+<p>作成した入力ストリームからバイトデータを読み込むメソッドとして、こちらも**read()**というメソッドがある。</p>
 <p><code>int read() throws IOException</code></p>
-
-<p>このメソッドは入力ストリームから１文字を読み込み、ファイルの終わりに達すると-1を返すメソッドである。<br />
-返すデータはint型だが、このデータはUnicode(16bitデータ)に対応しており、char型に変換すれば対応する文字になって表示してくれる。<br />
+<p>このメソッドは入力ストリームから１文字を読み込み、ファイルの終わりに達すると-1を返すメソッドである。<br>
+返すデータはint型だが、このデータはUnicode(16bitデータ)に対応しており、char型に変換すれば対応する文字になって表示してくれる。<br>
 FileReaderクラスではこのメソッドを利用してファイルを読み込む。</p>
-
-<p>また、読み込みが終わったらこちらも入力ストリームを閉じる<strong>close()</strong>メソッドを忘れずに行う。</p>
-
+<p>また、読み込みが終わったらこちらも入力ストリームを閉じる**close()**メソッドを忘れずに行う。</p>
 <p>FileReaderのjava実装例を示す。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">FileReader</span>;
-<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">File</span>;
-<span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">IOException</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.io.FileReader<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.io.File<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
 
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
-  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-    FileReader <span style="color:#a6e22e">fr</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
-    <span style="color:#66d9ef">try</span>{
-      fr <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileReader(<span style="color:#66d9ef">new</span> File(<span style="color:#e6db74">&#34;test.txt&#34;</span>));
-      <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> 0;
-      <span style="color:#66d9ef">while</span>((data <span style="color:#f92672">=</span> fr.<span style="color:#a6e22e">read</span>()) <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span>1){
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span><span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[]){</span>
+    FileReader fr <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">try</span><span style="color:#f92672">{</span>
+      fr <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileReader<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;test.txt&#34;</span><span style="color:#f92672">));</span>
+      <span style="color:#66d9ef">int</span> data <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+      <span style="color:#66d9ef">while</span><span style="color:#f92672">((</span>data <span style="color:#f92672">=</span> fr<span style="color:#f92672">.</span><span style="color:#a6e22e">read</span><span style="color:#f92672">())</span> <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">){</span>
         <span style="color:#75715e">//読み込んだデータをchar型で表示する
-</span><span style="color:#75715e"></span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>((<span style="color:#66d9ef">char</span>)data);
-      }
-    }<span style="color:#66d9ef">catch</span> (IOException <span style="color:#a6e22e">e</span>){
-      System.<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;IO Error&#34;</span>);
-    }<span style="color:#66d9ef">finally</span>{
-      <span style="color:#66d9ef">try</span>{
-        fr.<span style="color:#a6e22e">close</span>();
-      }<span style="color:#66d9ef">catch</span>(IOException <span style="color:#a6e22e">e</span>){
-      }
-    }
-  }
-}</code></pre></div>
-<p>実行例は以下の通り。</p>
-
+</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">((</span><span style="color:#66d9ef">char</span><span style="color:#f92672">)</span>data<span style="color:#f92672">);</span>
+      <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span><span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">){</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">err</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;IO Error&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span><span style="color:#66d9ef">finally</span><span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">try</span><span style="color:#f92672">{</span>
+        fr<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+      <span style="color:#f92672">}</span><span style="color:#66d9ef">catch</span><span style="color:#f92672">(</span>IOException e<span style="color:#f92672">){</span>
+      <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>実行例は以下の通り。</p>
 <pre><code>$ ls
 test.txt    Main.java
 $ cat test.txt 
@@ -280,37 +266,23 @@ aaa
 bbb
 ccc
 ddd
-</code></pre>
-
-  </div>
-
-  <input type="radio" name="tabs-fopen" style="display: none;" id="tabs-fopen-1"  />
-  <label for="tabs-fopen-1">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Pythonでは組み込み関数<strong>open()</strong>を利用してファイルを開き、読み込む。</p>
-
+</code></pre></div><input type="radio" class="toggle" name="tabs-fopen" id="tabs-fopen-1"  />
+  <label for="tabs-fopen-1">Python</label>
+  <div class="book-tabs-content markdown-inner"><p>Pythonでは組み込み関数**open()**を利用してファイルを開き、読み込む。</p>
 <p><code>open(ファイル名,モード)</code></p>
-
-<p>モードとは読み込んだファイルに対する権限であり、読み込み専用なら <strong>&lsquo;r&rsquo;</strong> 、書き出し専用なら <strong>&lsquo;w&rsquo;</strong>、読み書き両方なら <strong>&lsquo;r+&rsquo;</strong> というように設定する。<br />
+<p>モードとは読み込んだファイルに対する権限であり、読み込み専用なら <strong>&lsquo;r&rsquo;</strong> 、書き出し専用なら <strong>&lsquo;w&rsquo;</strong>、読み書き両方なら <strong>&lsquo;r+'</strong> というように設定する。<br>
 open関数で開いたファイルは、ファイルオブジェクトとして返される。</p>
-
-<p>読み込んだファイルの中身を表示したい場合はファイルオブジェクトの関数<strong>read()</strong>を利用する。</p>
-
+<p>読み込んだファイルの中身を表示したい場合はファイルオブジェクトの関数**read()**を利用する。</p>
 <p><code>read(サイズ)</code></p>
-
-<p>引数にはサイズを入力し、実行するとそのサイズ分を読み込んで返してくれる。サイズを省略した場合はファイルの中身を全て読み込んで返す。<br />
-また、似たような関数として<strong>readline()</strong>という関数もあり、これはファイルオブジェクトから1行読み込んだ内容を返す。</p>
-
-<p>また、openで開いたファイルでの作業が終わったら、最後にファイルオブジェクトの関数<strong>close()</strong>を利用してファイルをクローズする。これによりオープンしたファイルが占めていたシステムリソースを全て開放する。</p>
-
-<p>一連の操作についてここまで述べたが、実はこれらの動作を行う際は<strong>with</strong>文を使うのが非常に便利である。<br />
-その利点は、with文から抜けるときに自動的にファイルクローズを実行してくれるからであり（途中に例外が発生しても行われる）、同様の処理をtry-except文で実装するよりも簡略化できる。<br />
+<p>引数にはサイズを入力し、実行するとそのサイズ分を読み込んで返してくれる。サイズを省略した場合はファイルの中身を全て読み込んで返す。<br>
+また、似たような関数として**readline()**という関数もあり、これはファイルオブジェクトから1行読み込んだ内容を返す。</p>
+<p>また、openで開いたファイルでの作業が終わったら、最後にファイルオブジェクトの関数**close()**を利用してファイルをクローズする。これによりオープンしたファイルが占めていたシステムリソースを全て開放する。</p>
+<p>一連の操作についてここまで述べたが、実はこれらの動作を行う際は<strong>with</strong>文を使うのが非常に便利である。<br>
+その利点は、with文から抜けるときに自動的にファイルクローズを実行してくれるからであり（途中に例外が発生しても行われる）、同様の処理をtry-except文で実装するよりも簡略化できる。<br>
 使用法は以下の通り。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;ファイル名&#39;</span>,<span style="color:#e6db74">&#39;モード&#39;</span>) <span style="color:#66d9ef">as</span> f:
-    data <span style="color:#f92672">=</span> f<span style="color:#f92672">.</span>read()</code></pre></div>
-<p>実行例を以下に示す。</p>
+    data <span style="color:#f92672">=</span> f<span style="color:#f92672">.</span>read()
+</code></pre></div><p>実行例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> ls
 test<span style="color:#f92672">.</span>txt
 
@@ -357,48 +329,67 @@ ddd
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#fがクローズされているか確認</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> f<span style="color:#f92672">.</span>closed
 True
-<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
-  </div>
-
-</div>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+</code></pre></div></div></div>
 
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/e4eb34f13cc98375ddee8b920ffeb569185d76de" title='Last modified Feb 25, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Feb 25, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/e4eb34f13cc98375ddee8b920ffeb569185d76de" title='Last modified by Wataru Tsukagoshi | Feb 25, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Feb 25, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/file_io/fileopen.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
+</div>
+  
+ 
 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
 
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

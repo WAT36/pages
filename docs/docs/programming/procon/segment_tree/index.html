@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="セグメント木 # セグメント木は区間と二分木を組み合わせたようなデータ構造である。例えば長さ8のリストをセグメント木で表すと以下のようになる。 こ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="セグメント木" />
+<meta property="og:description" content="セグメント木 # セグメント木は区間と二分木を組み合わせたようなデータ構造である。例えば長さ8のリストをセグメント木で表すと以下のようになる。 こ" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/procon/segment_tree/" />
+<meta property="article:modified_time" content="2020-10-24T11:10:40+09:00" />
 <title>セグメント木 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.56342249d2185a2718a58a56889f268bce80fac8169c64e2252cd63fef2cffff.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fprocon\2fsegment_tree\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,82 +102,94 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>セグメント木</strong>
-</header>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#セグメント木を使った最小値の求め方">セグメント木を使った最小値の求め方</a></li>
+    <li><a href="#セグメント木の値の更新">セグメント木の値の更新</a></li>
+    <li><a href="#コードでの実装例">コードでの実装例</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="セグメント木">セグメント木</h1>
-
+      
+  <article class="markdown"><h1 id="セグメント木">
+  セグメント木
+  <a class="anchor" href="#%e3%82%bb%e3%82%b0%e3%83%a1%e3%83%b3%e3%83%88%e6%9c%a8">#</a>
+</h1>
 <p>セグメント木は区間と二分木を組み合わせたようなデータ構造である。例えば長さ8のリストをセグメント木で表すと以下のようになる。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/segment_tree1.png" alt="セグメント木例1" /></p>
-
 <p>ここで、セグメント木の節点にどのようなデータを持たせるかによって、様々な機能を持つ木を作ることができる。</p>
-
 <p>ここでは、RMQ(Range Minimum Query)を実現するセグメント木を例として見ていく。</p>
-
 <p>RMQとは、リスト(及び数列)上で、指定した区間内の最小値を求めるという問題である。</p>
-
 <p>まず、例として以下のような数列があったとする。</p>
-
 <pre><code>a=[5,2,3,7,4,1,9,10]
-</code></pre>
-
-<p>この数列において、i,j(0≦i≦j&lt;|a|)を入力したときに、a[i]からa[j]の区間内での最小値を求めることを考えてみよう。</p>
-
-<h2 id="セグメント木を使った最小値の求め方">セグメント木を使った最小値の求め方</h2>
-
+</code></pre><p>この数列において、i,j(0≦i≦j&lt;|a|)を入力したときに、a[i]からa[j]の区間内での最小値を求めることを考えてみよう。</p>
+<h2 id="セグメント木を使った最小値の求め方">
+  セグメント木を使った最小値の求め方
+  <a class="anchor" href="#%e3%82%bb%e3%82%b0%e3%83%a1%e3%83%b3%e3%83%88%e6%9c%a8%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f%e6%9c%80%e5%b0%8f%e5%80%a4%e3%81%ae%e6%b1%82%e3%82%81%e6%96%b9">#</a>
+</h2>
 <p>この数列をセグメント木で、節点にその節点が示す区間の最小値を入力すると以下のようになる。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/segment_tree2.png" alt="セグメント木例2" /></p>
-
 <p>ここで、区間を示す値i,jを入力したとき、どのようにして最小値を求めれば良いか。</p>
-
 <p>方法は、セグメント木中で区間[i,j]を示すような値を取り出し、その最小値を求めれば良いのである。</p>
-
 <p>例えば、i=1,j=4の時は、以下のセグメント木の黄色い節点が[1,4]を示すことになり、この値の最小値「2」が区間[i,j]の最小値となる。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/segment_tree3.png" alt="セグメント木例3" /></p>
-
 <p>i,jが与えられた時に、セグメント木を使って区間[i,j]の最小値を取り出す方法は、セグメント木の根から以下の手順を再帰的に求める。</p>
-
 <ul>
 <li>[i,j]とその節点が示す区間が全く交差していなければ、最小値を計算するのに影響しない値を返す。(intの最大値など)</li>
 <li>[i,j]にその節点が示す区間が含まれるならば、その節点の持つ値を返す。</li>
 <li>上の2つのいずれでもない場合は、2つの子ノードについてこの手順を行い、その2つの最小値を返す。</li>
 </ul>
-
-<h2 id="セグメント木の値の更新">セグメント木の値の更新</h2>
-
+<h2 id="セグメント木の値の更新">
+  セグメント木の値の更新
+  <a class="anchor" href="#%e3%82%bb%e3%82%b0%e3%83%a1%e3%83%b3%e3%83%88%e6%9c%a8%e3%81%ae%e5%80%a4%e3%81%ae%e6%9b%b4%e6%96%b0">#</a>
+</h2>
 <p>aの要素を更新する時、セグメント木中の節点の値も更新しなければならない。その場合の計算方法はどうすれば良いか？</p>
-
 <p>これは、セグメント木の葉の要素(a[i])から更新し、その後親要素へ順に最小値を計算、更新させていく。</p>
-
 <p>例として、a[0]を0と置き換えた時の一連の流れを以下の図に示す。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/segment_tree4.png" alt="セグメント木例4" /></p>
-
-<h2 id="コードでの実装例">コードでの実装例</h2>
-
+<h2 id="コードでの実装例">
+  コードでの実装例
+  <a class="anchor" href="#%e3%82%b3%e3%83%bc%e3%83%89%e3%81%a7%e3%81%ae%e5%ae%9f%e8%a3%85%e4%be%8b">#</a>
+</h2>
 <p>これまでの一連の機能について、セグメント木を(Python)コードで実装した例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#最小値計算に影響を与えないほどの大きい値</span>
 MAX<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span><span style="color:#f92672">**</span><span style="color:#ae81ff">9</span>
@@ -204,56 +222,82 @@ MAX<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span><spa
             <span style="color:#75715e">#そうでない時は、2つの子の最小値を返す</span>
             vl<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>query(a,b,<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>k<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,l,(l<span style="color:#f92672">+</span>r)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>)
             vr<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>query(a,b,<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>k<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>,(l<span style="color:#f92672">+</span>r)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>,r)
-            <span style="color:#66d9ef">return</span> min(vl,vr)</code></pre></div></article>
-
+            <span style="color:#66d9ef">return</span> min(vl,vr)
+</code></pre></div></article>
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/80e608ad2c815712d5ff3e98577c1acaa7164a52" title='Last modified Oct 24, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 24, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/80e608ad2c815712d5ff3e98577c1acaa7164a52" title='Last modified by Wataru Tsukagoshi | Oct 24, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Oct 24, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/procon/segment_tree.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#セグメント木">セグメント木</a>
-<ul>
-<li><a href="#セグメント木を使った最小値の求め方">セグメント木を使った最小値の求め方</a></li>
-<li><a href="#セグメント木の値の更新">セグメント木の値の更新</a></li>
-<li><a href="#コードでの実装例">コードでの実装例</a></li>
-</ul></li>
-</ul>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#セグメント木を使った最小値の求め方">セグメント木を使った最小値の求め方</a></li>
+    <li><a href="#セグメント木の値の更新">セグメント木の値の更新</a></li>
+    <li><a href="#コードでの実装例">コードでの実装例</a></li>
+  </ul>
 </nav>
-  </aside>
 
 
-
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

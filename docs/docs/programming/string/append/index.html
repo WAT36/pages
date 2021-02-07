@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="文字列に別の文字列を追加する # 文字列の末尾に別の文字列を繋げる方法についてまとめる。 Java javaの場合は使用しているクラスにより方法が異なる。">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="文字列に別の文字列を追加する" />
+<meta property="og:description" content="文字列に別の文字列を追加する # 文字列の末尾に別の文字列を繋げる方法についてまとめる。 Java javaの場合は使用しているクラスにより方法が異なる。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/string/append/" />
+<meta property="article:published_time" content="2019-10-14T23:58:19+09:00" />
+<meta property="article:modified_time" content="2020-09-06T21:35:11+09:00" />
 <title>文字列に別の文字列を追加する | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.56342249d2185a2718a58a56889f268bce80fac8169c64e2252cd63fef2cffff.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +36,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +60,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fstring\2f append\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,131 +103,143 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>文字列に別の文字列を追加する</strong>
-</header>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="文字列に別の文字列を追加する">文字列に別の文字列を追加する</h1>
-
+      
+  <article class="markdown"><h1 id="文字列に別の文字列を追加する">
+  文字列に別の文字列を追加する
+  <a class="anchor" href="#%e6%96%87%e5%ad%97%e5%88%97%e3%81%ab%e5%88%a5%e3%81%ae%e6%96%87%e5%ad%97%e5%88%97%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b">#</a>
+</h1>
 <p>文字列の末尾に別の文字列を繋げる方法についてまとめる。</p>
 
 
 
 
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-string_add" style="display: none;" id="tabs-string_add-0" checked="checked" />
-  <label for="tabs-string_add-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>javaの場合は使用しているクラスにより方法が異なる。<br>
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-string_add" id="tabs-string_add-0" checked="checked" />
+  <label for="tabs-string_add-0">Java</label>
+  <div class="book-tabs-content markdown-inner"><p>javaの場合は使用しているクラスにより方法が異なる。<br>
 Stringでは <strong>+</strong> 演算子を使うっことで文字列を連結できる。<br>
 文字列の先頭・末尾に連結する場合はこれで良いが、文字列の途中に別の文字列を追加したい場合は、String.<strong>substring(int beginindex, int endindex)</strong> メソッドで文字列の一部分のみを取り出せるので、これと + 演算子を利用して連結する。
 ちなみにsubstringメソッドはbeginindex〜(endindex-1)までの位置の文字列を取ってくるので注意。<br>
 以下に使用例を示す。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;test&#34;</span>;
-String <span style="color:#a6e22e">t</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#f92672">+</span> s;
-System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(t); <span style="color:#75715e">// 1test
-</span><span style="color:#75715e"></span>String <span style="color:#a6e22e">t</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#f92672">+</span> s;
-System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(t); <span style="color:#75715e">// test1
-</span><span style="color:#75715e"></span>String <span style="color:#a6e22e">t</span> <span style="color:#f92672">=</span> s.<span style="color:#a6e22e">substring</span>(0,2) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;1&#34;</span> s.<span style="color:#a6e22e">substring</span>(2,4);
-System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(t); <span style="color:#f92672">//</span> te1st</code></pre></div>
-<p>また、StringBuilderクラスを使っている場合は、<strong>append(追加する値)</strong> メソッドを使うと末尾に追加されるので便利。<br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;test&#34;</span><span style="color:#f92672">;</span>
+String t <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#f92672">+</span> s<span style="color:#f92672">;</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>t<span style="color:#f92672">);</span> <span style="color:#75715e">// 1test
+</span><span style="color:#75715e"></span>String t <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#f92672">+</span> s<span style="color:#f92672">;</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>t<span style="color:#f92672">);</span> <span style="color:#75715e">// test1
+</span><span style="color:#75715e"></span>String t <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">substring</span><span style="color:#f92672">(</span>0<span style="color:#f92672">,</span>2<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;1&#34;</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">substring</span><span style="color:#f92672">(</span>2<span style="color:#f92672">,</span>4<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>t<span style="color:#f92672">);</span> <span style="color:#75715e">// te1st
+</span></code></pre></div><p>また、StringBuilderクラスを使っている場合は、<strong>append(追加する値)</strong> メソッドを使うと末尾に追加されるので便利。<br>
 指定した位置に追加したい場合は <strong>insert(追加する位置,追加する値)</strong> メソッドを使う。
 ちなみに、これらメソッドは引数の型にかかわらず入力でき、引数は自動的に文字列型に置き換えられて追加される。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">StringBuilder <span style="color:#a6e22e">sb</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringBuilder(<span style="color:#e6db74">&#34;test&#34;</span>);
-sb.<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#34;1&#34;</span>);
-System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(sb.<span style="color:#a6e22e">toString</span>()); <span style="color:#75715e">// test1
-</span><span style="color:#75715e"></span>sb.<span style="color:#a6e22e">insert</span>(0,<span style="color:#e6db74">&#34;1&#34;</span>);
-System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(sb.<span style="color:#a6e22e">toString</span>()); <span style="color:#f92672">//</span> 1test1</code></pre></div>
-  </div>
-
-  <input type="radio" name="tabs-string_add" style="display: none;" id="tabs-string_add-1"  />
-  <label for="tabs-string_add-1">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Pythonでも &ldquo; <strong>+</strong> &ldquo;,&rdquo; <strong>+=</strong> &ldquo; 演算子を使って文字列を連結できる。<br>
-また&rdquo; * &ldquo;演算子を使って同じ文字を指定回数連結することもできる。
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">StringBuilder sb <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringBuilder<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;test&#34;</span><span style="color:#f92672">);</span>
+sb<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>sb<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span> <span style="color:#75715e">// test1
+</span><span style="color:#75715e"></span>sb<span style="color:#f92672">.</span><span style="color:#a6e22e">insert</span><span style="color:#f92672">(</span>0<span style="color:#f92672">,</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>sb<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span> <span style="color:#75715e">// 1test1
+</span></code></pre></div></div><input type="radio" class="toggle" name="tabs-string_add" id="tabs-string_add-1"  />
+  <label for="tabs-string_add-1">Python</label>
+  <div class="book-tabs-content markdown-inner"><p>Pythonでも &quot; <strong>+</strong> &ldquo;,&rdquo; <strong>+=</strong> &quot; 演算子を使って文字列を連結できる。<br>
+また&quot; * &ldquo;演算子を使って同じ文字を指定回数連結することもできる。
 以下に使用例を示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;test&#34;</span>
 t <span style="color:#f92672">=</span> s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;1&#34;</span>
 <span style="color:#66d9ef">print</span>(t) <span style="color:#75715e"># s1</span>
 t <span style="color:#f92672">=</span> s <span style="color:#f92672">*</span> <span style="color:#ae81ff">5</span>
-<span style="color:#66d9ef">print</span>(t) <span style="color:#75715e"># testtesttesttesttest</span></code></pre></div>
-  </div>
-
-  <input type="radio" name="tabs-string_add" style="display: none;" id="tabs-string_add-2"  />
-  <label for="tabs-string_add-2">
-    Javascript
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Javascriptでも&rdquo; <strong>+</strong> &ldquo; 演算子を使って文字列を連結できる。</p>
+<span style="color:#66d9ef">print</span>(t) <span style="color:#75715e"># testtesttesttesttest</span>
+</code></pre></div></div><input type="radio" class="toggle" name="tabs-string_add" id="tabs-string_add-2"  />
+  <label for="tabs-string_add-2">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>Javascriptでも&quot; <strong>+</strong> &quot; 演算子を使って文字列を連結できる。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Hello!&#39;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;World!&#39;</span>
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">str</span>)
-</code></pre></div>
-  </div>
-
-</div>
+</code></pre></div></div></div>
 
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/132691dee1ad7d5f731182263a742fd179df9539" title='Last modified Sep 6, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 6, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/132691dee1ad7d5f731182263a742fd179df9539" title='Last modified by Wataru Tsukagoshi | Sep 6, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Sep 6, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/string/append.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
+</div>
+  
+ 
 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
 
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

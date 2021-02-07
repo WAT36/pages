@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="手書き文字の認識 # ここでは、実用的な問題への応用として、手書き数字をニューラルネットワークを使って認識させてみることを考えてみる。 MNIST">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="手書き文字の認識" />
+<meta property="og:description" content="手書き文字の認識 # ここでは、実用的な問題への応用として、手書き数字をニューラルネットワークを使って認識させてみることを考えてみる。 MNIST" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/machine_learning/mnist/" />
+<meta property="article:modified_time" content="2020-09-26T14:39:56+09:00" />
 <title>手書き文字の認識 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.56342249d2185a2718a58a56889f268bce80fac8169c64e2252cd63fef2cffff.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2fmnist\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,46 +102,71 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>手書き文字の認識</strong>
-</header>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#mnistデータベース">MNISTデータベース</a></li>
+    <li><a href="#２層フィードフォワードニューラルネットワークでの学習">２層フィードフォワードニューラルネットワークでの学習</a></li>
+    <li><a href="#relu活性化関数">ReLU活性化関数</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="手書き文字の認識">手書き文字の認識</h1>
-
+      
+  <article class="markdown"><h1 id="手書き文字の認識">
+  手書き文字の認識
+  <a class="anchor" href="#%e6%89%8b%e6%9b%b8%e3%81%8d%e6%96%87%e5%ad%97%e3%81%ae%e8%aa%8d%e8%ad%98">#</a>
+</h1>
 <p>ここでは、実用的な問題への応用として、手書き数字をニューラルネットワークを使って認識させてみることを考えてみる。</p>
-
-<h2 id="mnistデータベース">MNISTデータベース</h2>
-
+<h2 id="mnistデータベース">
+  MNISTデータベース
+  <a class="anchor" href="#mnist%e3%83%87%e3%83%bc%e3%82%bf%e3%83%99%e3%83%bc%e3%82%b9">#</a>
+</h2>
 <p>手書き文字のデータは、<strong>MNIST</strong>と呼ばれるデータセットを利用する。</p>
-
 <p>MNISTデータセットは、Kerasから以下のように利用することができる。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> keras.datasets <span style="color:#f92672">import</span> mnist
 
 <span style="color:#75715e"># trainに60000個の訓練用データ、testに10000個のテストデータが入る</span>
-(x_train,y_train),(x_test,y_test) <span style="color:#f92672">=</span> mnist<span style="color:#f92672">.</span>load_data()</code></pre></div>
-<p>ここで、x_trainには60000*28*28の配列変数で、0~255の値をとるデータが入る。</p>
-
+(x_train,y_train),(x_test,y_test) <span style="color:#f92672">=</span> mnist<span style="color:#f92672">.</span>load_data()
+</code></pre></div><p>ここで、x_trainには60000<em>28</em>28の配列変数で、0~255の値をとるデータが入る。</p>
 <p>また、y_trainには60000*1の配列変数で、画像の認識結果である0-9の値が入る。</p>
-
 <p>例として、データを一つとって図示してみよう。以下にその過程を示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#最初のデータだけ図示</span>
 x0 <span style="color:#f92672">=</span> x_train[<span style="color:#ae81ff">0</span>]
@@ -146,23 +177,18 @@ plt<span style="color:#f92672">.</span>imshow(x0,interpolation<span style="color
 plt<span style="color:#f92672">.</span>show()
 
 <span style="color:#75715e">#ちなみに認識結果（目標値）は</span>
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;↑の目標値：{0}&#39;</span><span style="color:#f92672">.</span>format(y_train[<span style="color:#ae81ff">0</span>]))</code></pre></div>
-<p>実行結果</p>
-
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_49.png" width=50%></p>
-
-<h2 id="２層フィードフォワードニューラルネットワークでの学習">２層フィードフォワードニューラルネットワークでの学習</h2>
-
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;↑の目標値：{0}&#39;</span><span style="color:#f92672">.</span>format(y_train[<span style="color:#ae81ff">0</span>]))
+</code></pre></div><p>実行結果</p>
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_49.png" width=50%>
+<h2 id="２層フィードフォワードニューラルネットワークでの学習">
+  ２層フィードフォワードニューラルネットワークでの学習
+  <a class="anchor" href="#%ef%bc%92%e5%b1%a4%e3%83%95%e3%82%a3%e3%83%bc%e3%83%89%e3%83%95%e3%82%a9%e3%83%af%e3%83%bc%e3%83%89%e3%83%8b%e3%83%a5%e3%83%bc%e3%83%a9%e3%83%ab%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%81%a7%e3%81%ae%e5%ad%a6%e7%bf%92">#</a>
+</h2>
 <p>では、このデータをニューラルネットワークを用いて学習させてみよう。まずはデータの前処理を行う。</p>
-
-<p>MNISTでの入力データは1つにつき28*28の配列変数だったので、まずはこれを1*784の形に変形させる。</p>
-
+<p>MNISTでの入力データは1つにつき28<em>28の配列変数だったので、まずはこれを1</em>784の形に変形させる。</p>
 <p>また、値を実数として扱うためにfloat型に変換し、255で割って0~1の範囲に値を収める。</p>
-
 <p>そして、目標データもKerasの関数を使って1-of-K符号化法で変換する。</p>
-
 <p>これらを、テストデータに対しても行わせる。</p>
-
 <p>以上の流れをコードで実装すると、以下のようになる。(訓練データのみ)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#行列の型を変換</span>
 x_train <span style="color:#f92672">=</span> x_train<span style="color:#f92672">.</span>reshape(<span style="color:#ae81ff">60000</span>,<span style="color:#ae81ff">28</span><span style="color:#f92672">*</span><span style="color:#ae81ff">28</span>)
@@ -171,8 +197,8 @@ x_train <span style="color:#f92672">=</span> x_train<span style="color:#f92672">
 <span style="color:#75715e">#0~1の値に収める</span>
 x_train <span style="color:#f92672">=</span> x_train<span style="color:#f92672">/</span><span style="color:#ae81ff">255</span>
 <span style="color:#75715e">#目標データも1-of-K符号化法で表す</span>
-y_train <span style="color:#f92672">=</span> np_utils<span style="color:#f92672">.</span>to_categorical(y_train,<span style="color:#ae81ff">10</span>)</code></pre></div>
-<p>次に、中間層、活性化関数を以下のように定義する。</p>
+y_train <span style="color:#f92672">=</span> np_utils<span style="color:#f92672">.</span>to_categorical(y_train,<span style="color:#ae81ff">10</span>)
+</code></pre></div><p>次に、中間層、活性化関数を以下のように定義する。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#ニューラルネットワークの定義</span>
 <span style="color:#f92672">from</span> keras.models <span style="color:#f92672">import</span> Sequential
 <span style="color:#f92672">from</span> keras.layers <span style="color:#f92672">import</span> Dense,Activation
@@ -190,17 +216,12 @@ model<span style="color:#f92672">.</span>compile(loss<span style="color:#f92672"
 <span style="color:#75715e">#学習を行わせる。trainは訓練データ、全データを学習に使う回数:10、validation_dataにテストデータ。(verbose=1で進行状況表示)</span>
 history<span style="color:#f92672">=</span>model<span style="color:#f92672">.</span>fit(x_train,y_train,epochs<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>,batch_size<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>,verbose<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,validation_data<span style="color:#f92672">=</span>(x_test,y_test))
 <span style="color:#75715e">#学習の評価値を出力</span>
-score<span style="color:#f92672">=</span>model<span style="color:#f92672">.</span>evaluate(x_test,y_test,verbose<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)</code></pre></div>
-<p>ここで、学習を行う(model.fit)時は交差エントロピー誤差を勾配法を用いて最小値を計算しにいくのだが、勾配法だと局所解に嵌った場合抜け出せなくなり、正しい最小値が得られないという場合がありうる。</p>
-
+score<span style="color:#f92672">=</span>model<span style="color:#f92672">.</span>evaluate(x_test,y_test,verbose<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</code></pre></div><p>ここで、学習を行う(model.fit)時は交差エントロピー誤差を勾配法を用いて最小値を計算しにいくのだが、勾配法だと局所解に嵌った場合抜け出せなくなり、正しい最小値が得られないという場合がありうる。</p>
 <p>そこで、別の方法として、<strong>確率的勾配法</strong>という手法を用いてここでは計算を行なっている。</p>
-
 <p>確率的勾配法とは、複数個のデータセットを用いて勾配を計算しパラメータを更新する方法である。これにより、場合によっては局所解から脱出できることがある。</p>
-
 <p>確率的勾配法で用いるデータセットの個数として、コードではbatch_size=1000(1000個)と指定している。</p>
-
 <p>次に、学習させたモデルを用いてテストデータを何個か評価させてみよう。</p>
-
 <p>評価させるためのコードを以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">y<span style="color:#f92672">=</span>model<span style="color:#f92672">.</span>predict(x_test)
 plt<span style="color:#f92672">.</span>figure(<span style="color:#ae81ff">2</span>,figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">8</span>))
@@ -222,47 +243,31 @@ plt<span style="color:#f92672">.</span>gray()
     plt<span style="color:#f92672">.</span>xticks([],<span style="color:#e6db74">&#34;&#34;</span>)
     plt<span style="color:#f92672">.</span>yticks([],<span style="color:#e6db74">&#34;&#34;</span>)
 
-plt<span style="color:#f92672">.</span>show()  </code></pre></div>
-<p>実行結果</p>
-
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_50.png" width=100%></p>
-
+plt<span style="color:#f92672">.</span>show()  
+</code></pre></div><p>実行結果</p>
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_50.png" width=100%>
 <p>黄線が正しく認識できたデータ、赤線が認識できなかったデータを表しているが、この結果を見ると、うまく認識されていないケースが多いように見える。</p>
-
 <p>そのため、どこか改良してみることを考えてみよう。ここでは、途中の活性化関数を別のものにさせてみる。</p>
-
-<h2 id="relu活性化関数">ReLU活性化関数</h2>
-
+<h2 id="relu活性化関数">
+  ReLU活性化関数
+  <a class="anchor" href="#relu%e6%b4%bb%e6%80%a7%e5%8c%96%e9%96%a2%e6%95%b0">#</a>
+</h2>
 <p>活性化関数として、シグモイド関数ではなくReLU (Rectified Linear Unit)関数を用いてみることを考えてみよう。</p>
-
 <p>ReLU関数とは以下の式で表される関数である。</p>
 
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-
-
-
-<p class="katex">
-  $$ 
-\tag{1}  h(x)
+<link rel="stylesheet" href="https://WAT36.github.io/pages/katex/katex.min.css" />
+<script defer src="https://WAT36.github.io/pages/katex/katex.min.js"></script>
+<script defer src="https://WAT36.github.io/pages/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \(\tag{1}  h(x)
     \begin{cases}
-        x & (x>0) \\
-        0 & (otherwise)
-    \end{cases}
- $$
-</p>
-
-
+        x &amp; (x&gt;0) \\
+        0 &amp; (otherwise)
+    \end{cases}\)
+</span>
 
 <p>シグモイド関数は入力値がどのように変化しても常に1に近い値を出力するので、入力の変化が出力に反映されにくくなる。</p>
-
 <p>その結果、誤差関数の偏微分が0に近い値になり、勾配法による学習が遅くなるという欠点があった。</p>
-
 <p>そのため、このようなReLU関数を用いることで、その問題を解決することが可能になる。</p>
-
 <p>では、先程のコードで、中間層の活性化関数を&rsquo;relu&rsquo;に変えて実行してみよう。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#モデルの定義</span>
 model <span style="color:#f92672">=</span> Sequential()
@@ -271,64 +276,86 @@ model<span style="color:#f92672">.</span>add(Dense(<span style="color:#ae81ff">1
 <span style="color:#75715e">#10個の出力層を定義する。活性化関数はソフトマックス関数</span>
 model<span style="color:#f92672">.</span>add(Dense(<span style="color:#ae81ff">10</span>,activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;softmax&#39;</span>))
 <span style="color:#75715e">#学習方法の設定。目的関数を交差エントロピー誤差、学習の評価として正答率を計算、アルゴリズムをAdamに設定</span>
-model<span style="color:#f92672">.</span>compile(loss<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;categorical_crossentropy&#39;</span>,optimizer<span style="color:#f92672">=</span>Adam(),metrics<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;accuracy&#39;</span>])</code></pre></div>
-<p>こちらで先ほどと同じようにテストデータを評価すると以下のようになる。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_51.png" width=100%></p>
-
+model<span style="color:#f92672">.</span>compile(loss<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;categorical_crossentropy&#39;</span>,optimizer<span style="color:#f92672">=</span>Adam(),metrics<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;accuracy&#39;</span>])
+</code></pre></div><p>こちらで先ほどと同じようにテストデータを評価すると以下のようになる。</p>
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_51.png" width=100%>
 <p>少しだけではあるが精度は良くなったように見える。だが、もう少し精度を上げることはできないだろうか？</p>
-
 <p>ここで少し機械学習とはそれるが、画像処理の技術を適用することを次章で考えてみる。</p>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/624d29689a7b2eeba5e00d8dd918a9f56dcbd4bb" title='Last modified Sep 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 26, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/624d29689a7b2eeba5e00d8dd918a9f56dcbd4bb" title='Last modified by Wataru Tsukagoshi | Sep 26, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Sep 26, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/machine_learning/mnist.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#手書き文字の認識">手書き文字の認識</a>
-<ul>
-<li><a href="#mnistデータベース">MNISTデータベース</a></li>
-<li><a href="#２層フィードフォワードニューラルネットワークでの学習">２層フィードフォワードニューラルネットワークでの学習</a></li>
-<li><a href="#relu活性化関数">ReLU活性化関数</a></li>
-</ul></li>
-</ul>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#mnistデータベース">MNISTデータベース</a></li>
+    <li><a href="#２層フィードフォワードニューラルネットワークでの学習">２層フィードフォワードニューラルネットワークでの学習</a></li>
+    <li><a href="#relu活性化関数">ReLU活性化関数</a></li>
+  </ul>
 </nav>
-  </aside>
 
 
-
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

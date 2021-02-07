@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ベルマンフォード法 # ベルマンフォード法とは、最短路問題(ある点から他の全ての頂点との間の最短路を求める問題)を解く手法の一つである。 始点sか">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="ベルマンフォード法" />
+<meta property="og:description" content="ベルマンフォード法 # ベルマンフォード法とは、最短路問題(ある点から他の全ての頂点との間の最短路を求める問題)を解く手法の一つである。 始点sか" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/procon/bellman_ford/" />
+<meta property="article:modified_time" content="2020-10-15T20:47:05+09:00" />
 <title>ベルマンフォード法 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.56342249d2185a2718a58a56889f268bce80fac8169c64e2252cd63fef2cffff.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fprocon\2f bellman_ford\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,53 +102,62 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>ベルマンフォード法</strong>
-</header>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="ベルマンフォード法">ベルマンフォード法</h1>
-
+      
+  <article class="markdown"><h1 id="ベルマンフォード法">
+  ベルマンフォード法
+  <a class="anchor" href="#%e3%83%99%e3%83%ab%e3%83%9e%e3%83%b3%e3%83%95%e3%82%a9%e3%83%bc%e3%83%89%e6%b3%95">#</a>
+</h1>
 <p>ベルマンフォード法とは、最短路問題(ある点から他の全ての頂点との間の最短路を求める問題)を解く手法の一つである。</p>
-
 <p>始点sから頂点iへの最短距離をd[i]とした時、以下の式が成り立つ。</p>
 
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-
-
-
-<p class="katex">
-  $$ 
-  dp[i] = min( d[j] + (頂点jから頂点iへの辺のコスト) | e=(j,i) \in E )
- $$
-</p>
-
-
+<link rel="stylesheet" href="https://WAT36.github.io/pages/katex/katex.min.css" />
+<script defer src="https://WAT36.github.io/pages/katex/katex.min.js"></script>
+<script defer src="https://WAT36.github.io/pages/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \(  dp[i] = min( d[j] &#43; (頂点jから頂点iへの辺のコスト) | e=(j,i) \in E )\)
+</span>
 
 <p>初期値をd[s]=0,d[i]=INFとし、この式を繰り返すと最短距離を計算し、更新していく。負の閉路が存在しなければこの更新は永続せずに停止する。停止した時のdが最短距離を示す。</p>
-
 <p>コードの例は以下の通り。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">INF<span style="color:#f92672">=</span>float(<span style="color:#e6db74">&#34;inf&#34;</span>)
 
@@ -177,11 +192,9 @@ d  <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><sp
             <span style="color:#66d9ef">break</span>
 
 shortest_path(s)
-<span style="color:#66d9ef">print</span>(d)</code></pre></div>
-<p>例として、以下のグラフでベルマンフォード法を使ってみよう。</p>
-
+<span style="color:#66d9ef">print</span>(d)
+</code></pre></div><p>例として、以下のグラフでベルマンフォード法を使ってみよう。</p>
 <p><img src="https://WAT36.github.io/pages/img/procon/dijkstra1.png" alt="グラフ例1" /></p>
-
 <p>この時、コード中のV,E,s,edgesを以下のように定める。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">V<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>     <span style="color:#75715e">#頂点の数</span>
 E<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>     <span style="color:#75715e">#辺の数</span>
@@ -194,58 +207,79 @@ edges[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">=</span>e
 edges[<span style="color:#ae81ff">3</span>]<span style="color:#f92672">=</span>edge(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>)
 edges[<span style="color:#ae81ff">4</span>]<span style="color:#f92672">=</span>edge(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">9</span>)
 edges[<span style="color:#ae81ff">5</span>]<span style="color:#f92672">=</span>edge(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">10</span>)
-edges[<span style="color:#ae81ff">6</span>]<span style="color:#f92672">=</span>edge(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">4</span>)</code></pre></div>
-<p>実行すると、結果は以下の通り。</p>
-
+edges[<span style="color:#ae81ff">6</span>]<span style="color:#f92672">=</span>edge(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">4</span>)
+</code></pre></div><p>実行すると、結果は以下の通り。</p>
 <pre><code>[0, 2, 3, 6, 10]
-</code></pre>
-
-<p>計算量については、whileループで少なくとも一つの頂点の最短距離が確定するので、多くてもV回実行される。その中のfor文でE回ループされるので、計算量は0(|V|*|E|)となる。</p>
+</code></pre><p>計算量については、whileループで少なくとも一つの頂点の最短距離が確定するので、多くてもV回実行される。その中のfor文でE回ループされるので、計算量は0(|V|*|E|)となる。</p>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/1fdaf6def9382557989f035b0f6c29e2dbf09a69" title='Last modified Oct 15, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 15, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/1fdaf6def9382557989f035b0f6c29e2dbf09a69" title='Last modified by Wataru Tsukagoshi | Oct 15, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Oct 15, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/procon/bellman_ford.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#ベルマンフォード法">ベルマンフォード法</a></li>
-</ul>
-</nav>
-  </aside>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
 
 
-
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

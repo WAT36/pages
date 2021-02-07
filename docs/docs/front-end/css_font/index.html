@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CSSでのフォント # CSSでのフォントについて示す。 Webフォント # CSSでフォントを指定しても、ユーザーの環境にそのフォントがインストール">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="CSSでのフォント" />
+<meta property="og:description" content="CSSでのフォント # CSSでのフォントについて示す。 Webフォント # CSSでフォントを指定しても、ユーザーの環境にそのフォントがインストール" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/css_font/" />
+<meta property="article:modified_time" content="2020-07-22T20:00:36+09:00" />
 <title>CSSでのフォント | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.56342249d2185a2718a58a56889f268bce80fac8169c64e2252cd63fef2cffff.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2f front-end\2f css_font\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,41 +102,70 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>CSSでのフォント</strong>
-</header>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#webフォント">Webフォント</a></li>
+    <li><a href="#font-familyプロパティ">font-familyプロパティ</a></li>
+    <li><a href="#font-sizeプロパティ">font-sizeプロパティ</a></li>
+    <li><a href="#font-weightプロパティ">font-weightプロパティ</a></li>
+    <li><a href="#font-styleプロパティ">font-styleプロパティ</a></li>
+    <li><a href="#font-variantプロパティ">font-variantプロパティ</a></li>
+    <li><a href="#fontプロパティ">fontプロパティ</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="cssでのフォント">CSSでのフォント</h1>
-
+      
+  <article class="markdown"><h1 id="cssでのフォント">
+  CSSでのフォント
+  <a class="anchor" href="#css%e3%81%a7%e3%81%ae%e3%83%95%e3%82%a9%e3%83%b3%e3%83%88">#</a>
+</h1>
 <p>CSSでのフォントについて示す。</p>
-
-<h2 id="webフォント">Webフォント</h2>
-
+<h2 id="webフォント">
+  Webフォント
+  <a class="anchor" href="#web%e3%83%95%e3%82%a9%e3%83%b3%e3%83%88">#</a>
+</h2>
 <p>CSSでフォントを指定しても、ユーザーの環境にそのフォントがインストールされていなければ使用することは基本できない。</p>
-
 <p>しかし、<strong>@font-face</strong>という書式を使用することで、Web上にあるフォントを利用でき、自身のブラウザに表示させることができる。</p>
-
 <p>設定できる値は以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">font-family</td>
@@ -143,9 +178,7 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">フォントのURL。url(...)の形で指定する</td>
     </tr>
 </table>
-
 <p>使用例として、下記のhtmlをiframeに組み込んで表示させてみる。</p>
-
 <p>(フォントはGoogle Fonts(<a href="https://fonts.google.com/specimen/Rowdies?sidebar.open&amp;selection.family=Rowdies">https://fonts.google.com/specimen/Rowdies?sidebar.open&amp;selection.family=Rowdies</a>)から拝借しました)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
 &lt;<span style="color:#f92672">html</span>&gt;
@@ -169,47 +202,35 @@ https://github.com/alex-shpak/hugo-book
 &lt;<span style="color:#f92672">h1</span>&gt;The sample of font-face.&lt;/<span style="color:#f92672">h1</span>&gt;
 
 &lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
-<p>iframe使用例</p>
-
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>iframe使用例</p>
 <pre><code>&lt;iframe width=&quot;500&quot; height=&quot;200&quot; src=&quot;/css_sample_pages/font-face.html&quot;&gt;
 &lt;/iframe&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><iframe width="500" height="200" src="https://WAT36.github.io/pages/css_sample_pages/font-face.html">
+<iframe width="500" height="200" src="https://WAT36.github.io/pages/css_sample_pages/font-face.html">
 </iframe>
-<hr></p>
-
-<h2 id="font-familyプロパティ">font-familyプロパティ</h2>
-
+<hr>
+<h2 id="font-familyプロパティ">
+  font-familyプロパティ
+  <a class="anchor" href="#font-family%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>font-familyプロパティは、フォントの種類を設定するプロパティである。</p>
-
 <p>値にはフォントの種類名を記述する。スペース区切りで複数入力することもできる。その際は、左にあるものから優先されて使われる。</p>
-
 <p>使用例</p>
-
 <pre><code>&lt;p style=&quot;font-family:serif;&quot;&gt;The example of font 1&lt;/p&gt;
 &lt;p style=&quot;font-family:cursive;&quot;&gt;The example of font 2&lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><p style="font-family:serif;">The example of font 1</p>
+<p style="font-family:serif;">The example of font 1</p>
 <p style="font-family:cursive;">The example of font 2</p>
-<hr></p>
-
-<h2 id="font-sizeプロパティ">font-sizeプロパティ</h2>
-
+<hr>
+<h2 id="font-sizeプロパティ">
+  font-sizeプロパティ
+  <a class="anchor" href="#font-size%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>font-sizeプロパティは、フォントサイズを設定するプロパティである。</p>
-
 <p>設定できる値と意味は以下の通り。</p>
-
 <table>
     <tr>
         <td>数値(単位px)</td>
@@ -245,29 +266,22 @@ https://github.com/alex-shpak/hugo-book
         <td>xx-large</td>
     </tr>
 </table>
-
 <p>使用例</p>
-
 <pre><code>&lt;p style=&quot;font-size:xx-small;&quot;&gt;xx-small&lt;/p&gt;
 &lt;p style=&quot;font-size:medium;&quot;&gt;medium&lt;/p&gt;
 &lt;p style=&quot;font-size:xx-large;&quot;&gt;xx-large&lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><p style="font-size:xx-small;">xx-small</p>
+<p style="font-size:xx-small;">xx-small</p>
 <p style="font-size:medium;">medium</p>
 <p style="font-size:xx-large;">xx-large</p>
-<hr></p>
-
-<h2 id="font-weightプロパティ">font-weightプロパティ</h2>
-
+<hr>
+<h2 id="font-weightプロパティ">
+  font-weightプロパティ
+  <a class="anchor" href="#font-weight%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>font-weightプロパティは、フォントの太さを設定するプロパティである。</p>
-
 <p>設定できる値と意味は以下の通り。</p>
-
 <table>
     <tr>
         <td>bold</td>
@@ -319,33 +333,26 @@ https://github.com/alex-shpak/hugo-book
         <td>標準の太さ(400)にする</td>
     </tr>
 </table>
-
 <p>使用例</p>
-
 <pre><code>&lt;p style=&quot;font-weight:100;&quot;&gt;font-weight:100&lt;/p&gt;
 &lt;p style=&quot;font-weight:300;&quot;&gt;font-weight:300&lt;/p&gt;
 &lt;p style=&quot;font-weight:500;&quot;&gt;font-weight:500&lt;/p&gt;
 &lt;p style=&quot;font-weight:700;&quot;&gt;font-weight:700&lt;/p&gt;
 &lt;p style=&quot;font-weight:900;&quot;&gt;font-weight:900&lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><p style="font-weight:100;">font-weight:100</p>
+<p style="font-weight:100;">font-weight:100</p>
 <p style="font-weight:300;">font-weight:300</p>
 <p style="font-weight:500;">font-weight:500</p>
 <p style="font-weight:700;">font-weight:700</p>
 <p style="font-weight:900;">font-weight:900</p>
-<hr></p>
-
-<h2 id="font-styleプロパティ">font-styleプロパティ</h2>
-
+<hr>
+<h2 id="font-styleプロパティ">
+  font-styleプロパティ
+  <a class="anchor" href="#font-style%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>font-styleプロパティは、イタリックまたは斜体の書体を選択するためのプロパティである。</p>
-
 <p>設定できる値と意味は以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">oblique</td>
@@ -363,27 +370,20 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">標準のフォントで表示</td>
     </tr>
 </table>
-
 <p>使用例</p>
-
 <pre><code>&lt;p style=&quot;font-style:oblique;&quot;&gt;oblique&lt;/p&gt;
 &lt;p style=&quot;font-style:italic ;&quot;&gt;italic&lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><p style="font-style:oblique;">oblique</p>
+<p style="font-style:oblique;">oblique</p>
 <p style="font-style:italic ;">italic</p>
-<hr></p>
-
-<h2 id="font-variantプロパティ">font-variantプロパティ</h2>
-
+<hr>
+<h2 id="font-variantプロパティ">
+  font-variantプロパティ
+  <a class="anchor" href="#font-variant%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>font-variantプロパティは、フォントをスモールキャップ（小文字を小さい大文字で表す形式）で表したい時に利用するプロパティである。</p>
-
 <p>設定できる値と意味は以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">normal</td>
@@ -396,101 +396,112 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">スモールキャップで表示。ただしスモールキャップが設定されていないフォントでは、単純に大文字を縮小したものを小文字として表示する。</td>
     </tr>
 </table>
-
 <p>使用例</p>
-
 <pre><code>&lt;p style=&quot;font-variant:normal    ;&quot;&gt;ABCDEFGhijklmn&lt;/p&gt;
 &lt;p style=&quot;font-variant:small-caps;&quot;&gt;ABCDEFGhijklmn&lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><p style="font-variant:normal    ;">ABCDEFGhijklmn</p>
+<p style="font-variant:normal    ;">ABCDEFGhijklmn</p>
 <p style="font-variant:small-caps;">ABCDEFGhijklmn</p>
-<hr></p>
-
-<h2 id="fontプロパティ">fontプロパティ</h2>
-
+<hr>
+<h2 id="fontプロパティ">
+  fontプロパティ
+  <a class="anchor" href="#font%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>fontプロパティは、これまでに出たfont-xx関連のプロパティの値をまとめて指定できるプロパティである。</p>
-
 <p>値はスペース区切りで複数入力する方式だが、左から以下の順番で指定するという決まりがあるので注意。</p>
-
 <ul>
 <li>font-weight,font-style,font-variantの値（省略可）</li>
 <li>font-sizeの値（省略不可）</li>
 <li>line-heightの値をfont-sizeの後にスラッシュを書いて指定（省略可）</li>
 <li>font-familyの値（省略不可）</li>
 </ul>
-
 <p>使用例</p>
-
 <pre><code>&lt;p style=&quot;font: oblique xx-large cursive;&quot;&gt;ABCDEFGhijklmn&lt;/p&gt;
 &lt;p style=&quot;font: 900 small-caps medium serif;&quot;&gt;ABCDEFGhijklmn&lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><p style="font: oblique xx-large cursive;">ABCDEFGhijklmn</p>
+<p style="font: oblique xx-large cursive;">ABCDEFGhijklmn</p>
 <p style="font: 900 small-caps medium serif;">ABCDEFGhijklmn</p>
-<hr></p>
-</article>
-
+<hr></article>
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/c6e24aefc24a3eb54296772ebb27406e1b1d368e" title='Last modified Jul 22, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 22, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/c6e24aefc24a3eb54296772ebb27406e1b1d368e" title='Last modified by Wataru Tsukagoshi | Jul 22, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jul 22, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/css_font.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#cssでのフォント">CSSでのフォント</a>
-<ul>
-<li><a href="#webフォント">Webフォント</a></li>
-<li><a href="#font-familyプロパティ">font-familyプロパティ</a></li>
-<li><a href="#font-sizeプロパティ">font-sizeプロパティ</a></li>
-<li><a href="#font-weightプロパティ">font-weightプロパティ</a></li>
-<li><a href="#font-styleプロパティ">font-styleプロパティ</a></li>
-<li><a href="#font-variantプロパティ">font-variantプロパティ</a></li>
-<li><a href="#fontプロパティ">fontプロパティ</a></li>
-</ul></li>
-</ul>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#webフォント">Webフォント</a></li>
+    <li><a href="#font-familyプロパティ">font-familyプロパティ</a></li>
+    <li><a href="#font-sizeプロパティ">font-sizeプロパティ</a></li>
+    <li><a href="#font-weightプロパティ">font-weightプロパティ</a></li>
+    <li><a href="#font-styleプロパティ">font-styleプロパティ</a></li>
+    <li><a href="#font-variantプロパティ">font-variantプロパティ</a></li>
+    <li><a href="#fontプロパティ">fontプロパティ</a></li>
+  </ul>
 </nav>
-  </aside>
 
 
-
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

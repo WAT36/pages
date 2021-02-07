@@ -58,3 +58,8 @@ pygmentsCodeFences = true
 [taxonomies]
   tag = "tags"
   category = "categories"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

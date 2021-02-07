@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="標準出力 # 標準出力について。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ //出力後、改行したい時 System.out.print">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="標準出力" />
+<meta property="og:description" content="標準出力 # 標準出力について。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ //出力後、改行したい時 System.out.print" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/stdio/stdout/" />
+<meta property="article:published_time" content="2019-10-12T17:19:30+09:00" />
+<meta property="article:modified_time" content="2020-09-03T00:18:42+09:00" />
 <title>標準出力 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.56342249d2185a2718a58a56889f268bce80fac8169c64e2252cd63fef2cffff.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.a27db2df6627b6582afd2181cf72cb278bb6e155d9a5c3a3a960c811a362023d.js" integrity="sha256-on2y32Yntlgq/SGBz3LLJ4u24VXZpcOjqWDIEaNiAj0="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +36,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +60,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fstdio\2fstdout\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,128 +103,137 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>標準出力</strong>
-</header>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="標準出力">標準出力</h1>
-
+      
+  <article class="markdown"><h1 id="標準出力">
+  標準出力
+  <a class="anchor" href="#%e6%a8%99%e6%ba%96%e5%87%ba%e5%8a%9b">#</a>
+</h1>
 <p>標準出力について。</p>
 
 
 
 
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-standard_output" style="display: none;" id="tabs-standard_output-0" checked="checked" />
-  <label for="tabs-standard_output-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>クラスはここではMain.javaとする</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-standard_output" id="tabs-standard_output-0" checked="checked" />
+  <label for="tabs-standard_output-0">Java</label>
+  <div class="book-tabs-content markdown-inner"><p>クラスはここではMain.javaとする</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span><span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[]){</span>
         <span style="color:#75715e">//出力後、改行したい時
-</span><span style="color:#75715e"></span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(変数もしくはデータ);
+</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>変数もしくはデータ<span style="color:#f92672">);</span>
 
         <span style="color:#75715e">//出力後、改行したくない時
-</span><span style="color:#75715e"></span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(変数もしくはデータ);
-    }
-}</code></pre></div>
-<p>javaで画面に出力したい時は <strong>System.out.println()</strong> を利用する。<br>
+</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>変数もしくはデータ<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>javaで画面に出力したい時は <strong>System.out.println()</strong> を利用する。<br>
 引数には画面に出力したい変数またはデータを入れる。
 出力後改行したくない時は System.out. <strong>print()</strong> を使う。</p>
-
-  </div>
-
-  <input type="radio" name="tabs-standard_output" style="display: none;" id="tabs-standard_output-1"  />
-  <label for="tabs-standard_output-1">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x<span style="color:#f92672">=</span>(<span style="color:#960050;background-color:#1e0010">変数もしくはデータ</span>)
+</div><input type="radio" class="toggle" name="tabs-standard_output" id="tabs-standard_output-1"  />
+  <label for="tabs-standard_output-1">Python</label>
+  <div class="book-tabs-content markdown-inner"><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x<span style="color:#f92672">=</span>(<span style="color:#960050;background-color:#1e0010">変数もしくはデータ</span>)
 <span style="color:#66d9ef">print</span>(x)        <span style="color:#75715e"># xを画面に出力して改行する</span>
-<span style="color:#66d9ef">print</span>(x,end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>) <span style="color:#75715e"># xを画面に出力して改行しない</span></code></pre></div>
-<p>Pythonでコンソール画面への出力を扱うには組み込み関数の <strong>print()</strong> を使う。<br>
+<span style="color:#66d9ef">print</span>(x,end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>) <span style="color:#75715e"># xを画面に出力して改行しない</span>
+</code></pre></div><p>Pythonでコンソール画面への出力を扱うには組み込み関数の <strong>print()</strong> を使う。<br>
 基本、入力された引数を画面に出力する。<br>
-改行したくない場合はprint()のendパラメータに&rdquo;&ldquo;を指定。<br>
+改行したくない場合はprint()のendパラメータに&quot;&ldquo;を指定。<br>
 詳しくは以下の公式ドキュメント参照。<br>
 <a href="https://docs.python.org/ja/3/library/functions.html#print">https://docs.python.org/ja/3/library/functions.html#print</a></p>
-
-  </div>
-
-  <input type="radio" name="tabs-standard_output" style="display: none;" id="tabs-standard_output-2"  />
-  <label for="tabs-standard_output-2">
-    Javascript
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Javascriptはブラウザ上で扱う言語のため、ここではブラウザ上のログ画面への出力という意味で記す。</p>
-
-<p>Javascriptでは、<strong>console.log()</strong>を利用する。
+</div><input type="radio" class="toggle" name="tabs-standard_output" id="tabs-standard_output-2"  />
+  <label for="tabs-standard_output-2">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>Javascriptはブラウザ上で扱う言語のため、ここではブラウザ上のログ画面への出力という意味で記す。</p>
+<p>Javascriptでは、**console.log()**を利用する。
 引数には出力したい値及び変数を入力する。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">5</span>)
-</code></pre></div>
-  </div>
-
-</div>
+</code></pre></div></div></div>
 
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/ef92d0414e8d086c310913cc849c60d4487a4a79" title='Last modified Sep 3, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 3, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/ef92d0414e8d086c310913cc849c60d4487a4a79" title='Last modified by Wataru Tsukagoshi | Sep 3, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Sep 3, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/stdio/stdout.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
+</div>
+  
+ 
 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
 
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
