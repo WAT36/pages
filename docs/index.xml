@@ -413,15 +413,6 @@
     
     <item>
       <title>イベント</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/event-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/event-2/</guid>
-      <description>イベント Javascriptのイベントについてを記す。 イベントとは、ユーザーの画面上での何らかの操作を、プログラム上で検知し、利用できるよう</description>
-    </item>
-    
-    <item>
-      <title>イベント</title>
       <link>https://WAT36.github.io/pages/docs/front-end/event/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1896,7 +1887,7 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Thu, 04 Feb 2021 21:04:55 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/posts/csv_quiz_bot/</guid>
-      <description>はじめに 資格勉強をすることがあるのだが、その際に自作した問題を自動で出題し答えられる様なシステムがあれば自身のアウトプットにもなるし、抜けて</description>
+      <description>はじめに # 資格勉強をすることがあるのだが、その際に自作した問題を自動で出題し答えられる様なシステムがあれば自身のアウトプットにもなるし、抜け</description>
     </item>
     
     <item>
