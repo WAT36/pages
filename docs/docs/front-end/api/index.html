@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="API HTMLに関連する各種APIについて。 マルチメディアグラフィックスAPI # HTMLでの音声・動画といったマルチメディアに関する設定や操作を">
@@ -14,7 +15,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.992e6e7efab08e27d16831ab76246c8e8153c657ed4715bd9ac779162e1c6f55.js" integrity="sha256-mS5ufvqwjifRaDGrdiRsjoFTxlftRxW9msd5Fi4cb1U="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.00cd1861f36945eb1913f717c08a8c2356c5225c7398f8aa82c0aff50af9288c.js" integrity="sha256-AM0YYfNpResZE/cXwIqMI1bFIlxzmPiqgsCv9Qr5KIw="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -34,12 +35,14 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
   <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
   </a>
@@ -104,18 +107,79 @@ https://github.com/alex-shpak/hugo-book
   <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>API</strong>
-</header>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#マルチメディア">マルチメディア</a></li>
+    <li><a href="#ストリーミング">ストリーミング</a></li>
+    <li><a href="#グラフィックス">グラフィックス</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#geolocation-api">Geolocation API</a></li>
+    <li><a href="#deviceorientation-event">DeviceOrientation Event</a></li>
+    <li><a href="#touch-events">Touch Events</a></li>
+    <li><a href="#pointer-events">Pointer Events</a></li>
+    <li><a href="#dom3-events-ui-events">DOM3 Events (UI Events)</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#web-storage">Web Storage</a>
+      <ul>
+        <li><a href="#ローカルストレージ">ローカルストレージ</a></li>
+      </ul>
+    </li>
+    <li><a href="#indexed-database-api">Indexed Database API</a></li>
+    <li><a href="#application-cache">Application cache</a></li>
+    <li><a href="#web-workers">Web Workers</a></li>
+    <li><a href="#service-workers">Service Workers</a></li>
+    <li><a href="#push-api">Push API</a></li>
+    <li><a href="#fetch">fetch</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#xmlhttprequest">XMLHttpRequest</a></li>
+    <li><a href="#websocket-api">WebSocket API</a></li>
+    <li><a href="#server-sent-events">Server-Sent Events</a></li>
+    <li><a href="#webrtc">WebRTC</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
-<article class="markdown"><h1>API</h1>
+      
+  <article class="markdown"><h1>API</h1>
 <p>HTMLに関連する各種APIについて。</p>
 <h1 id="マルチメディアグラフィックスapi">
   マルチメディアグラフィックスAPI
@@ -426,31 +490,51 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <p>WebRTC(Web Real-Time Communication)は、ブラウザでリアルタイムなコミュニケーションを実現するための仕組みである。WebRTCを使うことで、ブラウザ間のビデオチャットやボイスチャット、会議システムなどが実現可能です。</p>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/69404598b99c930a997570fca4f318b211a49804" title='Last modified Jan 17, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 17, 2021
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/69404598b99c930a997570fca4f318b211a49804" title='Last modified by Wataru Tsukagoshi | Jan 17, 2021' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jan 17, 2021</span>
     </a>
   </div>
-  
-  
+
+
+
   <div>
-    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/docs/front-end/api.md" target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/edit.svg" alt="Edit" /> Edit this page
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/api.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
     </a>
   </div>
-  
+
 </div>
 
+ 
+        
+      </footer>
 
       
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
     
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
   
 <nav id="TableOfContents">
   <ul>
@@ -490,10 +574,25 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

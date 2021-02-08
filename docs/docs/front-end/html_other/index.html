@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="その他の要素 # その他の要素についてを述べる。 figure要素 # figure要素は、それが文書から参照される、自己完結型のコンテンツ(フローコ">
@@ -14,7 +15,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.992e6e7efab08e27d16831ab76246c8e8153c657ed4715bd9ac779162e1c6f55.js" integrity="sha256-mS5ufvqwjifRaDGrdiRsjoFTxlftRxW9msd5Fi4cb1U="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.00cd1861f36945eb1913f717c08a8c2356c5225c7398f8aa82c0aff50af9288c.js" integrity="sha256-AM0YYfNpResZE/cXwIqMI1bFIlxzmPiqgsCv9Qr5KIw="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -34,12 +35,14 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
   <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
   </a>
@@ -104,18 +107,57 @@ https://github.com/alex-shpak/hugo-book
   <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>その他の要素</strong>
-</header>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#figure要素">figure要素</a></li>
+    <li><a href="#figcaption要素">figcaption要素</a></li>
+    <li><a href="#details要素">details要素</a></li>
+    <li><a href="#summary要素">summary要素</a></li>
+    <li><a href="#iframe要素">iframe要素</a></li>
+    <li><a href="#hr要素">hr要素</a></li>
+    <li><a href="#script要素">script要素</a></li>
+    <li><a href="#noscript要素">noscript要素</a></li>
+    <li><a href="#template要素">template要素</a></li>
+    <li><a href="#canvas要素">canvas要素</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
-<article class="markdown"><h1 id="その他の要素">
+      
+  <article class="markdown"><h1 id="その他の要素">
   その他の要素
   <a class="anchor" href="#%e3%81%9d%e3%81%ae%e4%bb%96%e3%81%ae%e8%a6%81%e7%b4%a0">#</a>
 </h1>
@@ -279,31 +321,51 @@ https://github.com/alex-shpak/hugo-book
 <p>canvas要素が実行できない環境では、要素内容に指定した内容が表示される。</p>
 <p>(以上、使用例はjsやれるようになったらやります・・・)</p>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/478a39fd58db8f18f037f796b9eaa789c0efd70a" title='Last modified Jun 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 27, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/478a39fd58db8f18f037f796b9eaa789c0efd70a" title='Last modified by Wataru Tsukagoshi | Jun 27, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jun 27, 2020</span>
     </a>
   </div>
-  
-  
+
+
+
   <div>
-    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/docs/front-end/html_other.md" target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/edit.svg" alt="Edit" /> Edit this page
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/html_other.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
     </a>
   </div>
-  
+
 </div>
 
+ 
+        
+      </footer>
 
       
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
     
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
   
 <nav id="TableOfContents">
   <ul>
@@ -321,10 +383,25 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
