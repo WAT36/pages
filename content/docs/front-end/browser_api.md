@@ -128,3 +128,32 @@ Location APIは、画面のURLに関する操作を行うAPIである。
 </table>
 
 
+# ブラウザの開発ツールによるテスト
+
+Internet Explorer,Firefox,Google Chromeなどといった様なブラウザには、開発用のツールを有している物がある。
+
+この開発ツールを用いて、画面に関するテストやデバッグを行うことができる。
+
+これらの機能は、Javascriptの**console**オブジェクトを用いる。
+
+consoleオブジェクトの主なメソッドを以下に記載する。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">assert()</td>
+        <td style="border:none;">テスト結果で異なっていた場合にエラーメッセージを出力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">count()</td>
+        <td style="border:none;">通過した回数を出力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">debug()</td>
+        <td style="border:none;">メッセージを出力</td>
+    </tr>
+</table>
+
