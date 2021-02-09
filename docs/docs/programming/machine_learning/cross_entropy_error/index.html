@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="交差エントロピー誤差 # 前述のロジスティック回帰モデルにおいて、入力xがt＝1となる確率を次のように表す。 \(y = \sigma ( w_{0} x &#43; w_{1} ) = P(t=1 \mid x)\) ここから、">
@@ -34,12 +35,14 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
   <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
   </a>
@@ -104,18 +107,33 @@ https://github.com/alex-shpak/hugo-book
   <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>交差エントロピー誤差</strong>
-</header>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
 
       
-<article class="markdown"><h1 id="交差エントロピー誤差">
+      
+  <article class="markdown"><h1 id="交差エントロピー誤差">
   交差エントロピー誤差
   <a class="anchor" href="#%e4%ba%a4%e5%b7%ae%e3%82%a8%e3%83%b3%e3%83%88%e3%83%ad%e3%83%94%e3%83%bc%e8%aa%a4%e5%b7%ae">#</a>
 </h1>
@@ -210,39 +228,63 @@ P(t \mid x) = y^t (1-y)^{1-t}\)
 </code></pre></div><p>これらを利用し、平均交差エントロピー誤差を最小にするようなwを求めていけば良い。</p>
 <p>その方法についてを次章で述べる。</p>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/6e0c6518147c3b5992d0fc58c93881f1fdd33136" title='Last modified Jun 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 11, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/6e0c6518147c3b5992d0fc58c93881f1fdd33136" title='Last modified by Wataru Tsukagoshi | Jun 11, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jun 11, 2020</span>
     </a>
   </div>
-  
-  
+
+
+
   <div>
-    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/docs/programming/machine_learning/cross_entropy_error.md" target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/edit.svg" alt="Edit" /> Edit this page
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/machine_learning/cross_entropy_error.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
     </a>
   </div>
-  
+
 </div>
 
+ 
+        
+      </footer>
 
       
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
     
-  
-<nav id="TableOfContents"></nav>
-
-
-
   </main>
 
   
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

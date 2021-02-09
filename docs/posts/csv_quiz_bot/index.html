@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="はじめに # 資格勉強をすることがあるのだが、その際に自作した問題を自動で出題し答えられる様なシステムがあれば自身のアウトプットにもなるし、抜け">
@@ -35,12 +36,14 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
   <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
   </a>
@@ -105,16 +108,31 @@ https://github.com/alex-shpak/hugo-book
   <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
+ 
+      </div>
     </aside>
 
-    <div class="book-posts">
-      <header class="flex align-center justify-between book-header">
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
-  <strong>クイズ問題を書いたローカルのcsvファイルから自動でslackに問題をPOSTするシステムを作ってみた</strong>
-</header>
 
+  <strong>クイズ問題を書いたローカルのcsvファイルから自動でslackに問題をPOSTするシステムを作ってみた</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
       
 <article class="markdown">
   <h1>
@@ -444,45 +462,63 @@ sys<span style="color:#f92672">.</span>exit()
 </ul>
 </p>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/c6ce8334e650564a2a7cf5656eed9028c1d8dc15" title='Last modified Feb 4, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Feb 4, 2021
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/c6ce8334e650564a2a7cf5656eed9028c1d8dc15" title='Last modified by Wataru Tsukagoshi | Feb 4, 2021' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Feb 4, 2021</span>
     </a>
   </div>
-  
-  
+
+
+
   <div>
-    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/posts/csv_quiz_bot.md" target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/edit.svg" alt="Edit" /> Edit this page
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//posts/csv_quiz_bot.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
     </a>
   </div>
-  
+
 </div>
 
+ 
+        
+      </footer>
 
       
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
     
-  
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#csvからクイズ問題を抜き出してslackにpostする">csvからクイズ問題を抜き出してslackにPOSTする</a></li>
-    <li><a href="#slackから問題に対する解答結果を記録する">slackから問題に対する解答結果を記録する</a></li>
-    <li><a href="#ユーザ側から解答結果を取ってきてcsvに反映させる">ユーザ側から解答結果を取ってきてcsvに反映させる</a></li>
-  </ul>
-</nav>
-
-
-
   </main>
 
   
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

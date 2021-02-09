@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="CSSとは # CSSの基本事項についてを述べる。 CSSは、HTMLに組み込む形で使用する言語で、HTMLで作成した文書に対しCSSでどの部分を">
@@ -34,12 +35,14 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
   <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
   </a>
@@ -104,18 +107,57 @@ https://github.com/alex-shpak/hugo-book
   <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>CSSとは</strong>
-</header>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#cssの書式">CSSの書式</a></li>
+    <li><a href="#html文書への組み込み方">HTML文書への組み込み方</a>
+      <ul>
+        <li><a href="#link要素を使う方法">link要素を使う方法</a></li>
+        <li><a href="#style要素を使う方法">style要素を使う方法</a></li>
+        <li><a href="#style属性を使う方法">style属性を使う方法</a></li>
+      </ul>
+    </li>
+    <li><a href="#ボックス">ボックス</a></li>
+    <li><a href="#長さ大きさの単位">長さ・大きさの単位</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
-<article class="markdown"><h1 id="cssとは">
+      
+  <article class="markdown"><h1 id="cssとは">
   CSSとは
   <a class="anchor" href="#css%e3%81%a8%e3%81%af">#</a>
 </h1>
@@ -267,31 +309,51 @@ style属性を使ってp要素にCSSを適用してみました。
     </tr>
 </table>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/42f8656977fd7a2798286cf9e8417fbcf1376c44" title='Last modified Jul 1, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 1, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/42f8656977fd7a2798286cf9e8417fbcf1376c44" title='Last modified by Wataru Tsukagoshi | Jul 1, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jul 1, 2020</span>
     </a>
   </div>
-  
-  
+
+
+
   <div>
-    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/docs/front-end/css_about.md" target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/edit.svg" alt="Edit" /> Edit this page
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/css_about.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
     </a>
   </div>
-  
+
 </div>
 
+ 
+        
+      </footer>
 
       
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
     
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
   
 <nav id="TableOfContents">
   <ul>
@@ -309,10 +371,25 @@ style属性を使ってp要素にCSSを適用してみました。
 </nav>
 
 
-
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

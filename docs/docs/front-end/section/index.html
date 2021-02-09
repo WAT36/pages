@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="セクション # セクションとは章や節といった様なもの、HTMLでは見出しとそれに対応する文書の部分(セクショニングコンテンツ)といった様なもので">
@@ -34,12 +35,14 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
   <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
   </a>
@@ -104,18 +107,76 @@ https://github.com/alex-shpak/hugo-book
   <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>セクション</strong>
-</header>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#見出し">見出し</a>
+      <ul>
+        <li><a href="#h1h6要素">h1~h6要素</a></li>
+        <li><a href="#アウトライン">アウトライン</a></li>
+      </ul>
+    </li>
+    <li><a href="#セクションを表す要素">セクションを表す要素</a>
+      <ul>
+        <li><a href="#article要素">article要素</a></li>
+        <li><a href="#aside要素">aside要素</a></li>
+        <li><a href="#nav要素">nav要素</a></li>
+        <li><a href="#section要素">section要素</a></li>
+      </ul>
+    </li>
+    <li><a href="#セクショニングルート">セクショニング・ルート</a></li>
+    <li><a href="#その他セクションに関する要素">その他、セクションに関する要素</a>
+      <ul>
+        <li><a href="#header要素">header要素</a></li>
+        <li><a href="#footer要素">footer要素</a></li>
+        <li><a href="#main要素">main要素</a></li>
+        <li><a href="#address要素">address要素</a></li>
+      </ul>
+    </li>
+    <li><a href="#その他の要素">その他の要素</a>
+      <ul>
+        <li><a href="#div要素">div要素</a></li>
+        <li><a href="#span要素">span要素</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
-<article class="markdown"><h1 id="セクション">
+      
+  <article class="markdown"><h1 id="セクション">
   セクション
   <a class="anchor" href="#%e3%82%bb%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3">#</a>
 </h1>
@@ -309,31 +370,51 @@ https://github.com/alex-shpak/hugo-book
     &lt;span class=&quot;answer&quot;&gt;答え&lt;/div&gt;
 &lt;/body&gt;
 </code></pre></article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/742801baecbbe14c82e2d703d795ecfcf48cfc2e" title='Last modified Apr 18, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 18, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/742801baecbbe14c82e2d703d795ecfcf48cfc2e" title='Last modified by Wataru Tsukagoshi | Apr 18, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Apr 18, 2020</span>
     </a>
   </div>
-  
-  
+
+
+
   <div>
-    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/docs/front-end/section.md" target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/edit.svg" alt="Edit" /> Edit this page
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/section.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
     </a>
   </div>
-  
+
 </div>
 
+ 
+        
+      </footer>
 
       
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
     
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
   
 <nav id="TableOfContents">
   <ul>
@@ -370,10 +451,25 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

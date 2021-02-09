@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="その他のWeb関連技術 ここまでで述べられてないWeb関連技術についてを述べる。 なお、ここでは具体例はあまり載せられていません。悪しからず。 文">
@@ -34,12 +35,14 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
   <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
   </a>
@@ -104,18 +107,93 @@ https://github.com/alex-shpak/hugo-book
   <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>その他のWeb関連技術</strong>
-</header>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#xhtml">XHTML</a></li>
+    <li><a href="#マイクロデータ">マイクロデータ</a></li>
+    <li><a href="#rdfa-resource-description-framework-in-attributes">RDFa (Resource Description Framework in Attributes)</a></li>
+    <li><a href="#ogp-open-graph-protocol">OGP (Open Graph Protocol)</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#javascript">JavaScript</a></li>
+    <li><a href="#domdocument-object-model">DOM(Document Object Model)</a></li>
+    <li><a href="#ajaxasynchronous-javascript--xml">Ajax(Asynchronous Javascript + XML)</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#セッション">セッション</a></li>
+    <li><a href="#データuri">データURI</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#sqlインジェクション">SQLインジェクション</a></li>
+    <li><a href="#クロスサイトスクリプティングxss">クロスサイトスクリプティング(XSS)</a></li>
+    <li><a href="#クロスサイトリクエストフォージェリcsrf">クロスサイトリクエストフォージェリ(CSRF)</a></li>
+    <li><a href="#ディレクトリトラバーサル">ディレクトリトラバーサル</a></li>
+    <li><a href="#httpヘッダインジェクション">HTTPヘッダインジェクション</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#統合脅威管理unified-threat-management-utm">統合脅威管理(Unified Threat Management: UTM)</a></li>
+    <li><a href="#侵入検知システムintrusion-detection-systemids">侵入検知システム(Intrusion Detection System:IDS)</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#mvcアーキテクチャ">MVCアーキテクチャ</a></li>
+    <li><a href="#cmscontent-management-system">CMS(Content Management System)</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#画像ファイルの種類">画像ファイルの種類</a></li>
+    <li><a href="#インターレース">インターレース</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#seosearch-engine-optimization">SEO(Search Engine Optimization)</a></li>
+    <li><a href="#検索ロボット">検索ロボット</a></li>
+    <li><a href="#web広告">Web広告</a></li>
+    <li><a href="#コンバージョンレート">コンバージョンレート</a></li>
+    <li><a href="#roi">ROI</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
-<article class="markdown"><h1>その他のWeb関連技術</h1>
+      
+  <article class="markdown"><h1>その他のWeb関連技術</h1>
 <p>ここまでで述べられてないWeb関連技術についてを述べる。</p>
 <p>なお、ここでは具体例はあまり載せられていません。悪しからず。</p>
 <h1 id="文書">
@@ -392,31 +470,51 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <p>ROIは投資利益率(Return On Inversion)の事で、投資した資本に対して得られる利益の割合のことである。</p>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/65154f56abd5677c2f2b23ea0445752504c299da" title='Last modified Aug 28, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Aug 28, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/65154f56abd5677c2f2b23ea0445752504c299da" title='Last modified by Wataru Tsukagoshi | Aug 28, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Aug 28, 2020</span>
     </a>
   </div>
-  
-  
+
+
+
   <div>
-    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/docs/front-end/web_other.md" target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/edit.svg" alt="Edit" /> Edit this page
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/web_other.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
     </a>
   </div>
-  
+
 </div>
 
+ 
+        
+      </footer>
 
       
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
     
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
   
 <nav id="TableOfContents">
   <ul>
@@ -470,10 +568,25 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="先日Atcoder Beginner Contest 141に参加してきたが、D問題がいくらやってもTLEになり詰まった挙句TIME UPになった。 原因はリストから最大値を取">
@@ -35,12 +36,14 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
   <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
   </a>
@@ -105,16 +108,64 @@ https://github.com/alex-shpak/hugo-book
   <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
+ 
+      </div>
     </aside>
 
-    <div class="book-posts">
-      <header class="flex align-center justify-between book-header">
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
-  <strong>優先度付きキュー（ヒープ）とPythonで実装するライブラリ「heapq」について</strong>
-</header>
 
+  <strong>優先度付きキュー（ヒープ）とPythonで実装するライブラリ「heapq」について</strong>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#ヒープとは">ヒープとは</a>
+      <ul>
+        <li><a href="#データの挿入">データの挿入</a></li>
+        <li><a href="#データの削除">データの削除</a></li>
+      </ul>
+    </li>
+    <li><a href="#pythonでの優先度付きキュー">Pythonでの優先度付きキュー</a>
+      <ul>
+        <li><a href="#バージョン">バージョン</a></li>
+      </ul>
+    </li>
+    <li><a href="#heapq">heapq</a>
+      <ul>
+        <li><a href="#heapify">heapify</a></li>
+        <li><a href="#heappushheappop">heappush,heappop</a></li>
+        <li><a href="#heappushpopheapreplace">heappushpop,heapreplace</a></li>
+      </ul>
+    </li>
+    <li><a href="#ヒープから最大値を取り出すには">ヒープから最大値を取り出すには？</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
       
 <article class="markdown">
   <h1>
@@ -327,31 +378,51 @@ heapreplaceはヒープからpopしてから要素をpushするため、popさ�
 </code></pre></div><p>今後活用する機会があれば利用していきたい。</p>
 </p>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/ef3c852701724ea4c8ed4ba8bddc6c6399766fe2" title='Last modified Jan 21, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 21, 2021
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/ef3c852701724ea4c8ed4ba8bddc6c6399766fe2" title='Last modified by Wataru Tsukagoshi | Jan 21, 2021' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jan 21, 2021</span>
     </a>
   </div>
-  
-  
+
+
+
   <div>
-    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/posts/heapq.md" target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/edit.svg" alt="Edit" /> Edit this page
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//posts/heapq.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
     </a>
   </div>
-  
+
 </div>
 
+ 
+        
+      </footer>
 
       
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
     
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
   
 <nav id="TableOfContents">
   <ul>
@@ -378,10 +449,25 @@ heapreplaceはヒープからpopしてから要素をpushするため、popさ�
 </nav>
 
 
-
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

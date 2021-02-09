@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="GitHubにおいて、OSS活動では必須の手順である「プルリクエスト」。 簡単にできるものだと思ってたが、意外とややこしいところもあったりで。">
@@ -35,12 +36,14 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
   <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
   </a>
@@ -105,16 +108,31 @@ https://github.com/alex-shpak/hugo-book
   <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
+ 
+      </div>
     </aside>
 
-    <div class="book-posts">
-      <header class="flex align-center justify-between book-header">
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
-  <strong>Githubで初めてプルリクエストをやったのでその手順を書いておく</strong>
-</header>
 
+  <strong>Githubで初めてプルリクエストをやったのでその手順を書いておく</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
       
 <article class="markdown">
   <h1>
@@ -190,48 +208,63 @@ $ git push origin (ブランチ名)
 <p>※UIは2021/1当時。ちょくちょく変わります</p>
 </p>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f52a22de5730ba7205fba015a2b02ded77b219b7" title='Last modified Jan 15, 2021 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 15, 2021
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/f52a22de5730ba7205fba015a2b02ded77b219b7" title='Last modified by Wataru Tsukagoshi | Jan 15, 2021' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jan 15, 2021</span>
     </a>
   </div>
-  
-  
+
+
+
   <div>
-    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/posts/pull_request.md" target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/edit.svg" alt="Edit" /> Edit this page
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//posts/pull_request.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
     </a>
   </div>
-  
+
 </div>
 
+ 
+        
+      </footer>
 
       
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
     
-  
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#1-プルリクしたいレポジトリをforkする">1. プルリクしたいレポジトリをforkする</a></li>
-    <li><a href="#2-forkしたレポジトリをcloneしてローカルに持ってくる">2. Forkしたレポジトリをcloneしてローカルに持ってくる</a></li>
-    <li><a href="#3-ローカルでプルリク用のブランチを作成する">3. ローカルでプルリク用のブランチを作成する</a></li>
-    <li><a href="#4-ローカルでコード類を変更する">4. ローカルでコード類を変更する</a></li>
-    <li><a href="#5-変更したコードをコミットプッシュする">5. 変更したコードをコミット、プッシュする</a></li>
-    <li><a href="#6-githubからnew-pull-requestを押す">6. Githubから「New Pull Request」を押す</a></li>
-  </ul>
-</nav>
-
-
-
   </main>
 
   
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
