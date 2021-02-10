@@ -155,5 +155,33 @@ consoleオブジェクトの主なメソッドを以下に記載する。
         <td style="border:none;">debug()</td>
         <td style="border:none;">メッセージを出力</td>
     </tr>
+    <tr>
+        <td style="border:none;">error()</td>
+        <td style="border:none;">エラーメッセージを出力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">group()</td>
+        <td style="border:none;">以後に表示するメッセージをグループ化する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">groupend()</td>
+        <td style="border:none;">グループ化する箇所を終了する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">info()</td>
+        <td style="border:none;">メッセージ(info)を出力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">time()</td>
+        <td style="border:none;">タイマー開始</td>
+    </tr>
+    <tr>
+        <td style="border:none;">timeEnd()</td>
+        <td style="border:none;">タイマー終了</td>
+    </tr>
+    <tr>
+        <td style="border:none;">warn()</td>
+        <td style="border:none;">メッセージ(warn)を出力</td>
+    </tr>
 </table>
 
