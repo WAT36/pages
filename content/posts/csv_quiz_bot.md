@@ -2,7 +2,7 @@
 title: "クイズ問題を書いたローカルのcsvファイルから自動でslackに問題をPOSTするシステムを作ってみた"
 date: 2021-02-04T21:04:55+09:00
 BookToC: false
-draft: true
+draft: false
 ---
 
 # はじめに
@@ -19,10 +19,10 @@ draft: true
 # システム全体図（アーキテクチャ図）
 
 以下の通り。大まかに処理は3つに分かれる。
-- サーバー(ローカル)にクイズ問題及びその正解数を列挙したcsvファイルを置き、pythonのバッチファイルがそれを読み込んでslackに投稿させる動作を行う。
+- ローカルにクイズ問題及びその正解数を列挙したcsvファイルを置き、pythonのバッチファイルがそれを読み込んでslackに投稿させる動作を行う。
 - slack側からも問題に正解したか間違えたかのデータを外部のDB（ここではAWSのDynamoDBとした）に記録・格納させる。
 - 正解不正解データを格納した外部のDBからデータを取り出し、csvファイルに正解不正解のデータを記録・更新する様なpythonバッチファイルを作成する。
-そして、最終的にはpythonのバッチファイルをcrontabでスケジューリング実行することで、処理を自動化させる。
+そして、最終的にはpythonのバッチファイルをcrontabでスケジューリング実行することで、処理を自動化させる。以下にシステムの全体図を載せる。
 
 ![sketchboard](/img/blog/sketchboard.png)
 
@@ -30,8 +30,6 @@ draft: true
 # 作成手順
 
 ## csvからクイズ問題を抜き出してslackにPOSTする
-
-事前準備として
 
 ### 0. クイズ問題を投稿するためのSlack Appを作る
 
@@ -57,11 +55,18 @@ App名を入力するとSlack Appが作られる
 
 クイズ問題を出したいチャンネルがない場合は、slackから作成する。
 
+![チャンネル追加](/img/blog/slack_add_channel.png)
+
 - Slack Appに、テキストを投稿したら指定したチャンネルにPOSTする様なAPIを設けさせる
 
-以下のQiita記事を参考にして、Slack APIを設けさせ、外部からメッセージを投稿できる様にした。
+以下の記事を参考にしてSlack APIを作成し、外部からメッセージを投稿できる様にした。
 
 - [Slack APIを使用してメッセージを送信する - Qiita](https://qiita.com/kou_pg_0131/items/56dd81f2f4716ca292ef)
+
+
+-------
+
+
 
 ### 1. クイズ問題を書いたcsvファイルを用意する
 
@@ -71,8 +76,6 @@ App名を入力するとSlack Appが作られる
 問題番号,問題文,答え,正解数,不正解数
 ```
 
-なお、ここに書いた定義が後のpythonコードの使用にも関わるので注意する。
-
 例えば、私が自作したAWSのクイズ問題のcsvは以下の通り。
 
 ```
@@ -80,6 +83,9 @@ App名を入力するとSlack Appが作られる
 2,AWSがサービスを提供している拠点(国と地域)のことを何という？,リージョン,9,3
 ・・・
 ```
+
+なお、ここに書いた定義が後のpythonコードの仕様にも関わるので注意する。
+
 
 ### 2. csvから問題を１問取得するpythonコードを作成する
 
@@ -115,6 +121,9 @@ $ python random_quiz.py
 うまくslackにPOSTできていればOK。
 
 ![slack_POST](/img/blog/slackpost_result.png)
+
+
+-------------
 
 
 ## slackから問題に対する解答結果を記録する
@@ -155,7 +164,7 @@ import datetime
 import re
 
 dynamodb = boto3.resource('dynamodb')
-table    = dynamodb.Table('テーブル名')
+table    = dynamodb.Table('(テーブル名)')
 
 def lambda_handler(event, context):
     try:
@@ -194,11 +203,11 @@ def lambda_handler(event, context):
 
 次に、このLambdaコードにアクセスするためのAPIをAPI Gatewayで設定する。設定方法は[こちら](https://wat36.github.io/pages/posts/aws_create_api_gateway/)を参照。
 
+また、API Gateway内でも、slackから受け取ったメッセージをLambdaに渡したり、Lambdaの処理結果をslack側に返す設定を行わなければならない。そのための設定は以下の記事を参考にさせて頂き、行った。
 
-
-// TODO  API Gatewayでの各ステージの細かい設定方法
-
-
+- [API Gateway + Lambda + DynamoDB](https://qiita.com/leomaro7/items/314a80b6d91f9e6b4060)
+- [AWS API GatewayでContent-Type:application/x-www-form-urlencoded のPOSTデータを受け取り JSONに変換する](https://qiita.com/durosasaki/items/83af014aa85a0448770e)
+- [AWSのLambdaとDynamoDBとAPIGatewayの連携](https://qiita.com/tentatsu/items/c45bcc4062f1a6d4cf2a)
 
 ### 3. Slack Appから問題ID・正解不正解のデータを受け取ってAWS APIに送り出す様なスラッシュコマンドを作る
 
@@ -227,6 +236,10 @@ Slack Appには特定のコマンドを作成することができ、それら�
 実際にAWS DynamoDBを見ると、入力したデータが格納されている。
 
 ![dynamo_result](/img/blog/dynamoresult.png)
+
+
+-------
+
 
 ## ユーザ側から解答結果を取ってきてcsvに反映させる
 
@@ -278,91 +291,16 @@ def lambda_handler(event, context):
 
 先程のAPIにアクセスし正解不正解データを取得し、csvに正解不正解データを更新するpythonバッチを作成する。
 
-pythonコードは以下の通り。
-
-```python
-import configparser
-import requests
-import shutil
-import pandas as pd
-import json
-import sys
-
-#設定ファイル読み込み
-inifile="config/quiz.ini"
-ini=""
-try:
-    ini = configparser.ConfigParser()
-    ini.read(inifile, 'UTF-8')
-except Exception as e:
-    print("エラー：設定ファイル({0})が読み込めません".format(inifile))
-    print(e)
-    sys.exit()
-
-#AWS APIにアクセスして結果取得
-response = requests.post(ini['AWS']['RESULT_GET_API'])
-
-#json形式にパース
-results=json.loads(response.text)
-results=results['text']
-
-#空なら終了
-if(results == []):
-    print("データ0件です")
-    sys.exit()
-
-#問題csvのバックアップファイル作成
-quizfilename=""
-try:
-    quizfilename=ini['Filename']['QUIZFILE']
-    shutil.copyfile('csv/'+quizfilename,'csv/bkup/'+quizfilename+'.bkup')
-except Exception as e:
-    print("エラー：問題csv({0})のバックアップファイル作成時にエラーが発生しました".format(quizfilename))
-    print(e)
-    sys.exit()
-
-#問題csv読み込み
-df=""
-try:
-    df=pd.read_csv('csv/'+quizfilename)
-except Exception as e:
-    print("エラー：問題csv({0})の読み込み時にエラーが発生しました".format(quizfilename))
-    print(e)
-    sys.exit()
-
-#結果データを解析
-try:
-    for r in results:
-        quiz_id=r['quiz_id']
-        ans=r['result']
-        
-        #dfを問題番号でソート
-        df.sort_values('問題番号',inplace=True)
-        #quiz_idが何行目にあるかを調べる
-        idx=df.loc[df['問題番号'] == int(quiz_id)].index[0]
-
-        if(ans != "0"):
-            #正解
-            df.at[idx,'正解数'] = str(int(df.at[idx,'正解数']) + 1)
-        else:
-            #不正解
-            df.at[idx,'不正解数'] = str(int(df.at[idx,'不正解数']) + 1)
-        
-        print("問題["+quiz_id+"]:"+("正解" if ans != "0" else "不正解")+"+1")
-    
-    #反映した結果をcsvに更新する
-    df.to_csv('csv/'+quizfilename,index=False)
-except Exception as e:
-    print("エラー：csv({0})への正解データ登録時にエラーが発生しました".format(quizfilename))
-    print(e)
-    sys.exit()
-```
+pythonコードは[こちら](https://github.com/WAT36/csv_quiz_bot/blob/wat-dev/result_inputter.py)を参照。
 
 という形で自分が作ったクイズ問題を自動で投稿してくれる様な個人用アプリを作成した。
 
+------------
+
+
 実行結果
 
-DBには以下の様な形で正解不正解データが格納されている。
+最初に、DBには以下の様な形で正解不正解データが格納されている。
 
 ![register](/img/blog/registered_data.png)
 
@@ -374,7 +312,7 @@ DBには以下の様な形で正解不正解データが格納されている。
 
 ![console](/img/blog/console.png)
 
-その結果、csvに正解不正解データが反映された。
+その結果、csvに正解不正解データが反映された。（正解数が5->6に更新された）
 
 ![aftercsv](/img/blog/after_data.png)
 
@@ -382,6 +320,7 @@ DBには以下の様な形で正解不正解データが格納されている。
 
 ![afterdynamo](/img/blog/after_dynamo.png)
 
+--------------
 
 # 自動化設定
 
@@ -391,21 +330,22 @@ Macの場合はcrontabを使って以下の様な設定をする
 
 
 ```
-0 */3 * * * cd /Users/watarutsukagoshi/Desktop/WTFiles/raspberry\_pi\_csv\_quiz\_bot/csv\_quiz\_bot 2>&1 && touch error.log && /Users/watarutsukagoshi/.pyenv/shims/python random\_quiz.py 2>&1 1>>error.log
-0 */3 * * * cd /Users/watarutsukagoshi/Desktop/WTFiles/raspberry\_pi\_csv\_quiz\_bot/csv\_quiz\_bot 2>&1 && touch error.log && /Users/watarutsukagoshi/.pyenv/shims/python worst\_quiz.py 2>&1 1>>error.log
+0 */3 * * * cd (Pythonスクリプトがあるフォルダ) 2>&1 && touch error.log && python random_quiz.py 2>&1 1>>error.log
+0 */3 * * * cd (Pythonスクリプトがあるフォルダ) 2>&1 && touch error.log && python worst_quiz.py  2>&1 1>>error.log
 ```
 
-そうすると、指定時間おきに自動で投稿してくれる
-（ただし、Macが起動している場合？のみ）
+この様に設定すると、指定時間おき(ここでは3時間)に自動で投稿してくれる
+（ただし、Macが起動している場合にのみ有効の様である）
 
-
+----------------
 
 # 今後やりたいこと
 
-以下の様な機能を追加したいと考えている
+という様な形でクイズbotを作成してみたが、使っているうちに改善点や追加したい機能が思い浮かんでいるため、以下の様な機能を追加したいと考えている
 
 - 他のAWSサービスを使って組んでみる（DynamoDB->SQSにする、EC2サーバを作って移行するなど）
-- csvから一番正解率が悪い問題を抜き出してPOSTさせる
+ - crontabがMacが起動している時にしか有効にならない？様なので、いっその事EC2に移行した方が良いかと考えている
+- csvから一番正解率が悪い問題を抜き出してPOSTさせる機能を作る
 - 間違えた問題は復習として何日か後にもう一回出す様な機能を作る
 - 間違えた問題と類似した分野の問題を出す様な機能を作る
-- 現在はDBをAWS DynamoDBにしているが、DockerやFirebase(?私もまだ詳しくないので使えるかはわからないが)に置き換えてみる
+- 現在はDBをAWS DynamoDBにしているが、DockerやFirebase(?私もまだ詳しくないので適用できるかはわからないが)に置き換えてみる
