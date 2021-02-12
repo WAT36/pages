@@ -2,7 +2,7 @@
 title: "ブラウザ関連API"
 weight: 1
 # bookFlatSection: false
-# bookToc: true
+# bookToc: false
 # bookHidden: false
 # bookCollapseSection: false
 # bookComments: true
@@ -14,7 +14,7 @@ weight: 1
 
 # History API
 
-History APIは、ブラウザの履歴を提供するためのAPIである。また、bブラウザの戻る・進むボタンの様なページを遷移するためのイベントもここで行える。
+History APIは、ブラウザの履歴を提供するためのAPIである。また、ブラウザの戻る・進むボタンの様なページを遷移するためのイベントもここで行える。
 
 主なプロパティ及びメソッドは以下の通り。
 
@@ -52,7 +52,7 @@ History APIは、ブラウザの履歴を提供するためのAPIである。ま
     </tr>
 </table>
 
-これらをJavascript上で利用することで、ページの遷移も行えることができる。
+これらをJavascript上で利用することで、ページの遷移も行える。
 
 
 # Location API
