@@ -18,11 +18,11 @@ draft: false
 
 # システム全体図（アーキテクチャ図）
 
-以下の通り。大まかに処理は3つに分かれる。
+以下の通り。大まかに処理は3つに分かれる。システムの全体図を以下に載せる。
 - ローカルにクイズ問題及びその正解数を列挙したcsvファイルを置き、pythonのバッチファイルがそれを読み込んでslackに投稿させる動作を行う。
 - slack側からも問題に正解したか間違えたかのデータを外部のDB（ここではAWSのDynamoDBとした）に記録・格納させる。
 - 正解不正解データを格納した外部のDBからデータを取り出し、csvファイルに正解不正解のデータを記録・更新する様なpythonバッチファイルを作成する。
-そして、最終的にはpythonのバッチファイルをcrontabでスケジューリング実行することで、処理を自動化させる。以下にシステムの全体図を載せる。
+そして、最終的にはpythonのバッチファイルをcrontabでスケジューリング実行することで、処理を自動化させる。
 
 ![sketchboard](/img/blog/sketchboard.png)
 
@@ -59,7 +59,7 @@ App名を入力するとSlack Appが作られる
 
 - Slack Appに、テキストを投稿したら指定したチャンネルにPOSTする様なAPIを設けさせる
 
-以下の記事を参考にしてSlack APIを作成し、外部からメッセージを投稿できる様にした。
+作成したSlack AppにAPIを設けさせ、外部からメッセージを投稿できる様にする。方法については、以下の記事を参考にしてSlack APIを作成した。
 
 - [Slack APIを使用してメッセージを送信する - Qiita](https://qiita.com/kou_pg_0131/items/56dd81f2f4716ca292ef)
 
@@ -203,7 +203,7 @@ def lambda_handler(event, context):
 
 次に、このLambdaコードにアクセスするためのAPIをAPI Gatewayで設定する。設定方法は[こちら](https://wat36.github.io/pages/posts/aws_create_api_gateway/)を参照。
 
-また、API Gateway内でも、slackから受け取ったメッセージをLambdaに渡したり、Lambdaの処理結果をslack側に返す設定を行わなければならない。そのための設定は以下の記事を参考にさせて頂き、行った。
+また、API Gateway内でも、slackから受け取ったメッセージをLambdaに渡したり、Lambdaの処理結果をslack側に返す設定を行わなければならない。そのための設定は以下の記事を参考にし行った。
 
 - [API Gateway + Lambda + DynamoDB](https://qiita.com/leomaro7/items/314a80b6d91f9e6b4060)
 - [AWS API GatewayでContent-Type:application/x-www-form-urlencoded のPOSTデータを受け取り JSONに変換する](https://qiita.com/durosasaki/items/83af014aa85a0448770e)
@@ -349,3 +349,8 @@ Macの場合はcrontabを使って以下の様な設定をする
 - 間違えた問題は復習として何日か後にもう一回出す様な機能を作る
 - 間違えた問題と類似した分野の問題を出す様な機能を作る
 - 現在はDBをAWS DynamoDBにしているが、DockerやFirebase(?私もまだ詳しくないので適用できるかはわからないが)に置き換えてみる
+
+
+------
+
+以上。自作のプロダクトを書くのは初めてなので、何か抜けあればその都度更新致します。。
