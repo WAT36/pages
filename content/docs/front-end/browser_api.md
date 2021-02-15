@@ -10,7 +10,9 @@ weight: 1
 
 # ブラウザ関連API
 
-ブラウザに関するAPIについてを述べる。
+ブラウザに関するAPIについて。
+
+なお、ここではサンプルは一部割愛致します（ブラウザ遷移を伴ってしまうため・・・）
 
 # History API
 
@@ -185,3 +187,21 @@ consoleオブジェクトの主なメソッドを以下に記載する。
     </tr>
 </table>
 
+
+例えば、以下のプログラムをブラウザ上のコンソールで実行してみる。
+
+```javascript
+var x = 1;
+var y = 2;
+var z = 2;
+console.assert(x == y)
+console.assert(z == y)
+console.debug("デバッグメッセージ")
+console.error("エラ〜メッセージ")
+console.info("infoメッセージ")
+console.warn("警告メッセージ")
+```
+
+コンソール上での実行結果（使用ブラウザ：Safari）
+
+![console](/img/front-end/console_test.png)
