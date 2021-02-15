@@ -763,6 +763,15 @@
     </item>
     
     <item>
+      <title>ブラウザ関連API</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/browser_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/browser_api/</guid>
+      <description>ブラウザ関連API # ブラウザに関するAPIについて。 なお、ここではサンプルは一部割愛致します（ブラウザ遷移を伴ってしまうため・・・） History API # History</description>
+    </item>
+    
+    <item>
       <title>ベルマンフォード法</title>
       <link>https://WAT36.github.io/pages/docs/programming/procon/bellman_ford/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1883,10 +1892,10 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     
     <item>
       <title>クイズ問題を書いたローカルのcsvファイルから自動でslackに問題をPOSTするシステムを作ってみた</title>
-      <link>https://WAT36.github.io/pages/posts/csv_quiz_bot/</link>
+      <link>https://WAT36.github.io/pages/posts/csv_quiz_bot-2/</link>
       <pubDate>Thu, 04 Feb 2021 21:04:55 +0900</pubDate>
       
-      <guid>https://WAT36.github.io/pages/posts/csv_quiz_bot/</guid>
+      <guid>https://WAT36.github.io/pages/posts/csv_quiz_bot-2/</guid>
       <description>はじめに # 資格勉強をすることがあるのだが、その際に自作した問題を自動で出題し答えられる様なシステムがあれば自身のアウトプットにもなるし、抜け</description>
     </item>
     

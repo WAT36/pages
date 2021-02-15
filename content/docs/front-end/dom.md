@@ -412,12 +412,12 @@ main.appendChild(target);
 
 セレクタAPIと言うメソッドを使って要素を取得する方法がある。
 
-例としては、**querySelectorAll()**メソッドを使う。引数にセレクタを入力すると、その要素を全て取得する。
+例としては、**querySelector()**メソッドや**querySelectorAll()**メソッドを使う。querySelectorメソッドを使うと、該当する要素のうち最初の要素のみを取得し、qurySelectorAllメソッドは該当する要素を全て取得する。
 
 ```javascript
 var target = document.querySelectorAll('p');
 
-//要素を挿入する
+//要素を変更する
 for(var i=0,l=target.length;i<l;i++){
     target[i].style.color='red';
 }

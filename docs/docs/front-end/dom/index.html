@@ -10,12 +10,12 @@
 <meta property="og:description" content="DOM # DOMとはDocument Object Modelの略で、HTML(またはXML)の各要素にアクセスするための仕組みである。Javascriptでは" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/dom/" />
-<meta property="article:modified_time" content="2021-01-31T00:05:58+09:00" />
+<meta property="article:modified_time" content="2021-02-07T22:19:58+09:00" />
 <title>DOM | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.0ed49bedc904d484ca30694df784d64f789831daa46ef2bcc5edd0dc6512cec5.js" integrity="sha256-DtSb7ckE1ITKMGlN94TWT3iYMdqkbvK8xe3Q3GUSzsU="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.73dac5ca27ab473fe00ddd9216dfc4ab2875125c6b5f8f1cbe1ee6af752eaff9.js" integrity="sha256-c9rFyierRz/gDd2SFt/Eqyh1ElxrX48cvh7mr3Uur/k="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -502,10 +502,10 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#%e3%82%bb%e3%83%ac%e3%82%af%e3%82%bfapi">#</a>
 </h3>
 <p>セレクタAPIと言うメソッドを使って要素を取得する方法がある。</p>
-<p>例としては、**querySelectorAll()**メソッドを使う。引数にセレクタを入力すると、その要素を全て取得する。</p>
+<p>例としては、**querySelector()<strong>メソッドや</strong>querySelectorAll()**メソッドを使う。querySelectorメソッドを使うと、該当する要素のうち最初の要素のみを取得し、qurySelectorAllメソッドは該当する要素を全て取得する。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;p&#39;</span>);
 
-<span style="color:#75715e">//要素を挿入する
+<span style="color:#75715e">//要素を変更する
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,<span style="color:#a6e22e">l</span><span style="color:#f92672">=</span><span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">length</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">l</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
     <span style="color:#a6e22e">target</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>;
 }
@@ -574,9 +574,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/206e3906443769f3ece27d631a1d8aaf14ff8810" title='Last modified by Wataru Tsukagoshi | Jan 31, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/2d35adf6e79475a71dd53bd8bcc867a761cf35c4" title='Last modified by Wataru Tsukagoshi | Feb 7, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Jan 31, 2021</span>
+      <span>Feb 7, 2021</span>
     </a>
   </div>
 
