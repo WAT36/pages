@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pythonのライブラリ「configparser」について、備忘のために示す。 設定ファイル(iniファイル) # iniファイルとは設定ファイ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Pythonでiniファイルを読み込むライブラリ「configparser」" />
+<meta property="og:description" content="Pythonのライブラリ「configparser」について、備忘のために示す。 設定ファイル(iniファイル) # iniファイルとは設定ファイ" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/posts/configparser/" />
+<meta property="article:published_time" content="2021-02-16T23:34:28+09:00" />
+<meta property="article:modified_time" content="2021-02-16T23:34:28+09:00" />
+<title>Pythonでiniファイルを読み込むライブラリ「configparser」 | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.edcf0e89caf7c73b562014dcee236a45c4152d97c5a9eb35a2e1f8fd221859c3.js" integrity="sha256-7c8Oicr3xztWIBTc7iNqRcQVLZfFqes1ouH4/SIYWcM="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Pythonでiniファイルを読み込むライブラリ「configparser」</strong>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown">
+  <h1>
+    <a href="https://WAT36.github.io/pages/posts/configparser/">Pythonでiniファイルを読み込むライブラリ「configparser」</a>
+  </h1>
+  
+  <h5>Feb 16, 2021</h5>
+
+
+
+  
+
+  
+
+
+  <p><p>Pythonのライブラリ「configparser」について、備忘のために示す。</p>
+<h1 id="設定ファイルiniファイル">
+  設定ファイル(iniファイル)
+  <a class="anchor" href="#%e8%a8%ad%e5%ae%9a%e3%83%95%e3%82%a1%e3%82%a4%e3%83%abini%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab">#</a>
+</h1>
+<p>iniファイルとは設定ファイルのことで、設定値を書き記しておき、コードを実行するときに読み込ませて利用するファイルである。</p>
+<p>設定ファイルの形式は以下の通り。</p>
+<pre><code>[セクション名1]
+キー1=値1
+キー2=値2
+
+[セクション名2]
+・・・
+・・・
+</code></pre><p>セクション毎に区切り、その中にキーと値の組み合わせを書いていく。
+セクションは何個でも良い。</p>
+<p>シェルスクリプトなどでは単純にこのiniファイルを実行すれば値を読み込めるが、Pythonでは専用のライブラリがあり、それが「configparser」である。</p>
+<h1 id="configparserモジュール">
+  configparserモジュール
+  <a class="anchor" href="#configparser%e3%83%a2%e3%82%b8%e3%83%a5%e3%83%bc%e3%83%ab">#</a>
+</h1>
+<p>この設定ファイルに対し、configparserを使って読み込みを行ってみる。</p>
+<p>まずは、python内でconfigparserをインポートし、configparserオブジェクトを生成する。</p>
+<p>その次に、この変数を使って設定ファイルを読み込む。</p>
+<pre><code>import configparser
+
+#パーサーオブジェクトを生成
+config = configparser.ConfigParser()
+
+#設定ファイル読み込み
+config.read('iniファイルのパス')
+
+
+</code></pre><p>設定ファイルを読み込むと、変数には設定ファイルの内容が入る。</p>
+<p>例として、以下のような設定ファイル(test.ini)があったとする。</p>
+<p>test.ini</p>
+<pre><code>[KEY-VALUES]
+KEY1=VALUE1
+KEY2=VALUE2
+KEY3=VALUE3
+
+[TEST]
+TEST_KEY1=TEST_VALUE1
+TEST_KEY2=TEST_VALUE2
+TEST_KEY3=TEST_VALUE3
+
+</code></pre><p>このファイルをpythonスクリプトで読み込む。(test.iniと同じフォルダで実行)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> configparser
+
+config <span style="color:#f92672">=</span> configparser<span style="color:#f92672">.</span>ConfigParser()
+config<span style="color:#f92672">.</span>read(<span style="color:#e6db74">&#39;test.ini&#39;</span>)
+
+
+</code></pre></div><p>すると、設定ファイルの内容が変数に&quot;ConfigParser&quot;クラスのオブジェクトとして入る。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">type(config)
+<span style="color:#75715e">#&gt; &lt;class &#39;configparser.ConfigParser&#39;&gt;</span>
+
+config<span style="color:#f92672">.</span>section()
+</code></pre></div><p>このConfigparserオブジェクトから設定ファイルの具体的な内容の取り出す方法についてだが、
+辞書と同じ様に</p>
+<pre><code>configparserオブジェクト[セクション名][キー名]
+</code></pre><p>の形式で取り出せる。
+また、関数**sections()**でセクションのリストを表示できる。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">config<span style="color:#f92672">.</span>section()
+</code></pre></div></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//posts/configparser.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
