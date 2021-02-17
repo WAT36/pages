@@ -705,7 +705,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/procon/network_flow/</guid>
-      <description>ネットワークフロー グラフにおける最大流・最小流問題についてを述べる。 以下に例題を示す。 ネットワーク上の2台のコンピュータS,Tがあり、Sから</description>
+      <description>ネットワークフロー # グラフにおける最大流・最小流問題についてを述べる。 以下に例題を示す。 ネットワーク上の2台のコンピュータS,Tがあり、Sか</description>
     </item>
     
     <item>
@@ -1901,10 +1901,10 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     
     <item>
       <title>クイズ問題を書いたローカルのcsvファイルから自動でslackに問題をPOSTするシステムを作ってみた</title>
-      <link>https://WAT36.github.io/pages/posts/csv_quiz_bot-2/</link>
+      <link>https://WAT36.github.io/pages/posts/csv_quiz_bot/</link>
       <pubDate>Thu, 04 Feb 2021 21:04:55 +0900</pubDate>
       
-      <guid>https://WAT36.github.io/pages/posts/csv_quiz_bot-2/</guid>
+      <guid>https://WAT36.github.io/pages/posts/csv_quiz_bot/</guid>
       <description>はじめに # 資格勉強をすることがあるのだが、その際に自作した問題を自動で出題し答えられる様なシステムがあれば自身のアウトプットにもなるし、抜け</description>
     </item>
     
