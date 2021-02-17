@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="フィルターと畳み込みニューラルネットワーク # 先述の手書き文字認識の章で、活性化関数を変えるなどして認識精度の向上を図ったが、もっと精度を上げ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="フィルターと畳み込みニューラルネットワーク" />
+<meta property="og:description" content="フィルターと畳み込みニューラルネットワーク # 先述の手書き文字認識の章で、活性化関数を変えるなどして認識精度の向上を図ったが、もっと精度を上げ" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/machine_learning/filter/" />
+<meta property="article:modified_time" content="2020-09-29T15:48:06+09:00" />
 <title>フィルターと畳み込みニューラルネットワーク | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.ea9376be5b5d954ae8cabfd6c64fb80a8878a352a986745b905b50f38b14095c.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.73dac5ca27ab473fe00ddd9216dfc4ab2875125c6b5f8f1cbe1ee6af752eaff9.js" integrity="sha256-c9rFyierRz/gDd2SFt/Eqyh1ElxrX48cvh7mr3Uur/k="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2f filter\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,43 +102,66 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>フィルターと畳み込みニューラルネットワーク</strong>
-</header>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#空間フィルター">空間フィルター</a></li>
+    <li><a href="#畳み込みニューラルネットワーク">畳み込みニューラルネットワーク</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="フィルターと畳み込みニューラルネットワーク">フィルターと畳み込みニューラルネットワーク</h1>
-
+      
+  <article class="markdown"><h1 id="フィルターと畳み込みニューラルネットワーク">
+  フィルターと畳み込みニューラルネットワーク
+  <a class="anchor" href="#%e3%83%95%e3%82%a3%e3%83%ab%e3%82%bf%e3%83%bc%e3%81%a8%e7%95%b3%e3%81%bf%e8%be%bc%e3%81%bf%e3%83%8b%e3%83%a5%e3%83%bc%e3%83%a9%e3%83%ab%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af">#</a>
+</h1>
 <p>先述の手書き文字認識の章で、活性化関数を変えるなどして認識精度の向上を図ったが、もっと精度を上げるための方法はないだろうか？</p>
-
 <p>ここで、先述の方法では、入力画像を１次元のベクトルに変換して学習を行わせており、２次元画像の空間の情報を考慮していないというところに着目する。（要は、画像の縦方向の関連性、画像の直線や曲線と言ったような画像の情報を見ていないということ。）</p>
-
 <p>画像の空間の情報を取り出す方法として、<strong>空間フィルター</strong>という画像処理の手法がある。</p>
-
-<h2 id="空間フィルター">空間フィルター</h2>
-
+<h2 id="空間フィルター">
+  空間フィルター
+  <a class="anchor" href="#%e7%a9%ba%e9%96%93%e3%83%95%e3%82%a3%e3%83%ab%e3%82%bf%e3%83%bc">#</a>
+</h2>
 <p>空間フィルターは、２次元の行列で表される。フィルターを画像の一部分に当て嵌め、画像の一部分とフィルターとの要素の積の和を、画像をスライドさせながら画像の全領域で求めていく。</p>
-
-<p>このような計算を、<strong>畳み込み演算 (Convolution)</strong>と呼ぶ。</p>
-
+<p>このような計算を、**畳み込み演算 (Convolution)**と呼ぶ。</p>
 <p>例として、以下のような(縦のエッジを強調する)空間フィルターを定義し、適用してみよう。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#空間フィルター</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
@@ -140,28 +169,16 @@ https://github.com/alex-shpak/hugo-book
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(filter)
 [[<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span>]
  [<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span>]
- [<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span>]]</code></pre></div>
-<p>畳み込み演算を、以下のように画像の全要素にスライドさせながら計算していき、その和を計算して値を算出していく。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_52.png" width=75%></p>
-
+ [<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span>]]
+</code></pre></div><p>畳み込み演算を、以下のように画像の全要素にスライドさせながら計算していき、その和を計算して値を算出していく。</p>
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_52.png" width=75%>
 <p>この例から、画像の位置(i,j)のピクセル値をx(i,j)、3*3のフィルターをh(i,j)とした場合、畳み込み演算で得られる値をg(i,j)とおくと、以下のような式が成り立つ。</p>
 
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-
-
-
-<p class="katex">
-  $$ 
-\tag{1}  g(i,j) = \sum_{u=-1}^{1} \sum_{v=-1}^{1} x(i+u,j+v) h(u+1,v+1)
- $$
-</p>
-
-
+<link rel="stylesheet" href="https://WAT36.github.io/pages/katex/katex.min.css" />
+<script defer src="https://WAT36.github.io/pages/katex/katex.min.js"></script>
+<script defer src="https://WAT36.github.io/pages/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \(\tag{1}  g(i,j) = \sum_{u=-1}^{1} \sum_{v=-1}^{1} x(i&#43;u,j&#43;v) h(u&#43;1,v&#43;1)\)
+</span>
 
 <p>では、先程の画像にこのフィルターを適用して図示してみよう。以下にコードを示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#フィルター適用</span>
@@ -186,31 +203,22 @@ https://github.com/alex-shpak/hugo-book
 x0_filtered<span style="color:#f92672">=</span>do_filter(x0,filter)
 plt<span style="color:#f92672">.</span>figure()
 plt<span style="color:#f92672">.</span>imshow(x0_filtered,interpolation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;nearest&#39;</span>,vmin<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,vmax<span style="color:#f92672">=</span><span style="color:#ae81ff">255</span>,cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;binary&#39;</span>)
-plt<span style="color:#f92672">.</span>show()</code></pre></div>
-<p>実行結果</p>
-
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_53.png" width=50%></p>
-
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p>実行結果</p>
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_53.png" width=50%>
 <p>ここで、フィルターを適用すると元の画像の一番外側の行列のデータが算出されず失われるという欠点がある。</p>
-
 <p>そこで、一番外側のデータも算出させるために、元の画像データの外側に一つ分からのデータを追加させておく。こうすることで、元の画像データ全ての要素にフィルターが適用される。この追加する一列分の空のデータのことを<strong>パディング</strong>という。例を以下に示す。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_54.png" width=75%></p>
-
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_54.png" width=75%>
 <p>また、画像の全要素に適用するためにフィルターを１要素ずつずらしていたが、これは2でも3でも任意の間隔でずらすことができる。この間隔のことを<strong>ストライド</strong>という。</p>
-
-<h2 id="畳み込みニューラルネットワーク">畳み込みニューラルネットワーク</h2>
-
-<p>フィルターを使ったニューラルネットワークを<strong>畳み込みニューラルネットワーク</strong>、または<strong>コンボリューションニューラルネットワーク (Convolution Neural Network:CNN)</strong>と呼ぶ。</p>
-
+<h2 id="畳み込みニューラルネットワーク">
+  畳み込みニューラルネットワーク
+  <a class="anchor" href="#%e7%95%b3%e3%81%bf%e8%be%bc%e3%81%bf%e3%83%8b%e3%83%a5%e3%83%bc%e3%83%a9%e3%83%ab%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af">#</a>
+</h2>
+<p>フィルターを使ったニューラルネットワークを<strong>畳み込みニューラルネットワーク</strong>、または**コンボリューションニューラルネットワーク (Convolution Neural Network:CNN)**と呼ぶ。</p>
 <p>フィルターを利用することで様々な画像処理が行えるが、このCNNでは、フィルター自体を学習させる。</p>
-
 <p>入力として、元となる入力画像と、フィルターを何種か用意する。</p>
-
 <p>そして、入力画像を用意したフィルター全てで適用する。その結果、入力は入力画像の要素数×フィルターの枚数となる。</p>
-
 <p>それらをニューラルネットワークの入力層に入力し、最終的に10個の出力層に出力させる。</p>
-
 <p>一連の流れをKerasで実装した例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#CNN</span>
 model2<span style="color:#f92672">=</span>Sequential()
@@ -226,65 +234,86 @@ history<span style="color:#f92672">=</span>model2<span style="color:#f92672">.</
 score<span style="color:#f92672">=</span>model2<span style="color:#f92672">.</span>evaluate(x_test,y_test,verbose<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
 
 <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;交差エントロピー誤差:&#39;</span>,score[<span style="color:#ae81ff">0</span>])
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;正答率:&#39;</span>,score[<span style="color:#ae81ff">1</span>])</code></pre></div>
-<p>このモデルで、先述の時と同じようにテストデータを評価すると以下のようになる。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_55.png" width=75%></p>
-
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;正答率:&#39;</span>,score[<span style="color:#ae81ff">1</span>])
+</code></pre></div><p>このモデルで、先述の時と同じようにテストデータを評価すると以下のようになる。</p>
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_55.png" width=75%>
 <p>先述までの結果と比べると、遥かに分類精度が良くなっていることがわかる。</p>
-
 <p>空間フィルター、畳み込みニューラルネットワークにより空間情報を取り入れることにより、分類精度が向上する。この技術は、手書き数字だけでなく、その他の画像認識にも応用可能である。</p>
-
 <p>なお、前章と合わせた一連の実装例を<a href="https://github.com/WAT36/python/blob/master/machine_learning/deeplearning/mnist.ipynb">こちら</a>のNotebookに記載したので、参考として載せておく。</p>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/094b7a83d69516af0aabf4dbbc737e4826029ac4" title='Last modified Sep 29, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 29, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/094b7a83d69516af0aabf4dbbc737e4826029ac4" title='Last modified by Wataru Tsukagoshi | Sep 29, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Sep 29, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/machine_learning/filter.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#フィルターと畳み込みニューラルネットワーク">フィルターと畳み込みニューラルネットワーク</a>
-<ul>
-<li><a href="#空間フィルター">空間フィルター</a></li>
-<li><a href="#畳み込みニューラルネットワーク">畳み込みニューラルネットワーク</a></li>
-</ul></li>
-</ul>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#空間フィルター">空間フィルター</a></li>
+    <li><a href="#畳み込みニューラルネットワーク">畳み込みニューラルネットワーク</a></li>
+  </ul>
 </nav>
-  </aside>
 
 
-
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

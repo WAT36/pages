@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="イベント # Javascriptのイベントについてを記す。 イベントとは、ユーザーの画面上での何らかの操作を、プログラム上で検知し、利用できるよ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="イベント" />
+<meta property="og:description" content="イベント # Javascriptのイベントについてを記す。 イベントとは、ユーザーの画面上での何らかの操作を、プログラム上で検知し、利用できるよ" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/event/" />
+<meta property="article:modified_time" content="2021-01-28T10:30:58+09:00" />
+<title>イベント | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.73dac5ca27ab473fe00ddd9216dfc4ab2875125c6b5f8f1cbe1ee6af752eaff9.js" integrity="sha256-c9rFyierRz/gDd2SFt/Eqyh1ElxrX48cvh7mr3Uur/k="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>イベント</strong>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#ウィンドウイベント">ウィンドウイベント</a></li>
+    <li><a href="#フォームイベント">フォームイベント</a></li>
+    <li><a href="#キーボードイベント">キーボードイベント</a></li>
+    <li><a href="#マウスイベント">マウスイベント</a></li>
+    <li><a href="#タッチイベント">タッチイベント</a></li>
+    <li><a href="#ドラッグドロップイベント">ドラッグ&amp;ドロップイベント</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#イベントリスナの削除">イベントリスナの削除</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="イベント">
+  イベント
+  <a class="anchor" href="#%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88">#</a>
+</h1>
+<p>Javascriptの<strong>イベント</strong>についてを記す。</p>
+<p>イベントとは、ユーザーの画面上での何らかの操作を、プログラム上で検知し、利用できるようにする機能である。</p>
+<p>画面上での操作とは、例えばあるボタンを押した、あるテキストをフォーカスした、などがある。</p>
+<p>例として、以下のようなコードを記載する。</p>
+<p>html</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;target&#34;</span>&gt;ここにカーソルを持ってくると・・&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>javascript</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;target&#39;</span>);
+
+    <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;mousemove&#39;</span>,<span style="color:#66d9ef">function</span>(){
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ここにカーソルを持ってくると・・　→　赤くなる！&#39;</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;red&#34;</span>;
+    });
+};
+</code></pre></div><p>表示例</p>
+<hr>
+<p id="target">ここにカーソルを持ってくると・・</p>
+<script type="text/javascript" src="https://WAT36.github.io/pages/js_sample_pages/event_sample.js"></script>
+<hr>
+<p>上記のテキストの上にカーソルを持ってくると、指定したイベントが発動してテキストの内容と色が変化する。</p>
+<p>イベントに対応して処理を実行する仕組みを<strong>イベントハンドラ</strong>という。イベントハンドラには処理を1つのみ定義できる。</p>
+<p>1つのイベントに処理を複数定義する仕組みもあり、そちらは<strong>イベントリスナ</strong>という。</p>
+<h1 id="イベントハンドラの種類">
+  イベントハンドラの種類
+  <a class="anchor" href="#%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%83%8f%e3%83%b3%e3%83%89%e3%83%a9%e3%81%ae%e7%a8%ae%e9%a1%9e">#</a>
+</h1>
+<p>イベントの種類としては、主に以下のようなものがある。</p>
+<ul>
+<li>ウィンドウイベント</li>
+<li>フォームイベント</li>
+<li>キーボードイベント</li>
+<li>マウスイベント</li>
+<li>タッチイベント</li>
+<li>ドラッグ&amp;ドロップイベント</li>
+</ul>
+<h2 id="ウィンドウイベント">
+  ウィンドウイベント
+  <a class="anchor" href="#%e3%82%a6%e3%82%a3%e3%83%b3%e3%83%89%e3%82%a6%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88">#</a>
+</h2>
+<p>ウィンドウイベントとは、ブラウザのボタンが押された時、ページが遷移した時などといった、ウィンドウの状態が変化したときに発生する。</p>
+<p>ウィンドウイベントのイベントハンドラの種類を以下に記載する。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">onafterprint</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">印刷直後</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onbeforeprint</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">印刷直前</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onbeforeunload</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ページ遷移直前</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onblur</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">フォーカスが外れた時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onerror</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">Javascriptエラーが発生した時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onfocus</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">フォーカスされた</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onhashchange</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">URLのハッシュが変更</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onload</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ページの読み込みが完了した時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onmessage</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">メッセージを受信</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onoffline</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ネットワークがオンラインからオフラインになった時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ononline</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ネットワークがオフラインからオンラインになった時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onpagehide</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">他のページへの遷移などで元のページが隠された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onpageshow</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ページの読み込みが完了した時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onpopstate</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">履歴が取り出された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onredo</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">やり直す(redo)ボタンが押された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onresize</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ウィンドウのサイズが変更された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onstorage</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ローカルストレージまたはセッションストレージが変更された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onundo</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">やり直す(redo)ボタンが押された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onunload</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">他ページに移動した時</td>
+    </tr>
+</table>
+<h2 id="フォームイベント">
+  フォームイベント
+  <a class="anchor" href="#%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88">#</a>
+</h2>
+<p>フォームイベントとは、フォーム上をフォーカスした、フォームを入力した場合など、フォームの状態が変化した場合に発生するイベントである。</p>
+<p>フォームイベントのイベントハンドラの種類を以下に記載する。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">onblur</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">フォーカスが外れた時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onchange</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">変更された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onfocus</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">フォーカスされた</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onformchange</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">フォームの値が変更された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onforminput</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">フォームの値が入力された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onselect</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">要素が選択された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onsubmit</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">送信(submit)ボタンが押された時</td>
+    </tr>
+</table>
+<h2 id="キーボードイベント">
+  キーボードイベント
+  <a class="anchor" href="#%e3%82%ad%e3%83%bc%e3%83%9c%e3%83%bc%e3%83%89%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88">#</a>
+</h2>
+<p>キーボードイベントとはキーを押すなど、キーボードの状態が変化した場合に発生するイベントである。</p>
+<p>イベントハンドラは以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">onkeydown</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">キーが押された</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onkeypress</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">キーが押して離された</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onkeyup</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">キーが離された</td>
+    </tr>
+</table>
+<h2 id="マウスイベント">
+  マウスイベント
+  <a class="anchor" href="#%e3%83%9e%e3%82%a6%e3%82%b9%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88">#</a>
+</h2>
+<p>マウスイベントはマウスのボタンを押す、ドラッグするなど、マウスの状態が変化した場合に生ずるイベントである。</p>
+<p>イベントハンドラは以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">onclick</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ボタンがクリックされた</td>
+    </tr>
+    <tr>
+        <td style="border:none;">oncontextmenu</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">マウスの右ボタンが押された</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ondblclick</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ダブルクリックされた時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ondrag</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ドラッグされた時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ondragend</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ドラッグが終わった時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ondragstart</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ドラッグが始まった時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onmousedown</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ボタンが押された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onmousemove</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">マウスポインタが移動された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onmouseout</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">マウスポインタが要素から外れた時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onmouseover</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">マウスポインタが要素上に入った時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onmousemove</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">マウスポインタが移動された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onscroll</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">スクロールバーを操作した時</td>
+    </tr>
+</table>
+<h2 id="タッチイベント">
+  タッチイベント
+  <a class="anchor" href="#%e3%82%bf%e3%83%83%e3%83%81%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88">#</a>
+</h2>
+<p>タッチイベントは、タッチパネルの画面を触るなど、タッチパネルの状態が変化した場合に発生する。</p>
+<p>イベントハンドラを以下に示す。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">ontouchstart</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">指が置かれた時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ontouchmove</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">指がドラッグされた時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ontouchend</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">指が離れた時</td>
+    </tr>
+</table>
+<h2 id="ドラッグドロップイベント">
+  ドラッグ&amp;ドロップイベント
+  <a class="anchor" href="#%e3%83%89%e3%83%a9%e3%83%83%e3%82%b0%e3%83%89%e3%83%ad%e3%83%83%e3%83%97%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88">#</a>
+</h2>
+<p>ドラッグ&amp;ドロップイベントは先述したマウスイベントの一種である。</p>
+<p>設定方法は、以下の通り。</p>
+<ul>
+<li>ドラッグする要素にdraggable属性を設定</li>
+<li>ドラッグする要素にドラッグ開始時のハンドラを設定</li>
+<li>ハンドラにドラッグ(・ドロップ)時の処理を記述</li>
+</ul>
+<p>サンプルコードを以下に示す。</p>
+<p>javascript</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">dragHandler</span>(<span style="color:#a6e22e">event</span>){
+    <span style="color:#75715e">//動作結果を表示するオブジェクトを取得
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;status&#34;</span>);
+
+    <span style="color:#75715e">//ドラッグするデータの識別子をDataTransferオブジェクトにセット
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">dataTransfer</span>.<span style="color:#a6e22e">setData</span>(<span style="color:#e6db74">&#34;text&#34;</span>,<span style="color:#e6db74">&#34;ドラッグされました！&#34;</span>);
+
+    <span style="color:#75715e">//動作結果を表示
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">innerHTML</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ドラッグされました！&#34;</span>;
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">dropHandler</span>(<span style="color:#a6e22e">event</span>){
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;status&#34;</span>);
+    <span style="color:#a6e22e">textdata</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">dataTransfer</span>.<span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;text&#39;</span>);
+    <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">textdata</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; → ドロップされました！&#39;</span>
+    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">preventDefault</span>();
+}
+</code></pre></div><p>html</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;from&#34;</span> <span style="color:#a6e22e">draggable</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">ondragstart</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dragHandler(event);&#34;</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;この要素を下にドラッグして・・&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;to&#34;</span> <span style="color:#a6e22e">ondragover</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;event.preventDefault();&#34;</span> <span style="color:#a6e22e">ondrop</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropHandler(event);&#34;</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;ここにドロップしてみよう！&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;status&#34;</span>&gt;まだドラッグ<span style="color:#960050;background-color:#1e0010">&amp;</span>ドロップされてません&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>表示例</p>
+<hr>
+<hr>
+<div id="from" draggable="true" ondragstart="dragHandler(event);">
+<p>この要素を下にドラッグして・・</p>
+</div>
+<br>
+<div id="to" ondragover="event.preventDefault();" ondrop="dropHandler(event);">
+<p>ここにドロップしてみよう！</p>
+</div>
+<br>
+<div>
+<p id="status">まだドラッグ&ドロップされてません</p>
+</div>
+<script type="text/javascript" src="https://WAT36.github.io/pages/js_sample_pages/event_sample.js"></script>
+<hr>
+<hr>
+<h1 id="イベントリスナ">
+  イベントリスナ
+  <a class="anchor" href="#%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%83%aa%e3%82%b9%e3%83%8a">#</a>
+</h1>
+<p>先程の例でもあったように、イベントハンドラでは処理を1つしか定義できない。複数定義するにはどうすれば良いか。</p>
+<p>ここで、**addEventListener()**を利用すると、1つのイベントに複数の処理を登録できる。</p>
+<pre><code>要素.addEventListener(イベント名,イベントリスナ,伝播の可否)
+</code></pre><p>先述したドラッグ&amp;ドロップの例をイベントリスナで実装してみよう。以下のようになる。</p>
+<p>javascript</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#a6e22e">addHandler</span>();
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">dragHandler2</span>(<span style="color:#a6e22e">event</span>){
+    <span style="color:#75715e">//動作結果を表示するオブジェクトを取得
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;status2&#34;</span>);
+
+    <span style="color:#75715e">//ドラッグするデータの識別子をDataTransferオブジェクトにセット
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">dataTransfer</span>.<span style="color:#a6e22e">setData</span>(<span style="color:#e6db74">&#34;text&#34;</span>,<span style="color:#e6db74">&#34;ドラッグされました！&#34;</span>);
+
+    <span style="color:#75715e">//動作結果を表示
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">innerHTML</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ドラッグされました！&#34;</span>;
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">dropHandler2</span>(<span style="color:#a6e22e">event</span>){
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;status2&#34;</span>);
+    <span style="color:#a6e22e">textdata</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">dataTransfer</span>.<span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;text&#39;</span>);
+    <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">textdata</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; → ドロップされました！&#39;</span>;
+    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">preventDefault</span>();
+}
+
+<span style="color:#75715e">//追加処理、テキストを緑色に変更
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">dropHandler2_2</span>(<span style="color:#a6e22e">event</span>){
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;status2&#34;</span>);
+    <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;green&#39;</span>;
+}
+
+<span style="color:#75715e">//イベントリスナを追加する
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">addHandler</span>(){
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">to2</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;to2&#34;</span>);
+    <span style="color:#a6e22e">to2</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;drop&#34;</span>,<span style="color:#a6e22e">dropHandler2_2</span>,<span style="color:#66d9ef">false</span>);
+}
+</code></pre></div><p>html</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;from2&#34;</span> <span style="color:#a6e22e">draggable</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">ondragstart</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dragHandler2(event);&#34;</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;この要素を下にドラッグして・・&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;to2&#34;</span> <span style="color:#a6e22e">ondragover</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;event.preventDefault();&#34;</span> <span style="color:#a6e22e">ondrop</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropHandler2(event);&#34;</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;ここにドロップしてみよう！&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;status2&#34;</span>&gt;まだドラッグ<span style="color:#960050;background-color:#1e0010">&amp;</span>ドロップされてません&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>表示例</p>
+<hr>
+<hr>
+<div id="from2" draggable="true" ondragstart="dragHandler2(event);">
+<p>この要素を下にドラッグして・・</p>
+</div>
+<br>
+<div id="to2" ondragover="event.preventDefault();" ondrop="dropHandler2(event);">
+<p>ここにドロップしてみよう！</p>
+</div>
+<br>
+<div>
+<p id="status2">まだドラッグ&ドロップされてません</p>
+</div>
+<hr>
+<hr>
+<h2 id="イベントリスナの削除">
+  イベントリスナの削除
+  <a class="anchor" href="#%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%83%aa%e3%82%b9%e3%83%8a%e3%81%ae%e5%89%8a%e9%99%a4">#</a>
+</h2>
+<p>イベントリスナを削除するには、**removeEventListener()**メソッドを利用する。</p>
+<pre><code>要素.removeEventListener(イベント名,イベントハンドラ,伝播の可否);
+</code></pre><h1 id="イベントの発火と伝播">
+  イベントの発火と伝播
+  <a class="anchor" href="#%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%81%ae%e7%99%ba%e7%81%ab%e3%81%a8%e4%bc%9d%e6%92%ad">#</a>
+</h1>
+<p>今度は以下のような例を考えてみる。</p>
+<p>html</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;main2&#34;</span>&gt;
+    &lt;<span style="color:#f92672">p</span>&gt;このp要素にカーソルを置くと・・・・&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;target2&#34;</span>&gt;このp要素(target)にカーソルを持ってくると・・&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>javascript（main-&gt;main2,target-&gt;target2と変更）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;target2&#39;</span>);
+
+    <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;mousemove&#39;</span>,<span style="color:#66d9ef">function</span>(){
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;このp要素(target)にカーソルを持ってくると・・　→　赤くなる！&#39;</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;red&#34;</span>;
+    });
+
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;main2&#39;</span>);
+
+    <span style="color:#a6e22e">main</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;mousemove&#39;</span>,<span style="color:#66d9ef">function</span>(){
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;このp要素にカーソルを置くと・・・・　→　青くなる！&#39;</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;blue&#34;</span>;
+    });
+};
+</code></pre></div><p>表示例</p>
+<hr>
+<div id="main2">
+    <p>このp要素にカーソルを置くと・・・・</p>
+    <p id="target2">このp要素(target)にカーソルを持ってくると・・</p>
+</div>
+<script type="text/javascript" src="https://WAT36.github.io/pages/js_sample_pages/event_sample.js"></script>
+<hr>
+<p>この例では、id=&ldquo;main&quot;の中にid=&ldquo;target&quot;の要素があり、またその両方にイベントが設定されている。</p>
+<p>この時に、id=&ldquo;target&quot;の部分にカーソルを持ってくると、親のid=&ldquo;main&quot;のイベントも走ってしまう。</p>
+<p>このような事象はなぜ発生してしまうのだろうか？</p>
+<p>ここにはイベントのメカニズムが関わっている。ユーザーの操作でイベントが発生した時、ブラウザはDOMツリーの上の方からそのターゲットを探しにいく。</p>
+<p>そこで、対象の要素を発見した時、イベントが<strong>発火</strong>し、設定された処理が動く。</p>
+<p>実はここで終わらず、今度はその箇所から親要素に向けてイベントは<strong>伝播</strong>していく。その際に、設定されているイベントがある場合、そのタイミングでそのイベントの処理が走ってしまう。</p>
+<p>図に示すと以下の通り。まずはDOMツリーの一番上から探して行き、</p>
+<img src="https://WAT36.github.io/pages/img/front-end/event_ignition.png">
+<p>該当のイベントが発火すると、その場所から上へと辿って行き(伝播)、途上でイベントがあった場合はそれも走る。</p>
+<img src="https://WAT36.github.io/pages/img/front-end/event_propagation.png">
+<p>このような、イベントの伝播をさせたくない場合は、javascriptのaddEventListenerでの処理関数の引数に<strong>event</strong>を指定し、さらに処理内容に**event.stopPropagation()**を追加させる。これにより、伝播をストップできる。</p>
+<p>javascript例（main-&gt;main3,target-&gt;target3と変更）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;target3&#39;</span>);
+
+    <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;mousemove&#39;</span>,<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">event</span>){
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;このp要素(target)にカーソルを持ってくると・・　→　赤くなる！&#39;</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;red&#34;</span>;
+        <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">stopPropagation</span>();  <span style="color:#75715e">//伝播をストップさせる。
+</span><span style="color:#75715e"></span>    });
+
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;main3&#39;</span>);
+
+    <span style="color:#a6e22e">main</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;mousemove&#39;</span>,<span style="color:#66d9ef">function</span>(){
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;このp要素にカーソルを置くと・・・・　→　青くなる！&#39;</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;blue&#34;</span>;
+    });
+};
+</code></pre></div><p>表示例</p>
+<hr>
+<div id="main3">
+    <p>このp要素にカーソルを置くと・・・・</p>
+    <p id="target3">このp要素(target)にカーソルを持ってくると・・</p>
+</div>
+<script type="text/javascript" src="https://WAT36.github.io/pages/js_sample_pages/event_sample.js"></script>
+<hr>
+<h1 id="カスタムイベント">
+  カスタムイベント
+  <a class="anchor" href="#%e3%82%ab%e3%82%b9%e3%82%bf%e3%83%a0%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88">#</a>
+</h1>
+<p>これまで述べたものではイベントの発生はブラウザ上での特定の操作が行われた時に限られていたが、任意のタイミングでイベントを発生させることもできる。(テストなどで利用する)</p>
+<p>その方法がここで述べる<strong>カスタムイベント</strong>であり、やり方は以下の2つである。</p>
+<ul>
+<li>Eventコンストラクタでイベントオブジェクトを生成</li>
+<li>イベントリスナを登録した要素オブジェクトのdispatchEvent()でイベントを発生させる</li>
+</ul>
+<p>**dispatchEvent()**は、任意にイベントを発生するメソッドである。</p>
+<pre><code>要素.dispatchEvent(イベントオブジェクト)
+</code></pre><p>例えば先程の例において、カスタムイベントを適用してみよう。下の例では、指定した要素がドラッグされると、テキストが「ドラッグされました」と変わるが、ここではウィンドウがロードされると同時にドラッグイベントが発生し、実際にドラッグしなくても処理が実行される。それにより、自動で「ドラッグされました」に変わる。</p>
+<p>javascript</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+    
+    <span style="color:#75715e">//イベントリスナ登録(dragHandlerと同じ)
+</span><span style="color:#75715e"></span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;from3&#34;</span>).<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;drag&#39;</span>,<span style="color:#66d9ef">function</span>(){
+        <span style="color:#75715e">//動作対象のオブジェクトを取得
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;status3&#34;</span>);
+
+        <span style="color:#75715e">//ドラッグするデータの識別子をDataTransferオブジェクトにセット
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">dataTransfer</span>.<span style="color:#a6e22e">setData</span>(<span style="color:#e6db74">&#34;text&#34;</span>,<span style="color:#e6db74">&#34;ドラッグされました！&#34;</span>);
+
+        <span style="color:#75715e">//動作結果を表示
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">innerHTML</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ドラッグされました！&#34;</span>;
+
+    },<span style="color:#66d9ef">false</span>);
+
+    <span style="color:#75715e">//ドラッグイベントの作成
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">customEvent</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Event</span>(<span style="color:#e6db74">&#39;drag&#39;</span>);
+
+    <span style="color:#75715e">//イベント発生
+</span><span style="color:#75715e"></span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;from3&#39;</span>).<span style="color:#a6e22e">dispatchEvent</span>(<span style="color:#a6e22e">customEvent</span>);
+}
+
+</code></pre></div><p>html</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;from3&#34;</span> <span style="color:#a6e22e">draggable</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;この要素をドラッグすると・・&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;status3&#34;</span>&gt;まだドラッグされてません&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>表示例</p>
+<hr>
+<hr>
+<div id="from3" draggable="true">
+<p>この要素をドラッグすると・・</p>
+</div>
+<br>
+<div>
+<p id="status3">まだドラッグされてません</p>
+</div>
+<hr>
+<hr>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/46f7b4028aae474d361c43d6819a2b73f96bb4b1" title='Last modified by Wataru Tsukagoshi | Jan 28, 2021' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jan 28, 2021</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/event.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#ウィンドウイベント">ウィンドウイベント</a></li>
+    <li><a href="#フォームイベント">フォームイベント</a></li>
+    <li><a href="#キーボードイベント">キーボードイベント</a></li>
+    <li><a href="#マウスイベント">マウスイベント</a></li>
+    <li><a href="#タッチイベント">タッチイベント</a></li>
+    <li><a href="#ドラッグドロップイベント">ドラッグ&amp;ドロップイベント</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#イベントリスナの削除">イベントリスナの削除</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

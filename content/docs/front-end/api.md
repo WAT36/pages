@@ -53,7 +53,7 @@ Adaptive Streaming技術には、Apple社が開発したプロトコルである
 
 画像ファイルは、jpegやpngファイルを用意して表示するが、HTML5ではJavascript等の外部ソースを利用しても表示できる。
 
-JavaScriptを使って画像を描画し、HTMLで表示するには**Canvas要素**を利用する。canvasは画像をビットマップ形式で描画する。そのため、拡大縮小すると画像が粗くなる。
+JavaScriptを使って画像を描画し、HTMLで表示するには**canvas要素**を利用する。canvasは画像をビットマップ形式（１ピクセル毎に色を指定する方式）で描画する。そのため、拡大縮小すると画像が粗くなる。
 
 利用方法は以下の通り。
 
@@ -70,6 +70,67 @@ Javascriptを使った描画では、以下のような操作が可能である�
 - 画像ファイルを読み込む
 - 拡大・縮小・回転する
 
+canvasを使ったコード例を以下に示す。
+
+html
+
+```html
+<p>canvas例</p>
+<canvas id="sample" width="100" height="100"></canvas>
+<script src="/js_sample_pages/api.js"></script>
+```
+
+javascript
+
+```javascript
+var canvas = document.getElementById('sample');
+var ctx = canvas.getContext('2d');
+
+ctx.beginPath();
+ctx.rect(0,0,100,100);
+ctx.strokeStyle = '#F00';
+ctx.fillStyle = '#FF0';
+ctx.stroke();
+ctx.fill();
+```
+
+表示例(canvas)
+
+<hr>
+<hr>
+
+<p>canvas例</p>
+<canvas id="sample" width="100" height="100"></canvas>
+<script src="/js_sample_pages/api.js"></script>
+
+<hr>
+<hr>
+
+また、ベクター形式の画像である**SVG (Scalable Vector Graphics)**という方式もある。
+
+SVGはベクター形式のため、拡大縮小などしても画像が粗くならないという特徴がある。SVGではXML形式で画像を作成する。
+
+SVGを有効活用したライブラリとして、**D3.js**などがある。以下にSVGの例を示す。
+
+html
+
+```html
+<p>svg例</p>
+<svg width="200" height="200">
+    <circle cx="100" cy="100" r="50" stroke="red" fill="yellow" />
+</svg>
+```
+
+表示例
+
+<hr>
+<hr>
+<p>svg例</p>
+<svg width="200" height="200">
+    <circle cx="100" cy="100" r="50" stroke="red" fill="yellow" />
+</svg>
+<hr>
+<hr>
 
 # デバイスアクセスAPI
 
@@ -168,6 +229,66 @@ DOM3 Events (UI Events)は、マウスやキーボードなどの入力操作を
 Web Storageは、キーと値の組み合わせによってブラウザにデータを蓄積し、利用するAPIである。
 
 Web Storageは、大きく**セッションストレージ**と**ローカルストレージ**の２種類に分けられる。セッションストレージはウィンドウやタブが閉じられるとデータも消失するが、ローカルストレージはデータが消失されず、次にページを開いたときにでもそのデータを利用することができる。
+
+### ローカルストレージ
+
+ローカルストレージを使うと、Webブラウザ自体に情報を記憶し、再度そのページに訪れたときにその保存しておいた情報を使うことが可能になる。
+
+以下にサンプルを載せる。
+
+html
+
+```html
+<h2 id="title">ローカルストレージありの場合。下のボックスをクリックすると色が変化します。ページを更新しても変わらないはず。</h2>
+<h2 id="title_nonstorage">ローカルストレージなしの場合。ページを更新すると戻ります。</h2>
+<div id="red"   class="box" style="width: 50px; height: 50px; margin: 20px; background: red"></div>
+<div id="green" class="box" style="width: 50px; height: 50px; margin: 20px; background: green"></div>
+<div id="blue"  class="box" style="width: 50px; height: 50px; margin: 20px; background: blue"></div>
+<script src="/js_sample_pages/api.js"></script>
+```
+
+javascript
+
+```javascript
+window.onload = function(){
+    var title = document.getElementById('title');
+    var title_nonstorage = document.getElementById('title_nonstorage');
+    var boxes = document.getElementsByClassName('box');
+
+    // localStorageを変数に格納
+    var storage = localStorage;
+    // localStorageから'textcolor'の値を取得
+    var tc = storage.getItem('textcolor');
+    // localStorageに'textcolor'の値があれば、文字色を書き換え
+    if(tc){
+        title.style.color = tc;
+    }
+
+    for(var i=0,l=boxes.length;i<l;i++){
+        boxes[i].addEventListener('click',function(){
+            title.style.color = this.id;
+            storage.setItem('textcolor',this.id);
+            title_nonstorage.style.color = this.id;
+        })
+    }
+}
+```
+
+表示例
+
+<hr>
+<hr>
+<h2 id="title">ローカルストレージありの場合。下のボックスをクリックすると色が変化します。ページを更新しても変わらないはず。</h2>
+<h2 id="title_nonstorage">ローカルストレージなしの場合。ページを更新すると戻ります。</h2>
+<div id="red"   class="box" style="width: 50px; height: 50px; margin: 20px; background: red"></div>
+<div id="green" class="box" style="width: 50px; height: 50px; margin: 20px; background: green"></div>
+<div id="blue"  class="box" style="width: 50px; height: 50px; margin: 20px; background: blue"></div>
+<script src="/js_sample_pages/api.js"></script>
+<hr>
+<hr>
+
+色付きのボックスをクリックすると文字の色が変化する。色を変えた後にページを更新すると、ローカルストレージを設定してないものは最初の状態に戻ってしまうが、ローカルストレージを利用している物は色を保持させているので、更新しても色は変わらない。
+
 
 
 ## Indexed Database API

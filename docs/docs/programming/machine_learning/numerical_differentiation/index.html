@@ -1,231 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="数値微分法 # 前述のフィードフォワードニューラルネットワークにおいて、最適な重み行列w,vの値を求めるために指標となる誤差関数を、教師あり学習">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="数値微分法" />
+<meta property="og:description" content="数値微分法 # 前述のフィードフォワードニューラルネットワークにおいて、最適な重み行列w,vの値を求めるために指標となる誤差関数を、教師あり学習" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/machine_learning/numerical_differentiation/" />
+<meta property="article:modified_time" content="2020-09-17T22:34:25+09:00" />
 <title>数値微分法 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.ea9376be5b5d954ae8cabfd6c64fb80a8878a352a986745b905b50f38b14095c.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.73dac5ca27ab473fe00ddd9216dfc4ab2875125c6b5f8f1cbe1ee6af752eaff9.js" integrity="sha256-c9rFyierRz/gDd2SFt/Eqyh1ElxrX48cvh7mr3Uur/k="></script>
 
-
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-  
-</head>
-
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
-<h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-    
-  
-  
-  
-
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2fnumerical_differentiation\2f "] {
-      color: #004ed0;
-  }
-  </style>
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
-</ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
-<ul>
-<li>
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
-</ul>
-
-<p></details></p>
-
-<ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
-</ul>
-
-
-
-
-
-
-
-
-
-</nav>
-
-
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
-
-    </aside>
-
-    <div class="book-page">
-      <header class="flex align-center justify-between book-header">
-  <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
-  </label>
-  <strong>数値微分法</strong>
-</header>
-
-      
-<article class="markdown">
-
-<h1 id="数値微分法">数値微分法</h1>
-
-<p>前述のフィードフォワードニューラルネットワークにおいて、最適な重み行列w,vの値を求めるために指標となる誤差関数を、教師あり学習の章でも利用した平均誤差エントロピー誤差を利用し、以下の式で定義する。</p>
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-
-
-
-<p class="katex">
-  $$ 
-\tag{1}  E( { \bf w } ,{ \bf v } ) = - \frac{1}{N} \sum_{n=0}^{N-1} \sum_{k=0}^{K-1} t_{nk} \log (y_{nk}) 
- $$
-</p>
-
-
-
-<p>tは目標値、yはニューラルネットワークモデルの出力値である。この2つの誤差が大きいほど、誤差関数の値も大きくなる。</p>
-
-<p>式(1)は<b>w</b>,<b>v</b>を入力とするが、この時どのようなw,vを入力すれば誤差関数が最も小さくなるか？を考えた時、教師あり学習のところでも出てきた勾配法を用いて考えてみる。</p>
-
-<p>勾配法の時は偏微分を計算して算出した式を利用していたが、ここでは微分の定義を利用した、近似を利用して偏微分を行なってみよう。</p>
-
-<p>まず誤差関数を<b>w</b>で偏微分することを考えてみる。</p>
-
-<p>関数f(x)をxで微分した値は、ある微小な値εを用いると以下のように表される。</p>
-
-
-
-<p class="katex">
-  $$ 
-\tag{2}  \frac{　df(x) }{dx} = \frac{f(x + \epsilon )-f(x)}{ \epsilon }
- $$
-</p>
-
-
-
-<p>これにより、誤差関数E(<b>w</b>,<b>v</b>)を<b>w</b>で偏微分した値は以下のようになる。</p>
-
-
-
-<p class="katex">
-  $$ 
-\tag{3}  \frac{　\partial E( { \bf w } ,{ \bf v } ) }{ \partial { \bf w } } = \frac{ E( { \bf w } + \epsilon  ,{ \bf v } )-E( { \bf w }  ,{ \bf v } )}{ \epsilon }
- $$
-</p>
-
-
-
-<p>式(3)だが、<b>w</b>には実際にはパラメータが複数ある。例として、<b>w</b>にw<sub>0</sub>,w<sub>1</sub>,w<sub>2</sub> のパラメータがあるとすると、まずw<sub>0</sub>での偏微分は以下のようになる。</p>
-
-
-
-<p class="katex">
-  $$ 
-\tag{4}  \frac{　\partial E( { \bf w } ,{ \bf v } ) }{ \partial { \bf w } } \Biggr| _{w_{0},w_{1},w_{2} }= \frac{ E( ( w_{0} + \epsilon, w_{1}, w_{2})  ,{ \bf v } )-E( ( w_{0}, w_{1}, w_{2})  ,{ \bf v } )}{ \epsilon }
- $$
-</p>
-
-
-
-<p>w<sub>1</sub>,w<sub>2</sub>に対しても同じことを行い、また<b>v</b>のパラメータ全てに対しても行う。</p>
-
-<p>つまりは、<b>w</b>と<b>v</b>のパラメータ全てに対して勾配法を行い、誤差関数を小さくする最適なパタメータの組み合わせを求めていく、というものである。</p>
-
-<p>この手法の難点は、パラメータの数が多いと計算時間が膨大になってしまうという点である。ニューラルネットワークでは重み行列のパラメータの数が多いので、時間も長くなりがちになる。</p>
-
-<p>コードでの実装例を<a href="https://github.com/WAT36/python/blob/master/machine_learning/deeplearning/numerical_differentialation.ipynb">こちら</a>のNotebookに記載するが、回数にもよるが時間が長くかかりやすいこともわかる。</p>
-
-<p>ここで、別の方法として述べられているものを次に記載する。</p>
-</article>
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/0864a9374d40e1eac20447afee6c312b6d30d0a6" title='Last modified Sep 17, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 17, 2020
-    </a>
-  </div>
-  
-</div>
-
-
-      
-    </div>
-    
-  
-
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#数値微分法">数値微分法</a></li>
-</ul>
-</nav>
-  </aside>
-
-
-
-  </main>
-
-  
-  
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -236,7 +27,228 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
 
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>数値微分法</strong>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="数値微分法">
+  数値微分法
+  <a class="anchor" href="#%e6%95%b0%e5%80%a4%e5%be%ae%e5%88%86%e6%b3%95">#</a>
+</h1>
+<p>前述のフィードフォワードニューラルネットワークにおいて、最適な重み行列w,vの値を求めるために指標となる誤差関数を、教師あり学習の章でも利用した平均誤差エントロピー誤差を利用し、以下の式で定義する。</p>
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/katex/katex.min.css" />
+<script defer src="https://WAT36.github.io/pages/katex/katex.min.js"></script>
+<script defer src="https://WAT36.github.io/pages/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \(\tag{1}  E( { \bf w } ,{ \bf v } ) = - \frac{1}{N} \sum_{n=0}^{N-1} \sum_{k=0}^{K-1} t_{nk} \log (y_{nk}) \)
+</span>
+
+<p>tは目標値、yはニューラルネットワークモデルの出力値である。この2つの誤差が大きいほど、誤差関数の値も大きくなる。</p>
+<p>式(1)は<b>w</b>,<b>v</b>を入力とするが、この時どのようなw,vを入力すれば誤差関数が最も小さくなるか？を考えた時、教師あり学習のところでも出てきた勾配法を用いて考えてみる。</p>
+<p>勾配法の時は偏微分を計算して算出した式を利用していたが、ここでは微分の定義を利用した、近似を利用して偏微分を行なってみよう。</p>
+<p>まず誤差関数を<b>w</b>で偏微分することを考えてみる。</p>
+<p>関数f(x)をxで微分した値は、ある微小な値εを用いると以下のように表される。</p>
+<span>
+  \(\tag{2}  \frac{　df(x) }{dx} = \frac{f(x &#43; \epsilon )-f(x)}{ \epsilon }\)
+</span>
+
+<p>これにより、誤差関数E(<b>w</b>,<b>v</b>)を<b>w</b>で偏微分した値は以下のようになる。</p>
+<span>
+  \(\tag{3}  \frac{　\partial E( { \bf w } ,{ \bf v } ) }{ \partial { \bf w } } = \frac{ E( { \bf w } &#43; \epsilon  ,{ \bf v } )-E( { \bf w }  ,{ \bf v } )}{ \epsilon }\)
+</span>
+
+<p>式(3)だが、<b>w</b>には実際にはパラメータが複数ある。例として、<b>w</b>にw<sub>0</sub>,w<sub>1</sub>,w<sub>2</sub> のパラメータがあるとすると、まずw<sub>0</sub>での偏微分は以下のようになる。</p>
+<span>
+  \(\tag{4}  \frac{　\partial E( { \bf w } ,{ \bf v } ) }{ \partial { \bf w } } \Biggr| _{w_{0},w_{1},w_{2} }= \frac{ E( ( w_{0} &#43; \epsilon, w_{1}, w_{2})  ,{ \bf v } )-E( ( w_{0}, w_{1}, w_{2})  ,{ \bf v } )}{ \epsilon }\)
+</span>
+
+<p>w<sub>1</sub>,w<sub>2</sub>に対しても同じことを行い、また<b>v</b>のパラメータ全てに対しても行う。</p>
+<p>つまりは、<b>w</b>と<b>v</b>のパラメータ全てに対して勾配法を行い、誤差関数を小さくする最適なパタメータの組み合わせを求めていく、というものである。</p>
+<p>この手法の難点は、パラメータの数が多いと計算時間が膨大になってしまうという点である。ニューラルネットワークでは重み行列のパラメータの数が多いので、時間も長くなりがちになる。</p>
+<p>コードでの実装例を<a href="https://github.com/WAT36/python/blob/master/machine_learning/deeplearning/numerical_differentialation.ipynb">こちら</a>のNotebookに記載するが、回数にもよるが時間が長くかかりやすいこともわかる。</p>
+<p>ここで、別の方法として述べられているものを次に記載する。</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/0864a9374d40e1eac20447afee6c312b6d30d0a6" title='Last modified by Wataru Tsukagoshi | Sep 17, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Sep 17, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/machine_learning/numerical_differentiation.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,222 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="多次元配列 # 多次元配列とは、配列の中に同じ長さの配列を複数含ませたデータ構造のことである。 Java Javaにおいて、例として二次元配列を設定するに">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="多次元配列" />
+<meta property="og:description" content="多次元配列 # 多次元配列とは、配列の中に同じ長さの配列を複数含ませたデータ構造のことである。 Java Javaにおいて、例として二次元配列を設定するに" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/list/multi_array/" />
+<meta property="article:modified_time" content="2020-09-14T22:09:54+09:00" />
 <title>多次元配列 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.ea9376be5b5d954ae8cabfd6c64fb80a8878a352a986745b905b50f38b14095c.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.73dac5ca27ab473fe00ddd9216dfc4ab2875125c6b5f8f1cbe1ee6af752eaff9.js" integrity="sha256-c9rFyierRz/gDd2SFt/Eqyh1ElxrX48cvh7mr3Uur/k="></script>
 
-
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-  
-</head>
-
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
-<h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-    
-  
-  
-  
-
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2flist\2fmulti_array\2f "] {
-      color: #004ed0;
-  }
-  </style>
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
-</ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
-<ul>
-<li>
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
-</ul>
-
-<p></details></p>
-
-<ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
-</ul>
-
-
-
-
-
-
-
-
-
-</nav>
-
-
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
-
-    </aside>
-
-    <div class="book-page">
-      <header class="flex align-center justify-between book-header">
-  <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
-  </label>
-  <strong>多次元配列</strong>
-</header>
-
-      
-<article class="markdown">
-
-<h1 id="多次元配列">多次元配列</h1>
-
-<p>多次元配列とは、配列の中に同じ長さの配列を複数含ませたデータ構造のことである。</p>
-
-
-
-
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-array" style="display: none;" id="tabs-array-0" checked="checked" />
-  <label for="tabs-array-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Javaにおいて、例として二次元配列を設定するには以下の形式で宣言する。</p>
-
-<pre><code>データ型[][] 配列名 = new データ型[要素数][要素数];
-</code></pre>
-
-<p>配列の次元数を増やしたい場合は、かっこ[]の数をその数になるように増やして設定する。</p>
-
-<p>配列への値の代入及び取得は、同様にインデックスを指定して行う。ただし、次元の数に注意する。</p>
-
-<p>ここでは、使用例を以下に記載する。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-        <span style="color:#66d9ef">int</span>[][] <span style="color:#a6e22e">table</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>[3][4];
-
-        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span>0;i<span style="color:#f92672">&lt;</span>table.<span style="color:#a6e22e">length</span>;i<span style="color:#f92672">++</span>){
-            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">j</span><span style="color:#f92672">=</span>0;j<span style="color:#f92672">&lt;</span>table[i].<span style="color:#a6e22e">length</span>;j<span style="color:#f92672">++</span>){
-                table[i][j] <span style="color:#f92672">=</span> i<span style="color:#f92672">+</span>j;
-                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(table[i][j]<span style="color:#f92672">+</span><span style="color:#e6db74">&#34; &#34;</span>);
-            }
-            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>();
-        }
-    }
-}</code></pre></div>
-<p>実行結果</p>
-
-<pre><code>$ java Main
-0 1 2 3 
-1 2 3 4 
-2 3 4 5 
-</code></pre>
-
-  </div>
-
-  <input type="radio" name="tabs-array" style="display: none;" id="tabs-array-1"  />
-  <label for="tabs-array-1">
-    Javascript
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Javascriptでは以下の形式で宣言する。なお、JavascriptではJavaとは違い、配列内に入る配列の長さは全て等しくなくても良い。また、宣言時に初期値も入力できる。</p>
-
-<pre><code>var 配列名 = [[]]
-</code></pre>
-
-<p>配列への値の代入及び取得は、Javaと同じようにインデックスを指定して行えば良い。ただし、こちらも次元には注意する。</p>
-
-  </div>
-
-</div>
-
-</article>
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/fdecd608c1d6f12ebf0826d07e4532d352c9a626" title='Last modified Sep 14, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 14, 2020
-    </a>
-  </div>
-  
-</div>
-
-
-      
-    </div>
-    
-  
-
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#多次元配列">多次元配列</a></li>
-</ul>
-</nav>
-  </aside>
-
-
-
-  </main>
-
-  
-  
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -227,7 +27,233 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
 
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>多次元配列</strong>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="多次元配列">
+  多次元配列
+  <a class="anchor" href="#%e5%a4%9a%e6%ac%a1%e5%85%83%e9%85%8d%e5%88%97">#</a>
+</h1>
+<p>多次元配列とは、配列の中に同じ長さの配列を複数含ませたデータ構造のことである。</p>
+
+
+
+
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-array" id="tabs-array-0" checked="checked" />
+  <label for="tabs-array-0">Java</label>
+  <div class="book-tabs-content markdown-inner"><p>Javaにおいて、例として二次元配列を設定するには以下の形式で宣言する。</p>
+<pre><code>データ型[][] 配列名 = new データ型[要素数][要素数];
+</code></pre><p>配列の次元数を増やしたい場合は、かっこ[]の数をその数になるように増やして設定する。</p>
+<p>配列への値の代入及び取得は、同様にインデックスを指定して行う。ただし、次元の数に注意する。</p>
+<p>ここでは、使用例を以下に記載する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span><span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[]){</span>
+        <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> table <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>3<span style="color:#f92672">][</span>4<span style="color:#f92672">];</span>
+
+        <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span>i<span style="color:#f92672">&lt;</span>table<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>i<span style="color:#f92672">++){</span>
+            <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span>j<span style="color:#f92672">&lt;</span>table<span style="color:#f92672">[</span>i<span style="color:#f92672">].</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>j<span style="color:#f92672">++){</span>
+                table<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> i<span style="color:#f92672">+</span>j<span style="color:#f92672">;</span>
+                System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>table<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>j<span style="color:#f92672">]+</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">();</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>実行結果</p>
+<pre><code>$ java Main
+0 1 2 3 
+1 2 3 4 
+2 3 4 5 
+</code></pre></div><input type="radio" class="toggle" name="tabs-array" id="tabs-array-1"  />
+  <label for="tabs-array-1">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>Javascriptでは以下の形式で宣言する。なお、JavascriptではJavaとは違い、配列内に入る配列の長さは全て等しくなくても良い。また、宣言時に初期値も入力できる。</p>
+<pre><code>var 配列名 = [[]]
+</code></pre><p>配列への値の代入及び取得は、Javaと同じようにインデックスを指定して行えば良い。ただし、こちらも次元には注意する。</p>
+</div></div>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/fdecd608c1d6f12ebf0826d07e4532d352c9a626" title='Last modified by Wataru Tsukagoshi | Sep 14, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Sep 14, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/list/multi_array.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

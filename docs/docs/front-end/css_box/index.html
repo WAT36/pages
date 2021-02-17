@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CSSのボックス # CSSで扱うボックスについて。 前述した通り、HTMLでは要素内容の表示にはボックスと呼ばれる単位で表示される。 ボックスの詳">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="CSSでのボックス" />
+<meta property="og:description" content="CSSのボックス # CSSで扱うボックスについて。 前述した通り、HTMLでは要素内容の表示にはボックスと呼ばれる単位で表示される。 ボックスの詳" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/css_box/" />
+<meta property="article:modified_time" content="2020-07-29T15:06:31+09:00" />
 <title>CSSでのボックス | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.ea9376be5b5d954ae8cabfd6c64fb80a8878a352a986745b905b50f38b14095c.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.73dac5ca27ab473fe00ddd9216dfc4ab2875125c6b5f8f1cbe1ee6af752eaff9.js" integrity="sha256-c9rFyierRz/gDd2SFt/Eqyh1ElxrX48cvh7mr3Uur/k="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2f front-end\2f css_box\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,49 +102,78 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>CSSでのボックス</strong>
-</header>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#マージン関連のプロパティ">マージン関連のプロパティ</a></li>
+    <li><a href="#パディング関連のプロパティ">パディング関連のプロパティ</a></li>
+    <li><a href="#ボーダー関連のプロパティ">ボーダー関連のプロパティ</a></li>
+    <li><a href="#ボックス関連のプロパティ">ボックス関連のプロパティ</a></li>
+    <li><a href="#border-radiusプロパティ">border-radiusプロパティ</a></li>
+    <li><a href="#box-shadowプロパティ">box-shadowプロパティ</a></li>
+    <li><a href="#floatプロパティ">floatプロパティ</a></li>
+    <li><a href="#clearプロパティ">clearプロパティ</a></li>
+    <li><a href="#displayプロパティ">displayプロパティ</a></li>
+    <li><a href="#visibilityプロパティ">visibilityプロパティ</a></li>
+    <li><a href="#overflowプロパティ">overflowプロパティ</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="cssのボックス">CSSのボックス</h1>
-
+      
+  <article class="markdown"><h1 id="cssのボックス">
+  CSSのボックス
+  <a class="anchor" href="#css%e3%81%ae%e3%83%9c%e3%83%83%e3%82%af%e3%82%b9">#</a>
+</h1>
 <p>CSSで扱うボックスについて。</p>
-
 <p>前述した通り、HTMLでは要素内容の表示にはボックスと呼ばれる単位で表示される。</p>
-
 <p>ボックスの詳細は以下の図の通り。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/front-end/css_box.png" width=80%></p>
-
+<img src="https://WAT36.github.io/pages/img/front-end/css_box.png" width=80%>
 <p>CSSでは、ボックスの各部分の長さなどを設定することができる。</p>
-
 <p>ここでは、ボックスに関連するCSSのプロパティについてを記載する。</p>
-
-<h2 id="マージン関連のプロパティ">マージン関連のプロパティ</h2>
-
+<h2 id="マージン関連のプロパティ">
+  マージン関連のプロパティ
+  <a class="anchor" href="#%e3%83%9e%e3%83%bc%e3%82%b8%e3%83%b3%e9%96%a2%e9%80%a3%e3%81%ae%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>CSSでは、ボックスのマージンの長さを設定することができる。</p>
-
 <p>そのためのプロパティは以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">margin-top</td>
@@ -166,9 +201,7 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">マージンの各部分(指定できる値は1~4個)</td>
     </tr>
 </table>
-
 <p>中でも、marginプロパティは設定した値の数で、以下の通りに意味合いが変わってくる。</p>
-
 <table style="border:none;">
     <thead>
         <th style="border:none;">値の数</th>
@@ -196,9 +229,7 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">margin 10px 10px 10px 10px;</td>
     </tr>
 </table>
-
 <p>margin関連のプロパティに設定する値は以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">数値(単位px)</td>
@@ -216,33 +247,26 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">ボックスの状況から自動設定する</td>
     </tr>
 </table>
-
 <p>使用例</p>
-
 <pre><code>&lt;p style=&quot;background-color: #66ccff; margin: 10px;&quot;&gt;マージン上下左右10px&lt;/p&gt;
 &lt;p style=&quot;background-color: #66ccff; margin: 10px 20px;&quot;&gt;マージン上下10px、左右20px&lt;/p&gt;
 &lt;p style=&quot;background-color: #66ccff; margin: 10px 20px 30px;&quot;&gt;マージン上10px、左右20px、下30px&lt;/p&gt;
 &lt;p style=&quot;background-color: #66ccff; margin: 10px 20px 30px 40px;&quot;&gt;マージン上10px、右20px、下30px、左40px&lt;/p&gt;
 &lt;p style=&quot;background-color: #66ccff; margin: auto;&quot;&gt;マージンauto&lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><p style="background-color: #66ccff; margin: 10px;">マージン上下左右10px</p>
+<p style="background-color: #66ccff; margin: 10px;">マージン上下左右10px</p>
 <p style="background-color: #66ccff; margin: 10px 20px;">マージン上下10px、左右20px</p>
 <p style="background-color: #66ccff; margin: 10px 20px 30px;">マージン上10px、左右20px、下30px</p>
 <p style="background-color: #66ccff; margin: 10px 20px 30px 40px;">マージン上10px、右20px、下30px、左40px</p>
 <p style="background-color: #66ccff; margin: auto;">マージンauto</p>
-<hr></p>
-
-<h2 id="パディング関連のプロパティ">パディング関連のプロパティ</h2>
-
+<hr>
+<h2 id="パディング関連のプロパティ">
+  パディング関連のプロパティ
+  <a class="anchor" href="#%e3%83%91%e3%83%87%e3%82%a3%e3%83%b3%e3%82%b0%e9%96%a2%e9%80%a3%e3%81%ae%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>同様に、CSSではボックスのパディングの長さを設定することができる。</p>
-
 <p>そのためのプロパティは以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">padding-top</td>
@@ -270,9 +294,7 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">パディングの各部分(指定できる値は1~4個)</td>
     </tr>
 </table>
-
 <p>同様に、paddingプロパティは設定した値の数で、以下の通りに意味合いが変わってくる。</p>
-
 <table style="border:none;">
     <thead>
         <th style="border:none;">値の数</th>
@@ -300,9 +322,7 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">padding 10px 10px 10px 10px;</td>
     </tr>
 </table>
-
 <p>padding関連のプロパティに設定する値は以下の通り。</p>
-
 <table style="border:none;">
     <tr>
         <td style="border:none;">数値(単位px)</td>
@@ -315,31 +335,24 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">要素内容を表示する領域の幅に対する比率の長さになる</td>
     </tr>
 </table>
-
 <p>使用例</p>
-
 <pre><code>&lt;p style=&quot;background-color: #66ff99; padding: 10px;&quot;&gt;パディング上下左右10px&lt;/p&gt;
 &lt;p style=&quot;background-color: #66ff99; padding: 10px 20px;&quot;&gt;パディング上下10px、左右20px&lt;/p&gt;
 &lt;p style=&quot;background-color: #66ff99; padding: 10px 20px 30px;&quot;&gt;パディング上10px、左右20px、下30px&lt;/p&gt;
 &lt;p style=&quot;background-color: #66ff99; padding: 10px 20px 30px 40px;&quot;&gt;パディング上10px、右20px、下30px、左40px&lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><p style="background-color: #66ff99; padding: 10px;">パディング上下左右10px</p>
+<p style="background-color: #66ff99; padding: 10px;">パディング上下左右10px</p>
 <p style="background-color: #66ff99; padding: 10px 20px;">パディング上下10px、左右20px</p>
 <p style="background-color: #66ff99; padding: 10px 20px 30px;">パディング上10px、左右20px、下30px</p>
 <p style="background-color: #66ff99; padding: 10px 20px 30px 40px;">パディング上10px、右20px、下30px、左40px</p>
-<hr></p>
-
-<h2 id="ボーダー関連のプロパティ">ボーダー関連のプロパティ</h2>
-
+<hr>
+<h2 id="ボーダー関連のプロパティ">
+  ボーダー関連のプロパティ
+  <a class="anchor" href="#%e3%83%9c%e3%83%bc%e3%83%80%e3%83%bc%e9%96%a2%e9%80%a3%e3%81%ae%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>同じように、CSSではボックスのボーダーの種類を設定することができる。</p>
-
 <p>そのためのプロパティは以下の通り。</p>
-
 <table>
     <thead>
         <th>プロパティ名</th>
@@ -451,7 +464,6 @@ https://github.com/alex-shpak/hugo-book
         <td>上下左右のボーダーの線種・太さ・色(全てに同じ値を適用)</td>
     </tr>
 </table>
-
 <p>使用例</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">table</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border-style:double dotted dashed groove&#34;</span>&gt;
     &lt;<span style="color:#f92672">tr</span>&gt;
@@ -463,11 +475,9 @@ https://github.com/alex-shpak/hugo-book
     &lt;<span style="color:#f92672">tr</span>&gt;
         &lt;<span style="color:#f92672">td</span>&gt;border-width&lt;/<span style="color:#f92672">td</span>&gt;
     &lt;/<span style="color:#f92672">tr</span>&gt;
-&lt;/<span style="color:#f92672">table</span>&gt;</code></pre></div>
-<p>表示例</p>
-
+&lt;/<span style="color:#f92672">table</span>&gt;
+</code></pre></div><p>表示例</p>
 <hr>
-
 <table style="border-style:double dotted dashed groove">
     <tr>
         <td>border-style</td>
@@ -480,11 +490,11 @@ https://github.com/alex-shpak/hugo-book
     </tr>
 </table>
 <hr>
-
-## ボックス関連のプロパティ
-
-ボックス全体に関するプロパティを示す。
-
+<h2 id="ボックス関連のプロパティ">
+  ボックス関連のプロパティ
+  <a class="anchor" href="#%e3%83%9c%e3%83%83%e3%82%af%e3%82%b9%e9%96%a2%e9%80%a3%e3%81%ae%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>ボックス全体に関するプロパティを示す。</p>
 <table style="border:none;">
     <thead>
         <th style="border:none;">値の数</th>
@@ -519,24 +529,21 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">ボックスの最大の高さ</td>
     </tr>
 </table>
-
 <p>使用例</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99;&#34;</span>&gt;p sample1&lt;/<span style="color:#f92672">p</span>&gt;
 &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; width:200px&#34;</span>&gt;p sample2&lt;/<span style="color:#f92672">p</span>&gt;
-&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; width:200px; height:200px&#34;</span>&gt;p sample3&lt;/<span style="color:#f92672">p</span>&gt;</code></pre></div>
-<p>表示例</p>
-
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; width:200px; height:200px&#34;</span>&gt;p sample3&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>表示例</p>
 <hr>
-
-<p><p style="background-color: #66ff99;">p sample1</p>
+<p style="background-color: #66ff99;">p sample1</p>
 <p style="background-color: #66ff99; width:200px">p sample2</p>
 <p style="background-color: #66ff99; width:200px; height:200px">p sample3</p>
-<hr></p>
-
-<h2 id="border-radiusプロパティ">border-radiusプロパティ</h2>
-
+<hr>
+<h2 id="border-radiusプロパティ">
+  border-radiusプロパティ
+  <a class="anchor" href="#border-radius%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>border-radiusプロパティは、ボックスの角を丸くするプロパティである。</p>
-
 <table>
     <thead>
         <th>プロパティ名</th>
@@ -563,26 +570,23 @@ https://github.com/alex-shpak/hugo-book
         <td>上下左右の角丸(値1~4個)</td>
     </tr>
 </table>
-
 <p>値には、丸くする部分を円の1/4とした時の円弧とした時の、円の半径を単位付きの数値(px,%など)で指定する。</p>
-
 <p>使用例</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; height:100px; border-radius: 10px&#34;</span>&gt;p 全10px&lt;/<span style="color:#f92672">p</span>&gt;
 &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; height:100px; border-radius: 10px 30px&#34;</span>&gt;p 左上右下10px,右上左下30px&lt;/<span style="color:#f92672">p</span>&gt;
 &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; height:100px; border-radius: 10px 30px 50px&#34;</span>&gt;p 左上10px,右上左下30px,右下50px&lt;/<span style="color:#f92672">p</span>&gt;
-&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; height:100px; border-radius: 10px 30px 50px 70px&#34;</span>&gt;p 左上10px,右上30px,右下50px,左下70px&lt;/<span style="color:#f92672">p</span>&gt;</code></pre></div>
-<p>表示例</p>
-
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; height:100px; border-radius: 10px 30px 50px 70px&#34;</span>&gt;p 左上10px,右上30px,右下50px,左下70px&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>表示例</p>
 <hr>
-
-<p><p style="background-color: #66ff99; height:100px; border-radius: 10px">p 全10px</p>
+<p style="background-color: #66ff99; height:100px; border-radius: 10px">p 全10px</p>
 <p style="background-color: #66ff99; height:100px; border-radius: 10px 30px">p 左上右下10px,右上左下30px</p>
 <p style="background-color: #66ff99; height:100px; border-radius: 10px 30px 50px">p 左上10px,右上左下30px,右下50px</p>
 <p style="background-color: #66ff99; height:100px; border-radius: 10px 30px 50px 70px">p 左上10px,右上30px,右下50px,左下70px</p>
-<hr></p>
-
-<h2 id="box-shadowプロパティ">box-shadowプロパティ</h2>
-
+<hr>
+<h2 id="box-shadowプロパティ">
+  box-shadowプロパティ
+  <a class="anchor" href="#box-shadow%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <table style="border:none;">
     <thead>
         <th style="border:none;">値</th>
@@ -605,7 +609,6 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">影を表示しない。</td>
     </tr>
 </table>
-
 <p>使用例</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; height:50px; box-shadow:10px&#34;</span>&gt;p 右10px&lt;/<span style="color:#f92672">p</span>&gt;
 &lt;<span style="color:#f92672">br</span>&gt;
@@ -617,12 +620,10 @@ https://github.com/alex-shpak/hugo-book
 &lt;<span style="color:#f92672">br</span>&gt;
 &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; height:50px; box-shadow:10px 10px 10px 10px #663399&#34;</span>&gt;p 右下10px, ぼかし10px, 四方10px&lt;/<span style="color:#f92672">p</span>&gt;
 &lt;<span style="color:#f92672">br</span>&gt;
-&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; height:50px; box-shadow:10px 10px 10px 10px inset&#34;</span>&gt;p 右下10px, ぼかし10px, 四方10px&lt;/<span style="color:#f92672">p</span>&gt;</code></pre></div>
-<p>表示例</p>
-
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; height:50px; box-shadow:10px 10px 10px 10px inset&#34;</span>&gt;p 右下10px, ぼかし10px, 四方10px&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>表示例</p>
 <hr>
-
-<p><p style="background-color: #66ff99; height:50px; box-shadow:10px">p 右10px</p>
+<p style="background-color: #66ff99; height:50px; box-shadow:10px">p 右10px</p>
 <br>
 <p style="background-color: #66ff99; height:50px; box-shadow:10px 10px">p 右下10px</p>
 <br>
@@ -633,14 +634,13 @@ https://github.com/alex-shpak/hugo-book
 <p style="background-color: #66ff99; height:50px; box-shadow:10px 10px 10px 10px #663399">p 右下10px, ぼかし10px, 四方10px</p>
 <br>
 <p style="background-color: #66ff99; height:50px; box-shadow:10px 10px 10px 10px inset">p 右下10px, ぼかし10px, 四方10px</p>
-<hr></p>
-
-<h2 id="floatプロパティ">floatプロパティ</h2>
-
+<hr>
+<h2 id="floatプロパティ">
+  floatプロパティ
+  <a class="anchor" href="#float%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>floatプロパティは、ボックスを左または右に寄せて配置し、後続の要素をその反対側に記載させるようにするプロパティである。</p>
-
 <p>指定する値と意味は以下の通り。</p>
-
 <table style="border:none;">
     <thead>
         <th style="border:none;">値</th>
@@ -659,9 +659,7 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">ボックスを寄せない</td>
     </tr>
 </table>
-
 <p>使用例</p>
-
 <pre><code>&lt;img src=&quot;/css_sample_pages/img_small.jpg&quot; style=&quot;float:left&quot;&gt;
 &lt;p style=&quot;background-color: #66ff99;&quot;&gt;p要素ボックス左&lt;/p&gt;
 &lt;p style=&quot;background-color: #66ff99;&quot;&gt;←左に画像&lt;/p&gt;
@@ -674,13 +672,9 @@ https://github.com/alex-shpak/hugo-book
 &lt;br&gt;
 &lt;br&gt;
 &lt;br&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><img src="https://WAT36.github.io/pages/css_sample_pages/img_small.jpg" style="float:left">
+<img src="https://WAT36.github.io/pages/css_sample_pages/img_small.jpg" style="float:left">
 <p style="background-color: #66ff99;">p要素ボックス左</p>
 <p style="background-color: #66ff99;">←左に画像</p>
 <br>
@@ -692,14 +686,13 @@ https://github.com/alex-shpak/hugo-book
 <br>
 <br>
 <br>
-<hr></p>
-
-<h2 id="clearプロパティ">clearプロパティ</h2>
-
+<hr>
+<h2 id="clearプロパティ">
+  clearプロパティ
+  <a class="anchor" href="#clear%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>clearプロパティは、floatプロパティで寄せられたボックスの反対側に、後続の要素がくる状態を解除するプロパティである。</p>
-
 <p>指定する値と意味は以下の通り。</p>
-
 <table style="border:none;">
     <thead>
         <th style="border:none;">値</th>
@@ -722,9 +715,7 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">float関連の解除をしない</td>
     </tr>
 </table>
-
 <p>使用例</p>
-
 <pre><code>&lt;img src=&quot;/css_sample_pages/img_small.jpg&quot; style=&quot;float:left&quot;&gt;
 &lt;p style=&quot;background-color: #66ff99&quot;&gt;p要素ボックス右&lt;br&gt;←左に画像&lt;/p&gt;
 &lt;p style=&quot;clear:none&quot;&gt;clearを指定しないと後続の要素も回り込みます&lt;/p&gt;
@@ -733,13 +724,9 @@ https://github.com/alex-shpak/hugo-book
 &lt;img src=&quot;/css_sample_pages/img_small.jpg&quot; style=&quot;float:left&quot;&gt;
 &lt;p style=&quot;background-color: #66ff99&quot;&gt;p要素ボックス右&lt;br&gt;←左に画像&lt;/p&gt;
 &lt;p style=&quot;clear:left&quot;&gt;clearを指定すると後続の要素は回り込みません&lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><img src="https://WAT36.github.io/pages/css_sample_pages/img_small.jpg" style="float:left">
+<img src="https://WAT36.github.io/pages/css_sample_pages/img_small.jpg" style="float:left">
 <p style="background-color: #66ff99">p要素ボックス右<br>←左に画像</p>
 <p style="clear:none">clearを指定しないと後続の要素も回り込みます</p>
 <br>
@@ -747,14 +734,13 @@ https://github.com/alex-shpak/hugo-book
 <img src="https://WAT36.github.io/pages/css_sample_pages/img_small.jpg" style="float:left">
 <p style="background-color: #66ff99">p要素ボックス右<br>←左に画像</p>
 <p style="clear:left">clearを指定すると後続の要素は回り込みません</p>
-<hr></p>
-
-<h2 id="displayプロパティ">displayプロパティ</h2>
-
+<hr>
+<h2 id="displayプロパティ">
+  displayプロパティ
+  <a class="anchor" href="#display%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>displayプロパティは、要素の表示形式を設定するプロパティである。</p>
-
 <p>インライン要素をブロックレベル要素に、あるいはその逆などの表示をさせることができる。</p>
-
 <table>
     <thead>
         <th>プロパティ名</th>
@@ -829,7 +815,6 @@ https://github.com/alex-shpak/hugo-book
         <td>ボックスが無い状態で表示する</td>
     </tr>
 </table>
-
 <p>使用例</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; display:block&#34;</span>&gt;ブロック1&lt;/<span style="color:#f92672">p</span>&gt;
 &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; display:block&#34;</span>&gt;ブロック2&lt;/<span style="color:#f92672">p</span>&gt;
@@ -839,12 +824,10 @@ https://github.com/alex-shpak/hugo-book
 &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; display:inline&#34;</span>&gt;インライン1&lt;/<span style="color:#f92672">p</span>&gt;
 &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; display:inline&#34;</span>&gt;インライン2&lt;/<span style="color:#f92672">p</span>&gt;
 &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; display:inline&#34;</span>&gt;インライン3&lt;/<span style="color:#f92672">p</span>&gt;
-&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; display:inline&#34;</span>&gt;インライン4&lt;/<span style="color:#f92672">p</span>&gt;</code></pre></div>
-<p>表示例</p>
-
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66ff99; display:inline&#34;</span>&gt;インライン4&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>表示例</p>
 <hr>
-
-<p><p style="background-color: #66ff99; display:block">ブロック1</p>
+<p style="background-color: #66ff99; display:block">ブロック1</p>
 <p style="background-color: #66ff99; display:block">ブロック2</p>
 <p style="background-color: #66ff99; display:block">ブロック3</p>
 <p style="background-color: #66ff99; display:block">ブロック4</p>
@@ -853,14 +836,13 @@ https://github.com/alex-shpak/hugo-book
 <p style="background-color: #66ff99; display:inline">インライン2</p>
 <p style="background-color: #66ff99; display:inline">インライン3</p>
 <p style="background-color: #66ff99; display:inline">インライン4</p>
-<hr></p>
-
-<h2 id="visibilityプロパティ">visibilityプロパティ</h2>
-
+<hr>
+<h2 id="visibilityプロパティ">
+  visibilityプロパティ
+  <a class="anchor" href="#visibility%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>visiblityプロパティは、ボックスが透明になったかのように見えなくさせることのできるプロパティである。</p>
-
 <p>指定する値と意味は以下の通り。</p>
-
 <table style="border:none;">
     <thead>
         <th style="border:none;">値</th>
@@ -879,9 +861,7 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">テーブル内の要素に指定された場合、その要素は表示されなくなる</td>
     </tr>
 </table>
-
 <p>使用例</p>
-
 <pre><code>&lt;p&gt;下に画像３個、２個目をhiddenさせる&lt;/p&gt;
 &lt;img src=&quot;/css_sample_pages/img_small.jpg&quot; style=&quot;display:inline&quot;&gt;
 &lt;img src=&quot;/css_sample_pages/img_small.jpg&quot; style=&quot;display:inline; visibility:hidden&quot;&gt;
@@ -906,13 +886,9 @@ https://github.com/alex-shpak/hugo-book
         &lt;td style=&quot;border:none;&quot;&gt;2,2&lt;/td&gt;
     &lt;/tr&gt;
 &lt;/table&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><p>下に画像３個、２個目をhiddenさせる</p>
+<p>下に画像３個、２個目をhiddenさせる</p>
 <img src="https://WAT36.github.io/pages/css_sample_pages/img_small.jpg" style="display:inline">
 <img src="https://WAT36.github.io/pages/css_sample_pages/img_small.jpg" style="display:inline; visibility:hidden">
 <img src="https://WAT36.github.io/pages/css_sample_pages/img_small.jpg" style="display:inline">
@@ -936,14 +912,13 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">2,2</td>
     </tr>
 </table>
-<hr></p>
-
-<h2 id="overflowプロパティ">overflowプロパティ</h2>
-
+<hr>
+<h2 id="overflowプロパティ">
+  overflowプロパティ
+  <a class="anchor" href="#overflow%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
 <p>overflowプロパティは、要素内容がボックスに入りきらなくなった時に、はみ出た部分を表示するかしないかなどの設定をするプロパティである。</p>
-
 <p>指定する値と意味は以下の通り。</p>
-
 <table style="border:none;">
     <thead>
         <th style="border:none;">値</th>
@@ -966,9 +941,7 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">状況に応じてスクロール可能にする</td>
     </tr>
 </table>
-
 <p>使用例</p>
-
 <pre><code>&lt;p style=&quot;background-color: #66ff99; height:100px; width:100px; overflow:visible&quot;&gt;
 あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん
 &lt;/p&gt;
@@ -984,13 +957,9 @@ https://github.com/alex-shpak/hugo-book
 &lt;p style=&quot;background-color: #66ff99; height:100px; width:100px; overflow:scroll&quot;&gt;
 あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん
 &lt;/p&gt;
-</code></pre>
-
-<p>表示例</p>
-
+</code></pre><p>表示例</p>
 <hr>
-
-<p><p style="background-color: #66ff99; height:100px; width:100px; overflow:visible">
+<p style="background-color: #66ff99; height:100px; width:100px; overflow:visible">
 あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん
 </p>
 <br>
@@ -1005,64 +974,90 @@ https://github.com/alex-shpak/hugo-book
 <p style="background-color: #66ff99; height:100px; width:100px; overflow:scroll">
 あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん
 </p>
-<hr></p>
+<hr>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/a4ed8add843d8b09a9e669541b6da97734a16f5e" title='Last modified Jul 29, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jul 29, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/a4ed8add843d8b09a9e669541b6da97734a16f5e" title='Last modified by Wataru Tsukagoshi | Jul 29, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jul 29, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/css_box.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#cssのボックス">CSSのボックス</a>
-<ul>
-<li><a href="#マージン関連のプロパティ">マージン関連のプロパティ</a></li>
-<li><a href="#パディング関連のプロパティ">パディング関連のプロパティ</a></li>
-<li><a href="#ボーダー関連のプロパティ">ボーダー関連のプロパティ</a></li>
-<li><a href="#border-radiusプロパティ">border-radiusプロパティ</a></li>
-<li><a href="#box-shadowプロパティ">box-shadowプロパティ</a></li>
-<li><a href="#floatプロパティ">floatプロパティ</a></li>
-<li><a href="#clearプロパティ">clearプロパティ</a></li>
-<li><a href="#displayプロパティ">displayプロパティ</a></li>
-<li><a href="#visibilityプロパティ">visibilityプロパティ</a></li>
-<li><a href="#overflowプロパティ">overflowプロパティ</a></li>
-</ul></li>
-</ul>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#マージン関連のプロパティ">マージン関連のプロパティ</a></li>
+    <li><a href="#パディング関連のプロパティ">パディング関連のプロパティ</a></li>
+    <li><a href="#ボーダー関連のプロパティ">ボーダー関連のプロパティ</a></li>
+    <li><a href="#ボックス関連のプロパティ">ボックス関連のプロパティ</a></li>
+    <li><a href="#border-radiusプロパティ">border-radiusプロパティ</a></li>
+    <li><a href="#box-shadowプロパティ">box-shadowプロパティ</a></li>
+    <li><a href="#floatプロパティ">floatプロパティ</a></li>
+    <li><a href="#clearプロパティ">clearプロパティ</a></li>
+    <li><a href="#displayプロパティ">displayプロパティ</a></li>
+    <li><a href="#visibilityプロパティ">visibilityプロパティ</a></li>
+    <li><a href="#overflowプロパティ">overflowプロパティ</a></li>
+  </ul>
 </nav>
-  </aside>
 
 
-
+ 
+      </div>
+    </aside>
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

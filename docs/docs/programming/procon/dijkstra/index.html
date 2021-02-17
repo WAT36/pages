@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ダイクストラ法 # グラフ探索の手法の一つ、ダイクストラ法についてを述べる。 ダイクストラ法は重み付きのグラフにおいて、ある頂点から他の全ての頂点">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="ダイクストラ法" />
+<meta property="og:description" content="ダイクストラ法 # グラフ探索の手法の一つ、ダイクストラ法についてを述べる。 ダイクストラ法は重み付きのグラフにおいて、ある頂点から他の全ての頂点" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/procon/dijkstra/" />
+<meta property="article:modified_time" content="2020-05-16T15:03:24+09:00" />
 <title>ダイクストラ法 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.ea9376be5b5d954ae8cabfd6c64fb80a8878a352a986745b905b50f38b14095c.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.73dac5ca27ab473fe00ddd9216dfc4ab2875125c6b5f8f1cbe1ee6af752eaff9.js" integrity="sha256-c9rFyierRz/gDd2SFt/Eqyh1ElxrX48cvh7mr3Uur/k="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fprocon\2f dijkstra\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,102 +102,99 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>ダイクストラ法</strong>
-</header>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="ダイクストラ法">ダイクストラ法</h1>
-
+      
+  <article class="markdown"><h1 id="ダイクストラ法">
+  ダイクストラ法
+  <a class="anchor" href="#%e3%83%80%e3%82%a4%e3%82%af%e3%82%b9%e3%83%88%e3%83%a9%e6%b3%95">#</a>
+</h1>
 <p>グラフ探索の手法の一つ、ダイクストラ法についてを述べる。</p>
-
 <p>ダイクストラ法は重み付きのグラフにおいて、ある頂点から他の全ての頂点までの最小コストを計算する一つの手法である。</p>
-
 <p>既に最小コストが確定している頂点から一つ一つ最小コストを決定していくので、動的計画法に少し似ているところがある。</p>
-
-<h2 id="アルゴリズム">アルゴリズム</h2>
-
+<h2 id="アルゴリズム">
+  アルゴリズム
+  <a class="anchor" href="#%e3%82%a2%e3%83%ab%e3%82%b4%e3%83%aa%e3%82%ba%e3%83%a0">#</a>
+</h2>
 <p>入出力は以下の通り。</p>
-
 <ul>
-<li>入力
-
-<ul>
+<li>入力</li>
 <li>グラフ G = (V,E)</li>
 <li>W(a,b):頂点aから頂点b(a,b∈V)を結ぶ辺の重み(コスト)。辺が存在しないときはW(a,b)=∞</li>
 <li>頂点s (s∈V)</li>
-</ul></li>
-<li>出力
-
-<ul>
+<li>出力</li>
 <li>頂点sから頂点vまでの最小コストd(v) (v∈V)</li>
 <li>頂点sから頂点vまでの最小コスト経路において、頂点vの一つ前の頂点p(v) (v∈V)</li>
-</ul></li>
 </ul>
-
 <p>擬似的なアルゴリズムは以下の通り。</p>
-
 <ol>
-<li>X=V とする</li>
-<li>最小コストd(v)(v∈V)を用意し、全てのvにおいてd(v)=∞ と初期化、p(v) (v∈V) を用意し、全てのvにおいてp(v)=v と初期化する</li>
-<li>d(s)=0とする</li>
-<li>X=X-{s} とする</li>
-
-<li><p>Xの全ての点v (v∈X) に対して以下の式の通りにコストを計算する。</p>
-
-<p>d(v) = min(d(v),d(s)+W(s,v))</p></li>
-
-<li><p>5.の式において、第２項の方が小さいならば、p(v)=sとする。</p></li>
-
-<li><p>X={} (|X|=0) ならば、d(v),p(v)を出力して終了する</p></li>
-
-<li><p>d(s) = min{d(v)|v∈X} となるsを求め、4.に戻る</p></li>
+<li>
+<p>X=V とする</p>
+</li>
+<li>
+<p>最小コストd(v)(v∈V)を用意し、全てのvにおいてd(v)=∞ と初期化、p(v) (v∈V) を用意し、全てのvにおいてp(v)=v と初期化する</p>
+</li>
+<li>
+<p>d(s)=0とする</p>
+</li>
+<li>
+<p>X=X-{s} とする</p>
+</li>
+<li>
+<p>Xの全ての点v (v∈X) に対して以下の式の通りにコストを計算する。</p>
+<p>d(v) = min(d(v),d(s)+W(s,v))</p>
+</li>
+<li>
+<p>5.の式において、第２項の方が小さいならば、p(v)=sとする。</p>
+</li>
+<li>
+<p>X={} (|X|=0) ならば、d(v),p(v)を出力して終了する</p>
+</li>
+<li>
+<p>d(s) = min{d(v)|v∈X} となるsを求め、4.に戻る</p>
+</li>
 </ol>
-
 <p>計算量はn=|V|とした時、5.~8.の処理が1+2+・・・+n回行われるため、O(|V|<sup>2</sup>)となる。</p>
-
 <p>例として以下のグラフで、頂点Aから他の全ての点までの最短経路を求めてみる。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/dijkstra1.png" alt="ダイクストラ例1" /></p>
-
 <p>まずは始点となるAのコストを0、その他の頂点のコストを∞とする。また、Aをコスト確定済みとしてXに加える。</p>
-
 <p>(図中、頂点内の左にその頂点のコスト、右にその頂点までの最小コスト経路における直前の頂点を記載する。またコスト確定した頂点(Xから除いた頂点)を黄色く、コストが確定していない頂点を白く表示する。)</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/dijkstra2.png" alt="ダイクストラ例2" /></p>
-
 <p>次に、Aから各頂点のコスト及び直前の頂点を計算する。この時、Aに隣接する頂点はコストが下図のように定まる。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/dijkstra3.png" alt="ダイクストラ例3" /></p>
-
 <p>次に、コストが確定していない頂点(上図で白の頂点)からコストが最も小さい頂点を選び、その頂点をコスト確定とする。</p>
-
 <p>この場合は頂点Bが該当する。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/dijkstra4.png" alt="ダイクストラ例4" /></p>
-
 <p>ここから頂点Bに隣接しコスト確定していない頂点に対してコストを計算する、という一連の動作を全ての頂点のコストが確定するまで行っていくと、最終的には以下の図のようになり、始点Aから全ての頂点までの最小コスト及び経路が求められる。</p>
-
 <p><img src="https://WAT36.github.io/pages/img/procon/dijkstra5.png" alt="ダイクストラ例5" /></p>
-
 <p>コードによる実装例は以下の通り。(Python)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">INF<span style="color:#f92672">=</span>float(<span style="color:#e6db74">&#34;inf&#34;</span>)
 
@@ -228,48 +231,67 @@ edge<span style="color:#f92672">=</span>[[INF,<span style="color:#ae81ff">2</spa
       [<span style="color:#ae81ff">5</span>  ,<span style="color:#ae81ff">1</span>  ,INF,INF,<span style="color:#ae81ff">10</span> ],
       [<span style="color:#ae81ff">6</span>  ,INF,INF,INF,<span style="color:#ae81ff">4</span>  ],
       [INF,<span style="color:#ae81ff">9</span>  ,<span style="color:#ae81ff">10</span> ,<span style="color:#ae81ff">4</span>  ,INF]]
-<span style="color:#66d9ef">print</span>(dijkstra(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">5</span>, edge))</code></pre></div>
-<p>実行結果</p>
-
+<span style="color:#66d9ef">print</span>(dijkstra(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">5</span>, edge))
+</code></pre></div><p>実行結果</p>
 <pre><code>([0, 2, 3, 6, 10], [0, 0, 1, 0, 3])
-</code></pre>
-</article>
-
+</code></pre></article>
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f15949d8f46b11e213ded43c6d830631992ef359" title='Last modified May 16, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 16, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/f15949d8f46b11e213ded43c6d830631992ef359" title='Last modified by Wataru Tsukagoshi | May 16, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>May 16, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/procon/dijkstra.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
+</div>
+  
+ 
 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
 
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

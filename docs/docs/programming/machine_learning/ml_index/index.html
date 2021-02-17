@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="機械学習 # 機械学習の手法についてをまとめる。 教師あり学習 回帰 直線モデル(線形回帰) 平均二乗誤差 勾配法(最急降下法) 解析解 2次元入力の面モデル">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="機械学習" />
+<meta property="og:description" content="機械学習 # 機械学習の手法についてをまとめる。 教師あり学習 回帰 直線モデル(線形回帰) 平均二乗誤差 勾配法(最急降下法) 解析解 2次元入力の面モデル" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/machine_learning/ml_index/" />
+<meta property="article:modified_time" content="2021-02-07T01:42:31+09:00" />
 <title>機械学習 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.ea9376be5b5d954ae8cabfd6c64fb80a8878a352a986745b905b50f38b14095c.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.73dac5ca27ab473fe00ddd9216dfc4ab2875125c6b5f8f1cbe1ee6af752eaff9.js" integrity="sha256-c9rFyierRz/gDd2SFt/Eqyh1ElxrX48cvh7mr3Uur/k="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2fml_index\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,39 +102,47 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>機械学習</strong>
-</header>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="機械学習">機械学習</h1>
-
+      
+  <article class="markdown"><h1 id="機械学習">
+  機械学習
+  <a class="anchor" href="#%e6%a9%9f%e6%a2%b0%e5%ad%a6%e7%bf%92">#</a>
+</h1>
 <p>機械学習の手法についてをまとめる。</p>
-
 <ul>
-<li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/supervised_learning/">教師あり学習</a>
-
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/supervised_learning/">教師あり学習</a></p>
 <ul>
 <li>回帰
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/linear_model/">直線モデル(線形回帰)</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/mse/">平均二乗誤差</a></li>
@@ -140,9 +154,9 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/overfitting/">オーバーフィッティング(過学習)</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/">ホールドアウト検証</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/cross_validation/">交差検証</a></li>
-</ul></li>
+</ul>
+</li>
 <li>分類
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/1d_2class/">１次元入力２クラス分類</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/logistic_regression/">ロジスティック回帰モデル</a></li>
@@ -150,22 +164,24 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/cee_ans/">平均交差エントロピー誤差の最適解の導出</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/2d_2class/">２次元入力２クラス分類</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/2d_3class/">２次元入力３クラス分類</a></li>
-</ul></li>
-</ul></li>
-<li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/unsupervised_learning/">教師なし学習</a>
-
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/unsupervised_learning/">教師なし学習</a></p>
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/clustering/">クラスタリング</a>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/k-means/">K-Means法</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/distortion_measure/">歪み尺度</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/gaussian_mixture_model/">混合ガウスモデル</a></li>
-</ul></li>
-</ul></li>
-
-<li><p>深層学習(ディープラーニング)</p>
-
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>深層学習(ディープラーニング)</p>
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/neural_network/">ニューラルネットワーク</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/numerical_differentiation/">数値微分法</a></li>
@@ -173,65 +189,87 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/keras/">Kerasでニューラルネットワーク</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/mnist/">手書き文字の認識</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/filter/">フィルターと畳み込みニューラルネットワーク</a></li>
-</ul></li>
-
-<li><p>数学系</p>
-
+</ul>
+</li>
+<li>
+<p>数学系</p>
 <ul>
 <li>関数
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/sigmoid/">シグモイド関数</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/softmax/">ソフトマックス関数</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/softmax_sigmoid/">シグモイド関数とソフトマックス関数</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/gauss/">ガウス関数</a></li>
 <li>ガウス関数(2次元)</li>
-</ul></li>
+</ul>
+</li>
 <li>確率・統計
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/conditional_probability/">条件付き確率</a></li>
 <li><a href="https://WAT36.github.io/pages/docs/programming/machine_learning/maximum_likelihood/">最尤推定</a></li>
-</ul></li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f23a5407ef8289d460b2d5977c53174986214e79" title='Last modified Oct 26, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 26, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/9fd3d27fdeb8621150557508c52c4de4c0541b93" title='Last modified by Wataru Tsukagoshi | Feb 7, 2021' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Feb 7, 2021</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/machine_learning/ml_index.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
+</div>
+  
+ 
 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
 
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

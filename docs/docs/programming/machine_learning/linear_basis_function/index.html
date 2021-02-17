@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="線形基底関数モデル # 先ほどまでの章では、データの予測に直線モデルを利用していたが、勿論直線モデルを利用するのが必ずしも最適ではないという場合">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="線形基底関数モデル" />
+<meta property="og:description" content="線形基底関数モデル # 先ほどまでの章では、データの予測に直線モデルを利用していたが、勿論直線モデルを利用するのが必ずしも最適ではないという場合" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/machine_learning/linear_basis_function/" />
+<meta property="article:modified_time" content="2020-04-27T23:00:45+09:00" />
 <title>線形基底関数モデル | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.ea9376be5b5d954ae8cabfd6c64fb80a8878a352a986745b905b50f38b14095c.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.73dac5ca27ab473fe00ddd9216dfc4ab2875125c6b5f8f1cbe1ee6af752eaff9.js" integrity="sha256-c9rFyierRz/gDd2SFt/Eqyh1ElxrX48cvh7mr3Uur/k="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2flinear_basis_function\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,82 +102,64 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>線形基底関数モデル</strong>
-</header>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="線形基底関数モデル">線形基底関数モデル</h1>
-
+      
+  <article class="markdown"><h1 id="線形基底関数モデル">
+  線形基底関数モデル
+  <a class="anchor" href="#%e7%b7%9a%e5%bd%a2%e5%9f%ba%e5%ba%95%e9%96%a2%e6%95%b0%e3%83%a2%e3%83%87%e3%83%ab">#</a>
+</h1>
 <p>先ほどまでの章では、データの予測に直線モデルを利用していたが、勿論直線モデルを利用するのが必ずしも最適ではないという場合もある。</p>
-
 <p>直線ではなく、曲線となるような関数をモデルにしてみるのはどうだろうか？ここではそれについて述べる。</p>
-
 <p>と言っても曲線となる関数は色々あるが、今回はその中でも汎用性が高いと言われている<strong>線形基底関数モデル</strong>を利用する。</p>
-
 <p>基底関数とは、元となる関数という意味で、先ほどの線形関数(y=w<sub>0</sub>x+w<sub>1</sub>)のxを基底関数φ(x)に置き換えたものが線形基底関数モデルになる。</p>
-
 <p>基底関数には色々種類があるが、ここではガウス関数を基底関数と置いた場合を例にとる。</p>
-
 <p>その場合の線形基底関数モデルの式は以下のようになる。</p>
 
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-
-
-
-<p class="katex">
-  $$ 
-\tag{1}  y(x, {\bf w} ) = w_{0} \phi_{0} (x) + w_{1} \phi_{1} (x) + w_{2} \phi_{2} (x) + \cdots + w_{M}
- $$
-</p>
-
-
+<link rel="stylesheet" href="https://WAT36.github.io/pages/katex/katex.min.css" />
+<script defer src="https://WAT36.github.io/pages/katex/katex.min.js"></script>
+<script defer src="https://WAT36.github.io/pages/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \(\tag{1}  y(x, {\bf w} ) = w_{0} \phi_{0} (x) &#43; w_{1} \phi_{1} (x) &#43; w_{2} \phi_{2} (x) &#43; \cdots &#43; w_{M}\)
+</span>
 
 <p>ここでφ<sub>j</sub>(x)はガウス関数で、以下のように表される。</p>
-
-
-
-<p class="katex">
-  $$ 
-\tag{2} \phi_{j} (x) = \exp( - \frac{ ( x - \mu_{j} )^2 }{ 2 v^2} )
- $$
-</p>
-
-
+<span>
+  \(\tag{2} \phi_{j} (x) = \exp( - \frac{ ( x - \mu_{j} )^2 }{ 2 v^2} )\)
+</span>
 
 <p>μ<sub>j</sub>はガウス関数φ<sub>j</sub>(x)の中心位置で、vは関数の広がりの程度を示す。</p>
-
 <p>次に、この線形基底関数モデルの式を行列を用い表現することを考えてみる。</p>
-
 <p>式(1)において、</p>
-
-
-
-<p class="katex">
-  $$ 
-  {\bf w} = \left[
+<span>
+  \(  {\bf w} = \left[
     \begin{array}{cccc}
       w_{0} \\
       w_{1} \\
@@ -187,116 +175,65 @@ https://github.com/alex-shpak/hugo-book
       \vdots \\
       \phi_{M}
     \end{array}
-  \right]
- $$
-</p>
-
-
+  \right]\)
+</span>
 
 <p>とおくと、式(1)は以下のように表される。</p>
-
-
-
-<p class="katex">
-  $$ 
-\tag{3}  y({\bf x}, {\bf w} ) = \sum_{i=0}^{M} w_{i} \phi_{i} (x) = {\bf w} ^\mathrm{T} {\bf \Phi} ( {\bf x} )
- $$
-</p>
-
-
+<span>
+  \(\tag{3}  y({\bf x}, {\bf w} ) = \sum_{i=0}^{M} w_{i} \phi_{i} (x) = {\bf w} ^\mathrm{T} {\bf \Phi} ( {\bf x} )\)
+</span>
 
 <p>ここで、式(1)を見ても分かるように、第M項目はw<sub>M</sub>のみであり、　φ<sub>M</sub>(x) は実は存在しない。</p>
-
 <p>実はφ<sub>M</sub>(x)は先述の<a href="https://WAT36.github.io/pages/docs/programming/machine_learning/N-dimension_linear_model/">N次元線形回帰モデル</a>のところでもあったように、φ<sub>M</sub>(x)は式(3)での行列計算のために入れているダミーの基底関数であり、w<sub>M</sub>φ<sub>M</sub>(x) が w<sub>M</sub>になる様にφ<sub>M</sub>(x) = 1　とする。</p>
-
 <p>この式(3)を用い、これまでと同様にして平均二乗誤差Jを求めてみよう。</p>
-
 <p>実測値を{t<sub>n</sub>}とおくと、平均二乗誤差Jは次の式(4)で表される。</p>
-
-
-
-<p class="katex">
-  $$ 
-\tag{4}  J( {\bf w} ) = \frac{1}{N} \sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf \Phi} ( x_{n} ) - t_{n} ) ^2
- $$
-</p>
-
-
+<span>
+  \(\tag{4}  J( {\bf w} ) = \frac{1}{N} \sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf \Phi} ( x_{n} ) - t_{n} ) ^2\)
+</span>
 
 <p>この式(4)だが、先述の<a href="https://WAT36.github.io/pages/docs/programming/machine_learning/N-dimension_linear_model/">N次元線形回帰モデル</a>の式(4)に類似している。</p>
-
-
-
-<p class="katex">
-  $$ 
-  J( {\bf w} ) = \frac{1}{N} \sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf x}_{n} - t_{n} )^2
- $$
-</p>
-
-
+<span>
+  \(  J( {\bf w} ) = \frac{1}{N} \sum_{n=0}^{N-1} ( {\bf w} ^\mathrm{T} {\bf x}_{n} - t_{n} )^2\)
+</span>
 
 <p><b>x</b><sub>n</sub>が<b>φ</b><sub>n</sub>(x)に変わったのみであり、そのため実はこの線形基底関数モデルにおいても、解はムーアーペンローズの擬似逆行列の形になる。</p>
-
 <p>よって、Jを最小化する<b>w</b>は以下の式のようになる。</p>
-
-
-
-<p class="katex">
-  $$ 
-\tag{5}   {\bf w} = ( {\bf \Phi} ^\mathrm{T}  {\bf \Phi} )^{-1} {\bf \Phi} ^\mathrm{T} {\bf t}
- $$
-</p>
-
-
+<span>
+  \(\tag{5}   {\bf w} = ( {\bf \Phi} ^\mathrm{T}  {\bf \Phi} )^{-1} {\bf \Phi} ^\mathrm{T} {\bf t}\)
+</span>
 
 <p>ただし</p>
-
-
-
-<p class="katex">
-  $$ 
-\tag{6}   
+<span>
+  \(\tag{6}   
         {\bf \Phi}
         = 
                 \left[
                     \begin{array}{cccc}
-                    \phi_{0} (x_{0}) & \phi_{1} (x_{0}) & \cdots & \phi_{M} (x_{0}) \\
-                    \phi_{0} (x_{1}) & \phi_{1} (x_{1}) & \cdots & \phi_{M} (x_{1}) \\
-                    \vdots & \vdots & \ddots & \vdots \\
-                    \phi_{0} (x_{N-1}) & \phi_{1} (x_{N-1}) & \cdots & \phi_{M} (x_{N-1})
+                    \phi_{0} (x_{0}) &amp; \phi_{1} (x_{0}) &amp; \cdots &amp; \phi_{M} (x_{0}) \\
+                    \phi_{0} (x_{1}) &amp; \phi_{1} (x_{1}) &amp; \cdots &amp; \phi_{M} (x_{1}) \\
+                    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+                    \phi_{0} (x_{N-1}) &amp; \phi_{1} (x_{N-1}) &amp; \cdots &amp; \phi_{M} (x_{N-1})
                     \end{array}
-                \right]
- $$
-</p>
-
-
+                \right]\)
+</span>
 
 <p>である。この式(6)で表される行列を<strong>計画行列</strong>と言う。</p>
-
 <p>基底関数としているガウス関数を多次元入力に対応させると、以下のようになる。</p>
-
-
-
-<p class="katex">
-  $$ 
-\tag{7}   
+<span>
+  \(\tag{7}   
         {\bf \Phi}
         = 
                 \left[
                     \begin{array}{cccc}
-                    \phi_{0} ({\bf x}_{0}) & \phi_{1} ({\bf x}_{0}) & \cdots & \phi_{M} ({\bf x}_{0}) \\
-                    \phi_{0} ({\bf x}_{1}) & \phi_{1} ({\bf x}_{1}) & \cdots & \phi_{M} ({\bf x}_{1}) \\
-                    \vdots & \vdots & \ddots & \vdots \\
-                    \phi_{0} ({\bf x}_{N-1}) & \phi_{1} ({\bf x}_{N-1}) & \cdots & \phi_{M} ({\bf x}_{N-1})
+                    \phi_{0} ({\bf x}_{0}) &amp; \phi_{1} ({\bf x}_{0}) &amp; \cdots &amp; \phi_{M} ({\bf x}_{0}) \\
+                    \phi_{0} ({\bf x}_{1}) &amp; \phi_{1} ({\bf x}_{1}) &amp; \cdots &amp; \phi_{M} ({\bf x}_{1}) \\
+                    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+                    \phi_{0} ({\bf x}_{N-1}) &amp; \phi_{1} ({\bf x}_{N-1}) &amp; \cdots &amp; \phi_{M} ({\bf x}_{N-1})
                     \end{array}
-                \right]
- $$
-</p>
-
-
+                \right]\)
+</span>
 
 <p>では、以上の式をコードで実装してみよう。</p>
-
 <p>まず、ガウス関数とそれを利用した線形基底関数モデルは以下のようになる。(linear_basis_function.py)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 <span style="color:#75715e">#ガウス関数 (式(2))</span>
@@ -315,8 +252,8 @@ https://github.com/alex-shpak/hugo-book
 
 <span style="color:#75715e">#平均二乗誤差MSE (式(4))</span>
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">mse</span>(y,t):
-    <span style="color:#66d9ef">return</span> np<span style="color:#f92672">.</span>mean((y<span style="color:#f92672">-</span>t)<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>)</code></pre></div>
-<p>次に、計画行列を算出するコードを記載する。(linear_basis_function.py)</p>
+    <span style="color:#66d9ef">return</span> np<span style="color:#f92672">.</span>mean((y<span style="color:#f92672">-</span>t)<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>)
+</code></pre></div><p>次に、計画行列を算出するコードを記載する。(linear_basis_function.py)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 <span style="color:#75715e">#計画行列算出 (式(7))</span>
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">design_matrix</span>(x,t,mu,v):
@@ -330,15 +267,11 @@ https://github.com/alex-shpak/hugo-book
     b<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>linalg<span style="color:#f92672">.</span>inv(phi_T<span style="color:#f92672">.</span>dot(phi)) <span style="color:#75715e">#(φ*φ^-1)^-1</span>
     c<span style="color:#f92672">=</span>b<span style="color:#f92672">.</span>dot(phi_T)                  <span style="color:#75715e">#(φ^T*φ^-1)^-1*φ^T</span>
     w<span style="color:#f92672">=</span>c<span style="color:#f92672">.</span>dot(t)                      <span style="color:#75715e">#(φ^T*φ^-1)^-1*φ^T*t</span>
-    <span style="color:#66d9ef">return</span> w</code></pre></div>
-<p>例として、<a href="https://WAT36.github.io/pages/docs/programming/machine_learning/linear_model/">直線モデル</a>の章で利用したデータに対し、この線形基底関数モデルを適用させてみよう。</p>
-
+    <span style="color:#66d9ef">return</span> w
+</code></pre></div><p>例として、<a href="https://WAT36.github.io/pages/docs/programming/machine_learning/linear_model/">直線モデル</a>の章で利用したデータに対し、この線形基底関数モデルを適用させてみよう。</p>
 <p>まず元データは以下のような図になる。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_16.png" width=50%></p>
-
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_16.png" width=50%>
 <p>例としてmを1,4,7,10,13,16で設定した時のyを算出し、標準偏差SD(平均二乗誤差の平方根)とともにそれぞれプロットして表示する。</p>
-
 <p>コードは以下の通り。(linear_basis_function_plot.py)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> math
 <span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
@@ -387,49 +320,68 @@ plt<span style="color:#f92672">.</span>subplots_adjust(wspace<span style="color:
     plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;M={0:d}, SD={1:.2f}&#34;</span><span style="color:#f92672">.</span>format(m,sd))
 
     plt<span style="color:#f92672">.</span>grid(True)
-plt<span style="color:#f92672">.</span>show()</code></pre></div>
-<p>実行結果</p>
-
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_22.png" width=150%></p>
-
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p>実行結果</p>
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_22.png" width=150%>
 <p>となり、直線モデルよりも誤差が少なく、汎用性の高い予測式が得られる。</p>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/d183df69e828c3f06d089c80af6b801ec7293b47" title='Last modified Apr 27, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 27, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/d183df69e828c3f06d089c80af6b801ec7293b47" title='Last modified by Wataru Tsukagoshi | Apr 27, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Apr 27, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/machine_learning/linear_basis_function.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
+</div>
+  
+ 
 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
 
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

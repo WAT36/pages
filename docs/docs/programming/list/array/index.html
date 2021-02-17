@@ -1,286 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="配列 # 配列とは、同じデータ型の値をまとめて扱いたい時に利用するデータ構造である。ここでは配列の定義方法についてを述べる。 なお、Pythonに">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="配列" />
+<meta property="og:description" content="配列 # 配列とは、同じデータ型の値をまとめて扱いたい時に利用するデータ構造である。ここでは配列の定義方法についてを述べる。 なお、Pythonに" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/list/array/" />
+<meta property="article:modified_time" content="2020-09-12T18:15:16+09:00" />
 <title>配列 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.ea9376be5b5d954ae8cabfd6c64fb80a8878a352a986745b905b50f38b14095c.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.73dac5ca27ab473fe00ddd9216dfc4ab2875125c6b5f8f1cbe1ee6af752eaff9.js" integrity="sha256-c9rFyierRz/gDd2SFt/Eqyh1ElxrX48cvh7mr3Uur/k="></script>
 
-
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-  
-</head>
-
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
-<h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-    
-  
-  
-  
-
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2flist\2f array\2f "] {
-      color: #004ed0;
-  }
-  </style>
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
-</ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
-<ul>
-<li>
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
-</ul>
-
-<p></details></p>
-
-<ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
-</ul>
-
-
-
-
-
-
-
-
-
-</nav>
-
-
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
-
-    </aside>
-
-    <div class="book-page">
-      <header class="flex align-center justify-between book-header">
-  <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
-  </label>
-  <strong>配列</strong>
-</header>
-
-      
-<article class="markdown">
-
-<h1 id="配列">配列</h1>
-
-<p>配列とは、同じデータ型の値をまとめて扱いたい時に利用するデータ構造である。ここでは配列の定義方法についてを述べる。</p>
-
-<p>なお、Pythonには配列という概念は存在しない（リストとひっくるめている？）のでここでは述べない。</p>
-
-
-
-
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-array" style="display: none;" id="tabs-array-0" checked="checked" />
-  <label for="tabs-array-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Javaでは以下の形式で配列を宣言する。</p>
-
-<pre><code>データ型[] 配列名 = new データ型[要素数];
-</code></pre>
-
-<p>この方法により、配列内に指定したデータ型の値を、指定した要素数の数まで入れることができる。</p>
-
-<p>配列への値の代入及び取得は、以下のようにインデックスを指定して行う。</p>
-
-<pre><code>配列名[インデックス] = 値;
-変数 = 配列名[インデックス];
-</code></pre>
-
-  </div>
-
-  <input type="radio" name="tabs-array" style="display: none;" id="tabs-array-1"  />
-  <label for="tabs-array-1">
-    Javascript
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Javascriptでは以下の形式で配列を宣言する。Javaのような要素数の指定は不要である。</p>
-
-<pre><code>var 配列名 = [(値、カンマ区切りで複数入力可)]
-</code></pre>
-
-<p>配列への値の代入及び取得は、Javaと同じようにインデックスを指定して行う。</p>
-
-<pre><code>配列名[インデックス] = 値;
-変数 = 配列名[インデックス];
-</code></pre>
-
-  </div>
-
-</div>
-
-
-<hr>
-
-<h2 id="配列の長さ-要素数-を確認する">配列の長さ(要素数)を確認する</h2>
-
-<p>配列の長さ、つまりは入っている要素の数を表示する方法についてを述べる。</p>
-
-
-
-
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-len" style="display: none;" id="tabs-len-0" checked="checked" />
-  <label for="tabs-len-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Javaでは配列オブジェクトに<strong>length</strong>という属性があり、それが配列の長さを示している。</p>
-
-<pre><code>配列.length
-</code></pre>
-
-<p>この方法により、配列の長さを表示することができる。</p>
-
-  </div>
-
-  <input type="radio" name="tabs-len" style="display: none;" id="tabs-len-1"  />
-  <label for="tabs-len-1">
-    Javascript
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>JavascriptもJavaと同じく配列に<strong>length</strong>という属性がある。それが配列の長さを示している。</p>
-
-<pre><code>配列.length
-</code></pre>
-
-  </div>
-
-</div>
-
-
-<hr>
-
-<h2 id="配列に値を追加する">配列に値を追加する</h2>
-
-<p>言語により概念が異なるが、配列に値を追加する方法についてを述べる。</p>
-
-<p>なお、Javaでは配列の長さが固定されているので、値を追加するという概念は基本ない。（配列の指定したインデックスに値を入れることは可能）</p>
-
-<p>Javascriptでは配列の長さは固定されてはおらず、リストのように配列の後ろに値を追加することができる。（じゃあそれはリストではないか？とも考えてはいるが）</p>
-
-
-
-
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-arrayadd" style="display: none;" id="tabs-arrayadd-0" checked="checked" />
-  <label for="tabs-arrayadd-0">
-    Javascript
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Javascriptでは以下の形式で配列に要素を追加できる。</p>
-
-<pre><code>配列.push(要素)
-</code></pre>
-
-  </div>
-
-</div>
-
-</article>
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/2914e4a4bba667b4ed950bf1a22a0b1f810642a9" title='Last modified Sep 12, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Sep 12, 2020
-    </a>
-  </div>
-  
-</div>
-
-
-      
-    </div>
-    
-  
-
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#配列">配列</a>
-<ul>
-<li><a href="#配列の長さ-要素数-を確認する">配列の長さ(要素数)を確認する</a></li>
-<li><a href="#配列に値を追加する">配列に値を追加する</a></li>
-</ul></li>
-</ul>
-</nav>
-  </aside>
-
-
-
-  </main>
-
-  
-  
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -291,7 +27,268 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
 
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>配列</strong>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#配列の長さ要素数を確認する">配列の長さ(要素数)を確認する</a></li>
+    <li><a href="#配列に値を追加する">配列に値を追加する</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="配列">
+  配列
+  <a class="anchor" href="#%e9%85%8d%e5%88%97">#</a>
+</h1>
+<p>配列とは、同じデータ型の値をまとめて扱いたい時に利用するデータ構造である。ここでは配列の定義方法についてを述べる。</p>
+<p>なお、Pythonには配列という概念は存在しない（リストとひっくるめている？）のでここでは述べない。</p>
+
+
+
+
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-array" id="tabs-array-0" checked="checked" />
+  <label for="tabs-array-0">Java</label>
+  <div class="book-tabs-content markdown-inner"><p>Javaでは以下の形式で配列を宣言する。</p>
+<pre><code>データ型[] 配列名 = new データ型[要素数];
+</code></pre><p>この方法により、配列内に指定したデータ型の値を、指定した要素数の数まで入れることができる。</p>
+<p>配列への値の代入及び取得は、以下のようにインデックスを指定して行う。</p>
+<pre><code>配列名[インデックス] = 値;
+変数 = 配列名[インデックス];
+</code></pre></div><input type="radio" class="toggle" name="tabs-array" id="tabs-array-1"  />
+  <label for="tabs-array-1">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>Javascriptでは以下の形式で配列を宣言する。Javaのような要素数の指定は不要である。</p>
+<pre><code>var 配列名 = [(値、カンマ区切りで複数入力可)]
+</code></pre><p>配列への値の代入及び取得は、Javaと同じようにインデックスを指定して行う。</p>
+<pre><code>配列名[インデックス] = 値;
+変数 = 配列名[インデックス];
+</code></pre></div></div>
+
+<hr>
+<h2 id="配列の長さ要素数を確認する">
+  配列の長さ(要素数)を確認する
+  <a class="anchor" href="#%e9%85%8d%e5%88%97%e3%81%ae%e9%95%b7%e3%81%95%e8%a6%81%e7%b4%a0%e6%95%b0%e3%82%92%e7%a2%ba%e8%aa%8d%e3%81%99%e3%82%8b">#</a>
+</h2>
+<p>配列の長さ、つまりは入っている要素の数を表示する方法についてを述べる。</p>
+
+
+
+
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-len" id="tabs-len-0" checked="checked" />
+  <label for="tabs-len-0">Java</label>
+  <div class="book-tabs-content markdown-inner"><p>Javaでは配列オブジェクトに<strong>length</strong>という属性があり、それが配列の長さを示している。</p>
+<pre><code>配列.length
+</code></pre><p>この方法により、配列の長さを表示することができる。</p>
+</div><input type="radio" class="toggle" name="tabs-len" id="tabs-len-1"  />
+  <label for="tabs-len-1">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>JavascriptもJavaと同じく配列に<strong>length</strong>という属性がある。それが配列の長さを示している。</p>
+<pre><code>配列.length
+</code></pre></div></div>
+
+<hr>
+<h2 id="配列に値を追加する">
+  配列に値を追加する
+  <a class="anchor" href="#%e9%85%8d%e5%88%97%e3%81%ab%e5%80%a4%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b">#</a>
+</h2>
+<p>言語により概念が異なるが、配列に値を追加する方法についてを述べる。</p>
+<p>なお、Javaでは配列の長さが固定されているので、値を追加するという概念は基本ない。（配列の指定したインデックスに値を入れることは可能）</p>
+<p>Javascriptでは配列の長さは固定されてはおらず、リストのように配列の後ろに値を追加することができる。（じゃあそれはリストではないか？とも考えてはいるが）</p>
+
+
+
+
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-arrayadd" id="tabs-arrayadd-0" checked="checked" />
+  <label for="tabs-arrayadd-0">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>Javascriptでは以下の形式で配列に要素を追加できる。</p>
+<pre><code>配列.push(要素)
+</code></pre></div></div>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/2914e4a4bba667b4ed950bf1a22a0b1f810642a9" title='Last modified by Wataru Tsukagoshi | Sep 12, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Sep 12, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/list/array.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#配列の長さ要素数を確認する">配列の長さ(要素数)を確認する</a></li>
+    <li><a href="#配列に値を追加する">配列に値を追加する</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

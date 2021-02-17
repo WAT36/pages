@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="コンストラクタ(__init__) # クラスのコンストラクタについてを書く。 コンストラクタとはクラスのインスタンスを作成した時に、そのインスタ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="コンストラクタ(  init  )" />
+<meta property="og:description" content="コンストラクタ(__init__) # クラスのコンストラクタについてを書く。 コンストラクタとはクラスのインスタンスを作成した時に、そのインスタ" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/class_func/constructor/" />
+<meta property="article:modified_time" content="2020-10-04T22:15:33+09:00" />
 <title>コンストラクタ(  init  ) | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.ea9376be5b5d954ae8cabfd6c64fb80a8878a352a986745b905b50f38b14095c.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.73dac5ca27ab473fe00ddd9216dfc4ab2875125c6b5f8f1cbe1ee6af752eaff9.js" integrity="sha256-c9rFyierRz/gDd2SFt/Eqyh1ElxrX48cvh7mr3Uur/k="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,37 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2f class_func\2f constructor\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
+
+
+
+
+  <ul>
 <li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
+
 
 
 
@@ -96,93 +102,87 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>コンストラクタ(  init  )</strong>
-</header>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="コンストラクタ-init">コンストラクタ(__init__)</h1>
-
-<p>クラスのコンストラクタについてを書く。<br />
-コンストラクタとはクラスのインスタンスを作成した時に、そのインスタンスで最初に実行される関数である。主に初期化のために使われる。<br />
+      
+  <article class="markdown"><h1 id="コンストラクタ__init__">
+  コンストラクタ(__init__)
+  <a class="anchor" href="#%e3%82%b3%e3%83%b3%e3%82%b9%e3%83%88%e3%83%a9%e3%82%af%e3%82%bf__init__">#</a>
+</h1>
+<p>クラスのコンストラクタについてを書く。<br>
+コンストラクタとはクラスのインスタンスを作成した時に、そのインスタンスで最初に実行される関数である。主に初期化のために使われる。<br>
 これも言語により呼び名が違うので注意。</p>
 
 
 
 
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-constructor" style="display: none;" id="tabs-constructor-0" checked="checked" />
-  <label for="tabs-constructor-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Javaでは、クラス内でそのクラス名と同じ名前のメソッドを定義した時、それがコンストラクタになる。<br />
-引数を変えれば、多重定義（オーバーロード）でいくらでも定義できる。<br />
-ただし、コンストラクタを定義したら、インスタンス生成時に設定する引数はそのコンストラクタと同じでなければならない。<br />
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-constructor" id="tabs-constructor-0" checked="checked" />
+  <label for="tabs-constructor-0">Java</label>
+  <div class="book-tabs-content markdown-inner"><p>Javaでは、クラス内でそのクラス名と同じ名前のメソッドを定義した時、それがコンストラクタになる。 <br>
+引数を変えれば、多重定義（オーバーロード）でいくらでも定義できる。<br>
+ただし、コンストラクタを定義したら、インスタンス生成時に設定する引数はそのコンストラクタと同じでなければならない。<br>
 因みにコンストラクタは定義しなくても良い。その場合インスタンス生成時に設定する引数は無しでないといけない。</p>
-
 <p>使用例を以下に示す。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Car</span>{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Car</span><span style="color:#f92672">{</span>
 
-  String <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
-  String <span style="color:#a6e22e">number</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
-  String <span style="color:#a6e22e">owner</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+  String name <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+  String number <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+  String owner <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
 
-  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Car</span>(String <span style="color:#a6e22e">carname</span>,String <span style="color:#a6e22e">carnumber</span>,String <span style="color:#a6e22e">carowner</span>) {
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> carname;
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">number</span> <span style="color:#f92672">=</span> carnumber;
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">owner</span> <span style="color:#f92672">=</span> carowner;
-  }
-}
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Car</span><span style="color:#f92672">(</span>String carname<span style="color:#f92672">,</span>String carnumber<span style="color:#f92672">,</span>String carowner<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> carname<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">number</span> <span style="color:#f92672">=</span> carnumber<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">owner</span> <span style="color:#f92672">=</span> carowner<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
-  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span><span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[]){</span>
 
-    Car <span style="color:#a6e22e">car1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Car(<span style="color:#e6db74">&#34;lexus&#34;</span>,<span style="color:#e6db74">&#34;100-1010&#34;</span>,<span style="color:#e6db74">&#34;ai-ueo&#34;</span>);
-    Car <span style="color:#a6e22e">car2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Car(<span style="color:#e6db74">&#34;carrola&#34;</span>,<span style="color:#e6db74">&#34;200-2020&#34;</span>,<span style="color:#e6db74">&#34;kaki-kukeko&#34;</span>);
+    Car car1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Car<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;lexus&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;100-1010&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;ai-ueo&#34;</span><span style="color:#f92672">);</span>
+    Car car2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Car<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;carrola&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;200-2020&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;kaki-kukeko&#34;</span><span style="color:#f92672">);</span>
 
-    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Car1:&#34;</span><span style="color:#f92672">+</span>car1.<span style="color:#a6e22e">name</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">+</span>car1.<span style="color:#a6e22e">number</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">+</span>car1.<span style="color:#a6e22e">owner</span>);
-    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Car2:&#34;</span><span style="color:#f92672">+</span>car2.<span style="color:#a6e22e">name</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">+</span>car2.<span style="color:#a6e22e">number</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">+</span>car2.<span style="color:#a6e22e">owner</span>);
-  }
-}</code></pre></div>
-<p>実行結果</p>
-
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Car1:&#34;</span><span style="color:#f92672">+</span>car1<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">+</span>car1<span style="color:#f92672">.</span><span style="color:#a6e22e">number</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">+</span>car1<span style="color:#f92672">.</span><span style="color:#a6e22e">owner</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Car2:&#34;</span><span style="color:#f92672">+</span>car2<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">+</span>car2<span style="color:#f92672">.</span><span style="color:#a6e22e">number</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">+</span>car2<span style="color:#f92672">.</span><span style="color:#a6e22e">owner</span><span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>実行結果</p>
 <pre><code>&gt; java Main
 Car1:lexus 100-1010 ai-ueo
 Car2:carrola 200-2020 kaki-kukeko
-</code></pre>
-
-  </div>
-
-  <input type="radio" name="tabs-constructor" style="display: none;" id="tabs-constructor-1"  />
-  <label for="tabs-constructor-1">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Pythonでは　<strong>__init()__</strong> という関数がクラスのコンストラクタの役目を果たす。<br />
-クラスのインスタンス生成後、真っ先にこの関数__init__が実行される。<br />
+</code></pre></div><input type="radio" class="toggle" name="tabs-constructor" id="tabs-constructor-1"  />
+  <label for="tabs-constructor-1">Python</label>
+  <div class="book-tabs-content markdown-inner"><p>Pythonでは　<strong>__init()__</strong> という関数がクラスのコンストラクタの役目を果たす。<br>
+クラスのインスタンス生成後、真っ先にこの関数__init__が実行される。<br>
 大体はインスタンス変数を設定するために利用されることが多い。そのときは__init__の引数に、変数に設定したい値に加えて<strong>self</strong>を追加することを忘れずに行う。</p>
-
 <p>実行例を以下に示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> 
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Car</span>:
@@ -198,88 +198,90 @@ Car2:carrola 200-2020 kaki-kukeko
 [<span style="color:#e6db74">&#39;lexus&#39;</span>, <span style="color:#e6db74">&#39;100-1010&#39;</span>, <span style="color:#e6db74">&#39;ai-ueo&#39;</span>]
 <span style="color:#f92672">&gt;&gt;&gt;</span> [car2<span style="color:#f92672">.</span>name,car2<span style="color:#f92672">.</span>number,car2<span style="color:#f92672">.</span>owner] 
 [<span style="color:#e6db74">&#39;carrola&#39;</span>, <span style="color:#e6db74">&#39;200-2020&#39;</span>, <span style="color:#e6db74">&#39;kaki-kukeko&#39;</span>]
-<span style="color:#f92672">&gt;&gt;&gt;</span></code></pre></div>
-  </div>
-
-  <input type="radio" name="tabs-constructor" style="display: none;" id="tabs-constructor-2"  />
-  <label for="tabs-constructor-2">
-    Javascript
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>JavascriptでのコンストラクタはJavaやPythonのそれとは対象が微妙に異なる。</p>
-
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+</code></pre></div></div><input type="radio" class="toggle" name="tabs-constructor" id="tabs-constructor-2"  />
+  <label for="tabs-constructor-2">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>JavascriptでのコンストラクタはJavaやPythonのそれとは対象が微妙に異なる。</p>
 <p>まず、JavascriptにはJavaのクラスのといったデータ構造はないため、これに対するコンストラクタではない。</p>
-
 <p>しかし、Javascriptでは関数がクラスのようなデータ構造を表せることがあり、コンストラクタとはこれに対してのコンストラクタである。</p>
-
 <p>これを利用すると、関数の中身で指定されたプロパティを持ったオブジェクトが生成される。</p>
-
 <p>例えば以下の関数があったとする。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">name</span>){
     <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>
 }
-</code></pre></div>
-<p>この関数を、<strong>new</strong>キーワードを用いて別の変数に格納すると、変数にはオブジェクト型のデータが格納される。</p>
+</code></pre></div><p>この関数を、<strong>new</strong>キーワードを用いて別の変数に格納すると、変数にはオブジェクト型のデータが格納される。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">john</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#39;john&#39;</span>)
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">john</span>.<span style="color:#a6e22e">name</span>)
-</code></pre></div>
-<p>実行結果</p>
-
+</code></pre></div><p>実行結果</p>
 <pre><code>john
-</code></pre>
-
-<p>何が起きているのだろうか？実は、newキーワードを使うと、指定された関数は以下の処理が追加されたような挙動を示す。</p>
+</code></pre><p>何が起きているのだろうか？実は、newキーワードを使うと、指定された関数は以下の処理が追加されたような挙動を示す。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">name</span>){
     <span style="color:#75715e">//var this={}
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>
     <span style="color:#75715e">//return this
 </span><span style="color:#75715e"></span>}
-</code></pre></div>
-<p>newを追加することによって、関数をオブジェクトとして表すことが可能になる。</p>
-
+</code></pre></div><p>newを追加することによって、関数をオブジェクトとして表すことが可能になる。</p>
 <p>javascriptでは、このnewで指定された関数のことを<strong>コンストラクタ</strong>と呼んでいる。また、コンストラクタにより生成されたオブジェクトを<strong>インスタンス</strong>と呼ぶ。</p>
-
-  </div>
-
-</div>
+</div></div>
 
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/eb41c6210448c1389541638eb070cd389485d09d" title='Last modified Oct 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Oct 4, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/eb41c6210448c1389541638eb070cd389485d09d" title='Last modified by Wataru Tsukagoshi | Oct 4, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Oct 4, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/class_func/constructor.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
+</div>
+  
+ 
 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
 
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

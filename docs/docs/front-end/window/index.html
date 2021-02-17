@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ウィンドウ # ウィンドウオブジェクトとは、ブラウザ上の各ウィンドウを示すオブジェクトである。このオブジェクトには様々なプロパティ、メソッドなど">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="ウィンドウ" />
+<meta property="og:description" content="ウィンドウ # ウィンドウオブジェクトとは、ブラウザ上の各ウィンドウを示すオブジェクトである。このオブジェクトには様々なプロパティ、メソッドなど" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/window/" />
+<meta property="article:modified_time" content="2021-02-09T08:48:29+09:00" />
+<title>ウィンドウ | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.73dac5ca27ab473fe00ddd9216dfc4ab2875125c6b5f8f1cbe1ee6af752eaff9.js" integrity="sha256-c9rFyierRz/gDd2SFt/Eqyh1ElxrX48cvh7mr3Uur/k="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>ウィンドウ</strong>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="ウィンドウ">
+  ウィンドウ
+  <a class="anchor" href="#%e3%82%a6%e3%82%a3%e3%83%b3%e3%83%89%e3%82%a6">#</a>
+</h1>
+<p>ウィンドウオブジェクトとは、ブラウザ上の各ウィンドウを示すオブジェクトである。このオブジェクトには様々なプロパティ、メソッドなどを含んでいる。</p>
+<h1 id="主なプロパティ">
+  主なプロパティ
+  <a class="anchor" href="#%e4%b8%bb%e3%81%aa%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h1>
+<p>ウィンドウオブジェクトの主なプロパティは以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">closed</td>
+        <td style="border:none;">ウィンドウが閉じられている場合true</td>
+    </tr>
+    <tr>
+        <td style="border:none;">innerHeight</td>
+        <td style="border:none;">ウィンドウの内側の高さ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">innerWidth</td>
+        <td style="border:none;">ウィンドウの内側の幅</td>
+    </tr>
+    <tr>
+        <td style="border:none;">length</td>
+        <td style="border:none;">ウィンドウのframeの数</td>
+    </tr>
+    <tr>
+        <td style="border:none;">name</td>
+        <td style="border:none;">ウィンドウの名前</td>
+    </tr>
+    <tr>
+        <td style="border:none;">outerHeight</td>
+        <td style="border:none;">ウィンドウの外側の高さ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">outerWidth</td>
+        <td style="border:none;">ウィンドウの外側の幅</td>
+    </tr>
+    <tr>
+        <td style="border:none;">pageXOffset</td>
+        <td style="border:none;">スクロールで表示されている画面の横位置</td>
+    </tr>
+    <tr>
+        <td style="border:none;">pageYOffset</td>
+        <td style="border:none;">スクロールで表示されている画面の縦位置</td>
+    </tr>
+    <tr>
+        <td style="border:none;">self</td>
+        <td style="border:none;">ウィンドウオブジェクト自身</td>
+    </tr>
+</table>
+<p>例えばウィンドウの縦横の長さを表示するプログラムを作ってみる。</p>
+<p>javascript</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">h</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;height&#39;</span>);
+    <span style="color:#a6e22e">h</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">innerHeight</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;px&#39;</span>;
+
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;length&#39;</span>);
+    <span style="color:#a6e22e">l</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">innerWidth</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;px&#39;</span>;
+
+};
+
+window.<span style="color:#a6e22e">onresize</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">h</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;height&#39;</span>);
+    <span style="color:#a6e22e">h</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">innerHeight</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;px&#39;</span>;
+
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;length&#39;</span>);
+    <span style="color:#a6e22e">l</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">innerWidth</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;px&#39;</span>;
+};
+</code></pre></div><p>html</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span>&gt;ウィンドウの高さ&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;height&#34;</span>&gt;x px&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">div</span>&gt;ウィンドウの幅&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;length&#34;</span>&gt;x px&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>表示例</p>
+<hr>
+<hr>
+<div>ウィンドウの高さ</div>
+<div id="height">x px</div>
+<br>
+<div>ウィンドウの幅</div>
+<div id="length">x px</div>
+<script type="text/javascript" src="https://WAT36.github.io/pages/js_sample_pages/window_sample.js"></script>
+<hr>
+<hr>
+<p>上記は、ウィンドウの大きさを変えると値が変化する。</p>
+<h1 id="主なメソッド">
+  主なメソッド
+  <a class="anchor" href="#%e4%b8%bb%e3%81%aa%e3%83%a1%e3%82%bd%e3%83%83%e3%83%89">#</a>
+</h1>
+<p>ウィンドウオブジェクトの主なメソッドは以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">alert()</td>
+        <td style="border:none;">引数に指定したメッセージを警告ダイアログに出力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">blur()</td>
+        <td style="border:none;">ウィンドウからフォーカスを外す</td>
+    </tr>
+    <tr>
+        <td style="border:none;">close()</td>
+        <td style="border:none;">ウィンドウを閉じる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">confirm()</td>
+        <td style="border:none;">パラメータに指定されたメッセージを確認ダイアログに出力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">createPopup()</td>
+        <td style="border:none;">ポップアップウィンドウを作成</td>
+    </tr>
+    <tr>
+        <td style="border:none;">focus()</td>
+        <td style="border:none;">ウィンドウをフォーカスする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">moveBy()</td>
+        <td style="border:none;">現在位置からウィンドウを移動（相対指定）</td>
+    </tr>
+    <tr>
+        <td style="border:none;">moveTo()</td>
+        <td style="border:none;">ウィンドウを移動する（絶対指定）</td>
+    </tr>
+    <tr>
+        <td style="border:none;">open()</td>
+        <td style="border:none;">ウィンドウを作成</td>
+    </tr>
+    <tr>
+        <td style="border:none;">resizeBy()</td>
+        <td style="border:none;">現在のウィンドウサイズを変更（相対指定）</td>
+    </tr>
+    <tr>
+        <td style="border:none;">resizeTo()</td>
+        <td style="border:none;">現在のウィンドウサイズを変更（絶対指定）</td>
+    </tr>
+    <tr>
+        <td style="border:none;">scrollBy()</td>
+        <td style="border:none;">ウィンドウをスクロール（相対指定）</td>
+    </tr>
+    <tr>
+        <td style="border:none;">scrollTo()</td>
+        <td style="border:none;">ウィンドウをスクロール（絶対指定）</td>
+    </tr>
+    <tr>
+        <td style="border:none;">setInterval()</td>
+        <td style="border:none;">指定した処理を定期的に実行</td>
+    </tr>
+    <tr>
+        <td style="border:none;">setTimeout()</td>
+        <td style="border:none;">指定した処理を指定時間後に一度実行する</td>
+    </tr>
+</table>
+<h1 id="タイマー処理">
+  タイマー処理
+  <a class="anchor" href="#%e3%82%bf%e3%82%a4%e3%83%9e%e3%83%bc%e5%87%a6%e7%90%86">#</a>
+</h1>
+<p>先述のメソッドのうち、**setInterval(), setTimeout()**は指定時間後に実行するメソッドである。</p>
+<p>以下に、その一例を示す。</p>
+<p>javascript</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">t</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;time&#39;</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">interval</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">setInterval</span>(
+        <span style="color:#66d9ef">function</span>() {
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">nowDate</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date();
+            <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">nowDate</span>.<span style="color:#a6e22e">toLocaleTimeString</span>();
+        }
+        ,<span style="color:#ae81ff">1000</span>
+    );
+};
+</code></pre></div><p>html</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;現在時刻&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;time&#34;</span>&gt;XX:XX:XX&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>表示例</p>
+<p>現在時刻</p>
+<p id="time">XX:XX:XX</p>
+<script type="text/javascript" src="https://WAT36.github.io/pages/js_sample_pages/window_sample.js"></script>
+<p>上記は１秒毎に現在時刻を取得して更新するプログラムになる。１秒毎に現在時刻を取得する仕組みをタイマー処理(setInterval)で表現している。</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/72265a62ac67557c0809acca83b669c0b8610c31" title='Last modified by Wataru Tsukagoshi | Feb 9, 2021' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Feb 9, 2021</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/window.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

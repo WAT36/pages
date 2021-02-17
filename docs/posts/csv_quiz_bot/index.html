@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="はじめに # 資格勉強をすることがあるのだが、その際に自作した問題を自動で出題し答えられる様なシステムがあれば自身のアウトプットにもなるし、抜け">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="クイズ問題を書いたローカルのcsvファイルから自動でslackに問題をPOSTするシステムを作ってみた" />
+<meta property="og:description" content="はじめに # 資格勉強をすることがあるのだが、その際に自作した問題を自動で出題し答えられる様なシステムがあれば自身のアウトプットにもなるし、抜け" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/posts/csv_quiz_bot/" />
+<meta property="article:published_time" content="2021-02-04T21:04:55+09:00" />
+<meta property="article:modified_time" content="2021-02-14T21:48:14+09:00" />
+<title>クイズ問題を書いたローカルのcsvファイルから自動でslackに問題をPOSTするシステムを作ってみた | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0ed49bedc904d484ca30694df784d64f789831daa46ef2bcc5edd0dc6512cec5.js" integrity="sha256-DtSb7ckE1ITKMGlN94TWT3iYMdqkbvK8xe3Q3GUSzsU="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>クイズ問題を書いたローカルのcsvファイルから自動でslackに問題をPOSTするシステムを作ってみた</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown">
+  <h1>
+    <a href="https://WAT36.github.io/pages/posts/csv_quiz_bot/">クイズ問題を書いたローカルのcsvファイルから自動でslackに問題をPOSTするシステムを作ってみた</a>
+  </h1>
+  
+  <h5>Feb 4, 2021</h5>
+
+
+
+  
+
+  
+
+
+  <p><h1 id="はじめに">
+  はじめに
+  <a class="anchor" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">#</a>
+</h1>
+<p>資格勉強をすることがあるのだが、その際に自作した問題を自動で出題し答えられる様なシステムがあれば自身のアウトプットにもなるし、抜けている箇所の確認にもなるので欲しいなと思っていた。</p>
+<p>なのでその様なシステムを今回作ってみた。</p>
+<h1 id="動作環境">
+  動作環境
+  <a class="anchor" href="#%e5%8b%95%e4%bd%9c%e7%92%b0%e5%a2%83">#</a>
+</h1>
+<ul>
+<li>Mac OS 10.15.5</li>
+<li>Python 3.7.3</li>
+</ul>
+<h1 id="システム全体図アーキテクチャ図">
+  システム全体図（アーキテクチャ図）
+  <a class="anchor" href="#%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e5%85%a8%e4%bd%93%e5%9b%b3%e3%82%a2%e3%83%bc%e3%82%ad%e3%83%86%e3%82%af%e3%83%81%e3%83%a3%e5%9b%b3">#</a>
+</h1>
+<p>以下の通り。大まかに処理は3つに分かれる。システムの全体図を以下に載せる。</p>
+<ul>
+<li>ローカルにクイズ問題及びその正解数を列挙したcsvファイルを置き、pythonのバッチファイルがそれを読み込んでslackに投稿させる動作を行う。</li>
+<li>slack側からも問題に正解したか間違えたかのデータを外部のDB（ここではAWSのDynamoDBとした）に記録・格納させる。</li>
+<li>正解不正解データを格納した外部のDBからデータを取り出し、csvファイルに正解不正解のデータを記録・更新する様なpythonバッチファイルを作成する。
+そして、最終的にはpythonのバッチファイルをcrontabでスケジューリング実行することで、処理を自動化させる。</li>
+</ul>
+<p><img src="https://WAT36.github.io/pages/img/blog/sketchboard.png" alt="sketchboard" /></p>
+<h1 id="作成手順">
+  作成手順
+  <a class="anchor" href="#%e4%bd%9c%e6%88%90%e6%89%8b%e9%a0%86">#</a>
+</h1>
+<h2 id="csvからクイズ問題を抜き出してslackにpostする">
+  csvからクイズ問題を抜き出してslackにPOSTする
+  <a class="anchor" href="#csv%e3%81%8b%e3%82%89%e3%82%af%e3%82%a4%e3%82%ba%e5%95%8f%e9%a1%8c%e3%82%92%e6%8a%9c%e3%81%8d%e5%87%ba%e3%81%97%e3%81%a6slack%e3%81%abpost%e3%81%99%e3%82%8b">#</a>
+</h2>
+<h3 id="0-クイズ問題を投稿するためのslack-appを作る">
+  0. クイズ問題を投稿するためのSlack Appを作る
+  <a class="anchor" href="#0-%e3%82%af%e3%82%a4%e3%82%ba%e5%95%8f%e9%a1%8c%e3%82%92%e6%8a%95%e7%a8%bf%e3%81%99%e3%82%8b%e3%81%9f%e3%82%81%e3%81%aeslack-app%e3%82%92%e4%bd%9c%e3%82%8b">#</a>
+</h3>
+<p>まず、Slackの機構を整える。
+細かい手順としては</p>
+<ul>
+<li><a href="https://api.slack.com">Slack API</a>のページに行く</li>
+</ul>
+<p><img src="https://WAT36.github.io/pages/img/blog/slack_api.png" alt="slack_api" /></p>
+<ul>
+<li>Slack Appを作る</li>
+</ul>
+<p>Your Apps &gt; Create New Appsと入力
+App名を入力するとSlack Appが作られる</p>
+<p><img src="https://WAT36.github.io/pages/img/blog/create_new_app.png" alt="app" /></p>
+<ul>
+<li>Slack Appをクイズ問題を出したいSlackワークスペースにインストールする</li>
+</ul>
+<p>作ったアプリ名をクリックし、Basic Information&gt;Install your Appをクリックしてワークスペースにインストールする</p>
+<ul>
+<li>Slackワークスペースにクイズ問題を出したいチャンネルを作る</li>
+</ul>
+<p>クイズ問題を出したいチャンネルがない場合は、slackから作成する。</p>
+<p><img src="https://WAT36.github.io/pages/img/blog/slack_add_channel.png" alt="チャンネル追加" /></p>
+<ul>
+<li>Slack Appに、テキストを投稿したら指定したチャンネルにPOSTする様なAPIを設けさせる</li>
+</ul>
+<p>作成したSlack AppにAPIを設けさせ、外部からメッセージを投稿できる様にする。方法については、以下の記事を参考にしてSlack APIを作成した。</p>
+<ul>
+<li><a href="https://qiita.com/kou_pg_0131/items/56dd81f2f4716ca292ef">Slack APIを使用してメッセージを送信する - Qiita</a></li>
+</ul>
+<hr>
+<h3 id="1-クイズ問題を書いたcsvファイルを用意する">
+  1. クイズ問題を書いたcsvファイルを用意する
+  <a class="anchor" href="#1-%e3%82%af%e3%82%a4%e3%82%ba%e5%95%8f%e9%a1%8c%e3%82%92%e6%9b%b8%e3%81%84%e3%81%9fcsv%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e7%94%a8%e6%84%8f%e3%81%99%e3%82%8b">#</a>
+</h3>
+<p>形式はなんでも良いが、私は以下の様な形式にした</p>
+<pre><code>問題番号,問題文,答え,正解数,不正解数
+</code></pre><p>例えば、私が自作したAWSのクイズ問題のcsvは以下の通り。</p>
+<pre><code>1,リージョンとは何か？,AWSがサービスを提供している拠点(国と地域)のこと,1,0
+2,AWSがサービスを提供している拠点(国と地域)のことを何という？,リージョン,9,3
+・・・
+</code></pre><p>なお、ここに書いた定義が後のpythonコードの仕様にも関わるので注意する。</p>
+<h3 id="2-csvから問題を１問取得するpythonコードを作成する">
+  2. csvから問題を１問取得するpythonコードを作成する
+  <a class="anchor" href="#2-csv%e3%81%8b%e3%82%89%e5%95%8f%e9%a1%8c%e3%82%92%ef%bc%91%e5%95%8f%e5%8f%96%e5%be%97%e3%81%99%e3%82%8bpython%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">#</a>
+</h3>
+<p>コードは<a href="https://github.com/WAT36/csv_quiz_bot/blob/wat-dev/random_quiz.py">こちら</a>を参照。</p>
+<p>設定ファイルは以下の通り。</p>
+<pre><code>[Filename]
+QUIZFILE=(csvファイル名)
+
+[Slack]
+SLACK_API_URL=(Slack API)
+SLACK_API_TOKEN=(Slackトークン)
+SLACK_CHANNEL=(問題を投稿するSlackチャンネル名)
+SLACK_ANSWER_CHANNEL=(答えを投稿するSlackチャンネル名)
+THINKING_TIME=10
+WORST_GROUP_NUM=5
+
+[AWS]
+RESULT_GET_API=(DynamoDBから正解不正解データを取得するためのAPI GatewayのURL)
+</code></pre><h3 id="3-テストとして一回実行する">
+  3. テストとして一回実行する
+  <a class="anchor" href="#3-%e3%83%86%e3%82%b9%e3%83%88%e3%81%a8%e3%81%97%e3%81%a6%e4%b8%80%e5%9b%9e%e5%ae%9f%e8%a1%8c%e3%81%99%e3%82%8b">#</a>
+</h3>
+<p>ローカルからpythonバッチファイルを実行してみる。</p>
+<pre><code>$ python random_quiz.py
+</code></pre><p>うまくslackにPOSTできていればOK。</p>
+<p><img src="https://WAT36.github.io/pages/img/blog/slackpost_result.png" alt="slack_POST" /></p>
+<hr>
+<h2 id="slackから問題に対する解答結果を記録する">
+  slackから問題に対する解答結果を記録する
+  <a class="anchor" href="#slack%e3%81%8b%e3%82%89%e5%95%8f%e9%a1%8c%e3%81%ab%e5%af%be%e3%81%99%e3%82%8b%e8%a7%a3%e7%ad%94%e7%b5%90%e6%9e%9c%e3%82%92%e8%a8%98%e9%8c%b2%e3%81%99%e3%82%8b">#</a>
+</h2>
+<p>まずは、正解不正解データを記録するDBを作成する。</p>
+<h3 id="1-awsでdynamodbを作る">
+  1. AWSでDynamoDBを作る
+  <a class="anchor" href="#1-aws%e3%81%a7dynamodb%e3%82%92%e4%bd%9c%e3%82%8b">#</a>
+</h3>
+<p>正解不正解データを格納しておくためのDBとして、今回はAWS DynamoDBを利用した。</p>
+<p>DynamoDBでのテーブルの作り方は<a href="https://wat36.github.io/pages/posts/aws_create_dynamo_table/">こちら</a>を参照。</p>
+<p>テーブルの項目名は</p>
+<ul>
+<li>「time」（格納時間、キー）</li>
+<li>「quiz_id」（問題ID）</li>
+<li>「result」（正解不正解データ、正解なら1、不正解なら0）</li>
+</ul>
+<p>とした。</p>
+<p>例の図を以下に示す。</p>
+<p><img src="https://WAT36.github.io/pages/img/blog/quiz_result_dynamodb.png" alt="dynamodb" /></p>
+<h3 id="2-dynamodbに正解不正解データを格納するためのapi-gatewayを作る">
+  2. DynamoDBに正解不正解データを格納するためのAPI Gatewayを作る
+  <a class="anchor" href="#2-dynamodb%e3%81%ab%e6%ad%a3%e8%a7%a3%e4%b8%8d%e6%ad%a3%e8%a7%a3%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e6%a0%bc%e7%b4%8d%e3%81%99%e3%82%8b%e3%81%9f%e3%82%81%e3%81%aeapi-gateway%e3%82%92%e4%bd%9c%e3%82%8b">#</a>
+</h3>
+<p>次に、このDynamoDBにデータを格納するためのコードをAWS Lambdaで作り、そしてそのLambdaコードに外部からアクセスするためのAPIをAPI Gatewayで設定する。</p>
+<p>まず、Lambdaのコードだが、以下の様に設定する。Lambdaでのコードの設定方法は<a href="https://wat36.github.io/pages/posts/aws_create_lambda/">こちら</a>を参照。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#</span>
+<span style="color:#75715e"># AWS Lambda</span>
+<span style="color:#75715e"># Slackから問題の正解不正解をDynamoDBに登録するコード</span>
+<span style="color:#75715e">#</span>
+<span style="color:#f92672">import</span> boto3
+<span style="color:#f92672">import</span> datetime
+<span style="color:#f92672">import</span> re
+
+dynamodb <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>resource(<span style="color:#e6db74">&#39;dynamodb&#39;</span>)
+table    <span style="color:#f92672">=</span> dynamodb<span style="color:#f92672">.</span>Table(<span style="color:#e6db74">&#39;(テーブル名)&#39;</span>)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lambda_handler</span>(event, context):
+    <span style="color:#66d9ef">try</span>:
+        <span style="color:#75715e">#slackから /register 問題ID 正解不正解フラグ(0なら不正解,それ以外なら正解)と来る</span>
+        <span style="color:#75715e">#slackの入力(問題ID、正解不正解フラグ)からデータを取り出す</span>
+        <span style="color:#75715e">#slackからだとスペースが&#39;+&#39;になる？</span>
+        text<span style="color:#f92672">=</span>event[<span style="color:#e6db74">&#39;text&#39;</span>]
+        quiz_id,flag<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">if</span>(<span style="color:#e6db74">&#39;+&#39;</span> <span style="color:#f92672">in</span> text):
+            text<span style="color:#f92672">=</span>re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\++&#39;</span>,<span style="color:#e6db74">&#39;+&#39;</span>,text)
+            text<span style="color:#f92672">=</span>list(text<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;+&#39;</span>))
+            quiz_id,flag<span style="color:#f92672">=</span>text[<span style="color:#ae81ff">0</span>],text[<span style="color:#ae81ff">1</span>]
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#75715e">#&#39;+&#39;無い場合はスペース区切り</span>
+            quiz_id,flag<span style="color:#f92672">=</span>text<span style="color:#f92672">.</span>split()
+            
+        
+        <span style="color:#75715e">#現在時刻取得</span>
+        dt_now <span style="color:#f92672">=</span> str(datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>now())
+        
+        <span style="color:#75715e"># quiz_answerへのPut処理実行</span>
+        table<span style="color:#f92672">.</span>put_item(
+            Item <span style="color:#f92672">=</span> {
+                <span style="color:#e6db74">&#34;time&#34;</span>: dt_now, 
+                <span style="color:#e6db74">&#34;quiz_id&#34;</span>: quiz_id, 
+                <span style="color:#e6db74">&#34;result&#34;</span>: flag
+            }
+        )
+        
+        res<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Question[&#34;</span><span style="color:#f92672">+</span>str(quiz_id)<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;]:&#34;</span><span style="color:#f92672">+</span> (<span style="color:#e6db74">&#34;Correct!&#34;</span> <span style="color:#66d9ef">if</span> flag <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;Incorrect&#34;</span>)
+        <span style="color:#66d9ef">return</span> res
+            
+    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+        <span style="color:#66d9ef">return</span> str(text)<span style="color:#f92672">+</span>str(e)
+</code></pre></div><p>次に、このLambdaコードにアクセスするためのAPIをAPI Gatewayで設定する。設定方法は<a href="https://wat36.github.io/pages/posts/aws_create_api_gateway/">こちら</a>を参照。</p>
+<p>また、API Gateway内でも、slackから受け取ったメッセージをLambdaに渡したり、Lambdaの処理結果をslack側に返す設定を行わなければならない。そのための設定は以下の記事を参考にし行った。</p>
+<ul>
+<li><a href="https://qiita.com/leomaro7/items/314a80b6d91f9e6b4060">API Gateway + Lambda + DynamoDB</a></li>
+<li><a href="https://qiita.com/durosasaki/items/83af014aa85a0448770e">AWS API GatewayでContent-Type:application/x-www-form-urlencoded のPOSTデータを受け取り JSONに変換する</a></li>
+<li><a href="https://qiita.com/tentatsu/items/c45bcc4062f1a6d4cf2a">AWSのLambdaとDynamoDBとAPIGatewayの連携</a></li>
+</ul>
+<h3 id="3-slack-appから問題id正解不正解のデータを受け取ってaws-apiに送り出す様なスラッシュコマンドを作る">
+  3. Slack Appから問題ID・正解不正解のデータを受け取ってAWS APIに送り出す様なスラッシュコマンドを作る
+  <a class="anchor" href="#3-slack-app%e3%81%8b%e3%82%89%e5%95%8f%e9%a1%8cid%e6%ad%a3%e8%a7%a3%e4%b8%8d%e6%ad%a3%e8%a7%a3%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e5%8f%97%e3%81%91%e5%8f%96%e3%81%a3%e3%81%a6aws-api%e3%81%ab%e9%80%81%e3%82%8a%e5%87%ba%e3%81%99%e6%a7%98%e3%81%aa%e3%82%b9%e3%83%a9%e3%83%83%e3%82%b7%e3%83%a5%e3%82%b3%e3%83%9e%e3%83%b3%e3%83%89%e3%82%92%e4%bd%9c%e3%82%8b">#</a>
+</h3>
+<p>Slack Appには特定のコマンドを作成することができ、それらは基本スラッシュから始まるのでスラッシュコマンドとも呼ばれている。</p>
+<p>スラッシュコマンドの作成方法は<a href="https://wat36.github.io/pages/posts/slack_request/">こちら</a>を参照。</p>
+<p>今回は、スラッシュコマンドの引数に問題ID,正解不正解データ(正解なら1、不正解なら0)を取らせてAWSのAPIにWebリクエストを送る様なコマンドを作成する。</p>
+<p>今回はコマンド名を&quot;register&quot;として、以下の様に作成した。</p>
+<p><img src="https://WAT36.github.io/pages/img/blog/slackregistercomannd.png" alt="register" /></p>
+<h3 id="4-テストとして一回実行する">
+  4. テストとして一回実行する
+  <a class="anchor" href="#4-%e3%83%86%e3%82%b9%e3%83%88%e3%81%a8%e3%81%97%e3%81%a6%e4%b8%80%e5%9b%9e%e5%ae%9f%e8%a1%8c%e3%81%99%e3%82%8b">#</a>
+</h3>
+<p>例えば問題1に正解したということを実際にこのスラッシュコマンドから
+送ってみる。</p>
+<p><img src="https://WAT36.github.io/pages/img/blog/typeslashcommand.png" alt="slash" /></p>
+<p>その結果、slackでは成功と出た。</p>
+<p><img src="https://WAT36.github.io/pages/img/blog/registersuccess.png" alt="success" /></p>
+<p>実際にAWS DynamoDBを見ると、入力したデータが格納されている。</p>
+<p><img src="https://WAT36.github.io/pages/img/blog/dynamoresult.png" alt="dynamo_result" /></p>
+<hr>
+<h2 id="ユーザ側から解答結果を取ってきてcsvに反映させる">
+  ユーザ側から解答結果を取ってきてcsvに反映させる
+  <a class="anchor" href="#%e3%83%a6%e3%83%bc%e3%82%b6%e5%81%b4%e3%81%8b%e3%82%89%e8%a7%a3%e7%ad%94%e7%b5%90%e6%9e%9c%e3%82%92%e5%8f%96%e3%81%a3%e3%81%a6%e3%81%8d%e3%81%a6csv%e3%81%ab%e5%8f%8d%e6%98%a0%e3%81%95%e3%81%9b%e3%82%8b">#</a>
+</h2>
+<h3 id="1-api-gatewayでdynamodbから正解不正解データを取ってくるapiを作成する">
+  1. API GatewayでDynamoDBから正解不正解データを取ってくるAPIを作成する
+  <a class="anchor" href="#1-api-gateway%e3%81%a7dynamodb%e3%81%8b%e3%82%89%e6%ad%a3%e8%a7%a3%e4%b8%8d%e6%ad%a3%e8%a7%a3%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e5%8f%96%e3%81%a3%e3%81%a6%e3%81%8f%e3%82%8bapi%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">#</a>
+</h3>
+<p>DynamoDBに入っているデータを全て取り出してくるLambda及びAPI Gatewayを作成する。</p>
+<p>Lambdaのコードは以下の通り。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#</span>
+<span style="color:#75715e"># AWS Lambda</span>
+<span style="color:#75715e"># 正解不正解データを取ってきてcsvに正解/不正解数を登録する</span>
+<span style="color:#75715e">#</span>
+<span style="color:#f92672">import</span> boto3
+<span style="color:#f92672">import</span> json
+
+dynamodb <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>resource(<span style="color:#e6db74">&#39;dynamodb&#39;</span>)
+table    <span style="color:#f92672">=</span> dynamodb<span style="color:#f92672">.</span>Table(<span style="color:#e6db74">&#39;テーブル名&#39;</span>)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lambda_handler</span>(event, context):
+    <span style="color:#66d9ef">try</span>:
+        <span style="color:#75715e">#DynamoDB(quiz_result_list)へのscan処理実行</span>
+        response <span style="color:#f92672">=</span> table<span style="color:#f92672">.</span>scan()
+        
+        <span style="color:#75715e">#0件なら処理終了</span>
+        <span style="color:#66d9ef">if</span>(len(response)<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>):
+            data <span style="color:#f92672">=</span> {
+                <span style="color:#e6db74">&#39;text&#39;</span> : []
+            }
+            <span style="color:#66d9ef">return</span> data
+        
+        <span style="color:#75715e">#scan結果からデータを取り出す</span>
+        records<span style="color:#f92672">=</span>list(response[<span style="color:#e6db74">&#39;Items&#39;</span>])
+        
+        <span style="color:#75715e"># DynamoDBからレコード削除</span>
+        <span style="color:#66d9ef">for</span> r <span style="color:#f92672">in</span> records:
+            table<span style="color:#f92672">.</span>delete_item(Key<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;time&#39;</span>: r[<span style="color:#e6db74">&#39;time&#39;</span>]})
+        
+        data <span style="color:#f92672">=</span> {
+            <span style="color:#e6db74">&#39;text&#39;</span> : records
+        }
+        <span style="color:#66d9ef">return</span> data
+    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+        <span style="color:#66d9ef">return</span> e
+</code></pre></div><h3 id="2-ローカルでapiにアクセスしdbから正解不正解データを取りcsvに正解不正解データを更新する様なpythonバッチを作成する">
+  2. ローカルでAPIにアクセスしDBから正解不正解データを取り、csvに正解不正解データを更新する様なpythonバッチを作成する
+  <a class="anchor" href="#2-%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7api%e3%81%ab%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e3%81%97db%e3%81%8b%e3%82%89%e6%ad%a3%e8%a7%a3%e4%b8%8d%e6%ad%a3%e8%a7%a3%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e5%8f%96%e3%82%8acsv%e3%81%ab%e6%ad%a3%e8%a7%a3%e4%b8%8d%e6%ad%a3%e8%a7%a3%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e6%9b%b4%e6%96%b0%e3%81%99%e3%82%8b%e6%a7%98%e3%81%aapython%e3%83%90%e3%83%83%e3%83%81%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">#</a>
+</h3>
+<p>先程のAPIにアクセスし正解不正解データを取得し、csvに正解不正解データを更新するpythonバッチを作成する。</p>
+<p>pythonコードは<a href="https://github.com/WAT36/csv_quiz_bot/blob/wat-dev/result_inputter.py">こちら</a>を参照。</p>
+<p>という形で自分が作ったクイズ問題を自動で投稿してくれる様な個人用アプリを作成した。</p>
+<hr>
+<p>実行結果</p>
+<p>最初に、DBには以下の様な形で正解不正解データが格納されている。</p>
+<p><img src="https://WAT36.github.io/pages/img/blog/registered_data.png" alt="register" /></p>
+<p>また、csvで該当問題の正解不正解データは以下の通り。</p>
+<p><img src="https://WAT36.github.io/pages/img/blog/before_data.png" alt="beforecsv" /></p>
+<p>この状態から、pythonバッチを動かしてみる。</p>
+<p><img src="https://WAT36.github.io/pages/img/blog/console.png" alt="console" /></p>
+<p>その結果、csvに正解不正解データが反映された。（正解数が5-&gt;6に更新された）</p>
+<p><img src="https://WAT36.github.io/pages/img/blog/after_data.png" alt="aftercsv" /></p>
+<p>なお、DBからは取ってきた正解不正解データは削除される。</p>
+<p><img src="https://WAT36.github.io/pages/img/blog/after_dynamo.png" alt="afterdynamo" /></p>
+<hr>
+<h1 id="自動化設定">
+  自動化設定
+  <a class="anchor" href="#%e8%87%aa%e5%8b%95%e5%8c%96%e8%a8%ad%e5%ae%9a">#</a>
+</h1>
+<p>一連のバッチについて、crontabを使って自動化させるために以下の様に設定した。</p>
+<p>Macの場合はcrontabを使って以下の様な設定をする</p>
+<pre><code>0 */3 * * * cd (Pythonスクリプトがあるフォルダ) 2&gt;&amp;1 &amp;&amp; touch error.log &amp;&amp; python random_quiz.py 2&gt;&amp;1 1&gt;&gt;error.log
+0 */3 * * * cd (Pythonスクリプトがあるフォルダ) 2&gt;&amp;1 &amp;&amp; touch error.log &amp;&amp; python worst_quiz.py  2&gt;&amp;1 1&gt;&gt;error.log
+</code></pre><p>この様に設定すると、指定時間おき(ここでは3時間)に自動で投稿してくれる
+（ただし、Macが起動している場合にのみ有効の様である）</p>
+<hr>
+<h1 id="今後やりたいこと">
+  今後やりたいこと
+  <a class="anchor" href="#%e4%bb%8a%e5%be%8c%e3%82%84%e3%82%8a%e3%81%9f%e3%81%84%e3%81%93%e3%81%a8">#</a>
+</h1>
+<p>という様な形でクイズbotを作成してみたが、使っているうちに改善点や追加したい機能が思い浮かんでいるため、以下の様な機能を追加したいと考えている</p>
+<ul>
+<li>他のAWSサービスを使って組んでみる（DynamoDB-&gt;SQSにする、EC2サーバを作って移行するなど）</li>
+<li>crontabがMacが起動している時にしか有効にならない？様なので、いっその事EC2に移行した方が良いかと考えている</li>
+<li>csvから一番正解率が悪い問題を抜き出してPOSTさせる機能を作る</li>
+<li>間違えた問題は復習として何日か後にもう一回出す様な機能を作る</li>
+<li>間違えた問題と類似した分野の問題を出す様な機能を作る</li>
+<li>現在はDBをAWS DynamoDBにしているが、DockerやFirebase(?私もまだ詳しくないので適用できるかはわからないが)に置き換えてみる</li>
+</ul>
+<hr>
+<p>以上。自作のプロダクトを書くのは初めてなので、何か抜けあればその都度更新致します。。</p>
+</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/da27e1970051a8f4653fa8a992af616679f2de76" title='Last modified by Wataru Tsukagoshi | Feb 14, 2021' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Feb 14, 2021</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//posts/csv_quiz_bot.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
