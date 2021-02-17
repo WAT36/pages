@@ -561,7 +561,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/graphics/</guid>
-      <description>グラフィックス・アニメーション #</description>
+      <description>グラフィックス・アニメーション # グラフィックス及びアニメーションについてを述べる。 Canvas(2D) # Canvasを利用すると、Javascriptでブラウ</description>
     </item>
     
     <item>
@@ -769,6 +769,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/front-end/form/</guid>
       <description>フォーム # フォームを作成するための要素についてを述べる。 form要素 # form要素はフォームを構成する要素である。 使用する主な属性は以下の通</description>
+    </item>
+    
+    <item>
+      <title>ブラウザ関連API</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/browser_api-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/browser_api-2/</guid>
+      <description>ブラウザ関連API # ブラウザに関するAPIについて。 なお、ここではサンプルは一部割愛致します（ブラウザ遷移を伴ってしまうため・・・） History API # History</description>
     </item>
     
     <item>
