@@ -90,7 +90,6 @@ def add_edge(from_v,to_v,cap):
 def dfs(v,t,f):
     global G
     global used
-    print(v,t,f,used)
     if(v==t):
         return f
     used[v]=True
@@ -111,7 +110,6 @@ def max_flow(s,t):
     while True:
         used=[False for _ in range(V)]
         f=dfs(s,t,INF)
-        print(flow,f)
         if(f==0):
             return flow
         flow+=f
@@ -139,3 +137,6 @@ print(ans)
 ```
 11
 ```
+
+
+となり、最適解が求められる。
