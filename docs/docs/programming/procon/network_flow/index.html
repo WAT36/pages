@@ -15,7 +15,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.ead127de0fc0e911642ee383d6f7e36e49c8020196b7e04b84e38a588a64670d.js" integrity="sha256-6tEn3g/A6RFkLuOD1vfjbknIAgGWt&#43;BLhOOKWIpkZw0="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.af0fb1db551ef9045227324725c749b7b5a95fd6b2e8ca3fe29804afd3f0e69a.js" integrity="sha256-rw&#43;x21Ue&#43;QRSJzJHJcdJt7WpX9ay6Mo/4pgEr9Pw5po="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -178,7 +178,86 @@ sからtへどれだけのデータを送信することができるでしょう
 </ol>
 <p>これを最初の貪欲法で求めた状態から適用すると、s→2→1→3→tと大きさ1のフローを流せば最適解になる。(2→1は逆辺)</p>
 <p>このアルゴリズムをコードで実装した例を以下に記載する。</p>
-</article>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">INF<span style="color:#f92672">=</span>float(<span style="color:#e6db74">&#34;inf&#34;</span>)
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">edge</span>:
+    <span style="color:#66d9ef">def</span> __init__(self,to,cap,rev):
+            self<span style="color:#f92672">.</span>to<span style="color:#f92672">=</span>to
+            self<span style="color:#f92672">.</span>cap<span style="color:#f92672">=</span>cap
+            self<span style="color:#f92672">.</span>rev<span style="color:#f92672">=</span>rev
+
+<span style="color:#75715e">#頂点の数</span>
+V<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+
+<span style="color:#75715e">#グラフ</span>
+G<span style="color:#f92672">=</span>[]
+<span style="color:#75715e">#DFSですでに使われたかのフラグ</span>
+used<span style="color:#f92672">=</span>[]
+
+<span style="color:#75715e">#初期化</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">init</span>(v):
+    <span style="color:#66d9ef">global</span> G
+    <span style="color:#66d9ef">global</span> used
+    G<span style="color:#f92672">=</span>[[] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(v)]
+    used<span style="color:#f92672">=</span>[False <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(v)]
+
+<span style="color:#75715e">#fromからtoへ向かう容量capの辺をグラフに追加する</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_edge</span>(from_v,to_v,cap):
+    <span style="color:#66d9ef">global</span> G
+    <span style="color:#75715e">#from-&gt;toの容量capの辺,逆辺はto-&gt;fromの辺</span>
+    G[from_v]<span style="color:#f92672">.</span>append(edge(to_v,cap,len(G[to_v])))
+    G[to_v]<span style="color:#f92672">.</span>append(edge(from_v,<span style="color:#ae81ff">0</span>,len(G[from_v])<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>))
+
+
+<span style="color:#75715e">#増加パスをDFSで探す</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfs</span>(v,t,f):
+    <span style="color:#66d9ef">global</span> G
+    <span style="color:#66d9ef">global</span> used
+    <span style="color:#66d9ef">print</span>(v,t,f,used)
+    <span style="color:#66d9ef">if</span>(v<span style="color:#f92672">==</span>t):
+        <span style="color:#66d9ef">return</span> f
+    used[v]<span style="color:#f92672">=</span>True
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(G[v])):
+        e<span style="color:#f92672">=</span>G[v][i]
+        <span style="color:#66d9ef">if</span>(<span style="color:#f92672">not</span> used[e<span style="color:#f92672">.</span>to] <span style="color:#f92672">and</span> e<span style="color:#f92672">.</span>cap <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>):
+            d <span style="color:#f92672">=</span> dfs(e<span style="color:#f92672">.</span>to,t,min(f,e<span style="color:#f92672">.</span>cap))
+            <span style="color:#66d9ef">if</span>(d<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>):
+                e<span style="color:#f92672">.</span>cap<span style="color:#f92672">-=</span>d
+                G[e<span style="color:#f92672">.</span>to][e<span style="color:#f92672">.</span>rev]<span style="color:#f92672">.</span>cap<span style="color:#f92672">+=</span>d
+                <span style="color:#66d9ef">return</span> d
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+
+<span style="color:#75715e">#sからtへの最大流を求める</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">max_flow</span>(s,t):
+    <span style="color:#66d9ef">global</span> used
+    flow<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">while</span> True:
+        used<span style="color:#f92672">=</span>[False <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(V)]
+        f<span style="color:#f92672">=</span>dfs(s,t,INF)
+        <span style="color:#66d9ef">print</span>(flow,f)
+        <span style="color:#66d9ef">if</span>(f<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>):
+            <span style="color:#66d9ef">return</span> flow
+        flow<span style="color:#f92672">+=</span>f
+
+<span style="color:#75715e">#初期化</span>
+V<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
+init(V)
+
+<span style="color:#75715e">#入力(辺)</span>
+add_edge(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">10</span>)
+add_edge(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>)
+add_edge(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">6</span>)
+add_edge(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">6</span>)
+add_edge(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>)
+add_edge(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>)
+add_edge(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">8</span>)
+
+<span style="color:#75715e">#実行</span>
+ans<span style="color:#f92672">=</span>max_flow(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">4</span>)
+<span style="color:#66d9ef">print</span>(ans)
+</code></pre></div><p>実行結果</p>
+<pre><code>11
+</code></pre></article>
  
       
 
