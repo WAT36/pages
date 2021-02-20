@@ -10,12 +10,12 @@
 <meta property="og:description" content="グラフィックス・アニメーション # グラフィックス及びアニメーションについてを述べる。 Canvas(2D) # Canvasを利用すると、Javascriptでブラウ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/graphics/" />
-<meta property="article:modified_time" content="2021-02-17T15:35:34+09:00" />
+<meta property="article:modified_time" content="2021-02-18T10:42:25+09:00" />
 <title>グラフィックス・アニメーション | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.37ed3a6d6e7b8c65d79cf63e1a85cfffb228e066ba259badbbe985cf71c6a656.js" integrity="sha256-N&#43;06bW57jGXXnPY&#43;GoXP/7Io4Ga6JZutu&#43;mFz3HGplY="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.e7d0c65a1b5220531682f9a870b8e26679ff18f831d08a2e44436c22162ed06c.js" integrity="sha256-59DGWhtSIFMWgvmocLjiZnn/GPgx0IouRENsIhYu0Gw="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -165,17 +165,156 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">context</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">canvas</span>.<span style="color:#a6e22e">getContext</span>(<span style="color:#e6db74">&#39;2d&#39;</span>);
 
 <span style="color:#75715e">//円を描画
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">beginPath</span>();
-<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;red&#34;</span>
-<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">arc</span>(<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">0</span>,Math.<span style="color:#a6e22e">PI</span><span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>,<span style="color:#66d9ef">false</span>);
-<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">stroke</span>();
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">beginPath</span>();
+<span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;red&#34;</span>
+<span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">arc</span>(<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">0</span>,Math.<span style="color:#a6e22e">PI</span><span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>,<span style="color:#66d9ef">false</span>);
+<span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">stroke</span>();
 </code></pre></div><p>表示例</p>
 <hr>
 <hr>
 <canvas id="sample" width="100" height="100"></canvas>
+<script type="text/javascript" src="https://WAT36.github.io/pages/js_sample_pages/graphics_sample.js"></script>
 <hr>
 <hr>
-</article>
+<p>javascriptでは、まずcanvas要素を取得して、その後にgetContext()関数で'2d&rsquo;を指定する事で2d用のコンテキストオブジェクトを取得する。</p>
+<p>その後に、コンテキストオブジェクトのプロパティ、関数を利用して図形の描画を行う。</p>
+<p>コンテキストオブジェクトの主なプロパティ、関数は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">canvas</td>
+        <td style="border:none;">操作しているcanvasオブジェクト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">globalAlpha</td>
+        <td style="border:none;">図の透明度</td>
+    </tr>
+    <tr>
+        <td style="border:none;">globalCompositeOperation</td>
+        <td style="border:none;">図の合成方法</td>
+    </tr>
+    <tr>
+        <td style="border:none;">strokeStyle</td>
+        <td style="border:none;">線の色やスタイル</td>
+    </tr>
+    <tr>
+        <td style="border:none;">fillStyle</td>
+        <td style="border:none;">塗り潰しの色やスタイル</td>
+    </tr>
+    <tr>
+        <td style="border:none;">shadowOffsetX</td>
+        <td style="border:none;">水平方向の影の距離</td>
+    </tr>
+    <tr>
+        <td style="border:none;">shadowOffsetY</td>
+        <td style="border:none;">垂直方向の影の距離</td>
+    </tr>
+    <tr>
+        <td style="border:none;">shadowBlur</td>
+        <td style="border:none;">影のぼかし効果の設定</td>
+    </tr>
+    <tr>
+        <td style="border:none;">shadowColor</td>
+        <td style="border:none;">影の色</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lineWidth</td>
+        <td style="border:none;">線の幅</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lineCap</td>
+        <td style="border:none;">線の端の形状</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lineJoin</td>
+        <td style="border:none;">線の接合箇所の形状</td>
+    </tr>
+    <tr>
+        <td style="border:none;">font</td>
+        <td style="border:none;">テキストのフォント</td>
+    </tr>
+</table>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">関数</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">save()</td>
+        <td style="border:none;">現在の描画状態を保存する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">scale()</td>
+        <td style="border:none;">拡大・縮小する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">rotate()</td>
+        <td style="border:none;">回転する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">createLinearGradient()</td>
+        <td style="border:none;">線形グラデーションを指定する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">createRadialGradient()</td>
+        <td style="border:none;">円形グラデーションを指定する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">clearRect()</td>
+        <td style="border:none;">四角形の形にクリアする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">fillRect()</td>
+        <td style="border:none;">塗り潰された四角形を描く</td>
+    </tr>
+    <tr>
+        <td style="border:none;">storokeRect()</td>
+        <td style="border:none;">輪郭の四角形を描く</td>
+    </tr>
+    <tr>
+        <td style="border:none;">beginPath()</td>
+        <td style="border:none;">現在のパスをリセットする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">fillText()</td>
+        <td style="border:none;">塗り潰しのテキストを指定した座標に描画する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">strokeText()</td>
+        <td style="border:none;">輪郭のテキストを指定した座標に描画する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">moveTo()</td>
+        <td style="border:none;">新しい開始点を座標指定する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lineTo()</td>
+        <td style="border:none;">直前の座標と指定した座標を結ぶ直線を引く</td>
+    </tr>
+    <tr>
+        <td style="border:none;">quadraticCurveTo()</td>
+        <td style="border:none;">２次ベジェ曲線を引く</td>
+    </tr>
+    <tr>
+        <td style="border:none;">bezierCurveTo()</td>
+        <td style="border:none;">３次ベジェ曲線を引く</td>
+    </tr>
+    <tr>
+        <td style="border:none;">arcTo()</td>
+        <td style="border:none;">直前の座標と直線で繋がる円弧を作成する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">rect()</td>
+        <td style="border:none;">四角形を描画する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">arcTo()</td>
+        <td style="border:none;">円弧を描画する</td>
+    </tr>
+</table></article>
  
       
 
@@ -185,9 +324,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/514339e33b48b7aa92000677484b630947e506f7" title='Last modified by Wataru Tsukagoshi | Feb 17, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/196178eff516c91ae220bbeccb1df65cf3f90421" title='Last modified by Wataru Tsukagoshi | Feb 18, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Feb 17, 2021</span>
+      <span>Feb 18, 2021</span>
     </a>
   </div>
 
