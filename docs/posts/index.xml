@@ -13,16 +13,7 @@
       <pubDate>Tue, 16 Feb 2021 23:34:28 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/posts/configparser/</guid>
-      <description>Pythonのライブラリ「configparser」について、備忘のために示す。 設定ファイル(iniファイル) # iniファイルとは設定ファイ</description>
-    </item>
-    
-    <item>
-      <title>クイズ問題を書いたローカルのcsvファイルから自動でslackに問題をPOSTするシステムを作ってみた</title>
-      <link>https://WAT36.github.io/pages/posts/csv_quiz_bot-2/</link>
-      <pubDate>Thu, 04 Feb 2021 21:04:55 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/posts/csv_quiz_bot-2/</guid>
-      <description>はじめに # 資格勉強をすることがあるのだが、その際に自作した問題を自動で出題し答えられる様なシステムがあれば自身のアウトプットにもなるし、抜け</description>
+      <description>Pythonのライブラリ「configparser」について、備忘のために示す。 実行環境 # Python 3.7.3 Mac OS 10.15.5 設定ファイル(iniファイル) # iniフ</description>
     </item>
     
     <item>
