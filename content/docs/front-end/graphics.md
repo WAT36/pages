@@ -121,86 +121,102 @@ javascriptでは、まずcanvas要素を取得して、その後にgetContext()�
     <tr>
         <th style="border:none;">関数</td>
         <th style="border:none;">意味</td>
+        <th style="border:none;">引数</td>
     </tr>
     <tr>
         <td style="border:none;">save()</td>
         <td style="border:none;">現在の描画状態を保存する</td>
+        <td style="border:none;">なし</td>
     </tr>
     <tr>
         <td style="border:none;">scale()</td>
         <td style="border:none;">拡大・縮小する</td>
+        <td style="border:none;">水平方向の伸縮率,垂直方向の伸縮率</td>
     </tr>
     <tr>
         <td style="border:none;">rotate()</td>
         <td style="border:none;">回転する</td>
-    </tr>
-    <tr>
-        <td style="border:none;">createLinearGradient()</td>
-        <td style="border:none;">線形グラデーションを指定する</td>
-    </tr>
-    <tr>
-        <td style="border:none;">createRadialGradient()</td>
-        <td style="border:none;">円形グラデーションを指定する</td>
-    </tr>
-    <tr>
-        <td style="border:none;">clearRect()</td>
-        <td style="border:none;">四角形の形にクリアする</td>
-    </tr>
-    <tr>
-        <td style="border:none;">fillRect()</td>
-        <td style="border:none;">塗り潰された四角形を描く</td>
-    </tr>
-    <tr>
-        <td style="border:none;">strokeRect()</td>
-        <td style="border:none;">輪郭の四角形を描く</td>
-    </tr>
-    <tr>
-        <td style="border:none;">fill()</td>
-        <td style="border:none;">現在の塗り潰し設定で塗りつぶす</td>
-    </tr>
-    <tr>
-        <td style="border:none;">stroke()</td>
-        <td style="border:none;">現在のスタイルで輪郭を描く</td>
-    </tr>
-    <tr>
-        <td style="border:none;">beginPath()</td>
-        <td style="border:none;">現在のパスをリセットする</td>
-    </tr>
-    <tr>
-        <td style="border:none;">fillText()</td>
-        <td style="border:none;">塗り潰しのテキストを指定した座標に描画する</td>
-    </tr>
-    <tr>
-        <td style="border:none;">strokeText()</td>
-        <td style="border:none;">輪郭のテキストを指定した座標に描画する</td>
-    </tr>
-    <tr>
-        <td style="border:none;">moveTo()</td>
-        <td style="border:none;">新しい開始点を座標指定する</td>
-    </tr>
-    <tr>
-        <td style="border:none;">lineTo()</td>
-        <td style="border:none;">直前の座標と指定した座標を結ぶ直線を引く</td>
-    </tr>
-    <tr>
-        <td style="border:none;">quadraticCurveTo()</td>
-        <td style="border:none;">２次ベジェ曲線を引く</td>
-    </tr>
-    <tr>
-        <td style="border:none;">bezierCurveTo()</td>
-        <td style="border:none;">３次ベジェ曲線を引く</td>
-    </tr>
-    <tr>
-        <td style="border:none;">arcTo()</td>
-        <td style="border:none;">直前の座標と直線で繋がる円弧を作成する</td>
+        <td style="border:none;">回転する角度[rad]</td>
     </tr>
     <tr>
         <td style="border:none;">rect()</td>
         <td style="border:none;">四角形を描画する</td>
+        <td style="border:none;">左上の点のx座標、左上の点のy座標,幅、高さ</td>
     </tr>
     <tr>
-        <td style="border:none;">arcTo()</td>
+        <td style="border:none;">arc()</td>
         <td style="border:none;">円弧を描画する</td>
+        <td style="border:none;">円の中心のx座標,円の中心のy座標,半径,円弧の開始位置[rad],円弧の終了位置[rad],時計回り(false)か反時計回り(true)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">createLinearGradient()</td>
+        <td style="border:none;">線形グラデーションを指定する</td>
+        <td style="border:none;">グラデーション開始点のx座標、y座標,グラデーション終了点のx座標、y座標</td>
+    </tr>
+    <tr>
+        <td style="border:none;">createRadialGradient()</td>
+        <td style="border:none;">円形グラデーションを指定する</td>
+        <td style="border:none;">グラデーション開始円中心のx座標,y座標,半径、グラデーション終了円中心のx座標,y座標,半径</td>
+    </tr>
+    <tr>
+        <td style="border:none;">clearRect()</td>
+        <td style="border:none;">四角形の形にクリアする</td>
+        <td style="border:none;">rect()と同じ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">fillRect()</td>
+        <td style="border:none;">塗り潰された四角形を描く</td>
+        <td style="border:none;">rect()と同じ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">strokeRect()</td>
+        <td style="border:none;">輪郭の四角形を描く</td>
+        <td style="border:none;">rect()と同じ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">fill()</td>
+        <td style="border:none;">現在の塗り潰し設定で塗りつぶす</td>
+        <td style="border:none;">なし</td>
+    </tr>
+    <tr>
+        <td style="border:none;">stroke()</td>
+        <td style="border:none;">現在のスタイルで輪郭を描く</td>
+        <td style="border:none;">なし</td>
+    </tr>
+    <tr>
+        <td style="border:none;">beginPath()</td>
+        <td style="border:none;">現在のパスをリセットする</td>
+        <td style="border:none;">なし</td>
+    </tr>
+    <tr>
+        <td style="border:none;">strokeText()</td>
+        <td style="border:none;">輪郭のテキストを指定した座標に描画する</td>
+        <td style="border:none;">描く文字列,文字列の左下の点のx座標,文字列の左下の点のy座標</td>
+    </tr>
+    <tr>
+        <td style="border:none;">fillText()</td>
+        <td style="border:none;">塗り潰しのテキストを指定した座標に描画する</td>
+        <td style="border:none;">strokeText()と同じ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">moveTo()</td>
+        <td style="border:none;">新しい開始点を座標指定する</td>
+        <td style="border:none;">点のx座標、点のy座標</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lineTo()</td>
+        <td style="border:none;">直前の座標と指定した座標を結ぶ直線を引く</td>
+        <td style="border:none;">点のx座標、点のy座標</td>
+    </tr>
+    <tr>
+        <td style="border:none;">quadraticCurveTo()</td>
+        <td style="border:none;">２次ベジェ曲線を引く</td>
+        <td style="border:none;">制御点のx座標,y座標、終点のx座標,y座標</td>
+    </tr>
+    <tr>
+        <td style="border:none;">bezierCurveTo()</td>
+        <td style="border:none;">３次ベジェ曲線を引く</td>
+        <td style="border:none;">第１制御点のx座標,y座標、第２制御点のx座標,y座標、終点のx座標,y座標</td>
     </tr>
 </table>
 

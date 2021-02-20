@@ -10,12 +10,12 @@
 <meta property="og:description" content="グラフィックス・アニメーション # グラフィックス及びアニメーションについてを述べる。 Canvas(2D) # Canvasを利用すると、Javascriptでブラウ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/graphics/" />
-<meta property="article:modified_time" content="2021-02-20T11:22:22+09:00" />
+<meta property="article:modified_time" content="2021-02-20T12:37:15+09:00" />
 <title>グラフィックス・アニメーション | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.4e5e7ed651df937e1ff06b8ca1ed7fc36026f40494f33ce77861bca1e7a2163e.js" integrity="sha256-Tl5&#43;1lHfk34f8GuMoe1/w2Am9ASU8zzneGG8oeeiFj4="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.e7a2d72909ed06297a3d1003bc7959addf8b108fe827ec33e5e1756773e79a45.js" integrity="sha256-56LXKQntBil6PRADvHlZrd&#43;LEI/oJ&#43;wz5eF1Z3PnmkU="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -241,86 +241,102 @@ https://github.com/alex-shpak/hugo-book
     <tr>
         <th style="border:none;">関数</td>
         <th style="border:none;">意味</td>
+        <th style="border:none;">引数</td>
     </tr>
     <tr>
         <td style="border:none;">save()</td>
         <td style="border:none;">現在の描画状態を保存する</td>
+        <td style="border:none;">なし</td>
     </tr>
     <tr>
         <td style="border:none;">scale()</td>
         <td style="border:none;">拡大・縮小する</td>
+        <td style="border:none;">水平方向の伸縮率,垂直方向の伸縮率</td>
     </tr>
     <tr>
         <td style="border:none;">rotate()</td>
         <td style="border:none;">回転する</td>
-    </tr>
-    <tr>
-        <td style="border:none;">createLinearGradient()</td>
-        <td style="border:none;">線形グラデーションを指定する</td>
-    </tr>
-    <tr>
-        <td style="border:none;">createRadialGradient()</td>
-        <td style="border:none;">円形グラデーションを指定する</td>
-    </tr>
-    <tr>
-        <td style="border:none;">clearRect()</td>
-        <td style="border:none;">四角形の形にクリアする</td>
-    </tr>
-    <tr>
-        <td style="border:none;">fillRect()</td>
-        <td style="border:none;">塗り潰された四角形を描く</td>
-    </tr>
-    <tr>
-        <td style="border:none;">strokeRect()</td>
-        <td style="border:none;">輪郭の四角形を描く</td>
-    </tr>
-    <tr>
-        <td style="border:none;">fill()</td>
-        <td style="border:none;">現在の塗り潰し設定で塗りつぶす</td>
-    </tr>
-    <tr>
-        <td style="border:none;">stroke()</td>
-        <td style="border:none;">現在のスタイルで輪郭を描く</td>
-    </tr>
-    <tr>
-        <td style="border:none;">beginPath()</td>
-        <td style="border:none;">現在のパスをリセットする</td>
-    </tr>
-    <tr>
-        <td style="border:none;">fillText()</td>
-        <td style="border:none;">塗り潰しのテキストを指定した座標に描画する</td>
-    </tr>
-    <tr>
-        <td style="border:none;">strokeText()</td>
-        <td style="border:none;">輪郭のテキストを指定した座標に描画する</td>
-    </tr>
-    <tr>
-        <td style="border:none;">moveTo()</td>
-        <td style="border:none;">新しい開始点を座標指定する</td>
-    </tr>
-    <tr>
-        <td style="border:none;">lineTo()</td>
-        <td style="border:none;">直前の座標と指定した座標を結ぶ直線を引く</td>
-    </tr>
-    <tr>
-        <td style="border:none;">quadraticCurveTo()</td>
-        <td style="border:none;">２次ベジェ曲線を引く</td>
-    </tr>
-    <tr>
-        <td style="border:none;">bezierCurveTo()</td>
-        <td style="border:none;">３次ベジェ曲線を引く</td>
-    </tr>
-    <tr>
-        <td style="border:none;">arcTo()</td>
-        <td style="border:none;">直前の座標と直線で繋がる円弧を作成する</td>
+        <td style="border:none;">回転する角度[rad]</td>
     </tr>
     <tr>
         <td style="border:none;">rect()</td>
         <td style="border:none;">四角形を描画する</td>
+        <td style="border:none;">左上の点のx座標、左上の点のy座標,幅、高さ</td>
     </tr>
     <tr>
-        <td style="border:none;">arcTo()</td>
+        <td style="border:none;">arc()</td>
         <td style="border:none;">円弧を描画する</td>
+        <td style="border:none;">円の中心のx座標,円の中心のy座標,半径,円弧の開始位置[rad],円弧の終了位置[rad],時計回り(false)か反時計回り(true)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">createLinearGradient()</td>
+        <td style="border:none;">線形グラデーションを指定する</td>
+        <td style="border:none;">グラデーション開始点のx座標、y座標,グラデーション終了点のx座標、y座標</td>
+    </tr>
+    <tr>
+        <td style="border:none;">createRadialGradient()</td>
+        <td style="border:none;">円形グラデーションを指定する</td>
+        <td style="border:none;">グラデーション開始円中心のx座標,y座標,半径、グラデーション終了円中心のx座標,y座標,半径</td>
+    </tr>
+    <tr>
+        <td style="border:none;">clearRect()</td>
+        <td style="border:none;">四角形の形にクリアする</td>
+        <td style="border:none;">rect()と同じ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">fillRect()</td>
+        <td style="border:none;">塗り潰された四角形を描く</td>
+        <td style="border:none;">rect()と同じ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">strokeRect()</td>
+        <td style="border:none;">輪郭の四角形を描く</td>
+        <td style="border:none;">rect()と同じ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">fill()</td>
+        <td style="border:none;">現在の塗り潰し設定で塗りつぶす</td>
+        <td style="border:none;">なし</td>
+    </tr>
+    <tr>
+        <td style="border:none;">stroke()</td>
+        <td style="border:none;">現在のスタイルで輪郭を描く</td>
+        <td style="border:none;">なし</td>
+    </tr>
+    <tr>
+        <td style="border:none;">beginPath()</td>
+        <td style="border:none;">現在のパスをリセットする</td>
+        <td style="border:none;">なし</td>
+    </tr>
+    <tr>
+        <td style="border:none;">strokeText()</td>
+        <td style="border:none;">輪郭のテキストを指定した座標に描画する</td>
+        <td style="border:none;">描く文字列,文字列の左下の点のx座標,文字列の左下の点のy座標</td>
+    </tr>
+    <tr>
+        <td style="border:none;">fillText()</td>
+        <td style="border:none;">塗り潰しのテキストを指定した座標に描画する</td>
+        <td style="border:none;">strokeText()と同じ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">moveTo()</td>
+        <td style="border:none;">新しい開始点を座標指定する</td>
+        <td style="border:none;">点のx座標、点のy座標</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lineTo()</td>
+        <td style="border:none;">直前の座標と指定した座標を結ぶ直線を引く</td>
+        <td style="border:none;">点のx座標、点のy座標</td>
+    </tr>
+    <tr>
+        <td style="border:none;">quadraticCurveTo()</td>
+        <td style="border:none;">２次ベジェ曲線を引く</td>
+        <td style="border:none;">制御点のx座標,y座標、終点のx座標,y座標</td>
+    </tr>
+    <tr>
+        <td style="border:none;">bezierCurveTo()</td>
+        <td style="border:none;">３次ベジェ曲線を引く</td>
+        <td style="border:none;">第１制御点のx座標,y座標、第２制御点のx座標,y座標、終点のx座標,y座標</td>
     </tr>
 </table>
 <p>色々使った例を以下に示す。</p>
@@ -399,7 +415,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/5ed03b971447996a7bbf8371d9df3e226de06fee" title='Last modified by Wataru Tsukagoshi | Feb 20, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/3bc4eee2083739743d53fe7f7de8132a7f0e8c73" title='Last modified by Wataru Tsukagoshi | Feb 20, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>Feb 20, 2021</span>
     </a>
