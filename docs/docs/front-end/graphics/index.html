@@ -10,12 +10,12 @@
 <meta property="og:description" content="グラフィックス・アニメーション # グラフィックス及びアニメーションについてを述べる。 Canvas(2D) # Canvasを利用すると、Javascriptでブラウ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/graphics/" />
-<meta property="article:modified_time" content="2021-02-18T10:42:25+09:00" />
+<meta property="article:modified_time" content="2021-02-20T11:22:22+09:00" />
 <title>グラフィックス・アニメーション | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.e7d0c65a1b5220531682f9a870b8e26679ff18f831d08a2e44436c22162ed06c.js" integrity="sha256-59DGWhtSIFMWgvmocLjiZnn/GPgx0IouRENsIhYu0Gw="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.4e5e7ed651df937e1ff06b8ca1ed7fc36026f40494f33ce77861bca1e7a2163e.js" integrity="sha256-Tl5&#43;1lHfk34f8GuMoe1/w2Am9ASU8zzneGG8oeeiFj4="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -271,8 +271,16 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">塗り潰された四角形を描く</td>
     </tr>
     <tr>
-        <td style="border:none;">storokeRect()</td>
+        <td style="border:none;">strokeRect()</td>
         <td style="border:none;">輪郭の四角形を描く</td>
+    </tr>
+    <tr>
+        <td style="border:none;">fill()</td>
+        <td style="border:none;">現在の塗り潰し設定で塗りつぶす</td>
+    </tr>
+    <tr>
+        <td style="border:none;">stroke()</td>
+        <td style="border:none;">現在のスタイルで輪郭を描く</td>
     </tr>
     <tr>
         <td style="border:none;">beginPath()</td>
@@ -314,7 +322,74 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">arcTo()</td>
         <td style="border:none;">円弧を描画する</td>
     </tr>
-</table></article>
+</table>
+<p>色々使った例を以下に示す。</p>
+<p>html</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">canvas</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sample2&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;400&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;200&#34;</span>&gt;&lt;/<span style="color:#f92672">canvas</span>&gt;
+</code></pre></div><p>Javascript</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//canvas要素取得
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">canvas2</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;sample2&#39;</span>);
+<span style="color:#75715e">//2d用　コンテキストオブジェクト取得
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">context2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">canvas2</span>.<span style="color:#a6e22e">getContext</span>(<span style="color:#e6db74">&#39;2d&#39;</span>);
+
+<span style="color:#75715e">//円を描画
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">beginPath</span>();
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">strokeStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;red&#34;</span>;
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;yellow&#34;</span>;
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">arc</span>(<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">0</span>,Math.<span style="color:#a6e22e">PI</span><span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>,<span style="color:#66d9ef">false</span>);
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">stroke</span>();
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">fill</span>();
+
+<span style="color:#75715e">//四角形を描画
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">beginPath</span>();
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">strokeStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;blue&#34;</span>;
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;green&#34;</span>;
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">rect</span>(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">120</span>,<span style="color:#ae81ff">40</span>,<span style="color:#ae81ff">40</span>);
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">stroke</span>();
+
+<span style="color:#75715e">//テキスト
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">beginPath</span>();
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">strokeStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;black&#34;</span>;
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;white&#34;</span>;
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">strokeText</span>(<span style="color:#e6db74">&#39;Text&#39;</span>,<span style="color:#ae81ff">200</span>,<span style="color:#ae81ff">40</span>);
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">fillText</span>(<span style="color:#e6db74">&#39;Text&#39;</span>,<span style="color:#ae81ff">200</span>,<span style="color:#ae81ff">80</span>);
+
+<span style="color:#75715e">//線
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">beginPath</span>();
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">lineWidth</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">moveTo</span>(<span style="color:#ae81ff">200</span>,<span style="color:#ae81ff">120</span>);
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">lineTo</span>(<span style="color:#ae81ff">250</span>,<span style="color:#ae81ff">120</span>);
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">stroke</span>();
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">beginPath</span>();
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">lineWidth</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">moveTo</span>(<span style="color:#ae81ff">200</span>,<span style="color:#ae81ff">140</span>);
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">lineTo</span>(<span style="color:#ae81ff">250</span>,<span style="color:#ae81ff">140</span>);
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">stroke</span>();
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">lineWidth</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">moveTo</span>(<span style="color:#ae81ff">200</span>,<span style="color:#ae81ff">160</span>);
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">lineTo</span>(<span style="color:#ae81ff">250</span>,<span style="color:#ae81ff">160</span>);
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">stroke</span>();
+
+<span style="color:#75715e">//円弧
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">beginPath</span>();
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">lineWidth</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">arc</span>(<span style="color:#ae81ff">300</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">30</span>,Math.<span style="color:#a6e22e">PI</span><span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>,Math.<span style="color:#a6e22e">PI</span><span style="color:#f92672">*</span><span style="color:#ae81ff">3</span><span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>,<span style="color:#66d9ef">false</span>);
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">stroke</span>();
+
+<span style="color:#75715e">//ベジェ曲線
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">beginPath</span>();
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">lineWidth</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">moveTo</span>(<span style="color:#ae81ff">300</span>,<span style="color:#ae81ff">150</span>);
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">bexierCurveTo</span>(<span style="color:#ae81ff">350</span>,<span style="color:#ae81ff">200</span>,<span style="color:#ae81ff">380</span>,<span style="color:#ae81ff">200</span>,<span style="color:#ae81ff">350</span>,<span style="color:#ae81ff">150</span>);
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">stroke</span>();
+</code></pre></div><p>表示例</p>
+<hr>
+<hr>
+<canvas id="sample2" width="400" height="200"></canvas>
+<script type="text/javascript" src="https://WAT36.github.io/pages/js_sample_pages/graphics_sample.js"></script>
+<hr>
+<hr>
+</article>
  
       
 
@@ -324,9 +399,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/196178eff516c91ae220bbeccb1df65cf3f90421" title='Last modified by Wataru Tsukagoshi | Feb 18, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/5ed03b971447996a7bbf8371d9df3e226de06fee" title='Last modified by Wataru Tsukagoshi | Feb 20, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Feb 18, 2021</span>
+      <span>Feb 20, 2021</span>
     </a>
   </div>
 
