@@ -114,6 +114,10 @@ javascriptでは、まずcanvas要素を取得して、その後にgetContext()�
         <td style="border:none;">font</td>
         <td style="border:none;">テキストのフォント</td>
     </tr>
+    <tr>
+        <td style="border:none;">textAlign</td>
+        <td style="border:none;">テキストのアラインメント設定('start','end','left','right','center'のいずれか)</td>
+    </tr>
 </table>
 
 
@@ -251,13 +255,6 @@ context2.fillStyle = "green";
 context2.rect(10,120,40,40);
 context2.stroke();
 
-//テキスト
-context2.beginPath();
-context2.strokeStyle = "black";
-context2.fillStyle = "white";
-context2.strokeText('Text',200,40);
-context2.fillText('Text',200,80);
-
 //線
 context2.beginPath();
 context2.lineWidth = 1;
@@ -277,15 +274,31 @@ context2.stroke();
 //円弧
 context2.beginPath();
 context2.lineWidth = 1;
-context2.arc(300,20,30,Math.PI/4,Math.PI*3/4,false);
+context2.arc(200,20,30,Math.PI/4,Math.PI*3/4,false);
 context2.stroke();
 
-//ベジェ曲線
+//テキスト
 context2.beginPath();
-context2.lineWidth = 1;
-context2.moveTo(300,150);
-context2.bexierCurveTo(350,200,380,200,350,150);
-context2.stroke();
+context2.strokeStyle = "black";
+context2.fillStyle = "black";
+context2.strokeText('Text',300,40);
+context2.fillText('Text',300,60);
+
+//テキスト(フォント、文字サイズ)
+context2.beginPath();
+context2.font = 'bold 20px sans-serif'
+context2.fillText('Text',300,100)
+context2.font = 'italic 20px sans-serif'
+context2.fillText('Text',300,120)
+
+//テキスト(シャドー)
+context2.beginPath();
+context2.font = 'bold 20px sans-serif'
+context2.shadowColor = 'red'
+context2.shadowBlur = 3
+context2.shadowOffsetX = 3
+context2.shadowOffsetY = 3
+context2.fillText('Text',300,140)
 ```
 
 表示例

@@ -10,12 +10,12 @@
 <meta property="og:description" content="グラフィックス・アニメーション # グラフィックス及びアニメーションについてを述べる。 Canvas(2D) # Canvasを利用すると、Javascriptでブラウ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/graphics/" />
-<meta property="article:modified_time" content="2021-02-20T12:37:15+09:00" />
+<meta property="article:modified_time" content="2021-02-20T22:03:42+09:00" />
 <title>グラフィックス・アニメーション | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.e7a2d72909ed06297a3d1003bc7959addf8b108fe827ec33e5e1756773e79a45.js" integrity="sha256-56LXKQntBil6PRADvHlZrd&#43;LEI/oJ&#43;wz5eF1Z3PnmkU="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.ec3724f5ee52afca07935795a24b0906e529ea38589c05d5da11146a32c4614e.js" integrity="sha256-7Dck9e5Sr8oHk1eVoksJBuUp6jhYnAXV2hEUajLEYU4="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -236,6 +236,10 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">font</td>
         <td style="border:none;">テキストのフォント</td>
     </tr>
+    <tr>
+        <td style="border:none;">textAlign</td>
+        <td style="border:none;">テキストのアラインメント設定('start','end','left','right','center'のいずれか)</td>
+    </tr>
 </table>
 <table style="border:none;">
     <tr>
@@ -363,13 +367,6 @@ https://github.com/alex-shpak/hugo-book
 <span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">rect</span>(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">120</span>,<span style="color:#ae81ff">40</span>,<span style="color:#ae81ff">40</span>);
 <span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">stroke</span>();
 
-<span style="color:#75715e">//テキスト
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">beginPath</span>();
-<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">strokeStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;black&#34;</span>;
-<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;white&#34;</span>;
-<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">strokeText</span>(<span style="color:#e6db74">&#39;Text&#39;</span>,<span style="color:#ae81ff">200</span>,<span style="color:#ae81ff">40</span>);
-<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">fillText</span>(<span style="color:#e6db74">&#39;Text&#39;</span>,<span style="color:#ae81ff">200</span>,<span style="color:#ae81ff">80</span>);
-
 <span style="color:#75715e">//線
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">beginPath</span>();
 <span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">lineWidth</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
@@ -389,15 +386,31 @@ https://github.com/alex-shpak/hugo-book
 <span style="color:#75715e">//円弧
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">beginPath</span>();
 <span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">lineWidth</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">arc</span>(<span style="color:#ae81ff">300</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">30</span>,Math.<span style="color:#a6e22e">PI</span><span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>,Math.<span style="color:#a6e22e">PI</span><span style="color:#f92672">*</span><span style="color:#ae81ff">3</span><span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>,<span style="color:#66d9ef">false</span>);
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">arc</span>(<span style="color:#ae81ff">200</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">30</span>,Math.<span style="color:#a6e22e">PI</span><span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>,Math.<span style="color:#a6e22e">PI</span><span style="color:#f92672">*</span><span style="color:#ae81ff">3</span><span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>,<span style="color:#66d9ef">false</span>);
 <span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">stroke</span>();
 
-<span style="color:#75715e">//ベジェ曲線
+<span style="color:#75715e">//テキスト
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">beginPath</span>();
-<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">lineWidth</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">moveTo</span>(<span style="color:#ae81ff">300</span>,<span style="color:#ae81ff">150</span>);
-<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">bexierCurveTo</span>(<span style="color:#ae81ff">350</span>,<span style="color:#ae81ff">200</span>,<span style="color:#ae81ff">380</span>,<span style="color:#ae81ff">200</span>,<span style="color:#ae81ff">350</span>,<span style="color:#ae81ff">150</span>);
-<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">stroke</span>();
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">strokeStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;black&#34;</span>;
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;black&#34;</span>;
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">strokeText</span>(<span style="color:#e6db74">&#39;Text&#39;</span>,<span style="color:#ae81ff">300</span>,<span style="color:#ae81ff">40</span>);
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">fillText</span>(<span style="color:#e6db74">&#39;Text&#39;</span>,<span style="color:#ae81ff">300</span>,<span style="color:#ae81ff">60</span>);
+
+<span style="color:#75715e">//テキスト(フォント、文字サイズ)
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">beginPath</span>();
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">font</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;bold 20px sans-serif&#39;</span>
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">fillText</span>(<span style="color:#e6db74">&#39;Text&#39;</span>,<span style="color:#ae81ff">300</span>,<span style="color:#ae81ff">100</span>)
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">font</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;italic 20px sans-serif&#39;</span>
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">fillText</span>(<span style="color:#e6db74">&#39;Text&#39;</span>,<span style="color:#ae81ff">300</span>,<span style="color:#ae81ff">120</span>)
+
+<span style="color:#75715e">//テキスト(シャドー)
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">beginPath</span>();
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">font</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;bold 20px sans-serif&#39;</span>
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">shadowColor</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;red&#39;</span>
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">shadowBlur</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">shadowOffsetX</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">shadowOffsetY</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+<span style="color:#a6e22e">context2</span>.<span style="color:#a6e22e">fillText</span>(<span style="color:#e6db74">&#39;Text&#39;</span>,<span style="color:#ae81ff">300</span>,<span style="color:#ae81ff">140</span>)
 </code></pre></div><p>表示例</p>
 <hr>
 <hr>
@@ -415,7 +428,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/3bc4eee2083739743d53fe7f7de8132a7f0e8c73" title='Last modified by Wataru Tsukagoshi | Feb 20, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/e6ae602a607ca87fb960b445c1d209cb7fb68fb4" title='Last modified by Wataru Tsukagoshi | Feb 20, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>Feb 20, 2021</span>
     </a>
