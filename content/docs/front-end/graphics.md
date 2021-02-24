@@ -309,3 +309,61 @@ context2.fillText('Text',300,140)
 <script type="text/javascript" src="/js_sample_pages/graphics_sample.js"></script>
 <hr>
 <hr>
+
+
+# SVG
+
+SVG(Scalable Vector Graphics)とは、ベクター形式の画像フォーマットである。ベクター形式とは、点と点で結ばれた線で図形を表す方法である。これに対し、Canvasはピクセル形式での描画となる。
+
+SVGは、XMLタグを使用して描画を行う。そのために使われるXML要素は主に以下の通りである。
+
+
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">要素名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">circle</td>
+        <td style="border:none;">円を作成する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ellipse</td>
+        <td style="border:none;">楕円を作成する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">line</td>
+        <td style="border:none;">線を作成する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">polygon</td>
+        <td style="border:none;">多角形を作成する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">rect</td>
+        <td style="border:none;">四角形を作成する</td>
+    </tr>
+</table>
+
+使用例を以下に示す。
+
+html
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <circle cx="100" cy="100" r="30" stroke="black" stroke-width="3" fill="blue"></circle>
+    <text x="0" y="15" fill="blue">This is SVG</text>
+</svg>
+```
+
+表示例
+
+<hr>
+<hr>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <circle cx="100" cy="100" r="30" stroke="black" stroke-width="3" fill="blue"></circle>
+    <text x="0" y="15" fill="blue">This is SVG</text>
+</svg>
+<hr>
+<hr>
