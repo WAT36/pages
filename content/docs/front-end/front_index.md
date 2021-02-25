@@ -42,5 +42,5 @@ bookToc: false
      - [イベント]({{< relref "/docs/front-end/event.md" >}})
      - [ウィンドウ]({{< relref "/docs/front-end/window.md" >}})
      - [ブラウザ関連API]({{< relref "/docs/front-end/browser_api.md" >}})
-     - [グラフィックス・アニメーション]({{< relref "/docs/front-end/graphics.md" >}})
+     - [グラフィックス]({{< relref "/docs/front-end/graphics.md" >}})
 

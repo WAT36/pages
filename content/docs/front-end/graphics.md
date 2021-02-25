@@ -1,5 +1,5 @@
 ---
-title: "グラフィックス・アニメーション"
+title: "グラフィックス"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
@@ -353,7 +353,6 @@ html
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
     <circle cx="100" cy="100" r="30" stroke="black" stroke-width="3" fill="blue"></circle>
-    <text x="0" y="15" fill="blue">This is SVG</text>
 </svg>
 ```
 
@@ -363,7 +362,6 @@ html
 <hr>
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
     <circle cx="100" cy="100" r="30" stroke="black" stroke-width="3" fill="blue"></circle>
-    <text x="0" y="15" fill="blue">This is SVG</text>
 </svg>
 <hr>
 <hr>
