@@ -709,15 +709,6 @@
     </item>
     
     <item>
-      <title>ネットワークフロー</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/network_flow-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/network_flow-2/</guid>
-      <description>ネットワークフロー # グラフにおける最大流・最小流問題についてを述べる。 以下に例題を示す。 ネットワーク上の2台のコンピュータS,Tがあり、Sか</description>
-    </item>
-    
-    <item>
       <title>バケット法と平方分割</title>
       <link>https://WAT36.github.io/pages/docs/programming/procon/bucket/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1906,15 +1897,6 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <description>Move static content to static #  Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
-    </item>
-    
-    <item>
-      <title>Pythonでiniファイルを読み込むライブラリ「configparser」</title>
-      <link>https://WAT36.github.io/pages/posts/configparser-2/</link>
-      <pubDate>Tue, 16 Feb 2021 23:34:28 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/posts/configparser-2/</guid>
-      <description>Pythonのライブラリ「configparser」について、備忘のために示す。 実行環境 # Python 3.7.3 Mac OS 10.15.5 設定ファイル(iniファイル) # iniフ</description>
     </item>
     
     <item>
