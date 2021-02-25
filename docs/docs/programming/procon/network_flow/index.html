@@ -10,12 +10,12 @@
 <meta property="og:description" content="ネットワークフロー # グラフにおける最大流・最小流問題についてを述べる。 以下に例題を示す。 ネットワーク上の2台のコンピュータS,Tがあり、Sか" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/procon/network_flow/" />
-<meta property="article:modified_time" content="2020-11-14T00:22:13+09:00" />
+<meta property="article:modified_time" content="2021-02-19T21:29:05+09:00" />
 <title>ネットワークフロー | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.af0fb1db551ef9045227324725c749b7b5a95fd6b2e8ca3fe29804afd3f0e69a.js" integrity="sha256-rw&#43;x21Ue&#43;QRSJzJHJcdJt7WpX9ay6Mo/4pgEr9Pw5po="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -213,7 +213,6 @@ used<span style="color:#f92672">=</span>[]
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfs</span>(v,t,f):
     <span style="color:#66d9ef">global</span> G
     <span style="color:#66d9ef">global</span> used
-    <span style="color:#66d9ef">print</span>(v,t,f,used)
     <span style="color:#66d9ef">if</span>(v<span style="color:#f92672">==</span>t):
         <span style="color:#66d9ef">return</span> f
     used[v]<span style="color:#f92672">=</span>True
@@ -234,7 +233,6 @@ used<span style="color:#f92672">=</span>[]
     <span style="color:#66d9ef">while</span> True:
         used<span style="color:#f92672">=</span>[False <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(V)]
         f<span style="color:#f92672">=</span>dfs(s,t,INF)
-        <span style="color:#66d9ef">print</span>(flow,f)
         <span style="color:#66d9ef">if</span>(f<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>):
             <span style="color:#66d9ef">return</span> flow
         flow<span style="color:#f92672">+=</span>f
@@ -257,7 +255,8 @@ ans<span style="color:#f92672">=</span>max_flow(<span style="color:#ae81ff">0</s
 <span style="color:#66d9ef">print</span>(ans)
 </code></pre></div><p>実行結果</p>
 <pre><code>11
-</code></pre></article>
+</code></pre><p>となり、最適解が求められる。</p>
+</article>
  
       
 
@@ -267,9 +266,9 @@ ans<span style="color:#f92672">=</span>max_flow(<span style="color:#ae81ff">0</s
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/b31bf72f8a63a80bb1b9113bf136ca1760d1fc05" title='Last modified by Wataru Tsukagoshi | Nov 14, 2020' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/3f05d614898dec8ceeebce0c71390ea0b661c539" title='Last modified by Wataru Tsukagoshi | Feb 19, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Nov 14, 2020</span>
+      <span>Feb 19, 2021</span>
     </a>
   </div>
 
