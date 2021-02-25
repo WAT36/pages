@@ -557,6 +557,15 @@
     </item>
     
     <item>
+      <title>グラフィックス</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/graphics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/graphics/</guid>
+      <description>グラフィックス・アニメーション # グラフィックス及びアニメーションについてを述べる。 Canvas(2D) # Canvasを利用すると、Javascriptでブラウ</description>
+    </item>
+    
+    <item>
       <title>グラフ・データ処理</title>
       <link>https://WAT36.github.io/pages/docs/programming/graph/graph_index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
