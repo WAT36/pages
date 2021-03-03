@@ -14,8 +14,3 @@ bookToc: false
 
 - [コンテナとは？]({{< relref "/docs/container/container.md" >}})
 - [Docker]({{< relref "/docs/container/docker.md" >}})
-<hr>
-
-Dockerハンズオン
-
-- [DockerでNginxを動かす]({{< relref "/docs/container/docker_nginx.md" >}})

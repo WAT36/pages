@@ -223,30 +223,21 @@
     </item>
     
     <item>
+      <title>Docker</title>
+      <link>https://WAT36.github.io/pages/docs/container/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/container/docker/</guid>
+      <description>Docker # ウォーターフォール型によるアプリケーション開発の場合、開発に使う環境は開発用の環境、検証(テスト)用の環境、本番(実稼働)用の環境という</description>
+    </item>
+    
+    <item>
       <title>DOM</title>
       <link>https://WAT36.github.io/pages/docs/front-end/dom/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/dom/</guid>
       <description>DOM # DOMとはDocument Object Modelの略で、HTML(またはXML)の各要素にアクセスするための仕組みである。Javascriptでは</description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>https://WAT36.github.io/pages/docs/container/docker/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/container/docker/</guid>
-      <description>Docker ウォーターフォール型によるアプリケーション開発の場合、開発に使う環境は開発用の環境、検証(テスト)用の環境、本番(実稼働)用の環境というよ</description>
-    </item>
-    
-    <item>
-      <title>DockerでNginxを動かす</title>
-      <link>https://WAT36.github.io/pages/docs/container/docker_nginx/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/container/docker_nginx/</guid>
-      <description>DockerでNginxを動かす Dockerを使って、NginxオープンソースのWebサーバであるNginxを起動させてみる。 使用環境 Docker : 17.12.0-ce</description>
     </item>
     
     <item>
@@ -615,7 +606,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/container/container_index/</guid>
-      <description>コンテナ系 メモ コンテナについて何か勉強したいなって、とりあえず立てた まずはDockerについて書いて見ます コンテナとは？ Docker Dockerハンズ</description>
+      <description>コンテナ系 メモ # コンテナについて何か勉強したいなって、とりあえず立てた まずはDockerについて書いて見ます コンテナとは？ Docker</description>
     </item>
     
     <item>
@@ -624,7 +615,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/container/container/</guid>
-      <description>コンテナとは？ 最近よく聞くコンテナ技術とは何なのか？ コンテナとは、OS上に論理的な区画(コンテナ)を作り、そこにミドルウェア、アプリケーショ</description>
+      <description>コンテナとは？ # 最近よく聞くコンテナ技術とは何なのか？ コンテナとは、OS上に論理的な区画(コンテナ)を作り、そこにミドルウェア、アプリケーシ</description>
     </item>
     
     <item>
