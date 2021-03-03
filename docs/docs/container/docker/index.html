@@ -15,7 +15,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.2f87e8c098419641bdac172b61b750678ea7620d4bc1c1cc1ce6101fa68d788c.js" integrity="sha256-L4fowJhBlkG9rBcrYbdQZ46nYg1LwcHMHOYQH6aNeIw="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.c55d599582e5a3375841e92d89d7bdc4f6ff09a298988e39755ff5dc3693c3f7.js" integrity="sha256-xV1ZlYLlozdYQektide9xPb/CaKYmI45dV/13DaTw/c="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -136,11 +136,10 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#dockerイメージを作る">Dockerイメージを作る</a></li>
+    <li><a href="#dockerイメージ">Dockerイメージ</a></li>
   </ul>
 
   <ul>
-    <li><a href="#dockerイメージをリモートdocker-hubにアップロードする">Dockerイメージをリモート(Docker Hub)にアップロードする</a></li>
     <li><a href="#dockerイメージをリモートdocker-hubからダウンロードする">Dockerイメージをリモート(Docker Hub)からダウンロードする</a></li>
     <li><a href="#ローカルにあるdockerイメージを確認する">ローカルにあるDockerイメージを確認する</a></li>
     <li><a href="#ローカルのdockerイメージを削除する">ローカルのDockerイメージを削除する</a></li>
@@ -151,6 +150,7 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#コンテナを削除する">コンテナを削除する</a></li>
     <li><a href="#ローカルにあるコンテナを一覧表示する">ローカルにあるコンテナを一覧表示する</a></li>
     <li><a href="#コンテナの稼働状況を確認する">コンテナの稼働状況を確認する</a></li>
+    <li><a href="#dockerイメージをリモートdocker-hubにアップロードする">Dockerイメージをリモート(Docker Hub)にアップロードする</a></li>
   </ul>
 
   <ul>
@@ -180,40 +180,33 @@ https://github.com/alex-shpak/hugo-book
 <img src="https://WAT36.github.io/pages/img/container/docker_02.png" width=75%>
 <p>Dockerイメージを元にして作ったコンテナはDocker上であればどこでも動くので、この技術により、ある環境では動くけどある環境では動かない、という問題を解消できる。</p>
 <p>Docker上で動かしているコンテナを別の環境上のDockerに移すには、Dockerイメージの形にして移す。</p>
-<h2 id="dockerイメージを作る">
-  Dockerイメージを作る
-  <a class="anchor" href="#docker%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8%e3%82%92%e4%bd%9c%e3%82%8b">#</a>
+<h2 id="dockerイメージ">
+  Dockerイメージ
+  <a class="anchor" href="#docker%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8">#</a>
 </h2>
 <p>コンテナは、元となるDockerイメージから作られる。</p>
 <p>Dockerイメージの実体は、先述の通りアプリケーションの実行に必要なファイル群が格納されたディレクトリ類をまとめたものである。</p>
-<p>では、Dockerイメージはどのようにして作るのか？</p>
-<p>Dockerイメージは、Dockerコマンドを使って作成する方法、Dockerfileという設定ファイルを作ってそこから作る方法がある。</p>
+<p>Dockerイメージの作り方については、別章で記載する。</p>
 <p>ここではまず、各種Dockerコマンドについてを説明する。</p>
 <h1 id="dockerイメージコンテナに関するコマンド">
   Dockerイメージ・コンテナに関するコマンド
   <a class="anchor" href="#docker%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8%e3%82%b3%e3%83%b3%e3%83%86%e3%83%8a%e3%81%ab%e9%96%a2%e3%81%99%e3%82%8b%e3%82%b3%e3%83%9e%e3%83%b3%e3%83%89">#</a>
 </h1>
-<h2 id="dockerイメージをリモートdocker-hubにアップロードする">
-  Dockerイメージをリモート(Docker Hub)にアップロードする
-  <a class="anchor" href="#docker%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8%e3%82%92%e3%83%aa%e3%83%a2%e3%83%bc%e3%83%88docker-hub%e3%81%ab%e3%82%a2%e3%83%83%e3%83%97%e3%83%ad%e3%83%bc%e3%83%89%e3%81%99%e3%82%8b">#</a>
-</h2>
-<p>DockerイメージをDocker Hubにアップロードするには、<strong>docker image push</strong>コマンドを利用する。</p>
-<pre><code>$ docker image push &lt;Docker Hubイメージ名&gt;/イメージ名[:タグ名]
-</code></pre><h2 id="dockerイメージをリモートdocker-hubからダウンロードする">
+<h2 id="dockerイメージをリモートdocker-hubからダウンロードする">
   Dockerイメージをリモート(Docker Hub)からダウンロードする
   <a class="anchor" href="#docker%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8%e3%82%92%e3%83%aa%e3%83%a2%e3%83%bc%e3%83%88docker-hub%e3%81%8b%e3%82%89%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%99%e3%82%8b">#</a>
 </h2>
 <p>Dockerイメージをリモートレポジトリ(Docker Hub)からダウンロードするには、<strong>docker image pull</strong>コマンドを利用する。</p>
-<pre><code>$ docker image pull [オプション] (Dockerイメージ名)[:タグ名]
+<pre><code>$ docker pull [オプション] (Dockerイメージ名)[:タグ名]
 </code></pre><p>このコマンドにより、Dockerイメージをローカルにダウンロードできる。</p>
-<p>また、Dockerイメージは同じ名前でも<strong>タグ</strong>を使い分けることによって複数登録することができる。Dockerイメージはバージョンや対応OSなどの関係から、同じ内容のものを複数登録する必要があるが、Dockerイメージ名を同じにして、タグ名にバージョン及び対応OS等の名前を振り分けることによって、Dockerイメージを管理することが可能になる。特定のタグのイメージをダウンロードしたいときは、docker image pullコマンドの時にタグ名も指定する。</p>
-<p>なお、タグ名を省略してdocker image pullコマンドを実行した場合は、最新版のイメージがダウンロードされる。</p>
+<p>また、Dockerイメージは同じ名前でも<strong>タグ</strong>を使い分けることによって複数登録することができる。Dockerイメージはバージョンや対応OSなどの関係から、同じ内容のものを複数登録する必要があるが、Dockerイメージ名を同じにして、タグ名にバージョン及び対応OS等の名前を振り分けることによって、Dockerイメージを複数管理することが可能になる。特定のタグのイメージをダウンロードしたいときは、docker pullコマンドの時にタグ名も指定する。</p>
+<p>なお、タグ名を省略してdocker image pullコマンドを実行した場合は、最新版(latestタグ)のイメージがダウンロードされる。</p>
 <h2 id="ローカルにあるdockerイメージを確認する">
   ローカルにあるDockerイメージを確認する
   <a class="anchor" href="#%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%ab%e3%81%82%e3%82%8bdocker%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8%e3%82%92%e7%a2%ba%e8%aa%8d%e3%81%99%e3%82%8b">#</a>
 </h2>
-<p>取得したローカルにあるDockerイメージを確認したい時は、<strong>docker image ls</strong>コマンドを使う。</p>
-<pre><code>$ docker image ls
+<p>取得したローカルにあるDockerイメージを確認したい時は、<strong>docker images</strong>コマンドを使う。</p>
+<pre><code>$ docker images
 </code></pre><h2 id="ローカルのdockerイメージを削除する">
   ローカルのDockerイメージを削除する
   <a class="anchor" href="#%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%aedocker%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8%e3%82%92%e5%89%8a%e9%99%a4%e3%81%99%e3%82%8b">#</a>
@@ -227,21 +220,21 @@ https://github.com/alex-shpak/hugo-book
   Dockerイメージからコンテナを作る
   <a class="anchor" href="#docker%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8%e3%81%8b%e3%82%89%e3%82%b3%e3%83%b3%e3%83%86%e3%83%8a%e3%82%92%e4%bd%9c%e3%82%8b">#</a>
 </h2>
-<p>Dockerイメージからコンテナを作成するには、<strong>docker container create</strong>コマンドを使用する。</p>
-<pre><code>$ docker container create [オプション] イメージ名
+<p>Dockerイメージからコンテナを作成するには、<strong>docker create</strong>コマンドを使用する。</p>
+<pre><code>$ docker create [オプション] イメージ名
 </code></pre><h2 id="コンテナを起動する">
   コンテナを起動する
   <a class="anchor" href="#%e3%82%b3%e3%83%b3%e3%83%86%e3%83%8a%e3%82%92%e8%b5%b7%e5%8b%95%e3%81%99%e3%82%8b">#</a>
 </h2>
-<p>停止中のコンテナを起動するには、<strong>docker container start</strong>コマンドを使用する。</p>
-<pre><code>$ docker container start [コンテナ名,ID]
+<p>停止中のコンテナを起動するには、<strong>docker start</strong>コマンドを使用する。</p>
+<pre><code>$ docker start [コンテナ名,ID]
 </code></pre><h2 id="dockerイメージからコンテナを作って起動する">
   Dockerイメージからコンテナを作って起動する
   <a class="anchor" href="#docker%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8%e3%81%8b%e3%82%89%e3%82%b3%e3%83%b3%e3%83%86%e3%83%8a%e3%82%92%e4%bd%9c%e3%81%a3%e3%81%a6%e8%b5%b7%e5%8b%95%e3%81%99%e3%82%8b">#</a>
 </h2>
-<p>Dockerイメージからコンテナを作成し(docker container create)、コンテナを起動する(docker container start)過程を別々に述べたが、この２つを一気にやる方法がある。</p>
-<p>Dockerイメージからコンテナを作成し、起動するには、<strong>docker container run</strong>コマンドを利用する。</p>
-<pre><code>$ docker container run  (Dockerイメージ名) (実行コマンド)
+<p>DockerイメージをDocker Hubからダウンロードし(docker pull)、そこからコンテナを作成し(docker create)、コンテナを起動する(docker start)過程を別々に述べたが、これらを一気にやる方法がある。</p>
+<p>Dockerイメージをダウンロードしてコンテナを作成し、起動するには、<strong>docker run</strong>コマンドを利用する。</p>
+<pre><code>$ docker run  (Dockerイメージ名) (実行コマンド)
 </code></pre><h2 id="コンテナを停止する">
   コンテナを停止する
   <a class="anchor" href="#%e3%82%b3%e3%83%b3%e3%83%86%e3%83%8a%e3%82%92%e5%81%9c%e6%ad%a2%e3%81%99%e3%82%8b">#</a>
@@ -268,7 +261,13 @@ https://github.com/alex-shpak/hugo-book
 <pre><code>$ docker container stats
 </code></pre><p>以上、Dockerイメージ・コンテナの起動に関する一連のコマンドの動作を図に表すと以下のようになる。</p>
 <img src="https://WAT36.github.io/pages/img/container/docker_03.png" width=100%>
-<h1 id="起動中のコンテナの操作方法">
+<h2 id="dockerイメージをリモートdocker-hubにアップロードする">
+  Dockerイメージをリモート(Docker Hub)にアップロードする
+  <a class="anchor" href="#docker%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8%e3%82%92%e3%83%aa%e3%83%a2%e3%83%bc%e3%83%88docker-hub%e3%81%ab%e3%82%a2%e3%83%83%e3%83%97%e3%83%ad%e3%83%bc%e3%83%89%e3%81%99%e3%82%8b">#</a>
+</h2>
+<p>DockerイメージをDocker Hubにアップロードするには、<strong>docker image push</strong>コマンドを利用する。</p>
+<pre><code>$ docker image push &lt;Docker Hubイメージ名&gt;/イメージ名[:タグ名]
+</code></pre><h1 id="起動中のコンテナの操作方法">
   起動中のコンテナの操作方法
   <a class="anchor" href="#%e8%b5%b7%e5%8b%95%e4%b8%ad%e3%81%ae%e3%82%b3%e3%83%b3%e3%83%86%e3%83%8a%e3%81%ae%e6%93%8d%e4%bd%9c%e6%96%b9%e6%b3%95">#</a>
 </h1>
@@ -339,11 +338,10 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#dockerイメージを作る">Dockerイメージを作る</a></li>
+    <li><a href="#dockerイメージ">Dockerイメージ</a></li>
   </ul>
 
   <ul>
-    <li><a href="#dockerイメージをリモートdocker-hubにアップロードする">Dockerイメージをリモート(Docker Hub)にアップロードする</a></li>
     <li><a href="#dockerイメージをリモートdocker-hubからダウンロードする">Dockerイメージをリモート(Docker Hub)からダウンロードする</a></li>
     <li><a href="#ローカルにあるdockerイメージを確認する">ローカルにあるDockerイメージを確認する</a></li>
     <li><a href="#ローカルのdockerイメージを削除する">ローカルのDockerイメージを削除する</a></li>
@@ -354,6 +352,7 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#コンテナを削除する">コンテナを削除する</a></li>
     <li><a href="#ローカルにあるコンテナを一覧表示する">ローカルにあるコンテナを一覧表示する</a></li>
     <li><a href="#コンテナの稼働状況を確認する">コンテナの稼働状況を確認する</a></li>
+    <li><a href="#dockerイメージをリモートdocker-hubにアップロードする">Dockerイメージをリモート(Docker Hub)にアップロードする</a></li>
   </ul>
 
   <ul>

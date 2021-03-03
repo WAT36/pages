@@ -25,50 +25,39 @@ Dockerイメージを元にして作ったコンテナはDocker上であれば�
 
 Docker上で動かしているコンテナを別の環境上のDockerに移すには、Dockerイメージの形にして移す。
 
-## Dockerイメージを作る
+## Dockerイメージ
 
 コンテナは、元となるDockerイメージから作られる。
 
 Dockerイメージの実体は、先述の通りアプリケーションの実行に必要なファイル群が格納されたディレクトリ類をまとめたものである。
 
-では、Dockerイメージはどのようにして作るのか？
-
-
-Dockerイメージは、Dockerコマンドを使って作成する方法、Dockerfileという設定ファイルを作ってそこから作る方法がある。
+Dockerイメージの作り方については、別章で記載する。
 
 ここではまず、各種Dockerコマンドについてを説明する。
 
 # Dockerイメージ・コンテナに関するコマンド
-
-## Dockerイメージをリモート(Docker Hub)にアップロードする
-
-DockerイメージをDocker Hubにアップロードするには、**docker image push**コマンドを利用する。
-
-```
-$ docker image push <Docker Hubイメージ名>/イメージ名[:タグ名]
-```
 
 ## Dockerイメージをリモート(Docker Hub)からダウンロードする
 
 Dockerイメージをリモートレポジトリ(Docker Hub)からダウンロードするには、**docker image pull**コマンドを利用する。
 
 ```
-$ docker image pull [オプション] (Dockerイメージ名)[:タグ名]
+$ docker pull [オプション] (Dockerイメージ名)[:タグ名]
 ```
 
 このコマンドにより、Dockerイメージをローカルにダウンロードできる。
 
-また、Dockerイメージは同じ名前でも**タグ**を使い分けることによって複数登録することができる。Dockerイメージはバージョンや対応OSなどの関係から、同じ内容のものを複数登録する必要があるが、Dockerイメージ名を同じにして、タグ名にバージョン及び対応OS等の名前を振り分けることによって、Dockerイメージを管理することが可能になる。特定のタグのイメージをダウンロードしたいときは、docker image pullコマンドの時にタグ名も指定する。
+また、Dockerイメージは同じ名前でも**タグ**を使い分けることによって複数登録することができる。Dockerイメージはバージョンや対応OSなどの関係から、同じ内容のものを複数登録する必要があるが、Dockerイメージ名を同じにして、タグ名にバージョン及び対応OS等の名前を振り分けることによって、Dockerイメージを複数管理することが可能になる。特定のタグのイメージをダウンロードしたいときは、docker pullコマンドの時にタグ名も指定する。
 
-なお、タグ名を省略してdocker image pullコマンドを実行した場合は、最新版のイメージがダウンロードされる。
+なお、タグ名を省略してdocker image pullコマンドを実行した場合は、最新版(latestタグ)のイメージがダウンロードされる。
 
 
 ## ローカルにあるDockerイメージを確認する
 
-取得したローカルにあるDockerイメージを確認したい時は、**docker image ls**コマンドを使う。
+取得したローカルにあるDockerイメージを確認したい時は、**docker images**コマンドを使う。
 
 ```
-$ docker image ls
+$ docker images
 ```
 
 ## ローカルのDockerイメージを削除する
@@ -90,29 +79,29 @@ $ docker image prune [オプション]
 
 ## Dockerイメージからコンテナを作る
 
-Dockerイメージからコンテナを作成するには、**docker container create**コマンドを使用する。
+Dockerイメージからコンテナを作成するには、**docker create**コマンドを使用する。
 
 ```
-$ docker container create [オプション] イメージ名
+$ docker create [オプション] イメージ名
 ```
 
 ## コンテナを起動する
 
-停止中のコンテナを起動するには、**docker container start**コマンドを使用する。
+停止中のコンテナを起動するには、**docker start**コマンドを使用する。
 
 ```
-$ docker container start [コンテナ名,ID]
+$ docker start [コンテナ名,ID]
 ```
 
 
 ## Dockerイメージからコンテナを作って起動する
 
-Dockerイメージからコンテナを作成し(docker container create)、コンテナを起動する(docker container start)過程を別々に述べたが、この２つを一気にやる方法がある。
+DockerイメージをDocker Hubからダウンロードし(docker pull)、そこからコンテナを作成し(docker create)、コンテナを起動する(docker start)過程を別々に述べたが、これらを一気にやる方法がある。
 
-Dockerイメージからコンテナを作成し、起動するには、**docker container run**コマンドを利用する。
+Dockerイメージをダウンロードしてコンテナを作成し、起動するには、**docker run**コマンドを利用する。
 
 ```
-$ docker container run  (Dockerイメージ名) (実行コマンド)
+$ docker run  (Dockerイメージ名) (実行コマンド)
 ```
 
 ## コンテナを停止する
@@ -151,6 +140,14 @@ $ docker container stats
 以上、Dockerイメージ・コンテナの起動に関する一連のコマンドの動作を図に表すと以下のようになる。
 
 <img src="/img/container/docker_03.png" width=100%>
+
+## Dockerイメージをリモート(Docker Hub)にアップロードする
+
+DockerイメージをDocker Hubにアップロードするには、**docker image push**コマンドを利用する。
+
+```
+$ docker image push <Docker Hubイメージ名>/イメージ名[:タグ名]
+```
 
 
 # 起動中のコンテナの操作方法
