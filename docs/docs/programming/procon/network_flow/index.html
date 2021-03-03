@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ネットワークフロー # グラフにおける最大流・最小流問題についてを述べる。 以下に例題を示す。 ネットワーク上の2台のコンピュータS,Tがあり、Sか">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="ネットワークフロー" />
+<meta property="og:description" content="ネットワークフロー # グラフにおける最大流・最小流問題についてを述べる。 以下に例題を示す。 ネットワーク上の2台のコンピュータS,Tがあり、Sか" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/procon/network_flow/" />
+<meta property="article:modified_time" content="2021-02-19T21:29:05+09:00" />
+<title>ネットワークフロー | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>ネットワークフロー</strong>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="ネットワークフロー">
+  ネットワークフロー
+  <a class="anchor" href="#%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%83%95%e3%83%ad%e3%83%bc">#</a>
+</h1>
+<p>グラフにおける最大流・最小流問題についてを述べる。</p>
+<p>以下に例題を示す。</p>
+<pre><code>
+ネットワーク上の2台のコンピュータS,Tがあり、SからTにデータを送りたいとする。
+このネットワークには全部でN台のコンピュータがあり、いくつかのコンピュータの間は一方向性の通信ケーブルで接続されていて、
+それぞれ１秒間に通信できる最大のデータ量が決まっています。他のコンピュータが通信を行なっていない時、
+sからtへどれだけのデータを送信することができるでしょうか。
+
+</code></pre><p><img src="https://WAT36.github.io/pages/img/procon/networkflow1.png" alt="ネットワークフロー" /></p>
+<p>まずは、貪欲法を用いて流せるところに目一杯データを流すという方法が考えられる。以下のアルゴリズムを考える。</p>
+<ol>
+<li>流れているデータ量が最大に達していない辺のみを用いたsからtへのパスを見つける</li>
+<li>そのようなパスが存在しなければ終了。存在すれば、そのパスに沿って目一杯流し、1.へ戻る</li>
+</ol>
+<p>このアルゴリズムで試した場合、以下のような流れになる。</p>
+<img src="https://WAT36.github.io/pages/img/procon/networkflow2.png" width=50%>
+<img src="https://WAT36.github.io/pages/img/procon/networkflow3.png" width=50%>
+<p>これが最適なのか？というと、実はもっと最適な方法があり、以下の通りである。</p>
+<img src="https://WAT36.github.io/pages/img/procon/networkflow4.png" width=50%>
+<p>最初の貪欲法では最適解を導けないという事だろうか。</p>
+<p>ここで、最適解と貪欲法で導いた解との、各辺におけるフローの差をとると以下の通りになる。</p>
+<img src="https://WAT36.github.io/pages/img/procon/networkflow5.png" width=50%>
+<p>この図から、最適解は貪欲法で求めた解から更に一部のフローを押し戻す(図中の-1の辺)形で、新たにフローを足していると見ることができる。</p>
+<p>ここで、先程のアルゴリズムを改良し、以下のように考えてみよう。</p>
+<ol>
+<li>流れているデータ量が最大に達していない辺、またはすでにデータが流れている辺の逆辺を用いたsからtへのパスを見つける</li>
+<li>そのようなパスが存在しなければ終了。存在すれば、そのパスに沿って目一杯流し、1.へ戻る</li>
+</ol>
+<p>これを最初の貪欲法で求めた状態から適用すると、s→2→1→3→tと大きさ1のフローを流せば最適解になる。(2→1は逆辺)</p>
+<p>このアルゴリズムをコードで実装した例を以下に記載する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">INF<span style="color:#f92672">=</span>float(<span style="color:#e6db74">&#34;inf&#34;</span>)
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">edge</span>:
+    <span style="color:#66d9ef">def</span> __init__(self,to,cap,rev):
+            self<span style="color:#f92672">.</span>to<span style="color:#f92672">=</span>to
+            self<span style="color:#f92672">.</span>cap<span style="color:#f92672">=</span>cap
+            self<span style="color:#f92672">.</span>rev<span style="color:#f92672">=</span>rev
+
+<span style="color:#75715e">#頂点の数</span>
+V<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+
+<span style="color:#75715e">#グラフ</span>
+G<span style="color:#f92672">=</span>[]
+<span style="color:#75715e">#DFSですでに使われたかのフラグ</span>
+used<span style="color:#f92672">=</span>[]
+
+<span style="color:#75715e">#初期化</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">init</span>(v):
+    <span style="color:#66d9ef">global</span> G
+    <span style="color:#66d9ef">global</span> used
+    G<span style="color:#f92672">=</span>[[] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(v)]
+    used<span style="color:#f92672">=</span>[False <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(v)]
+
+<span style="color:#75715e">#fromからtoへ向かう容量capの辺をグラフに追加する</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_edge</span>(from_v,to_v,cap):
+    <span style="color:#66d9ef">global</span> G
+    <span style="color:#75715e">#from-&gt;toの容量capの辺,逆辺はto-&gt;fromの辺</span>
+    G[from_v]<span style="color:#f92672">.</span>append(edge(to_v,cap,len(G[to_v])))
+    G[to_v]<span style="color:#f92672">.</span>append(edge(from_v,<span style="color:#ae81ff">0</span>,len(G[from_v])<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>))
+
+
+<span style="color:#75715e">#増加パスをDFSで探す</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfs</span>(v,t,f):
+    <span style="color:#66d9ef">global</span> G
+    <span style="color:#66d9ef">global</span> used
+    <span style="color:#66d9ef">if</span>(v<span style="color:#f92672">==</span>t):
+        <span style="color:#66d9ef">return</span> f
+    used[v]<span style="color:#f92672">=</span>True
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(G[v])):
+        e<span style="color:#f92672">=</span>G[v][i]
+        <span style="color:#66d9ef">if</span>(<span style="color:#f92672">not</span> used[e<span style="color:#f92672">.</span>to] <span style="color:#f92672">and</span> e<span style="color:#f92672">.</span>cap <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>):
+            d <span style="color:#f92672">=</span> dfs(e<span style="color:#f92672">.</span>to,t,min(f,e<span style="color:#f92672">.</span>cap))
+            <span style="color:#66d9ef">if</span>(d<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>):
+                e<span style="color:#f92672">.</span>cap<span style="color:#f92672">-=</span>d
+                G[e<span style="color:#f92672">.</span>to][e<span style="color:#f92672">.</span>rev]<span style="color:#f92672">.</span>cap<span style="color:#f92672">+=</span>d
+                <span style="color:#66d9ef">return</span> d
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+
+<span style="color:#75715e">#sからtへの最大流を求める</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">max_flow</span>(s,t):
+    <span style="color:#66d9ef">global</span> used
+    flow<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">while</span> True:
+        used<span style="color:#f92672">=</span>[False <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(V)]
+        f<span style="color:#f92672">=</span>dfs(s,t,INF)
+        <span style="color:#66d9ef">if</span>(f<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>):
+            <span style="color:#66d9ef">return</span> flow
+        flow<span style="color:#f92672">+=</span>f
+
+<span style="color:#75715e">#初期化</span>
+V<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
+init(V)
+
+<span style="color:#75715e">#入力(辺)</span>
+add_edge(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">10</span>)
+add_edge(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>)
+add_edge(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">6</span>)
+add_edge(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">6</span>)
+add_edge(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>)
+add_edge(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>)
+add_edge(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">8</span>)
+
+<span style="color:#75715e">#実行</span>
+ans<span style="color:#f92672">=</span>max_flow(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">4</span>)
+<span style="color:#66d9ef">print</span>(ans)
+</code></pre></div><p>実行結果</p>
+<pre><code>11
+</code></pre><p>となり、最適解が求められる。</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/3f05d614898dec8ceeebce0c71390ea0b661c539" title='Last modified by Wataru Tsukagoshi | Feb 19, 2021' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Feb 19, 2021</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/procon/network_flow.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

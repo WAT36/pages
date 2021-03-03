@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ジェネリクス # ジェネリクスについて。 ジェネリクスとは、特定の型に制限されない、抽象的かつ汎用的なコードを記述するための機能である。 変数の型を">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="ジェネリクス" />
+<meta property="og:description" content="ジェネリクス # ジェネリクスについて。 ジェネリクスとは、特定の型に制限されない、抽象的かつ汎用的なコードを記述するための機能である。 変数の型を" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/other/generics/" />
+<meta property="article:modified_time" content="2020-07-21T21:11:08+09:00" />
+<title>ジェネリクス | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>ジェネリクス</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="ジェネリクス">
+  ジェネリクス
+  <a class="anchor" href="#%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%aa%e3%82%af%e3%82%b9">#</a>
+</h1>
+<p>ジェネリクスについて。</p>
+<p>ジェネリクスとは、特定の型に制限されない、抽象的かつ汎用的なコードを記述するための機能である。</p>
+<p>変数の型を明記することが必要な言語では、変数を宣言するときにその変数の型名も書く必要があり、またその変数にはその型の値しかいれることができない。</p>
+<p>しかし、ジェネリクスを利用すると、引数の型は抽象的なものになり、様々な型の引数を渡すことが可能になる。</p>
+<p>言語による仕様を示す。</p>
+
+
+
+
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-comment" id="tabs-comment-0" checked="checked" />
+  <label for="tabs-comment-0">Java</label>
+  <div class="book-tabs-content markdown-inner"><p>Javaでは<strong>ダイヤモンド演算子</strong>を使ってジェネリクスを宣言する。</p>
+<p>クラスを定義する時、及びジェネリクスを利用する変数を定義する時、型名の後ろに&lt;クラス名&gt;というように宣言する。</p>
+<p>これにより、そのクラス、インスタンスを利用する時の引数にはその型の引数のみ利用できるようになる。</p>
+<p>インスタンス宣言時に利用できる型を定義できるので、結果としてそのクラスとしてはどの型のデータも利用することが可能になる。</p>
+<p>実際の利用例としては、Collectionsクラスを元としているListクラスやMapクラスがある。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> l <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;();</span>
+Map<span style="color:#f92672">&lt;</span>K<span style="color:#f92672">,</span>V<span style="color:#f92672">&gt;</span> m <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;</span>K<span style="color:#f92672">,</span>V<span style="color:#f92672">&gt;();</span>
+</code></pre></div><p>実際に利用する時はこのT,K,VをIntegerやStringなどの具体的な型にする。</p>
+<p>また、自分でクラスを定義するときもジェネリクスが利用できる。</p>
+<p>実装例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Gen</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">//T型のフィールド変数t
+</span><span style="color:#75715e"></span>    T t<span style="color:#f92672">;</span>
+ 
+    <span style="color:#75715e">//T型の値を引数とする
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Gen</span><span style="color:#f92672">(</span>T t<span style="color:#f92672">){</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">t</span> <span style="color:#f92672">=</span> t<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div></div><input type="radio" class="toggle" name="tabs-comment" id="tabs-comment-1"  />
+  <label for="tabs-comment-1">Swift</label>
+  <div class="book-tabs-content markdown-inner"><p>Swiftでは関数の定義時ジェネリクスを利用する。</p>
+<p>定義方法は&lt;&gt;で囲い、その中に記述する。</p>
+<p>例を以下に記載する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">min</span>&lt;T : Comparable&gt;(<span style="color:#66d9ef">_</span> x: T, <span style="color:#66d9ef">_</span> y: T) -&gt; T
+</code></pre></div><p>この例では、minという関数には引数が２つ、かつその両方は同じ型で返り値も同じ型、また利用する型はComparableプロトコルに準拠している物でなければならないという指定である。</p>
+<p>(・・後ほど追記します)</p>
+</div></div>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/645fee45c10b955fba9c2d48b1e419e541ed2ef3" title='Last modified by Wataru Tsukagoshi | Jul 21, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jul 21, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/other/generics.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

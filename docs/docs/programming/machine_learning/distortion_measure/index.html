@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="歪み尺度 # 教師あり学習では、学習が進み精度が高くなることの指標として、平均交差エントロピー誤差のような関数を利用していた。 教師なし学習、今回">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="歪み尺度" />
+<meta property="og:description" content="歪み尺度 # 教師あり学習では、学習が進み精度が高くなることの指標として、平均交差エントロピー誤差のような関数を利用していた。 教師なし学習、今回" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/machine_learning/distortion_measure/" />
+<meta property="article:modified_time" content="2020-07-28T23:51:02+09:00" />
+<title>歪み尺度 | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>歪み尺度</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="歪み尺度">
+  歪み尺度
+  <a class="anchor" href="#%e6%ad%aa%e3%81%bf%e5%b0%ba%e5%ba%a6">#</a>
+</h1>
+<p>教師あり学習では、学習が進み精度が高くなることの指標として、平均交差エントロピー誤差のような関数を利用していた。</p>
+<p>教師なし学習、今回のクラスタリングの場合でもこのような関数を設定し利用することはできないだろうか。</p>
+<p>実は、クラスタリングにおいてもそのような関数があり、<strong>歪み尺度</strong>と呼ばれている。</p>
+<p>歪み尺度とは、全ての入力データにおいてそれが属するクラスタの中心位置との距離の2乗の和を取ったものである。</p>
+<p>この値が小さくなればなるほど、クラスタリングがうまく行われているとみなせる。</p>
+<p>歪み尺度を求める式を以下に示す。</p>
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/katex/katex.min.css" />
+<script defer src="https://WAT36.github.io/pages/katex/katex.min.js"></script>
+<script defer src="https://WAT36.github.io/pages/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \(\tag{1}
+    J = \sum_{x_{i} \in クラスタk}^{}  \sum_{k=0}^{クラスタ数-1} | x_{i} - { \bf \mu }_{k} | ^2 \)
+</span>
+
+<p>では、前述のクラスタリングに歪み尺度を求めるコードを追加してみよう。</p>
+<p>k-means法のコードに歪み尺度を求めるコードを追加し、学習するループごとにおいて歪み尺度を計算し、表示してみる。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+k<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>
+x<span style="color:#f92672">=</span>[]
+mu<span style="color:#f92672">=</span>[]
+R<span style="color:#f92672">=</span>[]
+
+<span style="color:#75715e">## 新規追加　歪み尺度を求める関数</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">distortion_measure</span>(x,mu,r):
+    <span style="color:#75715e">#クラスタ数</span>
+    k<span style="color:#f92672">=</span>r<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]
+    <span style="color:#75715e">#歪み尺度</span>
+    J<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+    <span style="color:#75715e">#計算</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(k):
+        xi<span style="color:#f92672">=</span>x[r[:,i]<span style="color:#f92672">==</span><span style="color:#ae81ff">1</span>]
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(xi<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]):
+            J<span style="color:#f92672">+=</span>(xi[j][<span style="color:#ae81ff">0</span>]<span style="color:#f92672">-</span>mu[i][<span style="color:#ae81ff">0</span>])<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span>(xi[j][<span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span>mu[i][<span style="color:#ae81ff">1</span>])<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>
+    
+    <span style="color:#66d9ef">return</span> J
+
+
+<span style="color:#75715e">#R計算</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">calc_r</span>(X,Mu):
+
+    <span style="color:#75715e">#初期化　入力データx、μとR用意</span>
+    x<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>array(X)
+    mu<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>array(Mu)
+    k<span style="color:#f92672">=</span>len(mu)
+    R<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros((len(x),k))
+
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(x)):
+        ri<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros(k)
+        ri[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+        R[i]<span style="color:#f92672">=</span>ri
+
+    flag<span style="color:#f92672">=</span>True
+    count<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+
+    <span style="color:#66d9ef">while</span>(flag):
+        flag<span style="color:#f92672">=</span>False
+
+        <span style="color:#75715e">#Rを計算し更新</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(x)):
+            d<span style="color:#f92672">=</span>[(x[i][<span style="color:#ae81ff">0</span>]<span style="color:#f92672">-</span>mu[j][<span style="color:#ae81ff">0</span>])<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> (x[i][<span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span>mu[j][<span style="color:#ae81ff">1</span>])<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>  <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(k)]
+            ri<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros(k)
+            ri[d<span style="color:#f92672">.</span>index(min(d))]<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">if</span>(<span style="color:#f92672">not</span> np<span style="color:#f92672">.</span>allclose(R[i],ri)):
+                flag<span style="color:#f92672">=</span>True
+            R[i]<span style="color:#f92672">=</span>ri
+
+        <span style="color:#75715e">#μを調整</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(k):
+            x_i<span style="color:#f92672">=</span>x[R[:,i]<span style="color:#f92672">==</span><span style="color:#ae81ff">1</span>]
+            mu_ix<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>mean(x_i[:,<span style="color:#ae81ff">0</span>])
+            mu_iy<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>mean(x_i[:,<span style="color:#ae81ff">1</span>])
+            mu[i]<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>array([mu_ix,mu_iy])
+        
+        <span style="color:#75715e">##この部分を新規追加 学習終了後に歪み尺度を計算して表示</span>
+        J<span style="color:#f92672">=</span>distortion_measure(x,mu,R)
+        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;学習{0}回目,歪み尺度:{1}&#34;</span><span style="color:#f92672">.</span>format(count,J))
+
+        count<span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>    
+
+    <span style="color:#66d9ef">return</span> mu,R
+</code></pre></div><p>実行結果(コンソール)</p>
+<pre><code>$ python do_k_means.py 
+学習1回目,歪み尺度:144.6011020740245
+学習2回目,歪み尺度:151.78653084347673
+学習3回目,歪み尺度:136.5863856799487
+学習4回目,歪み尺度:134.59275424760008
+学習5回目,歪み尺度:134.59275424760008
+</code></pre><p>となり、初めは尺度が上がっているが、学習が進むにつれ歪み尺度が少なくなっていき、学習の精度が高くなっていることが伺える。</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/33fe18495bb0ba0ae223eec1c022c5a3e2e452b8" title='Last modified by Wataru Tsukagoshi | Jul 28, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jul 28, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/machine_learning/distortion_measure.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

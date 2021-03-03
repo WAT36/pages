@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ガウス関数 # Python ガウス関数は以下の式で表される関数である。 a exp ( - (x - &mu; ) 2 &sigma; 2 ) ここで、式中の変数は以下の意味を持つ。 μ：中心(平均) σ：標">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="ガウス関数" />
+<meta property="og:description" content="ガウス関数 # Python ガウス関数は以下の式で表される関数である。 a exp ( - (x - &mu; ) 2 &sigma; 2 ) ここで、式中の変数は以下の意味を持つ。 μ：中心(平均) σ：標" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/machine_learning/gauss/" />
+<meta property="article:modified_time" content="2020-10-26T22:31:30+09:00" />
+<title>ガウス関数 | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>ガウス関数</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="ガウス関数">
+  ガウス関数
+  <a class="anchor" href="#%e3%82%ac%e3%82%a6%e3%82%b9%e9%96%a2%e6%95%b0">#</a>
+</h1>
+
+
+
+
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-gauss" id="tabs-gauss-0" checked="checked" />
+  <label for="tabs-gauss-0">Python</label>
+  <div class="book-tabs-content markdown-inner"><p>ガウス関数は以下の式で表される関数である。</p>
+<math>
+    <mi>a</mi>
+    <mi>exp</mi>
+    <mrow>
+        <mo>(</mo>
+            <mo>-</mo>
+            <mfrac>
+                <mrow>
+                    <msup>
+                        <mrow>
+                            <mi>(x</mi>
+                            <mo>-</mo>
+                            <mi>&mu;</mi>
+                            <mn>)</mn>
+                        </mrow>
+                        <mn>2</mn>
+                    </msup>
+                </mrow>
+                <mrow>
+                    <msup>
+                        <mi>&sigma;</mi>
+                        <mn>2</mn>
+                    </msup>
+                </mrow>
+            </mfrac>
+        <mo>)</mo>
+    </mrow>
+</math>
+<p>ここで、式中の変数は以下の意味を持つ。</p>
+<ul>
+<li>μ：中心(平均)</li>
+<li>σ：標準偏差</li>
+<li>a：高さ(係数)</li>
+</ul>
+<p>ここで、
+<math>
+<mi>a</mi>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<msqrt>
+<mn>2</mn>
+<mi>π</mi>
+<msup>
+<mi>σ</mi>
+<mn>2</mn>
+</msup>
+</msqrt>
+</mrow>
+</mfrac>
+</math>
+とした時、xで積分すると1になるため、確率密度関数としても使われる。</p>
+<p>例として、a=1,μ=0,σ=1とした時のガウス関数を示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#ガウス関数</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">gauss</span>(a,mu,sigma):
+<span style="color:#f92672">...</span>     <span style="color:#66d9ef">return</span> a <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>exp( <span style="color:#f92672">-</span>(x<span style="color:#f92672">-</span>mu)<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">/</span> sigma<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span> )
+<span style="color:#f92672">...</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> x<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>linspace(<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">100</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> plt<span style="color:#f92672">.</span>plot(x,gauss(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>),<span style="color:#e6db74">&#39;black&#39;</span>,linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+[<span style="color:#f92672">&lt;</span>matplotlib<span style="color:#f92672">.</span>lines<span style="color:#f92672">.</span>Line2D object at <span style="color:#ae81ff">0x11740d908</span><span style="color:#f92672">&gt;</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> plt<span style="color:#f92672">.</span>ylim(<span style="color:#f92672">-</span><span style="color:#ae81ff">0.5</span>,<span style="color:#ae81ff">1.5</span>)
+(<span style="color:#f92672">-</span><span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">1.5</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> plt<span style="color:#f92672">.</span>xlim(<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>)
+(<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> plt<span style="color:#f92672">.</span>grid(True)
+<span style="color:#f92672">&gt;&gt;&gt;</span> plt<span style="color:#f92672">.</span>show()
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+</code></pre></div><p>実行結果</p>
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_15.png" width=50%>
+</div></div>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/f23a5407ef8289d460b2d5977c53174986214e79" title='Last modified by Wataru Tsukagoshi | Oct 26, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Oct 26, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/machine_learning/gauss.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

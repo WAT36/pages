@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on WAT Notes</title>
@@ -6,10 +6,42 @@
     <description>Recent content in Posts on WAT Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sat, 04 Jul 2020 01:47:27 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 16 Feb 2021 23:34:28 +0900</lastBuildDate><atom:link href="https://WAT36.github.io/pages/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pythonでiniファイルを読み込むライブラリ「configparser」</title>
+      <link>https://WAT36.github.io/pages/posts/configparser/</link>
+      <pubDate>Tue, 16 Feb 2021 23:34:28 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/configparser/</guid>
+      <description>Pythonのライブラリ「configparser」について、備忘のために示す。 実行環境 # Python 3.7.3 Mac OS 10.15.5 設定ファイル(iniファイル) # iniフ</description>
+    </item>
     
-	<atom:link href="https://WAT36.github.io/pages/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>クイズ問題を書いたローカルのcsvファイルから自動でslackに問題をPOSTするシステムを作ってみた</title>
+      <link>https://WAT36.github.io/pages/posts/csv_quiz_bot/</link>
+      <pubDate>Thu, 04 Feb 2021 21:04:55 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/csv_quiz_bot/</guid>
+      <description>はじめに # 資格勉強をすることがあるのだが、その際に自作した問題を自動で出題し答えられる様なシステムがあれば自身のアウトプットにもなるし、抜け</description>
+    </item>
     
+    <item>
+      <title>Githubで初めてプルリクエストをやったのでその手順を書いておく</title>
+      <link>https://WAT36.github.io/pages/posts/pull_request/</link>
+      <pubDate>Sat, 09 Jan 2021 23:21:48 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/pull_request/</guid>
+      <description>GitHubにおいて、OSS活動では必須の手順である「プルリクエスト」。 簡単にできるものだと思ってたが、意外とややこしいところもあったりで。</description>
+    </item>
+    
+    <item>
+      <title>2020年0708月の活動 &amp; HTML5 Level1試験合格しました</title>
+      <link>https://WAT36.github.io/pages/posts/20200708/</link>
+      <pubDate>Tue, 01 Sep 2020 23:03:16 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/20200708/</guid>
+      <description>タイトルにもある通り、07月、08月の活動について。 先月も気づいたら飛ばしていたのでここでまとめる。 と言っても、平日はほぼ仕事&amp;amp;連日</description>
+    </item>
     
     <item>
       <title>2020年04~06月の活動</title>
@@ -35,7 +67,7 @@
       <pubDate>Mon, 27 Apr 2020 00:02:47 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/posts/aws_create_api_gateway/</guid>
-      <description>AWSでのAPI GatewayでのAPI作成方法について、備忘がてら手順をのせる。 1. AWSマネジメントコンソールにログインする AWSマネジメ</description>
+      <description>AWSでのAPI GatewayでのAPI作成方法について、備忘がてら手順をのせる。 1. AWSマネジメントコンソールにログインする # AWSマネジ</description>
     </item>
     
     <item>
@@ -44,7 +76,7 @@
       <pubDate>Sun, 05 Apr 2020 20:04:12 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/posts/aws_create_lambda/</guid>
-      <description>AWSでLambdaの関数を作る方法について、またまた備忘がてら手順をのせておく。 1. AWSマネジメントコンソールにログインする AWSマネジメ</description>
+      <description>AWSでLambdaの関数を作る方法について、またまた備忘がてら手順をのせておく。 1. AWSマネジメントコンソールにログインする # AWSマネジ</description>
     </item>
     
     <item>
@@ -53,7 +85,7 @@
       <pubDate>Thu, 02 Apr 2020 22:50:12 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/posts/aws_create_dynamo_table/</guid>
-      <description>AWSでDynamoDBのテーブルを作る方法について、備忘がてら手順をのせる。 1. AWSマネジメントコンソールにログインする AWSマネジメント</description>
+      <description>AWSでDynamoDBのテーブルを作る方法について、備忘がてら手順をのせる。 1. AWSマネジメントコンソールにログインする # AWSマネジメン</description>
     </item>
     
     <item>
@@ -80,7 +112,7 @@
       <pubDate>Thu, 30 Jan 2020 22:09:35 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/posts/warshall_floyd/</guid>
-      <description>経路探索アルゴリズムの一つ「ワーシャル・フロイド法」についてを調べてみた。 ワーシャル・フロイド法とは？ ワーシャル・フロイド法とは、グラフのあ</description>
+      <description>経路探索アルゴリズムの一つ「ワーシャル・フロイド法」についてを調べてみた。 ワーシャル・フロイド法とは？ # ワーシャル・フロイド法とは、グラフの</description>
     </item>
     
     <item>
@@ -89,7 +121,7 @@
       <pubDate>Sat, 30 Nov 2019 15:05:05 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/posts/graph_coloring/</guid>
-      <description>競プロでグラフの彩色問題が出てきたので、今回はグラフの頂点彩色問題について、復習がてら記事を書いてみる。 グラフの彩色 そもそもグラフの彩色とは</description>
+      <description>競プロでグラフの彩色問題が出てきたので、今回はグラフの頂点彩色問題について、復習がてら記事を書いてみる。 グラフの彩色 # そもそもグラフの彩色と</description>
     </item>
     
     <item>

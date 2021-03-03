@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Null # プログラミングでよく見るNullについて。 Nullとは何なのか？ Nullとは何もない、何も入ってない、という状態を示す語である。 変数に何">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Null" />
+<meta property="og:description" content="Null # プログラミングでよく見るNullについて。 Nullとは何なのか？ Nullとは何もない、何も入ってない、という状態を示す語である。 変数に何" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/other/null/" />
+<meta property="article:modified_time" content="2020-07-15T20:15:42+09:00" />
+<title>Null | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Null</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="null">
+  Null
+  <a class="anchor" href="#null">#</a>
+</h1>
+<p>プログラミングでよく見るNullについて。</p>
+<p>Nullとは何なのか？</p>
+<p>Nullとは何もない、何も入ってない、という状態を示す語である。</p>
+<p>変数に何も値が定義されていないとき、変数の値を参照しようとするとNullが返ってくる。</p>
+<p>よく0と勘違いされることが多いが、変数の値を参照して0が返ってきたときは、0という値が変数に入っているという意味であり何も値が定義されていないという意味ではないので注意。</p>
+<p>言語により仕様が違うこともあるので、それぞれの言語でのNullを以下に述べていく。</p>
+
+
+
+
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-comment" id="tabs-comment-0" checked="checked" />
+  <label for="tabs-comment-0">Java</label>
+  <div class="book-tabs-content markdown-inner"><p>Javaでは参照型のデータ型において、何も参照していない状態を表す時にnullを利用する。</p>
+<p>参照型の変数に直接nullを代入することも可能である。変数がnullであるかを確認するには、比較演算子(==)を用いる。</p>
+<p>intやcharなどの基本データ型にはnullは入れられないので注意すること。基本データ型には、宣言時に自動的に(型により決められている)初期値が入る。</p>
+<p>nullの変数に対しメソッド呼び出しを行った場合、NullPointerException例外が発生するので注意。</p>
+<p>例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.*<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span><span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[]){</span>
+    String s <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>s<span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">());</span>    
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>実行結果</p>
+<pre><code>$ java Main
+null
+Exception in thread &quot;main&quot; java.lang.NullPointerException
+        at Main.main(Main.java:7)
+</code></pre></div><input type="radio" class="toggle" name="tabs-comment" id="tabs-comment-1"  />
+  <label for="tabs-comment-1">Python</label>
+  <div class="book-tabs-content markdown-inner"><p>Pythonでは<strong>None</strong>という語がnullである状態を示す。</p>
+<p>同じく変数に直接Noneを代入することも可能である。</p>
+<p>Noneとなっている変数の関数や属性などを呼び出すとエラーになるので注意。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> v <span style="color:#f92672">=</span> None
+<span style="color:#f92672">&gt;&gt;&gt;</span> v
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#Noneは表示されない</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span>{<span style="color:#ae81ff">1</span>:<span style="color:#e6db74">&#39;a&#39;</span>,<span style="color:#ae81ff">2</span>:<span style="color:#e6db74">&#39;b&#39;</span>}
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a[<span style="color:#ae81ff">1</span>]
+<span style="color:#e6db74">&#39;a&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+<span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span>None
+<span style="color:#f92672">&gt;&gt;&gt;</span> a[<span style="color:#ae81ff">1</span>]
+Traceback (most recent call last):
+  File <span style="color:#e6db74">&#34;&lt;stdin&gt;&#34;</span>, line <span style="color:#ae81ff">1</span>, <span style="color:#f92672">in</span> <span style="color:#f92672">&lt;</span>module<span style="color:#f92672">&gt;</span>
+<span style="color:#a6e22e">TypeError</span>: <span style="color:#e6db74">&#39;NoneType&#39;</span> object <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> subscriptable
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#75715e">#Noneの関数・属性を呼び出すとエラー</span>
+</code></pre></div></div><input type="radio" class="toggle" name="tabs-comment" id="tabs-comment-2"  />
+  <label for="tabs-comment-2">Swift</label>
+  <div class="book-tabs-content markdown-inner"><p>Swiftでは<strong>nil</strong>という語が値のない、nullである状態を示す。</p>
+<p>しかし、Swiftでは基本的にnilを変数や定数に代入することはできない。</p>
+<p>だが例外として、Optional<Wrapped>型の変数はnilを許容でき、nilを代入できる(他にもnilを許容できる型はいくつかあるが、代表的なものはこのOptional変数。)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">var</span> a: Optional&lt;Int&gt;
+<span style="color:#66d9ef">var</span> b: Int
+
+a = <span style="color:#66d9ef">nil</span> <span style="color:#75715e">// OK</span>
+b = <span style="color:#66d9ef">nil</span> <span style="color:#75715e">// コンパイルエラーが発生する</span>
+</code></pre></div></div></div>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/10874c065f9b60b27a4cd5e51ddb2c8add7edf9b" title='Last modified by Wataru Tsukagoshi | Jul 15, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jul 15, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/other/null.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

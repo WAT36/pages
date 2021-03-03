@@ -1,225 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="複数の数字のうち最も大きい数字をとる # 複数の数値から一番大きい数値を取り出したい時の方法を示す。 Java Javaではjava.lang.Mathク">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="複数の数字のうち最も大きい数字をとる" />
+<meta property="og:description" content="複数の数字のうち最も大きい数字をとる # 複数の数値から一番大きい数値を取り出したい時の方法を示す。 Java Javaではjava.lang.Mathク" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/number/max/" />
+<meta property="article:modified_time" content="2020-01-05T16:37:57+09:00" />
 <title>複数の数字のうち最も大きい数字をとる | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.6a2036176fd3d23156cbd3a600fc9a2d9cce1ea33db8bc9b198029389d631721.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
 
-
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-  
-</head>
-
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
-<h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-    
-  
-  
-  
-
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fnumber\2fmax\2f "] {
-      color: #004ed0;
-  }
-  </style>
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
-</ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
-<ul>
-<li>
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/container/container_index/"><strong>コンテナ</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
-</ul>
-
-<p></details></p>
-
-<ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
-</ul>
-
-
-
-
-
-
-
-
-  <div class="page-nav-item">
-    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
-  </div>
-  <br>
-  <div class="page-nav-item">
-    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
-  </div>
-</nav>
-
-
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
-
-    </aside>
-
-    <div class="book-page">
-      <header class="flex align-center justify-between book-header">
-  <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
-  </label>
-  <strong>複数の数字のうち最も大きい数字をとる</strong>
-</header>
-
-      
-<article class="markdown">
-
-<h1 id="複数の数字のうち最も大きい数字をとる">複数の数字のうち最も大きい数字をとる</h1>
-
-<p>複数の数値から一番大きい数値を取り出したい時の方法を示す。</p>
-
-
-
-
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-max" style="display: none;" id="tabs-max-0" checked="checked" />
-  <label for="tabs-max-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Javaでは<strong>java.lang.Math</strong>クラス内にある<strong>max()</strong>メソッドがこの役割を果たす。
-利用するにはjava.lang.Mathクラスをインポートする。</p>
-
-<p><code>public static int max(int a,int b)</code></p>
-
-<p>また、int型に限らず、double型、float型、long型などもオーバーロードとして定義されている。
-無論だが、いずれの場合も利用するには引数、返り値の型は一致させておく必要がある。
-ちなみに、引数は２つしか指定できないので、２値間での最大値しか測れない。
-３つ以上の値で最大値を取りたい場合は、maxメソッドを入れ子にして利用するなどする。
-使用例を以下に示す。(クラスはここではMain.javaとする)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#a6e22e">java</span>.<span style="color:#a6e22e">lang</span>.<span style="color:#a6e22e">Math</span>;
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
-	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-		<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> 1;
-		<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> 2;
-		<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> 3;
-		
-		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(Math.<span style="color:#a6e22e">max</span>(a,b)); <span style="color:#75715e">//a,bで大きい値
-</span><span style="color:#75715e"></span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(Math.<span style="color:#a6e22e">max</span>(b,c)); <span style="color:#75715e">//b,cで大きい値
-</span><span style="color:#75715e"></span>
-        <span style="color:#75715e">//a,bで大きい方とcで大きい値 -&gt; a,b,cで最も大きい値
-</span><span style="color:#75715e"></span>		System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(Math.<span style="color:#a6e22e">max</span>(Math.<span style="color:#a6e22e">max</span>(a,b),c));
-	}
-}</code></pre></div>
-<p>実行後</p>
-
-<pre><code>$ java Main
-2
-3
-3
-</code></pre>
-
-  </div>
-
-  <input type="radio" name="tabs-max" style="display: none;" id="tabs-max-1"  />
-  <label for="tabs-max-1">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>Pythonでは組み込み関数の<strong>max()</strong>関数を利用する。
-javaと違い、こちらは引数の数に制限はないため、比較したい値をいくらでも入力できる。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> b<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> c<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> max(a,b)
-<span style="color:#ae81ff">2</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> max(a,b,c)
-<span style="color:#ae81ff">3</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> </code></pre></div>
-  </div>
-
-</div>
-
-</article>
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f3dcb4ba0aed4e8c96315c519011ed407623594e" title='Last modified Jan 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 5, 2020
-    </a>
-  </div>
-  
-</div>
-
-
-      
-    </div>
-    
-  
-
-
-
-  </main>
-
-  
-  
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -230,7 +27,222 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
 
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>複数の数字のうち最も大きい数字をとる</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="複数の数字のうち最も大きい数字をとる">
+  複数の数字のうち最も大きい数字をとる
+  <a class="anchor" href="#%e8%a4%87%e6%95%b0%e3%81%ae%e6%95%b0%e5%ad%97%e3%81%ae%e3%81%86%e3%81%a1%e6%9c%80%e3%82%82%e5%a4%a7%e3%81%8d%e3%81%84%e6%95%b0%e5%ad%97%e3%82%92%e3%81%a8%e3%82%8b">#</a>
+</h1>
+<p>複数の数値から一番大きい数値を取り出したい時の方法を示す。</p>
+
+
+
+
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-max" id="tabs-max-0" checked="checked" />
+  <label for="tabs-max-0">Java</label>
+  <div class="book-tabs-content markdown-inner"><p>Javaでは<strong>java.lang.Math</strong>クラス内にある**max()**メソッドがこの役割を果たす。
+利用するにはjava.lang.Mathクラスをインポートする。</p>
+<p><code>public static int max(int a,int b)</code></p>
+<p>また、int型に限らず、double型、float型、long型などもオーバーロードとして定義されている。
+無論だが、いずれの場合も利用するには引数、返り値の型は一致させておく必要がある。
+ちなみに、引数は２つしか指定できないので、２値間での最大値しか測れない。
+３つ以上の値で最大値を取りたい場合は、maxメソッドを入れ子にして利用するなどする。
+使用例を以下に示す。(クラスはここではMain.javaとする)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.lang.Math<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span><span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[]){</span>
+		<span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> 2<span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">int</span> c <span style="color:#f92672">=</span> 3<span style="color:#f92672">;</span>
+		
+		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>a<span style="color:#f92672">,</span>b<span style="color:#f92672">));</span> <span style="color:#75715e">//a,bで大きい値
+</span><span style="color:#75715e"></span>		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>b<span style="color:#f92672">,</span>c<span style="color:#f92672">));</span> <span style="color:#75715e">//b,cで大きい値
+</span><span style="color:#75715e"></span>
+        <span style="color:#75715e">//a,bで大きい方とcで大きい値 -&gt; a,b,cで最も大きい値
+</span><span style="color:#75715e"></span>		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>a<span style="color:#f92672">,</span>b<span style="color:#f92672">),</span>c<span style="color:#f92672">));</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>実行後</p>
+<pre><code>$ java Main
+2
+3
+3
+</code></pre></div><input type="radio" class="toggle" name="tabs-max" id="tabs-max-1"  />
+  <label for="tabs-max-1">Python</label>
+  <div class="book-tabs-content markdown-inner"><p>Pythonでは組み込み関数の**max()**関数を利用する。
+javaと違い、こちらは引数の数に制限はないため、比較したい値をいくらでも入力できる。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> b<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> c<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> max(a,b)
+<span style="color:#ae81ff">2</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> max(a,b,c)
+<span style="color:#ae81ff">3</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> 
+</code></pre></div></div></div>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/f3dcb4ba0aed4e8c96315c519011ed407623594e" title='Last modified by Wataru Tsukagoshi | Jan 5, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jan 5, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/number/max.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

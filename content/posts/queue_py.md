@@ -1,8 +1,6 @@
 ---
 title: "キューとPythonでの実装モジュール「deque」"
 date: 2019-11-04T09:59:32+09:00
-categories: [ "プログラミング", "アルゴリズム"]
-tags: [ "python", "キュー","幅優先探索"]
 draft: false
 ---
 
@@ -15,7 +13,7 @@ draft: false
 
 図にすると以下のような構造を持つデータ構造である。
 
-![キュー例](/img/queue_example.png)
+![キュー例](/img/procon/queue_example.png)
 
 イメージとしては筒のようなもの。  
 キューの中にキューの後ろからデータを入れる事ができ（エンキュー）、  
@@ -23,9 +21,9 @@ draft: false
 構造上取り出せるデータはキューに入れた順となる。  
 エンキュー、デキューを下図に示す。  
 
-![エンキュー](/img/queue_enqueue.png)
+![エンキュー](/img/procon/queue_enqueue.png)
 
-![デキュー](/img/queue_dequeue.png)
+![デキュー](/img/procon/queue_dequeue.png)
 
 
 # Pythonでの実装方法

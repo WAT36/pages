@@ -3,7 +3,6 @@ title: "変数を宣言する"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
-categories: [ "Java", "Python","Swift"]
 bookToc: false
 ---
 
@@ -77,6 +76,26 @@ Swiftは静的型付け言語(コンパイルなどの実行前の段階で、�
 
 ```swift
 var a: Int
+a = 10
+```
+
+{{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptでも**var**キーワードを用いて変数を宣言する。
+
+記法は以下のとおり。
+
+```
+var (変数名)
+```
+
+Javascriptはスクリプト言語のため、型は宣言しなくても良い。
+
+例
+
+```Javascript
+var a
 a = 10
 ```
 

@@ -1,376 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HTMLの全体構造 # HTMLファイルの構造についてを述べる。 HTMLファイルは主に以下から構成される。 DOCTYPE宣言（文書型宣言） htm">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="HTMLの全体構造" />
+<meta property="og:description" content="HTMLの全体構造 # HTMLファイルの構造についてを述べる。 HTMLファイルは主に以下から構成される。 DOCTYPE宣言（文書型宣言） htm" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/html_structure/" />
+<meta property="article:modified_time" content="2020-08-27T14:02:34+09:00" />
 <title>HTMLの全体構造 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.6a2036176fd3d23156cbd3a600fc9a2d9cce1ea33db8bc9b198029389d631721.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
 
-
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-  
-</head>
-
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
-<h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-    
-  
-  
-  
-
-  <style>
-  nav ul a[href$="\2f docs\2f front-end\2fhtml_structure\2f "] {
-      color: #004ed0;
-  }
-  </style>
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
-</ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
-<ul>
-<li>
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/container/container_index/"><strong>コンテナ</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
-</ul>
-
-<p></details></p>
-
-<ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
-</ul>
-
-
-
-
-
-
-
-
-  <div class="page-nav-item">
-    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
-  </div>
-  <br>
-  <div class="page-nav-item">
-    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
-  </div>
-</nav>
-
-
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
-
-    </aside>
-
-    <div class="book-page">
-      <header class="flex align-center justify-between book-header">
-  <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
-  </label>
-  <strong>HTMLの全体構造</strong>
-</header>
-
-      
-<article class="markdown">
-
-<h1 id="htmlの全体構造">HTMLの全体構造</h1>
-
-<p>HTMLファイルの構造についてを述べる。</p>
-
-<p>HTMLファイルは主に以下から構成される。</p>
-
-<ul>
-<li>DOCTYPE宣言（文書型宣言）</li>
-<li>html要素
-
-<ul>
-<li>head要素</li>
-<li>body要素</li>
-</ul></li>
-</ul>
-
-<p>大まかな記載は以下の通り。</p>
-
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;!-- 文書に関する情報 --&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;!-- 表示させるコンテンツの情報 --&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-<hr>
-
-<h2 id="doctype宣言">DOCTYPE宣言</h2>
-
-<p>HTML5では実は必要なものではないそうだが、ブラウザの表示モードを「標準モード」にする目的で指定することになっている。</p>
-
-<p>指定がない場合、通常は以下の通りに記入する。</p>
-
-<pre><code>&lt;!DOCTYPE HTML&gt;
-</code></pre>
-
-<hr>
-
-<h2 id="html要素">html要素</h2>
-
-<p>html要素は、HTML文書のルートとなる要素である。</p>
-
-<p>他の全ての要素は、この要素内に記述しなければならない。</p>
-
-<p>また、グローバル属性であるlang属性を指定して、その文書で使用されている言語の種類を示すことが推奨されている。</p>
-
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&gt;
-    ・・・
-&lt;/html&gt;
-</code></pre>
-
-<hr>
-
-<h2 id="head要素">head要素</h2>
-
-<p>head要素は、HTML文書のメタデータを入れるための要素である。</p>
-
-<p>大体は文書のタイトル(title要素)、また文書の文字コード(meta要素)をここで指定する。</p>
-
-<h3 id="title要素">title要素</h3>
-
-<p>title要素は、HTML文書のタイトル(名前)を示す要素である。この要素は、必ずhead要素の中で指定する。</p>
-
-<pre><code>・・・
-&lt;head&gt;
-    &lt;title&gt;XXXのページ&lt;/title&gt;
-&lt;/head&gt;
-・・・
-</code></pre>
-
-<hr>
-
-<h3 id="meta要素">meta要素</h3>
-
-<p>meta要素は、HTML文書の様々なメタデータを指定できる空要素である。</p>
-
-<p>属性が色々あり、例えばcharset属性は文字コードを、name,content属性で指定したメタデータ名とそれに対する値を指定できる。</p>
-
-<pre><code>・・・
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;author&quot; content=&quot;T.Wakasugi&quot;&gt;
-    &lt;meta name=&quot;keywords&quot; content=&quot;HTML programming meta&quot;&gt;
-&lt;/head&gt;
-・・・
-</code></pre>
-
-<hr>
-
-<h3 id="link要素">link要素</h3>
-
-<p>link要素は、このHTML文書に関連する外部ファイルやリソースを示すための要素である。</p>
-
-<p>ここでいう関連するファイルやリソースというのは、HTML,CSS,RSSファイルなどのことを言う。</p>
-
-<p>link要素にはhref属性とrel属性は必ず指定する必要がある。</p>
-
-<table>
-<thead>
-<tr>
-<th align="left">属性</th>
-<th align="left">指定する値</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="left">href</td>
-<td align="left">外部ファイルやリソースのアドレス</td>
-</tr>
-
-<tr>
-<td align="left">rel</td>
-<td align="left">当文書から見た外部ファイルやリソースの関係性を示すキーワード</td>
-</tr>
-
-<tr>
-<td align="left">rev</td>
-<td align="left">外部ファイルから見た当文書の関係性を示すキーワード</td>
-</tr>
-
-<tr>
-<td align="left">hrefflag</td>
-<td align="left">外部ファイルの言語(日本語や英語など)</td>
-</tr>
-</tbody>
-</table>
-
-<p>rel・rev属性に指定できる値としては以下の通り（一部）。</p>
-
-<table>
-<thead>
-<tr>
-<th align="left">指定する値</th>
-<th align="left">意味</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="left">author</td>
-<td align="left">執筆者</td>
-</tr>
-
-<tr>
-<td align="left">help</td>
-<td align="left">ヘルプ</td>
-</tr>
-
-<tr>
-<td align="left">icon</td>
-<td align="left">アイコン</td>
-</tr>
-
-<tr>
-<td align="left">license</td>
-<td align="left">著作権ライセンス</td>
-</tr>
-
-<tr>
-<td align="left">prev</td>
-<td align="left">前の文書</td>
-</tr>
-
-<tr>
-<td align="left">next</td>
-<td align="left">次の文書</td>
-</tr>
-
-<tr>
-<td align="left">stylesheet</td>
-<td align="left">適用するスタイルシート</td>
-</tr>
-</tbody>
-</table>
-
-<hr>
-
-<h3 id="base要素">base要素</h3>
-
-<p>base要素は、そのHTML文書で使われている相対URL(パス)の基準となるURLを書く要素である。</p>
-
-<p>基準となるURLはhref属性に指定する。</p>
-
-<p>例</p>
-
-<pre><code>・・・
-&lt;head&gt;
-    &lt;base href=&quot;https://wat36.github.io/pages/&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;p&gt;&lt;a href=&quot;docs/front-end/front_index/&quot;&gt;フロントエンドのトップ&lt;/a&gt;&lt;/p&gt;
-&lt;/body&gt;
-・・・
-</code></pre>
-</article>
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/331fb45a89f3780a8a71cb3572f6c69897545ef2" title='Last modified Apr 9, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 9, 2020
-    </a>
-  </div>
-  
-</div>
-
-
-      
-    </div>
-    
-  
-
-  <aside class="book-toc level-3 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#htmlの全体構造">HTMLの全体構造</a>
-<ul>
-<li><a href="#doctype宣言">DOCTYPE宣言</a></li>
-<li><a href="#html要素">html要素</a></li>
-<li><a href="#head要素">head要素</a>
-<ul>
-<li><a href="#title要素">title要素</a></li>
-<li><a href="#meta要素">meta要素</a></li>
-<li><a href="#link要素">link要素</a></li>
-<li><a href="#base要素">base要素</a></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
-  </aside>
-
-
-
-  </main>
-
-  
-  
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -381,7 +27,416 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
 
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>HTMLの全体構造</strong>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#doctype宣言">DOCTYPE宣言</a></li>
+    <li><a href="#html要素">html要素</a></li>
+    <li><a href="#head要素">head要素</a>
+      <ul>
+        <li><a href="#title要素">title要素</a></li>
+        <li><a href="#meta要素">meta要素</a></li>
+        <li><a href="#link要素">link要素</a></li>
+        <li><a href="#base要素">base要素</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="htmlの全体構造">
+  HTMLの全体構造
+  <a class="anchor" href="#html%e3%81%ae%e5%85%a8%e4%bd%93%e6%a7%8b%e9%80%a0">#</a>
+</h1>
+<p>HTMLファイルの構造についてを述べる。</p>
+<p>HTMLファイルは主に以下から構成される。</p>
+<ul>
+<li>DOCTYPE宣言（文書型宣言）</li>
+<li>html要素</li>
+<li>head要素</li>
+<li>body要素</li>
+</ul>
+<p>大まかな記載は以下の通り。</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;!-- 文書に関する情報 --&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- 表示させるコンテンツの情報 --&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><hr>
+<h2 id="doctype宣言">
+  DOCTYPE宣言
+  <a class="anchor" href="#doctype%e5%ae%a3%e8%a8%80">#</a>
+</h2>
+<p>HTML5では実は必要なものではないそうだが、ブラウザの表示モードを「標準モード」にする目的で指定することになっている。</p>
+<p>指定がない場合、通常は以下の通りに記入する。</p>
+<pre><code>&lt;!DOCTYPE HTML&gt;
+</code></pre><p>なお、DOCTYPE宣言は大文字で書いても小文字で書いても問題ない。</p>
+<h2 id="html要素">
+  html要素
+  <a class="anchor" href="#html%e8%a6%81%e7%b4%a0">#</a>
+</h2>
+<p>html要素は、HTML文書のルートとなる要素である。</p>
+<p>他の全ての要素は、この要素内に記述しなければならない。</p>
+<p>また、グローバル属性であるlang属性を指定して、その文書で使用されている言語の種類を示すことが推奨されている。</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ja&gt;
+    ・・・
+&lt;/html&gt;
+</code></pre><hr>
+<h2 id="head要素">
+  head要素
+  <a class="anchor" href="#head%e8%a6%81%e7%b4%a0">#</a>
+</h2>
+<p>head要素は、HTML文書のメタデータを入れるための要素である。</p>
+<p>大体は文書のタイトル(title要素)、また文書の文字コード(meta要素)をここで指定する。</p>
+<h3 id="title要素">
+  title要素
+  <a class="anchor" href="#title%e8%a6%81%e7%b4%a0">#</a>
+</h3>
+<p>title要素は、HTML文書のタイトル(名前)を示す要素である。この要素は、必ずhead要素の中で指定する。</p>
+<pre><code>・・・
+&lt;head&gt;
+    &lt;title&gt;XXXのページ&lt;/title&gt;
+&lt;/head&gt;
+・・・
+</code></pre><hr>
+<h3 id="meta要素">
+  meta要素
+  <a class="anchor" href="#meta%e8%a6%81%e7%b4%a0">#</a>
+</h3>
+<p>meta要素は、HTML文書の様々なメタデータを指定できる空要素である。</p>
+<p>属性が色々あり、以下の通りである。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">指定する値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">charset</td>
+<td style="text-align:left">文書の文字コード</td>
+</tr>
+<tr>
+<td style="text-align:left">name</td>
+<td style="text-align:left">メタデータの名前</td>
+</tr>
+<tr>
+<td style="text-align:left">http-equiv</td>
+<td style="text-align:left">プラグマディレクティブ(再読み込みや他文書への遷移など、文書の状態や挙動を指示する命令のこと)</td>
+</tr>
+<tr>
+<td style="text-align:left">content</td>
+<td style="text-align:left">メタ情報の値</td>
+</tr>
+</tbody>
+</table>
+<p>使用例</p>
+<pre><code>・・・
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;T.Wakasugi&quot;&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;HTML programming meta&quot;&gt;
+&lt;/head&gt;
+・・・
+</code></pre><hr>
+<h3 id="link要素">
+  link要素
+  <a class="anchor" href="#link%e8%a6%81%e7%b4%a0">#</a>
+</h3>
+<p>link要素は、このHTML文書に関連する外部ファイルやリソースを示すための要素である。</p>
+<p>ここでいう関連するファイルやリソースというのは、HTML,CSS,RSSファイルなどのことを言う。</p>
+<p>link要素にはhref属性とrel属性は必ず指定する必要がある。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">指定する値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">href</td>
+<td style="text-align:left">外部ファイルやリソースのアドレス</td>
+</tr>
+<tr>
+<td style="text-align:left">rel</td>
+<td style="text-align:left">当文書から見た外部ファイルやリソースの関係性を示すキーワード</td>
+</tr>
+<tr>
+<td style="text-align:left">rev</td>
+<td style="text-align:left">外部ファイルから見た当文書の関係性を示すキーワード</td>
+</tr>
+<tr>
+<td style="text-align:left">hrefflag</td>
+<td style="text-align:left">外部ファイルの言語(日本語や英語など)</td>
+</tr>
+</tbody>
+</table>
+<p>rel・rev属性に指定できる値としては以下の通り（一部）。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指定する値</th>
+<th style="text-align:left">意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">author</td>
+<td style="text-align:left">執筆者</td>
+</tr>
+<tr>
+<td style="text-align:left">help</td>
+<td style="text-align:left">ヘルプ</td>
+</tr>
+<tr>
+<td style="text-align:left">icon</td>
+<td style="text-align:left">アイコン</td>
+</tr>
+<tr>
+<td style="text-align:left">license</td>
+<td style="text-align:left">著作権ライセンス</td>
+</tr>
+<tr>
+<td style="text-align:left">prev</td>
+<td style="text-align:left">前の文書</td>
+</tr>
+<tr>
+<td style="text-align:left">next</td>
+<td style="text-align:left">次の文書</td>
+</tr>
+<tr>
+<td style="text-align:left">stylesheet</td>
+<td style="text-align:left">適用するスタイルシート</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="base要素">
+  base要素
+  <a class="anchor" href="#base%e8%a6%81%e7%b4%a0">#</a>
+</h3>
+<p>base要素は、そのHTML文書で使われている相対URL(パス)の基準となるURLを書く要素である。</p>
+<p>基準となるURLはhref属性に指定する。</p>
+<p>例</p>
+<pre><code>・・・
+&lt;head&gt;
+    &lt;base href=&quot;https://wat36.github.io/pages/&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;&lt;a href=&quot;docs/front-end/front_index/&quot;&gt;フロントエンドのトップ&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+・・・
+</code></pre><h1 id="body要素">
+  body要素
+  <a class="anchor" href="#body%e8%a6%81%e7%b4%a0">#</a>
+</h1>
+<p>body要素は、HTML文書のコンテンツを入れるための要素である。通常は、head要素の次に記載する。</p>
+<p>例</p>
+<pre><code>&lt;body&gt;
+　・・・
+&lt;/body&gt;
+</code></pre></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/a73ebaf44805e986eea96954d051d0b2ffec386b" title='Last modified by Wataru Tsukagoshi | Aug 27, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Aug 27, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/html_structure.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#doctype宣言">DOCTYPE宣言</a></li>
+    <li><a href="#html要素">html要素</a></li>
+    <li><a href="#head要素">head要素</a>
+      <ul>
+        <li><a href="#title要素">title要素</a></li>
+        <li><a href="#meta要素">meta要素</a></li>
+        <li><a href="#link要素">link要素</a></li>
+        <li><a href="#base要素">base要素</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

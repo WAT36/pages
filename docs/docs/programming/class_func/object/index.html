@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="オブジェクト(Javascript) # Javascriptのオブジェクトについて。 Javascriptでは、オブジェクトと呼ばれる、C言語な">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="オブジェクト(Javascript)" />
+<meta property="og:description" content="オブジェクト(Javascript) # Javascriptのオブジェクトについて。 Javascriptでは、オブジェクトと呼ばれる、C言語な" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/class_func/object/" />
+<meta property="article:modified_time" content="2020-10-03T11:56:31+09:00" />
+<title>オブジェクト(Javascript) | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>オブジェクト(Javascript)</strong>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#オブジェクトの定義">オブジェクトの定義</a></li>
+    <li><a href="#プロパティの書き換え">プロパティの書き換え</a></li>
+    <li><a href="#プロパティの追加">プロパティの追加</a></li>
+    <li><a href="#thisキーワード">thisキーワード</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="オブジェクトjavascript">
+  オブジェクト(Javascript)
+  <a class="anchor" href="#%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88javascript">#</a>
+</h1>
+<p>Javascriptのオブジェクトについて。</p>
+<p>Javascriptでは、オブジェクトと呼ばれる、C言語などの構造体のようなデータ構造が存在する。</p>
+<p>ここではそれについて記載する。</p>
+<h2 id="オブジェクトの定義">
+  オブジェクトの定義
+  <a class="anchor" href="#%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%ae%e5%ae%9a%e7%be%a9">#</a>
+</h2>
+
+
+
+
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-for" id="tabs-for-0" checked="checked" />
+  <label for="tabs-for-0">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>Javascriptでのオブジェクトは、以下のような方法で記載する。</p>
+<p>記法</p>
+<pre><code>var 変数名 = {
+    (key名1) : (value名1),
+    (key名2) : (value名2),
+    ・・・
+}
+</code></pre><p>このように、キーと値のセットを複数連ねたような構造になる。</p>
+<p>ちなみに、オブジェクトではこのキーと値のセットのことを<strong>プロパティ</strong>と呼んでいる。</p>
+</div></div>
+
+<hr>
+<h2 id="プロパティの書き換え">
+  プロパティの書き換え
+  <a class="anchor" href="#%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3%e3%81%ae%e6%9b%b8%e3%81%8d%e6%8f%9b%e3%81%88">#</a>
+</h2>
+<p>オブジェクト中のプロパティの値を書き換える方法についてを述べる。</p>
+
+
+
+
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-put" id="tabs-put-0" checked="checked" />
+  <label for="tabs-put-0">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>Javascriptでのオブジェクトのプロパティの書き換えは、以下のような記法で行う。</p>
+<pre><code>(オブジェクトの変数名).(変更したいプロパティのキー) = (書き換えたい値);
+</code></pre></div></div>
+
+<hr>
+<h2 id="プロパティの追加">
+  プロパティの追加
+  <a class="anchor" href="#%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3%e3%81%ae%e8%bf%bd%e5%8a%a0">#</a>
+</h2>
+<p>オブジェクトにプロパティを追加する方法についてを述べる。</p>
+
+
+
+
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-add" id="tabs-add-0" checked="checked" />
+  <label for="tabs-add-0">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>Javascriptでのオブジェクトのプロパティの追加は、以下のような記法で行う。</p>
+<pre><code>(オブジェクトの変数名).(追加したいプロパティのキー) = (追加したい値);
+</code></pre><p>要はプロパティの書き換えと同じ。</p>
+</div></div>
+
+<hr>
+<h2 id="thisキーワード">
+  thisキーワード
+  <a class="anchor" href="#this%e3%82%ad%e3%83%bc%e3%83%af%e3%83%bc%e3%83%89">#</a>
+</h2>
+
+
+
+
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-this" id="tabs-this-0" checked="checked" />
+  <label for="tabs-this-0">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p><strong>this</strong>キーワードは、オブジェクト内でオブジェクトのプロパティを参照するときに用いる。</p>
+<p>但し、オブジェクトを参照するのは、thisがメソッドとして使用された場合に限るので注意。</p>
+<pre><code>var 変数名 = {
+    (key名1) : (value名1),
+    (key名2) : (value名2),
+    ・・・
+    (key名) : function(){
+        //メソッド
+        this.key名1  //これでvalue名1が参照できる
+    }
+}
+</code></pre></div></div>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/c8eae1e967225ad4e02f7a65ca77c36c92f258dc" title='Last modified by Wataru Tsukagoshi | Oct 3, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Oct 3, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/class_func/object.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#オブジェクトの定義">オブジェクトの定義</a></li>
+    <li><a href="#プロパティの書き換え">プロパティの書き換え</a></li>
+    <li><a href="#プロパティの追加">プロパティの追加</a></li>
+    <li><a href="#thisキーワード">thisキーワード</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,8 +1,6 @@
 ---
 title: "fileコマンドとファイルのマジックナンバーについて"
 date: 2019-10-15T23:44:23+09:00
-categories: ["Linux","CTF"]
-tags: ["UNIX","Linux","CTF"]
 ---
 
 先日CTFの勉強会に参加してきた。  

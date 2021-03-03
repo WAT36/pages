@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ガウス関数(2次元) # Python ガウス関数 a exp ( - (x - &mu; ) 2 &sigma; 2 ) において、入力xを2次元ベクトルとした時の場合を考える。(以下) x = x 0 x 1 この時">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="ガウス関数(2次元)" />
+<meta property="og:description" content="ガウス関数(2次元) # Python ガウス関数 a exp ( - (x - &mu; ) 2 &sigma; 2 ) において、入力xを2次元ベクトルとした時の場合を考える。(以下) x = x 0 x 1 この時" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/machine_learning/gauss_2D/" />
+<meta property="article:modified_time" content="2020-10-26T22:31:30+09:00" />
+<title>ガウス関数(2次元) | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>ガウス関数(2次元)</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="ガウス関数2次元">
+  ガウス関数(2次元)
+  <a class="anchor" href="#%e3%82%ac%e3%82%a6%e3%82%b9%e9%96%a2%e6%95%b02%e6%ac%a1%e5%85%83">#</a>
+</h1>
+
+
+
+
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-gauss2d" id="tabs-gauss2d-0" checked="checked" />
+  <label for="tabs-gauss2d-0">Python</label>
+  <div class="book-tabs-content markdown-inner"><p>ガウス関数</p>
+<math>
+    <mi>a</mi>
+    <mi>exp</mi>
+    <mrow>
+        <mo>(</mo>
+            <mo>-</mo>
+            <mfrac>
+                <mrow>
+                    <msup>
+                        <mrow>
+                            <mi>(x</mi>
+                            <mo>-</mo>
+                            <mi>&mu;</mi>
+                            <mn>)</mn>
+                        </mrow>
+                        <mn>2</mn>
+                    </msup>
+                </mrow>
+                <mrow>
+                    <msup>
+                        <mi>&sigma;</mi>
+                        <mn>2</mn>
+                    </msup>
+                </mrow>
+            </mfrac>
+        <mo>)</mo>
+    </mrow>
+</math>
+<p>において、入力xを2次元ベクトルとした時の場合を考える。(以下)</p>
+<math>
+<mi mathvariant="bold">x</mi>
+<mo>=</mo>
+<mfenced open="[" close="]"> 
+    <mtable>
+        <mtr> 
+            <mtd>
+                <msub>
+                    <mi>x</mi>
+                    <mn>0</mn>
+                </msub>
+            </mtd>
+        </mtr> 
+        <mtr>
+            <mtd>
+                <msub>
+                    <mi>x</mi>
+                    <mn>1</mn>
+                </msub>
+            </mtd>
+        </mtr>
+    </mtable> 
+</mfenced>
+</math>
+<p>この時、μも入力x<sub>0</sub>、x<sub>1</sub>の中心(平均)である要素μ<sub>0</sub>、μ<sub>1</sub>を持つベクトルを作成する。</p>
+<math>
+<mi mathvariant="bold">&mu;</mi>
+<mo>=</mo>
+<mfenced open="[" close="]"> 
+    <mtable>
+        <mtr> 
+            <mtd>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mn>0</mn>
+                </msub>
+            </mtd>
+        </mtr> 
+        <mtr>
+            <mtd>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mn>1</mn>
+                </msub>
+            </mtd>
+        </mtr>
+    </mtable> 
+</mfenced>
+</math>
+<p>また、分散(標準偏差)σに関しては、ベクトルの要素間の分散である<strong>共分散行列</strong>を用いる。<br>
+今回の2変数の場合だと以下のようになる。</p>
+<math>
+<mi mathvariant="bold">&Sigma;</mi>
+<mo>=</mo>
+<mfenced open="[" close="]"> 
+    <mtable>
+        <mtr> 
+            <mtd>
+                <msub>
+                    <mi>&sigma;</mi>
+                    <mn>00</mn>
+                </msub>
+            </mtd>
+            <mtd>
+                <msub>
+                    <mi>&sigma;</mi>
+                    <mn>01</mn>
+                </msub>
+            </mtd>
+        </mtr> 
+        <mtr>
+            <mtd>
+                <msub>
+                    <mi>&sigma;</mi>
+                    <mn>10</mn>
+                </msub>
+            </mtd>
+            <mtd>
+                <msub>
+                    <mi>&sigma;</mi>
+                    <mn>11</mn>
+                </msub>
+            </mtd>
+        </mtr>
+    </mtable> 
+</mfenced>
+</math>
+<p>σ<sub>ij</sub>はxの要素x<sub>i</sub>、x<sub>j</sub>の分散であり、σ<sub>ij</sub> = σ<sub>ji</sub> である。</p>
+<p>これらを利用し、2次元でのガウス関数は以下のようになる。</p>
+<math>
+    <mi>y</mi>
+    <mo>=</mo>
+    <mi>a</mi>
+    <mi>exp</mi>
+    <mrow>
+        <mo>{</mo>
+            <mo>-</mo>
+            <mfrac>
+                <mrow>
+                    <mn>1</mn>
+                </mrow>
+                <mrow>
+                    <mn>2</mn>
+                </mrow>
+            </mfrac>
+            <msup>
+                <mrow>
+                    <mo>(</mo>
+                        <mi mathvariant="bold">x</mi>
+                        <mo>-</mo>
+                        <mi mathvariant="bold">&mu;</mi>
+                    <mo>)</mo>
+                </mrow>
+                <mo>T</mo>
+            </msup>
+            <msup>
+                <mi mathvariant="bold">&Sigma;</mi>
+                <mn>-1</mn>
+            </msup>
+            <mrow>
+                <mo>(</mo>
+                    <mi mathvariant="bold">x</mi>
+                    <mo>-</mo>
+                    <mi mathvariant="bold">&mu;</mi>
+                <mo>)</mo>
+            </mrow>
+        <mo>}</mo>
+    </mrow>
+</math>
+<p>このガウス関数をPythonで実装した例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">gauss</span>(a, x, mu, sigma):
+    
+</code></pre></div></div></div>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/f23a5407ef8289d460b2d5977c53174986214e79" title='Last modified by Wataru Tsukagoshi | Oct 26, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Oct 26, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/machine_learning/gauss_2D.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

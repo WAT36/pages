@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="その他(CSS) # CSSについてその他、括れてない手法についてを述べる。 グラデーション # CSSで、画像が指定可能なところにおいては、画像の場">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="その他" />
+<meta property="og:description" content="その他(CSS) # CSSについてその他、括れてない手法についてを述べる。 グラデーション # CSSで、画像が指定可能なところにおいては、画像の場" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/css_other/" />
+<meta property="article:modified_time" content="2020-08-05T23:39:23+09:00" />
+<title>その他 | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>その他</strong>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#linear-gradientプロパティ">linear-gradientプロパティ</a></li>
+    <li><a href="#radial-gradientプロパティ">radial-gradientプロパティ</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#list-style-typeプロパティ">list-style-typeプロパティ</a></li>
+    <li><a href="#list-style-image-プロパティ">list-style-image プロパティ</a></li>
+    <li><a href="#list-style-position-プロパティ">list-style-position プロパティ</a></li>
+    <li><a href="#list-style-プロパティ">list-style プロパティ</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#caption-sideプロパティ">caption-sideプロパティ</a></li>
+    <li><a href="#border-collapseプロパティ">border-collapseプロパティ</a></li>
+    <li><a href="#border-spacingプロパティ">border-spacingプロパティ</a></li>
+    <li><a href="#empty-cellsプロパティ">empty-cellsプロパティ</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#contentプロパティ">contentプロパティ</a></li>
+    <li><a href="#quotesプロパティ">quotesプロパティ</a></li>
+    <li><a href="#counter-resetプロパティ">counter-resetプロパティ</a></li>
+    <li><a href="#counter-incrementプロパティ">counter-incrementプロパティ</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="その他css">
+  その他(CSS)
+  <a class="anchor" href="#%e3%81%9d%e3%81%ae%e4%bb%96css">#</a>
+</h1>
+<p>CSSについてその他、括れてない手法についてを述べる。</p>
+<h1 id="グラデーション">
+  グラデーション
+  <a class="anchor" href="#%e3%82%b0%e3%83%a9%e3%83%87%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3">#</a>
+</h1>
+<p>CSSで、画像が指定可能なところにおいては、画像の場所を示すurl()の代わりに、**linear-gradient()<strong>または</strong>radial-gradient()**と言う書式を使い、グラデーションを表示させることができる。</p>
+<p>以下でその方法についてを述べる。</p>
+<h2 id="linear-gradientプロパティ">
+  linear-gradientプロパティ
+  <a class="anchor" href="#linear-gradient%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>linear-graientプロパティは、直線状のグラデーションを設定するプロパティである。</p>
+<p>書式は以下の通り。</p>
+<pre><code>linear-gradient(方向,色1,色2)
+</code></pre><p>ここで、引数の「方向」に設定する値は以下の通り。</p>
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">数値(角度)</td>
+        <td style="border:none;">指定した角度を境としたグラデーション</td>
+    </tr>
+    <tr>
+        <td style="border:none;">to [top,bottom,left,right]</td>
+        <td style="border:none;">指定した方向へのグラデーション</td>
+    </tr>
+</table>
+<p>使用例(css)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">p</span> {
+    <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">300</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">300</span><span style="color:#66d9ef">px</span>; 
+    <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">background-image</span>:linear-gradient(<span style="color:#ae81ff">180</span><span style="color:#66d9ef">deg</span>,<span style="color:#66d9ef">red</span>,<span style="color:#66d9ef">blue</span>);
+}
+</code></pre></div><p>(html)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;linear-gradientの例&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>表示例</p>
+<iframe width="350" height="350" src="https://WAT36.github.io/pages/css_sample_pages/linear-gradient.html">
+</iframe>
+<h2 id="radial-gradientプロパティ">
+  radial-gradientプロパティ
+  <a class="anchor" href="#radial-gradient%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>radial-gradientプロパティは、放射状のグラデーションを設定するプロパティである。</p>
+<p>書式は以下の通り。</p>
+<pre><code>radial-gradient(at 中心の位置,中心の色,外側の色)
+</code></pre><p>ここで、引数の「中心の位置」に設定する値は以下の通り。</p>
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">top</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">一番上(縦方向の0%)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">bottom</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">一番下(縦方向の100%)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">left</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">一番左(横方向の0%)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">right</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">一番右(横方向の100%)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">center</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">中央(縦・横方向の50%)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">(パーセンテージ)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">それぞれの方向に対するパーセンテージ。数値の後に%をつける</td>
+    </tr>
+</table>
+<p>使用例(css)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">p</span> {
+    <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">300</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">300</span><span style="color:#66d9ef">px</span>; 
+    <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">background-image</span>:radial-gradient(at <span style="color:#66d9ef">bottom</span>,<span style="color:#66d9ef">blue</span>,<span style="color:#66d9ef">red</span>);
+}
+</code></pre></div><p>(html)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;radial-gradientの例&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>表示例</p>
+<iframe width="350" height="350" src="https://WAT36.github.io/pages/css_sample_pages/radial-gradient.html">
+</iframe>
+<h1 id="リスト関連のプロパティ">
+  リスト関連のプロパティ
+  <a class="anchor" href="#%e3%83%aa%e3%82%b9%e3%83%88%e9%96%a2%e9%80%a3%e3%81%ae%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h1>
+<p>リスト関連について、紹介し切れていないプロパティについてを述べる。</p>
+<h2 id="list-style-typeプロパティ">
+  list-style-typeプロパティ
+  <a class="anchor" href="#list-style-type%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>list-style-typeプロパティは、リストの行頭記号の種類を設定するプロパティである。</p>
+<p>設定する値と意味は以下の通り。</p>
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">行頭記号を消す</td>
+    </tr>
+    <tr>
+        <td style="border:none;">disc</td>
+        <td style="border:none;">黒丸にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">circle</td>
+        <td style="border:none;">白抜きの丸にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">square</td>
+        <td style="border:none;">四角にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">decimal</td>
+        <td style="border:none;">数字にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">decimal-leading-zero</td>
+        <td style="border:none;">先頭に0をつけた数字にする(01,02,03..)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lower-roman</td>
+        <td style="border:none;">小文字のローマ数字にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">upper-roman</td>
+        <td style="border:none;">大文字のローマ数字にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lower-latin</td>
+        <td style="border:none;">小文字のアルファベットにする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">upper-latin</td>
+        <td style="border:none;">大文字のアルファベットにする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lower-alpha</td>
+        <td style="border:none;">小文字のアルファベットにする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">upper-alpha</td>
+        <td style="border:none;">大文字のアルファベットにする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lower-greek</td>
+        <td style="border:none;">小文字のギリシャ文字にする</td>
+    </tr>
+</table>
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;list-style-type:circle&#34;</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その１&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その２&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その３&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ul</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;list-style-type:lower-greek&#34;</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その１&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その２&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その３&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ul</span>&gt;
+</code></pre></div><p>表示例</p>
+<ul style="list-style-type:circle">
+<li>その１</li>
+<li>その２</li>
+<li>その３</li>
+</ul>
+<br>
+<ul style="list-style-type:lower-greek">
+<li>その１</li>
+<li>その２</li>
+<li>その３</li>
+</ul>
+<h2 id="list-style-image-プロパティ">
+  list-style-image プロパティ
+  <a class="anchor" href="#list-style-image-%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>list-style-imageプロパティは、リストの行頭記号に表示する画像を設定するプロパティである。</p>
+<p>設定する値と意味は以下の通り。</p>
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">url(...)</td>
+        <td style="border:none;">画像のURLを指定し、その画像が行頭記号として表示される。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">画像を行頭記号として表示させない</td>
+    </tr>
+</table>
+<p>使用例(css)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">ul</span> {
+    <span style="color:#66d9ef">list-style-image</span>: url(<span style="color:#e6db74">list-style-image.png</span>);
+}
+</code></pre></div><p>(html)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;その１&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;その２&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;その３&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ul</span>&gt;
+</code></pre></div><p>表示例</p>
+<iframe width="400" height="200" src="https://WAT36.github.io/pages/css_sample_pages/list-style-image.html">
+</iframe>
+<h2 id="list-style-position-プロパティ">
+  list-style-position プロパティ
+  <a class="anchor" href="#list-style-position-%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>list-style-positionプロパティは、行頭記号の表示位置を設定するプロパティである。</p>
+<p>設定する値と意味は以下の通り。</p>
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">outside</td>
+        <td style="border:none;">テキストを表示させる領域の外側に表示させる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">inside</td>
+        <td style="border:none;">テキストを表示させる領域の内側に表示させる</td>
+    </tr>
+</table>
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;list-style-position:inside&#34;</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その１&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その２&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その３&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ul</span>&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
+&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;list-style-position:outside&#34;</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その１&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その２&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その３&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ul</span>&gt;
+</code></pre></div><p>表示例</p>
+<ul style="list-style-position:inside">
+<li>その１</li>
+<li>その２</li>
+<li>その３</li>
+</ul>
+<br>
+<ul style="list-style-position:outside">
+<li>その１</li>
+<li>その２</li>
+<li>その３</li>
+</ul>
+<h2 id="list-style-プロパティ">
+  list-style プロパティ
+  <a class="anchor" href="#list-style-%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>list-styleプロパティは、前述のlist-style系のプロパティの値を空白区切りでまとめて指定できるプロパティである。</p>
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;list-style:lower-greek inside&#34;</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その１&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その２&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;その３&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ul</span>&gt;
+</code></pre></div><p>表示例</p>
+<ul style="list-style:lower-greek inside">
+<li>その１</li>
+<li>その２</li>
+<li>その３</li>
+</ul>
+<h1 id="テーブル関連のプロパティ">
+  テーブル関連のプロパティ
+  <a class="anchor" href="#%e3%83%86%e3%83%bc%e3%83%96%e3%83%ab%e9%96%a2%e9%80%a3%e3%81%ae%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h1>
+<p>テーブル関連について、紹介し切れていないプロパティについてを述べる。</p>
+<h2 id="caption-sideプロパティ">
+  caption-sideプロパティ
+  <a class="anchor" href="#caption-side%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>caption-sideプロパティは、キャプションを表の上か下かどちらかに表示させるかを設定するプロパティである。</p>
+<p>値はtop,bottomのいずれかを指定する。</p>
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">table</span>&gt;
+    &lt;<span style="color:#f92672">caption</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;caption-side:bottom&#34;</span>&gt;キャプションbottom&lt;/<span style="color:#f92672">caption</span>&gt;
+    &lt;<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">td</span>&gt;0,0&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;<span style="color:#f92672">td</span>&gt;1,0&lt;/<span style="color:#f92672">td</span>&gt;
+    &lt;/<span style="color:#f92672">tr</span>&gt;
+    &lt;<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">td</span>&gt;0,1&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;<span style="color:#f92672">td</span>&gt;1,1&lt;/<span style="color:#f92672">td</span>&gt;
+    &lt;/<span style="color:#f92672">tr</span>&gt;
+&lt;/<span style="color:#f92672">table</span>&gt;
+</code></pre></div><p>表示例</p>
+<table>
+    <caption style="caption-side:bottom">キャプションbottom</caption>
+    <tr>
+        <td>0,0</td>
+        <td>1,0</td>
+    </tr>
+    <tr>
+        <td>0,1</td>
+        <td>1,1</td>
+    </tr>
+</table>
+<h2 id="border-collapseプロパティ">
+  border-collapseプロパティ
+  <a class="anchor" href="#border-collapse%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>border-collapseプロパティは、ボーダーを隣接するセルと重ねて表示するか、離して標示するかを設定するプロパティである。</p>
+<p>値はcollapse(隣接するセルと重ねて表示)、separate(隣接するセルと離して表示)のいずれかである。</p>
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">table</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border-collapse: collapse;&#34;</span>&gt;
+    &lt;<span style="color:#f92672">caption</span>&gt;collapse&lt;/<span style="color:#f92672">caption</span>&gt;
+    &lt;<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border: solid 1px;&#34;</span>&gt;0,0&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border: solid 1px;&#34;</span>&gt;1,0&lt;/<span style="color:#f92672">td</span>&gt;
+    &lt;/<span style="color:#f92672">tr</span>&gt;
+    &lt;<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border: solid 1px;&#34;</span>&gt;0,1&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border: solid 1px;&#34;</span>&gt;1,1&lt;/<span style="color:#f92672">td</span>&gt;
+    &lt;/<span style="color:#f92672">tr</span>&gt;
+&lt;/<span style="color:#f92672">table</span>&gt;
+</code></pre></div><p>表示例</p>
+<table style="border-collapse: collapse;">
+    <caption>collapse</caption>
+    <tr>
+        <td style="border: solid 1px;">0,0</td>
+        <td style="border: solid 1px;">1,0</td>
+    </tr>
+    <tr>
+        <td style="border: solid 1px;">0,1</td>
+        <td style="border: solid 1px;">1,1</td>
+    </tr>
+</table>
+<h2 id="border-spacingプロパティ">
+  border-spacingプロパティ
+  <a class="anchor" href="#border-spacing%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>border-spacingプロパティは、テーブルにおいて隣接するセルのボーダーとボーダーの間隔を設定するプロパティである。</p>
+<p>先述のborder-collapseプロパティの値がseparateのときに有効となり、値は単位付きの数値を指定する。</p>
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">table</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border-collapse: separate;border-spacing: 2px&#34;</span>&gt;
+    &lt;<span style="color:#f92672">caption</span>&gt;separate 2px&lt;/<span style="color:#f92672">caption</span>&gt;
+    &lt;<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border: solid 1px;&#34;</span>&gt;0,0&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border: solid 1px;&#34;</span>&gt;1,0&lt;/<span style="color:#f92672">td</span>&gt;
+    &lt;/<span style="color:#f92672">tr</span>&gt;
+    &lt;<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border: solid 1px;&#34;</span>&gt;0,1&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border: solid 1px;&#34;</span>&gt;1,1&lt;/<span style="color:#f92672">td</span>&gt;
+    &lt;/<span style="color:#f92672">tr</span>&gt;
+&lt;/<span style="color:#f92672">table</span>&gt;
+</code></pre></div><p>表示例</p>
+<table style="border-collapse: separate;border-spacing: 2px">
+    <caption>separate 2px</caption>
+    <tr>
+        <td style="border: solid 1px;">0,0</td>
+        <td style="border: solid 1px;">1,0</td>
+    </tr>
+    <tr>
+        <td style="border: solid 1px;">0,1</td>
+        <td style="border: solid 1px;">1,1</td>
+    </tr>
+</table>
+<h2 id="empty-cellsプロパティ">
+  empty-cellsプロパティ
+  <a class="anchor" href="#empty-cells%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>empty-cellsプロパティは、テーブルのセルが空白の時にボーダーを表示するかしないかを設定するプロパティである。</p>
+<p>値はshow(表示する),hide(表示しない)のいずれかを指定する。</p>
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">table</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border-collapse: separate;border-spacing: 2px; empty-cells: show;&#34;</span>&gt;
+    &lt;<span style="color:#f92672">caption</span>&gt;separate 2px&lt;/<span style="color:#f92672">caption</span>&gt;
+    &lt;<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border: solid 1px;&#34;</span>&gt;0,0&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border: solid 1px;&#34;</span>&gt;&lt;/<span style="color:#f92672">td</span>&gt;
+    &lt;/<span style="color:#f92672">tr</span>&gt;
+    &lt;<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border: solid 1px;&#34;</span>&gt;&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border: solid 1px;&#34;</span>&gt;1,1&lt;/<span style="color:#f92672">td</span>&gt;
+    &lt;/<span style="color:#f92672">tr</span>&gt;
+&lt;/<span style="color:#f92672">table</span>&gt;
+</code></pre></div><p>表示例</p>
+<table style="border-collapse: separate;border-spacing: 2px; empty-cells: show;">
+    <caption>separate 2px</caption>
+    <tr>
+        <td style="border: solid 1px;">0,0</td>
+        <td style="border: solid 1px;"></td>
+    </tr>
+    <tr>
+        <td style="border: solid 1px;"></td>
+        <td style="border: solid 1px;">1,1</td>
+    </tr>
+</table>
+<h1 id="内容を追加するプロパティ">
+  内容を追加するプロパティ
+  <a class="anchor" href="#%e5%86%85%e5%ae%b9%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h1>
+<p>内容を追加するプロパティについて。</p>
+<h2 id="contentプロパティ">
+  contentプロパティ
+  <a class="anchor" href="#content%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>contentプロパティは、CSSでコンテンツ（テキスト・画像など）を追加するためのプロパティである。</p>
+<p>contentプロパティでは、擬似要素:before、:afterを利用して要素の前後どちらに挿入するかを決定する。</p>
+<p>設定する値と意味は以下の通り。</p>
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">値</th>
+        <th style="border:none;">意味</th>
+    </thead>
+    <tr>
+        <td style="border:none;">テキスト(ダブルクォートまたはシングルクォートで囲う)</td>
+        <td style="border:none;">入力したテキストがそのまま挿入される</td>
+    </tr>
+    <tr>
+        <td style="border:none;">url(...)</td>
+        <td style="border:none;">指定した画像が挿入される。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">attr(...)</td>
+        <td style="border:none;">指定した属性で指定されている文字列が挿入される。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">counter(...)</td>
+        <td style="border:none;">カウンタ変数(後述)の値が挿入される。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">open-quote、close-quote</td>
+        <td style="border:none;">quotesプロパティで設定されている値が挿入される。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">コンテンツを追加しない</td>
+    </tr>
+</table>
+<p>使用例(css)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">p</span>::<span style="color:#a6e22e">before</span> {
+    <span style="color:#66d9ef">content</span>:<span style="color:#e6db74">&#34;「contentプロパティで挿入された文字です」&#34;</span>;
+}
+</code></pre></div><p>(html)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;ここはp要素の内容です&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>表示例</p>
+<iframe width="400" height="100" src="https://WAT36.github.io/pages/css_sample_pages/content.html">
+</iframe>
+<h2 id="quotesプロパティ">
+  quotesプロパティ
+  <a class="anchor" href="#quotes%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>quotesプロパティは、q要素またはcontentプロパティで引用符を追加(open-quote,close-quote)するときにどの引用符を使うかを指定するプロパティである。</p>
+<p>使用するには、使う引用符を半角スペースで区切ってペアで指定する。</p>
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">q</span> {
+    <span style="color:#66d9ef">quotes</span>:<span style="color:#e6db74">&#34;-&gt;-&gt;&#34;</span> <span style="color:#e6db74">&#34;&lt;-&lt;-&#34;</span>;
+}
+</code></pre></div><p>(html)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">q</span>&gt;ここはq要素で囲まれています&lt;/<span style="color:#f92672">q</span>&gt;
+</code></pre></div><p>表示例</p>
+<iframe width="500" height="100" src="https://WAT36.github.io/pages/css_sample_pages/quotes.html">
+</iframe>
+<h2 id="counter-resetプロパティ">
+  counter-resetプロパティ
+  <a class="anchor" href="#counter-reset%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>counter-resetプロパティは、値をリセット(0にする)したいカウンタ変数を指定するプロパティである。</p>
+<p>値にはカウンタとして用いる変数を指定する。</p>
+<p>(使用例は次とまとめる)</p>
+<h2 id="counter-incrementプロパティ">
+  counter-incrementプロパティ
+  <a class="anchor" href="#counter-increment%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>counter-incrementプロパティは、カウンタ変数の値を1増やすプロパティである。</p>
+<p>値にはカウンタとして用いる変数を指定する。</p>
+<p>使用例(css)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">body</span> {
+    <span style="color:#66d9ef">counter-reset</span>: chapter;
+}
+
+<span style="color:#f92672">p</span>::<span style="color:#a6e22e">before</span> {
+    <span style="color:#66d9ef">counter-increment</span>: chapter;
+    <span style="color:#66d9ef">content</span>: counter(chapter);
+}
+</code></pre></div><p>(html)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;p要素1個目&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;p要素2個目&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;p要素3個目&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;p要素4個目&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;p要素5個目&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>表示例</p>
+<iframe width="300" height="300" src="https://WAT36.github.io/pages/css_sample_pages/counter.html">
+</iframe>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/9374f6b16d57a94528b166e8f1a0ef12f6a38800" title='Last modified by Wataru Tsukagoshi | Aug 5, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Aug 5, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/css_other.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#linear-gradientプロパティ">linear-gradientプロパティ</a></li>
+    <li><a href="#radial-gradientプロパティ">radial-gradientプロパティ</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#list-style-typeプロパティ">list-style-typeプロパティ</a></li>
+    <li><a href="#list-style-image-プロパティ">list-style-image プロパティ</a></li>
+    <li><a href="#list-style-position-プロパティ">list-style-position プロパティ</a></li>
+    <li><a href="#list-style-プロパティ">list-style プロパティ</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#caption-sideプロパティ">caption-sideプロパティ</a></li>
+    <li><a href="#border-collapseプロパティ">border-collapseプロパティ</a></li>
+    <li><a href="#border-spacingプロパティ">border-spacingプロパティ</a></li>
+    <li><a href="#empty-cellsプロパティ">empty-cellsプロパティ</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#contentプロパティ">contentプロパティ</a></li>
+    <li><a href="#quotesプロパティ">quotesプロパティ</a></li>
+    <li><a href="#counter-resetプロパティ">counter-resetプロパティ</a></li>
+    <li><a href="#counter-incrementプロパティ">counter-incrementプロパティ</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

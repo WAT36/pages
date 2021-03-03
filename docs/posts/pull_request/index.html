@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GitHubにおいて、OSS活動では必須の手順である「プルリクエスト」。 簡単にできるものだと思ってたが、意外とややこしいところもあったりで。">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Githubで初めてプルリクエストをやったのでその手順を書いておく" />
+<meta property="og:description" content="GitHubにおいて、OSS活動では必須の手順である「プルリクエスト」。 簡単にできるものだと思ってたが、意外とややこしいところもあったりで。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/posts/pull_request/" />
+<meta property="article:published_time" content="2021-01-09T23:21:48+09:00" />
+<meta property="article:modified_time" content="2021-01-15T22:41:55+09:00" />
+<title>Githubで初めてプルリクエストをやったのでその手順を書いておく | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Githubで初めてプルリクエストをやったのでその手順を書いておく</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown">
+  <h1>
+    <a href="https://WAT36.github.io/pages/posts/pull_request/">Githubで初めてプルリクエストをやったのでその手順を書いておく</a>
+  </h1>
+  
+  <h5>Jan 9, 2021</h5>
+
+
+
+  
+
+  
+
+
+  <p><p>GitHubにおいて、OSS活動では必須の手順である「プルリクエスト」。</p>
+<p>簡単にできるものだと思ってたが、意外とややこしいところもあったりで。。（ワンクリックでできる物だと思ってた）</p>
+<p>今までやった事がなかったため、今回個人のアカウント間だが行ってみたので、その手順を記録しておいた。</p>
+<h2 id="1-プルリクしたいレポジトリをforkする">
+  1. プルリクしたいレポジトリをforkする
+  <a class="anchor" href="#1-%e3%83%97%e3%83%ab%e3%83%aa%e3%82%af%e3%81%97%e3%81%9f%e3%81%84%e3%83%ac%e3%83%9d%e3%82%b8%e3%83%88%e3%83%aa%e3%82%92fork%e3%81%99%e3%82%8b">#</a>
+</h2>
+<p>Githubのプルリクしたいレポジトリのページに行き、
+Forkボタンを押す。</p>
+<img src="https://WAT36.github.io/pages/img/blog/fork.png">
+<p>Forkとは、他の人のアカウントにあるレポジトリをコピーして、自分のアカウントに持ってくる事である。</p>
+<p>すると、自分のアカウントにそのリポジトリがコピーされる。</p>
+<img src="https://WAT36.github.io/pages/img/blog/forked.png">
+<h2 id="2-forkしたレポジトリをcloneしてローカルに持ってくる">
+  2. Forkしたレポジトリをcloneしてローカルに持ってくる
+  <a class="anchor" href="#2-fork%e3%81%97%e3%81%9f%e3%83%ac%e3%83%9d%e3%82%b8%e3%83%88%e3%83%aa%e3%82%92clone%e3%81%97%e3%81%a6%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%ab%e6%8c%81%e3%81%a3%e3%81%a6%e3%81%8f%e3%82%8b">#</a>
+</h2>
+<p>Forkしたレポジトリのページに行き、
+まずはそのレポジトリをローカルにダウンロードする。
+ダウンロードはgit cloneで行う。
+やり方は以下の通り。</p>
+<pre><code>$ git clone (レポジトリのアドレス)
+</code></pre><p>レポジトリのアドレスは、大体Githubのレポジトリのページに書いてある「Code」のボタンを押すとclone用のアドレスが表示される。
+GithubにSSHキーを登録してあるならば、ssh用のアドレスを利用する。</p>
+<img src="https://WAT36.github.io/pages/img/blog/clone.png">
+<h2 id="3-ローカルでプルリク用のブランチを作成する">
+  3. ローカルでプルリク用のブランチを作成する
+  <a class="anchor" href="#3-%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e3%83%97%e3%83%ab%e3%83%aa%e3%82%af%e7%94%a8%e3%81%ae%e3%83%96%e3%83%a9%e3%83%b3%e3%83%81%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">#</a>
+</h2>
+<p>cloneした状態ではmasterブランチとなっているので、
+プルリク用のブランチを作成し、そこで修正する。</p>
+<pre><code>$ git branch (ブランチ名)
+$ git checkout (ブランチ名)
+</code></pre><h2 id="4-ローカルでコード類を変更する">
+  4. ローカルでコード類を変更する
+  <a class="anchor" href="#4-%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e3%82%b3%e3%83%bc%e3%83%89%e9%a1%9e%e3%82%92%e5%a4%89%e6%9b%b4%e3%81%99%e3%82%8b">#</a>
+</h2>
+<p>プルリクを送るために変更したい箇所を修正して保存する</p>
+<h2 id="5-変更したコードをコミットプッシュする">
+  5. 変更したコードをコミット、プッシュする
+  <a class="anchor" href="#5-%e5%a4%89%e6%9b%b4%e3%81%97%e3%81%9f%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e3%82%b3%e3%83%9f%e3%83%83%e3%83%88%e3%83%97%e3%83%83%e3%82%b7%e3%83%a5%e3%81%99%e3%82%8b">#</a>
+</h2>
+<p>コミットしたいファイルをaddする</p>
+<pre><code>$ git add (修正したコミットしたいファイル)
+</code></pre><p>その後コミット・プッシュする</p>
+<pre><code>$ git commit -m &quot;コミットメッセージ&quot;
+$ git push origin (ブランチ名)
+</code></pre><h2 id="6-githubからnew-pull-requestを押す">
+  6. Githubから「New Pull Request」を押す
+  <a class="anchor" href="#6-github%e3%81%8b%e3%82%89new-pull-request%e3%82%92%e6%8a%bc%e3%81%99">#</a>
+</h2>
+<p>GithubのForkしたレポジトリのページに行くと、
+緑色の「Compare &amp; Pull Request」のボタンがあるのでそれを押す。</p>
+<img src="https://WAT36.github.io/pages/img/blog/pull_request.png">
+<p>するとプルリクエストの題名、説明の入力を求められるので、そこに説明等を書いて「Create Pull Request」を押す。</p>
+<img src="https://WAT36.github.io/pages/img/blog/pull_request2.png">
+<p>これでプルリクエストの送信が完了。後は送り先がマージしてくれるのを祈る。</p>
+<p>※UIは2021/1当時。ちょくちょく変わります</p>
+</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/f52a22de5730ba7205fba015a2b02ded77b219b7" title='Last modified by Wataru Tsukagoshi | Jan 15, 2021' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jan 15, 2021</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//posts/pull_request.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

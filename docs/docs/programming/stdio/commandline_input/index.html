@@ -1,198 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="コマンドライン引数 # 標準入力のコマンドライン引数について。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ String[] input = args //コマンドライン">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="コマンドライン引数" />
+<meta property="og:description" content="コマンドライン引数 # 標準入力のコマンドライン引数について。 Java クラスはここではMain.javaとする class Main{ public static void main(String args[]){ String[] input = args //コマンドライン" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/stdio/commandline_input/" />
+<meta property="article:published_time" content="2019-10-12T16:42:45+09:00" />
+<meta property="article:modified_time" content="2020-01-05T16:37:57+09:00" />
 <title>コマンドライン引数 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.6a2036176fd3d23156cbd3a600fc9a2d9cce1ea33db8bc9b198029389d631721.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
 
-
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-  
-</head>
-
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
-<h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-    
-  
-  
-  
-
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fstdio\2f commandline_input\2f "] {
-      color: #004ed0;
-  }
-  </style>
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
-</ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
-<ul>
-<li>
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/container/container_index/"><strong>コンテナ</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
-</ul>
-
-<p></details></p>
-
-<ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
-</ul>
-
-
-
-
-
-
-
-
-  <div class="page-nav-item">
-    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
-  </div>
-  <br>
-  <div class="page-nav-item">
-    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
-  </div>
-</nav>
-
-
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
-
-    </aside>
-
-    <div class="book-page">
-      <header class="flex align-center justify-between book-header">
-  <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
-  </label>
-  <strong>コマンドライン引数</strong>
-</header>
-
-      
-<article class="markdown">
-
-<h1 id="コマンドライン引数">コマンドライン引数</h1>
-
-<p>標準入力のコマンドライン引数について。</p>
-
-
-
-
-
-<div class="book-tabs">
-
-  <input type="radio" name="tabs-commandline_input" style="display: none;" id="tabs-commandline_input-0" checked="checked" />
-  <label for="tabs-commandline_input-0">
-    Java
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>クラスはここではMain.javaとする</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>{
-    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String <span style="color:#a6e22e">args</span>[]){
-      String[] <span style="color:#a6e22e">input</span> <span style="color:#f92672">=</span> args <span style="color:#75715e">//コマンドライン引数を格納した配列を取得する
-</span><span style="color:#75715e"></span>    }
-}</code></pre></div>
-<p>Javaではコマンドライン引数は
-クラス内で宣言するmainメソッドの引数であるString型の配列(上記コード中の&rdquo;args&rdquo;)に入る。<br>
-コマンドライン引数をスペースで区切って何個かに分けて入力した場合、初めから順にargsの0番目から順に入る。</p>
-
-  </div>
-
-  <input type="radio" name="tabs-commandline_input" style="display: none;" id="tabs-commandline_input-1"  />
-  <label for="tabs-commandline_input-1">
-    Python
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> sys
-inputs <span style="color:#f92672">=</span> sys<span style="color:#f92672">.</span>argv <span style="color:#75715e"># コマンドライン引数を格納したリストを取得する</span></code></pre></div>
-<p>Pythonはsysモジュールのargv属性にコマンドライン引数がリストとして入る。<br>
-コマンドライン引数を取得するには、sysモジュールをインポートしてargvを参照する。</p>
-
-  </div>
-
-</div>
-
-</article>
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/f3dcb4ba0aed4e8c96315c519011ed407623594e" title='Last modified Jan 5, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jan 5, 2020
-    </a>
-  </div>
-  
-</div>
-
-
-      
-    </div>
-    
-  
-
-
-
-  </main>
-
-  
-  
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -203,7 +28,198 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
 
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>コマンドライン引数</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="コマンドライン引数">
+  コマンドライン引数
+  <a class="anchor" href="#%e3%82%b3%e3%83%9e%e3%83%b3%e3%83%89%e3%83%a9%e3%82%a4%e3%83%b3%e5%bc%95%e6%95%b0">#</a>
+</h1>
+<p>標準入力のコマンドライン引数について。</p>
+
+
+
+
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-commandline_input" id="tabs-commandline_input-0" checked="checked" />
+  <label for="tabs-commandline_input-0">Java</label>
+  <div class="book-tabs-content markdown-inner"><p>クラスはここではMain.javaとする</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span><span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[]){</span>
+      String<span style="color:#f92672">[]</span> input <span style="color:#f92672">=</span> args <span style="color:#75715e">//コマンドライン引数を格納した配列を取得する
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Javaではコマンドライン引数は
+クラス内で宣言するmainメソッドの引数であるString型の配列(上記コード中の&quot;args&quot;)に入る。<br>
+コマンドライン引数をスペースで区切って何個かに分けて入力した場合、初めから順にargsの0番目から順に入る。</p>
+</div><input type="radio" class="toggle" name="tabs-commandline_input" id="tabs-commandline_input-1"  />
+  <label for="tabs-commandline_input-1">Python</label>
+  <div class="book-tabs-content markdown-inner"><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> sys
+inputs <span style="color:#f92672">=</span> sys<span style="color:#f92672">.</span>argv <span style="color:#75715e"># コマンドライン引数を格納したリストを取得する</span>
+</code></pre></div><p>Pythonはsysモジュールのargv属性にコマンドライン引数がリストとして入る。<br>
+コマンドライン引数を取得するには、sysモジュールをインポートしてargvを参照する。</p>
+</div></div>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/f3dcb4ba0aed4e8c96315c519011ed407623594e" title='Last modified by Wataru Tsukagoshi | Jan 5, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jan 5, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/stdio/commandline_input.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

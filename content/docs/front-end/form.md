@@ -63,7 +63,7 @@ input要素はform要素内で使われる要素で、フォームの入力を�
 
 フォームの入力にはいくつか種類があり、input要素で**type**属性の値を利用することで使い分ける。
 
-type属性に指定できる値は以下の通り。
+type属性に指定できる値と意味は以下の通り。
 
 <table style="border:none;">
     <tr>
@@ -140,12 +140,173 @@ type属性に指定できる値は以下の通り。
     </tr>
     <tr>
         <td style="border:none;">・</td>
+        <td style="border:none;">button</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">汎用ボタン</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">image</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">画像の送信ボタン</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">file</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">送信するファイルを選択する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">color</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">色の入力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">date</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">日付の入力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">month</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">年と月の入力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">week</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">年と週の入力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">time</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">時刻の入力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">datetime-local</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">日付と時刻の入力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
         <td style="border:none;">hidden</td>
         <td style="border:none;">　・・・　</td>
         <td style="border:none;">表示させずに送信するテキスト</td>
     </tr>
 </table>
 
+
+また、type属性の他に指定できる属性はと意味は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">accept</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">type="file"の時に入力できるファイルの種類</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">autocomplete</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">オートコンプリート機能のオンオフ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">autofocus</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">ページを読み込んだらこの要素にフォーカスする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">checked</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">チェックボックス・ラジオボタンが選択済みになっていることを示す</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">formaction</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">フォームの送信先のURL</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">formmethod</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">フォームを送信する際に使うHTTPメソッド</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">formnovalidate</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">入力内容のチェックを行わない</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">width</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">幅</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">height</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">高さ</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">max</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">最大値(type属性により異なる)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">maxlength</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">最大文字数</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">min</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">最小値(type属性により異なる)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">minlength</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">最小文字数</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">max</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">最大値(type属性により異なる)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">multiple</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">複数の入力を許可する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">placeholder</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">プレースホルダー</td>
+    </tr>
+    <tr>
+        <td style="border:none;">・</td>
+        <td style="border:none;">required</td>
+        <td style="border:none;">　・・・　</td>
+        <td style="border:none;">入力を必須にする</td>
+    </tr>
+</table>
 
 使用例
 
@@ -197,6 +358,38 @@ type属性に指定できる値は以下の通り。
         <td style="border:none;"><input type="reset"></td>
     </tr>
     <tr>
+        <td style="border:none;">button</td>
+        <td style="border:none;"><input type="button"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">image</td>
+        <td style="border:none;"><input type="image" src="/img/front-end/img.jpg" width=25% height=25%></td>
+    </tr>
+    <tr>
+        <td style="border:none;">color</td>
+        <td style="border:none;"><input type="color"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">date</td>
+        <td style="border:none;"><input type="date"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">month</td>
+        <td style="border:none;"><input type="month"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">week</td>
+        <td style="border:none;"><input type="week"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">time</td>
+        <td style="border:none;"><input type="time"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">datetime-local</td>
+        <td style="border:none;"><input type="datetime-local"></td>
+    </tr>
+    <tr>
         <td style="border:none;">hidden</td>
         <td style="border:none;"><input type="hidden"></td>
     </tr>
@@ -204,7 +397,7 @@ type属性に指定できる値は以下の通り。
 </form>
 ```
 
-表示例
+表示例（ブラウザによっては正しく表示されない場合もあります）
 
 <hr>
 <form>
@@ -252,6 +445,38 @@ type属性に指定できる値は以下の通り。
     <tr>
         <td style="border:none;">reset</td>
         <td style="border:none;"><input type="reset"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">button</td>
+        <td style="border:none;"><input type="button"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">image</td>
+        <td style="border:none;"><input type="image" src="/img/front-end/img.jpg" width=25% height=25%></td>
+    </tr>
+    <tr>
+        <td style="border:none;">color</td>
+        <td style="border:none;"><input type="color"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">date</td>
+        <td style="border:none;"><input type="date"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">month</td>
+        <td style="border:none;"><input type="month"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">week</td>
+        <td style="border:none;"><input type="week"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">time</td>
+        <td style="border:none;"><input type="time"></td>
+    </tr>
+    <tr>
+        <td style="border:none;">datetime-local</td>
+        <td style="border:none;"><input type="datetime-local"></td>
     </tr>
     <tr>
         <td style="border:none;">hidden</td>

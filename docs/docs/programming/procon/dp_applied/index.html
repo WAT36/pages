@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="動的計画法の応用題 # 動的計画法の応用問題をいくつか紹介する。 最長共通部分列問題 # 例えば以下のような問題。 ２つの文字列s,tの共通部分文字列の">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="動的計画法の応用題" />
+<meta property="og:description" content="動的計画法の応用題 # 動的計画法の応用問題をいくつか紹介する。 最長共通部分列問題 # 例えば以下のような問題。 ２つの文字列s,tの共通部分文字列の" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/procon/dp_applied/" />
+<meta property="article:modified_time" content="2020-11-07T12:54:59+09:00" />
+<title>動的計画法の応用題 | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>動的計画法の応用題</strong>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#最長共通部分列問題">最長共通部分列問題</a></li>
+    <li><a href="#個数制限なしナップザック問題">個数制限なしナップザック問題</a>
+      <ul>
+        <li><a href="#値が大きい時">値が大きい時</a></li>
+      </ul>
+    </li>
+    <li><a href="#個数制限付き部分和問題">個数制限付き部分和問題</a></li>
+    <li><a href="#最長増加部分列問題">最長増加部分列問題</a></li>
+    <li><a href="#分割数">分割数</a></li>
+    <li><a href="#重複組み合わせ">重複組み合わせ</a></li>
+    <li><a href="#ビットdp">ビットDP</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="動的計画法の応用題">
+  動的計画法の応用題
+  <a class="anchor" href="#%e5%8b%95%e7%9a%84%e8%a8%88%e7%94%bb%e6%b3%95%e3%81%ae%e5%bf%9c%e7%94%a8%e9%a1%8c">#</a>
+</h1>
+<p>動的計画法の応用問題をいくつか紹介する。</p>
+<h2 id="最長共通部分列問題">
+  最長共通部分列問題
+  <a class="anchor" href="#%e6%9c%80%e9%95%b7%e5%85%b1%e9%80%9a%e9%83%a8%e5%88%86%e5%88%97%e5%95%8f%e9%a1%8c">#</a>
+</h2>
+<p>例えば以下のような問題。</p>
+<pre><code>２つの文字列s,tの共通部分文字列の長さの最大値を求めなさい。
+
+ただし、文字列xの部分文字列とは、xから連続するn文字 (0≦n≦|x|) を取り出してできる文字列のことである。
+</code></pre><p>２つの文字列の部分文字列として当てはまる文字列のうち、最長となるものの長さを求める問題で、このような問題は**最長共通部分列問題(LCS: Longest Common Subsequence)**と呼ばれている。この問題も、動的計画法で行える。</p>
+<p>２次元リストdp[i][j]を「sのi文字目までの文字列とtのj文字目までの文字列における最長共通部分文字列の長さ」とする。</p>
+<p>この時、以下の式が成り立つ。</p>
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/katex/katex.min.css" />
+<script defer src="https://WAT36.github.io/pages/katex/katex.min.js"></script>
+<script defer src="https://WAT36.github.io/pages/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \(  dp[i&#43;1][j&#43;1] = 
+    \begin{cases}
+        max(dp[i][j]&#43;1,dp[i][j&#43;1],dp[i&#43;1][j]) &amp; ( (sのi&#43;1文字目) = (tのj&#43;1文字目) ) \\
+        max(dp[i][j&#43;1],dp[i&#43;1][j]) &amp; (それ以外)
+    \end{cases}\)
+</span>
+
+<p>図で表すと、以下のようになる。</p>
+<img src="https://WAT36.github.io/pages/img/procon/dp_applied1.png" width=50%>
+<p>実装例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">s<span style="color:#f92672">=</span>input() <span style="color:#75715e">#文字列s</span>
+t<span style="color:#f92672">=</span>input() <span style="color:#75715e">#文字列t</span>
+
+dp<span style="color:#f92672">=</span>[[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(len(t)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(len(s)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)]
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(s)):
+    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(len(t)):
+        <span style="color:#66d9ef">if</span>(s[i]<span style="color:#f92672">==</span>t[j]):
+            dp[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> max(dp[i][j]<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,dp[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][j],dp[i][j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>])
+        <span style="color:#66d9ef">else</span>:
+            dp[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> max(dp[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][j],dp[i][j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>])
+
+<span style="color:#66d9ef">print</span>(dp[len(s)][len(t)]) <span style="color:#75715e">#sとtの最長共通部分文字列の長さ = 答え</span>
+</code></pre></div><hr>
+<h2 id="個数制限なしナップザック問題">
+  個数制限なしナップザック問題
+  <a class="anchor" href="#%e5%80%8b%e6%95%b0%e5%88%b6%e9%99%90%e3%81%aa%e3%81%97%e3%83%8a%e3%83%83%e3%83%97%e3%82%b6%e3%83%83%e3%82%af%e5%95%8f%e9%a1%8c">#</a>
+</h2>
+<pre><code>重さがwi、価値がviであるようなn個の品物があった時、重さの総和がWを超えないように品物を選ぶ時の、価値の総和の最大値を求めよ。
+
+ただし、同じ品物を複数回選んでも良い。
+</code></pre><p>前述の<a href="https://WAT36.github.io/pages/docs/programming/procon/dynamic_planning/">動的計画法</a>の章では１つの品物は複数回選べない指定であったが、同じ品物を複数回取れるとなるとどのようにすれば良いか。</p>
+<p>この問題も動的計画法を応用してできる。２次元リストdp[i][j]を以下のように設定する。</p>
+<p>dp[i+1][j] = i番目までの品物から重さの総和がj以下となるような時の、価値の総和の最大値</p>
+<p>すると、漸化式は以下のようになる。</p>
+<span>
+  \(\begin{cases}
+    dp[0][j] &amp;= 0  \\
+    dp[i&#43;1][j] &amp;= max( dp[i][j-k*w[i]] &#43; k*v[i] 　|　 0 \leq  k \leq \frac{j}{w[i]} )
+\end{cases}\)
+</span>
+
+<p>実装例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#個数制限なしナップザック問題</span>
+
+<span style="color:#75715e">#個数,最大の重さ</span>
+n,W<span style="color:#f92672">=</span>map(int,input()<span style="color:#f92672">.</span>split())
+<span style="color:#75715e">#価値と重さ</span>
+v<span style="color:#f92672">=</span>[]
+w<span style="color:#f92672">=</span>[]
+
+<span style="color:#75715e">#vi,wiでi番目の品物の価値と重さ</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+    vi,wi<span style="color:#f92672">=</span>map(int,input()<span style="color:#f92672">.</span>split())
+    v<span style="color:#f92672">.</span>append(vi)
+    w<span style="color:#f92672">.</span>append(wi)
+
+<span style="color:#75715e">#dp</span>
+dp<span style="color:#f92672">=</span>[[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(W<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)]
+
+<span style="color:#75715e">#計算</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(W<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+        k<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">while</span>(k<span style="color:#f92672">*</span>w[i]<span style="color:#f92672">&lt;=</span>j):
+            dp[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][j] <span style="color:#f92672">=</span> max(dp[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][j],dp[i][j<span style="color:#f92672">-</span>k<span style="color:#f92672">*</span>w[i]]<span style="color:#f92672">+</span>k<span style="color:#f92672">*</span>v[i])
+            k<span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>
+
+<span style="color:#75715e">#答え</span>
+<span style="color:#66d9ef">print</span>(dp[n][W])
+</code></pre></div><p>これで良いか、と言いたいところだが、コードを見てくれたらわかるように、このアルゴリズムだと計算量がO(nW<sup>2</sup>)となり不十分である。</p>
+<p>計算過程を図にすると以下の通りである。(値は例)</p>
+<img src="https://WAT36.github.io/pages/img/procon/dp_applied2.png" width=60%>
+<p>図を見てわかるように、dp[i+1][j]のところでk≧1の計算をするときに計算を複数回行う箇所がある。</p>
+<p>ここが改善のポイントで、dp[i][j]からi番目の品物をk個選んだ結果をdp[i+1][j+k*w[i]]とするのではなく、i番目の品物を0個選んだ結果(dp[i+1][j] (= i番目までの品物から重さの総和がj以下となるような時の、価値の総和の最大値))にi番目の品物を1個選んだときの結果を利用していけばよい。(dp[i+1][j+w[i]]=dp[i+1][j]+v[i]) k≧1での複数回計算をせずとも、この計算1回だけを行えば,kに関するループがなくなる。</p>
+<p>図で表すと以下のようになる。</p>
+<img src="https://WAT36.github.io/pages/img/procon/dp_applied3.png" width=60%>
+<p>コード例は以下の通り。(計算部分のみ抜粋)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#計算</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(W<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">if</span>(j<span style="color:#f92672">&lt;</span>w[i]):
+            dp[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][j]<span style="color:#f92672">=</span>dp[i][j]
+        <span style="color:#66d9ef">else</span>:
+            dp[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][j]<span style="color:#f92672">=</span>max(dp[i][j],dp[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">-</span>w[i]]<span style="color:#f92672">+</span>v[i])
+</code></pre></div><hr>
+<h3 id="値が大きい時">
+  値が大きい時
+  <a class="anchor" href="#%e5%80%a4%e3%81%8c%e5%a4%a7%e3%81%8d%e3%81%84%e6%99%82">#</a>
+</h3>
+<p>続いて、例その２。</p>
+<pre><code>重さがwi、価値がviであるようなn個の品物があった時、重さの総和がWを超えないように品物を選ぶ時の、価値の総和の最大値を求めよ。
+
+ただし、同じ品物を複数回選んでも良い。
+
+(制約)
+1≦n≦100
+1≦wi≦10000000
+1≦vi≦100
+1≦W≦1000000000
+
+</code></pre><p>先ほどと同じ問題だが、今度は各変数の最大値がかなり大きな数になっており、先ほどと同じアルゴリズムを適用するとかなり長い時間がかかってしまう。</p>
+<p>しかし、今回は価値の値が小さいので、そちらを使って動的計画法を利用することを考えてみる。</p>
+<p>２次元リストdp[i][j]を以下のように設定する。</p>
+<p>dp[i+1][j] = i番目までの品物から価値の総和がjとなるように選んだ時の、重さの総和の最小値（存在しない場合はINF）</p>
+<p>この時、漸化式は以下のようになる。</p>
+<span>
+  \(\begin{cases}
+    dp[0][0] &amp;= 0  \\
+    dp[0][j] &amp;= INF  \\
+    dp[i&#43;1][j] &amp;= min( dp[i][j],dp[i][j-v[i]]&#43;w[i] )
+\end{cases}\)
+</span>
+
+<p>コード例は以下の通り。(計算部分のみ抜粋)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> math
+dp<span style="color:#f92672">=</span>[[math<span style="color:#f92672">.</span>inf <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n<span style="color:#f92672">*</span>max(v)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)]
+dp[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+<span style="color:#75715e">#計算</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(n<span style="color:#f92672">*</span>max(v)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">if</span>(j<span style="color:#f92672">&lt;</span>v[i]):
+            dp[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][j]<span style="color:#f92672">=</span>dp[i][j]
+        <span style="color:#66d9ef">else</span>:
+            dp[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][j]<span style="color:#f92672">=</span>min(dp[i][j],dp[i][j<span style="color:#f92672">-</span>v[i]]<span style="color:#f92672">+</span>w[i])
+</code></pre></div><hr>
+<h2 id="個数制限付き部分和問題">
+  個数制限付き部分和問題
+  <a class="anchor" href="#%e5%80%8b%e6%95%b0%e5%88%b6%e9%99%90%e4%bb%98%e3%81%8d%e9%83%a8%e5%88%86%e5%92%8c%e5%95%8f%e9%a1%8c">#</a>
+</h2>
+<pre><code>n種類の数aiがそれぞれmi個ずつあります。これらの中からいくつか選び、その総和をちょうどKにすることができるか判定しなさい。
+
+(制約)
+・1≦n≦100
+・1≦ai,mi≦100000
+・1≦K≦100000
+</code></pre><p>解き方は様々あるが、一例として2次元リストdpを以下のように設定してみよう。</p>
+<p>dp[i][j]:i番目までの数値でjが作れるか</p>
+<p>i番目までの数値でjを作るには、i-1番目までの数値で j-α×(i番目の数値) が作れる必要がある。(αは0以上の整数)</p>
+<p>したがって、漸化式は以下のようになる。</p>
+<span>
+  \(dp[i][j] = 
+\begin{cases}
+    True  &amp; (dp[i-1][j-k*a_i] = True となるk (0 \leqq k \leqq m_{i} かつ k a_i \leqq j) が存在する場合)  \\
+    False &amp; (otherwise)
+\end{cases}\)
+</span>
+
+<p>コード例は以下の通り。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">n<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>
+a<span style="color:#f92672">=</span>[<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">8</span>]
+m<span style="color:#f92672">=</span>[<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>]
+K<span style="color:#f92672">=</span><span style="color:#ae81ff">17</span>
+
+dp<span style="color:#f92672">=</span>[[False <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(K<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)]
+dp[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]<span style="color:#f92672">=</span>True
+
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(K<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">if</span>(dp[i][j]):
+            k<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+            <span style="color:#66d9ef">while</span> j<span style="color:#f92672">+</span>k<span style="color:#f92672">*</span>a[i]<span style="color:#f92672">&lt;=</span>K:
+                dp[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">+</span>k<span style="color:#f92672">*</span>a[i]]<span style="color:#f92672">=</span>True
+                k<span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>
+
+<span style="color:#66d9ef">print</span>(dp[n][K])
+</code></pre></div><hr>
+<h2 id="最長増加部分列問題">
+  最長増加部分列問題
+  <a class="anchor" href="#%e6%9c%80%e9%95%b7%e5%a2%97%e5%8a%a0%e9%83%a8%e5%88%86%e5%88%97%e5%95%8f%e9%a1%8c">#</a>
+</h2>
+<p>増加部分列とは、数列aiにおいて、全てのl＜mにおいてal＜amが成り立つ部分列のことである。</p>
+<p>最長増加部分列問題(LIS:Longest Increasing Subsequence)とは、数列の内の最も長い部分列を求める問題である。</p>
+<p>例題を以下に記載する。</p>
+<pre><code>長さnの数列a&lt;sub&gt;0&lt;/sub&gt;,a&lt;sub&gt;1&lt;/sub&gt;,・・・a&lt;sub&gt;n-1&lt;/sub&gt;があります。この数列の増加部分列のうち、最長のものの長さを求めなさい。
+
+(制約)
+1≦n≦1000
+0≦ai≦1000000
+</code></pre><p>この問題も動的計画法を用いることで解くことができる。リストdpを以下のように設定する。</p>
+<p>dp[i]: 最後がa<sub>i</sub>であるような最長の部分文字列の長さ</p>
+<p>この時、dp[i]は以下の式で表される。</p>
+<span>
+  \(dp[i][j] = max(1,dp[j]&#43;1 　|　 j &lt; i かつ a_{j} &lt; a_{i} )\)
+</span>
+
+<p>コード例を以下に示す。計算量はO(n<sup>2</sup>)である。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">n<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
+a<span style="color:#f92672">=</span>[<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">5</span>]
+
+dp<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)]
+
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+    dp[i]<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(i):
+        <span style="color:#66d9ef">if</span>(a[j] <span style="color:#f92672">&lt;</span> a[i]):
+            dp[i]<span style="color:#f92672">=</span>max(dp[i],dp[j]<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+
+<span style="color:#66d9ef">print</span>(max(dp))
+</code></pre></div><p>実行結果</p>
+<pre><code>3
+</code></pre><hr>
+<h2 id="分割数">
+  分割数
+  <a class="anchor" href="#%e5%88%86%e5%89%b2%e6%95%b0">#</a>
+</h2>
+<pre><code>n個の互いに区別できない品物を、m個以下に分割する方法の総数を求め、Mで割った余りを答えなさい。
+
+(制約)
+1≦m≦n≦1000
+2≦M≦10000
+</code></pre><p>このような問題をnのm分割という。n=mの時はnの分割数という。</p>
+<p>これに動的計画法を適用してみよう。リストdpを以下のように定める。</p>
+<p>dp[i][j]:jのi分割の総数</p>
+<p>ここでjのi分割の個数は、j-iのi分割にそれぞれ1を足したパターン、及びjのi-1分割に1を追加したパターンとみることができるので、以下のように表せられる。</p>
+<span>
+  \(dp[i][j] = dp[i][j-1] &#43; dp[i-1][j]\)
+</span>
+
+<p>例として、n,m≦10の場合でどうなるかを見てみよう。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">n<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
+m<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
+M<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span><span style="color:#f92672">**</span><span style="color:#ae81ff">9</span>)<span style="color:#f92672">+</span><span style="color:#ae81ff">7</span>
+
+dp<span style="color:#f92672">=</span>[[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(m<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)]
+
+dp[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+<span style="color:#66d9ef">print</span>(dp[<span style="color:#ae81ff">0</span>])
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,m<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">if</span>(j<span style="color:#f92672">-</span>i<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span>):
+            dp[i][j]<span style="color:#f92672">=</span>(dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j]<span style="color:#f92672">+</span>dp[i][j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])<span style="color:#f92672">%</span>M
+        <span style="color:#66d9ef">else</span>:
+            dp[i][j]<span style="color:#f92672">=</span>dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j]
+    <span style="color:#66d9ef">print</span>(dp[i])
+</code></pre></div><p>実行結果</p>
+<pre><code>[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+[1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[1, 1, 2, 5, 9, 14, 20, 27, 35, 44, 54]
+[1, 1, 2, 5, 14, 28, 48, 75, 110, 154, 208]
+[1, 1, 2, 5, 14, 42, 90, 165, 275, 429, 637]
+[1, 1, 2, 5, 14, 42, 132, 297, 572, 1001, 1638]
+[1, 1, 2, 5, 14, 42, 132, 429, 1001, 2002, 3640]
+[1, 1, 2, 5, 14, 42, 132, 429, 1430, 3432, 7072]
+[1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 11934]
+[1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796]
+</code></pre><hr>
+<h2 id="重複組み合わせ">
+  重複組み合わせ
+  <a class="anchor" href="#%e9%87%8d%e8%a4%87%e7%b5%84%e3%81%bf%e5%90%88%e3%82%8f%e3%81%9b">#</a>
+</h2>
+<pre><code>n種類の品物があり、i番目の品物はai個あります。異なる種類の品物同士は区別できますが、同じ種類の品物同士は区別できません。
+
+これらの品物の中からm個選ぶ組み合わせの総数を求め、Mで割った余りを答えなさい。
+
+(制約)
+1≦n≦1000
+1≦m≦1000
+1≦ai≦1000
+2≦M≦10000
+</code></pre><p>高校数学Aでも出てきた重複組み合わせの問題である。これも動的計画法を適用して考えてみよう。リストdpを以下のように定めてみる。</p>
+<p>dp[i][j]:i番目までの品物からj個選ぶ組み合わせの総数</p>
+<p>i番目までの品物からj個選ぶためには、i-1番目までの品物からj-k個選んで、i番目の品物をk個加えれば良いので、以下の漸化式が成り立つ。</p>
+<span>
+  \(\tag{1} dp[i][j] = \sum_{k=0}^{ min(j,a_{i-1}) } dp[i-1][j-k] \)
+</span>
+
+<p>ここで、</p>
+<span>
+  \(\tag{2} 
+\begin{aligned}
+&amp;\sum_{k=0}^{ min(j,a_{i-1}) } dp[i-1][j-k] \\
+&amp;= \sum_{k=0}^{ min(j,a_{i-1}) } dp[i-1][j-1-k] &#43; dp[i-1][j] - dp[i-1][j-1-a_{i-1}] 
+\end{aligned}\)
+</span>
+
+<p>となるので、式(1)から式(2)は</p>
+<span>
+  \(\tag{3} dp[i][j] = dp[i][j-1] &#43; dp[i-1][j] - dp[i-1][j-1-a_{i-1}] \)
+</span>
+
+<p>と表される。</p>
+<p>コード例は以下の通り。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">n<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>
+m<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>
+a<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]
+M<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span><span style="color:#f92672">**</span><span style="color:#ae81ff">9</span>)<span style="color:#f92672">+</span><span style="color:#ae81ff">7</span>
+
+dp<span style="color:#f92672">=</span>[[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(m<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)]
+
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+    <span style="color:#75715e"># 1個も選ばない方法は1通り</span>
+    dp[i][<span style="color:#ae81ff">0</span>]<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,m<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">if</span>(j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>a[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span>):
+            dp[i][j]<span style="color:#f92672">=</span>(dp[i][j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">+</span>dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j]<span style="color:#f92672">-</span>dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>a[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]])<span style="color:#f92672">%</span>M
+        <span style="color:#66d9ef">else</span>:
+            dp[i][j]<span style="color:#f92672">=</span>(dp[i][j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">+</span>dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j])<span style="color:#f92672">%</span>M
+
+<span style="color:#66d9ef">print</span>(dp[n][m])
+</code></pre></div><p>実行結果</p>
+<pre><code>6
+</code></pre><hr>
+<h2 id="ビットdp">
+  ビットDP
+  <a class="anchor" href="#%e3%83%93%e3%83%83%e3%83%88dp">#</a>
+</h2>
+<p>続いて、ビットDPについてを示す。</p>
+<p>例題として、<strong>巡回セールスマン問題</strong>と呼ばれる問題を利用する。</p>
+<pre><code>以下のグラフにおいて、頂点0からスタートして全ての頂点をちょうど一度ずつ巡って帰ってくる閉路のうち、重みの総和の最小値を求めなさい。
+グラフは、距離行列d(i,j)として与えられる。
+
+(制約)
+2≦n≦15
+0≦d(i,j)≦1000
+</code></pre><img src="https://WAT36.github.io/pages/img/procon/dp_applied4.png" width=60%>
+<p>実は、巡回セールスマン問題は一般的に計算時間がかかる問題となっており、大きい数での場合はプログラミングコンテストでの一般的な制限時間下では解けないことが多いが、この例題のような小さいサイズでなら解答可能であり、プログラミングコンテストでも出題されることがある。</p>
+<p>スタート地点を指定した時、頂点の訪問順は(n-1)!通りあるが、計算量が大きくなるためこれを律儀に計算することは不可能である。実は、この巡回セールスマン問題においてもDPが適用できる。</p>
+<p>すでに訪れた頂点の集合をS、現在頂点vにいる状態から残りの全ての頂点をめぐって頂点0(スタート地点)に変えるような経路の重みの最小値をdp[S][v]とおく。</p>
+<p>すると、Vを全ての頂点の集合とした時、以下の式が成り立つ。</p>
+<span>
+  \(\begin{aligned}
+dp[V][0] &amp;= 0  \\
+dp[S][v] &amp;= min( dp[S \cup {u}][u] &#43; d(v,u) | u \notin S  ) 
+\end{aligned}\)
+</span>
+
+<p>ここで、リストdpのインデックスには集合が使われているが、これをどのように表現すれば良いだろうか？</p>
+<p>これには一例として、整数のビット表現を用いて表す方法がある。今回の例では頂点が5つなので、0b00000~0b11111の数字で集合を表す。例えば頂点0のみが訪問済みの場合は、2^0の位のみを1、あとは全て0とした数の0b00001、頂点4のみ訪れてない場合は2^4の位を0、あとは全部1の0b01111とする。</p>
+<p>コードでの実装例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">INF<span style="color:#f92672">=</span>float(<span style="color:#e6db74">&#34;inf&#34;</span>)
+
+<span style="color:#75715e">#入力</span>
+n<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
+d<span style="color:#f92672">=</span>[[INF <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)]
+
+<span style="color:#75715e">#DP</span>
+dp<span style="color:#f92672">=</span>[[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>n)]
+<span style="color:#75715e">#経路</span>
+route<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">rec</span>(S,v,r):
+    <span style="color:#66d9ef">if</span>(dp[S][v] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>):
+        <span style="color:#66d9ef">return</span> dp[S][v],r
+    
+    <span style="color:#66d9ef">if</span>(S <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> v <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>):
+        <span style="color:#75715e">#全ての頂点を訪れて戻ってきた</span>
+        dp[S][v] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">return</span> dp[S][v],r
+    
+    res <span style="color:#f92672">=</span> INF
+    ans_route<span style="color:#f92672">=</span>r
+    <span style="color:#66d9ef">for</span> u <span style="color:#f92672">in</span> range(n):
+        <span style="color:#75715e">#uがまだ訪れてない? -&gt; Sの2^u桁目が0</span>
+        <span style="color:#66d9ef">if</span> d[v][u] <span style="color:#f92672">!=</span> INF <span style="color:#f92672">and</span> (<span style="color:#f92672">not</span> (S <span style="color:#f92672">&gt;&gt;</span> u <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span>)):
+            <span style="color:#75715e">#次にuに移動する</span>
+            res_u,res_route<span style="color:#f92672">=</span>rec(S <span style="color:#f92672">|</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> u , u , r<span style="color:#f92672">+</span><span style="color:#e6db74">&#34; -&gt; &#34;</span><span style="color:#f92672">+</span>str(u))
+            <span style="color:#75715e">#uに移動した結果の重みが小さいならばその結果を保存する</span>
+            <span style="color:#66d9ef">if</span>(res<span style="color:#f92672">&gt;</span>res_u <span style="color:#f92672">+</span> d[v][u]):
+                res<span style="color:#f92672">=</span>res_u <span style="color:#f92672">+</span> d[v][u]
+                ans_route<span style="color:#f92672">=</span>res_route
+    dp[S][v] <span style="color:#f92672">=</span> res
+    <span style="color:#66d9ef">return</span> dp[S][v],ans_route
+
+ans,route<span style="color:#f92672">=</span>rec(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,route)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;答:{0},経路:{1}&#34;</span><span style="color:#f92672">.</span>format(ans,route))
+
+
+</code></pre></div><p>試しに、例のグラフのデータを入力して実行してみよう。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">n<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
+d<span style="color:#f92672">=</span>[[INF,<span style="color:#ae81ff">3</span>,INF,<span style="color:#ae81ff">4</span>,INF],[INF,INF,<span style="color:#ae81ff">5</span>,INF,INF],[<span style="color:#ae81ff">4</span>,INF,INF,<span style="color:#ae81ff">5</span>,INF],[INF,INF,INF,INF,<span style="color:#ae81ff">3</span>],[<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">6</span>,INF,INF,INF]]
+</code></pre></div><p>実行結果は以下の通り。</p>
+<pre><code>答:22,経路:0 -&gt; 3 -&gt; 4 -&gt; 1 -&gt; 2 -&gt; 0
+</code></pre></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/02e5e4e9d8878de82f73e98849a37f04e788d16f" title='Last modified by Wataru Tsukagoshi | Nov 7, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Nov 7, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/procon/dp_applied.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#最長共通部分列問題">最長共通部分列問題</a></li>
+    <li><a href="#個数制限なしナップザック問題">個数制限なしナップザック問題</a>
+      <ul>
+        <li><a href="#値が大きい時">値が大きい時</a></li>
+      </ul>
+    </li>
+    <li><a href="#個数制限付き部分和問題">個数制限付き部分和問題</a></li>
+    <li><a href="#最長増加部分列問題">最長増加部分列問題</a></li>
+    <li><a href="#分割数">分割数</a></li>
+    <li><a href="#重複組み合わせ">重複組み合わせ</a></li>
+    <li><a href="#ビットdp">ビットDP</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

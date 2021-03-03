@@ -1,229 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ロジスティック回帰モデル # 前述の１次元入力２クラス分類において、最適な決定境界を引くにはどうすれば良いのだろうか。 方法の一つとしてロジスティ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="ロジスティック回帰モデル" />
+<meta property="og:description" content="ロジスティック回帰モデル # 前述の１次元入力２クラス分類において、最適な決定境界を引くにはどうすれば良いのだろうか。 方法の一つとしてロジスティ" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/machine_learning/logistic_regression/" />
+<meta property="article:modified_time" content="2020-06-11T19:12:54+09:00" />
 <title>ロジスティック回帰モデル | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.6a2036176fd3d23156cbd3a600fc9a2d9cce1ea33db8bc9b198029389d631721.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
 
-
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-  
-</head>
-
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
-<h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-    
-  
-  
-  
-
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2flogistic_regression\2f "] {
-      color: #004ed0;
-  }
-  </style>
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
-</ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
-<ul>
-<li>
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/container/container_index/"><strong>コンテナ</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
-</ul>
-
-<p></details></p>
-
-<ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
-</ul>
-
-
-
-
-
-
-
-
-  <div class="page-nav-item">
-    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
-  </div>
-  <br>
-  <div class="page-nav-item">
-    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
-  </div>
-</nav>
-
-
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
-
-    </aside>
-
-    <div class="book-page">
-      <header class="flex align-center justify-between book-header">
-  <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
-  </label>
-  <strong>ロジスティック回帰モデル</strong>
-</header>
-
-      
-<article class="markdown">
-
-<h1 id="ロジスティック回帰モデル">ロジスティック回帰モデル</h1>
-
-<p>前述の１次元入力２クラス分類において、最適な決定境界を引くにはどうすれば良いのだろうか。</p>
-
-<p>方法の一つとして<strong>ロジスティック回帰モデル</strong>がある。</p>
-
-<p>ただし、これが利用できるのは入力データが<strong>ガウス分布</strong>によって生成された時である。</p>
-
-<p>実は入力データがガウス分布に従っているとき、この１次元入力２クラス分類の条件付き確率P(t=1|x)はロジスティック回帰モデルで表せることがわかっている。</p>
-
-<p>前述の１次元入力２クラス分類で扱った入力データがガウス分布により生成されたデータであると仮定しよう。</p>
-
-<p>ロジスティック回帰モデルとは、以下の直線モデル(式(1))が与えられた時に、式(2)で表されるモデルである。</p>
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-
-
-
-<p class="katex">
-  $$ 
-\tag{1}  y  =  w_{0} x + w_{1} \\
- $$
-</p>
-
-
-
-
-
-<p class="katex">
-  $$ 
-\begin{aligned}
-\tag{2}  y  &=  \sigma ( w_{0} x + w_{1} ) \\
-            &=  \frac{1}{1 + \exp(-(w_{0} x + w_{1}))}
-\end{aligned}
- $$
-</p>
-
-
-
-<p>ここで,σ(x)はシグモイド関数であり、以下の式(3)で表される関数である。</p>
-
-
-
-<p class="katex">
-  $$ 
-\tag{3}  \sigma (x)  =  \frac{1}{ 1 + \exp( -x )}
- $$
-</p>
-
-
-
-<p>ロジスティック回帰モデルにより、出力は0~1の間に限定される。</p>
-
-<p>例として、y=x,y=2x+2,y=-x+1のロジスティック回帰モデルは以下のようになる。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_28.png" width=100%></p>
-
-<p>この図より、決定境界をy=0.5となるxに引くと、以下のように表される。</p>
-
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_29.png" width=100%></p>
-
-<p>ところで、このロジスティック回帰モデルで使用した直線モデルは何なのか？</p>
-
-<p>入力データに対して、どのような直線モデルを用いれば良いのか？</p>
-
-<p>実は、この1次元入力2クラス分類において、このデータに一番合うようなロジスティック回帰モデル　をなす直線モデルのパラメータ(w<sub>0</sub>,w<sub>1</sub>)を求めるのが、この分類問題を解く考え方である。</p>
-
-<p>そのための方法を次章以降で述べる。</p>
-</article>
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/6e0c6518147c3b5992d0fc58c93881f1fdd33136" title='Last modified Jun 11, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Jun 11, 2020
-    </a>
-  </div>
-  
-</div>
-
-
-      
-    </div>
-    
-  
-
-
-
-  </main>
-
-  
-  
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -234,7 +27,208 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
 
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>ロジスティック回帰モデル</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="ロジスティック回帰モデル">
+  ロジスティック回帰モデル
+  <a class="anchor" href="#%e3%83%ad%e3%82%b8%e3%82%b9%e3%83%86%e3%82%a3%e3%83%83%e3%82%af%e5%9b%9e%e5%b8%b0%e3%83%a2%e3%83%87%e3%83%ab">#</a>
+</h1>
+<p>前述の１次元入力２クラス分類において、最適な決定境界を引くにはどうすれば良いのだろうか。</p>
+<p>方法の一つとして<strong>ロジスティック回帰モデル</strong>がある。</p>
+<p>ただし、これが利用できるのは入力データが<strong>ガウス分布</strong>によって生成された時である。</p>
+<p>実は入力データがガウス分布に従っているとき、この１次元入力２クラス分類の条件付き確率P(t=1|x)はロジスティック回帰モデルで表せることがわかっている。</p>
+<p>前述の１次元入力２クラス分類で扱った入力データがガウス分布により生成されたデータであると仮定しよう。</p>
+<p>ロジスティック回帰モデルとは、以下の直線モデル(式(1))が与えられた時に、式(2)で表されるモデルである。</p>
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/katex/katex.min.css" />
+<script defer src="https://WAT36.github.io/pages/katex/katex.min.js"></script>
+<script defer src="https://WAT36.github.io/pages/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \(\tag{1}  y  =  w_{0} x &#43; w_{1} \\\)
+</span>
+
+<span>
+  \(\begin{aligned}
+\tag{2}  y  &amp;=  \sigma ( w_{0} x &#43; w_{1} ) \\
+            &amp;=  \frac{1}{1 &#43; \exp(-(w_{0} x &#43; w_{1}))}
+\end{aligned}\)
+</span>
+
+<p>ここで,σ(x)はシグモイド関数であり、以下の式(3)で表される関数である。</p>
+<span>
+  \(\tag{3}  \sigma (x)  =  \frac{1}{ 1 &#43; \exp( -x )}\)
+</span>
+
+<p>ロジスティック回帰モデルにより、出力は0~1の間に限定される。</p>
+<p>例として、y=x,y=2x+2,y=-x+1のロジスティック回帰モデルは以下のようになる。</p>
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_28.png" width=100%>
+<p>この図より、決定境界をy=0.5となるxに引くと、以下のように表される。</p>
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_29.png" width=100%>
+<p>ところで、このロジスティック回帰モデルで使用した直線モデルは何なのか？</p>
+<p>入力データに対して、どのような直線モデルを用いれば良いのか？</p>
+<p>実は、この1次元入力2クラス分類において、このデータに一番合うようなロジスティック回帰モデル　をなす直線モデルのパラメータ(w<sub>0</sub>,w<sub>1</sub>)を求めるのが、この分類問題を解く考え方である。</p>
+<p>そのための方法を次章以降で述べる。</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/6e0c6518147c3b5992d0fc58c93881f1fdd33136" title='Last modified by Wataru Tsukagoshi | Jun 11, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jun 11, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/machine_learning/logistic_regression.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

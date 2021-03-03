@@ -1,181 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="クラス・関数(メソッド) # クラス及び関数（メソッド）の定義についてを示す。 これも言語によって違う名前で呼ばれているものもあるので注意。 C言語">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="クラス・関数(メソッド)" />
+<meta property="og:description" content="クラス・関数(メソッド) # クラス及び関数（メソッド）の定義についてを示す。 これも言語によって違う名前で呼ばれているものもあるので注意。 C言語" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/class_func/classfunc_index/" />
+<meta property="article:modified_time" content="2021-02-07T01:42:31+09:00" />
 <title>クラス・関数(メソッド) | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.6a2036176fd3d23156cbd3a600fc9a2d9cce1ea33db8bc9b198029389d631721.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
 
-
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-  
-</head>
-
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
-<h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-    
-  
-  
-  
-
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2f class_func\2f classfunc_index\2f "] {
-      color: #004ed0;
-  }
-  </style>
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
-</ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
-<ul>
-<li>
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/container/container_index/"><strong>コンテナ</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
-</ul>
-
-<p></details></p>
-
-<ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
-</ul>
-
-
-
-
-
-
-
-
-  <div class="page-nav-item">
-    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
-  </div>
-  <br>
-  <div class="page-nav-item">
-    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
-  </div>
-</nav>
-
-
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
-
-    </aside>
-
-    <div class="book-page">
-      <header class="flex align-center justify-between book-header">
-  <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
-  </label>
-  <strong>クラス・関数(メソッド)</strong>
-</header>
-
-      
-<article class="markdown">
-
-<h1 id="クラス-関数-メソッド">クラス・関数(メソッド)</h1>
-
-<p>クラス及び関数（メソッド）の定義についてを示す。
-これも言語によって違う名前で呼ばれているものもあるので注意。</p>
-
-<ul>
-<li>クラス
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/class/">クラスの定義</a></li>
-<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/field/">フィールド(クラス変数・インスタンス変数)</a></li>
-<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/constructor/">コンストラクタ(__init__)</a></li>
-<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/inheritance/">継承</a></li>
-<li>多重継承</li>
-</ul></li>
-<li>関数
-
-<ul>
-<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/func/">関数(メソッド)の定義</a></li>
-<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/default_arg/">(Python)引数のデフォルト値</a></li>
-<li>匿名（無名）クラス</li>
-<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/lambda/">ラムダ式（無名関数）</a></li>
-</ul></li>
-</ul>
-</article>
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/4a908a8ec7c47b9f69992d036bff5acd94292a02" title='Last modified Mar 4, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Mar 4, 2020
-    </a>
-  </div>
-  
-</div>
-
-
-      
-    </div>
-    
-  
-
-
-
-  </main>
-
-  
-  
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -186,7 +27,205 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
 
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>クラス・関数(メソッド)</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="クラス関数メソッド">
+  クラス・関数(メソッド)
+  <a class="anchor" href="#%e3%82%af%e3%83%a9%e3%82%b9%e9%96%a2%e6%95%b0%e3%83%a1%e3%82%bd%e3%83%83%e3%83%89">#</a>
+</h1>
+<p>クラス及び関数（メソッド）の定義についてを示す。
+これも言語によって違う名前で呼ばれているものもあるので注意。
+C言語では構造体、JavaScriptではオブジェクト(プロパティ)と言った名前のデータ構造もクラスに近いため、ここでは一緒の項としてまとめておく（これらを似た構造としてひとまとめにする事に否定的な意見もあるかもしれないが）</p>
+<ul>
+<li>クラス
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/class/">クラスの定義</a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/field/">フィールド(クラス変数・インスタンス変数)</a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/constructor/">コンストラクタ(__init__)</a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/inheritance/">継承</a></li>
+<li>多重継承</li>
+</ul>
+</li>
+<li>関数
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/func/">関数(メソッド)の定義</a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/default_arg/">(Python)引数のデフォルト値</a></li>
+<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/variablelength_arg/">可変長引数の関数</a></li>
+</ul>
+</li>
+<li>匿名（無名）クラス
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/lambda/">ラムダ式（無名関数）</a></li>
+</ul>
+</li>
+<li>構造体、オブジェクト
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/class_func/object/">オブジェクト(Javascript)</a></li>
+</ul>
+</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/9fd3d27fdeb8621150557508c52c4de4c0541b93" title='Last modified by Wataru Tsukagoshi | Feb 7, 2021' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Feb 7, 2021</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/class_func/classfunc_index.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

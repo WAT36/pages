@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CSSでのテキスト # CSSでのテキストの表現方法についてを示す。 text-shadowプロパティ # text-shadowプロパティは、テキス">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="CSSでのテキスト" />
+<meta property="og:description" content="CSSでのテキスト # CSSでのテキストの表現方法についてを示す。 text-shadowプロパティ # text-shadowプロパティは、テキス" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/css_text/" />
+<meta property="article:modified_time" content="2020-07-20T21:04:59+09:00" />
+<title>CSSでのテキスト | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>CSSでのテキスト</strong>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#text-shadowプロパティ">text-shadowプロパティ</a></li>
+    <li><a href="#text-decoration関連のプロパティ">text-decoration関連のプロパティ</a></li>
+    <li><a href="#word-breakプロパティ">word-breakプロパティ</a></li>
+    <li><a href="#hyphensプロパティ">hyphensプロパティ</a></li>
+    <li><a href="#white-spaceプロパティ">white-spaceプロパティ</a></li>
+    <li><a href="#text-alignプロパティ">text-alignプロパティ</a></li>
+    <li><a href="#vertical-alignプロパティ">vertical-alignプロパティ</a></li>
+    <li><a href="#line-heightプロパティ">line-heightプロパティ</a></li>
+    <li><a href="#text-indentプロパティ">text-indentプロパティ</a></li>
+    <li><a href="#letter-spacingプロパティ">letter-spacingプロパティ</a></li>
+    <li><a href="#word-spacing-プロパティ">word-spacing プロパティ</a></li>
+    <li><a href="#text-transformプロパティ">text-transformプロパティ</a></li>
+    <li><a href="#directionプロパティ">directionプロパティ</a></li>
+    <li><a href="#unicode-bidiプロパティ">unicode-bidiプロパティ</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="cssでのテキスト">
+  CSSでのテキスト
+  <a class="anchor" href="#css%e3%81%a7%e3%81%ae%e3%83%86%e3%82%ad%e3%82%b9%e3%83%88">#</a>
+</h1>
+<p>CSSでのテキストの表現方法についてを示す。</p>
+<h2 id="text-shadowプロパティ">
+  text-shadowプロパティ
+  <a class="anchor" href="#text-shadow%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>text-shadowプロパティは、テキストに影を表示させるプロパティである。</p>
+<p>設定できる値は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">影を表示させない</td>
+    </tr>
+    <tr>
+        <td style="border:none;">色</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">影の色</td>
+    </tr>
+    <tr>
+        <td style="border:none;">数値(2~3個、単位付)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">影の表示位置(1番目から左右、上下、ぼかし範囲の指定)</td>
+    </tr>
+</table>
+<p>使用例</p>
+<pre><code>&lt;p style=&quot;text-shadow: 5px 5px 5px red&quot;&gt;
+テキストに影を表示させる
+&lt;/p&gt;
+</code></pre><p>表示例</p>
+<hr>
+<p style="text-shadow: 5px 5px 5px red">
+テキストに影を表示させる
+</p>
+<hr>
+<h2 id="text-decoration関連のプロパティ">
+  text-decoration関連のプロパティ
+  <a class="anchor" href="#text-decoration%e9%96%a2%e9%80%a3%e3%81%ae%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>text-decoration系のプロパティは、文字に下線・上線・取消線を引いたり、及びその線種を指定するプロパティである。</p>
+<p>プロパティ名・指定する値・意味は以下の通り。</p>
+<table>
+    <tr>
+        <td rowspan="3">text-decoration-line</td>
+        <td>underline</td>
+        <td>・・</td>
+        <td>下線</td>
+    </tr>
+    <tr>
+        <td>overline</td>
+        <td>・・</td>
+        <td>上線</td>
+    </tr>
+    <tr>
+        <td>line-through</td>
+        <td>・・</td>
+        <td>取消線</td>
+    </tr>
+    <tr>
+        <td>text-decoration-color</td>
+        <td>(色を示す値)</td>
+        <td>・・</td>
+        <td>線に色を付ける</td>
+    </tr>
+    <tr>
+        <td rowspan="5">text-decoration-style</td>
+        <td>solid</td>
+        <td>・・</td>
+        <td>実線</td>
+    </tr>
+    <tr>
+        <td>double</td>
+        <td>・・</td>
+        <td>二重線</td>
+    </tr>
+    <tr>
+        <td>dotted</td>
+        <td>・・</td>
+        <td>点線</td>
+    </tr>
+    <tr>
+        <td>dashed</td>
+        <td>・・</td>
+        <td>破線</td>
+    </tr>
+    <tr>
+        <td>wavy</td>
+        <td>・・</td>
+        <td>波線</td>
+    </tr>
+    <tr>
+        <td>text-decoration</td>
+        <td colspan="3">上記で指定する値を空白区切りで区切ってまとめて指定</td>
+    </tr>
+</table>
+<p>使用例</p>
+<pre><code>&lt;p&gt;テキストに&lt;span style=&quot;text-decoration:underline;&quot;&gt;下線&lt;/span&gt;を付けてみる&lt;/p&gt;
+</code></pre><p>表示例</p>
+<hr>
+<p>テキストに<span style="text-decoration:underline;">下線</span>を付けてみる</p>
+<hr>
+<h2 id="word-breakプロパティ">
+  word-breakプロパティ
+  <a class="anchor" href="#word-break%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>word-breakプロパティは、行の折り返しの設定を行うプロパティである。</p>
+<p>設定できる値は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">break-all</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">全ての文字で折り返しが行える</td>
+    </tr>
+    <tr>
+        <td style="border:none;">keep-all</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">空白文字が連続しないところでは折り返されない</td>
+    </tr>
+    <tr>
+        <td style="border:none;">normal</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">テキストの言語のルールに従い折り返される</td>
+    </tr>
+</table>
+<p>使用例</p>
+<pre><code>&lt;p style=&quot;word-break:break-all&quot;&gt;break-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-all&lt;/p&gt;
+&lt;p style=&quot;word-break:keep-all&quot; &gt;keep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-all&lt;/p&gt;
+</code></pre><p>表示例</p>
+<hr>
+<p style="word-break:break-all">break-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-allbreak-all</p>
+<p style="word-break:keep-all" >keep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-allkeep-all</p>
+<hr>
+<h2 id="hyphensプロパティ">
+  hyphensプロパティ
+  <a class="anchor" href="#hyphens%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>hyphensプロパティは、ハイフネーションの設定を行うプロパティである。</p>
+<p>ハイフネーションとは、語の途中でハイフン(-)を使って改行させる仕様のことである。</p>
+<p>設定できる値は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">manual</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;"><code>& shy;</code>の場所でのみハイフネーションが行われる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ハイフネーションは一切行わない(<code>& shy;</code>も無視される)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">auto</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">言語に応じてブラウザが適当な箇所でハイフネーションを行う(lang属性による言語の指定が必要となる)</td>
+    </tr>
+</table>
+<p>使用例</p>
+<pre><code>&lt;p style=&quot;hyphens:manual&quot;&gt;au&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;toau&amp;shy;to&lt;/p&gt;
+</code></pre><p>表示例</p>
+<hr>
+<p style="hyphens:manual">au&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;toau&shy;to</p>
+<hr>
+<h2 id="white-spaceプロパティ">
+  white-spaceプロパティ
+  <a class="anchor" href="#white-space%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>white-spaceプロパティは、「連続する空白文字を１つにまとめるか」など、空白文字に関する設定を行うプロパティである。</p>
+<p>設定できる値と意味は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">normal</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">半角スペース・改行・タブを一つの半角スペースにまとめる。幅が広くなった場合、行を折り返す。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">nowrap</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">半角スペース・改行・タブを一つの半角スペースにまとめる。幅が広くなっても行は折り返さない。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">pre</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">半角スペース・改行・タブはまとめず、入力した通りに表示される。幅が広くなっても行は折り返さない。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">pre-wrap</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">半角スペース・改行・タブはまとめず、入力した通りに表示される。幅が広くなった場合、行を折り返す。</td>
+    </tr>
+</table>
+<p>使用例</p>
+<pre><code>&lt;p style=&quot;white-space:normal&quot;  &gt;  あ    い  う  え  お  か  き  く  け  こ  &lt;/p&gt;
+&lt;p style=&quot;white-space:pre-wrap&quot;&gt;  あ    い  う  え  お  か  き  く  け  こ  &lt;/p&gt;
+</code></pre><p>表示例</p>
+<hr>
+<p style="white-space:normal"  >  あ    い  う  え  お  か  き  く  け  こ  </p>
+<p style="white-space:pre-wrap">  あ    い  う  え  お  か  き  く  け  こ  </p>
+<hr>
+<h2 id="text-alignプロパティ">
+  text-alignプロパティ
+  <a class="anchor" href="#text-align%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>text-alignプロパティは、要素の行揃えを設定するプロパティである。</p>
+<p>設定できる値と意味は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">left</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">左揃え</td>
+    </tr>
+    <tr>
+        <td style="border:none;">right</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">右揃え</td>
+    </tr>
+    <tr>
+        <td style="border:none;">center</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">中央揃え</td>
+    </tr>
+    <tr>
+        <td style="border:none;">justify</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">両端揃え</td>
+    </tr>
+</table>
+<p>使用例</p>
+<pre><code>&lt;p style=&quot;text-align:left&quot;   &gt;あいうえおかきくけこさしすせそ&lt;/p&gt;
+&lt;p style=&quot;text-align:right&quot;  &gt;あいうえおかきくけこさしすせそ&lt;/p&gt;
+&lt;p style=&quot;text-align:center&quot; &gt;あいうえおかきくけこさしすせそ&lt;/p&gt;
+</code></pre><p>表示例</p>
+<hr>
+<p style="text-align:left"   >あいうえおかきくけこさしすせそ</p>
+<p style="text-align:right"  >あいうえおかきくけこさしすせそ</p>
+<p style="text-align:center" >あいうえおかきくけこさしすせそ</p>
+<hr>
+<h2 id="vertical-alignプロパティ">
+  vertical-alignプロパティ
+  <a class="anchor" href="#vertical-align%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>vertical-alignプロパティは、行の中での文字の縦方向の揃え位置を設定するプロパティである。</p>
+<p>設定できる値と意味は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">baseline</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">親要素(アルファベット)のベースラインに合わせる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">top</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">上揃え</td>
+    </tr>
+    <tr>
+        <td style="border:none;">middle</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">中央揃え</td>
+    </tr>
+    <tr>
+        <td style="border:none;">bottom</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">下揃え</td>
+    </tr>
+    <tr>
+        <td style="border:none;">super</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">上付き文字の位置に揃える</td>
+    </tr>
+    <tr>
+        <td style="border:none;">sub</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">下付き文字の位置に揃える</td>
+    </tr>
+</table>
+<p>使用例</p>
+<pre><code>&lt;div&gt;
+&lt;span style=&quot;font-size:30px&quot;&gt;a&lt;/span&gt;
+&lt;span style=&quot;font-size:10px;vertical-align:baseline&quot;&gt;bcde&lt;/span&gt;
+&lt;span style=&quot;font-size:10px;vertical-align:top&quot;&gt;fghi&lt;/span&gt;
+&lt;span style=&quot;font-size:10px;vertical-align:middle&quot;&gt;jklm&lt;/span&gt;
+&lt;span style=&quot;font-size:10px;vertical-align:bottom&quot;&gt;nopq&lt;/span&gt;
+&lt;/div&gt;
+</code></pre><p>表示例</p>
+<hr>
+<div>
+<span style="font-size:30px">a</span>
+<span style="font-size:10px;vertical-align:baseline">bcde</span>
+<span style="font-size:10px;vertical-align:top">fghi</span>
+<span style="font-size:10px;vertical-align:middle">jklm</span>
+<span style="font-size:10px;vertical-align:bottom">nopq</span>
+</div>
+<hr>
+<h2 id="line-heightプロパティ">
+  line-heightプロパティ
+  <a class="anchor" href="#line-height%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>line-heightプロパティは、行間を設定するプロパティである。</p>
+<p>設定できる値と意味は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">数値(単位なし)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">この数値とフォントサイズを掛けた値が行間になる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">数値(単位px)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">pxの長さが行間になる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">パーセンテージ</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">フォントサイズに対するパーセンテージが行間になる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">normal</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ブラウザが妥当とする行間に設定する</td>
+    </tr>
+</table>
+<p>使用例</p>
+<pre><code>&lt;p style=&quot;line-height:100px&quot;&gt;
+あいうえお&lt;br&gt;
+かきくけこ&lt;br&gt;
+さしすせそ&lt;br&gt;
+たちつてと&lt;br&gt;
+なにぬねの&lt;br&gt;
+&lt;/p&gt;
+</code></pre><p>表示例</p>
+<hr>
+<p style="line-height:100px">
+あいうえお<br>
+かきくけこ<br>
+さしすせそ<br>
+たちつてと<br>
+なにぬねの<br>
+</p>
+<hr>
+<h2 id="text-indentプロパティ">
+  text-indentプロパティ
+  <a class="anchor" href="#text-indent%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>text-indentプロパティは、要素の１行目のインデントを設定するプロパティである。</p>
+<p>設定できる値と意味は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">数値(単位px)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">pxの値に応じてインデントされる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">パーセンテージ</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">幅に対するパーセンテージの分だけ</td>
+    </tr>
+</table>
+<p>使用例</p>
+<pre><code>&lt;p style=&quot;text-indent:10px&quot;&gt;あいうえお&lt;p&gt;
+&lt;p style=&quot;text-indent:20px&quot;&gt;かきくけこ&lt;p&gt;
+&lt;p style=&quot;text-indent:30px&quot;&gt;さしすせそ&lt;p&gt;
+&lt;p style=&quot;text-indent:5%&quot;&gt;たちつてと&lt;p&gt;
+&lt;p style=&quot;text-indent:10%&quot;&gt;なにぬねの&lt;p&gt;
+&lt;p style=&quot;text-indent:15%&quot;&gt;はひふへほ&lt;p&gt;
+</code></pre><p>表示例</p>
+<hr>
+<p style="text-indent:10px">あいうえお<p>
+<p style="text-indent:20px">かきくけこ<p>
+<p style="text-indent:30px">さしすせそ<p>
+<p style="text-indent:5%">たちつてと<p>
+<p style="text-indent:10%">なにぬねの<p>
+<p style="text-indent:15%">はひふへほ<p>
+<hr>
+<h2 id="letter-spacingプロパティ">
+  letter-spacingプロパティ
+  <a class="anchor" href="#letter-spacing%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>letter-spacingプロパティは、文字の間隔を設定するプロパティである。</p>
+<p>設定できる値と意味は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">数値(単位px)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">pxの値に応じて文字間隔が設定される</td>
+    </tr>
+    <tr>
+        <td style="border:none;">normal</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">標準の間隔にする</td>
+    </tr>
+</table>
+<p>使用例</p>
+<pre><code>&lt;p style=&quot;letter-spacing:10px&quot;&gt;あいうえお&lt;p&gt;
+&lt;p style=&quot;letter-spacing:20px&quot;&gt;かきくけこ&lt;p&gt;
+</code></pre><p>表示例</p>
+<hr>
+<p style="letter-spacing:10px">あいうえお<p>
+<p style="letter-spacing:20px">かきくけこ<p>
+<hr>
+<h2 id="word-spacing-プロパティ">
+  word-spacing プロパティ
+  <a class="anchor" href="#word-spacing-%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>word-spacingプロパティは、単語の間隔を設定するプロパティである。</p>
+<p>設定できる値と意味は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">数値(単位px)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">pxの値に応じて文字間隔が設定される</td>
+    </tr>
+    <tr>
+        <td style="border:none;">normal</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">標準の間隔にする</td>
+    </tr>
+</table>
+<p>使用例</p>
+<pre><code>&lt;p style=&quot;word-spacing:10px&quot;&gt;I do my best.&lt;p&gt;
+&lt;p style=&quot;word-spacing:20px&quot;&gt;I will pass HTML5 Proffesinal Certification examination.&lt;p&gt;
+</code></pre><p>表示例</p>
+<hr>
+<p style="word-spacing:10px">I do my best.<p>
+<p style="word-spacing:20px">I will pass HTML5 Proffesinal Certification examination.<p>
+<hr>
+<h2 id="text-transformプロパティ">
+  text-transformプロパティ
+  <a class="anchor" href="#text-transform%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>text-transformプロパティは、アルファベットの大文字小文字を変換して表示させるプロパティである。</p>
+<p>設定できる値と意味は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">uppercase</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">半角アルファベットを全て大文字にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">normal</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">半角アルファベットを全て小文字にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">capitalize</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">半角アルファベットの単語の先頭一文字のみを大文字にする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">none</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">変化させない</td>
+    </tr>
+</table>
+<p>使用例</p>
+<pre><code>&lt;p style=&quot;text-transform:uppercase&quot;&gt;How are you?&lt;p&gt;
+&lt;p style=&quot;text-transform:lowercase&quot;&gt;I do my best.&lt;p&gt;
+&lt;p style=&quot;text-transform:capitalize&quot;&gt;I will pass html5 proffesinal certification examination.&lt;p&gt;
+</code></pre><p>表示例</p>
+<hr>
+<p style="text-transform:uppercase">How are you?<p>
+<p style="text-transform:lowercase">I do my best.<p>
+<p style="text-transform:capitalize">I will pass html5 proffesinal certification examination.<p>
+<hr>
+<h2 id="directionプロパティ">
+  directionプロパティ
+  <a class="anchor" href="#direction%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>directionプロパティは、テキストの表記の方向を設定するプロパティである。</p>
+<p>設定できる値と意味は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">ltr</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">左から右に表記する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">rtl</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">右から左に表記する</td>
+    </tr>
+</table>
+<p>使用例は下のunicode-bidiプロパティで示す。</p>
+<h2 id="unicode-bidiプロパティ">
+  unicode-bidiプロパティ
+  <a class="anchor" href="#unicode-bidi%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>unicode-bidiプロパティは、Unicodeの文字表記の方向を上書きするプロパティである。</p>
+<p>設定できる値と意味は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">normal</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">上書きしない</td>
+    </tr>
+    <tr>
+        <td style="border:none;">embed</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">directionプロパティで設定した値を組み込む</td>
+    </tr>
+    <tr>
+        <td style="border:none;">bidi-override</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">既存のunicodeの文字表記の設定を無効にし、directionプロパティで設定した値で上書きする。</td>
+    </tr>
+</table>
+<p>使用例</p>
+<pre><code>&lt;p style=&quot;direction:ltr&quot;&gt;How are you?&lt;p&gt;
+&lt;p style=&quot;direction:rtl&quot;&gt;I do my best.&lt;p&gt;
+&lt;p style=&quot;direction:rtl;unicode-bidi:bidi-override&quot;&gt;I will pass html5 proffesinal certification examination.&lt;p&gt;
+</code></pre><p>表示例</p>
+<hr>
+<p style="direction:ltr">How are you?<p>
+<p style="direction:rtl">I do my best.<p>
+<p style="direction:rtl;unicode-bidi:bidi-override">I will pass html5 proffesinal certification examination.<p>
+<hr></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/db4a9fd98194225891cd671630886d2ae3327a2c" title='Last modified by Wataru Tsukagoshi | Jul 20, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jul 20, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/css_text.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#text-shadowプロパティ">text-shadowプロパティ</a></li>
+    <li><a href="#text-decoration関連のプロパティ">text-decoration関連のプロパティ</a></li>
+    <li><a href="#word-breakプロパティ">word-breakプロパティ</a></li>
+    <li><a href="#hyphensプロパティ">hyphensプロパティ</a></li>
+    <li><a href="#white-spaceプロパティ">white-spaceプロパティ</a></li>
+    <li><a href="#text-alignプロパティ">text-alignプロパティ</a></li>
+    <li><a href="#vertical-alignプロパティ">vertical-alignプロパティ</a></li>
+    <li><a href="#line-heightプロパティ">line-heightプロパティ</a></li>
+    <li><a href="#text-indentプロパティ">text-indentプロパティ</a></li>
+    <li><a href="#letter-spacingプロパティ">letter-spacingプロパティ</a></li>
+    <li><a href="#word-spacing-プロパティ">word-spacing プロパティ</a></li>
+    <li><a href="#text-transformプロパティ">text-transformプロパティ</a></li>
+    <li><a href="#directionプロパティ">directionプロパティ</a></li>
+    <li><a href="#unicode-bidiプロパティ">unicode-bidiプロパティ</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

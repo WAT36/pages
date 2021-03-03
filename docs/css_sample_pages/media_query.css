@@ -1,0 +1,17 @@
+@media screen and (min-width:0px){
+    body{
+      color: greenyellow;
+    }
+}
+  
+@media screen and (min-width:300px){
+    body{
+      color: red;
+    }
+}
+  
+@media screen and (min-width:600px){
+    body{
+      color: blue;
+    }
+}

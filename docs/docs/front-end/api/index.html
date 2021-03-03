@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="API HTMLに関連する各種APIについて。 マルチメディアグラフィックスAPI # HTMLでの音声・動画といったマルチメディアに関する設定や操作を">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="API" />
+<meta property="og:description" content="API HTMLに関連する各種APIについて。 マルチメディアグラフィックスAPI # HTMLでの音声・動画といったマルチメディアに関する設定や操作を" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/api/" />
+<meta property="article:modified_time" content="2021-01-17T00:08:08+09:00" />
+<title>API | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>API</strong>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#マルチメディア">マルチメディア</a></li>
+    <li><a href="#ストリーミング">ストリーミング</a></li>
+    <li><a href="#グラフィックス">グラフィックス</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#geolocation-api">Geolocation API</a></li>
+    <li><a href="#deviceorientation-event">DeviceOrientation Event</a></li>
+    <li><a href="#touch-events">Touch Events</a></li>
+    <li><a href="#pointer-events">Pointer Events</a></li>
+    <li><a href="#dom3-events-ui-events">DOM3 Events (UI Events)</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#web-storage">Web Storage</a>
+      <ul>
+        <li><a href="#ローカルストレージ">ローカルストレージ</a></li>
+      </ul>
+    </li>
+    <li><a href="#indexed-database-api">Indexed Database API</a></li>
+    <li><a href="#application-cache">Application cache</a></li>
+    <li><a href="#web-workers">Web Workers</a></li>
+    <li><a href="#service-workers">Service Workers</a></li>
+    <li><a href="#push-api">Push API</a></li>
+    <li><a href="#fetch">fetch</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#xmlhttprequest">XMLHttpRequest</a></li>
+    <li><a href="#websocket-api">WebSocket API</a></li>
+    <li><a href="#server-sent-events">Server-Sent Events</a></li>
+    <li><a href="#webrtc">WebRTC</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1>API</h1>
+<p>HTMLに関連する各種APIについて。</p>
+<h1 id="マルチメディアグラフィックスapi">
+  マルチメディアグラフィックスAPI
+  <a class="anchor" href="#%e3%83%9e%e3%83%ab%e3%83%81%e3%83%a1%e3%83%87%e3%82%a3%e3%82%a2%e3%82%b0%e3%83%a9%e3%83%95%e3%82%a3%e3%83%83%e3%82%af%e3%82%b9api">#</a>
+</h1>
+<p>HTMLでの音声・動画といったマルチメディアに関する設定や操作を、JavaScript等といった外部ソースから制御することができる。詳しい実装方法については現在は述べないが、設定できる内容の種類についてを述べる。</p>
+<h2 id="マルチメディア">
+  マルチメディア
+  <a class="anchor" href="#%e3%83%9e%e3%83%ab%e3%83%81%e3%83%a1%e3%83%87%e3%82%a3%e3%82%a2">#</a>
+</h2>
+<p>HTMLでは、audio要素で音声コンテンツ、video要素で動画コンテンツを埋め込むことができる。</p>
+<p>この埋め込んだマルチメディアコンテンツを、JavaScriptを使って制御することができる。</p>
+<p>制御できる内容は以下の通り。</p>
+<ul>
+<li>音声・動画プレイヤーのデザイン変更</li>
+<li>コンテンツの再読み込み</li>
+<li>再生開始・中断</li>
+</ul>
+<p>また、マルチメディアコンテンツの以下のような情報をJavaScriptで取得することができる。</p>
+<ul>
+<li>コンテンツが再生・早送り可能な状態か</li>
+<li>ネットワーク状況</li>
+<li>コンテンツの場所</li>
+<li>音量</li>
+<li>トラック情報</li>
+</ul>
+<h2 id="ストリーミング">
+  ストリーミング
+  <a class="anchor" href="#%e3%82%b9%e3%83%88%e3%83%aa%e3%83%bc%e3%83%9f%e3%83%b3%e3%82%b0">#</a>
+</h2>
+<p>ストリーミングとは、マルチメディアコンテンツをダウンロードと同時に(ダウンロードできている部分の)再生を行う技術である。</p>
+<p>通常はコンテンツのダウンロードが全て終わってから再生するが、通信状況が悪い場合やコンテンツの容量が大きい場合は非常に時間がかかる場合もあり、コンテンツの利用をスムーズに行えない場合が多い。そのためにストリーミング技術を利用する方法が増えている。</p>
+<p>そのような通信状況等に応じて、適切なビットレートのコンテンツを選択し、ストリーミング再生を実現する技術を<strong>Adaptive Streaming技術</strong>と呼ぶ。</p>
+<p>Adaptive Streaming技術には、Apple社が開発したプロトコルである<strong>HLS(HTTP Live Streaming)</strong>、Adobe社やMicrosoft社などにより開発された<strong>MPEG-DASH</strong>のようなプロトコルも存在する。</p>
+<p>また、JavaScriptのAPIにもストリーミングに対応したものが用意されている。例として<strong>Media Source Extensions</strong>はHLSやMPEG-DASHのように、ストリーミング配信されるコンテンツを再生するために作られたAPIである。</p>
+<h2 id="グラフィックス">
+  グラフィックス
+  <a class="anchor" href="#%e3%82%b0%e3%83%a9%e3%83%95%e3%82%a3%e3%83%83%e3%82%af%e3%82%b9">#</a>
+</h2>
+<p>画像ファイルは、jpegやpngファイルを用意して表示するが、HTML5ではJavascript等の外部ソースを利用しても表示できる。</p>
+<p>JavaScriptを使って画像を描画し、HTMLで表示するには<strong>canvas要素</strong>を利用する。canvasは画像をビットマップ形式（１ピクセル毎に色を指定する方式）で描画する。そのため、拡大縮小すると画像が粗くなる。</p>
+<p>利用方法は以下の通り。</p>
+<ul>
+<li>HTMLにcanvas要素を用意する。</li>
+<li>Javascriptでcanvas要素を参照し、描画用のcontextオブジェクトを取得する</li>
+<li>Javascriptを使って描画する</li>
+</ul>
+<p>Javascriptを使った描画では、以下のような操作が可能である。</p>
+<ul>
+<li>線を描く</li>
+<li>円、四角を描く</li>
+<li>色を塗る</li>
+<li>テキストを書く</li>
+<li>画像ファイルを読み込む</li>
+<li>拡大・縮小・回転する</li>
+</ul>
+<p>canvasを使ったコード例を以下に示す。</p>
+<p>html</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;canvas例&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">canvas</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sample&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100&#34;</span>&gt;&lt;/<span style="color:#f92672">canvas</span>&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/js_sample_pages/api.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>javascript</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">canvas</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;sample&#39;</span>);
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ctx</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">canvas</span>.<span style="color:#a6e22e">getContext</span>(<span style="color:#e6db74">&#39;2d&#39;</span>);
+
+<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">beginPath</span>();
+<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">rect</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">100</span>,<span style="color:#ae81ff">100</span>);
+<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">strokeStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;#F00&#39;</span>;
+<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;#FF0&#39;</span>;
+<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">stroke</span>();
+<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fill</span>();
+</code></pre></div><p>表示例(canvas)</p>
+<hr>
+<hr>
+<p>canvas例</p>
+<canvas id="sample" width="100" height="100"></canvas>
+<script src="https://WAT36.github.io/pages/js_sample_pages/api.js"></script>
+<hr>
+<hr>
+<p>また、ベクター形式の画像である**SVG (Scalable Vector Graphics)**という方式もある。</p>
+<p>SVGはベクター形式のため、拡大縮小などしても画像が粗くならないという特徴がある。SVGではXML形式で画像を作成する。</p>
+<p>SVGを有効活用したライブラリとして、<strong>D3.js</strong>などがある。以下にSVGの例を示す。</p>
+<p>html</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;svg例&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">svg</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;200&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;200&#34;</span>&gt;
+    &lt;<span style="color:#f92672">circle</span> <span style="color:#a6e22e">cx</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100&#34;</span> <span style="color:#a6e22e">cy</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100&#34;</span> <span style="color:#a6e22e">r</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;50&#34;</span> <span style="color:#a6e22e">stroke</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span> <span style="color:#a6e22e">fill</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;yellow&#34;</span> /&gt;
+&lt;/<span style="color:#f92672">svg</span>&gt;
+</code></pre></div><p>表示例</p>
+<hr>
+<hr>
+<p>svg例</p>
+<svg width="200" height="200">
+    <circle cx="100" cy="100" r="50" stroke="red" fill="yellow" />
+</svg>
+<hr>
+<hr>
+<h1 id="デバイスアクセスapi">
+  デバイスアクセスAPI
+  <a class="anchor" href="#%e3%83%87%e3%83%90%e3%82%a4%e3%82%b9%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9api">#</a>
+</h1>
+<p>デバイスに関する情報を取得できるAPIについてを述べる。</p>
+<h2 id="geolocation-api">
+  Geolocation API
+  <a class="anchor" href="#geolocation-api">#</a>
+</h2>
+<p>GeoLocation APIは、ユーザーの位置情報を取得するためのAPIである。</p>
+<p>Geolocation APIは、無線LAN、Wi-Fi、携帯キャリアの基地局、GPS、IPアドレスなどといったソースを基にユーザーの位置情報を取得する。</p>
+<p>取得できる情報の例は、以下の通り。</p>
+<ul>
+<li>緯度</li>
+<li>経度</li>
+<li>高度</li>
+<li>方角</li>
+<li>速度</li>
+</ul>
+<h2 id="deviceorientation-event">
+  DeviceOrientation Event
+  <a class="anchor" href="#deviceorientation-event">#</a>
+</h2>
+<p>DeviceOrientation Eventは、デバイスの傾きが変化したときに発生するイベントである。</p>
+<p>取得できる情報の例は以下の通り。</p>
+<ul>
+<li>デバイスが差す方角</li>
+<li>デバイスの上下方向の傾き</li>
+<li>デバイスの左右方向の傾き</li>
+</ul>
+<h2 id="touch-events">
+  Touch Events
+  <a class="anchor" href="#touch-events">#</a>
+</h2>
+<p>Touch Eventsは、タッチパネルなどの画面を指で操作しているときに発生するイベント類である。</p>
+<p>取得できる情報の例は以下の通り。</p>
+<ul>
+<li>画面をタッチ</li>
+<li>画面をタッチしたまま動かす</li>
+<li>画面から離す</li>
+</ul>
+<h2 id="pointer-events">
+  Pointer Events
+  <a class="anchor" href="#pointer-events">#</a>
+</h2>
+<p>Pointer Eventsは、マウスカーソルなどといったポインタと呼ばれる要素に関するイベントである。</p>
+<p>取得できる情報の例は以下の通り。</p>
+<ul>
+<li>ポインタが要素の上に乗る</li>
+<li>ポインタが要素の上から離れる</li>
+<li>ポインタが動作状態になる</li>
+<li>ポインタが非動作状態になる</li>
+<li>ポインタが動く</li>
+</ul>
+<h2 id="dom3-events-ui-events">
+  DOM3 Events (UI Events)
+  <a class="anchor" href="#dom3-events-ui-events">#</a>
+</h2>
+<p>DOM3 Events (UI Events)は、マウスやキーボードなどの入力操作を取り扱うためのイベントである。</p>
+<p>例は以下の通り。</p>
+<table>
+    <thead>
+        <th>イベントの種類</th>
+        <th>概要</th>
+    </thead>
+    <tr>
+        <td>UIイベント</td>
+        <td>UIやHTML文書の操作に関するイベント</td>
+    </tr>
+    <tr>
+        <td>フォーカスイベント</td>
+        <td>フォーカスの状態変化に関するイベント</td>
+    </tr>
+    <tr>
+        <td>マウスイベント</td>
+        <td>マウス操作に関するイベント</td>
+    </tr>
+    <tr>
+        <td>ホイールイベント</td>
+        <td>マウス等ホイールの操作に関するイベント</td>
+    </tr>
+    <tr>
+        <td>入力イベント</td>
+        <td>キーボード入力の操作に関するイベント</td>
+    </tr>
+</table>
+<h1 id="オフラインストレージapi">
+  オフラインストレージAPI
+  <a class="anchor" href="#%e3%82%aa%e3%83%95%e3%83%a9%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b8api">#</a>
+</h1>
+<p>外部のインフラやリソースを利用せずとも、ブラウザ上でデータを保存できる方法がある。ここでは主にその方法についてを述べる。</p>
+<h2 id="web-storage">
+  Web Storage
+  <a class="anchor" href="#web-storage">#</a>
+</h2>
+<p>Web Storageは、キーと値の組み合わせによってブラウザにデータを蓄積し、利用するAPIである。</p>
+<p>Web Storageは、大きく<strong>セッションストレージ</strong>と<strong>ローカルストレージ</strong>の２種類に分けられる。セッションストレージはウィンドウやタブが閉じられるとデータも消失するが、ローカルストレージはデータが消失されず、次にページを開いたときにでもそのデータを利用することができる。</p>
+<h3 id="ローカルストレージ">
+  ローカルストレージ
+  <a class="anchor" href="#%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b8">#</a>
+</h3>
+<p>ローカルストレージを使うと、Webブラウザ自体に情報を記憶し、再度そのページに訪れたときにその保存しておいた情報を使うことが可能になる。</p>
+<p>以下にサンプルを載せる。</p>
+<p>html</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;ローカルストレージありの場合。下のボックスをクリックすると色が変化します。ページを更新しても変わらないはず。&lt;/<span style="color:#f92672">h2</span>&gt;
+&lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title_nonstorage&#34;</span>&gt;ローカルストレージなしの場合。ページを更新すると戻ります。&lt;/<span style="color:#f92672">h2</span>&gt;
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span>   <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width: 50px; height: 50px; margin: 20px; background: red&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;green&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width: 50px; height: 50px; margin: 20px; background: green&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span>  <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width: 50px; height: 50px; margin: 20px; background: blue&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/js_sample_pages/api.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>javascript</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;title&#39;</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">title_nonstorage</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;title_nonstorage&#39;</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">boxes</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#39;box&#39;</span>);
+
+    <span style="color:#75715e">// localStorageを変数に格納
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">storage</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">localStorage</span>;
+    <span style="color:#75715e">// localStorageから&#39;textcolor&#39;の値を取得
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tc</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">storage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#39;textcolor&#39;</span>);
+    <span style="color:#75715e">// localStorageに&#39;textcolor&#39;の値があれば、文字色を書き換え
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">tc</span>){
+        <span style="color:#a6e22e">title</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tc</span>;
+    }
+
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,<span style="color:#a6e22e">l</span><span style="color:#f92672">=</span><span style="color:#a6e22e">boxes</span>.<span style="color:#a6e22e">length</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">l</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+        <span style="color:#a6e22e">boxes</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>,<span style="color:#66d9ef">function</span>(){
+            <span style="color:#a6e22e">title</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">id</span>;
+            <span style="color:#a6e22e">storage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#39;textcolor&#39;</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">id</span>);
+            <span style="color:#a6e22e">title_nonstorage</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">id</span>;
+        })
+    }
+}
+</code></pre></div><p>表示例</p>
+<hr>
+<hr>
+<h2 id="title">ローカルストレージありの場合。下のボックスをクリックすると色が変化します。ページを更新しても変わらないはず。</h2>
+<h2 id="title_nonstorage">ローカルストレージなしの場合。ページを更新すると戻ります。</h2>
+<div id="red"   class="box" style="width: 50px; height: 50px; margin: 20px; background: red"></div>
+<div id="green" class="box" style="width: 50px; height: 50px; margin: 20px; background: green"></div>
+<div id="blue"  class="box" style="width: 50px; height: 50px; margin: 20px; background: blue"></div>
+<script src="https://WAT36.github.io/pages/js_sample_pages/api.js"></script>
+<hr>
+<hr>
+<p>色付きのボックスをクリックすると文字の色が変化する。色を変えた後にページを更新すると、ローカルストレージを設定してないものは最初の状態に戻ってしまうが、ローカルストレージを利用している物は色を保持させているので、更新しても色は変わらない。</p>
+<h2 id="indexed-database-api">
+  Indexed Database API
+  <a class="anchor" href="#indexed-database-api">#</a>
+</h2>
+<p>Indexed Database APIはWeb Storageと同様にキーと値のペアによってデータを蓄積するAPIである。蓄積するのはJavaScriptのオブジェクトである。</p>
+<p>Web Storageと比べると、インデックスやトランザクションを利用できることが特徴である。トランザクションとは、データベースの一連の処理のことである。</p>
+<h2 id="application-cache">
+  Application cache
+  <a class="anchor" href="#application-cache">#</a>
+</h2>
+<p>Application cacheは、マニフェストファイルと呼ばれる設定ファイルに指定したファイルをローカルのブラウザにキャッシュとして置くことで、オフラインでのページ閲覧を可能にするものである。このキャッシュの制御は、APIを通じて行う。</p>
+<h2 id="web-workers">
+  Web Workers
+  <a class="anchor" href="#web-workers">#</a>
+</h2>
+<p>Web Workersは、ブラウザでのスクリプト処理をバックグラウンドで実行するためのものである。</p>
+<p>通常は、HTMLのパース、外部ソースなどのスクリプト処理が終わるまでユーザーは画面の操作が行えず、またそのスクリプト処理が大きいとユーザーの操作が行えない時間が増えてしまう。</p>
+<p>そこで、Web Workersでバックグラウンドで実行することで、画面の操作への影響を減らし、またスクリプト処理を並列で多種動かせるので、大量の処理を行わせることができる。</p>
+<h2 id="service-workers">
+  Service Workers
+  <a class="anchor" href="#service-workers">#</a>
+</h2>
+<p>Service Workersは、Webページとは別にバックグラウンドでスクリプトを実行する環境である。</p>
+<p>先程のWeb WorkersがWebページの内部で動作するのに対し、Service WorkersはWebページとは別に動作する。</p>
+<p>Service Workersを利用することで、リソースをキャッシュしてオフラインでも利用可能にしたり、バックグラウンドでの同期など、Webページやユーザの操作を必要としない機能を提供することができる。</p>
+<p>別環境なので、Webページを開いたタブが閉じられても、Service Workersは必要に応じて動作する。</p>
+<h2 id="push-api">
+  Push API
+  <a class="anchor" href="#push-api">#</a>
+</h2>
+<p>Push APIは、アプリケーションがサーバーからのプッシュ通知を受信できるようにするAPIである。</p>
+<p>Service Workerと組み合わせることで、アプリケーションが動作にかかわらず受信できる。</p>
+<p>Push APIはあくまでプッシュ通知を受信するだけなので、プッシュ通知の表示やメッセージの表示などは、これとは別に実施する必要がある。</p>
+<h2 id="fetch">
+  fetch
+  <a class="anchor" href="#fetch">#</a>
+</h2>
+<p>fetchは、Service Worker上で指定したリソースを取得する際に利用するAPIである。</p>
+<h1 id="通信系api">
+  通信系API
+  <a class="anchor" href="#%e9%80%9a%e4%bf%a1%e7%b3%bbapi">#</a>
+</h1>
+<p>通信に関するAPIを述べる。</p>
+<h2 id="xmlhttprequest">
+  XMLHttpRequest
+  <a class="anchor" href="#xmlhttprequest">#</a>
+</h2>
+<p>XMLHttpRequestは、JavaScriptでHTTP通信を実現するAPIである。</p>
+<p>これにより、ページを遷移せずにHTTP通信を行い、データを取得することが可能になる。</p>
+<h2 id="websocket-api">
+  WebSocket API
+  <a class="anchor" href="#websocket-api">#</a>
+</h2>
+<p>WebSocket APIは、JavaScriptでWebSocketプロトコル通信を実現するAPIである。</p>
+<p>WebSocketプロトコルは、ブラウザとサーバのどちらからもデータを送信可能な双方向通信を実現するための仕様である。</p>
+<p>WebSocketを利用することで、チャットのような双方向通信が頻繁に発生するアプリケーションを作ることができる。</p>
+<h2 id="server-sent-events">
+  Server-Sent Events
+  <a class="anchor" href="#server-sent-events">#</a>
+</h2>
+<p>Server-Sent Eventsは、サーバからのプッシュ通信を実現するAPIである。</p>
+<p>通常のHTTPではクライアントからサーバにリクエストを送信し、レスポンスが変えると通信が終了するが、Server-Sent Eventsでは、サーバからレスポンスを受け取っても通信を終了せず、接続を維持する。</p>
+<p>サーバはその接続を利用してメッセージを継続して送信するが、サーバからしかデータを送信できないという特徴がある。</p>
+<h2 id="webrtc">
+  WebRTC
+  <a class="anchor" href="#webrtc">#</a>
+</h2>
+<p>WebRTC(Web Real-Time Communication)は、ブラウザでリアルタイムなコミュニケーションを実現するための仕組みである。WebRTCを使うことで、ブラウザ間のビデオチャットやボイスチャット、会議システムなどが実現可能です。</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/69404598b99c930a997570fca4f318b211a49804" title='Last modified by Wataru Tsukagoshi | Jan 17, 2021' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jan 17, 2021</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/api.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#マルチメディア">マルチメディア</a></li>
+    <li><a href="#ストリーミング">ストリーミング</a></li>
+    <li><a href="#グラフィックス">グラフィックス</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#geolocation-api">Geolocation API</a></li>
+    <li><a href="#deviceorientation-event">DeviceOrientation Event</a></li>
+    <li><a href="#touch-events">Touch Events</a></li>
+    <li><a href="#pointer-events">Pointer Events</a></li>
+    <li><a href="#dom3-events-ui-events">DOM3 Events (UI Events)</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#web-storage">Web Storage</a>
+      <ul>
+        <li><a href="#ローカルストレージ">ローカルストレージ</a></li>
+      </ul>
+    </li>
+    <li><a href="#indexed-database-api">Indexed Database API</a></li>
+    <li><a href="#application-cache">Application cache</a></li>
+    <li><a href="#web-workers">Web Workers</a></li>
+    <li><a href="#service-workers">Service Workers</a></li>
+    <li><a href="#push-api">Push API</a></li>
+    <li><a href="#fetch">fetch</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#xmlhttprequest">XMLHttpRequest</a></li>
+    <li><a href="#websocket-api">WebSocket API</a></li>
+    <li><a href="#server-sent-events">Server-Sent Events</a></li>
+    <li><a href="#webrtc">WebRTC</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

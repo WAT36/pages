@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>animation-iteration-countサンプル</title>
+
+<style type="text/css">
+
+@keyframes key1 {
+    0%{
+        transform: translate(0px,0px);
+    }
+
+    25%{
+        transform: translate(200px,0px) rotate(90deg);
+    }
+
+    50%{
+        transform: translate(200px,200px) rotate(180deg);
+    }
+
+    75%{
+        transform: translate(0px,200px) rotate(270deg);
+    }
+
+    100%{
+        transform: translate(0px,0px) rotate(360deg);
+    }
+}
+
+p {
+    width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    background-color:red; 
+    animation-name: key1; 
+    animation-duration: 10s; 
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+</style>
+
+</head>
+<body>
+
+<p>無限に一回転！</p>
+
+</body>
+</html>

@@ -1,8 +1,6 @@
 ---
 title: "グラフの彩色問題 ～Welsh・Powellのアルゴリズム～"
 date: 2019-11-30T15:05:05+09:00
-categories: [ "プログラミング", "アルゴリズム"]
-tags: [ "グラフ","彩色","頂点彩色","面彩色"]
 draft: false
 ---
 
@@ -21,7 +19,7 @@ draft: false
 
 頂点彩色の一例は以下の図のようなものがある。
 
-![頂点彩色の一例](/img/colored_vertex.png)
+![頂点彩色の一例](/img/procon/colored_vertex.png)
 
 # 頂点彩色のアルゴリズム (Welsh・Powellのアルゴリズム)
 
@@ -45,7 +43,7 @@ draft: false
 
 イメージとしては以下のような図。
 
-![面彩色](/img/colored_plane.png)
+![面彩色](/img/procon/colored_plane.png)
 
 
 # 辺彩色
@@ -65,4 +63,4 @@ draft: false
 イメージとしては以下のような図。  
 
 
-![辺彩色](/img/colored_edge.png)
+![辺彩色](/img/procon/colored_edge.png)

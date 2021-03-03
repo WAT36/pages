@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ニューラルネットワーク # ニューラルネットワークとは、人間の神経細胞を模した数理モデルであるニューロンモデルを利用した機械学習のアルゴリズムで">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="ニューラルネットワーク" />
+<meta property="og:description" content="ニューラルネットワーク # ニューラルネットワークとは、人間の神経細胞を模した数理モデルであるニューロンモデルを利用した機械学習のアルゴリズムで" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/machine_learning/neural_network/" />
+<meta property="article:modified_time" content="2020-09-17T22:34:25+09:00" />
+<title>ニューラルネットワーク | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>ニューラルネットワーク</strong>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#神経細胞">神経細胞</a></li>
+    <li><a href="#ニューロンモデル">ニューロンモデル</a></li>
+    <li><a href="#ニューラルネットワークモデル">ニューラルネットワークモデル</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="ニューラルネットワーク">
+  ニューラルネットワーク
+  <a class="anchor" href="#%e3%83%8b%e3%83%a5%e3%83%bc%e3%83%a9%e3%83%ab%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af">#</a>
+</h1>
+<p>ニューラルネットワークとは、人間の神経細胞を模した数理モデルである<strong>ニューロンモデル</strong>を利用した機械学習のアルゴリズムである。</p>
+<p>ニューロンモデルを幾層にも組み合わせて計算を行なっていく方法で、より多くのニューロンモデルを使用した物は<strong>ディープラーニング</strong>とも呼ばれる。</p>
+<h2 id="神経細胞">
+  神経細胞
+  <a class="anchor" href="#%e7%a5%9e%e7%b5%8c%e7%b4%b0%e8%83%9e">#</a>
+</h2>
+<p>人間の脳にある神経細胞は核と軸索と呼ばれる部位からなり、軸索の先をシナプスと呼ばれるインターフェースで別の神経細胞に繋げる形で幾つにも繋がっている。</p>
+<p>神経細胞は、他の細胞から電気的なパルスを受け取り、また対応するシナプスの状態によりその電気パルスをどれほど受け取るか(シナプス伝達強度)が違ってくるため、神経細胞内の電位(膜電位)が大きく変化したりする。</p>
+<p>そして、膜電位がある一定の値(閾値)を超えると、その神経細胞は次の神経細胞へ、電気的なパルスを発信する。それが連続された構造になっている。(下図)</p>
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_41.png" width=100%>
+<h2 id="ニューロンモデル">
+  ニューロンモデル
+  <a class="anchor" href="#%e3%83%8b%e3%83%a5%e3%83%bc%e3%83%ad%e3%83%b3%e3%83%a2%e3%83%87%e3%83%ab">#</a>
+</h2>
+<p>ニューロンモデルは、この神経細胞の動きを模した数理モデルで、下図のように表される。</p>
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_42.png" width=100%>
+<p>入力値は、正も負も値を取る実数(図中のx<sub>0</sub>〜x<sub>n-1</sub>)とし、それぞれにシナプス伝達強度とした<strong>重み</strong>(図中のw<sub>0</sub>〜w<sub>n-1</sub>)をかける。そしてその和を取ったものを<strong>入力総和</strong>(図中のa)として計算する。</p>
+
+<link rel="stylesheet" href="https://WAT36.github.io/pages/katex/katex.min.css" />
+<script defer src="https://WAT36.github.io/pages/katex/katex.min.js"></script>
+<script defer src="https://WAT36.github.io/pages/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \(\tag{1}  a = w_{0} x_{0} &#43; w_{1} x_{1} &#43; \cdots &#43; w_{n-1} x_{n-1}\)
+</span>
+
+<p>なお、図にもあるように、n-1番目の重みは切片としてそのまま用いるので、x<sub>n-1</sub>=1とする。</p>
+<span>
+  \(\tag{2}  a = w_{0} x_{0} &#43; w_{1} x_{1} &#43; \cdots &#43; w_{n-1}\)
+</span>
+
+<p>式(1)は以下のように書き換えられる。</p>
+<span>
+  \(\tag{3}  a = \sum_{i=0}^{n-1} w_{i} x_{i} \)
+</span>
+
+<p>そして、この入力総和aを、シグモイド関数を使って出力値yに置き換え、出力する。</p>
+<span>
+  \(\tag{4}  y = \frac{1}{1 &#43; \exp(-a) }\)
+</span>
+
+<p>この一連の流れは、教師あり学習で出てきたロジスティック回帰に似ており、重みや入力総和によって決定境界が引かれ、それを境に出力が0か1に別れる、とみることもできる。</p>
+<p>例えば、N(入力値の個数)=2、重みをw<sub>0</sub>=-2,w<sub>1</sub>=1,w<sub>2</sub>=2とした場合の出力値yのグラフは以下のようになる。</p>
+<p>（コード類は<a href="https://github.com/WAT36/python/blob/master/machine_learning/deeplearning/neural_network.ipynb">こちら</a>のJupyter Notebookにまとめたのでご参考に）</p>
+<p>この図より、直線-2x<sub>0</sub>+x<sub>1</sub>+2=0 (w<sub>0</sub>x<sub>0</sub>+w<sub>1</sub>x<sub>1</sub>+w<sub>2</sub>x<sub>2</sub>=0)を境に出力値は0か1に大きく分かれる事となる。</p>
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_43.png" width=100%>
+<h2 id="ニューラルネットワークモデル">
+  ニューラルネットワークモデル
+  <a class="anchor" href="#%e3%83%8b%e3%83%a5%e3%83%bc%e3%83%a9%e3%83%ab%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%83%a2%e3%83%87%e3%83%ab">#</a>
+</h2>
+<p>先述のニューロンモデルをいくつも組み合わせた、ニューロンモデルの集合体のモデルのことを<strong>ニューラルネットワークモデル</strong>という。</p>
+<p>ニューラルネットワークモデルにはいくつか種類があるが、ここでは一方向にのみ流れる<strong>フィードフォワードニューラルネット</strong>を考える。</p>
+<p>ここでは、入力層と出力層の間に中間層が1つの<strong>2層フィードフォワードニューラルネットワークモデル</strong>とする。下に図を示す。</p>
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_44.png" width=100%>
+<p>重み行列が2つあるので（中間層を第１層、出力層を第２層と呼ぶことからもある）、これから２層フィードフォワードニューラルネットワークモデルと呼ぶ。（入力層も合わせて３層と呼ぶこともある）</p>
+<p>中間層には、前述のニューロンモデルと同じように、ダミー入力として常に１の値をとるパラメータを加える。</p>
+<p>重み行列<strong>z</strong>において、a<sub>i</sub>からb<sub>j</sub>への重みをz<sub>ji</sub>とおくと、以下の式が成り立つ。</p>
+<span>
+  \(\tag{5}  b_{j} = \sum_{i=0}^{n-1} z_{ji} a_{i}\)
+</span>
+
+<p>中間層では、この式(5)により算出した結果を、シグモイド関数に通すことで出力値を得る。出力値をc、シグモイド関数をh()とおくと、以下の式が成り立つ。</p>
+<span>
+  \(\tag{6}  c_{j} =  h( b_{j} )\)
+</span>
+
+<p>ここで、シグモイド関数は入力総和から何らかの出力を決定づける関数ということで、<strong>活性化関数</strong>とも呼ばれている。</p>
+<p>次に出力層において、中間層の出力と重み行列から式(5)の計算を行なった最終的な出力値b<sub>i</sub>に対して、最後にソフトマックス関数を適用することにより２層フィードフォワードニューラルネットワークモデルの出力値y<sub>i</sub>を得る。</p>
+<span>
+  \(\tag{7}  y_{i} = \frac{ \exp(a_{i}) }{ \sum_{j=0}^{K-1} \exp(a_{j}) }\)
+</span>
+
+<p>ここまでの一連の処理をコードにまとめてみよう。</p>
+<p>と言いたいが、ここに記載するとかなり長くなるので、<a href="https://github.com/WAT36/python/blob/master/machine_learning/deeplearning/FNN.ipynb">こちら</a>のJupyter Notebookにコードを記載する。</p>
+<p>では、この２層フィードフォワードニューラルネットワークモデルを利用した学習法を考えてみよう。</p>
+<p>その方法の一つを、次章で紹介する。</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/0864a9374d40e1eac20447afee6c312b6d30d0a6" title='Last modified by Wataru Tsukagoshi | Sep 17, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Sep 17, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/machine_learning/neural_network.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#神経細胞">神経細胞</a></li>
+    <li><a href="#ニューロンモデル">ニューロンモデル</a></li>
+    <li><a href="#ニューラルネットワークモデル">ニューラルネットワークモデル</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

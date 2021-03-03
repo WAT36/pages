@@ -78,6 +78,28 @@ Pythonには**switch文が存在しない**。
 そのためif-elseなどで条件分岐を実装する。
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptには**switch文**が存在し、利用法はJavaと同じである。
+
+```
+switch (式) {
+    case 定数１:
+        //式の結果が定数１に一致したときはここの処理が実行
+        break;
+    case 定数２：
+        //式の結果が定数２に一致したときはここの処理が実行
+        break;
+    ・・・
+    ・・・
+    default:
+        //どのcaseにも一致しなかった場合はこの処理が実行
+        break;
+}
+```
+
+
+{{< /tab >}}
 {{< /tabs >}}
 
 

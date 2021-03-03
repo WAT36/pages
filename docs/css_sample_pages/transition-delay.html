@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>transition-delayサンプル</title>
+
+<style type="text/css">
+div.delay {
+    border-style: double; height: 100px; width: 100px; 
+    padding: 0px; margin:0px
+}
+
+p.delay1 {
+    background-color:red; width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    transition-property: transform;
+    transition-duration: 5s;
+}
+
+p.delay2 {
+    background-color:red; width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    transition-property: transform;
+    transition-duration: 5s;
+    transition-delay: 3s;
+}
+
+p[class^="delay"]:hover{
+    transform:rotate(360deg);
+}
+</style>
+
+</head>
+<body>
+
+<div class="delay">
+<p class="delay1">カーソル乗せると一回転！</p>
+</div>
+<br>
+<div class="delay">
+    <p class="delay2">カーソル乗せると３秒後に一回転！</p>
+</div>
+
+</body>
+</html>

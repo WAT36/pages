@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ホールドアウト検証 # 先述のオーバーフィッティング(過学習)の章で、Mを大きくすればするほど既存の入力データに対する精度が高くなり、未知の入力">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="ホールドアウト検証" />
+<meta property="og:description" content="ホールドアウト検証 # 先述のオーバーフィッティング(過学習)の章で、Mを大きくすればするほど既存の入力データに対する精度が高くなり、未知の入力" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/" />
+<meta property="article:modified_time" content="2020-04-29T12:40:40+09:00" />
 <title>ホールドアウト検証 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.6a2036176fd3d23156cbd3a600fc9a2d9cce1ea33db8bc9b198029389d631721.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,35 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2fholdout_validation\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
-<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/container/container_index/"><strong>コンテナ</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
 
 
@@ -93,51 +97,51 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div class="page-nav-item">
-    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
-  </div>
-  <br>
-  <div class="page-nav-item">
-    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
-  </div>
+
+
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>ホールドアウト検証</strong>
-</header>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="ホールドアウト検証">ホールドアウト検証</h1>
-
+      
+  <article class="markdown"><h1 id="ホールドアウト検証">
+  ホールドアウト検証
+  <a class="anchor" href="#%e3%83%9b%e3%83%bc%e3%83%ab%e3%83%89%e3%82%a2%e3%82%a6%e3%83%88%e6%a4%9c%e8%a8%bc">#</a>
+</h1>
 <p>先述の<a href="https://WAT36.github.io/pages/docs/programming/machine_learning/overfitting/">オーバーフィッティング(過学習)</a>の章で、Mを大きくすればするほど既存の入力データに対する精度が高くなり、未知の入力に対する予測精度が悪くなるという問題があった。最適なMはどう求めれば良いのだろうか？</p>
-
 <p>その一つの方法として、<strong>ホールドアウト検証</strong>という手法を挙げる。</p>
-
 <p>これは、今ある入力データをいくつかの集合に分割し、そのうちのいくつかを学習に使って予測式を作り、残りのデータでその予測式を使った結果の平均二乗誤差(または標準偏差SD)を算出することでMの評価基準とする、という方法である。</p>
-
-<p>ここで、予測式を作るための学習に使うデータのことを<strong>訓練データ (training data)</strong>といい、作成した予測式の評価に用いるデータを<strong>テストデータ (test data)</strong>と呼ぶ。</p>
-
+<p>ここで、予測式を作るための学習に使うデータのことを**訓練データ (training data)<strong>といい、作成した予測式の評価に用いるデータを</strong>テストデータ (test data)**と呼ぶ。</p>
 <p>では試しに、先述の<a href="https://WAT36.github.io/pages/docs/programming/machine_learning/linear_basis_function/">線形基底関数モデル</a>で利用したデータ(=<a href="https://WAT36.github.io/pages/docs/programming/machine_learning/linear_model/">直線モデル(線形回帰)</a>で利用したデータ)を４分割し、初めの4分の３を訓練データとして学習させ、残りの4分の１をテストデータとして利用し、各Mの評価を行ってみよう。</p>
-
 <p>コードを以下に記載する。(holdout_validation.py)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> math
 <span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
@@ -196,15 +200,11 @@ plt<span style="color:#f92672">.</span>subplots_adjust(wspace<span style="color:
     plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;M={0:d}, SD={1:.2f}&#34;</span><span style="color:#f92672">.</span>format(m,sd))
 
     plt<span style="color:#f92672">.</span>grid(True)
-plt<span style="color:#f92672">.</span>show()</code></pre></div>
-<p>実行結果</p>
-
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_23.png" width=150%></p>
-
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p>実行結果</p>
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_23.png" width=150%>
 <p>となり、Mが高くなるほど訓練データへの誤差は少なくなるが、テストデータへの誤差（標準偏差）は大きくなる。</p>
-
 <p>この場合で最適なMを調べるために、各Mにおいて訓練データとテストデータの誤差(標準偏差)を調べてみよう。</p>
-
 <p>各Mにおいて訓練データとテストデータの誤差(標準偏差)を算出し、グラフを作成するコードを以下に記載する。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> math
 <span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
@@ -258,55 +258,71 @@ plt<span style="color:#f92672">.</span>plot(M,sd_test,<span style="color:#e6db74
 plt<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;higher left&#39;</span>)
 
 plt<span style="color:#f92672">.</span>grid(True)
-plt<span style="color:#f92672">.</span>show()</code></pre></div>
-<p>実行結果</p>
-
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_24.png" width=50%></p>
-
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p>実行結果</p>
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_24.png" width=50%>
 <p>のようになり、この図よりテストデータに対して誤差が最も低くなるM=7,10あたりが最も適切なMであると推測できる。</p>
-
 <p>よって、このホールドアウト検証で最適なMが決定できた。</p>
-
 <p>しかし、今回はテストデータが分散しているため良いが、例えばテストデータがひとかたまりになる場合（テストデータを低い順または高い順から取ってくるなど）すると、また学習結果も悪くなるのは予想できると思う。つまり、実はホールドアウト検証はどれを訓練データ及びテストデータに選ぶかによって結果が変わってくるものなのである。</p>
-
 <p>そこで、もう一つの検証方法についてを次章で述べる。</p>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/66ace37b73db8a197ee46d5bf19b84d3abe39cbd" title='Last modified Apr 29, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> Apr 29, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/66ace37b73db8a197ee46d5bf19b84d3abe39cbd" title='Last modified by Wataru Tsukagoshi | Apr 29, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Apr 29, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/machine_learning/holdout_validation.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
+</div>
+  
+ 
 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
 
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

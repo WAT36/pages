@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="セレクタ # CSSのセレクタについてを述べる。 セレクタにはいくつか種類があり、セレクタの基本的な最小単位のことをシンプルセレクタという。 種類に">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="セレクタ" />
+<meta property="og:description" content="セレクタ # CSSのセレクタについてを述べる。 セレクタにはいくつか種類があり、セレクタの基本的な最小単位のことをシンプルセレクタという。 種類に" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/css_selector/" />
+<meta property="article:modified_time" content="2020-08-24T23:07:31+09:00" />
+<title>セレクタ | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>セレクタ</strong>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#タイプセレクタ">タイプセレクタ</a></li>
+    <li><a href="#ユニバーサルセレクタ">ユニバーサルセレクタ</a></li>
+    <li><a href="#クラスセレクタ">クラスセレクタ</a></li>
+    <li><a href="#idセレクタ">IDセレクタ</a></li>
+    <li><a href="#属性セレクタ">属性セレクタ</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="セレクタ">
+  セレクタ
+  <a class="anchor" href="#%e3%82%bb%e3%83%ac%e3%82%af%e3%82%bf">#</a>
+</h1>
+<p>CSSのセレクタについてを述べる。</p>
+<p>セレクタにはいくつか種類があり、セレクタの基本的な最小単位のことを<strong>シンプルセレクタ</strong>という。</p>
+<p>種類にもよるが、シンプルセレクタを組み合わせたものもセレクタとしてCSSで利用できる。（できないパターンもある）</p>
+<p>以下、シンプルセレクタの種類についてを示す。</p>
+<h2 id="タイプセレクタ">
+  タイプセレクタ
+  <a class="anchor" href="#%e3%82%bf%e3%82%a4%e3%83%97%e3%82%bb%e3%83%ac%e3%82%af%e3%82%bf">#</a>
+</h2>
+<p>要素名をそのままセレクタ名としたものを<strong>タイプセレクタ</strong>という。タイプセレクタを利用すると、指定した要素名の要素全てにCSSの内容が適用される。</p>
+<!--
+例えば以下のCSSをこのページに適用させてみる。
+
+```css
+div { color: green}
+```
+
+すると、以下のHTMLが
+
+```
+<p>p要素</p>
+<div>div要素</div>
+```
+
+以下のように表示される。
+
+<hr>
+<p>p要素</p>
+<div>div要素</div>
+<hr>
+-->
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">div</span> { <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">green</span>}
+</code></pre></div><h2 id="ユニバーサルセレクタ">
+  ユニバーサルセレクタ
+  <a class="anchor" href="#%e3%83%a6%e3%83%8b%e3%83%90%e3%83%bc%e3%82%b5%e3%83%ab%e3%82%bb%e3%83%ac%e3%82%af%e3%82%bf">#</a>
+</h2>
+<p>セレクタの要素名を&quot;*&ldquo;にすると、全ての要素に適用される。このようなセレクタを<strong>ユニバーサルセレクタ</strong>という。</p>
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">*</span> { <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">red</span>}
+</code></pre></div><h2 id="クラスセレクタ">
+  クラスセレクタ
+  <a class="anchor" href="#%e3%82%af%e3%83%a9%e3%82%b9%e3%82%bb%e3%83%ac%e3%82%af%e3%82%bf">#</a>
+</h2>
+<p>先述のタイプセレクタ 、ユニバーサルセレクタにおいて、ピリオド(.)の後にHTMLのclass属性の値を指定すると、そのclass属性の値を持つ要素が適用対象となる。このようなセレクタを<strong>クラスセレクタ</strong>という。</p>
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">span</span>.<span style="color:#a6e22e">address</span> { <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">blue</span>}
+</code></pre></div><h2 id="idセレクタ">
+  IDセレクタ
+  <a class="anchor" href="#id%e3%82%bb%e3%83%ac%e3%82%af%e3%82%bf">#</a>
+</h2>
+<p>タイプセレクタ 、ユニバーサルセレクタにおいて、シャープ(#)の後にHTMLのid属性の値を指定すると、そのid属性の値を持つ要素がCSSの適用対象となる。このようなセレクタを<strong>IDセレクタ</strong>という。</p>
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">div</span>#mean { <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">gray</span>}
+</code></pre></div><h2 id="属性セレクタ">
+  属性セレクタ
+  <a class="anchor" href="#%e5%b1%9e%e6%80%a7%e3%82%bb%e3%83%ac%e3%82%af%e3%82%bf">#</a>
+</h2>
+<p>タイプセレクタ 、ユニバーサルセレクタにおいて、大かっこ([])の中に属性名や値を指定すると、その属性の値を持つ要素がCSSの適用対象となる。このようなセレクタを<strong>属性セレクタ</strong>という。</p>
+<p>属性セレクタの記法は以下のとおり。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">[属性名]</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">属性値に関係なく、その属性名が指定されている要素全て</td>
+    </tr>
+    <tr>
+        <td style="border:none;">[属性名="属性値"]</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">その属性名に属性値(完全一致)が指定されている要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">[属性名~="属性値"]</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">その属性名に属性値(含まれていればOK)が指定されている要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">[属性名^="属性値"]</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">属性名の値がその属性値で始まっている要素</td>
+    </tr>    
+    <tr>
+        <td style="border:none;">[属性名$="属性値"]</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">属性名の値がその属性値で終わっている要素</td>
+    </tr>
+</table>
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">a</span><span style="color:#f92672">[</span><span style="color:#f92672">href</span><span style="color:#f92672">$=</span><span style="color:#e6db74">&#34;.pdf&#34;</span><span style="color:#f92672">]</span> { <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">red</span>}
+</code></pre></div><h1 id="擬似クラス">
+  擬似クラス
+  <a class="anchor" href="#%e6%93%ac%e4%bc%bc%e3%82%af%e3%83%a9%e3%82%b9">#</a>
+</h1>
+<p>ある要素が特定の状態にある時のみを適用対象とするセレクタを<strong>擬似クラス</strong>という。使用するには、セレクタの要素名の後に続けて書く。</p>
+<p>擬似クラスは多種類あるが、以下に一部を示す。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">:link</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">a要素で、リンク先にまだアクセスしていない場合</td>
+    </tr>
+    <tr>
+        <td style="border:none;">:visited</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">a要素で、リンク先に既にアクセスしている場合</td>
+    </tr>
+    <tr>
+        <td style="border:none;">:hover</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">マウスカーソルが上にある状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">:active</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">マウスのボタンが押されている状態</td>
+    </tr>    
+    <tr>
+        <td style="border:none;">:first-child</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">子要素の中で一番最初の要素</td>
+    </tr>    
+    <tr>
+        <td style="border:none;">:last-child</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">子要素の中で一番最後の要素</td>
+    </tr>    
+    <tr>
+        <td style="border:none;">:only-child</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">唯一の子要素である場合</td>
+    </tr>    
+    <tr>
+        <td style="border:none;">:focus</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">フォーカス(選択)されたとき</td>
+    </tr>    
+    <tr>
+        <td style="border:none;">:checked</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">ラジオボタンやチェックボックスなどが選択されたとき</td>
+    </tr>    
+    <tr>
+        <td style="border:none;">:empty</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">要素内容が空の時</td>
+    </tr>    
+    <tr>
+        <td style="border:none;">:target</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">URLの最後が「#xxx」となっていた場合の、対象となっている要素</td>
+    </tr> 
+    <tr>
+        <td style="border:none;">:lang(言語コード)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">HTMLのlang属性などで設定されている言語コードの言語が設定されている要素</td>
+    </tr> 
+    <tr>
+        <td style="border:none;">:not(シンプルセレクタ)</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">シンプルセレクタの対象外の要素</td>
+    </tr> 
+</table>
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">a</span>:<span style="color:#a6e22e">link</span> { <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">blue</span>}
+</code></pre></div><h1 id="擬似要素">
+  擬似要素
+  <a class="anchor" href="#%e6%93%ac%e4%bc%bc%e8%a6%81%e7%b4%a0">#</a>
+</h1>
+<p>要素内容の一部のみをCSSの適用対象とするセレクタを<strong>擬似要素</strong>という。</p>
+<p>主な擬似要素は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">::first-line</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">要素内容の１行目</td>
+    </tr>
+    <tr>
+        <td style="border:none;">::first-letter</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">要素内容の１文字目</td>
+    </tr>
+    <tr>
+        <td style="border:none;">::before</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">要素の始めにcontent宣言の内容を追加</td>
+    </tr>
+    <tr>
+        <td style="border:none;">::after</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">要素の終りにcontent宣言の内容を追加</td>
+    </tr>
+</table>
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">p</span>::<span style="color:#a6e22e">first-letter</span> { <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">red</span>}
+</code></pre></div><h1 id="結合子">
+  結合子
+  <a class="anchor" href="#%e7%b5%90%e5%90%88%e5%ad%90">#</a>
+</h1>
+<p>シンプルセレクタ同士を<strong>結合子</strong>と呼ばれるもので結びつけたものもセレクタとして機能する。</p>
+<p>結合子及びその使用法は以下のとおり。</p>
+<table style="border:none;">
+    <tr>
+        <td style="border:none;">セレクタ1  セレクタ2</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">セレクタ1の内部に含まれているセレクタ2の要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">セレクタ1 <b>></b> セレクタ2</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">セレクタ1の子要素となっているセレクタ2の要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">セレクタ1 <b>+</b> セレクタ2</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">セレクタ1の直後に現れるセレクタ2の要素</td>
+    </tr>
+    <tr>
+        <td style="border:none;">セレクタ1 <b>~</b> セレクタ2</td>
+        <td style="border:none;">・・</td>
+        <td style="border:none;">セレクタ1の後に現れる全てのセレクタ2の要素</td>
+    </tr>
+</table>
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">h1</span><span style="color:#f92672">+</span><span style="color:#f92672">p</span> { <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">red</span>}
+</code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/9c34fbd2891fa43ace5a97c6aeb5981444304f13" title='Last modified by Wataru Tsukagoshi | Aug 24, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Aug 24, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/css_selector.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#タイプセレクタ">タイプセレクタ</a></li>
+    <li><a href="#ユニバーサルセレクタ">ユニバーサルセレクタ</a></li>
+    <li><a href="#クラスセレクタ">クラスセレクタ</a></li>
+    <li><a href="#idセレクタ">IDセレクタ</a></li>
+    <li><a href="#属性セレクタ">属性セレクタ</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

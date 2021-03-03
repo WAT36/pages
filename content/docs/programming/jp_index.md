@@ -1,5 +1,6 @@
 ---
 title: "プログラミング言語別対応メモ"
+bookToc: false
 ---
 
 # プログラミング言語別対応メモ
@@ -31,8 +32,6 @@ title: "プログラミング言語別対応メモ"
 ## [その他]({{< relref "/docs/programming/other/other_index.md" >}})
 
 <hr>
-
-## [数学系]({{< relref "/docs/programming/math/math_index.md" >}})
 
 ## [グラフ・データ処理]({{< relref "/docs/programming/graph/graph_index.md" >}})
 

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="二部グラフ # 前述のグラフの彩色問題において、彩色数(グラフの頂点を彩色するのに必要な最小の色数)が2であるグラフを二部グラフという。 グラフが">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="二部グラフ" />
+<meta property="og:description" content="二部グラフ # 前述のグラフの彩色問題において、彩色数(グラフの頂点を彩色するのに必要な最小の色数)が2であるグラフを二部グラフという。 グラフが" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/procon/bipartite_graph/" />
+<meta property="article:modified_time" content="2020-10-07T23:33:52+09:00" />
+<title>二部グラフ | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>二部グラフ</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="二部グラフ">
+  二部グラフ
+  <a class="anchor" href="#%e4%ba%8c%e9%83%a8%e3%82%b0%e3%83%a9%e3%83%95">#</a>
+</h1>
+<p>前述の<a href="https://wat36.github.io/pages/posts/graph_coloring/">グラフの彩色問題</a>において、彩色数(グラフの頂点を彩色するのに必要な最小の色数)が2であるグラフを<strong>二部グラフ</strong>という。</p>
+<p><img src="https://WAT36.github.io/pages/img/procon/bipartite_1.png" alt="二部グラフ例" /></p>
+<p>グラフが与えられたとき、それが二部グラフであるかを判定するには、適当な点から彩色して行っていけば良い。２色のみで塗れたら、二部グラフと判定できる。これには深さ優先探索を用いてやると良い。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+V<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>                            <span style="color:#75715e">#頂点の数(入力)</span>
+G<span style="color:#f92672">=</span>[[] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(V)]        <span style="color:#75715e">#グラフ（入力）</span>
+
+color<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(V)]    <span style="color:#75715e">#頂点の色</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfs</span>(v,c):
+    color[v]<span style="color:#f92672">=</span>c
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(G[v])):
+        <span style="color:#75715e">#隣接している頂点が同じ色ならfalse</span>
+        <span style="color:#66d9ef">if</span>(color[G[v][i]]<span style="color:#f92672">==</span>c):
+            <span style="color:#66d9ef">return</span> false
+        <span style="color:#75715e">#隣接している頂点がまだ塗られていないなら-cで塗る</span>
+        <span style="color:#66d9ef">if</span>(color[G[v][i]]<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> dfs(G[v][i],<span style="color:#f92672">-</span>c)):
+            <span style="color:#66d9ef">return</span> false
+    <span style="color:#75715e">#全ての頂点を塗れたらTrue</span>
+    <span style="color:#66d9ef">return</span> True
+
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(V):
+    <span style="color:#66d9ef">if</span>(color[i]<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>):
+        <span style="color:#75715e">#まだ頂点iが塗られていなければ1で塗る</span>
+        <span style="color:#66d9ef">if</span>(<span style="color:#f92672">not</span> dfs(i,<span style="color:#ae81ff">1</span>)):
+            <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;No&#34;</span>)
+            <span style="color:#66d9ef">break</span>
+<span style="color:#66d9ef">else</span>:
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Yes&#34;</span>)
+
+
+</code></pre></div><p>試しに上の図の二部グラフをこれで判定してみよう(以下に図示する)</p>
+<p><img src="https://WAT36.github.io/pages/img/procon/bipartite_2.png" alt="二部グラフ例" /></p>
+<p>このグラフの上記コードのV,Gで表すと以下のようになる。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">V<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>
+G<span style="color:#f92672">=</span>[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>],[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">6</span>],[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>],[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>],[<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>],[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">6</span>],[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">5</span>]]
+</code></pre></div><p>実行結果</p>
+<pre><code>Yes
+</code></pre></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/2f827d0ff082c25d0da2519834e0a8d29ee8afe2" title='Last modified by Wataru Tsukagoshi | Oct 7, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Oct 7, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/procon/bipartite_graph.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

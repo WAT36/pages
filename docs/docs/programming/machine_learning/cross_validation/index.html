@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="交差検証 # 先述のホールドアウト検証では、訓練(テスト)データの選び方によって出力結果が変わってくることを話した。なるべく変化が少なくなるよう">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="交差検証" />
+<meta property="og:description" content="交差検証 # 先述のホールドアウト検証では、訓練(テスト)データの選び方によって出力結果が変わってくることを話した。なるべく変化が少なくなるよう" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/machine_learning/cross_validation/" />
+<meta property="article:modified_time" content="2020-05-13T00:14:44+09:00" />
 <title>交差検証 | WAT Notes</title>
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.e2750c58bf0545d36d2426996f9d6108a275d000f33e7552d83ea28bdcd34ab7.css">
-
-
-<script defer src="https://WAT36.github.io/pages/search.min.6a2036176fd3d23156cbd3a600fc9a2d9cce1ea33db8bc9b198029389d631721.js"></script>
-
-
-
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.0971216c68d91987a78185074767e6b712b7b911b606b8599e537f90762a6089.js" integrity="sha256-CXEhbGjZGYengYUHR2fmtxK3uRG2BrhZnlN/kHYqYIk="></script>
 
-
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -27,20 +35,23 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
 <h2 class="book-brand">
-  <a href="https://WAT36.github.io/pages/">WAT Notes</a>
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
 </h2>
 
 
 <div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
-  <div class="book-search-spinner spinner hidden"></div>
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -48,42 +59,35 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-  
-  
-  
 
-  <style>
-  nav ul a[href$="\2f docs\2fprogramming\2fmachine_learning\2f cross_validation\2f "] {
-      color: #004ed0;
-  }
-  </style>
 
-<ul>
-<li><a href="https://WAT36.github.io/pages/"><strong>Introduction</strong></a></li>
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
 </ul>
-
-<p><details>
- <summary>Notes</summary></p>
-
+<details>
+ <summary>Notes</summary>
 <ul>
 <li>
-
 <ul>
 <li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
-<li><a href="https://WAT36.github.io/pages/docs/container/container_index/"><strong>コンテナ</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
 <li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
-</ul></li>
 </ul>
-
-<p></details></p>
-
+</li>
+</ul>
+</details>
 <ul>
-<li><p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p></li>
-
-<li><p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p></li>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
 </ul>
 
 
@@ -93,53 +97,52 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div class="page-nav-item">
-    <a href="https://WAT36.github.io/pages/categories/">Categories</a>
-  </div>
-  <br>
-  <div class="page-nav-item">
-    <a href="https://WAT36.github.io/pages/tags/">Tags</a>
-  </div>
+
+
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
 
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
     </aside>
 
     <div class="book-page">
-      <header class="flex align-center justify-between book-header">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="https://WAT36.github.io/pages/svg/menu.svg" alt="Menu" />
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
+
   <strong>交差検証</strong>
-</header>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
 
       
-<article class="markdown">
-
-<h1 id="交差検証">交差検証</h1>
-
+      
+  <article class="markdown"><h1 id="交差検証">
+  交差検証
+  <a class="anchor" href="#%e4%ba%a4%e5%b7%ae%e6%a4%9c%e8%a8%bc">#</a>
+</h1>
 <p>先述の<a href="https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/">ホールドアウト検証</a>では、訓練(テスト)データの選び方によって出力結果が変わってくることを話した。なるべく変化が少なくなるようにするにはどうすれば良いのだろうか。</p>
-
 <p>方法の一つとして、<strong>交差検証</strong>という方法を示す。</p>
-
 <p>これは簡単にいうとホールドアウト検証を分割した全パターンで行い、それぞれの出力の平均値を評価に利用するという方式である。</p>
-
 <p>データを分割した個数で<strong>K-分割交差検証</strong>とも呼ぶ。</p>
-
 <p>データがN個あるとき、Kは1≦K≦Nの範囲で分割を行える。最大の分割数はK=Nで、このときテストデータの個数は１個になる。この場合の交差検証のことを特別に<strong>リーブワンアウト交差検定</strong>と呼ぶ。</p>
-
 <p>先ほどの<a href="https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/">ホールドアウト検証</a>において、分割したデータのうち一つをテストデータとおいた場合での実行を全パターン、行ってみる。</p>
-
 <p>k分割交差検証を行うコードは以下の通り。(k_hold_cross_validation.py)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 <span style="color:#f92672">from</span> linear_basis_function <span style="color:#f92672">import</span> mse
@@ -167,8 +170,8 @@ https://github.com/alex-shpak/hugo-book
         y_test <span style="color:#f92672">=</span> linear_basis_func(w_train,x_test,mu,<span style="color:#ae81ff">1</span>)
         mse_test[i] <span style="color:#f92672">=</span> mse(y_test,t_test)
 
-    <span style="color:#66d9ef">return</span> mse_train,mse_test</code></pre></div>
-<p>例として、M=3,k=4とした時の実行結果は以下の通り。(k_hold_cross_validation_example.py)</p>
+    <span style="color:#66d9ef">return</span> mse_train,mse_test
+</code></pre></div><p>例として、M=3,k=4とした時の実行結果は以下の通り。(k_hold_cross_validation_example.py)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 <span style="color:#f92672">from</span> k_hold_cross_validation <span style="color:#f92672">import</span> k_hold_cross_validation
 
@@ -182,21 +185,16 @@ mse_train,mse_test<span style="color:#f92672">=</span>k_hold_cross_validation(x,
 <span style="color:#66d9ef">print</span>(mse_test)
 <span style="color:#75715e">#標準偏差(mseの平均の平方根)の算出</span>
 <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;train:{0}&#34;</span><span style="color:#f92672">.</span>format(np<span style="color:#f92672">.</span>sqrt(np<span style="color:#f92672">.</span>mean(mse_train))))
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;test :{0}&#34;</span><span style="color:#f92672">.</span>format(np<span style="color:#f92672">.</span>sqrt(np<span style="color:#f92672">.</span>mean(mse_test))))</code></pre></div>
-<p>実行結果</p>
-
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;test :{0}&#34;</span><span style="color:#f92672">.</span>format(np<span style="color:#f92672">.</span>sqrt(np<span style="color:#f92672">.</span>mean(mse_test))))
+</code></pre></div><p>実行結果</p>
 <pre><code>[11.34746956 11.29719213 14.20404757  8.14992362]
 [13.17632534 12.04601311  3.21443304 21.05860186]
 train:3.354051016302551
 test :3.5176474150746544
-</code></pre>
-
-<p>実行結果において、最初のarrayは訓練データの平均二乗誤差、その次のarrayはテストデータの平均二乗誤差を示している。
+</code></pre><p>実行結果において、最初のarrayは訓練データの平均二乗誤差、その次のarrayはテストデータの平均二乗誤差を示している。
 k=4のため、データを４分割し、そのうちの一つをテストデータとして利用し、残りを訓練データとして利用するのを４パターン行うため、結果として配列の長さは４になる。
 一つのMに対する評価指標としては、この算出した訓練データ及びテストデータの平均二乗誤差の標準偏差とする。</p>
-
 <p>このコードを利用し、M:1~10の範囲で、分割数を最大にしたリーブワンアウト検証を利用して最適なMを求めてみることを考える。</p>
-
 <p>リーブワンアウト検証を利用したMを求めるコードは以下の通り。(k_hold_cross_valisation_plot.py)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 <span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
@@ -229,49 +227,68 @@ plt<span style="color:#f92672">.</span>plot(M,train,color<span style="color:#f92
 plt<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lower left&#39;</span>)
 
 plt<span style="color:#f92672">.</span>grid(True)
-plt<span style="color:#f92672">.</span>show()</code></pre></div>
-<p>実行結果</p>
-
-<p><img src="https://WAT36.github.io/pages/img/datascience/Figure_25.png" width=50%></p>
-
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p>実行結果</p>
+<img src="https://WAT36.github.io/pages/img/datascience/Figure_25.png" width=50%>
 <p>となり、リーブワンアウト検証によりM=5の時にテストデータの誤差が最も小さくなり、最適ということになる。</p>
 </article>
-
+ 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a href="https://github.com/alex-shpak/hugo-book/commit/56b2ad91624dfdc7db1ed961ade1f143b17f7237" title='Last modified May 13, 2020 by Wataru Tsukagoshi' target="_blank" rel="noopener">
-      <img src="https://WAT36.github.io/pages/svg/calendar.svg" alt="Changed" /> May 13, 2020
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/56b2ad91624dfdc7db1ed961ade1f143b17f7237" title='Last modified by Wataru Tsukagoshi | May 13, 2020' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>May 13, 2020</span>
     </a>
   </div>
-  
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/machine_learning/cross_validation.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
 </div>
 
+ 
+        
+      </footer>
 
       
-    </div>
-    
   
+  <div class="book-comments">
 
+</div>
+  
+ 
 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
 
+    
   </main>
 
   
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-161908250-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

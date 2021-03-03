@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>animation-durationサンプル</title>
+
+<style type="text/css">
+@keyframes key1 {
+    0%{
+        background-color:red; 
+    }
+
+    20%{
+        background-color:yellow; 
+    }
+
+    40%{
+        background-color:green; 
+    }
+
+    60%{
+        background-color:blue; 
+    }
+
+    80%{
+        background-color:purple; 
+    }
+
+    100%{
+        background-color:red; 
+    }
+}
+
+p {
+    width:100px; height:100px; 
+    padding:0px; margin:0px; 
+    animation-name: key1; 
+    animation-duration: 30s; 
+}
+</style>
+
+</head>
+<body>
+
+<p>色変化！（一回のみ）</p>
+
+</body>
+</html>
