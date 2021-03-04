@@ -60,22 +60,33 @@ $ docker pull [オプション] (Dockerイメージ名)[:タグ名]
 $ docker images
 ```
 
-## ローカルのDockerイメージを削除する
-
-ローカルにあるDockerイメージを削除したいときは、**docker image rm**コマンドを使う。
+すると、ローカルにあるDockerイメージが一覧表示される。
 
 ```
-$ docker image rm [オプション] イメージ名 [イメージ名]
+REPOSITORY                   TAG                 IMAGE ID            CREATED             SIZE
+mongo                        latest              xxxxxxxxxxxx        20 months ago       427MB
+nginx                        latest              yyyyyyyyyyyy        20 months ago       109MB
+ubuntu                       latest              zzzzzzzzzzzz        20 months ago       64.2MB
+・・・
+```
+
+## ローカルのDockerイメージを削除する
+
+ローカルにあるDockerイメージを削除したいときは、**docker rmi**コマンドを使う。
+
+```
+$ docker rmi [オプション] イメージ名 [イメージ名]
 ```
 
 イメージ名はレポジトリ名またはイメージIDを指定する。複数のイメージを削除したい時は、スペース区切りでイメージ名を複数入力する。
 
-また、未使用のDockerイメージを一挙に削除するには、**docker image prune**コマンドを使用する。
+## Dockerイメージをリモート(Docker Hub)にアップロードする
+
+DockerイメージをDocker Hubにアップロードするには、**docker push**コマンドを利用する。
 
 ```
-$ docker image prune [オプション]
+$ docker push <Docker Hubイメージ名>/イメージ名[:タグ名]
 ```
-
 
 ## Dockerイメージからコンテナを作る
 
@@ -106,27 +117,27 @@ $ docker run  (Dockerイメージ名) (実行コマンド)
 
 ## コンテナを停止する
 
-起動中のコンテナを停止するには、**docker container stop**コマンドを使用する。
+起動中のコンテナを停止するには、**docker stop**コマンドを使用する。
 
 ```
-$ docker container stop コンテナID
+$ docker stop コンテナID
 ```
 
 
 ## コンテナを削除する
 
-コンテナを削除するには、**docker container rm**コマンドを使用する。これにより、停止中のコンテナを削除できる。
+コンテナを削除するには、**docker rm**コマンドを使用する。これにより、停止中のコンテナを削除できる。
 
 ```
-$ docker container rm [オプション] コンテナID
+$ docker rm [オプション] コンテナID
 ```
 
 ## ローカルにあるコンテナを一覧表示する
 
-ローカルにあるコンテナを一覧表示するには、**docker container ls**コマンドを使用する。
+ローカルにあるコンテナを一覧表示するには、**docker ps**コマンドを使用する。
 
 ```
-$ docker container ls [オプション]
+$ docker ps [オプション]
 ```
 
 ## コンテナの稼働状況を確認する
@@ -140,14 +151,6 @@ $ docker container stats
 以上、Dockerイメージ・コンテナの起動に関する一連のコマンドの動作を図に表すと以下のようになる。
 
 <img src="/img/container/docker_03.png" width=100%>
-
-## Dockerイメージをリモート(Docker Hub)にアップロードする
-
-DockerイメージをDocker Hubにアップロードするには、**docker image push**コマンドを利用する。
-
-```
-$ docker image push <Docker Hubイメージ名>/イメージ名[:タグ名]
-```
 
 
 # 起動中のコンテナの操作方法
