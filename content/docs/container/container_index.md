@@ -13,4 +13,4 @@ bookToc: false
 
 
 - [コンテナとは？]({{< relref "/docs/container/container.md" >}})
-- [Docker]({{< relref "/docs/container/docker.md" >}})
+- [Dockerイメージとコンテナ]({{< relref "/docs/container/docker.md" >}})

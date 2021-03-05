@@ -296,12 +296,12 @@
     </item>
     
     <item>
-      <title>Docker</title>
+      <title>Dockerイメージとコンテナ</title>
       <link>https://WAT36.github.io/pages/docs/container/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/container/docker/</guid>
-      <description>Docker # ウォーターフォール型によるアプリケーション開発の場合、開発に使う環境は開発用の環境、検証(テスト)用の環境、本番(実稼働)用の環境という</description>
+      <description>Dockerイメージとコンテナ # ウォーターフォール型によるアプリケーション開発の場合、開発に使う環境は開発用の環境、検証(テスト)用の環境、</description>
     </item>
     
     <item>
@@ -814,7 +814,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/container/container_index/</guid>
-      <description>コンテナ系 メモ # コンテナについて何か勉強したいなって、とりあえず立てた まずはDockerについて書いて見ます コンテナとは？ Docker</description>
+      <description>コンテナ系 メモ # コンテナについて何か勉強したいなって、とりあえず立てた まずはDockerについて書いて見ます コンテナとは？ Dockerイメー</description>
     </item>
     
     <item>
