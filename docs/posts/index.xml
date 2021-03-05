@@ -9,11 +9,29 @@
     <lastBuildDate>Tue, 16 Feb 2021 23:34:28 +0900</lastBuildDate><atom:link href="https://WAT36.github.io/pages/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pythonでiniファイルを読み込むライブラリ「configparser」</title>
+      <link>https://WAT36.github.io/pages/posts/configparser-2/</link>
+      <pubDate>Tue, 16 Feb 2021 23:34:28 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/configparser-2/</guid>
+      <description>Pythonのライブラリ「configparser」について、備忘のために示す。 実行環境 # Python 3.7.3 Mac OS 10.15.5 設定ファイル(iniファイル) # iniフ</description>
+    </item>
+    
+    <item>
+      <title>Pythonでiniファイルを読み込むライブラリ「configparser」</title>
       <link>https://WAT36.github.io/pages/posts/configparser/</link>
       <pubDate>Tue, 16 Feb 2021 23:34:28 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/posts/configparser/</guid>
       <description>Pythonのライブラリ「configparser」について、備忘のために示す。 実行環境 # Python 3.7.3 Mac OS 10.15.5 設定ファイル(iniファイル) # iniフ</description>
+    </item>
+    
+    <item>
+      <title>クイズ問題を書いたローカルのcsvファイルから自動でslackに問題をPOSTするシステムを作ってみた</title>
+      <link>https://WAT36.github.io/pages/posts/csv_quiz_bot-2/</link>
+      <pubDate>Thu, 04 Feb 2021 21:04:55 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/csv_quiz_bot-2/</guid>
+      <description>はじめに # 資格勉強をすることがあるのだが、その際に自作した問題を自動で出題し答えられる様なシステムがあれば自身のアウトプットにもなるし、抜け</description>
     </item>
     
     <item>
@@ -27,11 +45,29 @@
     
     <item>
       <title>Githubで初めてプルリクエストをやったのでその手順を書いておく</title>
+      <link>https://WAT36.github.io/pages/posts/pull_request-2/</link>
+      <pubDate>Sat, 09 Jan 2021 23:21:48 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/pull_request-2/</guid>
+      <description>GitHubにおいて、OSS活動では必須の手順である「プルリクエスト」。 簡単にできるものだと思ってたが、意外とややこしいところもあったりで。</description>
+    </item>
+    
+    <item>
+      <title>Githubで初めてプルリクエストをやったのでその手順を書いておく</title>
       <link>https://WAT36.github.io/pages/posts/pull_request/</link>
       <pubDate>Sat, 09 Jan 2021 23:21:48 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/posts/pull_request/</guid>
       <description>GitHubにおいて、OSS活動では必須の手順である「プルリクエスト」。 簡単にできるものだと思ってたが、意外とややこしいところもあったりで。</description>
+    </item>
+    
+    <item>
+      <title>2020年0708月の活動 &amp; HTML5 Level1試験合格しました</title>
+      <link>https://WAT36.github.io/pages/posts/20200708-2/</link>
+      <pubDate>Tue, 01 Sep 2020 23:03:16 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/20200708-2/</guid>
+      <description>タイトルにもある通り、07月、08月の活動について。 先月も気づいたら飛ばしていたのでここでまとめる。 と言っても、平日はほぼ仕事&amp;amp;連日</description>
     </item>
     
     <item>
