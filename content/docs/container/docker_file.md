@@ -19,3 +19,12 @@ Dockerfile起動時、このイメージがローカルに無い場合は、自�
 ```dockerfile
 FROM ubuntu:20.04
 ```
+
+## RUN
+
+RUNコマンドは、イメージをビルドしてコンテナを作るときに、コンテナの最上位のレイヤーにおいてOSのコマンドを指定して実行するためのコマンドである。
+例として、先程のubuntuイメージからコンテナを作った後にpythonをインストールしたい場合、以下の様に記述する。
+
+```dockerfile
+RUN apt-get update && apt-get install -y python3
+```
