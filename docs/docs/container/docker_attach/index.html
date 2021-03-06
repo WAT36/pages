@@ -5,18 +5,18 @@
   <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
+<meta name="description" content="Dockerコンテナの内部への接続 # ここでは、起動したコンテナの操作方法についてを述べる。 起動中のコンテナに接続する # 起動しているコンテナに">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Dockerコンテナの内部への接続" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="Dockerコンテナの内部への接続 # ここでは、起動したコンテナの操作方法についてを述べる。 起動中のコンテナに接続する # 起動しているコンテナに" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/container/docker_attach/" />
 <meta property="article:published_time" content="2021-03-06T23:51:01+09:00" />
-<meta property="article:modified_time" content="2021-03-06T23:51:01+09:00" />
+<meta property="article:modified_time" content="2021-03-07T00:06:21+09:00" />
 <title>Dockerコンテナの内部への接続 | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.28f3889eacce0b41527b4190fdcf028ac8c489df60fb561781583d1666041600.js" integrity="sha256-KPOInqzOC0FSe0GQ/c8CisjEid9g&#43;1YXgVg9FmYEFgA="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.0e31c4f13b54456092cc64f7415a67932d1b2d3b4f1a3ac028b144cb16daadbc.js" integrity="sha256-DjHE8TtURWCSzGT3QVpnky0bLTtPGjrAKLFEyxbarbw="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -135,7 +135,12 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#起動中のコンテナに接続する">起動中のコンテナに接続する</a></li>
+    <li><a href="#起動中のコンテナでプロセス実行したい時">起動中のコンテナでプロセス実行したい時</a></li>
+  </ul>
+</nav>
 
 
 
@@ -146,7 +151,29 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"></article>
+  <article class="markdown"><h1 id="dockerコンテナの内部への接続">
+  Dockerコンテナの内部への接続
+  <a class="anchor" href="#docker%e3%82%b3%e3%83%b3%e3%83%86%e3%83%8a%e3%81%ae%e5%86%85%e9%83%a8%e3%81%b8%e3%81%ae%e6%8e%a5%e7%b6%9a">#</a>
+</h1>
+<p>ここでは、起動したコンテナの操作方法についてを述べる。</p>
+<h2 id="起動中のコンテナに接続する">
+  起動中のコンテナに接続する
+  <a class="anchor" href="#%e8%b5%b7%e5%8b%95%e4%b8%ad%e3%81%ae%e3%82%b3%e3%83%b3%e3%83%86%e3%83%8a%e3%81%ab%e6%8e%a5%e7%b6%9a%e3%81%99%e3%82%8b">#</a>
+</h2>
+<p>起動しているコンテナに接続するには、<strong>docker attach</strong>コマンドを利用する。</p>
+<pre><code>$ docker attach コンテナID
+</code></pre><p>このコマンドにより、起動しているコンテナ内に入ることができる。</p>
+<p>終了するときは、Ctrl+P(またはQ) コマンドで抜け出せる。コンテナの停止を同時に行いたい時は、Ctrl+Cコマンドを利用する。</p>
+<h2 id="起動中のコンテナでプロセス実行したい時">
+  起動中のコンテナでプロセス実行したい時
+  <a class="anchor" href="#%e8%b5%b7%e5%8b%95%e4%b8%ad%e3%81%ae%e3%82%b3%e3%83%b3%e3%83%86%e3%83%8a%e3%81%a7%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9%e5%ae%9f%e8%a1%8c%e3%81%97%e3%81%9f%e3%81%84%e6%99%82">#</a>
+</h2>
+<p>起動中のコンテナで何かプロセスを実行したい時は、<strong>docker exec</strong>コマンドを利用する。</p>
+<pre><code>$ docker exec [オプション] コンテナID 実行するコマンド [引数]
+</code></pre><p>コンテナに接続しようとしてdocker attachコマンドを利用しようとしても、もしシェルが動作していなかった場合はコマンドを受け付けることができなくなる。
+このような場合に、docker execコマンドを利用して任意のコマンドを実行する。</p>
+<p>ちなみに、コンテナのシェルを実行させるには、docker execコマンドでコンテナ内の/bin/bashを実行させれば良い。</p>
+</article>
  
       
 
@@ -155,6 +182,12 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/e48b49fe2fd9cbd3b0f35633468c8ac08474146a" title='Last modified by Wataru Tsukagoshi | Mar 7, 2021' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Mar 7, 2021</span>
+    </a>
+  </div>
 
 
 
@@ -173,6 +206,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -183,7 +220,12 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#起動中のコンテナに接続する">起動中のコンテナに接続する</a></li>
+    <li><a href="#起動中のコンテナでプロセス実行したい時">起動中のコンテナでプロセス実行したい時</a></li>
+  </ul>
+</nav>
 
 
  

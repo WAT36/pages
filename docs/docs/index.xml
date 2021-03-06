@@ -1942,7 +1942,7 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Sat, 06 Mar 2021 23:51:01 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/container/docker_attach/</guid>
-      <description></description>
+      <description>Dockerコンテナの内部への接続 # ここでは、起動したコンテナの操作方法についてを述べる。 起動中のコンテナに接続する # 起動しているコンテナに</description>
     </item>
     
     <item>
