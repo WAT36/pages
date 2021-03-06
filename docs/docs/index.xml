@@ -6,7 +6,7 @@
     <description>Recent content in Docs on WAT Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Sun, 03 Nov 2019 08:07:28 +0900</lastBuildDate><atom:link href="https://WAT36.github.io/pages/docs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Mar 2021 23:51:01 +0900</lastBuildDate><atom:link href="https://WAT36.github.io/pages/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>(Python)タプル</title>
       <link>https://WAT36.github.io/pages/docs/programming/list/tuple/</link>
@@ -117,29 +117,11 @@
     
     <item>
       <title>API</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/api-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/api-2/</guid>
-      <description>API HTMLに関連する各種APIについて。 マルチメディアグラフィックスAPI # HTMLでの音声・動画といったマルチメディアに関する設定や操作を</description>
-    </item>
-    
-    <item>
-      <title>API</title>
       <link>https://WAT36.github.io/pages/docs/front-end/api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/api/</guid>
       <description>API HTMLに関連する各種APIについて。 マルチメディアグラフィックスAPI # HTMLでの音声・動画といったマルチメディアに関する設定や操作を</description>
-    </item>
-    
-    <item>
-      <title>Binary Indexed Tree</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/binary_indexed_tree-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/binary_indexed_tree-2/</guid>
-      <description>Binary Indexed Tree # Binary Indexed Tree(BIT)は、セグメント木を応用したデータ構造で、リスト(数列)anが与えられた時、次のことが行える。 iが与えられた時、</description>
     </item>
     
     <item>
@@ -180,29 +162,11 @@
     
     <item>
       <title>CSSでのテキスト</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/css_text-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/css_text-2/</guid>
-      <description>CSSでのテキスト # CSSでのテキストの表現方法についてを示す。 text-shadowプロパティ # text-shadowプロパティは、テキス</description>
-    </item>
-    
-    <item>
-      <title>CSSでのテキスト</title>
       <link>https://WAT36.github.io/pages/docs/front-end/css_text/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/css_text/</guid>
       <description>CSSでのテキスト # CSSでのテキストの表現方法についてを示す。 text-shadowプロパティ # text-shadowプロパティは、テキス</description>
-    </item>
-    
-    <item>
-      <title>CSSでのフォント</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/css_font-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/css_font-2/</guid>
-      <description>CSSでのフォント # CSSでのフォントについて示す。 Webフォント # CSSでフォントを指定しても、ユーザーの環境にそのフォントがインストール</description>
     </item>
     
     <item>
@@ -216,15 +180,6 @@
     
     <item>
       <title>CSSでのボックス</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/css_box-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/css_box-2/</guid>
-      <description>CSSのボックス # CSSで扱うボックスについて。 前述した通り、HTMLでは要素内容の表示にはボックスと呼ばれる単位で表示される。 ボックスの詳</description>
-    </item>
-    
-    <item>
-      <title>CSSでのボックス</title>
       <link>https://WAT36.github.io/pages/docs/front-end/css_box/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -234,29 +189,11 @@
     
     <item>
       <title>CSSでの背景</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/css_background-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/css_background-2/</guid>
-      <description>CSSでの背景 # CSSでの背景の設定方法についてを述べる。 background-colorプロパティ # background-colorプロパ</description>
-    </item>
-    
-    <item>
-      <title>CSSでの背景</title>
       <link>https://WAT36.github.io/pages/docs/front-end/css_background/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/css_background/</guid>
       <description>CSSでの背景 # CSSでの背景の設定方法についてを述べる。 background-colorプロパティ # background-colorプロパ</description>
-    </item>
-    
-    <item>
-      <title>CSSでの色</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/css_color-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/css_color-2/</guid>
-      <description>CSSでの色の表現 # CSSでの色の表現について述べる。 16進数の値 # 方法の一つとして、#(シャープ)と16進数6桁の値で色を表現する方法があ</description>
     </item>
     
     <item>
@@ -279,15 +216,6 @@
     
     <item>
       <title>CSS適用の優先順位</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/css_priority-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/css_priority-2/</guid>
-      <description>CSS適用の優先順位 # 指定元による優先順位 # CSSはWebページの製作者だけが指定できるものではなく、閲覧しているユーザも独自に指定でき、ま</description>
-    </item>
-    
-    <item>
-      <title>CSS適用の優先順位</title>
       <link>https://WAT36.github.io/pages/docs/front-end/css_priority/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -302,15 +230,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/container/docker/</guid>
       <description>Dockerイメージとコンテナ # ウォーターフォール型によるアプリケーション開発の場合、開発に使う環境は開発用の環境、検証(テスト)用の環境、</description>
-    </item>
-    
-    <item>
-      <title>DOM</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/dom-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/dom-2/</guid>
-      <description>DOM # DOMとはDocument Object Modelの略で、HTML(またはXML)の各要素にアクセスするための仕組みである。Javascriptでは</description>
     </item>
     
     <item>
@@ -342,15 +261,6 @@
     
     <item>
       <title>HTTP・HTTPS</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/http-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/http-2/</guid>
-      <description>HTTP・HTTPS HTTP、HTTPSプロトコルについてを述べる。 HTTPプロトコル # HTTP(Hyper Text Transfer Protocol)とは、Webサーバとクライア</description>
-    </item>
-    
-    <item>
-      <title>HTTP・HTTPS</title>
       <link>https://WAT36.github.io/pages/docs/front-end/http/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -369,15 +279,6 @@
     
     <item>
       <title>K-Means法</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/k-means-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/k-means-2/</guid>
-      <description>K-Means法 # クラスタリングの手法の一つ、K-means法についてを述べる。 先ほども示した以下のデータを例にとって、大まかな手順を、以下</description>
-    </item>
-    
-    <item>
-      <title>K-Means法</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/k-means/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -387,29 +288,11 @@
     
     <item>
       <title>Kerasでニューラルネットワーク</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/keras-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/keras-2/</guid>
-      <description>Kerasでニューラルネットワーク # 前章ではニューラルネットワークを一から実装してきたが、今ではニューラルネットワークに関連するライブラリが</description>
-    </item>
-    
-    <item>
-      <title>Kerasでニューラルネットワーク</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/keras/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/keras/</guid>
       <description>Kerasでニューラルネットワーク # 前章ではニューラルネットワークを一から実装してきたが、今ではニューラルネットワークに関連するライブラリが</description>
-    </item>
-    
-    <item>
-      <title>Null</title>
-      <link>https://WAT36.github.io/pages/docs/programming/other/null-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/other/null-2/</guid>
-      <description>Null # プログラミングでよく見るNullについて。 Nullとは何なのか？ Nullとは何もない、何も入ってない、という状態を示す語である。 変数に何</description>
     </item>
     
     <item>
@@ -504,29 +387,11 @@
     
     <item>
       <title>その他</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/css_other-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/css_other-2/</guid>
-      <description>その他(CSS) # CSSについてその他、括れてない手法についてを述べる。 グラデーション # CSSで、画像が指定可能なところにおいては、画像の場</description>
-    </item>
-    
-    <item>
-      <title>その他</title>
       <link>https://WAT36.github.io/pages/docs/front-end/css_other/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/css_other/</guid>
       <description>その他(CSS) # CSSについてその他、括れてない手法についてを述べる。 グラデーション # CSSで、画像が指定可能なところにおいては、画像の場</description>
-    </item>
-    
-    <item>
-      <title>その他のWeb関連技術</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/web_other-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/web_other-2/</guid>
-      <description>その他のWeb関連技術 ここまでで述べられてないWeb関連技術についてを述べる。 なお、ここでは具体例はあまり載せられていません。悪しからず。 文</description>
     </item>
     
     <item>
@@ -549,29 +414,11 @@
     
     <item>
       <title>アニメーション</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/css_animation-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/css_animation-2/</guid>
-      <description>CSSのアニメーション # CSSで行えるアニメーションについてを述べる。 回転・拡大縮小・移動 # ボックスを回転・拡大縮小・移動などさせるプロパテ</description>
-    </item>
-    
-    <item>
-      <title>アニメーション</title>
       <link>https://WAT36.github.io/pages/docs/front-end/css_animation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/css_animation/</guid>
       <description>CSSのアニメーション # CSSで行えるアニメーションについてを述べる。 回転・拡大縮小・移動 # ボックスを回転・拡大縮小・移動などさせるプロパテ</description>
-    </item>
-    
-    <item>
-      <title>イベント</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/event-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/event-2/</guid>
-      <description>イベント # Javascriptのイベントについてを記す。 イベントとは、ユーザーの画面上での何らかの操作を、プログラム上で検知し、利用できるよ</description>
     </item>
     
     <item>
@@ -585,29 +432,11 @@
     
     <item>
       <title>ウィンドウ</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/window-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/window-2/</guid>
-      <description>ウィンドウ # ウィンドウオブジェクトとは、ブラウザ上の各ウィンドウを示すオブジェクトである。このオブジェクトには様々なプロパティ、メソッドなど</description>
-    </item>
-    
-    <item>
-      <title>ウィンドウ</title>
       <link>https://WAT36.github.io/pages/docs/front-end/window/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/window/</guid>
       <description>ウィンドウ # ウィンドウオブジェクトとは、ブラウザ上の各ウィンドウを示すオブジェクトである。このオブジェクトには様々なプロパティ、メソッドなど</description>
-    </item>
-    
-    <item>
-      <title>オブジェクト(Javascript)</title>
-      <link>https://WAT36.github.io/pages/docs/programming/class_func/object-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/class_func/object-2/</guid>
-      <description>オブジェクト(Javascript) # Javascriptのオブジェクトについて。 Javascriptでは、オブジェクトと呼ばれる、C言語な</description>
     </item>
     
     <item>
@@ -630,29 +459,11 @@
     
     <item>
       <title>ガウス関数</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/gauss-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/gauss-2/</guid>
-      <description>ガウス関数 # Python ガウス関数は以下の式で表される関数である。 a exp ( - (x - &amp;mu; ) 2 &amp;sigma; 2 ) ここで、式中の変数は以下の意味を持つ。 μ：中心(平均) σ：標</description>
-    </item>
-    
-    <item>
-      <title>ガウス関数</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/gauss/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/gauss/</guid>
       <description>ガウス関数 # Python ガウス関数は以下の式で表される関数である。 a exp ( - (x - &amp;mu; ) 2 &amp;sigma; 2 ) ここで、式中の変数は以下の意味を持つ。 μ：中心(平均) σ：標</description>
-    </item>
-    
-    <item>
-      <title>ガウス関数(2次元)</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/gauss_2D-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/gauss_2D-2/</guid>
-      <description>ガウス関数(2次元) # Python ガウス関数 a exp ( - (x - &amp;mu; ) 2 &amp;sigma; 2 ) において、入力xを2次元ベクトルとした時の場合を考える。(以下) x = x 0 x 1 この時</description>
     </item>
     
     <item>
@@ -680,15 +491,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/class_func/class/</guid>
       <description>クラスの定義 # クラスを定義する方法についてを示す。 Java Javaでのクラス定義方法は以下の通り。 [public] class クラス名 [extends 継承元クラス名] [implements 実装先インタフェ</description>
-    </item>
-    
-    <item>
-      <title>クラスタリング</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/clustering-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/clustering-2/</guid>
-      <description>クラスタリング # 教師あり学習の分類では、入力データに対し分類後のクラス(カテゴリ)が与えられていたが、ここでは入力データからデータをクラスに</description>
     </item>
     
     <item>
@@ -765,15 +567,6 @@
     
     <item>
       <title>グラフィックス</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/graphics-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/graphics-2/</guid>
-      <description>グラフィックス・アニメーション # グラフィックス及びアニメーションについてを述べる。 Canvas(2D) # Canvasを利用すると、Javascriptでブラウ</description>
-    </item>
-    
-    <item>
-      <title>グラフィックス</title>
       <link>https://WAT36.github.io/pages/docs/front-end/graphics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -828,29 +621,11 @@
     
     <item>
       <title>シグモイド関数</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/sigmoid-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/sigmoid-2/</guid>
-      <description>シグモイド関数 # 機械学習でよく用いられるシグモイド関数についてを述べる。 シグモイド関数とは以下の式で定義される関数である。 Python シグモイド関数を</description>
-    </item>
-    
-    <item>
-      <title>シグモイド関数</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/sigmoid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/sigmoid/</guid>
       <description>シグモイド関数 # 機械学習でよく用いられるシグモイド関数についてを述べる。 シグモイド関数とは以下の式で定義される関数である。 Python シグモイド関数を</description>
-    </item>
-    
-    <item>
-      <title>シグモイド関数とソフトマックス関数</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/softmax_sigmoid-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/softmax_sigmoid-2/</guid>
-      <description>シグモイド関数とソフトマックス関数 # シグモイド関数とソフトマックス関数は類似しているところがある。 2変数(x0、x1)の時のソフトマックス関</description>
     </item>
     
     <item>
@@ -873,29 +648,11 @@
     
     <item>
       <title>ジェネリクス</title>
-      <link>https://WAT36.github.io/pages/docs/programming/other/generics-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/other/generics-2/</guid>
-      <description>ジェネリクス # ジェネリクスについて。 ジェネリクスとは、特定の型に制限されない、抽象的かつ汎用的なコードを記述するための機能である。 変数の型を</description>
-    </item>
-    
-    <item>
-      <title>ジェネリクス</title>
       <link>https://WAT36.github.io/pages/docs/programming/other/generics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/other/generics/</guid>
       <description>ジェネリクス # ジェネリクスについて。 ジェネリクスとは、特定の型に制限されない、抽象的かつ汎用的なコードを記述するための機能である。 変数の型を</description>
-    </item>
-    
-    <item>
-      <title>スマートフォン最適化</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/smartphone_optimization-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/smartphone_optimization-2/</guid>
-      <description>スマートフォン最適化 # スマートフォン最適化についてを述べる。 CSSスプライト # CSSスプライトとは、複数の画像をつなげて1つのファイルにまと</description>
     </item>
     
     <item>
@@ -918,15 +675,6 @@
     
     <item>
       <title>セグメント木</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/segment_tree-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/segment_tree-2/</guid>
-      <description>セグメント木 # セグメント木は区間と二分木を組み合わせたようなデータ構造である。例えば長さ8のリストをセグメント木で表すと以下のようになる。 こ</description>
-    </item>
-    
-    <item>
-      <title>セグメント木</title>
       <link>https://WAT36.github.io/pages/docs/programming/procon/segment_tree/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -936,29 +684,11 @@
     
     <item>
       <title>セレクタ</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/css_selector-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/css_selector-2/</guid>
-      <description>セレクタ # CSSのセレクタについてを述べる。 セレクタにはいくつか種類があり、セレクタの基本的な最小単位のことをシンプルセレクタという。 種類に</description>
-    </item>
-    
-    <item>
-      <title>セレクタ</title>
       <link>https://WAT36.github.io/pages/docs/front-end/css_selector/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/css_selector/</guid>
       <description>セレクタ # CSSのセレクタについてを述べる。 セレクタにはいくつか種類があり、セレクタの基本的な最小単位のことをシンプルセレクタという。 種類に</description>
-    </item>
-    
-    <item>
-      <title>ソフトマックス関数</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/softmax-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/softmax-2/</guid>
-      <description>ソフトマックス関数 # Python 複数の数x1,x2,&amp;hellip;xiがあり、それらの数の大小関係を保ったままそれぞれを確率を表す数y1,y2,&amp;h</description>
     </item>
     
     <item>
@@ -999,15 +729,6 @@
     
     <item>
       <title>ニューラルネットワーク</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/neural_network-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/neural_network-2/</guid>
-      <description>ニューラルネットワーク # ニューラルネットワークとは、人間の神経細胞を模した数理モデルであるニューロンモデルを利用した機械学習のアルゴリズムで</description>
-    </item>
-    
-    <item>
-      <title>ニューラルネットワーク</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/neural_network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1017,29 +738,11 @@
     
     <item>
       <title>ネットワークフロー</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/network_flow-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/network_flow-2/</guid>
-      <description>ネットワークフロー # グラフにおける最大流・最小流問題についてを述べる。 以下に例題を示す。 ネットワーク上の2台のコンピュータS,Tがあり、Sか</description>
-    </item>
-    
-    <item>
-      <title>ネットワークフロー</title>
       <link>https://WAT36.github.io/pages/docs/programming/procon/network_flow/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/procon/network_flow/</guid>
       <description>ネットワークフロー # グラフにおける最大流・最小流問題についてを述べる。 以下に例題を示す。 ネットワーク上の2台のコンピュータS,Tがあり、Sか</description>
-    </item>
-    
-    <item>
-      <title>バケット法と平方分割</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/bucket-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/bucket-2/</guid>
-      <description>バケット法と平方分割 # まずバケット法とは、列、または平面状に散らばったデータをバケットと呼ばれる単位に分割して、バケットにデータを管理させる</description>
     </item>
     
     <item>
@@ -1080,15 +783,6 @@
     
     <item>
       <title>フィルターと畳み込みニューラルネットワーク</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/filter-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/filter-2/</guid>
-      <description>フィルターと畳み込みニューラルネットワーク # 先述の手書き文字認識の章で、活性化関数を変えるなどして認識精度の向上を図ったが、もっと精度を上げ</description>
-    </item>
-    
-    <item>
-      <title>フィルターと畳み込みニューラルネットワーク</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/filter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1116,29 +810,11 @@
     
     <item>
       <title>ブラウザ関連API</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/browser_api-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/browser_api-2/</guid>
-      <description>ブラウザ関連API # ブラウザに関するAPIについて。 なお、ここではサンプルは一部割愛致します（ブラウザ遷移を伴ってしまうため・・・） History API # History</description>
-    </item>
-    
-    <item>
-      <title>ブラウザ関連API</title>
       <link>https://WAT36.github.io/pages/docs/front-end/browser_api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/browser_api/</guid>
       <description>ブラウザ関連API # ブラウザに関するAPIについて。 なお、ここではサンプルは一部割愛致します（ブラウザ遷移を伴ってしまうため・・・） History API # History</description>
-    </item>
-    
-    <item>
-      <title>ベルマンフォード法</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/bellman_ford-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/bellman_ford-2/</guid>
-      <description>ベルマンフォード法 # ベルマンフォード法とは、最短路問題(ある点から他の全ての頂点との間の最短路を求める問題)を解く手法の一つである。 始点sか</description>
     </item>
     
     <item>
@@ -1157,15 +833,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/holdout_validation/</guid>
       <description>ホールドアウト検証 # 先述のオーバーフィッティング(過学習)の章で、Mを大きくすればするほど既存の入力データに対する精度が高くなり、未知の入力</description>
-    </item>
-    
-    <item>
-      <title>マルチカラム</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/css_multicolumn-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/css_multicolumn-2/</guid>
-      <description>マルチカラム # マルチカラムとは、ボックスの内部を複数の段に分割してできるレイアウトである。 ここでは、マルチカラムについてを述べる。 colum</description>
     </item>
     
     <item>
@@ -1404,15 +1071,6 @@
     
     <item>
       <title>レスポンシブWebデザイン</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/responsive_web_design-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/responsive_web_design-2/</guid>
-      <description>レスポンシブWebデザイン # レスポンシブWebデザインについて。 レスポンシブWebデザインとは、1つのHTMLを画面幅などの特性が異なったデ</description>
-    </item>
-    
-    <item>
-      <title>レスポンシブWebデザイン</title>
       <link>https://WAT36.github.io/pages/docs/front-end/responsive_web_design/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1445,15 +1103,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/ternary/</guid>
       <description>三項演算子 # 条件分岐を行う三項演算子についてを示す。 Java Javaでは三項演算子 &amp;ldquo;?&amp;rdquo; が実装されている。 例えば a ? b : c としたとき、aがtrueなら</description>
-    </item>
-    
-    <item>
-      <title>二部グラフ</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/bipartite_graph-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/bipartite_graph-2/</guid>
-      <description>二部グラフ # 前述のグラフの彩色問題において、彩色数(グラフの頂点を彩色するのに必要な最小の色数)が2であるグラフを二部グラフという。 グラフが</description>
     </item>
     
     <item>
@@ -1557,15 +1206,6 @@
     
     <item>
       <title>動的計画法の応用題</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/dp_applied-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/dp_applied-2/</guid>
-      <description>動的計画法の応用題 # 動的計画法の応用問題をいくつか紹介する。 最長共通部分列問題 # 例えば以下のような問題。 ２つの文字列s,tの共通部分文字列の</description>
-    </item>
-    
-    <item>
-      <title>動的計画法の応用題</title>
       <link>https://WAT36.github.io/pages/docs/programming/procon/dp_applied/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1580,15 +1220,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/steepest_descent_method/</guid>
       <description>勾配法(最急降下法) # 前述の平均二乗誤差で最も誤差が小さくなるw0,w1を正確に求めるにはどうすればよいのか？ その一例として、ここでは勾配法</description>
-    </item>
-    
-    <item>
-      <title>可変長引数の関数</title>
-      <link>https://WAT36.github.io/pages/docs/programming/class_func/variablelength_arg-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/class_func/variablelength_arg-2/</guid>
-      <description>可変長引数の関数 # 関数やメソッドを定義するとき、引数の数は事前に定義する必要があり、指定された数以外の数を入力することは普通はできない。 しか</description>
     </item>
     
     <item>
@@ -1647,29 +1278,11 @@
     
     <item>
       <title>多次元配列</title>
-      <link>https://WAT36.github.io/pages/docs/programming/list/multi_array-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/list/multi_array-2/</guid>
-      <description>多次元配列 # 多次元配列とは、配列の中に同じ長さの配列を複数含ませたデータ構造のことである。 Java Javaにおいて、例として二次元配列を設定するに</description>
-    </item>
-    
-    <item>
-      <title>多次元配列</title>
       <link>https://WAT36.github.io/pages/docs/programming/list/multi_array/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/list/multi_array/</guid>
       <description>多次元配列 # 多次元配列とは、配列の中に同じ長さの配列を複数含ませたデータ構造のことである。 Java Javaにおいて、例として二次元配列を設定するに</description>
-    </item>
-    
-    <item>
-      <title>定数</title>
-      <link>https://WAT36.github.io/pages/docs/programming/other/constant-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/other/constant-2/</guid>
-      <description>定数 # 変数は値を記憶するための入れ物であり、基本、何度でも値を代入することが可能である。 これに対し定数とは、値の入れ物という点では変数と同じ</description>
     </item>
     
     <item>
@@ -1737,15 +1350,6 @@
     
     <item>
       <title>手書き文字の認識</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/mnist-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/mnist-2/</guid>
-      <description>手書き文字の認識 # ここでは、実用的な問題への応用として、手書き数字をニューラルネットワークを使って認識させてみることを考えてみる。 MNIST</description>
-    </item>
-    
-    <item>
-      <title>手書き文字の認識</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/mnist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1800,15 +1404,6 @@
     
     <item>
       <title>教師なし学習</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/unsupervised_learning-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/unsupervised_learning-2/</guid>
-      <description>教師なし学習 # 教師なし学習について。 教師なし学習は教師あり学習とは違い、入力データに対する答え(目標データ)が与えられず、入力データからデー</description>
-    </item>
-    
-    <item>
-      <title>教師なし学習</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/unsupervised_learning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1850,15 +1445,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/str/</guid>
       <description>数値を文字列に変換する # 文字列を数値にする方法があったように、逆の数値を文字列に変換する方法も存在する。 ここではその方法を示す。 Java Javaで</description>
-    </item>
-    
-    <item>
-      <title>数値微分法</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/numerical_differentiation-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/numerical_differentiation-2/</guid>
-      <description>数値微分法 # 前述のフィードフォワードニューラルネットワークにおいて、最適な重み行列w,vの値を求めるために指標となる誤差関数を、教師あり学習</description>
     </item>
     
     <item>
@@ -1908,15 +1494,6 @@
     
     <item>
       <title>最小全域木</title>
-      <link>https://WAT36.github.io/pages/docs/programming/procon/minimum_spanning_tree-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/procon/minimum_spanning_tree-2/</guid>
-      <description>最小全域木 # 無向グラフが与えられたときに、その内のある辺だけを用いてグラフ中の任意の２頂点を連結(ある頂点から他のどの頂点への経路が存在する</description>
-    </item>
-    
-    <item>
-      <title>最小全域木</title>
       <link>https://WAT36.github.io/pages/docs/programming/procon/minimum_spanning_tree/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1926,29 +1503,11 @@
     
     <item>
       <title>最尤推定</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/maximum_likelihood-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/maximum_likelihood-2/</guid>
-      <description>最尤推定 # 当たりとハズレがそれぞれ何個か入ったくじがあり、当たりが出た時を１、ハズレが出た時を０と設定する。 この時、n回目にくじを引いた時の</description>
-    </item>
-    
-    <item>
-      <title>最尤推定</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/maximum_likelihood/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/maximum_likelihood/</guid>
       <description>最尤推定 # 当たりとハズレがそれぞれ何個か入ったくじがあり、当たりが出た時を１、ハズレが出た時を０と設定する。 この時、n回目にくじを引いた時の</description>
-    </item>
-    
-    <item>
-      <title>条件付き確率</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/conditional_probability-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/conditional_probability-2/</guid>
-      <description>条件付き確率 # 私は高校で条件付き確率を学んでこなかったゆとり世代なので、改めて条件付き確率において書き記していく。 事象A,Bにおいて、ある事</description>
     </item>
     
     <item>
@@ -1980,15 +1539,6 @@
     
     <item>
       <title>歪み尺度</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/distortion_measure-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/distortion_measure-2/</guid>
-      <description>歪み尺度 # 教師あり学習では、学習が進み精度が高くなることの指標として、平均交差エントロピー誤差のような関数を利用していた。 教師なし学習、今回</description>
-    </item>
-    
-    <item>
-      <title>歪み尺度</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/distortion_measure/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -2003,15 +1553,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/procon/dfs/</guid>
       <description>深さ優先探索 # 探索の手法の一つである深さ優先探索についてを述べる。 深さ優先探索とは、ある状態から始めてそこから遷移出来なくなるまで状態を進め</description>
-    </item>
-    
-    <item>
-      <title>混合ガウスモデル</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/gaussian_mixture_model-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/gaussian_mixture_model-2/</guid>
-      <description>混合ガウスモデル # 先程のk-means法では、データを必ずどれか一つのクラスターに割り当てていたが、複数のクラスターに割り当てると言うことは</description>
     </item>
     
     <item>
@@ -2142,15 +1683,6 @@
     
     <item>
       <title>誤差逆伝搬法</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/back_propagation-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/back_propagation-2/</guid>
-      <description>誤差逆伝搬法（バックプロパゲーション） # 誤差逆伝搬法（バックプロパゲーション）はフィードフォワードネットワークモデルに学習をさせる方法として</description>
-    </item>
-    
-    <item>
-      <title>誤差逆伝搬法</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/back_propagation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -2165,15 +1697,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/or_bit/</guid>
       <description>論理和(OR) # ORのビット演算をする方法についてを示す。 Java JavaではORのビット演算子 | を使用する。論理演算の時とは違い、こちらは|1個</description>
-    </item>
-    
-    <item>
-      <title>論理演算</title>
-      <link>https://WAT36.github.io/pages/docs/programming/number/logical_operator-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/number/logical_operator-2/</guid>
-      <description>論理演算 論理演算を行う際に利用する演算子についてを述べる。 AND演算 # AND演算は入力した２値が両方とも真であった時に真を返し、それ以外は偽</description>
     </item>
     
     <item>
@@ -2313,15 +1836,6 @@
     
     <item>
       <title>配列</title>
-      <link>https://WAT36.github.io/pages/docs/programming/list/array-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/list/array-2/</guid>
-      <description>配列 # 配列とは、同じデータ型の値をまとめて扱いたい時に利用するデータ構造である。ここでは配列の定義方法についてを述べる。 なお、Pythonに</description>
-    </item>
-    
-    <item>
-      <title>配列</title>
       <link>https://WAT36.github.io/pages/docs/programming/list/array/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -2385,15 +1899,6 @@
     
     <item>
       <title>２次元入力３クラス分類</title>
-      <link>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_3class-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_3class-2/</guid>
-      <description>２次元入力３クラス分類 # 次は２次元入力において、３クラス分類を行うケースについてを考える。 先程の２次元入力２クラス分類のデータに、良いでも悪</description>
-    </item>
-    
-    <item>
-      <title>２次元入力３クラス分類</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/2d_3class/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -2429,6 +1934,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <description>Move static content to static #  Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>Dockerコンテナの内部への接続</title>
+      <link>https://WAT36.github.io/pages/docs/container/docker_attach/</link>
+      <pubDate>Sat, 06 Mar 2021 23:51:01 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/container/docker_attach/</guid>
+      <description></description>
     </item>
     
     <item>
