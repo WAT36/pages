@@ -1936,6 +1936,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>Dockerfile</title>
+      <link>https://WAT36.github.io/pages/docs/container/docker_file/</link>
+      <pubDate>Sun, 07 Mar 2021 00:21:02 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/container/docker_file/</guid>
+      <description>Dockerfile #  </description>
+    </item>
+    
+    <item>
       <title>Dockerコンテナの内部への接続</title>
       <link>https://WAT36.github.io/pages/docs/container/docker_attach/</link>
       <pubDate>Sat, 06 Mar 2021 23:51:01 +0900</pubDate>
