@@ -1942,7 +1942,7 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Sun, 07 Mar 2021 00:21:02 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/container/docker_file/</guid>
-      <description>Dockerfile #  </description>
+      <description>Dockerfile # Dockerでは、Dockerfile という名のファイルを使って、Dockerイメージを作り出すことができる。 Dockerfile内で利</description>
     </item>
     
     <item>
