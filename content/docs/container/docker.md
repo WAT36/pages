@@ -42,7 +42,7 @@ Dockerイメージの作り方については、別章で記載する。
 Dockerイメージをリモートレポジトリ(Docker Hub)からダウンロードするには、**docker pull**コマンドを利用する。
 
 ```
-$ docker pull [オプション] (Dockerイメージ名)[:タグ名]
+$ docker pull [オプション] イメージ名[:タグ名]
 ```
 
 このコマンドにより、Dockerイメージをローカルにダウンロードできる。
@@ -75,7 +75,7 @@ ubuntu                       latest              zzzzzzzzzzzz        20 months a
 ローカルにあるDockerイメージを削除したいときは、**docker rmi**コマンドを使う。
 
 ```
-$ docker rmi [オプション] イメージ名 [イメージ名]
+$ docker rmi [オプション] イメージ名
 ```
 
 イメージ名はレポジトリ名またはイメージIDを指定する。複数のイメージを削除したい時は、スペース区切りでイメージ名を複数入力する。
@@ -85,7 +85,7 @@ $ docker rmi [オプション] イメージ名 [イメージ名]
 DockerイメージをDocker Hubにアップロードするには、**docker push**コマンドを利用する。
 
 ```
-$ docker push <Docker Hubイメージ名>/イメージ名[:タグ名]
+$ docker push <Docker Hubイメージ名/>イメージ名[:タグ名]
 ```
 
 ## Dockerイメージからコンテナを作る
@@ -93,7 +93,7 @@ $ docker push <Docker Hubイメージ名>/イメージ名[:タグ名]
 Dockerイメージからコンテナを作成するには、**docker create**コマンドを使用する。
 
 ```
-$ docker create [オプション] イメージ名
+$ docker create [オプション] イメージ名又はID
 ```
 
 ## コンテナを起動する
@@ -101,7 +101,7 @@ $ docker create [オプション] イメージ名
 停止中のコンテナを起動するには、**docker start**コマンドを使用する。
 
 ```
-$ docker start [コンテナ名,ID]
+$ docker start コンテナ名又はID
 ```
 
 
@@ -120,7 +120,7 @@ $ docker run  (Dockerイメージ名) (実行コマンド)
 起動中のコンテナを停止するには、**docker stop**コマンドを使用する。
 
 ```
-$ docker stop コンテナID
+$ docker stop コンテナ名又はID
 ```
 
 
@@ -129,7 +129,7 @@ $ docker stop コンテナID
 コンテナを削除するには、**docker rm**コマンドを使用する。これにより、停止中のコンテナを削除できる。
 
 ```
-$ docker rm [オプション] コンテナID
+$ docker rm [オプション] コンテナ名又はID
 ```
 
 ## ローカルにあるコンテナを一覧表示する

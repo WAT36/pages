@@ -12,7 +12,7 @@ Dockerfile内で利用する専用のコマンドがあるので、いくつか�
 ## FROM
 
 FROMコマンドは、作成するDockerイメージのベースとなるイメージを記載する。
-Dockerfile起動時、このイメージがローカルに無い場合は、自動でDocker hubからプルしてくる。
+Dockerfile起動時、このイメージがローカルに無い場合は、自動でDocker hubからpullしてくる。
 
 例
 

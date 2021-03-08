@@ -15,7 +15,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.01b824619c6d2e47671840170254728d3213090a62feec4ae69acacc5322eb30.js" integrity="sha256-AbgkYZxtLkdnGEAXAlRyjTITCQpi/uxK5prKzFMi6zA="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.528543b2b8c63a60fa814dd3cdc892745abd9955781e0393ac22a6ff29e381a0.js" integrity="sha256-UoVDsrjGOmD6gU3TzciSdFq9mVV4HgOTrCKm/ynjgaA="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -191,7 +191,7 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#docker%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8%e3%82%92%e3%83%aa%e3%83%a2%e3%83%bc%e3%83%88docker-hub%e3%81%8b%e3%82%89%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%99%e3%82%8b">#</a>
 </h2>
 <p>Dockerイメージをリモートレポジトリ(Docker Hub)からダウンロードするには、<strong>docker pull</strong>コマンドを利用する。</p>
-<pre><code>$ docker pull [オプション] (Dockerイメージ名)[:タグ名]
+<pre><code>$ docker pull [オプション] イメージ名[:タグ名]
 </code></pre><p>このコマンドにより、Dockerイメージをローカルにダウンロードできる。</p>
 <p>また、Dockerイメージは同じ名前でも<strong>タグ</strong>を使い分けることによって複数登録することができる。Dockerイメージはバージョンや対応OSなどの関係から、同じ内容のものを複数登録する必要があるが、Dockerイメージ名を同じにして、タグ名にバージョン及び対応OS等の名前を振り分けることによって、Dockerイメージを複数管理することが可能になる。特定のタグのイメージをダウンロードしたいときは、docker pullコマンドの時にタグ名も指定する。</p>
 <p>なお、タグ名を省略してdocker pullコマンドを実行した場合は、最新版(latestタグ)のイメージがダウンロードされる。</p>
@@ -212,26 +212,26 @@ ubuntu                       latest              zzzzzzzzzzzz        20 months a
   <a class="anchor" href="#%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%aedocker%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8%e3%82%92%e5%89%8a%e9%99%a4%e3%81%99%e3%82%8b">#</a>
 </h2>
 <p>ローカルにあるDockerイメージを削除したいときは、<strong>docker rmi</strong>コマンドを使う。</p>
-<pre><code>$ docker rmi [オプション] イメージ名 [イメージ名]
+<pre><code>$ docker rmi [オプション] イメージ名
 </code></pre><p>イメージ名はレポジトリ名またはイメージIDを指定する。複数のイメージを削除したい時は、スペース区切りでイメージ名を複数入力する。</p>
 <h2 id="dockerイメージをリモートdocker-hubにアップロードする">
   Dockerイメージをリモート(Docker Hub)にアップロードする
   <a class="anchor" href="#docker%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8%e3%82%92%e3%83%aa%e3%83%a2%e3%83%bc%e3%83%88docker-hub%e3%81%ab%e3%82%a2%e3%83%83%e3%83%97%e3%83%ad%e3%83%bc%e3%83%89%e3%81%99%e3%82%8b">#</a>
 </h2>
 <p>DockerイメージをDocker Hubにアップロードするには、<strong>docker push</strong>コマンドを利用する。</p>
-<pre><code>$ docker push &lt;Docker Hubイメージ名&gt;/イメージ名[:タグ名]
+<pre><code>$ docker push &lt;Docker Hubイメージ名/&gt;イメージ名[:タグ名]
 </code></pre><h2 id="dockerイメージからコンテナを作る">
   Dockerイメージからコンテナを作る
   <a class="anchor" href="#docker%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8%e3%81%8b%e3%82%89%e3%82%b3%e3%83%b3%e3%83%86%e3%83%8a%e3%82%92%e4%bd%9c%e3%82%8b">#</a>
 </h2>
 <p>Dockerイメージからコンテナを作成するには、<strong>docker create</strong>コマンドを使用する。</p>
-<pre><code>$ docker create [オプション] イメージ名
+<pre><code>$ docker create [オプション] イメージ名又はID
 </code></pre><h2 id="コンテナを起動する">
   コンテナを起動する
   <a class="anchor" href="#%e3%82%b3%e3%83%b3%e3%83%86%e3%83%8a%e3%82%92%e8%b5%b7%e5%8b%95%e3%81%99%e3%82%8b">#</a>
 </h2>
 <p>停止中のコンテナを起動するには、<strong>docker start</strong>コマンドを使用する。</p>
-<pre><code>$ docker start [コンテナ名,ID]
+<pre><code>$ docker start コンテナ名又はID
 </code></pre><h2 id="dockerイメージからコンテナを作って起動する">
   Dockerイメージからコンテナを作って起動する
   <a class="anchor" href="#docker%e3%82%a4%e3%83%a1%e3%83%bc%e3%82%b8%e3%81%8b%e3%82%89%e3%82%b3%e3%83%b3%e3%83%86%e3%83%8a%e3%82%92%e4%bd%9c%e3%81%a3%e3%81%a6%e8%b5%b7%e5%8b%95%e3%81%99%e3%82%8b">#</a>
@@ -244,13 +244,13 @@ ubuntu                       latest              zzzzzzzzzzzz        20 months a
   <a class="anchor" href="#%e3%82%b3%e3%83%b3%e3%83%86%e3%83%8a%e3%82%92%e5%81%9c%e6%ad%a2%e3%81%99%e3%82%8b">#</a>
 </h2>
 <p>起動中のコンテナを停止するには、<strong>docker stop</strong>コマンドを使用する。</p>
-<pre><code>$ docker stop コンテナID
+<pre><code>$ docker stop コンテナ名又はID
 </code></pre><h2 id="コンテナを削除する">
   コンテナを削除する
   <a class="anchor" href="#%e3%82%b3%e3%83%b3%e3%83%86%e3%83%8a%e3%82%92%e5%89%8a%e9%99%a4%e3%81%99%e3%82%8b">#</a>
 </h2>
 <p>コンテナを削除するには、<strong>docker rm</strong>コマンドを使用する。これにより、停止中のコンテナを削除できる。</p>
-<pre><code>$ docker rm [オプション] コンテナID
+<pre><code>$ docker rm [オプション] コンテナ名又はID
 </code></pre><h2 id="ローカルにあるコンテナを一覧表示する">
   ローカルにあるコンテナを一覧表示する
   <a class="anchor" href="#%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%ab%e3%81%82%e3%82%8b%e3%82%b3%e3%83%b3%e3%83%86%e3%83%8a%e3%82%92%e4%b8%80%e8%a6%a7%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b">#</a>
