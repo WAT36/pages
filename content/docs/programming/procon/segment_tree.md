@@ -70,11 +70,13 @@ class SegmentTree:
     def __init__(self,a):
         #n:リストaの長さ
         self.n=len(a)
-        #node:n以上で最小の２の冪乗 - 1
+        #node:n以上で最小の２の冪乗 - 1（セグメント木の節点の数）
         self.node= 2**int(-(-math.log2(self.n)//1)) - 1
+        #leaf:セグメント木の葉の数
+        self.leaf=2**(int(-(-math.log2(self.n)//1)) + 1 ) - 1
         #segtree:セグメント木
-        self.segtree=[MAX for _ in range(2**self.n - 1)]
-        #セグメント木にリストの値セット
+        self.segtree=[MAX for _ in range(self.leaf)]
+        #セグメント木の葉にリストの値セット
         for i in range(self.n):
             self.segtree[self.node+i]=a[i]
         #セグメント木の節点の値を計算してセット
