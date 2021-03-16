@@ -60,13 +60,26 @@ aの要素を更新する時、セグメント木中の節点の値も更新し�
 これまでの一連の機能について、セグメント木を(Python)コードで実装した例を以下に示す。
 
 ```python
+import math
+
 #最小値計算に影響を与えないほどの大きい値
-MAX=10**9
+MAX=float('inf')
 
 class SegmentTree:
-    def __init__(self,n):
-        self.segtree=[MAX for _ in range(2**n - 1)]
-        self.n=n
+    #初期化,リストaからセグメント木を作成
+    def __init__(self,a):
+        #n:リストaの長さ
+        self.n=len(a)
+        #node:n以上で最小の２の冪乗 - 1
+        self.node= 2**int(-(-math.log2(self.n)//1)) - 1
+        #segtree:セグメント木
+        self.segtree=[MAX for _ in range(2**self.n - 1)]
+        #セグメント木にリストの値セット
+        for i in range(self.n):
+            self.segtree[self.node+i]=a[i]
+        #セグメント木の節点の値を計算してセット
+        for i in range(self.node-1,-1,-1):
+            self.segtree[i]=min(self.segtree[2*i],self.segtree[2*i+1])
 
     #k番目の値をaに変更
     def update(self,k,a):
@@ -77,20 +90,32 @@ class SegmentTree:
             k=(k-1)//2
             self.segtree[k]=min(self.segtree[2*k+1],self.segtree[2*k+2])
 
-    #[a,b)の最小値を求める
-    #kは節点の番号、l,rはその節点が対応している区間[l,r)のこと。
-    #一番最初(根)の時はquery(a,b,0,0,n)とする。
-    def query(self,a,b,k,l,r):
-        #[a,b)と[l,r)が交差しなければ、MAXを返す
-        if(r<=a or b<=l):
+    #[i,j]の最小値を求める
+    #kは節点の番号、l,rはその節点が対応している区間[l,r]のこと。
+    #一番最初(根)の時はquery(i,j,0,0,n)とする。
+    def query(self,i,j,k,l,r):
+        #[i,j)と[l,r]が交差しなければ、MAXを返す
+        if(r<=i or j<=l):
             return MAX
 
-        #[a,b)が[l,r)を完全に含んでいれば、節点の値を返す
-        if(a<=l and r<=b):
+        #[a,b]が[i,j]を完全に含んでいれば、節点の値を返す
+        if(i<=l and r<=j):
             return self.segtree[k]
         else:
             #そうでない時は、2つの子の最小値を返す
-            vl=self.query(a,b,2*k+1,l,(l+r)//2)
-            vr=self.query(a,b,2*k+2,(l+r)//2,r)
+            vl=self.query(i,j,2*k+1,l,(l+r)//2)
+            vr=self.query(i,j,2*k+2,(l+r)//2,r)
             return min(vl,vr)
+
+#例で示した値を入力する
+a=[5,2,3,7,4,1,9,10]
+st=SegmentTree(a)
+print(st.query(1,4,0,0,7))
+
+```
+
+実行結果
+
+```
+2
 ```

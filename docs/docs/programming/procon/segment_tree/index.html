@@ -10,12 +10,12 @@
 <meta property="og:description" content="セグメント木 # セグメント木は区間と二分木を組み合わせたようなデータ構造である。例えば長さ8のリストをセグメント木で表すと以下のようになる。 こ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/procon/segment_tree/" />
-<meta property="article:modified_time" content="2020-10-24T11:10:40+09:00" />
+<meta property="article:modified_time" content="2021-03-16T22:32:55+09:00" />
 <title>セグメント木 | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.aafd43e3df87a1823ea5ef46ad792e3d74ce74345c5d5021c0e080114418d30d.js" integrity="sha256-qv1D49&#43;HoYI&#43;pe9GrXkuPXTOdDRcXVAhwOCAEUQY0w0="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.8333fc05de04e9454b52af997c90800a96a2484cd3a764ec70d1c67e179985e0.js" integrity="sha256-gzP8Bd4E6UVLUq&#43;ZfJCACpaiSEzTp2TscNHGfheZheA="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -192,13 +192,26 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#%e3%82%b3%e3%83%bc%e3%83%89%e3%81%a7%e3%81%ae%e5%ae%9f%e8%a3%85%e4%be%8b">#</a>
 </h2>
 <p>これまでの一連の機能について、セグメント木を(Python)コードで実装した例を以下に示す。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#最小値計算に影響を与えないほどの大きい値</span>
-MAX<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span><span style="color:#f92672">**</span><span style="color:#ae81ff">9</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> math
+
+<span style="color:#75715e">#最小値計算に影響を与えないほどの大きい値</span>
+MAX<span style="color:#f92672">=</span>float(<span style="color:#e6db74">&#39;inf&#39;</span>)
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SegmentTree</span>:
-    <span style="color:#66d9ef">def</span> __init__(self,n):
-        self<span style="color:#f92672">.</span>segtree<span style="color:#f92672">=</span>[MAX <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)]
-        self<span style="color:#f92672">.</span>n<span style="color:#f92672">=</span>n
+    <span style="color:#75715e">#初期化,リストaからセグメント木を作成</span>
+    <span style="color:#66d9ef">def</span> __init__(self,a):
+        <span style="color:#75715e">#n:リストaの長さ</span>
+        self<span style="color:#f92672">.</span>n<span style="color:#f92672">=</span>len(a)
+        <span style="color:#75715e">#node:n以上で最小の２の冪乗 - 1</span>
+        self<span style="color:#f92672">.</span>node<span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>int(<span style="color:#f92672">-</span>(<span style="color:#f92672">-</span>math<span style="color:#f92672">.</span>log2(self<span style="color:#f92672">.</span>n)<span style="color:#f92672">//</span><span style="color:#ae81ff">1</span>)) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#75715e">#segtree:セグメント木</span>
+        self<span style="color:#f92672">.</span>segtree<span style="color:#f92672">=</span>[MAX <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>self<span style="color:#f92672">.</span>n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)]
+        <span style="color:#75715e">#セグメント木にリストの値セット</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(self<span style="color:#f92672">.</span>n):
+            self<span style="color:#f92672">.</span>segtree[self<span style="color:#f92672">.</span>node<span style="color:#f92672">+</span>i]<span style="color:#f92672">=</span>a[i]
+        <span style="color:#75715e">#セグメント木の節点の値を計算してセット</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(self<span style="color:#f92672">.</span>node<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+            self<span style="color:#f92672">.</span>segtree[i]<span style="color:#f92672">=</span>min(self<span style="color:#f92672">.</span>segtree[<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>i],self<span style="color:#f92672">.</span>segtree[<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>])
 
     <span style="color:#75715e">#k番目の値をaに変更</span>
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update</span>(self,k,a):
@@ -209,23 +222,31 @@ MAX<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span><spa
             k<span style="color:#f92672">=</span>(k<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
             self<span style="color:#f92672">.</span>segtree[k]<span style="color:#f92672">=</span>min(self<span style="color:#f92672">.</span>segtree[<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>k<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>],self<span style="color:#f92672">.</span>segtree[<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>k<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>])
 
-    <span style="color:#75715e">#[a,b)の最小値を求める</span>
-    <span style="color:#75715e">#kは節点の番号、l,rはその節点が対応している区間[l,r)のこと。</span>
-    <span style="color:#75715e">#一番最初(根)の時はquery(a,b,0,0,n)とする。</span>
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">query</span>(self,a,b,k,l,r):
-        <span style="color:#75715e">#[a,b)と[l,r)が交差しなければ、MAXを返す</span>
-        <span style="color:#66d9ef">if</span>(r<span style="color:#f92672">&lt;=</span>a <span style="color:#f92672">or</span> b<span style="color:#f92672">&lt;=</span>l):
+    <span style="color:#75715e">#[i,j]の最小値を求める</span>
+    <span style="color:#75715e">#kは節点の番号、l,rはその節点が対応している区間[l,r]のこと。</span>
+    <span style="color:#75715e">#一番最初(根)の時はquery(i,j,0,0,n)とする。</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">query</span>(self,i,j,k,l,r):
+        <span style="color:#75715e">#[i,j)と[l,r]が交差しなければ、MAXを返す</span>
+        <span style="color:#66d9ef">if</span>(r<span style="color:#f92672">&lt;=</span>i <span style="color:#f92672">or</span> j<span style="color:#f92672">&lt;=</span>l):
             <span style="color:#66d9ef">return</span> MAX
 
-        <span style="color:#75715e">#[a,b)が[l,r)を完全に含んでいれば、節点の値を返す</span>
-        <span style="color:#66d9ef">if</span>(a<span style="color:#f92672">&lt;=</span>l <span style="color:#f92672">and</span> r<span style="color:#f92672">&lt;=</span>b):
+        <span style="color:#75715e">#[a,b]が[i,j]を完全に含んでいれば、節点の値を返す</span>
+        <span style="color:#66d9ef">if</span>(i<span style="color:#f92672">&lt;=</span>l <span style="color:#f92672">and</span> r<span style="color:#f92672">&lt;=</span>j):
             <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>segtree[k]
         <span style="color:#66d9ef">else</span>:
             <span style="color:#75715e">#そうでない時は、2つの子の最小値を返す</span>
-            vl<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>query(a,b,<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>k<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,l,(l<span style="color:#f92672">+</span>r)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>)
-            vr<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>query(a,b,<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>k<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>,(l<span style="color:#f92672">+</span>r)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>,r)
+            vl<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>query(i,j,<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>k<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,l,(l<span style="color:#f92672">+</span>r)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>)
+            vr<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>query(i,j,<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>k<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>,(l<span style="color:#f92672">+</span>r)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>,r)
             <span style="color:#66d9ef">return</span> min(vl,vr)
-</code></pre></div></article>
+
+<span style="color:#75715e">#例で示した値を入力する</span>
+a<span style="color:#f92672">=</span>[<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>]
+st<span style="color:#f92672">=</span>SegmentTree(a)
+<span style="color:#66d9ef">print</span>(st<span style="color:#f92672">.</span>query(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">7</span>))
+
+</code></pre></div><p>実行結果</p>
+<pre><code>2
+</code></pre></article>
  
       
 
@@ -235,9 +256,9 @@ MAX<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span><spa
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/80e608ad2c815712d5ff3e98577c1acaa7164a52" title='Last modified by Wataru Tsukagoshi | Oct 24, 2020' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/68ca165070aa786498aabfdb50d63914533aa7e6" title='Last modified by Wataru Tsukagoshi | Mar 16, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Oct 24, 2020</span>
+      <span>Mar 16, 2021</span>
     </a>
   </div>
 
