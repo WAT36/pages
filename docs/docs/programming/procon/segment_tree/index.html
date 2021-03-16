@@ -15,7 +15,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.528543b2b8c63a60fa814dd3cdc892745abd9955781e0393ac22a6ff29e381a0.js" integrity="sha256-UoVDsrjGOmD6gU3TzciSdFq9mVV4HgOTrCKm/ynjgaA="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.aafd43e3df87a1823ea5ef46ad792e3d74ce74345c5d5021c0e080114418d30d.js" integrity="sha256-qv1D49&#43;HoYI&#43;pe9GrXkuPXTOdDRcXVAhwOCAEUQY0w0="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -198,10 +198,11 @@ MAX<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span><spa
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SegmentTree</span>:
     <span style="color:#66d9ef">def</span> __init__(self,n):
         self<span style="color:#f92672">.</span>segtree<span style="color:#f92672">=</span>[MAX <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)]
+        self<span style="color:#f92672">.</span>n<span style="color:#f92672">=</span>n
 
     <span style="color:#75715e">#k番目の値をaに変更</span>
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update</span>(self,k,a):
-        k<span style="color:#f92672">+=</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>n)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        k<span style="color:#f92672">+=</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>self<span style="color:#f92672">.</span>n)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
         self<span style="color:#f92672">.</span>segtree[k]<span style="color:#f92672">=</span>a
         <span style="color:#75715e">#登りながら更新</span>
         <span style="color:#66d9ef">while</span> k<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>:
@@ -211,11 +212,11 @@ MAX<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span><spa
     <span style="color:#75715e">#[a,b)の最小値を求める</span>
     <span style="color:#75715e">#kは節点の番号、l,rはその節点が対応している区間[l,r)のこと。</span>
     <span style="color:#75715e">#一番最初(根)の時はquery(a,b,0,0,n)とする。</span>
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">query</span>(a,b,k,l,r):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">query</span>(self,a,b,k,l,r):
         <span style="color:#75715e">#[a,b)と[l,r)が交差しなければ、MAXを返す</span>
         <span style="color:#66d9ef">if</span>(r<span style="color:#f92672">&lt;=</span>a <span style="color:#f92672">or</span> b<span style="color:#f92672">&lt;=</span>l):
             <span style="color:#66d9ef">return</span> MAX
-        
+
         <span style="color:#75715e">#[a,b)が[l,r)を完全に含んでいれば、節点の値を返す</span>
         <span style="color:#66d9ef">if</span>(a<span style="color:#f92672">&lt;=</span>l <span style="color:#f92672">and</span> r<span style="color:#f92672">&lt;=</span>b):
             <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>segtree[k]

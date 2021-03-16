@@ -66,10 +66,11 @@ MAX=10**9
 class SegmentTree:
     def __init__(self,n):
         self.segtree=[MAX for _ in range(2**n - 1)]
+        self.n=n
 
     #k番目の値をaに変更
     def update(self,k,a):
-        k+=(2**n)-1
+        k+=(2**self.n)-1
         self.segtree[k]=a
         #登りながら更新
         while k>0:
@@ -79,11 +80,11 @@ class SegmentTree:
     #[a,b)の最小値を求める
     #kは節点の番号、l,rはその節点が対応している区間[l,r)のこと。
     #一番最初(根)の時はquery(a,b,0,0,n)とする。
-    def query(a,b,k,l,r):
+    def query(self,a,b,k,l,r):
         #[a,b)と[l,r)が交差しなければ、MAXを返す
         if(r<=a or b<=l):
             return MAX
-        
+
         #[a,b)が[l,r)を完全に含んでいれば、節点の値を返す
         if(a<=l and r<=b):
             return self.segtree[k]
