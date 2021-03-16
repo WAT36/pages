@@ -225,15 +225,6 @@
     
     <item>
       <title>Dockerイメージとコンテナ</title>
-      <link>https://WAT36.github.io/pages/docs/container/docker-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/container/docker-2/</guid>
-      <description>Dockerイメージとコンテナ # ウォーターフォール型によるアプリケーション開発の場合、開発に使う環境は開発用の環境、検証(テスト)用の環境、</description>
-    </item>
-    
-    <item>
-      <title>Dockerイメージとコンテナ</title>
       <link>https://WAT36.github.io/pages/docs/container/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -612,29 +603,11 @@
     
     <item>
       <title>コンテナ</title>
-      <link>https://WAT36.github.io/pages/docs/container/container_index-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/container/container_index-2/</guid>
-      <description>コンテナ系 メモ # コンテナについて何か勉強したいなって、とりあえず立てた まずはDockerについて書いて見ます コンテナとは？ Dockerイメー</description>
-    </item>
-    
-    <item>
-      <title>コンテナ</title>
       <link>https://WAT36.github.io/pages/docs/container/container_index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/container/container_index/</guid>
       <description>コンテナ系 メモ # コンテナについて何か勉強したいなって、とりあえず立てた まずはDockerについて書いて見ます コンテナとは？ Dockerイメー</description>
-    </item>
-    
-    <item>
-      <title>コンテナとは？</title>
-      <link>https://WAT36.github.io/pages/docs/container/container-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/container/container-2/</guid>
-      <description>コンテナとは？ # 最近よく聞くコンテナ技術とは何なのか？ コンテナとは、OS上に論理的な区画(コンテナ)を作り、そこにミドルウェア、アプリケーシ</description>
     </item>
     
     <item>
@@ -1965,29 +1938,11 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     
     <item>
       <title>Dockerfile</title>
-      <link>https://WAT36.github.io/pages/docs/container/docker_file-2/</link>
-      <pubDate>Sun, 07 Mar 2021 00:21:02 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/container/docker_file-2/</guid>
-      <description>Dockerfile # Dockerでは、Dockerfile という名のファイルを使って、Dockerイメージを作り出すことができる。 Dockerfile内で利</description>
-    </item>
-    
-    <item>
-      <title>Dockerfile</title>
       <link>https://WAT36.github.io/pages/docs/container/docker_file/</link>
       <pubDate>Sun, 07 Mar 2021 00:21:02 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/container/docker_file/</guid>
       <description>Dockerfile # Dockerでは、Dockerfile という名のファイルを使って、Dockerイメージを作り出すことができる。 Dockerfile内で利</description>
-    </item>
-    
-    <item>
-      <title>Dockerコンテナの内部への接続</title>
-      <link>https://WAT36.github.io/pages/docs/container/docker_attach-2/</link>
-      <pubDate>Sat, 06 Mar 2021 23:51:01 +0900</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/container/docker_attach-2/</guid>
-      <description>Dockerコンテナの内部への接続 # ここでは、起動したコンテナの操作方法についてを述べる。 起動中のコンテナに接続する # 起動しているコンテナに</description>
     </item>
     
     <item>
