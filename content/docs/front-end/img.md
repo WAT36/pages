@@ -173,13 +173,13 @@ video要素は、動画を再生するための要素である。
 例を以下に示す。
 
 ```
-<video src="/img/front-end/IMG_3279.MOV.mp4" controls muted width="500" height="200" />
+<video src="/img/front-end/IMG_3279.MOV.mp4" controls muted width="500" height="200" ></video>
 ```
 
 実行例
 
 <hr>
-<video src="/img/front-end/IMG_3279.MOV.mp4" controls muted width="500" height="200" />
+<video src="/img/front-end/IMG_3279.MOV.mp4" controls muted width="500" height="200" ></video>
 <hr>
 
 (ちなみにこの動画は私が学生時代に研究室の窓から外の吹雪を撮ったものである)
@@ -227,13 +227,13 @@ audio要素は音声を再生するための要素である。
 先程の動画ファイルをaudio要素で表示させてみよう。
 
 ```
-<audio src="/img/front-end/IMG_3279.MOV.mp4" controls />
+<audio src="/img/front-end/IMG_3279.MOV.mp4" controls ></audio>
 ```
 
 実行例は以下の通り。
 
 <hr>
-<audio src="/img/front-end/IMG_3279.MOV.mp4" controls />
+<audio src="/img/front-end/IMG_3279.MOV.mp4" controls ></audio>
 <hr>
 
 
