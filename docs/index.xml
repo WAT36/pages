@@ -566,6 +566,15 @@
     
     <item>
       <title>グラフィックス</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/graphics-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/graphics-2/</guid>
+      <description>グラフィックス・アニメーション # グラフィックス及びアニメーションについてを述べる。 Canvas(2D) # Canvasを利用すると、Javascriptでブラウ</description>
+    </item>
+    
+    <item>
+      <title>グラフィックス</title>
       <link>https://WAT36.github.io/pages/docs/front-end/graphics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -602,11 +611,29 @@
     
     <item>
       <title>コンテナ</title>
+      <link>https://WAT36.github.io/pages/docs/container/container_index-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/container/container_index-3/</guid>
+      <description>コンテナ系 メモ # コンテナについて何か勉強したいなって、とりあえず立てた まずはDockerについて書いて見ます コンテナとは？ Dockerイメー</description>
+    </item>
+    
+    <item>
+      <title>コンテナ</title>
       <link>https://WAT36.github.io/pages/docs/container/container_index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/container/container_index/</guid>
       <description>コンテナ系 メモ # コンテナについて何か勉強したいなって、とりあえず立てた まずはDockerについて書いて見ます コンテナとは？ Dockerイメー</description>
+    </item>
+    
+    <item>
+      <title>コンテナとは？</title>
+      <link>https://WAT36.github.io/pages/docs/container/container-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/container/container-3/</guid>
+      <description>コンテナとは？ # 最近よく聞くコンテナ技術とは何なのか？ コンテナとは、OS上に論理的な区画(コンテナ)を作り、そこにミドルウェア、アプリケーシ</description>
     </item>
     
     <item>
@@ -733,6 +760,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/neural_network/</guid>
       <description>ニューラルネットワーク # ニューラルネットワークとは、人間の神経細胞を模した数理モデルであるニューロンモデルを利用した機械学習のアルゴリズムで</description>
+    </item>
+    
+    <item>
+      <title>ネットワークフロー</title>
+      <link>https://WAT36.github.io/pages/docs/programming/procon/network_flow-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/procon/network_flow-2/</guid>
+      <description>ネットワークフロー # グラフにおける最大流・最小流問題についてを述べる。 以下に例題を示す。 ネットワーク上の2台のコンピュータS,Tがあり、Sか</description>
     </item>
     
     <item>
@@ -1192,6 +1228,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/control/control_index/</guid>
       <description>制御構文 # プログラミングをする上で必ずと言っていいほど出るのがこの制御構文。 条件分岐やループなど、処理の流れを制御する文の記法などをここでは</description>
+    </item>
+    
+    <item>
+      <title>動画・音声(JavaScript)</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/img_js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/img_js/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -1937,11 +1982,29 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     
     <item>
       <title>Dockerfile</title>
+      <link>https://WAT36.github.io/pages/docs/container/docker_file-3/</link>
+      <pubDate>Sun, 07 Mar 2021 00:21:02 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/container/docker_file-3/</guid>
+      <description>Dockerfile # Dockerでは、Dockerfile という名のファイルを使って、Dockerイメージを作り出すことができる。 Dockerfile内で利</description>
+    </item>
+    
+    <item>
+      <title>Dockerfile</title>
       <link>https://WAT36.github.io/pages/docs/container/docker_file/</link>
       <pubDate>Sun, 07 Mar 2021 00:21:02 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/container/docker_file/</guid>
       <description>Dockerfile # Dockerでは、Dockerfile という名のファイルを使って、Dockerイメージを作り出すことができる。 Dockerfile内で利</description>
+    </item>
+    
+    <item>
+      <title>Dockerコンテナの内部への接続</title>
+      <link>https://WAT36.github.io/pages/docs/container/docker_attach-3/</link>
+      <pubDate>Sat, 06 Mar 2021 23:51:01 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/container/docker_attach-3/</guid>
+      <description>Dockerコンテナの内部への接続 # ここでは、起動したコンテナの操作方法についてを述べる。 起動中のコンテナに接続する # 起動しているコンテナに</description>
     </item>
     
     <item>
