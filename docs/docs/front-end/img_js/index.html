@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="動画・音声(JavaScript) # 前述のHTMLの章で動画・音声についてを述べたが、実は動画・音声ファイルに関してはJavascriptで">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="動画・音声(JavaScript)" />
+<meta property="og:description" content="動画・音声(JavaScript) # 前述のHTMLの章で動画・音声についてを述べたが、実は動画・音声ファイルに関してはJavascriptで" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/img_js/" />
+
+<title>動画・音声(JavaScript) | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.831e91582d717b25ae5ac9bfc95abdc22f03d3815ea223a6ef02f70e8f7f2669.js" integrity="sha256-gx6RWC1xeyWuWsm/yVq9wi8D04FeoiOm7wL3Do9/Jmk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/container/container_index/"><strong>コンテナ</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>動画・音声(JavaScript)</strong>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#プロパティ">プロパティ</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="動画音声javascript">
+  動画・音声(JavaScript)
+  <a class="anchor" href="#%e5%8b%95%e7%94%bb%e9%9f%b3%e5%a3%b0javascript">#</a>
+</h1>
+<p>前述のHTMLの章で動画・音声についてを述べたが、実は動画・音声ファイルに関してはJavascriptで制御することができる。</p>
+<p>動画はvideo要素、音声はaudio要素を利用する。ここでは、それに関してを述べる。</p>
+<h2 id="プロパティ">
+  プロパティ
+  <a class="anchor" href="#%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3">#</a>
+</h2>
+<p>Javascriptで、動画、音声を扱う時に利用する主なプロパティは以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">readyState</td>
+        <td style="border:none;">メディア要素の準備状態、詳細は別表</td>
+    </tr>
+    <tr>
+        <td style="border:none;">networkState</td>
+        <td style="border:none;">ネットワークの状態。詳細は別表</td>
+    </tr>
+    <tr>
+        <td style="border:none;">error</td>
+        <td style="border:none;">エラーの状態。詳細は別表</td>
+    </tr>
+    <tr>
+        <td style="border:none;">paused</td>
+        <td style="border:none;">再生が中断されている場合はtrueを返す。そうでない場合はfalse</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ended</td>
+        <td style="border:none;">再生が完了した場合はtrue、そうでない場合はfalseを返す</td>
+    </tr>
+    <tr>
+        <td style="border:none;">duration</td>
+        <td style="border:none;">再生時間の長さ(秒)を返す</td>
+    </tr>
+    <tr>
+        <td style="border:none;">currentTime</td>
+        <td style="border:none;">現在の再生位置(秒)を返す</td>
+    </tr>
+</table>
+<p>うち、readyStateで返る値は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">状態名</td>
+        <th style="border:none;">数値</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">HAVE_NOTHING</td>
+        <td style="border:none;">0</td>
+        <td style="border:none;">利用可能でない状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">HAVE_METADATA</td>
+        <td style="border:none;">1</td>
+        <td style="border:none;">メディアリソースに関する情報が取得済みである状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">HAVE_CURRENT_DATA</td>
+        <td style="border:none;">2</td>
+        <td style="border:none;">現在の再生位置に対応するデータが利用可能</td>
+    </tr>
+    <tr>
+        <td style="border:none;">HAVE_FUTURE_DATA</td>
+        <td style="border:none;">3</td>
+        <td style="border:none;">現在の再生位置及びその後に対応するデータが利用可能</td>
+    </tr>
+</table>
+<p>また、networkStateで返る値は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">状態名</td>
+        <th style="border:none;">数値</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">NETWORK_EMPTY</td>
+        <td style="border:none;">0</td>
+        <td style="border:none;">初期化されていない状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">NETWORK_IDLE</td>
+        <td style="border:none;">1</td>
+        <td style="border:none;">一時停止された時など、ネットワークを利用していない状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">NETOWRK_LOADING</td>
+        <td style="border:none;">2</td>
+        <td style="border:none;">データをダウンロード中の状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">NETWORK_NO_SOURCE</td>
+        <td style="border:none;">3</td>
+        <td style="border:none;">利用するリソースが見つかってない</td>
+    </tr>
+</table>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/img_js.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#プロパティ">プロパティ</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
