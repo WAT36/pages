@@ -10,12 +10,12 @@
 <meta property="og:description" content="動画・音声(JavaScript) # 前述のHTMLの章で動画・音声についてを述べたが、実は動画・音声ファイルに関してはJavascriptで" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/img_js/" />
-
+<meta property="article:modified_time" content="2021-03-19T00:10:13+09:00" />
 <title>動画・音声(JavaScript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.831e91582d717b25ae5ac9bfc95abdc22f03d3815ea223a6ef02f70e8f7f2669.js" integrity="sha256-gx6RWC1xeyWuWsm/yVq9wi8D04FeoiOm7wL3Do9/Jmk="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.87acb47c9f8a837a0ff4c6eebe1a787979ac69266d41aa166d198444d3f81ee0.js" integrity="sha256-h6y0fJ&#43;Kg3oP9Mbuvhp4eXmsaSZtQaoWbRmERNP4HuA="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -250,6 +250,34 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">利用するリソースが見つかってない</td>
     </tr>
 </table>
+<p>errorで返る値は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">状態名</td>
+        <th style="border:none;">数値</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">MEDIA_ERR_ABORTED</td>
+        <td style="border:none;">1</td>
+        <td style="border:none;">リソースのフェッチがユーザにより中止された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">MEDIA_ERR_NETWORK</td>
+        <td style="border:none;">2</td>
+        <td style="border:none;">リソースのフェッチがネットワークエラーにより中止された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">MEDIA_ERR_DECODE</td>
+        <td style="border:none;">3</td>
+        <td style="border:none;">リソースのデコード中にエラーが発生した時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">MEDIA_ERR_SRC_NOT_SUPPORTED</td>
+        <td style="border:none;">4</td>
+        <td style="border:none;">src属性に指定されたリソースが不適切</td>
+    </tr>
+</table>
 </article>
  
       
@@ -259,6 +287,12 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/b230058a5aaf35fd3ecbe9aa8d46dae8eaa8af05" title='Last modified by Wataru Tsukagoshi | Mar 19, 2021' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Mar 19, 2021</span>
+    </a>
+  </div>
 
 
 

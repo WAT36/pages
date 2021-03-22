@@ -115,3 +115,34 @@ Javascriptで、動画、音声を扱う時に利用する主なプロパティ�
         <td style="border:none;">利用するリソースが見つかってない</td>
     </tr>
 </table>
+
+errorで返る値は以下の通り。
+
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">状態名</td>
+        <th style="border:none;">数値</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">MEDIA_ERR_ABORTED</td>
+        <td style="border:none;">1</td>
+        <td style="border:none;">リソースのフェッチがユーザにより中止された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">MEDIA_ERR_NETWORK</td>
+        <td style="border:none;">2</td>
+        <td style="border:none;">リソースのフェッチがネットワークエラーにより中止された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">MEDIA_ERR_DECODE</td>
+        <td style="border:none;">3</td>
+        <td style="border:none;">リソースのデコード中にエラーが発生した時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">MEDIA_ERR_SRC_NOT_SUPPORTED</td>
+        <td style="border:none;">4</td>
+        <td style="border:none;">src属性に指定されたリソースが不適切</td>
+    </tr>
+</table>
