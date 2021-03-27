@@ -168,3 +168,39 @@ errorで返る値は以下の通り。
     </tr>
 </table>
 
+また、audio,video要素で利用できる主なイベントハンドラは以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">イベントハンドラ</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onplay</td>
+        <td style="border:none;">再生が開始された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onplaying</td>
+        <td style="border:none;">中断していた再生が再度再生可能となった時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ontimeupdate</td>
+        <td style="border:none;">現在の再生位置が変化した時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onpause</td>
+        <td style="border:none;">再生が中断された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onwaiting</td>
+        <td style="border:none;">データの受信を待っている時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onended</td>
+        <td style="border:none;">再生が完了した時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onerror</td>
+        <td style="border:none;">再生中にエラーが発生した時</td>
+    </tr>
+</table>
