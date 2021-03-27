@@ -146,3 +146,25 @@ errorで返る値は以下の通り。
         <td style="border:none;">src属性に指定されたリソースが不適切</td>
     </tr>
 </table>
+
+次に、audio,video要素で利用できるメソッドを述べる。以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">load()</td>
+        <td style="border:none;">該当の要素をリセットし、リソースをロードする</td>
+    </tr>
+    <tr>
+        <td style="border:none;">play()</td>
+        <td style="border:none;">再生を開始する。再生が完了している場合は最初から再生する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">pause()</td>
+        <td style="border:none;">再生を中断する</td>
+    </tr>
+</table>
+
