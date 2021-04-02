@@ -204,3 +204,66 @@ errorで返る値は以下の通り。
         <td style="border:none;">再生中にエラーが発生した時</td>
     </tr>
 </table>
+
+試しに、これらのイベントハンドラを利用した例を以下に示してみよう。現在のメディアファイルの状態を表示する図になる。
+
+HTML
+
+```html
+<video id="video" src="/img/front-end/IMG_3279.MOV.mp4" controls muted width="500" height="200" ></video>
+<br>
+現在の動画の状態：<p id="state">()</p>
+<script type="text/javascript" src="/js_sample_pages/media_sample.js"></script>
+```
+
+Javascript
+
+```javascript
+window.onload = function() {
+    var v = document.getElementById("video")
+    var s = document.getElementById("state")
+
+    v.onplay = function(){
+        s.innerText = "再生中";
+    }
+
+    v.onplaying = function(){
+        s.innerText = "再生中";
+    }
+
+    v.ontimeupdate = function(){
+        s.innerText = "再生中";
+    }
+
+    v.onpause = function(){
+        s.innerText = "中断";
+    }
+
+    v.onwaiting = function(){
+        s.innerHTML = "ロード中";
+    }
+
+    v.onended = function(){
+        s.innerHTML = "再生終了";
+    }
+
+    v.onerror = function(){
+        s.innerHTML = "エラー発生";
+    }
+
+    v.onabort = function(){
+        s.innerHTML = "停止";
+    }
+}
+```
+
+
+表示例
+
+<hr>
+<video id="video" src="/img/front-end/IMG_3279.MOV.mp4" controls muted width="500" height="200" ></video>
+<br>
+現在の動画の状態：<p id="state"></p>
+<script type="text/javascript" src="/js_sample_pages/media_sample.js"></script>
+<hr>
+
