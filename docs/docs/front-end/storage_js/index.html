@@ -5,17 +5,17 @@
   <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="ストレージ(JavaScript) #">
+<meta name="description" content="ストレージ(JavaScript) # Javascriptで扱えるストレージについてを示す。 Web Storage # Web Storageは、大容量(数MB)のデータ">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="ストレージ(JavaScript)" />
-<meta property="og:description" content="ストレージ(JavaScript) #" />
+<meta property="og:description" content="ストレージ(JavaScript) # Javascriptで扱えるストレージについてを示す。 Web Storage # Web Storageは、大容量(数MB)のデータ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/storage_js/" />
-
+<meta property="article:modified_time" content="2021-04-03T20:52:21+09:00" />
 <title>ストレージ(JavaScript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.51fa45b5746b62cdb5043e63c93f8863bd53a9c3d2578cb3b50eb29135b3efd1.js" integrity="sha256-UfpFtXRrYs21BD5jyT&#43;IY71TqcPSV4yztQ6ykTWz79E="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.c47bc82e75b4d84e1deaa89dc2903ea62eab970153c3a90f59df7c57bd693474.js" integrity="sha256-xHvILnW02E4d6qidwpA&#43;pi6rlwFTw6kPWd98V71pNHQ="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -149,6 +149,18 @@ https://github.com/alex-shpak/hugo-book
   ストレージ(JavaScript)
   <a class="anchor" href="#%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b8javascript">#</a>
 </h1>
+<p>Javascriptで扱えるストレージについてを示す。</p>
+<h1 id="web-storage">
+  Web Storage
+  <a class="anchor" href="#web-storage">#</a>
+</h1>
+<p>Web Storageは、大容量(数MB)のデータをブラウザ側に蓄積するためのAPIである。キーと値のペアでデータを保存し、キーを指定すると、それに対応する値を取り出すことができる。</p>
+<p>Web Storageによって表示コンテンツを事前にブラウザに蓄積することができ、それによりサーバ負荷の低減やパフォーマンスの向上が見込まれる。</p>
+<p>Web Storageで定義されているストレージには次の２種類がある。</p>
+<ul>
+<li>セッションストレージ　・・・　ウィンドウごとのセッションで有効なストレージ</li>
+<li>ローカルストレージ　　・・・　ブラウザ内に永続的にデータを保存するストレージ</li>
+</ul>
 </article>
  
       
@@ -158,6 +170,12 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/1d0c45fdd4013a0971257ea64ed97742bc570ecd" title='Last modified by Wataru Tsukagoshi | Apr 3, 2021' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Apr 3, 2021</span>
+    </a>
+  </div>
 
 
 
