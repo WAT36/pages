@@ -10,12 +10,12 @@
 <meta property="og:description" content="ストレージ(JavaScript) # Javascriptで扱えるストレージについてを示す。 Web Storage # Web Storageは、大容量(数MB)のデータ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/storage_js/" />
-<meta property="article:modified_time" content="2021-04-05T22:26:45+09:00" />
+<meta property="article:modified_time" content="2021-04-07T00:22:57+09:00" />
 <title>ストレージ(JavaScript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.c475f5ab05b9206f8458c990586944693b68ccafad3283126f3be451f6f278f7.js" integrity="sha256-xHX1qwW5IG&#43;EWMmQWGlEaTtozK&#43;tMoMSbzvkUfbyePc="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.7dffbcb8b0e95c358f478f4785e8d73e42db662d0f9268527d795f0715ddabc6.js" integrity="sha256-ff&#43;8uLDpXDWPR49HhejXPkLbZi0PkmhSfXlfBxXdq8Y="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -227,6 +227,14 @@ window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</
 <p>テキストボックスに何か入力した上でボタンを押下すると、テキストボックスに入力した値をセッションストレージに保存する。</p>
 <p>その後、ブラウザを更新すると、テキストボックスには先程入力した値(セッションストレージにある値)が最初から入ってくる。</p>
 <p>ただし、セッションストレージなので、一回ブラウザを閉じるとその値は削除される。</p>
+<h1 id="indexed-database-api">
+  Indexed Database API
+  <a class="anchor" href="#indexed-database-api">#</a>
+</h1>
+<p>Indexed Database APIは、値とオブジェクトを保存できるローカルのデータベースである。</p>
+<p>Web Storageとは異なり、データベースとして扱うことができる。</p>
+<p>このデータベースは、ブラウザ上で確認できる。</p>
+<p>Indexed Database APIでは、<strong>オブジェクトストア</strong>と呼ばれる領域に、キーバリュー型で格納されるバリューの<strong>オブジェクト</strong>を格納している。</p>
 </article>
  
       
@@ -237,9 +245,9 @@ window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/90e8193273302ed29943b5043bbe2bf17b00ea46" title='Last modified by Wataru Tsukagoshi | Apr 5, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/0593ee02bbfb675e384aa0cdaf6b5fabd087d868" title='Last modified by Wataru Tsukagoshi | Apr 7, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Apr 5, 2021</span>
+      <span>Apr 7, 2021</span>
     </a>
   </div>
 
