@@ -118,3 +118,35 @@ Web Storageとは異なり、データベースとして扱うことができる
 このデータベースは、ブラウザ上で確認できる。
 
 Indexed Database APIでは、**オブジェクトストア**と呼ばれる領域に、キーバリュー型で格納されるバリューの**オブジェクト**を格納している。
+
+Indexed Database APIのオブジェクトは、JavascriptのIDBEnvironmentのプロパティに定義されている。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">indexedDB</td>
+        <td style="border:none;">データベースを生成・削除するためのオブジェクト</td>
+    </tr>
+</table>
+
+<hr>
+
+このindexedDBはIDBFactory型のオブジェクトである。IDBFactoryのAPIは以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">open()</td>
+        <td style="border:none;">データベースを開く</td>
+    </tr>
+    <tr>
+        <td style="border:none;">deleteDatabase()</td>
+        <td style="border:none;">データベースを削除する</td>
+    </tr>
+</table>
