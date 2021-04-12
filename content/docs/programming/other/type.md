@@ -80,7 +80,7 @@ f is Cherry?:false
 {{< /tab >}}
 {{< tab "Python" >}}
 
-Pythonでは組み込み関数**type()**を使うことにより、変数にあるデータの型が何であるかが分かる。  
+Pythonでは組み込み関数 **type()** を使うことにより、変数にあるデータの型が何であるかが分かる。  
 
 ```python
 >>> a=1
@@ -109,6 +109,52 @@ Pythonでは組み込み関数**type()**を使うことにより、変数にあ�
 >>> type(d)
 <class 'dict'>
 >>> 
+```
+{{< /tab >}}
+{{< tab "JavaScript" >}}
+
+Javascriptでは特殊演算子**typeof**を利用することで、変数の型を調べることができる。
+
+```javascript
+typeof (変数/定数)
+```
+
+使用例
+
+```javascript
+> typeof 11
+< "number"
+> typeof 'aaa'
+< "string"
+> typeof undefined
+< "undefined"
+> typeof true
+< "boolean"
+> typeof [1,2,3]
+< "object"
+> typeof function(){}
+< "function"
+```
+
+但し、Null値型に対しては仕様に反してobjectと返してしまう。
+
+```javascript
+> typeof null
+< "object"
+```
+
+そこで、Null値型を判別したい場合は、`Object.prototype.toString`を用いて判別を行う。
+以下に例を示す。なお、Null値だけでなく他の型に対しても判別が可能である。
+
+```javascript
+> var t = Object.prototype.toString
+< undefined
+> t.call(null)
+< "[object Null]"
+> t.call(2)
+< "[object Number]"
+> t.call('as')
+< "[object String]"
 ```
 
 {{< /tab >}}
