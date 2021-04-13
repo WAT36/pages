@@ -150,3 +150,46 @@ Indexed Database APIのオブジェクトは、JavascriptのIDBEnvironmentのプ
         <td style="border:none;">データベースを削除する</td>
     </tr>
 </table>
+
+<hr>
+
+上記のAPIは、返り値としてIDBOpenDBRequest型のオブジェクトを返す。
+
+IDBOpenDBRequest型はIDBRequestを継承しており、IDBRequestのAPIは以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">result</td>
+        <td style="border:none;">データベースへの操作の実行結果</td>
+    </tr>
+    <tr>
+        <td style="border:none;">error</td>
+        <td style="border:none;">エラーが発生した場合のオブジェクト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">transaction</td>
+        <td style="border:none;">本処理のトランザクション(IDBTransaction型)</td>
+    </tr>
+</table>
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">イベントハンドラ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onsuccess</td>
+        <td style="border:none;">正常終了した場合</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onerror</td>
+        <td style="border:none;">エラーが発生した場合</td>
+    </tr>
+</table>
+
+<hr>
+
