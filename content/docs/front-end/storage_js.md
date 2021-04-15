@@ -193,3 +193,11 @@ IDBOpenDBRequest型はIDBRequestを継承しており、IDBRequestのAPIは以�
 
 <hr>
 
+一つ例を示す。
+
+JavaScript
+
+```javascript
+var db = indexedDB.open("db");
+
+```
