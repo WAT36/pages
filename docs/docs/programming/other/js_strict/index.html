@@ -5,17 +5,17 @@
   <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="JavascriptのStrictモードについて。">
+<meta name="description" content="JavascriptのStrictモードについて。 Javascriptの仕様には様々な理由で曖昧さが存在しており、それが時にエラーの原因にな">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Strictモード(Javascript)" />
-<meta property="og:description" content="JavascriptのStrictモードについて。" />
+<meta property="og:description" content="JavascriptのStrictモードについて。 Javascriptの仕様には様々な理由で曖昧さが存在しており、それが時にエラーの原因にな" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/other/js_strict/" />
-
+<meta property="article:modified_time" content="2021-04-15T19:13:06+09:00" />
 <title>Strictモード(Javascript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.a5fb1af1a279e181f0b375021dd833a9f0e08453e6105c0604edb944dec3df17.js" integrity="sha256-pfsa8aJ54YHws3UCHdgzqfDghFPmEFwGBO25RN7D3xc="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.1a624c1279bd69086f36ae2aab385e8cdf6ef49ad34eeb69974b875291c5136b.js" integrity="sha256-GmJMEnm9aQhvNq4qqzhejN9u9JrTTutpl0uHUpHFE2s="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -146,6 +146,12 @@ https://github.com/alex-shpak/hugo-book
       
       
   <article class="markdown"><p>JavascriptのStrictモードについて。</p>
+<p>Javascriptの仕様には様々な理由で曖昧さが存在しており、それが時にエラーの原因になりうることもある。</p>
+<p>これらの問題の原因に対して、厳格な(Strict)チェックをするための昨日が<strong>Strictモード</strong>になる。</p>
+<p>このStrictモードを指定することにより、エラーを発見が容易になったり、適切な最適化が行え処理を高速化することができる。</p>
+<p>Strictモードにするには、以下の宣言を記述する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#34;use strict&#34;</span>;
+</code></pre></div><p>記述した箇所によって適用されるスコープが変わるので注意。ソースコードの先頭に記述した場合はソースコード全体に、関数内の先頭に記述した場合はその関数全体に適用される。</p>
 </article>
  
       
@@ -155,6 +161,12 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/88a48dc43a008fce48d87e0b19e92d83899de20b" title='Last modified by Wataru Tsukagoshi | Apr 15, 2021' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Apr 15, 2021</span>
+    </a>
+  </div>
 
 
 
