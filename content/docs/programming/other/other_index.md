@@ -19,5 +19,6 @@ bookToc: false
 - [Null]({{< relref "/docs/programming/other/null.md" >}})
 - [正規表現]({{< relref "/docs/programming/other/re.md" >}})
 - [ジェネリクス]({{< relref "/docs/programming/other/generics.md" >}})
+- [Strictモード(Javascript)]({{< relref "/docs/programming/other/js_strict.md" >}})
 - Web通信
      - Webリクエストを送る・レスポンスを受け取る
