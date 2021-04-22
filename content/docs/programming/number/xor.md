@@ -77,5 +77,21 @@ False
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+ビット演算に関してはJavascriptもjavaと同じで **^** を使用する。
+
+```javascript
+> 0 ^ 1
+< 1
+> a = 2
+< 2
+> b = 3
+< 3
+> a ^ b
+< 1
+```
+
+{{< /tab >}}
 {{< /tabs >}}
 
