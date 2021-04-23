@@ -10,12 +10,12 @@
 <meta property="og:description" content="ストレージ(JavaScript) # Javascriptで扱えるストレージについてを示す。 Web Storage # Web Storageは、大容量(数MB)のデータ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/storage_js/" />
-<meta property="article:modified_time" content="2021-04-13T22:21:28+09:00" />
+<meta property="article:modified_time" content="2021-04-15T21:13:52+09:00" />
 <title>ストレージ(JavaScript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.365eabdd4895609cc453c3887bb08bcf953853015e425b2a6a8837c31c8d9510.js" integrity="sha256-Nl6r3UiVYJzEU8OIe7CLz5U4UwFeQlsqaog3wxyNlRA="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.83f79b2c073f75fe39ca96e99d75740d643e9afecb716fd39adef21b03e19459.js" integrity="sha256-g/ebLAc/df45ypbpnXV0DWQ&#43;mv7LcW/Tmt7yGwPhlFk="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -297,11 +297,47 @@ window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</
         <td style="border:none;">エラーが発生した場合</td>
     </tr>
 </table>
+<p>IDBOpenDBRequest型のAPIは以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">イベントハンドラ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onblocked</td>
+        <td style="border:none;">処理をブロックした場合に呼ばれる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onupgradeneeded</td>
+        <td style="border:none;">アップグレード処理が必要になった場合に呼ばれる。データベースが存在しない場合にopenメソッドを利用した時も発生する</td>
+    </tr>
+</table>
 <hr>
 <p>一つ例を示す。</p>
 <p>JavaScript</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">indexedDB</span>.<span style="color:#a6e22e">open</span>(<span style="color:#e6db74">&#34;db&#34;</span>);
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">req</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">indexedDB</span>.<span style="color:#a6e22e">open</span>(<span style="color:#e6db74">&#34;db&#34;</span>);
+<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">onupgradeneeded</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">finction</span>(){
+    <span style="color:#75715e">//DB作成
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">result</span>;
+    <span style="color:#75715e">//オブジェクトストア作成、インデックス作成
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">store</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">createObjectStore</span>(<span style="color:#e6db74">&#34;MemberList&#34;</span>,{<span style="color:#a6e22e">keyPath</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;memberId&#34;</span>});
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">nameIndex</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">createIndex</span>(<span style="color:#e6db74">&#34;by_name&#34;</span>,<span style="color:#e6db74">&#34;name&#34;</span>);
+    <span style="color:#75715e">//初期データ
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">put</span>({<span style="color:#a6e22e">memberId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;1&#34;</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;田中太郎&#34;</span>});
+    <span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">put</span>({<span style="color:#a6e22e">memberId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2&#34;</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;田中次郎&#34;</span>});
+    <span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">put</span>({<span style="color:#a6e22e">memberId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;3&#34;</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;田中三郎&#34;</span>});
+};
+<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">onsuccess</span> <span style="color:#f92672">=</span> {
+    <span style="color:#75715e">//DBのオープンに成功
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">result</span>;
+}
+</code></pre></div><p>HTML</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">table</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;memberList&#34;</span>&gt;
+    &lt;<span style="color:#f92672">th</span>&gt;
+        &lt;<span style="color:#f92672">td</span>&gt;メンバーID&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;<span style="color:#f92672">td</span>&gt;名前&lt;/<span style="color:#f92672">td</span>&gt;
+    &lt;/<span style="color:#f92672">th</span>&gt;
+&lt;/<span style="color:#f92672">table</span>&gt;
 </code></pre></div></article>
  
       
@@ -312,9 +348,9 @@ window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/d44d940972d10354272cf907915651e92b61773e" title='Last modified by Wataru Tsukagoshi | Apr 13, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/95d10576f632b18f5f44ea5c18de457e4368ffa4" title='Last modified by Wataru Tsukagoshi | Apr 15, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Apr 13, 2021</span>
+      <span>Apr 15, 2021</span>
     </a>
   </div>
 

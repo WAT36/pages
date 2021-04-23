@@ -341,6 +341,15 @@
     </item>
     
     <item>
+      <title>Strictモード(Javascript)</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/js_strict-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/js_strict-2/</guid>
+      <description>Strictモード(Javascript) # JavascriptのStrictモードについて。 Javascriptの仕様には様々な理由で曖昧</description>
+    </item>
+    
+    <item>
       <title>switch文</title>
       <link>https://WAT36.github.io/pages/docs/programming/control/switch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

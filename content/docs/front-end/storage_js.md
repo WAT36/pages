@@ -191,6 +191,24 @@ IDBOpenDBRequest型はIDBRequestを継承しており、IDBRequestのAPIは以�
     </tr>
 </table>
 
+IDBOpenDBRequest型のAPIは以下の通り。
+
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">イベントハンドラ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onblocked</td>
+        <td style="border:none;">処理をブロックした場合に呼ばれる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onupgradeneeded</td>
+        <td style="border:none;">アップグレード処理が必要になった場合に呼ばれる。データベースが存在しない場合にopenメソッドを利用した時も発生する</td>
+    </tr>
+</table>
+
 <hr>
 
 一つ例を示す。
@@ -198,6 +216,31 @@ IDBOpenDBRequest型はIDBRequestを継承しており、IDBRequestのAPIは以�
 JavaScript
 
 ```javascript
-var db = indexedDB.open("db");
+var req = indexedDB.open("db");
+req.onupgradeneeded = finction(){
+    //DB作成
+    var db = req.result;
+    //オブジェクトストア作成、インデックス作成
+    var store = db.createObjectStore("MemberList",{keyPath: "memberId"});
+    var nameIndex = store.createIndex("by_name","name");
+    //初期データ
+    store.put({memberId: "1", name:"田中太郎"});
+    store.put({memberId: "2", name:"田中次郎"});
+    store.put({memberId: "3", name:"田中三郎"});
+};
+req.onsuccess = {
+    //DBのオープンに成功
+    var db = req.result;
+}
+```
 
+HTML
+
+```html
+<table id="memberList">
+    <th>
+        <td>メンバーID</td>
+        <td>名前</td>
+    </th>
+</table>
 ```
