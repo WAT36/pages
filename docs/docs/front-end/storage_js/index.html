@@ -10,12 +10,12 @@
 <meta property="og:description" content="ストレージ(JavaScript) # Javascriptで扱えるストレージについてを示す。 Web Storage # Web Storageは、大容量(数MB)のデータ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/storage_js/" />
-<meta property="article:modified_time" content="2021-04-23T23:09:17+09:00" />
+<meta property="article:modified_time" content="2021-04-24T11:09:49+09:00" />
 <title>ストレージ(JavaScript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.5f956ab4c338f79cac973197118b0944bbf5d497589b5cc7cf2b45daec86d00a.js" integrity="sha256-X5VqtMM495yslzGXEYsJRLv11JdYm1zHzytF2uyG0Ao="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.9ec116c52c507fd76e3a6f79fbcffb08b04c393a12591408b639337633d67fd4.js" integrity="sha256-nsEWxSxQf9duOm95&#43;8/7CLBMOToSWRQItjkzdjPWf9Q="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -312,56 +312,66 @@ window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</
         <td style="border:none;">アップグレード処理が必要になった場合に呼ばれる。データベースが存在しない場合にopenメソッドを利用した時も発生する</td>
     </tr>
 </table>
-<hr>
-<p>一つ例を示す。</p>
-<p>JavaScript</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">req</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">indexedDB</span>.<span style="color:#a6e22e">open</span>(<span style="color:#e6db74">&#34;db&#34;</span>);
-<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">onupgradeneeded</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){
-    <span style="color:#75715e">//DB作成
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">result</span>;
-    <span style="color:#75715e">//オブジェクトストア作成、インデックス作成
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">store</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">createObjectStore</span>(<span style="color:#e6db74">&#34;MemberList&#34;</span>,{<span style="color:#a6e22e">keyPath</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;memberId&#34;</span>});
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">nameIndex</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">createIndex</span>(<span style="color:#e6db74">&#34;by_name&#34;</span>,<span style="color:#e6db74">&#34;name&#34;</span>);
-    <span style="color:#75715e">//初期データ
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">put</span>({<span style="color:#a6e22e">memberId</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;田中太郎&#34;</span>});
-    <span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">put</span>({<span style="color:#a6e22e">memberId</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;田中次郎&#34;</span>});
-    <span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">put</span>({<span style="color:#a6e22e">memberId</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;田中三郎&#34;</span>});
-};
-<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">onsuccess</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){
-    <span style="color:#75715e">//DBのオープンに成功
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">result</span>;
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">objectstore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">transaction</span>([<span style="color:#e6db74">&#34;db&#34;</span>]).<span style="color:#a6e22e">objectStore</span>(<span style="color:#e6db74">&#34;MemberList&#34;</span>)
-
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">table</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;memberList&#34;</span>);
-
-    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">objectstore</span>.<span style="color:#a6e22e">count</span>();<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
-        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">row</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">insertRow</span>();
-        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">cell</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">row</span>.<span style="color:#a6e22e">insertCell</span>();
-        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createTextNode</span>(<span style="color:#a6e22e">objectStore</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">i</span>).<span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">memberId</span>);
-        <span style="color:#a6e22e">cell</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">text</span>);
-
-        <span style="color:#a6e22e">cell</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">row</span>.<span style="color:#a6e22e">insertCell</span>();
-        <span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createTextNode</span>(<span style="color:#a6e22e">objectStore</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">i</span>).<span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">name</span>);
-        <span style="color:#a6e22e">cell</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">text</span>);
-    }
-}
-</code></pre></div><p>HTML</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">table</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;memberList&#34;</span>&gt;
-    &lt;<span style="color:#f92672">th</span>&gt;
-        &lt;<span style="color:#f92672">td</span>&gt;メンバーID&lt;/<span style="color:#f92672">td</span>&gt;
-        &lt;<span style="color:#f92672">td</span>&gt;名前&lt;/<span style="color:#f92672">td</span>&gt;
-    &lt;/<span style="color:#f92672">th</span>&gt;
-&lt;/<span style="color:#f92672">table</span>&gt;
-</code></pre></div><p>表示例</p>
-<hr>
-<table id="memberList">
+<p>open()メソッドによりデータベースが作成され、IDBOpenDBRequestオブジェクトが返される。</p>
+<p>成功時、その実行結果のresultプロパティにIDBDatabaseオブジェクトが格納されている。</p>
+<p>IDBDatabase型のAPIは以下の通り。</p>
+<table style="border:none;">
     <tr>
-        <th>メンバーID</th>
-        <th>名前</th>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">name</td>
+        <td style="border:none;">データベースの名前</td>
+    </tr>
+    <tr>
+        <td style="border:none;">version</td>
+        <td style="border:none;">データベースのバージョン</td>
+    </tr>
+    <tr>
+        <td style="border:none;">objectStoreNames</td>
+        <td style="border:none;">データベースが保持しているオブジェクトストアの名前のリスト</td>
     </tr>
 </table>
-<script type="text/javascript" src="https://WAT36.github.io/pages/js_sample_pages/storage.js"></script>
-<hr></article>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">createObjectStore()</td>
+        <td style="border:none;">オブジェクトストアを生成(IDBObjectStore型オブジェクトを返す)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">deleteObjectStore()</td>
+        <td style="border:none;">オブジェクトストアを削除</td>
+    </tr>
+    <tr>
+        <td style="border:none;">transaction()</td>
+        <td style="border:none;">トランザクションを生成(IDBTransactionオブジェクトを返す)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">close()</td>
+        <td style="border:none;">データベースとの接続を終了する</td>
+    </tr>
+</table>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">イベントハンドラ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onversionchange</td>
+        <td style="border:none;">バージョンが変更された場合</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onerror</td>
+        <td style="border:none;">エラーが発生した場合</td>
+    </tr>
+</table>
+<p>このうちtransaction()メソッドではIDBTransaction型のオブジェクトが返される。</p>
+<hr>
+</article>
  
       
 
@@ -371,9 +381,9 @@ window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/67f84534a46a2488e6a2b26d94023f725e437f94" title='Last modified by Wataru Tsukagoshi | Apr 23, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/8a3ab7e161deea884fcb7ef1fa315828917f92f1" title='Last modified by Wataru Tsukagoshi | Apr 24, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Apr 23, 2021</span>
+      <span>Apr 24, 2021</span>
     </a>
   </div>
 

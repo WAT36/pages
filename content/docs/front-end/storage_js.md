@@ -209,64 +209,73 @@ IDBOpenDBRequest型のAPIは以下の通り。
     </tr>
 </table>
 
-<hr>
 
-一つ例を示す。
+open()メソッドによりデータベースが作成され、IDBOpenDBRequestオブジェクトが返される。
 
-JavaScript
+成功時、その実行結果のresultプロパティにIDBDatabaseオブジェクトが格納されている。
 
-```javascript
-var req = indexedDB.open("db");
-req.onupgradeneeded = function(){
-    //DB作成
-    var db = req.result;
-    //オブジェクトストア作成、インデックス作成
-    var store = db.createObjectStore("MemberList",{keyPath: "memberId"});
-    var nameIndex = store.createIndex("by_name","name");
-    //初期データ
-    store.put({memberId: 0, name:"田中太郎"});
-    store.put({memberId: 1, name:"田中次郎"});
-    store.put({memberId: 2, name:"田中三郎"});
-};
-req.onsuccess = function(){
-    //DBのオープンに成功
-    var db = req.result;
-    var objectstore = db.transaction(["db"]).objectStore("MemberList")
+IDBDatabase型のAPIは以下の通り。
 
-    var table = document.getElementById("memberList");
-
-    for (let i=0;i<objectstore.count();i++){
-        var row = table.insertRow();
-        var cell = row.insertCell();
-        var text = document.createTextNode(objectStore.get(i).result.memberId);
-        cell.appendChild(text);
-
-        cell = row.insertCell();
-        text = document.createTextNode(objectStore.get(i).result.name);
-        cell.appendChild(text);
-    }
-}
-```
-
-HTML
-
-```html
-<table id="memberList">
-    <th>
-        <td>メンバーID</td>
-        <td>名前</td>
-    </th>
-</table>
-```
-
-表示例
-
-<hr>
-<table id="memberList">
+<table style="border:none;">
     <tr>
-        <th>メンバーID</th>
-        <th>名前</th>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">name</td>
+        <td style="border:none;">データベースの名前</td>
+    </tr>
+    <tr>
+        <td style="border:none;">version</td>
+        <td style="border:none;">データベースのバージョン</td>
+    </tr>
+    <tr>
+        <td style="border:none;">objectStoreNames</td>
+        <td style="border:none;">データベースが保持しているオブジェクトストアの名前のリスト</td>
     </tr>
 </table>
-<script type="text/javascript" src="/js_sample_pages/storage.js"></script>
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">createObjectStore()</td>
+        <td style="border:none;">オブジェクトストアを生成(IDBObjectStore型オブジェクトを返す)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">deleteObjectStore()</td>
+        <td style="border:none;">オブジェクトストアを削除</td>
+    </tr>
+    <tr>
+        <td style="border:none;">transaction()</td>
+        <td style="border:none;">トランザクションを生成(IDBTransactionオブジェクトを返す)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">close()</td>
+        <td style="border:none;">データベースとの接続を終了する</td>
+    </tr>
+</table>
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">イベントハンドラ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onversionchange</td>
+        <td style="border:none;">バージョンが変更された場合</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onerror</td>
+        <td style="border:none;">エラーが発生した場合</td>
+    </tr>
+</table>
+
+
+このうちtransaction()メソッドではIDBTransaction型のオブジェクトが返される。
+
+
+
 <hr>
