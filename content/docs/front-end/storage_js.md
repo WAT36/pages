@@ -217,20 +217,34 @@ JavaScript
 
 ```javascript
 var req = indexedDB.open("db");
-req.onupgradeneeded = finction(){
+req.onupgradeneeded = function(){
     //DB作成
     var db = req.result;
     //オブジェクトストア作成、インデックス作成
     var store = db.createObjectStore("MemberList",{keyPath: "memberId"});
     var nameIndex = store.createIndex("by_name","name");
     //初期データ
-    store.put({memberId: "1", name:"田中太郎"});
-    store.put({memberId: "2", name:"田中次郎"});
-    store.put({memberId: "3", name:"田中三郎"});
+    store.put({memberId: 0, name:"田中太郎"});
+    store.put({memberId: 1, name:"田中次郎"});
+    store.put({memberId: 2, name:"田中三郎"});
 };
-req.onsuccess = {
+req.onsuccess = function(){
     //DBのオープンに成功
     var db = req.result;
+    var objectstore = db.transaction(["db"]).objectStore("MemberList")
+
+    var table = document.getElementById("memberList");
+
+    for (let i=0;i<objectstore.count();i++){
+        var row = table.insertRow();
+        var cell = row.insertCell();
+        var text = document.createTextNode(objectStore.get(i).result.memberId);
+        cell.appendChild(text);
+
+        cell = row.insertCell();
+        text = document.createTextNode(objectStore.get(i).result.name);
+        cell.appendChild(text);
+    }
 }
 ```
 
@@ -244,3 +258,15 @@ HTML
     </th>
 </table>
 ```
+
+表示例
+
+<hr>
+<table id="memberList">
+    <tr>
+        <th>メンバーID</th>
+        <th>名前</th>
+    </tr>
+</table>
+<script type="text/javascript" src="/js_sample_pages/storage.js"></script>
+<hr>
