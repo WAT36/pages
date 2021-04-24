@@ -10,12 +10,12 @@
 <meta property="og:description" content="ストレージ(JavaScript) # Javascriptで扱えるストレージについてを示す。 Web Storage # Web Storageは、大容量(数MB)のデータ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/storage_js/" />
-<meta property="article:modified_time" content="2021-04-24T11:09:49+09:00" />
+<meta property="article:modified_time" content="2021-04-24T11:47:31+09:00" />
 <title>ストレージ(JavaScript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.9ec116c52c507fd76e3a6f79fbcffb08b04c393a12591408b639337633d67fd4.js" integrity="sha256-nsEWxSxQf9duOm95&#43;8/7CLBMOToSWRQItjkzdjPWf9Q="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.c3a1e84871fb402d384fd9776d3db79154038dd60c7de9a115c8218776dabf8f.js" integrity="sha256-w6HoSHH7QC04T9l3bT23kVQDjdYMfemhFcghh3bav48="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -370,6 +370,57 @@ window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</
     </tr>
 </table>
 <p>このうちtransaction()メソッドではIDBTransaction型のオブジェクトが返される。</p>
+<p>IDBTransaction型のAPIは以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">mode</td>
+        <td style="border:none;">トランザクションのモード</td>
+    </tr>
+    <tr>
+        <td style="border:none;">db</td>
+        <td style="border:none;">トランザクションが属しているデータベース</td>
+    </tr>
+    <tr>
+        <td style="border:none;">error</td>
+        <td style="border:none;">エラーが発生した場合のエラーオブジェクト</td>
+    </tr>
+</table>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">objectStore()</td>
+        <td style="border:none;">指定したオブジェクトストアを返す</td>
+    </tr>
+    <tr>
+        <td style="border:none;">abort()</td>
+        <td style="border:none;">トランザクションをabortする</td>
+    </tr>
+</table>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">イベントハンドラ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onabort</td>
+        <td style="border:none;">abortされた場合に呼ばれる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">oncomplete</td>
+        <td style="border:none;">完了した場合に呼ばれる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onerror</td>
+        <td style="border:none;">完了した場合に呼ばれる</td>
+    </tr>
+</table>
 <hr>
 </article>
  
@@ -381,7 +432,7 @@ window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/8a3ab7e161deea884fcb7ef1fa315828917f92f1" title='Last modified by Wataru Tsukagoshi | Apr 24, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/5bb936f2543d1d090cf6c3fe4c6377af7c17ea0d" title='Last modified by Wataru Tsukagoshi | Apr 24, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>Apr 24, 2021</span>
     </a>

@@ -276,6 +276,61 @@ IDBDatabase型のAPIは以下の通り。
 
 このうちtransaction()メソッドではIDBTransaction型のオブジェクトが返される。
 
+IDBTransaction型のAPIは以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">mode</td>
+        <td style="border:none;">トランザクションのモード</td>
+    </tr>
+    <tr>
+        <td style="border:none;">db</td>
+        <td style="border:none;">トランザクションが属しているデータベース</td>
+    </tr>
+    <tr>
+        <td style="border:none;">error</td>
+        <td style="border:none;">エラーが発生した場合のエラーオブジェクト</td>
+    </tr>
+</table>
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">objectStore()</td>
+        <td style="border:none;">指定したオブジェクトストアを返す</td>
+    </tr>
+    <tr>
+        <td style="border:none;">abort()</td>
+        <td style="border:none;">トランザクションをabortする</td>
+    </tr>
+</table>
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">イベントハンドラ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onabort</td>
+        <td style="border:none;">abortされた場合に呼ばれる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">oncomplete</td>
+        <td style="border:none;">完了した場合に呼ばれる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onerror</td>
+        <td style="border:none;">完了した場合に呼ばれる</td>
+    </tr>
+</table>
+
 
 
 <hr>
