@@ -331,6 +331,9 @@ IDBTransaction型のAPIは以下の通り。
     </tr>
 </table>
 
-
-
 <hr>
+
+
+# File API
+
+File APIは、ローカルファイルの属性や内容を取得できるAPIである。
