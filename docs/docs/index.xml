@@ -1570,7 +1570,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/comparison_operator/</guid>
-      <description>比較演算子 #</description>
+      <description>比較演算子 # 比較演算子についてをまとめておく。 Java Javaでの主な比較演算子は以下の通り。 演算子 意味 例 &amp;lt; 未満 a &amp;lt; b &amp;lt;= 以下 a &amp;lt;= b &amp;gt; より大きい a &amp;gt;</description>
     </item>
     
     <item>
