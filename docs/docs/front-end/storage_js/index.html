@@ -10,12 +10,12 @@
 <meta property="og:description" content="ストレージ(JavaScript) # Javascriptで扱えるストレージについてを示す。 Web Storage # Web Storageは、大容量(数MB)のデータ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/storage_js/" />
-<meta property="article:modified_time" content="2021-04-24T13:02:48+09:00" />
+<meta property="article:modified_time" content="2021-04-25T23:26:00+09:00" />
 <title>ストレージ(JavaScript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.e8d7593f77abe444355b693e3c0bf983c653a45947571e7186e58d38b03c2b48.js" integrity="sha256-6NdZP3er5EQ1W2k&#43;PAv5g8ZTpFlHVx5xhuWNOLA8K0g="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.dd128ca3a2a04b1413897a5e18f286aa1ef9193f3ad6291d78f17d7e4a7f6e38.js" integrity="sha256-3RKMo6KgSxQTiXpeGPKGqh75GT861ikdePF9fkp/bjg="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -427,6 +427,71 @@ window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</
   <a class="anchor" href="#file-api">#</a>
 </h1>
 <p>File APIは、ローカルファイルの属性や内容を取得できるAPIである。</p>
+<p>File APIは、ブラウザ上でユーザが選択したファイルを扱う事ができる。ファイルが選択した時に取得する事ができるFileList型オブジェクトには、ユーザが選択したファイルが格納される。</p>
+<p>まず、FileList型のAPIを以下に示す。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">length</td>
+        <td style="border:none;">含まれるファイル数</td>
+    </tr>
+</table>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">item()</td>
+        <td style="border:none;">指定されたインデックスのFileオブジェクトを返す</td>
+    </tr>
+</table>
+<hr>
+<p>このitem()メソッドで返されるのはファイルを示すFileオブジェクトである。</p>
+<p>Fileオブジェクトはバイナリーデータを扱うBlobオブジェクトを継承している。まずはBlobオブジェクトのAPIを示す。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">size</td>
+        <td style="border:none;">Blobオブジェクトのバイト数</td>
+    </tr>
+    <tr>
+        <td style="border:none;">type</td>
+        <td style="border:none;">Blobオブジェクトのメディアたいぷ</td>
+    </tr>
+</table>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">close()</td>
+        <td style="border:none;">Blobオブジェクトを閉じる</td>
+    </tr>
+</table>
+<hr>
+<p>File型のAPIは以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">name</td>
+        <td style="border:none;">ファイル名</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lastModifiedDate</td>
+        <td style="border:none;">ファイルが最後に修正された日時</td>
+    </tr>
+</table>
 </article>
  
       
@@ -437,9 +502,9 @@ window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/3e52393e61cdfdb12a343ed8f96ba7a03805ceb3" title='Last modified by Wataru Tsukagoshi | Apr 24, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/2b4f20c43497b2b93423afc262a78ee4cbe7166b" title='Last modified by Wataru Tsukagoshi | Apr 25, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Apr 24, 2021</span>
+      <span>Apr 25, 2021</span>
     </a>
   </div>
 

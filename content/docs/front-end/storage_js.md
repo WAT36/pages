@@ -337,3 +337,80 @@ IDBTransaction型のAPIは以下の通り。
 # File API
 
 File APIは、ローカルファイルの属性や内容を取得できるAPIである。
+
+File APIは、ブラウザ上でユーザが選択したファイルを扱う事ができる。ファイルが選択した時に取得する事ができるFileList型オブジェクトには、ユーザが選択したファイルが格納される。
+
+まず、FileList型のAPIを以下に示す。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">length</td>
+        <td style="border:none;">含まれるファイル数</td>
+    </tr>
+</table>
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">item()</td>
+        <td style="border:none;">指定されたインデックスのFileオブジェクトを返す</td>
+    </tr>
+</table>
+
+<hr>
+
+このitem()メソッドで返されるのはファイルを示すFileオブジェクトである。
+
+Fileオブジェクトはバイナリーデータを扱うBlobオブジェクトを継承している。まずはBlobオブジェクトのAPIを示す。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">size</td>
+        <td style="border:none;">Blobオブジェクトのバイト数</td>
+    </tr>
+    <tr>
+        <td style="border:none;">type</td>
+        <td style="border:none;">Blobオブジェクトのメディアたいぷ</td>
+    </tr>
+</table>
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">close()</td>
+        <td style="border:none;">Blobオブジェクトを閉じる</td>
+    </tr>
+</table>
+
+<hr>
+
+File型のAPIは以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">name</td>
+        <td style="border:none;">ファイル名</td>
+    </tr>
+    <tr>
+        <td style="border:none;">lastModifiedDate</td>
+        <td style="border:none;">ファイルが最後に修正された日時</td>
+    </tr>
+</table>
