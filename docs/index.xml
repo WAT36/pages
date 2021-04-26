@@ -341,15 +341,6 @@
     
     <item>
       <title>Strictモード(Javascript)</title>
-      <link>https://WAT36.github.io/pages/docs/programming/other/js_strict-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/other/js_strict-2/</guid>
-      <description>Strictモード(Javascript) # JavascriptのStrictモードについて。 Javascriptの仕様には様々な理由で曖昧</description>
-    </item>
-    
-    <item>
-      <title>Strictモード(Javascript)</title>
       <link>https://WAT36.github.io/pages/docs/programming/other/js_strict/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1570,6 +1561,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/distortion_measure/</guid>
       <description>歪み尺度 # 教師あり学習では、学習が進み精度が高くなることの指標として、平均交差エントロピー誤差のような関数を利用していた。 教師なし学習、今回</description>
+    </item>
+    
+    <item>
+      <title>比較演算子</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/comparison_operator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/comparison_operator/</guid>
+      <description>比較演算子 #</description>
     </item>
     
     <item>
