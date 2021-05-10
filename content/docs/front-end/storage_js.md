@@ -381,7 +381,7 @@ Fileオブジェクトはバイナリーデータを扱うBlobオブジェクト
     </tr>
     <tr>
         <td style="border:none;">type</td>
-        <td style="border:none;">Blobオブジェクトのメディアたいぷ</td>
+        <td style="border:none;">Blobオブジェクトのメディアタイプ</td>
     </tr>
 </table>
 
@@ -412,5 +412,93 @@ File型のAPIは以下の通り。
     <tr>
         <td style="border:none;">lastModifiedDate</td>
         <td style="border:none;">ファイルが最後に修正された日時</td>
+    </tr>
+</table>
+
+Fileオブジェクトを取得したら、FileReaderオブジェクトをインスタンスかしてコンテンツをメモリに読み取る。
+
+FileReaderのAPIは以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">readyState</td>
+        <td style="border:none;">(下記の定数の表にある状態を返す)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">result</td>
+        <td style="border:none;">ファイルの内容を読み込んだメソッドに合わせた型で表す</td>
+    </tr>
+    <tr>
+        <td style="border:none;">error</td>
+        <td style="border:none;">ファイルの読み込みで発生したエラーに関するオブジェクト</td>
+    </tr>
+</table>
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">定数名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">EMPTY</td>
+        <td style="border:none;">FileReaderオブジェクトが生成されて、まだデータを読み込んでない状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">LOADING</td>
+        <td style="border:none;">ファイルのデータを読み込んでいる状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">DONE</td>
+        <td style="border:none;">ファイルのデータをメモリ上にロードし終わったが、途中でエラーが発生した状態</td>
+    </tr>
+</table>
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">readAsArrayBuffer()</td>
+        <td style="border:none;">データをArrayBufferとして読み込む</td>
+    </tr>
+    <tr>
+        <td style="border:none;">readAsText()</td>
+        <td style="border:none;">データをテキストとして読み込む</td>
+    </tr>
+    <tr>
+        <td style="border:none;">readAsDataURL()</td>
+        <td style="border:none;">データをDataURLとして読み込む</td>
+    </tr>
+    <tr>
+        <td style="border:none;">abort()</td>
+        <td style="border:none;">データの読み込みを中断する</td>
+    </tr>
+</table>
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">イベントハンドラ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onloadstart</td>
+        <td style="border:none;">読み込みが開始したときに呼ばれる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onload</td>
+        <td style="border:none;">読み込みが正常終了したときに呼ばれる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onabort</td>
+        <td style="border:none;">読み込みが中断された場合に呼ばれる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onerror</td>
+        <td style="border:none;">読み込みが失敗したときに呼ばれる</td>
     </tr>
 </table>

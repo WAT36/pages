@@ -10,12 +10,12 @@
 <meta property="og:description" content="ストレージ(JavaScript) # Javascriptで扱えるストレージについてを示す。 Web Storage # Web Storageは、大容量(数MB)のデータ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/storage_js/" />
-<meta property="article:modified_time" content="2021-04-25T23:26:00+09:00" />
+<meta property="article:modified_time" content="2021-04-26T20:45:26+09:00" />
 <title>ストレージ(JavaScript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.dd128ca3a2a04b1413897a5e18f286aa1ef9193f3ad6291d78f17d7e4a7f6e38.js" integrity="sha256-3RKMo6KgSxQTiXpeGPKGqh75GT861ikdePF9fkp/bjg="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.394fcf0069235b7c25f9bea9a2cbdf907438cfe186676923327e9cb83dfb52b3.js" integrity="sha256-OU/PAGkjW3wl&#43;b6posvfkHQ4z&#43;GGZ2kjMn6cuD37UrM="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -463,7 +463,7 @@ window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</
     </tr>
     <tr>
         <td style="border:none;">type</td>
-        <td style="border:none;">Blobオブジェクトのメディアたいぷ</td>
+        <td style="border:none;">Blobオブジェクトのメディアタイプ</td>
     </tr>
 </table>
 <table style="border:none;">
@@ -492,7 +492,88 @@ window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</
         <td style="border:none;">ファイルが最後に修正された日時</td>
     </tr>
 </table>
-</article>
+<p>Fileオブジェクトを取得したら、FileReaderオブジェクトをインスタンスかしてコンテンツをメモリに読み取る。</p>
+<p>FileReaderのAPIは以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">readyState</td>
+        <td style="border:none;">(下記の定数の表にある状態を返す)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">result</td>
+        <td style="border:none;">ファイルの内容を読み込んだメソッドに合わせた型で表す</td>
+    </tr>
+    <tr>
+        <td style="border:none;">error</td>
+        <td style="border:none;">ファイルの読み込みで発生したエラーに関するオブジェクト</td>
+    </tr>
+</table>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">定数名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">EMPTY</td>
+        <td style="border:none;">FileReaderオブジェクトが生成されて、まだデータを読み込んでない状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">LOADING</td>
+        <td style="border:none;">ファイルのデータを読み込んでいる状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">DONE</td>
+        <td style="border:none;">ファイルのデータをメモリ上にロードし終わったが、途中でエラーが発生した状態</td>
+    </tr>
+</table>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">readAsArrayBuffer()</td>
+        <td style="border:none;">データをArrayBufferとして読み込む</td>
+    </tr>
+    <tr>
+        <td style="border:none;">readAsText()</td>
+        <td style="border:none;">データをテキストとして読み込む</td>
+    </tr>
+    <tr>
+        <td style="border:none;">readAsDataURL()</td>
+        <td style="border:none;">データをDataURLとして読み込む</td>
+    </tr>
+    <tr>
+        <td style="border:none;">abort()</td>
+        <td style="border:none;">データの読み込みを中断する</td>
+    </tr>
+</table>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">イベントハンドラ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onloadstart</td>
+        <td style="border:none;">読み込みが開始したときに呼ばれる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onload</td>
+        <td style="border:none;">読み込みが正常終了したときに呼ばれる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onabort</td>
+        <td style="border:none;">読み込みが中断された場合に呼ばれる</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onerror</td>
+        <td style="border:none;">読み込みが失敗したときに呼ばれる</td>
+    </tr>
+</table></article>
  
       
 
@@ -502,9 +583,9 @@ window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/2b4f20c43497b2b93423afc262a78ee4cbe7166b" title='Last modified by Wataru Tsukagoshi | Apr 25, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/608ef3f85079169bde09d124933dec5f0b978836" title='Last modified by Wataru Tsukagoshi | Apr 26, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Apr 25, 2021</span>
+      <span>Apr 26, 2021</span>
     </a>
   </div>
 
