@@ -10,12 +10,12 @@
 <meta property="og:description" content="ストレージ(JavaScript) # Javascriptで扱えるストレージについてを示す。 Web Storage # Web Storageは、大容量(数MB)のデータ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/storage_js/" />
-<meta property="article:modified_time" content="2021-04-26T20:45:26+09:00" />
+<meta property="article:modified_time" content="2021-05-10T21:06:05+09:00" />
 <title>ストレージ(JavaScript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.394fcf0069235b7c25f9bea9a2cbdf907438cfe186676923327e9cb83dfb52b3.js" integrity="sha256-OU/PAGkjW3wl&#43;b6posvfkHQ4z&#43;GGZ2kjMn6cuD37UrM="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.a4a6dd3498ee9b6ac11f366eb12765ac35da09bba7496b1d900ea97d772d45ea.js" integrity="sha256-pKbdNJjum2rBHzZusSdlrDXaCbunSWsdkA6pfXctReo="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -134,7 +134,11 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#arraybuffer">ArrayBuffer</a></li>
+  </ul>
+</nav>
 
 
 
@@ -537,7 +541,7 @@ window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</
     </tr>
     <tr>
         <td style="border:none;">readAsArrayBuffer()</td>
-        <td style="border:none;">データをArrayBufferとして読み込む</td>
+        <td style="border:none;">データをArrayBuffer(バイナリデータ)として読み込む</td>
     </tr>
     <tr>
         <td style="border:none;">readAsText()</td>
@@ -573,6 +577,39 @@ window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</
         <td style="border:none;">onerror</td>
         <td style="border:none;">読み込みが失敗したときに呼ばれる</td>
     </tr>
+</table>
+<h1 id="バイナリデータ">
+  バイナリデータ
+  <a class="anchor" href="#%e3%83%90%e3%82%a4%e3%83%8a%e3%83%aa%e3%83%87%e3%83%bc%e3%82%bf">#</a>
+</h1>
+<p>バイナリデータ等を扱うデータ型について述べる。</p>
+<h2 id="arraybuffer">
+  ArrayBuffer
+  <a class="anchor" href="#arraybuffer">#</a>
+</h2>
+<p>ArrayBuffer型はバイナリデータの領域を確保するデータ型である。</p>
+<p>宣言は以下の通りで、引数には確保する領域のサイズを入力する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ArrayBuffer</span>(<span style="color:#a6e22e">領域のサイズ</span>);
+</code></pre></div><p>プロパティ、メソッドは以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">byteLength</td>
+        <td style="border:none;">サイズ</td>
+    </tr>
+</table>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">slice()</td>
+        <td style="border:none;">指定した開始位置から終了位置までを切り出す</td>
+    </tr>
 </table></article>
  
       
@@ -583,9 +620,9 @@ window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/608ef3f85079169bde09d124933dec5f0b978836" title='Last modified by Wataru Tsukagoshi | Apr 26, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/635601a0f00cc7bf53fb8e5d17170d7daad21155" title='Last modified by Wataru Tsukagoshi | May 10, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Apr 26, 2021</span>
+      <span>May 10, 2021</span>
     </a>
   </div>
 
@@ -620,7 +657,11 @@ window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#arraybuffer">ArrayBuffer</a></li>
+  </ul>
+</nav>
 
 
  

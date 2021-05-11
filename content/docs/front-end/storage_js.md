@@ -464,7 +464,7 @@ FileReaderのAPIは以下の通り。
     </tr>
     <tr>
         <td style="border:none;">readAsArrayBuffer()</td>
-        <td style="border:none;">データをArrayBufferとして読み込む</td>
+        <td style="border:none;">データをArrayBuffer(バイナリデータ)として読み込む</td>
     </tr>
     <tr>
         <td style="border:none;">readAsText()</td>
@@ -500,5 +500,44 @@ FileReaderのAPIは以下の通り。
     <tr>
         <td style="border:none;">onerror</td>
         <td style="border:none;">読み込みが失敗したときに呼ばれる</td>
+    </tr>
+</table>
+
+
+# バイナリデータ
+
+バイナリデータ等を扱うデータ型について述べる。
+
+## ArrayBuffer
+
+ArrayBuffer型はバイナリデータの領域を確保するデータ型である。
+
+宣言は以下の通りで、引数には確保する領域のサイズを入力する。
+
+```javascript
+new ArrayBuffer(領域のサイズ);
+```
+
+プロパティ、メソッドは以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">byteLength</td>
+        <td style="border:none;">サイズ</td>
+    </tr>
+</table>
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">slice()</td>
+        <td style="border:none;">指定した開始位置から終了位置までを切り出す</td>
     </tr>
 </table>
