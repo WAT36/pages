@@ -541,3 +541,36 @@ new ArrayBuffer(領域のサイズ);
         <td style="border:none;">指定した開始位置から終了位置までを切り出す</td>
     </tr>
 </table>
+
+## Blob
+
+BlobはBinary Large Objectの略で、主に32KB以上の大きさのデータを扱うためのデータ型である。
+
+プロパティ、メソッドは以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">size</td>
+        <td style="border:none;">Blobオブジェクトのサイズ(バイト)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">type</td>
+        <td style="border:none;">Blobオブジェクトに含まれるデータのMIMEタイプ</td>
+    </tr>
+</table>
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">slice()</td>
+        <td style="border:none;">指定した開始位置から終了位置までを別blobオブジェクトとして切り出す</td>
+    </tr>
+</table>
+

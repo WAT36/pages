@@ -10,12 +10,12 @@
 <meta property="og:description" content="ストレージ(JavaScript) # Javascriptで扱えるストレージについてを示す。 Web Storage # Web Storageは、大容量(数MB)のデータ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/storage_js/" />
-<meta property="article:modified_time" content="2021-05-10T21:06:05+09:00" />
+<meta property="article:modified_time" content="2021-05-11T22:23:55+09:00" />
 <title>ストレージ(JavaScript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.a4a6dd3498ee9b6ac11f366eb12765ac35da09bba7496b1d900ea97d772d45ea.js" integrity="sha256-pKbdNJjum2rBHzZusSdlrDXaCbunSWsdkA6pfXctReo="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.611907441a365d5b3a7aad28611677a3421fa46a073fde0b26d159a1d09b9a67.js" integrity="sha256-YRkHRBo2XVs6eq0oYRZ3o0IfpGoHP94LJtFZodCbmmc="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -137,6 +137,7 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents">
   <ul>
     <li><a href="#arraybuffer">ArrayBuffer</a></li>
+    <li><a href="#blob">Blob</a></li>
   </ul>
 </nav>
 
@@ -610,7 +611,38 @@ window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</
         <td style="border:none;">slice()</td>
         <td style="border:none;">指定した開始位置から終了位置までを切り出す</td>
     </tr>
-</table></article>
+</table>
+<h2 id="blob">
+  Blob
+  <a class="anchor" href="#blob">#</a>
+</h2>
+<p>BlobはBinary Large Objectの略で、主に32KB以上の大きさのデータを扱うためのデータ型である。</p>
+<p>プロパティ、メソッドは以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">size</td>
+        <td style="border:none;">Blobオブジェクトのサイズ(バイト)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">type</td>
+        <td style="border:none;">Blobオブジェクトに含まれるデータのMIMEタイプ</td>
+    </tr>
+</table>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">slice()</td>
+        <td style="border:none;">指定した開始位置から終了位置までを別blobオブジェクトとして切り出す</td>
+    </tr>
+</table>
+</article>
  
       
 
@@ -620,9 +652,9 @@ window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/635601a0f00cc7bf53fb8e5d17170d7daad21155" title='Last modified by Wataru Tsukagoshi | May 10, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/d531b5f5c0d98116bf42b19cdf60ea88ebd7a6fc" title='Last modified by Wataru Tsukagoshi | May 11, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 10, 2021</span>
+      <span>May 11, 2021</span>
     </a>
   </div>
 
@@ -660,6 +692,7 @@ window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</
 <nav id="TableOfContents">
   <ul>
     <li><a href="#arraybuffer">ArrayBuffer</a></li>
+    <li><a href="#blob">Blob</a></li>
   </ul>
 </nav>
 
