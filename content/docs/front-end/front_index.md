@@ -44,4 +44,5 @@ bookToc: false
      - [ブラウザ関連API]({{< relref "/docs/front-end/browser_api.md" >}})
      - [グラフィックス]({{< relref "/docs/front-end/graphics.md" >}})
      - [動画・音声(JavaScript)]({{< relref "/docs/front-end/img_js.md" >}})
+     - ストレージ(JavaScript)
 

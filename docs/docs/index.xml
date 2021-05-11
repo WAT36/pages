@@ -674,6 +674,15 @@
     </item>
     
     <item>
+      <title>ストレージ(JavaScript)</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/storage_js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/storage_js/</guid>
+      <description>ストレージ(JavaScript) # Javascriptで扱えるストレージについてを示す。 Web Storage # Web Storageは、大容量(数MB)のデータ</description>
+    </item>
+    
+    <item>
       <title>スマートフォン最適化</title>
       <link>https://WAT36.github.io/pages/docs/front-end/smartphone_optimization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
