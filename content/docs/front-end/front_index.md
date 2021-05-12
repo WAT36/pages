@@ -45,4 +45,4 @@ bookToc: false
      - [グラフィックス]({{< relref "/docs/front-end/graphics.md" >}})
      - [動画・音声(JavaScript)]({{< relref "/docs/front-end/img_js.md" >}})
      - ストレージ(JavaScript)
-
+     - [通信(Javascript)]({{< relref "/docs/front-end/websocket.md" >}})
