@@ -1867,7 +1867,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/websocket/</guid>
-      <description>通信(Javascript) # Javascriptにおける通信の方法についてを述べる。</description>
+      <description>通信(Javascript) # Javascriptにおける通信の方法についてを述べる。 WebSocket # WebSocketはHTTPとは異なる、双方向通信</description>
     </item>
     
     <item>
