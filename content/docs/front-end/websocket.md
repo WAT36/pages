@@ -112,3 +112,6 @@ WebSocketの主なAPIは以下の通り。
 WebSocketの接続確立におけるこれらAPIの利用を示した図を以下に記載する。
 
 <img src="/img/front-end/websocket.png" width=50%>
+
+
+# XMLHttpRequest
