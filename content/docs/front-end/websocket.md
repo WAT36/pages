@@ -115,3 +115,6 @@ WebSocketの接続確立におけるこれらAPIの利用を示した図を以�
 
 
 # XMLHttpRequest
+
+
+
