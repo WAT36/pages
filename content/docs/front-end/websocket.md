@@ -116,5 +116,93 @@ WebSocketの接続確立におけるこれらAPIの利用を示した図を以�
 
 # XMLHttpRequest
 
+XMLHttpRequestは、Javascriptから呼び出し可能なHTTP通信を提供するAPIである。
 
+これにより、スクリプトがHTTP通信を行うことが可能にな利、画面遷移を伴わずに、HTTPリクエストを送信することができる。
+
+この技術を利用したものをAjaxと呼ぶこともあり、Single Page Applicationの実現にも利用される。
+
+XMLHttpRequestのAPIは以下の通り。
+
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">readyState</td>
+        <td style="border:none;">現在の接続状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">timeout</td>
+        <td style="border:none;">リクエストのタイムアウト時間</td>
+    </tr>
+    <tr>
+        <td style="border:none;">withCredentials</td>
+        <td style="border:none;">クロスドメイン通信時にユーザの認証情報を含める場合にはtrue,それ以外はfalse</td>
+    </tr>
+</table>
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">open()</td>
+        <td style="border:none;">リクエストメソッド(GET,POSTなど)、リクエスト先URL、非同期フラグ、ユーザ名、パスワードを設定する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">setRequestHeader()</td>
+        <td style="border:none;">リクエストヘッダを追加する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">send()</td>
+        <td style="border:none;">サーバにデータを送信する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">abort()</td>
+        <td style="border:none;">通信を中止する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">getResponseHeader()</td>
+        <td style="border:none;">レスポンスヘッダ引数で指定された名前を持つ値を返す</td>
+    </tr>
+    <tr>
+        <td style="border:none;">getAllResponseHeader()</td>
+        <td style="border:none;">レスポンスヘッダを返す</td>
+    </tr>
+</table>
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">イベントハンドラ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onloadstart</td>
+        <td style="border:none;">リクエストを開始した</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onprogress</td>
+        <td style="border:none;">データを送信（受信）中</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onabort</td>
+        <td style="border:none;">通信が中止された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onerror</td>
+        <td style="border:none;">エラーが発生した時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onload</td>
+        <td style="border:none;">リクエストが正常に完了した時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ontimeout</td>
+        <td style="border:none;">リクエストがタイムアウトした時</td>
+    </tr>
+</table>
 
