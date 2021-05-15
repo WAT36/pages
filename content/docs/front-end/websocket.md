@@ -206,3 +206,6 @@ XMLHttpRequestのAPIは以下の通り。
     </tr>
 </table>
 
+XMLHttpRequestのAPIの一連の流れを示した図を以下に記載する。
+
+<img src="/img/front-end/xmlhttprequest.png" width=50%>
