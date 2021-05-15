@@ -209,3 +209,12 @@ XMLHttpRequestのAPIは以下の通り。
 XMLHttpRequestのAPIの一連の流れを示した図を以下に記載する。
 
 <img src="/img/front-end/xmlhttprequest.png" width=50%>
+
+
+# Server-Sent Events
+
+Server-Sent Eventsは、Webサーバからブラウザへのデータプッシュを受信するためのインタフェースである。
+
+Server-Sent Eventsでは、サーバからMIME-type text/event-streamの形式でデータを送信する事ができる。
+
+API類は以下の通り。
