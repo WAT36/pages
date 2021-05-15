@@ -10,12 +10,12 @@
 <meta property="og:description" content="通信(Javascript) # Javascriptにおける通信の方法についてを述べる。 WebSocket # WebSocketはHTTPとは異なる、双方向通信" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/websocket/" />
-<meta property="article:modified_time" content="2021-05-15T12:48:53+09:00" />
+<meta property="article:modified_time" content="2021-05-15T23:13:01+09:00" />
 <title>通信(Javascript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.408f3defab1265a22f8dd84ef59a7830febb574e893f0fbd42e198d99445a060.js" integrity="sha256-QI8976sSZaIvjdhO9Zp4MP67V06JPw&#43;9QuGY2ZRFoGA="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.813f4af7b9171d0e583e182fab8aeb5d3a11975a5102d18365434bc802a6fbeb.js" integrity="sha256-gT9K97kXHQ5YPhgvq4rrXToRl1pRAtGDZUNLyAKm&#43;&#43;s="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -333,6 +333,68 @@ https://github.com/alex-shpak/hugo-book
 <p>Server-Sent Eventsは、Webサーバからブラウザへのデータプッシュを受信するためのインタフェースである。</p>
 <p>Server-Sent Eventsでは、サーバからMIME-type text/event-streamの形式でデータを送信する事ができる。</p>
 <p>API類は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">readyState</td>
+        <td style="border:none;">現在の接続状態</td>
+    </tr>
+</table>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">EventSource()</td>
+        <td style="border:none;">EventSourceオブジェクトのコンストラクタで、サーバへの接続を開始する。引数には接続先URLを入力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">close()</td>
+        <td style="border:none;">サーバ接続を切断する</td>
+    </tr>
+</table>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">イベントハンドラ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onopen</td>
+        <td style="border:none;">サーバとの接続確立が成功した時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onmessage</td>
+        <td style="border:none;">サーバから新しいメッセージが届いた時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onerror</td>
+        <td style="border:none;">エラーが発生した時</td>
+    </tr>
+</table>
+<p>また、readyStateプロパティで得られる値は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">値</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">CONNECTING</td>
+        <td style="border:none;">接続中</td>
+    </tr>
+    <tr>
+        <td style="border:none;">OPEN</td>
+        <td style="border:none;">接続確立済みでサーバとの通信が可能な状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">CLOSED</td>
+        <td style="border:none;">接続切断済み</td>
+    </tr>
+</table>
+<img src="https://WAT36.github.io/pages/img/front-end/serversentevent.png" width=50%>
 </article>
  
       
@@ -343,7 +405,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/c4d84441d0ea0db9335198621af5b35fb7dba53b" title='Last modified by Wataru Tsukagoshi | May 15, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/ecc7011aca1098834bc3adb6e95c921300585348" title='Last modified by Wataru Tsukagoshi | May 15, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>May 15, 2021</span>
     </a>

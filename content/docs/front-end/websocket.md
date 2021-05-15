@@ -218,3 +218,72 @@ Server-Sent Eventsは、Webサーバからブラウザへのデータプッシ�
 Server-Sent Eventsでは、サーバからMIME-type text/event-streamの形式でデータを送信する事ができる。
 
 API類は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">readyState</td>
+        <td style="border:none;">現在の接続状態</td>
+    </tr>
+</table>
+
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">EventSource()</td>
+        <td style="border:none;">EventSourceオブジェクトのコンストラクタで、サーバへの接続を開始する。引数には接続先URLを入力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">close()</td>
+        <td style="border:none;">サーバ接続を切断する</td>
+    </tr>
+</table>
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">イベントハンドラ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onopen</td>
+        <td style="border:none;">サーバとの接続確立が成功した時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onmessage</td>
+        <td style="border:none;">サーバから新しいメッセージが届いた時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onerror</td>
+        <td style="border:none;">エラーが発生した時</td>
+    </tr>
+</table>
+
+また、readyStateプロパティで得られる値は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">値</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">CONNECTING</td>
+        <td style="border:none;">接続中</td>
+    </tr>
+    <tr>
+        <td style="border:none;">OPEN</td>
+        <td style="border:none;">接続確立済みでサーバとの通信が可能な状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">CLOSED</td>
+        <td style="border:none;">接続切断済み</td>
+    </tr>
+</table>
+
+<img src="/img/front-end/serversentevent.png" width=50%>
