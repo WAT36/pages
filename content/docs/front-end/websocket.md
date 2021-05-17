@@ -118,7 +118,7 @@ WebSocketの接続確立におけるこれらAPIの利用を示した図を以�
 
 XMLHttpRequestは、Javascriptから呼び出し可能なHTTP通信を提供するAPIである。
 
-これにより、スクリプトがHTTP通信を行うことが可能にな利、画面遷移を伴わずに、HTTPリクエストを送信することができる。
+これにより、スクリプトがHTTP通信を行うことが可能になり、画面遷移を伴わずに、HTTPリクエストを送信することができる。
 
 この技術を利用したものをAjaxと呼ぶこともあり、Single Page Applicationの実現にも利用される。
 
@@ -285,6 +285,8 @@ API類は以下の通り。
         <td style="border:none;">接続切断済み</td>
     </tr>
 </table>
+
+Server-Sent EventsのAPIの一連の流れを示した図を以下に記載する。
 
 <img src="/img/front-end/serversentevent.png" width=50%>
 
