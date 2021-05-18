@@ -10,12 +10,12 @@
 <meta property="og:description" content="デバイスアクセス(Javascript) # デバイスアクセス、いわゆる機器に関する情報を得るためのAPIをここでは述べる。 Geolocation API # Geolocation APIは、ユ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/device_access/" />
-<meta property="article:modified_time" content="2021-05-17T23:38:43+09:00" />
+<meta property="article:modified_time" content="2021-05-18T22:06:41+09:00" />
 <title>デバイスアクセス(Javascript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.5877cdd9c8f6a9e6b08fd8060fb0d1e9ccb81d97ec355fd9783a8cf8010820a7.js" integrity="sha256-WHfN2cj2qeawj9gGD7DR6cy4HZfsNV/ZeDqM&#43;AEIIKc="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.c4c7032bb2821cf519ef01346dc7782ec2a48fb0abed39c55007f36224f215d0.js" integrity="sha256-xMcDK7KCHPUZ7wE0bcd4LsKkj7Cr7TnFUAfzYiTyFdA="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -156,6 +156,69 @@ https://github.com/alex-shpak/hugo-book
 </h1>
 <p>Geolocation APIは、ユーザの位置情報を扱うためのAPIである。位置情報は、無線LAN・WiFi、携帯電話基地局、GPS、IPアドレスなどから取得する。(どのソースから取得したかは知れない)</p>
 <p>また、取得するにはユーザーの許可が必要となる。(ブラウザに確認ウィンドウが出る)</p>
+<p>位置情報を取得するためのGeolocationオブジェクトは、navigatorオブジェクトから取得する。Geolocationオブジェクトのメソッド例は以下のとおり。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">getCurrentPosition()</td>
+        <td style="border:none;">ユーザの現在の位置情報を取得する(1回のみ)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">watchPosition()</td>
+        <td style="border:none;">ユーザの位置情報を定期的に監視する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">clearWatch()</td>
+        <td style="border:none;">watchPosition()による位置情報の監視をクリアする</td>
+    </tr>
+</table>
+<p>メソッドにより返る位置情報はPositionCallBack型のオブジェクトとして得られる。(また、Geolocationオブジェクトによる位置情報の測位が失敗したときはPositionErrorCallbackオブジェクトが返る。)</p>
+<p>その中に更にPositionオブジェクトがあり、そのプロパティは以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">coords</td>
+        <td style="border:none;">位置情報(Coordinatesオブジェクト)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">timestamp</td>
+        <td style="border:none;">測位した時刻</td>
+    </tr>
+</table>
+<p>この内、coordsプロパティに入るCoordinatesオブジェクトに取得できた位置情報が格納される。</p>
+<p>Coordinatesオブジェクトのプロパティは以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">latitude</td>
+        <td style="border:none;">緯度</td>
+    </tr>
+    <tr>
+        <td style="border:none;">longitude</td>
+        <td style="border:none;">経度</td>
+    </tr>
+    <tr>
+        <td style="border:none;">altitude</td>
+        <td style="border:none;">高度</td>
+    </tr>
+    <tr>
+        <td style="border:none;">heading</td>
+        <td style="border:none;">方角</td>
+    </tr>
+    <tr>
+        <td style="border:none;">speed</td>
+        <td style="border:none;">速度</td>
+    </tr>
+</table>
 </article>
  
       
@@ -166,9 +229,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/0c9a43b6bf2bc4272b1ac7642a0cdbd7bf939f8d" title='Last modified by Wataru Tsukagoshi | May 17, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/43b0af5e66f92f86aa54b8ec004310a4eb85114a" title='Last modified by Wataru Tsukagoshi | May 18, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 17, 2021</span>
+      <span>May 18, 2021</span>
     </a>
   </div>
 
