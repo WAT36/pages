@@ -10,12 +10,12 @@
 <meta property="og:description" content="デバイスアクセス(Javascript) # デバイスアクセス、いわゆる機器に関する情報を得るためのAPIをここでは述べる。 Geolocation API # Geolocation APIは、ユ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/device_access/" />
-<meta property="article:modified_time" content="2021-05-18T22:06:41+09:00" />
+<meta property="article:modified_time" content="2021-05-18T22:36:05+09:00" />
 <title>デバイスアクセス(Javascript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.c4c7032bb2821cf519ef01346dc7782ec2a48fb0abed39c55007f36224f215d0.js" integrity="sha256-xMcDK7KCHPUZ7wE0bcd4LsKkj7Cr7TnFUAfzYiTyFdA="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.1fbaa5a8a649da6ab5d0c4078ed0747b75911f6e49307a3a7c719c72d1af3963.js" integrity="sha256-H7qlqKZJ2mq10MQHjtB0e3WRH25JMHo6fHGcctGvOWM="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -219,6 +219,16 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">速度</td>
     </tr>
 </table>
+<h1 id="deviceorientation-event">
+  DeviceOrientation Event
+  <a class="anchor" href="#deviceorientation-event">#</a>
+</h1>
+<p>DeviceOrientation Eventは、スマートフォンに搭載された加速度センサーやコンパスの情報をリアルタイムに取得することができるAPIである。</p>
+<p>以下2種類のイベントから成り、情報はイベントを受け取るごとに行われる。</p>
+<ul>
+<li>DeviceOrientationEvent ・・・ 加速度センサーがデバイスの方向の変化を検出したときに発生</li>
+<li>DeviceMotionEvent ・・・ 加速度が変化したときに発生</li>
+</ul>
 </article>
  
       
@@ -229,7 +239,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/43b0af5e66f92f86aa54b8ec004310a4eb85114a" title='Last modified by Wataru Tsukagoshi | May 18, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/f7cf33a855b355ce5f32d09e216828407876813a" title='Last modified by Wataru Tsukagoshi | May 18, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>May 18, 2021</span>
     </a>

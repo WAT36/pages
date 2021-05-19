@@ -89,3 +89,13 @@ Coordinatesオブジェクトのプロパティは以下の通り。
     </tr>
 </table>
 
+# DeviceOrientation Event
+
+DeviceOrientation Eventは、スマートフォンに搭載された加速度センサーやコンパスの情報をリアルタイムに取得することができるAPIである。
+
+以下2種類のイベントから成り、情報はイベントを受け取るごとに行われる。
+
+- DeviceOrientationEvent ・・・ 加速度センサーがデバイスの方向の変化を検出したときに発生
+- DeviceMotionEvent ・・・ 加速度が変化したときに発生
+
+
