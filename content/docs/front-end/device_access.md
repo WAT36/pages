@@ -98,4 +98,85 @@ DeviceOrientation Eventは、スマートフォンに搭載された加速度セ
 - DeviceOrientationEvent ・・・ 加速度センサーがデバイスの方向の変化を検出したときに発生
 - DeviceMotionEvent ・・・ 加速度が変化したときに発生
 
+DeviceOrientationEventのAPIは以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">alpha</td>
+        <td style="border:none;">z軸を中心としたデバイスの動き</td>
+    </tr>
+    <tr>
+        <td style="border:none;">beta</td>
+        <td style="border:none;">x軸を中心としたデバイスの動き</td>
+    </tr>
+    <tr>
+        <td style="border:none;">gamma</td>
+        <td style="border:none;">y軸を中心としたデバイスの動き</td>
+    </tr>
+</table>
+
+DeviceMotionEventのAPIは以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">acceleration</td>
+        <td style="border:none;">DeviceAccelerationオブジェクト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">rotationRate</td>
+        <td style="border:none;">DeviceRotationRateオブジェクト</td>
+    </tr>
+</table>
+
+
+DeviceAccelerationのAPIは以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">x</td>
+        <td style="border:none;">西から東へ向かう方向の加速度</td>
+    </tr>
+    <tr>
+        <td style="border:none;">y</td>
+        <td style="border:none;">南から北へ向かう方向の加速度</td>
+    </tr>
+    <tr>
+        <td style="border:none;">z</td>
+        <td style="border:none;">地面から直立する方向の加速度</td>
+    </tr>
+</table>
+
+DeviceRotationRateのAPIは以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">alpha</td>
+        <td style="border:none;">画面またはキーボードから直立した軸に対する回転量</td>
+    </tr>
+    <tr>
+        <td style="border:none;">beta</td>
+        <td style="border:none;">画面またはキーボードの左から右へ向かう軸に対する回転量</td>
+    </tr>
+    <tr>
+        <td style="border:none;">gamma</td>
+        <td style="border:none;">画面またはキーボードの下から上に向かう軸に対する回転量</td>
+    </tr>
+</table>
+
 
