@@ -14,7 +14,7 @@ weight: 1
 
 # Geolocation API
 
-Geolocation APIは、ユーザの位置情報を扱うためのAPIである。位置情報は、無線LAN・WiFi、携帯電話基地局、GPS、IPアドレスなどから取得する。(どのソースから取得したかは知れない)
+Geolocation APIは、ユーザの位置情報を扱うためのAPIである。位置情報は、無線LAN・WiFi、携帯電話基地局、GPS、IPアドレスなどから取得する。(どのソースから取得したかを知る事はできない)
 
 また、取得するにはユーザーの許可が必要となる。(ブラウザに確認ウィンドウが出る)
 
@@ -39,7 +39,7 @@ Geolocation APIは、ユーザの位置情報を扱うためのAPIである。�
     </tr>
 </table>
 
-メソッドにより返る位置情報はPositionCallBack型のオブジェクトとして得られる。(また、Geolocationオブジェクトによる位置情報の測位が失敗したときはPositionErrorCallbackオブジェクトが返る。)
+メソッドにより返る位置情報はPositionCallBack型のオブジェクトとして得られる。(位置情報の測位が失敗したときはPositionErrorCallbackオブジェクトが返る。)
 
 その中に更にPositionオブジェクトがあり、そのプロパティは以下の通り。
 
@@ -93,7 +93,7 @@ Coordinatesオブジェクトのプロパティは以下の通り。
 
 DeviceOrientation Eventは、スマートフォンに搭載された加速度センサーやコンパスの情報をリアルタイムに取得することができるAPIである。
 
-以下2種類のイベントから成り、情報はイベントを受け取るごとに行われる。
+以下2種類のイベントから成り、これらのイベントを受け取るごとに情報を取得できる。
 
 - DeviceOrientationEvent ・・・ 加速度センサーがデバイスの方向の変化を検出したときに発生
 - DeviceMotionEvent ・・・ 加速度が変化したときに発生
@@ -137,7 +137,7 @@ DeviceMotionEventのAPIは以下の通り。
 </table>
 
 
-DeviceAccelerationのAPIは以下の通り。
+ここで得られる、DeviceAccelerationのAPIは以下の通り。
 
 <table style="border:none;">
     <tr>
@@ -158,7 +158,7 @@ DeviceAccelerationのAPIは以下の通り。
     </tr>
 </table>
 
-DeviceRotationRateのAPIは以下の通り。
+また、DeviceRotationRateのAPIは以下の通り。
 
 <table style="border:none;">
     <tr>

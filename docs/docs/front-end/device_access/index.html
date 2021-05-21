@@ -10,12 +10,12 @@
 <meta property="og:description" content="デバイスアクセス(Javascript) # デバイスアクセス、いわゆる機器に関する情報を得るためのAPIをここでは述べる。 Geolocation API # Geolocation APIは、ユ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/device_access/" />
-<meta property="article:modified_time" content="2021-05-19T12:13:38+09:00" />
+<meta property="article:modified_time" content="2021-05-20T22:00:23+09:00" />
 <title>デバイスアクセス(Javascript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.e071877d254e505daff5aeb2a95b2776ad578683974bc13eaf3dd43c84a372f5.js" integrity="sha256-4HGHfSVOUF2v9a6yqVsndq1XhoOXS8E&#43;rz3UPISjcvU="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.3f90f5f70499dd7187cf6f33538822416062601e8dc33b76cdf10611a89e45cb.js" integrity="sha256-P5D19wSZ3XGHz28zU4giQWBiYB6Nwzt2zfEGEaieRcs="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -154,7 +154,7 @@ https://github.com/alex-shpak/hugo-book
   Geolocation API
   <a class="anchor" href="#geolocation-api">#</a>
 </h1>
-<p>Geolocation APIは、ユーザの位置情報を扱うためのAPIである。位置情報は、無線LAN・WiFi、携帯電話基地局、GPS、IPアドレスなどから取得する。(どのソースから取得したかは知れない)</p>
+<p>Geolocation APIは、ユーザの位置情報を扱うためのAPIである。位置情報は、無線LAN・WiFi、携帯電話基地局、GPS、IPアドレスなどから取得する。(どのソースから取得したかを知る事はできない)</p>
 <p>また、取得するにはユーザーの許可が必要となる。(ブラウザに確認ウィンドウが出る)</p>
 <p>位置情報を取得するためのGeolocationオブジェクトは、navigatorオブジェクトから取得する。Geolocationオブジェクトのメソッド例は以下のとおり。</p>
 <table style="border:none;">
@@ -175,7 +175,7 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">watchPosition()による位置情報の監視をクリアする</td>
     </tr>
 </table>
-<p>メソッドにより返る位置情報はPositionCallBack型のオブジェクトとして得られる。(また、Geolocationオブジェクトによる位置情報の測位が失敗したときはPositionErrorCallbackオブジェクトが返る。)</p>
+<p>メソッドにより返る位置情報はPositionCallBack型のオブジェクトとして得られる。(位置情報の測位が失敗したときはPositionErrorCallbackオブジェクトが返る。)</p>
 <p>その中に更にPositionオブジェクトがあり、そのプロパティは以下の通り。</p>
 <table style="border:none;">
     <tr>
@@ -224,7 +224,7 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#deviceorientation-event">#</a>
 </h1>
 <p>DeviceOrientation Eventは、スマートフォンに搭載された加速度センサーやコンパスの情報をリアルタイムに取得することができるAPIである。</p>
-<p>以下2種類のイベントから成り、情報はイベントを受け取るごとに行われる。</p>
+<p>以下2種類のイベントから成り、これらのイベントを受け取るごとに情報を取得できる。</p>
 <ul>
 <li>DeviceOrientationEvent ・・・ 加速度センサーがデバイスの方向の変化を検出したときに発生</li>
 <li>DeviceMotionEvent ・・・ 加速度が変化したときに発生</li>
@@ -263,7 +263,7 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">DeviceRotationRateオブジェクト</td>
     </tr>
 </table>
-<p>DeviceAccelerationのAPIは以下の通り。</p>
+<p>ここで得られる、DeviceAccelerationのAPIは以下の通り。</p>
 <table style="border:none;">
     <tr>
         <th style="border:none;">プロパティ名</td>
@@ -282,7 +282,7 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">地面から直立する方向の加速度</td>
     </tr>
 </table>
-<p>DeviceRotationRateのAPIは以下の通り。</p>
+<p>また、DeviceRotationRateのAPIは以下の通り。</p>
 <table style="border:none;">
     <tr>
         <th style="border:none;">プロパティ名</td>
@@ -311,9 +311,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/bda9d4db0a8593abd4cfbee0310d414c7136f377" title='Last modified by Wataru Tsukagoshi | May 19, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/931a152e0ca6d02f9d608df0b6568975053238e8" title='Last modified by Wataru Tsukagoshi | May 20, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 19, 2021</span>
+      <span>May 20, 2021</span>
     </a>
   </div>
 
