@@ -73,10 +73,6 @@ WorkerGlobalScopeのAPI類は以下の通り。
         <td style="border:none;">location</td>
         <td style="border:none;">Workerが作成されたときのWorkerLocationオブジェクト</td>
     </tr>
-    <tr>
-        <td style="border:none;">navigator</td>
-        <td style="border:none;">WorkerNavigatorオブジェクト</td>
-    </tr>
 </table>
 
 <table style="border:none;">
@@ -118,5 +114,38 @@ WorkerGlobalScopeのAPI類は以下の通り。
     <tr>
         <td style="border:none;">onmessage</td>
         <td style="border:none;">メッセージを受信した時</td>
+    </tr>
+</table>
+
+このうちlocationプロパティで得られるWorkLocationオブジェクトのプロパティは以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">href</td>
+        <td style="border:none;">このオブジェクトが示すURL</td>
+    </tr>
+    <tr>
+        <td style="border:none;">protocol</td>
+        <td style="border:none;">プロトコル</td>
+    </tr>
+    <tr>
+        <td style="border:none;">host</td>
+        <td style="border:none;">ホスト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">hostname</td>
+        <td style="border:none;">ホスト名</td>
+    </tr>
+    <tr>
+        <td style="border:none;">port</td>
+        <td style="border:none;">ポート</td>
+    </tr>
+    <tr>
+        <td style="border:none;">search</td>
+        <td style="border:none;">検索ワード</td>
     </tr>
 </table>
