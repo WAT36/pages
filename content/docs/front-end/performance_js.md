@@ -149,3 +149,11 @@ WorkerGlobalScopeのAPI類は以下の通り。
         <td style="border:none;">検索ワード</td>
     </tr>
 </table>
+
+
+# High Resolution Time API
+
+High Resolution Time APIは、ms以下の分解能を持つ時刻を扱うためのAPIである。
+
+使用するには、W3CのHigh Resolution Timeで定義されている**Performance**オブジェクトを利用する。
+
