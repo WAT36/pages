@@ -257,3 +257,37 @@ ApplicationCacheのAPI類は以下の通り。
         <td style="border:none;">キャッシュ済み</td>
     </tr>
 </table>
+
+# Page Visibility
+
+Page Visibility APIは、Webページが見えている状態にあるかを示すAPIである。
+
+このようなページの状態を取得するために、Documentオブジェクトへの拡張として次のようなプロパティが追加されている。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">hidden</td>
+        <td style="border:none;">ページが隠された、見えていない状態の時true、そうで無い場合falseを返す。</td>
+    </tr>
+    <tr>
+        <td style="border:none;">visibilityState</td>
+        <td style="border:none;">ドキュメントの可視性を示す。値はvisible(少なくとも部分的には可視状態)、hidden(見えていない)、prerender(プレレンダリングされてユーザから見えない)、unload(アンロードされている)のいずれか</td>
+    </tr>
+</table>
+
+また、以下のイベントも追加されている。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">イベントハンドラ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">visibilitychange</td>
+        <td style="border:none;">ドキュメントの可視性が変化した時</td>
+    </tr>
+</table>
