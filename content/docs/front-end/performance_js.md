@@ -160,3 +160,100 @@ High Resolution Time APIは、ms以下の分解能を持つ時刻を扱うため
 実際に時刻を取得するには、**performance.now()**メソッドを利用する。
 
 このメソッドにより得られるデータはDOMHighResTimeStamp型は、ns精度のタイムスタンプを表す。
+
+
+# Application Cache
+
+Application Cacheは、マニフェストファイルに指定したファイルをローカルにキャッシュすることで、ネットワークがオフラインでもブラウザからページを閲覧できる仕組みを提供するAPIである。
+
+全体的な流れを示した図は以下の通り。
+
+<img src="/img/front-end/applicationcache.png" width=50%>
+
+Application Cacheは、Javascriptでは**ApplicationCache**オブジェクトを利用して扱う。
+
+ApplicationCacheのAPI類は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">status</td>
+        <td style="border:none;">Application Cacheの状態(下表参照)</td>
+    </tr>
+</table>
+
+このstatusで得られる値は以下の通り。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">値</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">UNCACHED</td>
+        <td style="border:none;">キャッシュが存在しない</td>
+    </tr>
+    <tr>
+        <td style="border:none;">IDLE</td>
+        <td style="border:none;">キャッシュがアイドル状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">CHECKING</td>
+        <td style="border:none;">キャッシュの更新を確認中</td>
+    </tr>
+    <tr>
+        <td style="border:none;">DOWNLOADING</td>
+        <td style="border:none;">キャッシュをダウンロード中</td>
+    </tr>
+    <tr>
+        <td style="border:none;">OBSOLETE</td>
+        <td style="border:none;">キャッシュが廃止された状態</td>
+    </tr>
+</table>
+
+<hr>
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">update()</td>
+        <td style="border:none;">キャッシュの更新を行う</td>
+    </tr>
+    <tr>
+        <td style="border:none;">abort()</td>
+        <td style="border:none;">キャッシュのダウンロードを中断する</td>
+    </tr>
+</table>
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">イベントハンドラ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onchecking</td>
+        <td style="border:none;">キャッシュのチェック中</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onerror</td>
+        <td style="border:none;">エラーが発生した時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ondownloading</td>
+        <td style="border:none;">キャッシュのダウンロード中</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onprogress</td>
+        <td style="border:none;">キャッシュ処理の進行中</td>
+    </tr>
+    <tr>
+        <td style="border:none;">oncached</td>
+        <td style="border:none;">キャッシュ済み</td>
+    </tr>
+</table>
