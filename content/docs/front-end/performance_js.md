@@ -157,3 +157,6 @@ High Resolution Time APIは、ms以下の分解能を持つ時刻を扱うため
 
 使用するには、W3CのHigh Resolution Timeで定義されている**Performance**オブジェクトを利用する。
 
+実際に時刻を取得するには、**performance.now()**メソッドを利用する。
+
+このメソッドにより得られるデータはDOMHighResTimeStamp型は、ns精度のタイムスタンプを表す。
