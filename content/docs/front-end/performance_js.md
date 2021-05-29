@@ -291,3 +291,29 @@ Page Visibility APIは、Webページが見えている状態にあるかを示�
         <td style="border:none;">ドキュメントの可視性が変化した時</td>
     </tr>
 </table>
+
+# Navigation Timing
+
+Navigation Timingは、ブラウザがページにアクセスする際のページの読み込み時間、DNSにおける名前解決などの各所要時間の計測を行う。
+
+利用するには、**Performance**オブジェクトを利用して行う。このPerformanceオブジェクトはWindowオブジェクトから取得できる。
+
+PerformanceオブジェクトのAPI類を以下に記載する。
+
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">timing</td>
+        <td style="border:none;">PerformanceTimingオブジェクト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">navigation</td>
+        <td style="border:none;">PerformanceNavigationオブジェクト</td>
+    </tr>
+</table>
+
+PerformanceTimingオブジェクトは以下のプロパティを持つ。
+
