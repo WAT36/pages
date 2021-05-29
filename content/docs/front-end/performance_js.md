@@ -309,11 +309,77 @@ PerformanceオブジェクトのAPI類を以下に記載する。
         <td style="border:none;">timing</td>
         <td style="border:none;">PerformanceTimingオブジェクト</td>
     </tr>
-    <tr>
-        <td style="border:none;">navigation</td>
-        <td style="border:none;">PerformanceNavigationオブジェクト</td>
-    </tr>
 </table>
 
-PerformanceTimingオブジェクトは以下のプロパティを持つ。
+PerformanceTimingオブジェクトは以下のプロパティを持つ。これらを参照することで、各種の処理時刻を取得できる。
 
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">unloadEventStart</td>
+        <td style="border:none;">アンロードの開始時刻</td>
+    </tr>
+    <tr>
+        <td style="border:none;">unloadEventEnd</td>
+        <td style="border:none;">アンロードの終了時刻</td>
+    </tr>
+    <tr>
+        <td style="border:none;">redirectStart</td>
+        <td style="border:none;">HTTPリダイレクトの開始時刻</td>
+    </tr>
+    <tr>
+        <td style="border:none;">redirectEnd</td>
+        <td style="border:none;">HTTPリダイレクトの終了時刻</td>
+    </tr>
+    <tr>
+        <td style="border:none;">fetchStart</td>
+        <td style="border:none;">リソースフェッチの開始時刻</td>
+    </tr>
+    <tr>
+        <td style="border:none;">domainLookupStart</td>
+        <td style="border:none;">DNSルックアップの開始時刻</td>
+    </tr>
+    <tr>
+        <td style="border:none;">domainLookupEnd</td>
+        <td style="border:none;">DNSルックアップの終了時刻</td>
+    </tr>
+    <tr>
+        <td style="border:none;">connectStart</td>
+        <td style="border:none;">サーバとの接続の開始時刻</td>
+    </tr>
+    <tr>
+        <td style="border:none;">connectEnd</td>
+        <td style="border:none;">サーバとの接続の終了時刻</td>
+    </tr>
+    <tr>
+        <td style="border:none;">requestStart</td>
+        <td style="border:none;">サーバへのリクエストの開始時刻</td>
+    </tr>
+    <tr>
+        <td style="border:none;">responseStart</td>
+        <td style="border:none;">サーバからのレスポンスの受信を開始した時刻</td>
+    </tr>
+    <tr>
+        <td style="border:none;">responseEnd</td>
+        <td style="border:none;">サーバからのレスポンスの受信を終了した時刻</td>
+    </tr>
+    <tr>
+        <td style="border:none;">domLoading</td>
+        <td style="border:none;">ドキュメントのロード開始の準備ができた時刻</td>
+    </tr>
+    <tr>
+        <td style="border:none;">domComplete</td>
+        <td style="border:none;">ドキュメントの準備が完了した時刻</td>
+    </tr>
+    <tr>
+        <td style="border:none;">loadEventStart</td>
+        <td style="border:none;">ドキュメントのロードイベントが開始した時刻</td>
+    </tr>
+    <tr>
+        <td style="border:none;">loadEventEnd</td>
+        <td style="border:none;">ドキュメントのロードイベントが終了した時刻</td>
+    </tr>
+</table>
