@@ -14,9 +14,7 @@ Javascriptのパフォーマンスに関するAPIを述べる。
 
 # Web Workers
 
-Web Workersは、Webアプリケーションでバックグラウンドスクリプトを生成するためのAPIである。
-
-Web Workersは独立したスレッドで動作するので、UIや他のスクリプトによるユーザインタラクションの処理をブロックする事なく処理を行える。
+Web Workersは、Webアプリケーションでバックグラウンドスクリプトを生成するためのAPIである。これは独立したスレッドで動作するので、UIや他のスクリプトによるユーザインタラクションの処理をブロックする事なく処理を行える。
 
 Web Workersを作成するには、Workerオブジェクトを利用して作成する。引数にはスクリプトのファイル名を取る。
 
@@ -55,6 +53,8 @@ Workerに関するAPIは以下の通り。
         <td style="border:none;">メッセージを受信した時</td>
     </tr>
 </table>
+
+<hr>
 
 また、WorkerオブジェクトにはグローバルオブジェクトとしてWorkerGlobalScopeオブジェクトを有している。
 
@@ -153,13 +153,13 @@ WorkerGlobalScopeのAPI類は以下の通り。
 
 # High Resolution Time API
 
-High Resolution Time APIは、ms以下の分解能を持つ時刻を扱うためのAPIである。
+High Resolution Time APIは、ミリ秒以下の分解能を持つ時刻を扱うためのAPIである。
 
 使用するには、W3CのHigh Resolution Timeで定義されている**Performance**オブジェクトを利用する。
 
-実際に時刻を取得するには、**performance.now()**メソッドを利用する。
+実際に時刻を取得するには、 **performance.now()** メソッドを利用する。
 
-このメソッドにより得られるデータはDOMHighResTimeStamp型は、ns精度のタイムスタンプを表す。
+このメソッドにより得られるデータはDOMHighResTimeStamp型は、ナノ秒精度のタイムスタンプを表す。
 
 
 # Application Cache

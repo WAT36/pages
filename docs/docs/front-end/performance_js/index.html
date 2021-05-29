@@ -10,12 +10,12 @@
 <meta property="og:description" content="パフォーマンス系API(Javascript) # Javascriptのパフォーマンスに関するAPIを述べる。 Web Workers # Web Workersは、Web" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/performance_js/" />
-<meta property="article:modified_time" content="2021-05-29T11:35:27+09:00" />
+<meta property="article:modified_time" content="2021-05-29T18:50:56+09:00" />
 <title>パフォーマンス系API(Javascript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.067427e3a2c49abf068aed5094bf82dd21c87ee62c8ff71d63653b3c27568a4a.js" integrity="sha256-BnQn46LEmr8Giu1QlL&#43;C3SHIfuYsj/cdY2U7PCdWiko="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.c4565dbd70ac4f3cff507aa44dc2b883a0068652dab0ac8b346072d404fc2e4d.js" integrity="sha256-xFZdvXCsTzz/UHqkTcK4g6AGhlLasKyLNGBy1AT8Lk0="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -154,8 +154,7 @@ https://github.com/alex-shpak/hugo-book
   Web Workers
   <a class="anchor" href="#web-workers">#</a>
 </h1>
-<p>Web Workersは、Webアプリケーションでバックグラウンドスクリプトを生成するためのAPIである。</p>
-<p>Web Workersは独立したスレッドで動作するので、UIや他のスクリプトによるユーザインタラクションの処理をブロックする事なく処理を行える。</p>
+<p>Web Workersは、Webアプリケーションでバックグラウンドスクリプトを生成するためのAPIである。これは独立したスレッドで動作するので、UIや他のスクリプトによるユーザインタラクションの処理をブロックする事なく処理を行える。</p>
 <p>Web Workersを作成するには、Workerオブジェクトを利用して作成する。引数にはスクリプトのファイル名を取る。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">worker</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Worker</span>(<span style="color:#e6db74">&#39;スクリプト名&#39;</span>)
 </code></pre></div><p>Workerに関するAPIは以下の通り。</p>
@@ -187,6 +186,7 @@ https://github.com/alex-shpak/hugo-book
         <td style="border:none;">メッセージを受信した時</td>
     </tr>
 </table>
+<hr>
 <p>また、WorkerオブジェクトにはグローバルオブジェクトとしてWorkerGlobalScopeオブジェクトを有している。</p>
 <p>WorkerGlobalScopeのAPI類は以下の通り。</p>
 <table style="border:none;">
@@ -278,10 +278,10 @@ https://github.com/alex-shpak/hugo-book
   High Resolution Time API
   <a class="anchor" href="#high-resolution-time-api">#</a>
 </h1>
-<p>High Resolution Time APIは、ms以下の分解能を持つ時刻を扱うためのAPIである。</p>
+<p>High Resolution Time APIは、ミリ秒以下の分解能を持つ時刻を扱うためのAPIである。</p>
 <p>使用するには、W3CのHigh Resolution Timeで定義されている<strong>Performance</strong>オブジェクトを利用する。</p>
-<p>実際に時刻を取得するには、**performance.now()**メソッドを利用する。</p>
-<p>このメソッドにより得られるデータはDOMHighResTimeStamp型は、ns精度のタイムスタンプを表す。</p>
+<p>実際に時刻を取得するには、 <strong>performance.now()</strong> メソッドを利用する。</p>
+<p>このメソッドにより得られるデータはDOMHighResTimeStamp型は、ナノ秒精度のタイムスタンプを表す。</p>
 <h1 id="application-cache">
   Application Cache
   <a class="anchor" href="#application-cache">#</a>
@@ -498,7 +498,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/7d9733eb5ae3b0c69e6ceaa5253010da6647abbe" title='Last modified by Wataru Tsukagoshi | May 29, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/b991559be414871a95d3ea42e888bff191e60d60" title='Last modified by Wataru Tsukagoshi | May 29, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>May 29, 2021</span>
     </a>

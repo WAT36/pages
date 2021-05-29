@@ -47,4 +47,4 @@ bookToc: false
      - ストレージ(JavaScript)
      - [通信(Javascript)]({{< relref "/docs/front-end/websocket.md" >}})
      - [デバイスアクセス(Javascript)]({{< relref "/docs/front-end/device_access.md" >}})
-     - [パフォーマンス系API(Javascript)]({{< relref "/docs/front-end/performance_js.md" >}})
+     - パフォーマンス系API(Javascript)
