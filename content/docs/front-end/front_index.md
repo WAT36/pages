@@ -48,3 +48,4 @@ bookToc: false
      - [通信(Javascript)]({{< relref "/docs/front-end/websocket.md" >}})
      - [デバイスアクセス(Javascript)]({{< relref "/docs/front-end/device_access.md" >}})
      - パフォーマンス系API(Javascript)
+     - [セキュリティモデル(Javascript)]({{< relref "/docs/front-end/security_model.md" >}})
