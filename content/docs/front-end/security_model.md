@@ -42,3 +42,9 @@ CORSでは、クライアントとサーバ間のHTTPの仕様と、リクエス
 
 CORSには2通りの方法がある。1つはシンプルにリクエスト・レスポンスの形式を取るもの、もう1つは、1つ目に加えてHTTPリクエストの前にOPTIONSメソッドを用いてサーバとブラウザ間で安全を確かめるものである。
 
+このうち、シンプルにリクエスト・レスポンスの形式を取る物についてまず述べる。これは以下の条件の場合に使用される。
+
+- メソッドが「GET」「HEAD」「POST」のいずれかである。
+- ヘッダが「Accept」「Accept-Lannguage」「Conntent-Language」「Content-Type」のいずれかである。
+- Content-Typeが「applicationn/x-www-form-urlencoded」「multipart/form-data」「text/plain」のいずれかである。
+
