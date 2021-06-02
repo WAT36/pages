@@ -48,3 +48,24 @@ CORSには2通りの方法がある。1つはシンプルにリクエスト・�
 - ヘッダが「Accept」「Accept-Lannguage」「Conntent-Language」「Content-Type」のいずれかである。
 - Content-Typeが「applicationn/x-www-form-urlencoded」「multipart/form-data」「text/plain」のいずれかである。
 
+リクエストとレスポンスの例は以下の通り。
+
+## リクエスト
+
+リクエストはアクセス元のオリジンをOriginヘッダに設定し、クロスオリジンのサーバにリクエストを送る。
+
+```
+GET https://foo.bar HTTP/1.1
+Origin : https://hoge.hoge/index.html
+```
+
+## レスポンス
+
+リクエストを受け付けたサーバは、Originヘッダに指定されたオリジンを見て、それが許可されているオリジンの設定に含まれている場合のみにレスポンスを返す。
+
+レスポンスのAccess-Controle-Allow-Originnヘッダにアクセス元のオリジンを設定し、レスポンスを送る。
+
+```
+HTTP/1.1 200 OK
+Access-Controle-Allow-Origin : https://hoge.hoge/index.html
+```
