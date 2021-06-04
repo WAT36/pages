@@ -10,12 +10,12 @@
 <meta property="og:description" content="セキュリティモデル(Javascript) # Javascriptのセキュリティモデルに関する事項を述べる。 クロスオリジン制約 # コンテンツを取" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/security_model/" />
-<meta property="article:modified_time" content="2021-06-04T22:14:17+09:00" />
+<meta property="article:modified_time" content="2021-06-04T23:06:51+09:00" />
 <title>セキュリティモデル(Javascript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.ae2e55a4ea2ed0bfe5a4b353003fdf7b8873e6d380d98fe6becfa93e106a4a21.js" integrity="sha256-ri5VpOou0L/lpLNTAD/fe4hz5tOA2Y/mvs&#43;pPhBqSiE="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.83fbb66edc29be967183ac0e1a29bca929793ef2dc8a551e6473bf88eccc0e48.js" integrity="sha256-g/u2btwpvpZxg6wOGim8qSl5PvLcilUeZHO/iOzMDkg="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -220,7 +220,16 @@ Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER
 </code></pre><p>リクエストを受けたサーバは、OPTIONSメソッドの存在により、それがプリフライトリクエストであると認識する。</p>
 <p>Originヘッダに、サーバにあらかじめ指定されたオリジン、Access-Control-Request-Methodに指定されたメソッド、Access-Control-Request-Headersに指定されたヘッダが指定されている場合、アクセスを許可する。</p>
-</article>
+<hr>
+<p>アクセス可能と判断したサーバは、レスポンス可能なアクセス元オリジンをAccess-Control-Allow-Originヘッダに指定し、メソッドをAccess-Control-Allow-Methods、ヘッダをAccess-Control-Allow-Headers、アクセス許可の有効期限を秒単位でAccess-Control-Max-Ageに設定して返す。</p>
+<pre><code>HTTP/1.1 200 OK
+・・
+・・
+Access-Control-Allow-Origin: http://foo.bar
+Access-Control-Allow-Methods: POST, GET, OPTIONS
+Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
+Access-Control-Max-Age: 3600
+</code></pre></article>
  
       
 
@@ -230,7 +239,7 @@ Access-Control-Request-Headers: X-PINGOTHER
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/0fd272767ea08b62b56dc1d465ec75783525de0f" title='Last modified by Wataru Tsukagoshi | Jun 4, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/10d874e4cfade6e1e75302858d2ed819d2590b51" title='Last modified by Wataru Tsukagoshi | Jun 4, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>Jun 4, 2021</span>
     </a>

@@ -93,3 +93,19 @@ Access-Control-Request-Headers: X-PINGOTHER
 リクエストを受けたサーバは、OPTIONSメソッドの存在により、それがプリフライトリクエストであると認識する。
 
 Originヘッダに、サーバにあらかじめ指定されたオリジン、Access-Control-Request-Methodに指定されたメソッド、Access-Control-Request-Headersに指定されたヘッダが指定されている場合、アクセスを許可する。
+
+<hr>
+
+アクセス可能と判断したサーバは、レスポンス可能なアクセス元オリジンをAccess-Control-Allow-Originヘッダに指定し、メソッドをAccess-Control-Allow-Methods、ヘッダをAccess-Control-Allow-Headers、アクセス許可の有効期限を秒単位でAccess-Control-Max-Ageに設定して返す。
+
+```
+HTTP/1.1 200 OK
+・・
+・・
+Access-Control-Allow-Origin: http://foo.bar
+Access-Control-Allow-Methods: POST, GET, OPTIONS
+Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
+Access-Control-Max-Age: 3600
+```
+
+
