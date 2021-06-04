@@ -108,4 +108,15 @@ Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
 Access-Control-Max-Age: 3600
 ```
 
+<hr>
 
+プリフライトリクエストのレスポンスを受けたクライアントは、X-PINGOTHERヘッダとOriginヘッダを指定してリクエストを送信する。
+
+```
+OPTIONS https://foo.bar HTTP/1.1
+・・・
+・・・
+Origin : https://hoge.hoge/index.html
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: X-PINGOTHER
+```
