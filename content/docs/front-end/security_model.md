@@ -63,9 +63,17 @@ Origin : https://hoge.hoge/index.html
 
 リクエストを受け付けたサーバは、Originヘッダに指定されたオリジンを見て、それが許可されているオリジンの設定に含まれている場合のみにレスポンスを返す。
 
-レスポンスのAccess-Controle-Allow-Originnヘッダにアクセス元のオリジンを設定し、レスポンスを送る。
+レスポンスのAccess-Controle-Allow-Originヘッダにアクセス元のオリジンを設定し、レスポンスを送る。
 
 ```
 HTTP/1.1 200 OK
 Access-Controle-Allow-Origin : https://hoge.hoge/index.html
 ```
+
+# CORSのプリフライトリクエスト
+
+続いてCORSのもう一つの方法について述べる。
+
+シンプルなリクエスト以外の場合はプリフライトリクエストを利用する。プリフライトリクエスト・レスポンスでアクセス可能なことを確認してから、リクエスト・レスポンスを行う。
+
+
