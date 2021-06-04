@@ -77,3 +77,19 @@ Access-Controle-Allow-Origin : https://hoge.hoge/index.html
 シンプルなリクエスト以外の場合はプリフライトリクエストを利用する。プリフライトリクエスト・レスポンスでアクセス可能なことを確認してから、リクエスト・レスポンスを行う。
 
 
+## プリフライトリクエスト
+
+OPTIONSメソッドにアクセス元のオリジンを設定し、Access-Control-Request-Methodにリクエストするメソッド、Access-Control-Request-HeadersにCORSで指定するヘッダ名を指定する。
+
+```
+OPTIONS https://foo.bar HTTP/1.1
+・・・
+・・・
+Origin : https://hoge.hoge/index.html
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: X-PINGOTHER
+```
+
+リクエストを受けたサーバは、OPTIONSメソッドの存在により、それがプリフライトリクエストであると認識する。
+
+Originヘッダに、サーバにあらかじめ指定されたオリジン、Access-Control-Request-Methodに指定されたメソッド、Access-Control-Request-Headersに指定されたヘッダが指定されている場合、アクセスを許可する。
