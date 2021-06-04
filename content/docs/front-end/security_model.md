@@ -120,3 +120,15 @@ Origin : https://hoge.hoge/index.html
 Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER
 ```
+
+<hr>
+
+するとサーバからOK(Status code=200)が返される。
+
+```
+HTTP/1.1 200 OK
+・・
+・・
+Access-Control-Allow-Origin: http://foo.bar
+```
+
