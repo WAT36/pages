@@ -132,3 +132,12 @@ HTTP/1.1 200 OK
 Access-Control-Allow-Origin: http://foo.bar
 ```
 
+# セキュリティモデルとSSL
+
+## 混在コンテンツ(Mixed Content)
+
+HTTPSのページにも関わらず、一部のコンテンツがHTTPで取得されているものを混在コンテンツ(Mixed Content)という。
+
+HTTPで取得されるコンテンツは盗聴や改竄が可能であり、元のページは完全には保護されたことにはならない。
+
+
