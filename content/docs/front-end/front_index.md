@@ -44,4 +44,8 @@ bookToc: false
      - [ブラウザ関連API]({{< relref "/docs/front-end/browser_api.md" >}})
      - [グラフィックス]({{< relref "/docs/front-end/graphics.md" >}})
      - [動画・音声(JavaScript)]({{< relref "/docs/front-end/img_js.md" >}})
-
+     - ストレージ(JavaScript)
+     - [通信(Javascript)]({{< relref "/docs/front-end/websocket.md" >}})
+     - [デバイスアクセス(Javascript)]({{< relref "/docs/front-end/device_access.md" >}})
+     - パフォーマンス系API(Javascript)
+     - セキュリティモデル(Javascript)

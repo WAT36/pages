@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="通信(Javascript) # Javascriptにおける通信の方法についてを述べる。 WebSocket # WebSocketはHTTPとは異なる、双方向通信">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="通信(Javascript)" />
+<meta property="og:description" content="通信(Javascript) # Javascriptにおける通信の方法についてを述べる。 WebSocket # WebSocketはHTTPとは異なる、双方向通信" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/front-end/websocket/" />
+<meta property="article:modified_time" content="2021-05-17T19:21:34+09:00" />
+<title>通信(Javascript) | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.3a341c957889305d5e8ff05b9d697587c29f7c091841deb4ab8fec9e69934eff.js" integrity="sha256-OjQclXiJMF1ej/BbnWl1h8KffAkYQd60q4/snmmTTv8="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/container/container_index/"><strong>コンテナ</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>通信(Javascript)</strong>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="通信javascript">
+  通信(Javascript)
+  <a class="anchor" href="#%e9%80%9a%e4%bf%a1javascript">#</a>
+</h1>
+<p>Javascriptにおける通信の方法についてを述べる。</p>
+<h1 id="websocket">
+  WebSocket
+  <a class="anchor" href="#websocket">#</a>
+</h1>
+<p>WebSocketはHTTPとは異なる、双方向通信を実現する通信プロトコルである。</p>
+<p>WebSocketを表すオブジェクトは、次のコンストラクタで作成できる。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">WebSocket</span>(<span style="color:#a6e22e">url</span>);
+</code></pre></div><p>引数には、接続先のサーバのURLを入力する。なお、このコンストラクタを呼び出しオブジェクトを生成するタイミングで、サーバとの接続を開始する。</p>
+<p>WebSocketの主なAPIは以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">url</td>
+        <td style="border:none;">接続先のURL</td>
+    </tr>
+    <tr>
+        <td style="border:none;">readyState</td>
+        <td style="border:none;">現在の接続状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">bufferedAmount</td>
+        <td style="border:none;">WebSocketオブジェクト内にあるデータのサイズを示す。0の時、プログラムから送信指示があったデータはネットワークに送信されている状態。</td>
+    </tr>
+</table>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">send()</td>
+        <td style="border:none;">サーバにデータを送信する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">close()</td>
+        <td style="border:none;">サーバとの接続を切断する</td>
+    </tr>
+</table>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">イベントハンドラ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onopen</td>
+        <td style="border:none;">サーバとの接続確立が成功した時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onmessage</td>
+        <td style="border:none;">サーバから新しいメッセージが届いた時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onclose</td>
+        <td style="border:none;">サーバとの接続がクローズした時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onerror</td>
+        <td style="border:none;">エラーが発生した時</td>
+    </tr>
+</table>
+<p>また、readyStateプロパティで得られる値は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">値</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">CONNECTING</td>
+        <td style="border:none;">接続中</td>
+    </tr>
+    <tr>
+        <td style="border:none;">OPEN</td>
+        <td style="border:none;">接続確立済みでサーバとの通信が可能な状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">CLOSING</td>
+        <td style="border:none;">接続切断中</td>
+    </tr>
+    <tr>
+        <td style="border:none;">CLOSED</td>
+        <td style="border:none;">接続切断済み</td>
+    </tr>
+</table>
+<p>WebSocketの接続確立におけるこれらAPIの利用を示した図を以下に記載する。</p>
+<img src="https://WAT36.github.io/pages/img/front-end/websocket.png" width=50%>
+<h1 id="xmlhttprequest">
+  XMLHttpRequest
+  <a class="anchor" href="#xmlhttprequest">#</a>
+</h1>
+<p>XMLHttpRequestは、Javascriptから呼び出し可能なHTTP通信を提供するAPIである。</p>
+<p>これにより、スクリプトがHTTP通信を行うことが可能になり、画面遷移を伴わずに、HTTPリクエストを送信することができる。</p>
+<p>この技術を利用したものをAjaxと呼ぶこともあり、Single Page Applicationの実現にも利用される。</p>
+<p>XMLHttpRequestのAPIは以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">readyState</td>
+        <td style="border:none;">現在の接続状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">timeout</td>
+        <td style="border:none;">リクエストのタイムアウト時間</td>
+    </tr>
+    <tr>
+        <td style="border:none;">withCredentials</td>
+        <td style="border:none;">クロスドメイン通信時にユーザの認証情報を含める場合にはtrue,それ以外はfalse</td>
+    </tr>
+</table>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">open()</td>
+        <td style="border:none;">リクエストメソッド(GET,POSTなど)、リクエスト先URL、非同期フラグ、ユーザ名、パスワードを設定する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">setRequestHeader()</td>
+        <td style="border:none;">リクエストヘッダを追加する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">send()</td>
+        <td style="border:none;">サーバにデータを送信する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">abort()</td>
+        <td style="border:none;">通信を中止する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">getResponseHeader()</td>
+        <td style="border:none;">レスポンスヘッダ引数で指定された名前を持つ値を返す</td>
+    </tr>
+    <tr>
+        <td style="border:none;">getAllResponseHeader()</td>
+        <td style="border:none;">レスポンスヘッダを返す</td>
+    </tr>
+</table>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">イベントハンドラ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onloadstart</td>
+        <td style="border:none;">リクエストを開始した</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onprogress</td>
+        <td style="border:none;">データを送信（受信）中</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onabort</td>
+        <td style="border:none;">通信が中止された時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onerror</td>
+        <td style="border:none;">エラーが発生した時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onload</td>
+        <td style="border:none;">リクエストが正常に完了した時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">ontimeout</td>
+        <td style="border:none;">リクエストがタイムアウトした時</td>
+    </tr>
+</table>
+<p>XMLHttpRequestのAPIの一連の流れを示した図を以下に記載する。</p>
+<img src="https://WAT36.github.io/pages/img/front-end/xmlhttprequest.png" width=50%>
+<h1 id="server-sent-events">
+  Server-Sent Events
+  <a class="anchor" href="#server-sent-events">#</a>
+</h1>
+<p>Server-Sent Eventsは、Webサーバからブラウザへのデータプッシュを受信するためのインタフェースである。</p>
+<p>Server-Sent Eventsでは、サーバからMIME-type text/event-streamの形式でデータを送信する事ができる。</p>
+<p>API類は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">readyState</td>
+        <td style="border:none;">現在の接続状態</td>
+    </tr>
+</table>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">EventSource()</td>
+        <td style="border:none;">EventSourceオブジェクトのコンストラクタで、サーバへの接続を開始する。引数には接続先URLを入力</td>
+    </tr>
+    <tr>
+        <td style="border:none;">close()</td>
+        <td style="border:none;">サーバ接続を切断する</td>
+    </tr>
+</table>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">イベントハンドラ名</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onopen</td>
+        <td style="border:none;">サーバとの接続確立が成功した時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onmessage</td>
+        <td style="border:none;">サーバから新しいメッセージが届いた時</td>
+    </tr>
+    <tr>
+        <td style="border:none;">onerror</td>
+        <td style="border:none;">エラーが発生した時</td>
+    </tr>
+</table>
+<p>また、readyStateプロパティで得られる値は以下の通り。</p>
+<table style="border:none;">
+    <tr>
+        <th style="border:none;">値</td>
+        <th style="border:none;">意味</td>
+    </tr>
+    <tr>
+        <td style="border:none;">CONNECTING</td>
+        <td style="border:none;">接続中</td>
+    </tr>
+    <tr>
+        <td style="border:none;">OPEN</td>
+        <td style="border:none;">接続確立済みでサーバとの通信が可能な状態</td>
+    </tr>
+    <tr>
+        <td style="border:none;">CLOSED</td>
+        <td style="border:none;">接続切断済み</td>
+    </tr>
+</table>
+<p>Server-Sent EventsのAPIの一連の流れを示した図を以下に記載する。</p>
+<img src="https://WAT36.github.io/pages/img/front-end/serversentevent.png" width=50%>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/ca81c8bc6233eb2a71cda6d3729674118b2712cd" title='Last modified by Wataru Tsukagoshi | May 17, 2021' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>May 17, 2021</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/front-end/websocket.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

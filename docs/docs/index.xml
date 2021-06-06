@@ -665,12 +665,30 @@
     </item>
     
     <item>
+      <title>ストレージ(JavaScript)</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/storage_js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/storage_js/</guid>
+      <description>ストレージ(JavaScript) # Javascriptで扱えるストレージについてを示す。 Web Storage # Web Storageは、大容量(数MB)のデータ</description>
+    </item>
+    
+    <item>
       <title>スマートフォン最適化</title>
       <link>https://WAT36.github.io/pages/docs/front-end/smartphone_optimization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/smartphone_optimization/</guid>
       <description>スマートフォン最適化 # スマートフォン最適化についてを述べる。 CSSスプライト # CSSスプライトとは、複数の画像をつなげて1つのファイルにまと</description>
+    </item>
+    
+    <item>
+      <title>セキュリティモデル(Javascript)</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/security_model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/security_model/</guid>
+      <description>セキュリティモデル(Javascript) # Javascriptのセキュリティモデルに関する事項を述べる。 クロスオリジン制約 # コンテンツを取</description>
     </item>
     
     <item>
@@ -737,6 +755,15 @@
     </item>
     
     <item>
+      <title>デバイスアクセス(Javascript)</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/device_access/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/device_access/</guid>
+      <description>デバイスアクセス(Javascript) # デバイスアクセス、いわゆる機器に関する情報を得るためのAPIをここでは述べる。 Geolocation API # Geolocation APIは、ユ</description>
+    </item>
+    
+    <item>
       <title>ニューラルネットワーク</title>
       <link>https://WAT36.github.io/pages/docs/programming/machine_learning/neural_network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -761,6 +788,24 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/procon/bucket/</guid>
       <description>バケット法と平方分割 # まずバケット法とは、列、または平面状に散らばったデータをバケットと呼ばれる単位に分割して、バケットにデータを管理させる</description>
+    </item>
+    
+    <item>
+      <title>パフォーマンス系API(Javascript)</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/performance_js-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/performance_js-2/</guid>
+      <description>パフォーマンス系API(Javascript) # Javascriptのパフォーマンスに関するAPIを述べる。 Web Workers # Web Workersは、Web</description>
+    </item>
+    
+    <item>
+      <title>パフォーマンス系API(Javascript)</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/performance_js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/performance_js/</guid>
+      <description>パフォーマンス系API(Javascript) # Javascriptのパフォーマンスに関するAPIを述べる。 Web Workers # Web Workersは、Web</description>
     </item>
     
     <item>
@@ -1859,6 +1904,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/map/map_index/</guid>
       <description>辞書、Map # 辞書、Mapについての記事。 多くの言語でこれに似たようなデータ構造がある（と予想している）が、言語により名前が違うので注意。 J</description>
+    </item>
+    
+    <item>
+      <title>通信(Javascript)</title>
+      <link>https://WAT36.github.io/pages/docs/front-end/websocket/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/front-end/websocket/</guid>
+      <description>通信(Javascript) # Javascriptにおける通信の方法についてを述べる。 WebSocket # WebSocketはHTTPとは異なる、双方向通信</description>
     </item>
     
     <item>
