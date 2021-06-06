@@ -10,12 +10,12 @@
 <meta property="og:description" content="オブジェクト(Javascript) # Javascriptのオブジェクトについて。 Javascriptでは、オブジェクトと呼ばれる、C言語な" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/class_func/object/" />
-<meta property="article:modified_time" content="2020-10-03T11:56:31+09:00" />
+<meta property="article:modified_time" content="2021-06-06T20:01:08+09:00" />
 <title>オブジェクト(Javascript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.de64332fc62bfb9ed8d130f5cdcdfa435a18397a96b3e723f2bcb33bef12f883.js" integrity="sha256-3mQzL8Yr&#43;57Y0TD1zc36Q1oYOXqWs&#43;cj8ryzO&#43;8S&#43;IM="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.b1e93b1fcc0ff1d07093b7e3e9fa16788a7809c896d3f073d11d62dc0c1f1a4a.js" integrity="sha256-sek7H8wP8dBwk7fj6foWeIp4CciW0/Bz0R1i3AwfGko="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -139,6 +139,7 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#オブジェクトの定義">オブジェクトの定義</a></li>
     <li><a href="#プロパティの書き換え">プロパティの書き換え</a></li>
     <li><a href="#プロパティの追加">プロパティの追加</a></li>
+    <li><a href="#プロパティの削除">プロパティの削除</a></li>
     <li><a href="#thisキーワード">thisキーワード</a></li>
   </ul>
 </nav>
@@ -190,6 +191,13 @@ https://github.com/alex-shpak/hugo-book
 <pre><code>(オブジェクトの変数名).(追加したいプロパティのキー) = (追加したい値);
 </code></pre><p>要はプロパティの書き換えと同じ。</p>
 <hr>
+<h2 id="プロパティの削除">
+  プロパティの削除
+  <a class="anchor" href="#%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3%e3%81%ae%e5%89%8a%e9%99%a4">#</a>
+</h2>
+<p>オブジェクト中のプロパティを削除するには、特殊演算子の<strong>delete</strong>を利用する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">delete</span> (<span style="color:#a6e22e">オブジェクトの変数名</span>).(<span style="color:#a6e22e">削除したいプロパティ名</span>)
+</code></pre></div><hr>
 <h2 id="thisキーワード">
   thisキーワード
   <a class="anchor" href="#this%e3%82%ad%e3%83%bc%e3%83%af%e3%83%bc%e3%83%89">#</a>
@@ -215,9 +223,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/c8eae1e967225ad4e02f7a65ca77c36c92f258dc" title='Last modified by Wataru Tsukagoshi | Oct 3, 2020' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/1998673a73ac06e9400196d119e295729eb78556" title='Last modified by Wataru Tsukagoshi | Jun 6, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Oct 3, 2020</span>
+      <span>Jun 6, 2021</span>
     </a>
   </div>
 
@@ -257,6 +265,7 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#オブジェクトの定義">オブジェクトの定義</a></li>
     <li><a href="#プロパティの書き換え">プロパティの書き換え</a></li>
     <li><a href="#プロパティの追加">プロパティの追加</a></li>
+    <li><a href="#プロパティの削除">プロパティの削除</a></li>
     <li><a href="#thisキーワード">thisキーワード</a></li>
   </ul>
 </nav>
