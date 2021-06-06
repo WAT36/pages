@@ -1151,12 +1151,12 @@
     </item>
     
     <item>
-      <title>三項演算子</title>
+      <title>三項演算子(条件演算子)</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/ternary/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/ternary/</guid>
-      <description>三項演算子 # 条件分岐を行う三項演算子についてを示す。 Java Javaでは三項演算子 &amp;ldquo;?&amp;rdquo; が実装されている。 例えば a ? b : c としたとき、aがtrueなら</description>
+      <description>三項演算子(条件演算子) # 条件分岐を行う三項演算子についてを示す。 Java Javaでは三項演算子 &amp;ldquo;?&amp;rdquo; が実装されている。 例えば a ? b : c としたとき、a</description>
     </item>
     
     <item>

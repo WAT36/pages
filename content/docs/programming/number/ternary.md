@@ -1,12 +1,12 @@
 ---
-title: "三項演算子"
+title: "三項演算子(条件演算子)"
 weight: 1
 # bookFlatSection: false
 # bookShowToC: true
 bookToc: false
 ---
 
-# 三項演算子
+# 三項演算子(条件演算子)
 
 条件分岐を行う三項演算子についてを示す。  
 

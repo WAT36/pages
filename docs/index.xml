@@ -1150,12 +1150,12 @@
     </item>
     
     <item>
-      <title>三項演算子</title>
+      <title>三項演算子(条件演算子)</title>
       <link>https://WAT36.github.io/pages/docs/programming/number/ternary/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/programming/number/ternary/</guid>
-      <description>三項演算子 # 条件分岐を行う三項演算子についてを示す。 Java Javaでは三項演算子 &amp;ldquo;?&amp;rdquo; が実装されている。 例えば a ? b : c としたとき、aがtrueなら</description>
+      <description>三項演算子(条件演算子) # 条件分岐を行う三項演算子についてを示す。 Java Javaでは三項演算子 &amp;ldquo;?&amp;rdquo; が実装されている。 例えば a ? b : c としたとき、a</description>
     </item>
     
     <item>
@@ -2063,11 +2063,29 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     
     <item>
       <title>2020年0708月の活動 &amp; HTML5 Level1試験合格しました</title>
+      <link>https://WAT36.github.io/pages/posts/20200708-2/</link>
+      <pubDate>Tue, 01 Sep 2020 23:03:16 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/20200708-2/</guid>
+      <description>タイトルにもある通り、07月、08月の活動について。 先月も気づいたら飛ばしていたのでここでまとめる。 と言っても、平日はほぼ仕事&amp;amp;連日</description>
+    </item>
+    
+    <item>
+      <title>2020年0708月の活動 &amp; HTML5 Level1試験合格しました</title>
       <link>https://WAT36.github.io/pages/posts/20200708/</link>
       <pubDate>Tue, 01 Sep 2020 23:03:16 +0900</pubDate>
       
       <guid>https://WAT36.github.io/pages/posts/20200708/</guid>
       <description>タイトルにもある通り、07月、08月の活動について。 先月も気づいたら飛ばしていたのでここでまとめる。 と言っても、平日はほぼ仕事&amp;amp;連日</description>
+    </item>
+    
+    <item>
+      <title>2020年04~06月の活動</title>
+      <link>https://WAT36.github.io/pages/posts/20200406-2/</link>
+      <pubDate>Sat, 04 Jul 2020 01:47:27 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/20200406-2/</guid>
+      <description>さーて、毎月やろうと決めていたこの振り返りですが 普通に4,5月は忘れていました。。 多分、ずっと在宅だったせいですね まあ何はともあれ、4月から</description>
     </item>
     
     <item>
@@ -2086,6 +2104,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       
       <guid>https://WAT36.github.io/pages/posts/slack_request/</guid>
       <description>Slackには自作のアプリを作成でき、またコマンドを指定することで指定した動作を行える。 今回はSlackアプリの作成方法、及びコマンドの作成</description>
+    </item>
+    
+    <item>
+      <title>API GatewayでのAPI作成方法(AWS)</title>
+      <link>https://WAT36.github.io/pages/posts/aws_create_api_gateway-2/</link>
+      <pubDate>Mon, 27 Apr 2020 00:02:47 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/aws_create_api_gateway-2/</guid>
+      <description>AWSでのAPI GatewayでのAPI作成方法について、備忘がてら手順をのせる。 1. AWSマネジメントコンソールにログインする # AWSマネジ</description>
     </item>
     
     <item>
@@ -2113,6 +2140,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       
       <guid>https://WAT36.github.io/pages/posts/aws_create_dynamo_table/</guid>
       <description>AWSでDynamoDBのテーブルを作る方法について、備忘がてら手順をのせる。 1. AWSマネジメントコンソールにログインする # AWSマネジメン</description>
+    </item>
+    
+    <item>
+      <title>2020年03月の活動</title>
+      <link>https://WAT36.github.io/pages/posts/202003-2/</link>
+      <pubDate>Wed, 01 Apr 2020 20:37:10 +0900</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/posts/202003-2/</guid>
+      <description>3月も終わり、同時に私も社会人4年目に突入しようとしている時期。 色々将来について考えたい時だが、コロナウイルスの爆発的流行により行動範囲がよ</description>
     </item>
     
     <item>
@@ -2465,6 +2501,15 @@ var php_wireless = 4; siteWinsock.switch_inbox += so_control_logic; if (target_w
       
       <guid>https://WAT36.github.io/pages/docs/ctf/ctf_index/</guid>
       <description>CTFメモ # 最近CTFにも興味が出て参加しているが、なかなかテクニックが覚えられないため、備忘のために覚えたことを書き記しておくためのページ</description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>https://WAT36.github.io/pages/_index-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/_index-2/</guid>
+      <description>WAT Notes # このページはわたくしWATが日ごろの業務及び業務外等の活動で得た技術的知見を備忘のために書き記しておく事を目的に開設した、個人的なノー</description>
     </item>
     
     <item>

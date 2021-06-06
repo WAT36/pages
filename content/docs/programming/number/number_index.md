@@ -22,7 +22,7 @@ bookToc: false
          - [論理和(OR)]({{< relref "/docs/programming/number/or_bit.md" >}})
          - [論理積(AND)]({{< relref "/docs/programming/number/and_bit.md" >}})
          - [排他的論理和(XOR)]({{< relref "/docs/programming/number/xor.md" >}})
-     - [三項演算子]({{< relref "/docs/programming/number/ternary.md" >}})
+     - [三項演算子(条件演算子)]({{< relref "/docs/programming/number/ternary.md" >}})
      - [階乗]({{< relref "/docs/programming/number/factorial.md" >}})
      - [絶対値]({{< relref "/docs/programming/number/abs.md" >}})
      - [平方根・n乗根]({{< relref "/docs/programming/number/root.md" >}})
