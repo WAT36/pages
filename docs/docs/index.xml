@@ -792,15 +792,6 @@
     
     <item>
       <title>パフォーマンス系API(Javascript)</title>
-      <link>https://WAT36.github.io/pages/docs/front-end/performance_js-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/front-end/performance_js-2/</guid>
-      <description>パフォーマンス系API(Javascript) # Javascriptのパフォーマンスに関するAPIを述べる。 Web Workers # Web Workersは、Web</description>
-    </item>
-    
-    <item>
-      <title>パフォーマンス系API(Javascript)</title>
       <link>https://WAT36.github.io/pages/docs/front-end/performance_js/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

@@ -15,7 +15,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.2f4cf3b371b636d357b8523aefb77a12f2bf968445cbf0e8efbcb24bddecfb53.js" integrity="sha256-L0zzs3G2NtNXuFI677d6EvK/loRFy/Do77yyS93s&#43;1M="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.de64332fc62bfb9ed8d130f5cdcdfa435a18397a96b3e723f2bcb33bef12f883.js" integrity="sha256-3mQzL8Yr&#43;57Y0TD1zc36Q1oYOXqWs&#43;cj8ryzO&#43;8S&#43;IM="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -163,13 +163,7 @@ https://github.com/alex-shpak/hugo-book
   オブジェクトの定義
   <a class="anchor" href="#%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%ae%e5%ae%9a%e7%be%a9">#</a>
 </h2>
-
-
-
-
-<div class="book-tabs"><input type="radio" class="toggle" name="tabs-for" id="tabs-for-0" checked="checked" />
-  <label for="tabs-for-0">Javascript</label>
-  <div class="book-tabs-content markdown-inner"><p>Javascriptでのオブジェクトは、以下のような方法で記載する。</p>
+<p>Javascriptでのオブジェクトは、以下のような方法で記載する。</p>
 <p>記法</p>
 <pre><code>var 変数名 = {
     (key名1) : (value名1),
@@ -178,53 +172,29 @@ https://github.com/alex-shpak/hugo-book
 }
 </code></pre><p>このように、キーと値のセットを複数連ねたような構造になる。</p>
 <p>ちなみに、オブジェクトではこのキーと値のセットのことを<strong>プロパティ</strong>と呼んでいる。</p>
-</div></div>
-
 <hr>
 <h2 id="プロパティの書き換え">
   プロパティの書き換え
   <a class="anchor" href="#%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3%e3%81%ae%e6%9b%b8%e3%81%8d%e6%8f%9b%e3%81%88">#</a>
 </h2>
 <p>オブジェクト中のプロパティの値を書き換える方法についてを述べる。</p>
-
-
-
-
-<div class="book-tabs"><input type="radio" class="toggle" name="tabs-put" id="tabs-put-0" checked="checked" />
-  <label for="tabs-put-0">Javascript</label>
-  <div class="book-tabs-content markdown-inner"><p>Javascriptでのオブジェクトのプロパティの書き換えは、以下のような記法で行う。</p>
+<p>Javascriptでのオブジェクトのプロパティの書き換えは、以下のような記法で行う。</p>
 <pre><code>(オブジェクトの変数名).(変更したいプロパティのキー) = (書き換えたい値);
-</code></pre></div></div>
-
-<hr>
+</code></pre><hr>
 <h2 id="プロパティの追加">
   プロパティの追加
   <a class="anchor" href="#%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3%e3%81%ae%e8%bf%bd%e5%8a%a0">#</a>
 </h2>
 <p>オブジェクトにプロパティを追加する方法についてを述べる。</p>
-
-
-
-
-<div class="book-tabs"><input type="radio" class="toggle" name="tabs-add" id="tabs-add-0" checked="checked" />
-  <label for="tabs-add-0">Javascript</label>
-  <div class="book-tabs-content markdown-inner"><p>Javascriptでのオブジェクトのプロパティの追加は、以下のような記法で行う。</p>
+<p>Javascriptでのオブジェクトのプロパティの追加は、以下のような記法で行う。</p>
 <pre><code>(オブジェクトの変数名).(追加したいプロパティのキー) = (追加したい値);
 </code></pre><p>要はプロパティの書き換えと同じ。</p>
-</div></div>
-
 <hr>
 <h2 id="thisキーワード">
   thisキーワード
   <a class="anchor" href="#this%e3%82%ad%e3%83%bc%e3%83%af%e3%83%bc%e3%83%89">#</a>
 </h2>
-
-
-
-
-<div class="book-tabs"><input type="radio" class="toggle" name="tabs-this" id="tabs-this-0" checked="checked" />
-  <label for="tabs-this-0">Javascript</label>
-  <div class="book-tabs-content markdown-inner"><p><strong>this</strong>キーワードは、オブジェクト内でオブジェクトのプロパティを参照するときに用いる。</p>
+<p><strong>this</strong>キーワードは、オブジェクト内でオブジェクトのプロパティを参照するときに用いる。</p>
 <p>但し、オブジェクトを参照するのは、thisがメソッドとして使用された場合に限るので注意。</p>
 <pre><code>var 変数名 = {
     (key名1) : (value名1),
@@ -235,9 +205,7 @@ https://github.com/alex-shpak/hugo-book
         this.key名1  //これでvalue名1が参照できる
     }
 }
-</code></pre></div></div>
-
-</article>
+</code></pre></article>
  
       
 
