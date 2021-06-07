@@ -10,12 +10,12 @@
 <meta property="og:description" content="オブジェクト(Javascript) # Javascriptのオブジェクトについて。 Javascriptでは、オブジェクトと呼ばれる、C言語な" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/class_func/object/" />
-<meta property="article:modified_time" content="2021-06-06T20:12:47+09:00" />
+<meta property="article:modified_time" content="2021-06-06T22:28:24+09:00" />
 <title>オブジェクト(Javascript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.339772faf82239d633c89b2216c5e1895a628d2372d7a31ac3b28d4d0b93a4f5.js" integrity="sha256-M5dy&#43;vgiOdYzyJsiFsXhiVpijSNy16Maw7KNTQuTpPU="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.f8832fdd9996c8c67f096883dc2f85d3ad814bfe23cf40238c1d959fd09d0f4d.js" integrity="sha256-&#43;IMv3ZmWyMZ/CWiD3C&#43;F062BS/4jz0AjjB2Vn9CdD00="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -142,6 +142,7 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#プロパティの削除">プロパティの削除</a></li>
     <li><a href="#thisキーワード">thisキーワード</a></li>
     <li><a href="#set演算子">set演算子</a></li>
+    <li><a href="#get演算子">get演算子</a></li>
   </ul>
 </nav>
 
@@ -220,19 +221,42 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#set%e6%bc%94%e7%ae%97%e5%ad%90">#</a>
 </h2>
 <p><strong>set</strong>演算子は、擬似プロパティを設定する演算子で、プロパティが呼び出された時に呼び出す関数を設定する演算子である。</p>
-<p>これを利用して、オブジェクトのプロパティに値を設定しようとした時に、設定した関数を呼び出してプロパティに値を設定する等が行える。</p>
+<p>これを利用して、オブジェクトのプロパティに値を設定しようとした時に、設定した関数を呼び出してプロパティに値を設定する事が行える。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//例
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
-    <span style="color:#a6e22e">set</span> <span style="color:#a6e22e">propertyA</span>(<span style="color:#a6e22e">age</span>){
+    <span style="color:#a6e22e">set</span> <span style="color:#a6e22e">setAge</span>(<span style="color:#a6e22e">age</span>){
         <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">age</span>;
         <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">category</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">20</span>) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;大人&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;小人&#39;</span>;
     }
 }
 
-<span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">propertyA</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">18</span>
+<span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">setAge</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">18</span>
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">obj</span>);
 </code></pre></div><p>結果</p>
 <pre><code>{age: 18, category: &quot;小人&quot;}
+</code></pre><hr>
+<h2 id="get演算子">
+  get演算子
+  <a class="anchor" href="#get%e6%bc%94%e7%ae%97%e5%ad%90">#</a>
+</h2>
+<p><strong>get</strong>演算子は、擬似プロパティを取得する演算子で、setと同様にプロパティが呼び出された時に呼び出す関数を設定する演算子である。</p>
+<p>関数には、オブジェクトのプロパティを返すように設定する。このようにする事で、プロパティを取得することが可能になる。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//例
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">set</span> <span style="color:#a6e22e">setAge</span>(<span style="color:#a6e22e">age</span>){
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">age</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">category</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">20</span>) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;大人&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;小人&#39;</span>;
+    },
+
+    <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">getAge</span>(){
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span>;
+    }
+}
+
+<span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">setAge</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">18</span>
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">getAge</span>);
+</code></pre></div><p>結果</p>
+<pre><code>18
 </code></pre></article>
  
       
@@ -243,7 +267,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/09d3fd143574d53080fe427afc1b92c746f90707" title='Last modified by Wataru Tsukagoshi | Jun 6, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/b8c170425701002764b65e13945027197f1aa9f0" title='Last modified by Wataru Tsukagoshi | Jun 6, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>Jun 6, 2021</span>
     </a>
@@ -288,6 +312,7 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#プロパティの削除">プロパティの削除</a></li>
     <li><a href="#thisキーワード">thisキーワード</a></li>
     <li><a href="#set演算子">set演算子</a></li>
+    <li><a href="#get演算子">get演算子</a></li>
   </ul>
 </nav>
 

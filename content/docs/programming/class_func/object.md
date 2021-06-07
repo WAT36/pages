@@ -95,18 +95,18 @@ var 変数名 = {
 
 **set**演算子は、擬似プロパティを設定する演算子で、プロパティが呼び出された時に呼び出す関数を設定する演算子である。
 
-これを利用して、オブジェクトのプロパティに値を設定しようとした時に、設定した関数を呼び出してプロパティに値を設定する等が行える。
+これを利用して、オブジェクトのプロパティに値を設定しようとした時に、設定した関数を呼び出してプロパティに値を設定する事が行える。
 
 ```javascript
 //例
 var obj = {
-    set propertyA(age){
+    set setAge(age){
         this.age = age;
         this.category = (age >= 20) ? '大人' : '小人';
     }
 }
 
-obj.propertyA = 18
+obj.setAge = 18
 console.log(obj);
 ```
 
@@ -114,5 +114,36 @@ console.log(obj);
 
 ```
 {age: 18, category: "小人"}
+```
+
+<hr>
+
+## get演算子
+
+**get**演算子は、擬似プロパティを取得する演算子で、setと同様にプロパティが呼び出された時に呼び出す関数を設定する演算子である。
+
+関数には、オブジェクトのプロパティを返すように設定する。このようにする事で、プロパティを取得することが可能になる。
+
+```javascript
+//例
+var obj = {
+    set setAge(age){
+        this.age = age;
+        this.category = (age >= 20) ? '大人' : '小人';
+    },
+
+    get getAge(){
+        return this.age;
+    }
+}
+
+obj.setAge = 18
+console.log(obj.getAge);
+```
+
+結果
+
+```
+18
 ```
 
