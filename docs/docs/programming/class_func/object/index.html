@@ -10,12 +10,12 @@
 <meta property="og:description" content="オブジェクト(Javascript) # Javascriptのオブジェクトについて。 Javascriptでは、オブジェクトと呼ばれる、C言語な" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/class_func/object/" />
-<meta property="article:modified_time" content="2021-06-06T22:28:24+09:00" />
+<meta property="article:modified_time" content="2021-06-07T21:52:49+09:00" />
 <title>オブジェクト(Javascript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.f8832fdd9996c8c67f096883dc2f85d3ad814bfe23cf40238c1d959fd09d0f4d.js" integrity="sha256-&#43;IMv3ZmWyMZ/CWiD3C&#43;F062BS/4jz0AjjB2Vn9CdD00="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.cf358fe8780d6bda5a495118703b2797213aaa89a3fb1ad03ece57cb3656bb05.js" integrity="sha256-zzWP6HgNa9paSVEYcDsnlyE6qomj&#43;xrQPs5XyzZWuwU="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -141,8 +141,9 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#プロパティの追加">プロパティの追加</a></li>
     <li><a href="#プロパティの削除">プロパティの削除</a></li>
     <li><a href="#thisキーワード">thisキーワード</a></li>
-    <li><a href="#set演算子">set演算子</a></li>
-    <li><a href="#get演算子">get演算子</a></li>
+    <li><a href="#セッターの設定set演算子">セッターの設定(set演算子)</a></li>
+    <li><a href="#ゲッターの設定get演算子">ゲッターの設定(get演算子)</a></li>
+    <li><a href="#プロパティの存在確認in演算子">プロパティの存在確認(in演算子)</a></li>
   </ul>
 </nav>
 
@@ -168,12 +169,12 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <p>Javascriptでのオブジェクトは、以下のような方法で記載する。</p>
 <p>記法</p>
-<pre><code>var 変数名 = {
-    (key名1) : (value名1),
-    (key名2) : (value名2),
-    ・・・
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">変数名</span> <span style="color:#f92672">=</span> {
+    (<span style="color:#a6e22e">key名1</span>) <span style="color:#f92672">:</span> (<span style="color:#a6e22e">value名1</span>),
+    (<span style="color:#a6e22e">key名2</span>) <span style="color:#f92672">:</span> (<span style="color:#a6e22e">value名2</span>),
+    <span style="color:#960050;background-color:#1e0010">・・・</span>
 }
-</code></pre><p>このように、キーと値のセットを複数連ねたような構造になる。</p>
+</code></pre></div><p>このように、キーと値のセットを複数連ねたような構造になる。</p>
 <p>ちなみに、オブジェクトではこのキーと値のセットのことを<strong>プロパティ</strong>と呼んでいる。</p>
 <hr>
 <h2 id="プロパティの書き換え">
@@ -182,16 +183,16 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <p>オブジェクト中のプロパティの値を書き換える方法についてを述べる。</p>
 <p>Javascriptでのオブジェクトのプロパティの書き換えは、以下のような記法で行う。</p>
-<pre><code>(オブジェクトの変数名).(変更したいプロパティのキー) = (書き換えたい値);
-</code></pre><hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">(<span style="color:#a6e22e">オブジェクトの変数名</span>).(<span style="color:#a6e22e">変更したいプロパティのキー</span>) <span style="color:#f92672">=</span> (<span style="color:#a6e22e">書き換えたい値</span>);
+</code></pre></div><hr>
 <h2 id="プロパティの追加">
   プロパティの追加
   <a class="anchor" href="#%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3%e3%81%ae%e8%bf%bd%e5%8a%a0">#</a>
 </h2>
 <p>オブジェクトにプロパティを追加する方法についてを述べる。</p>
 <p>Javascriptでのオブジェクトのプロパティの追加は、以下のような記法で行う。</p>
-<pre><code>(オブジェクトの変数名).(追加したいプロパティのキー) = (追加したい値);
-</code></pre><p>要はプロパティの書き換えと同じ。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">(<span style="color:#a6e22e">オブジェクトの変数名</span>).(<span style="color:#a6e22e">追加したいプロパティのキー</span>) <span style="color:#f92672">=</span> (<span style="color:#a6e22e">追加したい値</span>);
+</code></pre></div><p>要はプロパティの書き換えと同じ。</p>
 <hr>
 <h2 id="プロパティの削除">
   プロパティの削除
@@ -206,19 +207,19 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <p><strong>this</strong>キーワードは、オブジェクト内でオブジェクトのプロパティを参照するときに用いる。</p>
 <p>但し、オブジェクトを参照するのは、thisがメソッドとして使用された場合に限るので注意。</p>
-<pre><code>var 変数名 = {
-    (key名1) : (value名1),
-    (key名2) : (value名2),
-    ・・・
-    (key名) : function(){
-        //メソッド
-        this.key名1  //これでvalue名1が参照できる
-    }
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">変数名</span> <span style="color:#f92672">=</span> {
+    (<span style="color:#a6e22e">key名1</span>) <span style="color:#f92672">:</span> (<span style="color:#a6e22e">value名1</span>),
+    (<span style="color:#a6e22e">key名2</span>) <span style="color:#f92672">:</span> (<span style="color:#a6e22e">value名2</span>),
+    <span style="color:#960050;background-color:#1e0010">・・・</span>
+    (<span style="color:#a6e22e">key名</span>) <span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(){
+        <span style="color:#75715e">//メソッド
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">key名1</span>  <span style="color:#75715e">//これでvalue名1が参照できる
+</span><span style="color:#75715e"></span>    }
 }
-</code></pre><hr>
-<h2 id="set演算子">
-  set演算子
-  <a class="anchor" href="#set%e6%bc%94%e7%ae%97%e5%ad%90">#</a>
+</code></pre></div><hr>
+<h2 id="セッターの設定set演算子">
+  セッターの設定(set演算子)
+  <a class="anchor" href="#%e3%82%bb%e3%83%83%e3%82%bf%e3%83%bc%e3%81%ae%e8%a8%ad%e5%ae%9aset%e6%bc%94%e7%ae%97%e5%ad%90">#</a>
 </h2>
 <p><strong>set</strong>演算子は、擬似プロパティを設定する演算子で、プロパティが呼び出された時に呼び出す関数を設定する演算子である。</p>
 <p>これを利用して、オブジェクトのプロパティに値を設定しようとした時に、設定した関数を呼び出してプロパティに値を設定する事が行える。</p>
@@ -235,9 +236,9 @@ https://github.com/alex-shpak/hugo-book
 </code></pre></div><p>結果</p>
 <pre><code>{age: 18, category: &quot;小人&quot;}
 </code></pre><hr>
-<h2 id="get演算子">
-  get演算子
-  <a class="anchor" href="#get%e6%bc%94%e7%ae%97%e5%ad%90">#</a>
+<h2 id="ゲッターの設定get演算子">
+  ゲッターの設定(get演算子)
+  <a class="anchor" href="#%e3%82%b2%e3%83%83%e3%82%bf%e3%83%bc%e3%81%ae%e8%a8%ad%e5%ae%9aget%e6%bc%94%e7%ae%97%e5%ad%90">#</a>
 </h2>
 <p><strong>get</strong>演算子は、擬似プロパティを取得する演算子で、setと同様にプロパティが呼び出された時に呼び出す関数を設定する演算子である。</p>
 <p>関数には、オブジェクトのプロパティを返すように設定する。このようにする事で、プロパティを取得することが可能になる。</p>
@@ -257,6 +258,29 @@ https://github.com/alex-shpak/hugo-book
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">getAge</span>);
 </code></pre></div><p>結果</p>
 <pre><code>18
+</code></pre><hr>
+<h2 id="プロパティの存在確認in演算子">
+  プロパティの存在確認(in演算子)
+  <a class="anchor" href="#%e3%83%97%e3%83%ad%e3%83%91%e3%83%86%e3%82%a3%e3%81%ae%e5%ad%98%e5%9c%a8%e7%a2%ba%e8%aa%8din%e6%bc%94%e7%ae%97%e5%ad%90">#</a>
+</h2>
+<p>指定したプロパティがオブジェクト内に存在するかを確認したいときは、<strong>in</strong>演算子を利用する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//例
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">set</span> <span style="color:#a6e22e">setAge</span>(<span style="color:#a6e22e">age</span>){
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">age</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">category</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">20</span>) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;大人&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;小人&#39;</span>;
+    },
+
+    <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">getAge</span>(){
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span>;
+    }
+}
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;setAge&#39;</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">obj</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">obj</span>);
+</code></pre></div><p>結果</p>
+<pre><code>true
+false
 </code></pre></article>
  
       
@@ -267,9 +291,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/b8c170425701002764b65e13945027197f1aa9f0" title='Last modified by Wataru Tsukagoshi | Jun 6, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/08608e96ae6154f3e8ec3fe5c7feacc0358c9765" title='Last modified by Wataru Tsukagoshi | Jun 7, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Jun 6, 2021</span>
+      <span>Jun 7, 2021</span>
     </a>
   </div>
 
@@ -311,8 +335,9 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#プロパティの追加">プロパティの追加</a></li>
     <li><a href="#プロパティの削除">プロパティの削除</a></li>
     <li><a href="#thisキーワード">thisキーワード</a></li>
-    <li><a href="#set演算子">set演算子</a></li>
-    <li><a href="#get演算子">get演算子</a></li>
+    <li><a href="#セッターの設定set演算子">セッターの設定(set演算子)</a></li>
+    <li><a href="#ゲッターの設定get演算子">ゲッターの設定(get演算子)</a></li>
+    <li><a href="#プロパティの存在確認in演算子">プロパティの存在確認(in演算子)</a></li>
   </ul>
 </nav>
 
