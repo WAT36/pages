@@ -91,7 +91,7 @@ var 変数名 = {
 
 <hr>
 
-## set演算子
+## セッターの設定(set演算子)
 
 **set**演算子は、擬似プロパティを設定する演算子で、プロパティが呼び出された時に呼び出す関数を設定する演算子である。
 
@@ -118,7 +118,7 @@ console.log(obj);
 
 <hr>
 
-## get演算子
+## ゲッターの設定(get演算子)
 
 **get**演算子は、擬似プロパティを取得する演算子で、setと同様にプロパティが呼び出された時に呼び出す関数を設定する演算子である。
 
@@ -147,3 +147,30 @@ console.log(obj.getAge);
 18
 ```
 
+## プロパティの存在確認(in演算子)
+
+指定したプロパティがオブジェクト内に存在するかを確認したいときは、**in**演算子を利用する。
+
+```javascript
+//例
+var obj = {
+    set setAge(age){
+        this.age = age;
+        this.category = (age >= 20) ? '大人' : '小人';
+    },
+
+    get getAge(){
+        return this.age;
+    }
+}
+
+console.log('setAge' in obj);
+console.log('a' in obj);
+```
+
+結果
+
+```
+true
+false
+```
