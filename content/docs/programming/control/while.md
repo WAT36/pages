@@ -10,6 +10,8 @@ bookToc: false
 
 繰り返し処理を行う制御構文の一つ、while文について各言語での利用法を示す。  
 
+また、言語にもよるが**do-while文**についてもここで示す。
+
 {{< tabs "while" >}}
 {{< tab "Java" >}}
 
@@ -89,7 +91,7 @@ while 条件式:
 {{< /tab >}}
 {{< tab "Javascript" >}}
 
-Javascriptでの記法は以下の通り。
+Javascriptでのwhile文の記法は以下の通り。
 
 ```javascript
 while(条件){
@@ -108,6 +110,37 @@ while(i<5){
   console.log(i);
   i+=1
 }
+```
+
+結果
+
+```
+0
+1
+2
+3
+4
+```
+
+また、do-while文は以下のように記載する。while文と異なる点は、処理(doブロック内)を実行後に条件式が評価される点である。そのため、条件が最初から偽の状態でも、処理は1回は行われる。
+
+```javascript
+do {
+    //条件が真だった場合に実行される処理(doブロック)
+    ・・・
+}
+while(条件)
+```
+
+実行例は以下の通り。
+
+```javascript
+var i=0;
+do {
+  console.log(i);
+  i+=1
+}
+while(i<5)
 ```
 
 結果
