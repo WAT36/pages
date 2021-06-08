@@ -26,6 +26,41 @@ yield文を指定するとジェネレータ関数内で処理が止まり、次
 
 ジェネレータ関数で処理を開始するメソッドは**next()**である。
 
+例
+
+```javascript
+function* generator(){
+    //処理１
+    console.log("1");
+    yield;
+    //処理２
+    console.log("2");
+    yield;
+    //処理３
+    console.log("3");
+    yield;
+}
+
+var g = generator();
+
+console.log("generator 1回目スタート");
+g.next();
+console.log("generator 2回目スタート");
+g.next();
+console.log("generator 3回目スタート");
+g.next();
+```
+
+結果
+
+```
+generator 1回目スタート
+1
+generator 2回目スタート
+2
+generator 3回目スタート
+3
+```
 
 {{< /tab >}}
 {{< /tabs >}}
