@@ -87,6 +87,40 @@ while 条件式:
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptでの記法は以下の通り。
+
+```javascript
+while(条件){
+    //条件が真だった場合に実行される処理
+    ・・・
+}
+```
+
+条件式がtrueである限り、while文内の処理を実行し続ける。
+
+実行例を以下に示す。
+
+```javascript
+var i=0;
+while(i<5){
+  console.log(i);
+  i+=1
+}
+```
+
+結果
+
+```
+0
+1
+2
+3
+4
+```
+
+{{< /tab >}}
 {{< /tabs >}}
 
 
