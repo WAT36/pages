@@ -665,6 +665,15 @@
     </item>
     
     <item>
+      <title>ジェネレータ関数</title>
+      <link>https://WAT36.github.io/pages/docs/programming/class_func/generator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/class_func/generator/</guid>
+      <description>ジェネレータ関数 #</description>
+    </item>
+    
+    <item>
       <title>ストレージ(JavaScript)</title>
       <link>https://WAT36.github.io/pages/docs/front-end/storage_js/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1598,6 +1607,15 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/distortion_measure/</guid>
       <description>歪み尺度 # 教師あり学習では、学習が進み精度が高くなることの指標として、平均交差エントロピー誤差のような関数を利用していた。 教師なし学習、今回</description>
+    </item>
+    
+    <item>
+      <title>比較演算子</title>
+      <link>https://WAT36.github.io/pages/docs/programming/number/comparison_operator-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/number/comparison_operator-3/</guid>
+      <description>比較演算子 # 比較演算子についてをまとめておく。 Java Javaでの主な比較演算子は以下の通り。 演算子 意味 例 &amp;lt; 未満 a &amp;lt; b &amp;lt;= 以下 a &amp;lt;= b &amp;gt; より大きい a &amp;gt;</description>
     </item>
     
     <item>
