@@ -15,7 +15,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.e69694c62fff111a05e4b83d6bd7493bfe42ad958f695ed2003d4376882898a5.js" integrity="sha256-5paUxi//ERoF5Lg9a9dJO/5CrZWPaV7SAD1DdogomKU="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.8b1b43180356bf92140eef0bbdf59f3b9d61990d2e9bfe6d116c6d038f1311e6.js" integrity="sha256-ixtDGANWv5IUDu8LvfWfO51hmQ0um/5tEWxtA48TEeY="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -247,7 +247,25 @@ default
 <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">0</span>
 <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">1</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span>
-</code></pre></div></div></div>
+</code></pre></div></div><input type="radio" class="toggle" name="tabs-break" id="tabs-break-2"  />
+  <label for="tabs-break-2">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>Javascriptにおいてもbreak文の使い方は同じである。<br>
+途中で中断したいfor,whileループの中に設定する。</p>
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#ae81ff">10</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>);
+  <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">i</span><span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">5</span>){
+    <span style="color:#66d9ef">break</span>;
+  }
+}
+</code></pre></div><p>結果</p>
+<pre><code>0
+1
+2
+3
+4
+5
+</code></pre></div></div>
 
 </article>
  

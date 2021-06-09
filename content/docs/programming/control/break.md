@@ -140,6 +140,34 @@ break文の使い方はPythonもjavaと同じ。
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptにおいてもbreak文の使い方は同じである。  
+途中で中断したいfor,whileループの中に設定する。
+
+使用例
+
+```javascript
+for(var i=0;i<10;i++){
+  console.log(i);
+  if(i>=5){
+    break;
+  }
+}
+```
+
+結果
+
+```
+0
+1
+2
+3
+4
+5
+```
+
+{{< /tab >}}
 {{< /tabs >}}
 
 
