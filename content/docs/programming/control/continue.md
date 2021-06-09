@@ -96,4 +96,31 @@ for,whileループの中で設定する。
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptにおいてもcontinue文の使い方は同じである。  
+設定したいfor,whileループの中に設定する。
+
+使用例
+
+```javascript
+for(var i=0;i<10;i++){
+  if(i>=5){
+    continue;
+  }
+  console.log(i);
+}
+```
+
+結果
+
+```
+0
+1
+2
+3
+4
+```
+
+{{< /tab >}}
 {{< /tabs >}}
