@@ -10,12 +10,12 @@
 <meta property="og:description" content="例外処理(try文) # 実行時エラー(例外)のハンドリングを行うtry文についてを示す。 言語により微妙に呼び名が違うところがあるので注意。 Java J" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/exception/try/" />
-<meta property="article:modified_time" content="2020-01-26T01:35:02+09:00" />
+<meta property="article:modified_time" content="2021-06-10T23:50:53+09:00" />
 <title>例外処理(try文) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.eb777a71c5d5b63ac3a1d24768abd563a36ece59454fca877c310e7b0e60576b.js" integrity="sha256-63d6ccXVtjrDodJHaKvVY6NuzllFT8qHfDEOew5gV2s="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.85c5fb01124d0a0ab56e82a146ae8de06e8a02d440ef66c796bc776be83d3173.js" integrity="sha256-hcX7ARJNCgq1boKhRq6N4G6KAtRA72bHlrx3a&#43;g9MXM="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -236,7 +236,37 @@ Traceback (most recent call last):
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
 </code></pre></div><p>ここでは0で割ったときにゼロ除算の例外ZeroDivisionErrorが発生するが、try-exceptでハンドリングをすると、例外発生時にそれに対応したexcept文の内容が実行される。<br>
 その後、finally文の内容が実行される。</p>
-</div></div>
+</div><input type="radio" class="toggle" name="tabs-try" id="tabs-try-2"  />
+  <label for="tabs-try-2">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>JavascriptはJavaと形式は同じで**try-catch(-finally)**文で実行時エラー(例外)のハンドリングを行う。<br>
+記法は以下の通り。</p>
+<pre><code>try {
+    //処理文
+}
+catch(例外の内容を示す変数){
+    //例外発生時の処理
+}
+//(catch文は何個でも記述できる)
+finally{
+    //try文またはcatch文の処理終了時に行う処理
+}
+</code></pre><p>JavascriptもJavaと同じでtry{}で囲んだ範囲内で例外が発生すると、処理を中断してcatch文へと飛ぶ。<br>
+catch文は宣言時に、例外を示す変数を指定する。このcatch文はいくらでも宣言でき、try文内で発生した例外は対応するcatch文へと飛ぶ。
+finally文はtry・catch文の処理が終わった後に実行される文である。実行時に例外が発生した場合・しなかった場合の両方の場合で実行する処理をここに記述する。ちなみにfinally文は宣言してもしなくても良い。</p>
+<p>実行例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">try</span>{
+  <span style="color:#75715e">//変数b,c,dは設定されてないのでエラーになる
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">c</span>  <span style="color:#f92672">+</span> <span style="color:#a6e22e">d</span>;
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;try ended&#34;</span>);
+}<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">e</span>){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">message</span>);
+}<span style="color:#66d9ef">finally</span>{
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Finally Statement.&#34;</span>);
+}
+</code></pre></div><p>実行結果</p>
+<pre><code>Can't find variable: b
+Finally Statement.
+</code></pre></div></div>
 
 </article>
  
@@ -248,9 +278,9 @@ Traceback (most recent call last):
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/17953e288350812e48940afb2408fd6baac0d2ed" title='Last modified by Wataru Tsukagoshi | Jan 26, 2020' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/d7f9a23d424a164e6b6e0cc7bf3b085b75ffec46" title='Last modified by Wataru Tsukagoshi | Jun 10, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Jan 26, 2020</span>
+      <span>Jun 10, 2021</span>
     </a>
   </div>
 

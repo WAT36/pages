@@ -154,6 +154,24 @@ finally文はtry・catch文の処理が終わった後に実行される文で�
 
 実行例を以下に示す。  
 
+```javascript
+try{
+  //変数b,c,dは設定されてないのでエラーになる
+  var a = b + c  + d;
+  console.log("try ended");
+}catch(e){
+  console.log(e.message);
+}finally{
+  console.log("Finally Statement.");
+}
+```
+
+実行結果
+
+```
+Can't find variable: b
+Finally Statement.
+```
 
 {{< /tab >}}
 {{< /tabs >}}
