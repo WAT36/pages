@@ -89,6 +89,31 @@ KeyError: 'key3'
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptにおいて、連想配列からデータを取得する方法は普通の配列と同じように添字を指定すれば良い。
+
+例を以下に示す。
+
+```javascript
+var temperature = new Array();
+
+temperature['Tokyo'] = 20;
+temperature['Sapporo'] = 15;
+temperature['Naha'] = 25;
+
+console.log(temperature['Tokyo']);
+console.log(temperature['Naha']);
+```
+
+結果
+
+```
+20
+25
+```
+
+{{< /tab >}}
 {{< /tabs >}}
 
 
