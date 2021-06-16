@@ -64,21 +64,7 @@ Javascriptでは連想配列と呼ばれるデータ構造が該当する。
 例を以下に示す。
 
 ```javascript
-var temperature = new Array();
-
-temperature['Tokyo'] = 20;
-temperature['Sapporo'] = 15;
-temperature['Naha'] = 25;
-
-console.log(temperature['Tokyo']);
-console.log(temperature['Naha']);
-```
-
-結果
-
-```
-20
-25
+var 変数名 = new Array();
 ```
 
 {{< /tab >}}

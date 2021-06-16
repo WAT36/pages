@@ -71,6 +71,22 @@ Pythonでは以下のような記法で辞書にキー・値を追加できる�
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptにおいて、連想配列にデータを追加する方法は普通の配列と同じようにすれば良い。
+添字には任意の文字列を指定する。
+
+例を以下に示す。
+
+```javascript
+var temperature = new Array();
+
+temperature['Tokyo'] = 20;
+temperature['Sapporo'] = 15;
+temperature['Naha'] = 25;
+```
+
+{{< /tab >}}
 {{< /tabs >}}
 
 
