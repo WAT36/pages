@@ -15,7 +15,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.eb0750f21b0027c534530a0342677fffebb1f068dfa70e511bf583aaa7b6001e.js" integrity="sha256-6wdQ8hsAJ8U0UwoDQmd//&#43;ux8Gjfpw5RG/WDqqe2AB4="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.adb6954f1dbb71aa8e3d962132a9c304ee396c669a227c2766f4fccfdb75001a.js" integrity="sha256-rbaVTx27caqOPZYhMqnDBO45bGaaInwnZvT8z9t1ABo="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -141,6 +141,8 @@ https://github.com/alex-shpak/hugo-book
 <p>辞書(Map)とは何か？</p>
 <p>辞書(Map)とは <strong>&ldquo;キー&rdquo;</strong> と <strong>&ldquo;値&rdquo;</strong> の２つの要素からなるデータ構造で、キーを指定した時、辞書(Map)内でそのキーに対応づけられている値が返ってくるというデータ構造である。<br>
 またこの定義上、キーは辞書(Map)内では一意でないといけない（キーが重複してはならない）。ただし、値の方は一意になってなくても良い（重複しても良い）</p>
+<p>Javascriptでは<strong>連想配列</strong>と呼ばれるデータ構造がこれに該当する。
+連想配列とは、配列の添字を文字列とした配列のことである。</p>
 <p>定義の方法をそれぞれの言語で示す。</p>
 
 
@@ -171,7 +173,23 @@ https://github.com/alex-shpak/hugo-book
 {}
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
 </code></pre></div><p>実際にこの辞書内にキー・要素を入れる方法については別項に記載する。</p>
-</div></div>
+</div><input type="radio" class="toggle" name="tabs-map" id="tabs-map-2"  />
+  <label for="tabs-map-2">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>Javascriptでは連想配列と呼ばれるデータ構造が該当する。
+定義は普通の配列と同じ。</p>
+<p>例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">temperature</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Array();
+
+<span style="color:#a6e22e">temperature</span>[<span style="color:#e6db74">&#39;Tokyo&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+<span style="color:#a6e22e">temperature</span>[<span style="color:#e6db74">&#39;Sapporo&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>;
+<span style="color:#a6e22e">temperature</span>[<span style="color:#e6db74">&#39;Naha&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">25</span>;
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">temperature</span>[<span style="color:#e6db74">&#39;Tokyo&#39;</span>]);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">temperature</span>[<span style="color:#e6db74">&#39;Naha&#39;</span>]);
+</code></pre></div><p>結果</p>
+<pre><code>20
+25
+</code></pre></div></div>
 
 </article>
  
