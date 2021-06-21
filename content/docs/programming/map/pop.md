@@ -113,6 +113,43 @@ KeyError: 'key3'
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptにおいて、連想配列から指定した添字のデータを削除するには、特殊演算子**delete**を利用する。
+
+使用法は以下の通り。
+
+```javascript
+delete 連想配列.添字
+//または
+delete 連想配列[添字]
+```
+
+例を以下に示す。
+
+```javascript
+var temperature = new Array();
+
+temperature['Tokyo'] = 20;
+temperature['Sapporo'] = 15;
+temperature['Naha'] = 25;
+
+console.log(temperature['Tokyo']);
+
+//'Tokyo'のデータを消す
+delete temperature['Tokyo']
+
+console.log(temperature['Tokyo']);
+```
+
+結果
+
+```
+20
+undefined
+```
+
+{{< /tab >}}
 {{< /tabs >}}
 
 
