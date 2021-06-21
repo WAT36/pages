@@ -15,7 +15,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.b7232cc68140b49d0be7927e2ae80f25b0bc109be0f7d8b0be495fd968a1d423.js" integrity="sha256-tyMsxoFAtJ0L55J&#43;KugPJbC8EJvg99iwvklf2Wih1CM="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.958fc21561d0566c2cd2c9eaa3ad17331c238924592d1e957d36765f75d6a0d2.js" integrity="sha256-lY/CFWHQVmws0snqo60XMxwjiSRZLR6VfTZ2X3XWoNI="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -198,7 +198,22 @@ value
 value2
 value3
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
-</code></pre></div></div></div>
+</code></pre></div></div><input type="radio" class="toggle" name="tabs-valuelist" id="tabs-valuelist-2"  />
+  <label for="tabs-valuelist-2">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>Javascriptにおいて、連想配列の値のリストを取得するには、**Object.values()**メソッドを利用する。引数には連想配列のオブジェクトを指定する。</p>
+<p>使用法は以下の通り。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">Object.<span style="color:#a6e22e">values</span>(<span style="color:#a6e22e">連想配列</span>);
+</code></pre></div><p>例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">temperature</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Array();
+
+<span style="color:#a6e22e">temperature</span>[<span style="color:#e6db74">&#39;Tokyo&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+<span style="color:#a6e22e">temperature</span>[<span style="color:#e6db74">&#39;Sapporo&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>;
+<span style="color:#a6e22e">temperature</span>[<span style="color:#e6db74">&#39;Naha&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">25</span>;
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Object.<span style="color:#a6e22e">values</span>(<span style="color:#a6e22e">temperature</span>));
+</code></pre></div><p>結果</p>
+<pre><code>[20, 15, 25]
+</code></pre></div></div>
 
 </article>
  

@@ -77,6 +77,35 @@ dict_keys(['key', 'key2', 'key3'])
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptにおいて、連想配列の添字のリストを取得するには、**Object.keys()**メソッドを利用する。引数には連想配列のオブジェクトを指定する。
+
+使用法は以下の通り。
+
+```javascript
+Object.keys(連想配列);
+```
+
+例を以下に示す。
+
+```javascript
+var temperature = new Array();
+
+temperature['Tokyo'] = 20;
+temperature['Sapporo'] = 15;
+temperature['Naha'] = 25;
+
+console.log(Object.keys(temperature));
+```
+
+結果
+
+```
+["Tokyo", "Sapporo", "Naha"]
+```
+
+{{< /tab >}}
 {{< /tabs >}}
 
 

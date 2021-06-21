@@ -82,5 +82,34 @@ value3
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptにおいて、連想配列の値のリストを取得するには、**Object.values()**メソッドを利用する。引数には連想配列のオブジェクトを指定する。
+
+使用法は以下の通り。
+
+```javascript
+Object.values(連想配列);
+```
+
+例を以下に示す。
+
+```javascript
+var temperature = new Array();
+
+temperature['Tokyo'] = 20;
+temperature['Sapporo'] = 15;
+temperature['Naha'] = 25;
+
+console.log(Object.values(temperature));
+```
+
+結果
+
+```
+[20, 15, 25]
+```
+
+{{< /tab >}}
 {{< /tabs >}}
 
