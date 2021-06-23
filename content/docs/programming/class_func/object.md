@@ -178,3 +178,49 @@ console.log('a' in obj);
 true
 false
 ```
+
+# Objectオブジェクト
+
+JavascriptのObjectオブジェクトは、全てのオブジェクトの基本オブジェクトである。
+
+プロパティ・メソッド類は以下の通り。
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">プロパティ名</td>
+        <th style="border:none;">説明</td>
+    </thead>
+    <tr>
+        <td style="border:none;">constructor</td>
+        <td style="border:none;">コンストラクタを返す</td>
+    </tr>
+</table>
+
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">メソッド名</td>
+        <th style="border:none;">説明</td>
+    </thead>
+    <tr>
+        <td style="border:none;">toString()</td>
+        <td style="border:none;">オブジェクトを文字列で返す</td>
+    </tr>
+    <tr>
+        <td style="border:none;">valueOf()</td>
+        <td style="border:none;">オブジェクトのプリミティブ値を返す</td>
+    </tr>
+    <tr>
+        <td style="border:none;">hasOwnProperty()</td>
+        <td style="border:none;">指定したプロパティがオブジェクトのプロパティならばtrueを返す</td>
+    </tr>
+    <tr>
+        <td style="border:none;">propertyIsEnumerable()</td>
+        <td style="border:none;">指定したプロパティが列挙可能な場合trueを返す</td>
+    </tr>
+    <tr>
+        <td style="border:none;">isPrototypeOf()</td>
+        <td style="border:none;">指定したオブジェクトがプロトタイプの場合はtrueを返す</td>
+    </tr>
+</table>
+
