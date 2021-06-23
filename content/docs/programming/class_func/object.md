@@ -224,3 +224,38 @@ JavascriptのObjectオブジェクトは、全てのオブジェクトの基本�
     </tr>
 </table>
 
+以下に例を記載する。
+
+```javascript
+var mike = {
+    age: 18,
+    category: '小人'
+};
+
+console.log('--toString():--');
+console.log(mike.toString());
+console.log('--valueOf():--');
+console.log(mike.valueOf());
+console.log('--hasOwnProperty(age):--');
+console.log(mike.hasOwnProperty('age'));
+console.log('--propertyIsEnumerable(age):--');
+console.log(mike.propertyIsEnumerable('age'));
+console.log('--isPrototypeOf():--');
+console.log(mike.isPrototypeOf());
+```
+
+
+実行結果
+
+```
+--toString():--
+[object Object]
+--valueOf():--
+{age: 18, category: "小人"}
+--hasOwnProperty(age):--
+true
+--propertyIsEnumerable(age):--
+true
+--isPrototypeOf():--
+false
+```
