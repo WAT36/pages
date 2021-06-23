@@ -232,6 +232,8 @@ var mike = {
     category: '小人'
 };
 
+console.log('--constructor:--');
+console.log(mike.constructor);
 console.log('--toString():--');
 console.log(mike.toString());
 console.log('--valueOf():--');
@@ -248,6 +250,10 @@ console.log(mike.isPrototypeOf());
 実行結果
 
 ```
+--constructor:--
+function Object() {
+    [native code]
+}
 --toString():--
 [object Object]
 --valueOf():--
@@ -258,4 +264,36 @@ true
 true
 --isPrototypeOf():--
 false
+```
+
+
+# prototype
+
+prototypeプロパティは、特定のオブジェクトに存在するプロパティとメソッドを、他のオブジェクトでも利用できるように定義する方式である。
+
+必要に応じて他のオブジェクトのメソッドやプロパティを追加することで、それらを新たに追加する必要がなくなる。
+
+オブジェクト指向の言語の特徴の一つに継承というものがある。Javaなどではクラスで継承を行うが、Javascriptではこのオブジェクトで継承を行う。このような継承をプロトタイプベースの継承という。
+
+例を以下に記載する。
+
+```javascript
+function Person(name) {
+    this.name = name
+};
+
+// オブジェクト作成
+var mike = new Person('mike');
+
+// コンストラクタのprototypeプロパティにプロパティsexを追加
+Person.prototype.sex = "male";
+
+// オブジェクトにsexプロパティが追加されている
+console.log(mike.sex);
+```
+
+実行結果
+
+```
+male
 ```

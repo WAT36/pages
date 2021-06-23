@@ -10,12 +10,12 @@
 <meta property="og:description" content="オブジェクト(Javascript) # Javascriptのオブジェクトについて。 Javascriptでは、オブジェクトと呼ばれる、C言語な" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/class_func/object/" />
-<meta property="article:modified_time" content="2021-06-23T20:44:25+09:00" />
+<meta property="article:modified_time" content="2021-06-23T21:27:06+09:00" />
 <title>オブジェクト(Javascript) | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.89008d4aec25a63708528b5c549ae02d128f8596d8fcd6d76e7bad5db097ad4f.js" integrity="sha256-iQCNSuwlpjcIUotcVJrgLRKPhZbY/NbXbnutXbCXrU8="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.af6f9f0241daa65c839a0408a3a44b31ba1ff831124af3c0dd3be318a5451061.js" integrity="sha256-r2&#43;fAkHaplyDmgQIo6RLMbof&#43;DESSvPA3TvjGKVFEGE="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -331,6 +331,8 @@ false
     <span style="color:#a6e22e">category</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;小人&#39;</span>
 };
 
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;--constructor:--&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">mike</span>.<span style="color:#a6e22e">constructor</span>);
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;--toString():--&#39;</span>);
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">mike</span>.<span style="color:#a6e22e">toString</span>());
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;--valueOf():--&#39;</span>);
@@ -342,7 +344,11 @@ false
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;--isPrototypeOf():--&#39;</span>);
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">mike</span>.<span style="color:#a6e22e">isPrototypeOf</span>());
 </code></pre></div><p>実行結果</p>
-<pre><code>--toString():--
+<pre><code>--constructor:--
+function Object() {
+    [native code]
+}
+--toString():--
 [object Object]
 --valueOf():--
 {age: 18, category: &quot;小人&quot;}
@@ -352,6 +358,28 @@ true
 true
 --isPrototypeOf():--
 false
+</code></pre><h1 id="prototype">
+  prototype
+  <a class="anchor" href="#prototype">#</a>
+</h1>
+<p>prototypeプロパティは、特定のオブジェクトに存在するプロパティとメソッドを、他のオブジェクトでも利用できるように定義する方式である。</p>
+<p>必要に応じて他のオブジェクトのメソッドやプロパティを追加することで、それらを新たに追加する必要がなくなる。</p>
+<p>オブジェクト指向の言語の特徴の一つに継承というものがある。Javaなどではクラスで継承を行うが、Javascriptではこのオブジェクトで継承を行う。このような継承をプロトタイプベースの継承という。</p>
+<p>例を以下に記載する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Person</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>
+};
+
+<span style="color:#75715e">// オブジェクト作成
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">mike</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#39;mike&#39;</span>);
+
+<span style="color:#75715e">// コンストラクタのprototypeプロパティにプロパティsexを追加
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">Person</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">sex</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;male&#34;</span>;
+
+<span style="color:#75715e">// オブジェクトにsexプロパティが追加されている
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">mike</span>.<span style="color:#a6e22e">sex</span>);
+</code></pre></div><p>実行結果</p>
+<pre><code>male
 </code></pre></article>
  
       
@@ -362,7 +390,7 @@ false
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/17b977725d485c513ae012093cdb4bd014aa437d" title='Last modified by Wataru Tsukagoshi | Jun 23, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/1ce8e5cf221d58dc24b65548eb68947ad84c9cb5" title='Last modified by Wataru Tsukagoshi | Jun 23, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>Jun 23, 2021</span>
     </a>
