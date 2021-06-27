@@ -15,7 +15,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.af6f9f0241daa65c839a0408a3a44b31ba1ff831124af3c0dd3be318a5451061.js" integrity="sha256-r2&#43;fAkHaplyDmgQIo6RLMbof&#43;DESSvPA3TvjGKVFEGE="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.f5e1406b971fbfea39fa276baae69384e050d1ed5f53018889762786cc74f53b.js" integrity="sha256-9eFAa5cfv&#43;o5&#43;idrquaThOBQ0e1fUwGIiXYnhsx09Ts="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -166,10 +166,14 @@ staticを書くとそのメソッドは静的メソッドとなり、外部の�
   <label for="tabs-func-2">Javascript</label>
   <div class="book-tabs-content markdown-inner"><p>Javascriptでは<strong>関数</strong>と<strong>メソッド</strong>で意味合いが微妙に異なるので注意。</p>
 <h2 id="関数">関数</h2>
-<p>関数について、Javascriptでは<strong>function</strong>キーワードを用いて関数を定義する。</p>
+<p>関数について、Javascriptでは<strong>function</strong>キーワードを用いる方法と、<strong>Function</strong>コンストラクタを用いて定義する方法がある。</p>
 <pre><code>function 関数名(引数) {
     //関数内の処理
 }
+
+//または
+
+var オブジェクト名 = new Function([引数1[,引数2]],&quot;処理&quot;)
 </code></pre><p>引数は0個でも、複数個でも設定できる。</p>
 <p>戻り値を設定したい場合は、<strong>return</strong>文を使って戻したい値を記載する。</p>
 <p>また、Javascriptでは<strong>無名関数</strong>という使用があり、変数に直接関数を代入することができる。</p>
