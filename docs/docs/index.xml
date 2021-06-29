@@ -1358,6 +1358,15 @@
     </item>
     
     <item>
+      <title>大域変数と局所変数（グローバルオブジェクトとCallオブジェクト）</title>
+      <link>https://WAT36.github.io/pages/docs/programming/other/global/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WAT36.github.io/pages/docs/programming/other/global/</guid>
+      <description>大域変数と局所変数（グローバルオブジェクトとCallオブジェクト） #</description>
+    </item>
+    
+    <item>
       <title>定数</title>
       <link>https://WAT36.github.io/pages/docs/programming/other/constant/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

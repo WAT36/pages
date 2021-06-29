@@ -20,5 +20,6 @@ bookToc: false
 - [正規表現]({{< relref "/docs/programming/other/re.md" >}})
 - [ジェネリクス]({{< relref "/docs/programming/other/generics.md" >}})
 - [Strictモード(Javascript)]({{< relref "/docs/programming/other/js_strict.md" >}})
+- [大域変数と局所変数（グローバルオブジェクトとCallオブジェクト）]({{< relref "/docs/programming/other/global.md" >}})
 - Web通信
      - Webリクエストを送る・レスポンスを受け取る
