@@ -71,5 +71,58 @@ Javascriptはスクリプトを読み込んだ時に、**グローバルオブ�
     </tr>
 </table>
 
+## グローバル関数
+
+グローバル関数はグローバルオブジェクトに含まれる関数である（グローバルオブジェクトそのものでは無い）。グローバル関数はオブジェクトのインスタンス化不要で利用できる。
+
+代表的なグローバル関数は以下の通り。
+
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">関数名</th>
+        <th style="border:none;">説明</th>
+    </thead>
+    <tr>
+        <td style="border:none;">decodeURI()</td>
+        <td style="border:none;">URIをデコード</td>
+    </tr>
+    <tr>
+        <td style="border:none;">decodeURIComponnent()</td>
+        <td style="border:none;">URIの要素をデコード</td>
+    </tr>
+    <tr>
+        <td style="border:none;">encodeURI()</td>
+        <td style="border:none;">URIをエンコード</td>
+    </tr>
+    <tr>
+        <td style="border:none;">encodeURIComponent()</td>
+        <td style="border:none;">URIの要素をエンコード</td>
+    </tr>
+    <tr>
+        <td style="border:none;">escape()</td>
+        <td style="border:none;">文字列を16進数文字列を変換</td>
+    </tr>
+    <tr>
+        <td style="border:none;">eval()</td>
+        <td style="border:none;">文字列を評価する(演算)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">isFinite()</td>
+        <td style="border:none;">有限か否かを判定</td>
+    </tr>
+    <tr>
+        <td style="border:none;">isNaN()</td>
+        <td style="border:none;">NaN(非数値)か否かを判定する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">parseFloat()</td>
+        <td style="border:none;">文字列を浮動小数点数に変換</td>
+    </tr>
+    <tr>
+        <td style="border:none;">parseInt()</td>
+        <td style="border:none;">文字列を整数に変換</td>
+    </tr>
+</table>
+
 
 ## クロージャ
