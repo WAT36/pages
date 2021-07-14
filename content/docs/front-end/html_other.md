@@ -194,6 +194,23 @@ script要素は、文書内に実行できるコードを組み込むための�
 
 コードは要素内容として直接書くか、src属性にコードのアドレスを指定して読み込ませる。
 
+例えば、HTMLコード内でJavascriptを適用させたい場合は、scriptタグを書きtype属性に```text/javascript```または```application/javascript```と指定し、内部にJavascriptコードを記載する。
+
+外部ファイルを組み込ませたい場合は、src属性を書いてファイル名を指定する。
+
+（以下例）
+
+```html
+・・・
+<script type="text/javascript">
+    //Javascriptコードを記載する
+    //
+</script>
+・・・
+<script src="組み込ませたい外部ファイル名">
+・・・
+```
+
 ## noscript要素
 
 noscript要素は、script要素で組み込んだコード(スクリプト)が無効であった場合に利用される要素である。

@@ -15,7 +15,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.6c9254eb474c978bb0fc6275f2ba57f2441252503fbe3510de9dba73f4b49d16.js" integrity="sha256-bJJU60dMl4uw/GJ18rpX8kQSUlA/vjUQ3p26c/S0nRY="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.890c326e6d854b1737f1267e34a260c2804561dee9469d671897626bf5f63fbf.js" integrity="sha256-iQwybm2FSxc38SZ&#43;NKJgwoBFYd7pRp1nGJdia/X2P78="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -302,7 +302,18 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <p>script要素は、文書内に実行できるコードを組み込むための要素である。</p>
 <p>コードは要素内容として直接書くか、src属性にコードのアドレスを指定して読み込ませる。</p>
-<h2 id="noscript要素">
+<p>例えば、HTMLコード内でJavascriptを適用させたい場合は、scriptタグを書きtype属性に<code>text/javascript</code>または<code>application/javascript</code>と指定し、内部にJavascriptコードを記載する。</p>
+<p>外部ファイルを組み込ませたい場合は、src属性を書いてファイル名を指定する。</p>
+<p>（以下例）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">・・・
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
+    <span style="color:#75715e">//Javascriptコードを記載する
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>&lt;/<span style="color:#f92672">script</span>&gt;
+・・・
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;組み込ませたい外部ファイル名&#34;</span>&gt;
+・・・
+</code></pre></div><h2 id="noscript要素">
   noscript要素
   <a class="anchor" href="#noscript%e8%a6%81%e7%b4%a0">#</a>
 </h2>
