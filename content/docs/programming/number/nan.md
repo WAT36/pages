@@ -19,6 +19,55 @@ weight: 1
 {{< tabs "and" >}}
 {{< tab "Java" >}}
 
+Javaでは通常NaNが出る事はないが、数値演算のライブラリであるMathクラスを利用した演算でNaNが得られることがある。
+
+例えば負の数の平方根を求めたり、それこそ0を0で除算したりなどである。ただし、0除算は通常の場合実行時エラーが発生するので注意。
+
+例を以下に示す。
+
+```java
+import java.lang.Math;
+
+class Nan {
+    public static void main(String args[]){
+        //-2の平方根
+        double d1 = -2.0;
+        System.out.println("sqrt(" + d1 + ") == " + Math.sqrt(d1));
+        //0.0/0.0
+        System.out.println("0.0/0.0 == " + (0.0/0.0) );
+
+        //intだと実行時エラーが発生します
+        System.out.println("0/0 == " + (0/0) );
+    }
+}
+```
+
+実行結果
+
+```
+$ java Nan
+sqrt(-2.0) == NaN
+0.0/0.0 == NaN
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+        at Nan.main(Nan.java:12)
+```
+
+また、このNaNは自分自身及び全ての数値と等しくない性質を持つため、比較演算子で比較してもfalseになる。
+
+NaNであるかを判定するには、Double.isNaN()またはFloat.isNaN()メソッドを用いて判定する。
+
+```java
+//(↑のコードのクラス内に追記する形で)
+//NaNの判定
+System.out.println(Double.isNaN(0.0/0.0));
+```
+
+実行結果
+
+```
+true
+```
+
 {{< /tab >}}
 {{< tab "Python" >}}
 

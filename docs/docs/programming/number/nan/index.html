@@ -10,12 +10,12 @@
 <meta property="og:description" content="NaN # NaNとは数値では無い値(Not a Number)のことを表す値で、プログラムで数値計算をする際に、正常な演算結果が得られなかったことを示" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/number/nan/" />
-<meta property="article:modified_time" content="2021-07-15T09:06:31+09:00" />
+<meta property="article:modified_time" content="2021-07-15T22:17:56+09:00" />
 <title>NaN | WAT Notes</title>
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.57cccd9a442c23d1c555be6771cdde48088ca9f7c9dba367e91730e77d933f70.js" integrity="sha256-V8zNmkQsI9HFVb5ncc3eSAiMqffJ26Nn6Rcw532TP3A="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.a54ee4aa9b552833c602338309ac6ca2936b3dcd725aebf7d9547572c432ab53.js" integrity="sha256-pU7kqptVKDPGAjODCaxsopNrPc1yWuv32VR1csQyq1M="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -158,7 +158,37 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs"><input type="radio" class="toggle" name="tabs-and" id="tabs-and-0" checked="checked" />
   <label for="tabs-and-0">Java</label>
-  <div class="book-tabs-content markdown-inner"></div><input type="radio" class="toggle" name="tabs-and" id="tabs-and-1"  />
+  <div class="book-tabs-content markdown-inner"><p>Javaでは通常NaNが出る事はないが、数値演算のライブラリであるMathクラスを利用した演算でNaNが得られることがある。</p>
+<p>例えば負の数の平方根を求めたり、それこそ0を0で除算したりなどである。ただし、0除算は通常の場合実行時エラーが発生するので注意。</p>
+<p>例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.lang.Math<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Nan</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[]){</span>
+        <span style="color:#75715e">//-2の平方根
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">double</span> d1 <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>2<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">;</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;sqrt(&#34;</span> <span style="color:#f92672">+</span> d1 <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;) == &#34;</span> <span style="color:#f92672">+</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">sqrt</span><span style="color:#f92672">(</span>d1<span style="color:#f92672">));</span>
+        <span style="color:#75715e">//0.0/0.0
+</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;0.0/0.0 == &#34;</span> <span style="color:#f92672">+</span> <span style="color:#f92672">(</span>0<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">/</span>0<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">)</span> <span style="color:#f92672">);</span>
+
+        <span style="color:#75715e">//intだと実行時エラーが発生します
+</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;0/0 == &#34;</span> <span style="color:#f92672">+</span> <span style="color:#f92672">(</span>0<span style="color:#f92672">/</span>0<span style="color:#f92672">)</span> <span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>実行結果</p>
+<pre><code>$ java Nan
+sqrt(-2.0) == NaN
+0.0/0.0 == NaN
+Exception in thread &quot;main&quot; java.lang.ArithmeticException: / by zero
+        at Nan.main(Nan.java:12)
+</code></pre><p>また、このNaNは自分自身及び全ての数値と等しくない性質を持つため、比較演算子で比較してもfalseになる。</p>
+<p>NaNであるかを判定するには、Double.isNaN()またはFloat.isNaN()メソッドを用いて判定する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//(↑のコードのクラス内に追記する形で)
+</span><span style="color:#75715e">//NaNの判定
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>Double<span style="color:#f92672">.</span><span style="color:#a6e22e">isNaN</span><span style="color:#f92672">(</span>0<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">/</span>0<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">));</span>
+</code></pre></div><p>実行結果</p>
+<pre><code>true
+</code></pre></div><input type="radio" class="toggle" name="tabs-and" id="tabs-and-1"  />
   <label for="tabs-and-1">Python</label>
   <div class="book-tabs-content markdown-inner"><p>Pythonでは通常はNaNが出る事はない。そのような値が出るような演算をした場合は、基本エラーが出力される。</p>
 <p>しかし、NumpyやPandasといったような、データ分析で用いられるライブラリではNaNが出力されることがよくある。</p>
@@ -211,7 +241,7 @@ true
 
 
 
-  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/e3db9ab59c5ac138fb5cf7aff04aac0bba0ae4bd" title='Last modified by Wataru Tsukagoshi | Jul 15, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/7f178e29f684db8475f3264d573d9e6ca14b60c8" title='Last modified by Wataru Tsukagoshi | Jul 15, 2021' target="_blank" rel="noopener">
       <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>Jul 15, 2021</span>
     </a>
