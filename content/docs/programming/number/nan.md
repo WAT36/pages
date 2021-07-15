@@ -22,6 +22,53 @@ weight: 1
 {{< /tab >}}
 {{< tab "Python" >}}
 
+Pythonでは通常はNaNが出る事はない。そのような値が出るような演算をした場合は、基本エラーが出力される。
+
+しかし、NumpyやPandasといったような、データ分析で用いられるライブラリではNaNが出力されることがよくある。
+
+また、通常の数値演算で出力されることもあるが、これらライブラリで用いられるNaNは冒頭で述べた意味とは違い、**データが正しく読み取られなかった**値（欠損値）という意味で使われることが多い。
+
+例えば以下のcsvをnumpyで読み取った結果を以下に示す。
+
+csv(test.csv)
+
+```
+1,2,,,3,4
+```
+
+python
+
+```python
+>>> import numpy as np
+>>> 
+>>> a = np.genfromtxt('test.csv', delimiter=',')
+>>> print(a)
+[ 1.  2. nan nan  3.  4.]
+>>> #値がなく正しく読み取られなかった箇所がnanとなる
+```
+
+意図的にNaNを出したい場合は、```numpy.nan```や```float('nan')```を使う。
+
+```python
+>>> float('nan')
+nan
+>>> 
+```
+
+この欠損値NaNは、自分自身及び全ての数値と等しくない性質を持つため、比較演算子で比較してもfalseになる。
+
+値がNaNであるかを判定するには、```numpy.isnan()```か```math.isnan()```を利用する。
+
+```python
+>>> #↑の続き
+>>> import math
+>>> math.isnan(a[2])
+True
+>>> math.isnan(a[0])
+False
+>>> 
+```
+
 {{< /tab >}}
 {{< tab "Javascript" >}}
 
