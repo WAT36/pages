@@ -13,12 +13,37 @@ weight: 1
 
 **Infinity**とは、全ての値より大きい値を示す値である。プログラムでは遥かに大きい値などを指定したい時んい利用することが多い。言語にもよるが計算で得られることもある。
 
+Infinityの性質としては、どんな数値よりも大きい値として扱われること、またどのような(有限の)値を四則演算してもInfinityになることである。
+ただし例外として、Infinityに0をかける、Infinityで割るなどすると、NaNが出力される。
+
 以下、各言語によるInfinityについてを記載する。
 
 {{< tabs "inf" >}}
 {{< tab "Java" >}}
 
+Javaでは浮動小数点型を扱うDouble、Float型での演算の際にInfinityが得られることがある。
 
+明示的に出したい場合はDouble型及びFloat型にフィールド変数```POSITIVE_INFINITY```があるのでそれを指定して利用する。
+
+例を以下に示す。
+
+```java
+class Infinity {
+    public static void main(String args[]){
+        // 数値を0除算するとInfinity (0.0/0.0はNaNになるので注意)
+        System.out.println( 2.0/0.0 );
+        // 明示的に出したい時
+        System.out.println( Double.POSITIVE_INFINITY );
+    }
+}
+```
+
+実行結果
+
+```
+Infinity
+Infinity
+```
 
 {{< /tab >}}
 {{< tab "Python" >}}
