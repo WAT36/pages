@@ -23,7 +23,23 @@ weight: 1
 {{< /tab >}}
 {{< tab "Python" >}}
 
+Pythonでは浮動小数点数を表すfloat型に無限大を表す数である**inf**が設定されている。
 
+定義はコンストラクタ```float()```の引数に```'inf'```を指定すると生成できる。（'Infinity'でも良い）
+
+```python
+float('inf')
+```
+
+javascriptでは通常の数値を0で除算した時にInfinityが得られたが、Pythonではエラーになるので注意。
+
+```python
+>>> 1/0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: division by zero
+>>> 
+```
 
 {{< /tab >}}
 {{< tab "Javascript" >}}
