@@ -156,8 +156,8 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-<div class="book-tabs"><input type="radio" class="toggle" name="tabs-and" id="tabs-and-0" checked="checked" />
-  <label for="tabs-and-0">Java</label>
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-nan" id="tabs-nan-0" checked="checked" />
+  <label for="tabs-nan-0">Java</label>
   <div class="book-tabs-content markdown-inner"><p>Javaでは通常NaNが出る事はないが、数値演算のライブラリであるMathクラスを利用した演算でNaNが得られることがある。</p>
 <p>例えば負の数の平方根を求めたり、それこそ0を0で除算したりなどである。ただし、0除算は通常の場合実行時エラーが発生するので注意。</p>
 <p>例を以下に示す。</p>
@@ -188,8 +188,8 @@ Exception in thread &quot;main&quot; java.lang.ArithmeticException: / by zero
 </span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>Double<span style="color:#f92672">.</span><span style="color:#a6e22e">isNaN</span><span style="color:#f92672">(</span>0<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">/</span>0<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">));</span>
 </code></pre></div><p>実行結果</p>
 <pre><code>true
-</code></pre></div><input type="radio" class="toggle" name="tabs-and" id="tabs-and-1"  />
-  <label for="tabs-and-1">Python</label>
+</code></pre></div><input type="radio" class="toggle" name="tabs-nan" id="tabs-nan-1"  />
+  <label for="tabs-nan-1">Python</label>
   <div class="book-tabs-content markdown-inner"><p>Pythonでは通常はNaNが出る事はない。そのような値が出るような演算をした場合は、基本エラーが出力される。</p>
 <p>しかし、NumpyやPandasといったような、データ分析で用いられるライブラリではNaNが出力されることがよくある。</p>
 <p>また、通常の数値演算で出力されることもあるが、これらライブラリで用いられるNaNは冒頭で述べた意味とは違い、<strong>データが正しく読み取られなかった</strong>値（欠損値）という意味で使われることが多い。</p>
@@ -216,8 +216,8 @@ True
 <span style="color:#f92672">&gt;&gt;&gt;</span> math<span style="color:#f92672">.</span>isnan(a[<span style="color:#ae81ff">0</span>])
 False
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
-</code></pre></div></div><input type="radio" class="toggle" name="tabs-and" id="tabs-and-2"  />
-  <label for="tabs-and-2">Javascript</label>
+</code></pre></div></div><input type="radio" class="toggle" name="tabs-nan" id="tabs-nan-2"  />
+  <label for="tabs-nan-2">Javascript</label>
   <div class="book-tabs-content markdown-inner"><p>Javascriptでは例の通り、0を0で除算するなど、数値では表せない不正な値を表現する際にNaNが使われる。</p>
 <p>また、このNaNは自分自身及び全ての数値と等しくない性質を持つため、比較演算子で比較してもfalseになる。</p>
 <p>また、グローバルオブジェクトの**isNaN()**を使用すると、NaNかどうかを判定できる。</p>
