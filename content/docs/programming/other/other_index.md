@@ -17,6 +17,7 @@ bookToc: false
 - [関数、メソッドのヘルプを見る(Python)]({{< relref "/docs/programming/other/help.md" >}})
 - [コメントアウト]({{< relref "/docs/programming/other/comment.md" >}})
 - [Null]({{< relref "/docs/programming/other/null.md" >}})
+- [undefined(javascript)]({{< relref "/docs/programming/other/null.md" >}})
 - [正規表現]({{< relref "/docs/programming/other/re.md" >}})
 - [ジェネリクス]({{< relref "/docs/programming/other/generics.md" >}})
 - [Strictモード(Javascript)]({{< relref "/docs/programming/other/js_strict.md" >}})
