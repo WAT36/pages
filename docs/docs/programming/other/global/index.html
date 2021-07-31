@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="大域変数と局所変数（グローバルオブジェクトとCallオブジェクト） # 大域変数と局所変数（グローバルオブジェクトとCallオブジェクト）につい">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="大域変数と局所変数（グローバルオブジェクトとCallオブジェクト）" />
+<meta property="og:description" content="大域変数と局所変数（グローバルオブジェクトとCallオブジェクト） # 大域変数と局所変数（グローバルオブジェクトとCallオブジェクト）につい" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WAT36.github.io/pages/docs/programming/other/global/" />
+<meta property="article:modified_time" content="2021-07-07T23:25:56+09:00" />
+<title>大域変数と局所変数（グローバルオブジェクトとCallオブジェクト） | WAT Notes</title>
+<link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
+<link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
+<script defer src="https://WAT36.github.io/pages/en.search.min.39c7ef2db0a52f85f7f25b444fa3a09bb9f61129a1f02ddf011ff464b03cc569.js" integrity="sha256-OcfvLbClL4X38ltET6Ogm7n2ESmh8C3fAR/0ZLA8xWk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-161908250-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://WAT36.github.io/pages/"><span>WAT Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><a href="https://WAT36.github.io/pages/docs/about/aboutme/"><strong>About me</strong></a></li>
+</ul>
+<details>
+ <summary>Notes</summary>
+<ul>
+<li>
+<ul>
+<li><a href="https://WAT36.github.io/pages/docs/programming/jp_index/"><strong>プログラミング</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/ctf/ctf_index/"><strong>CTF</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/front-end/front_index/"><strong>フロントエンド</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/cloud/aws/aws_index/"><strong>クラウド(AWS)</strong></a></li>
+<li><a href="https://WAT36.github.io/pages/docs/container/container_index/"><strong>コンテナ</strong></a></li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><a href="https://WAT36.github.io/pages/posts/"><strong>Blog</strong></a></p>
+</li>
+<li>
+<p><a href="https://WAT36.github.io/pages/docs/about/disclaimer/">免責事項</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://WAT36.github.io/pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>大域変数と局所変数（グローバルオブジェクトとCallオブジェクト）</strong>
+
+  <label for="toc-control">
+    
+    <img src="https://WAT36.github.io/pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#グローバルオブジェクトとcallオブジェクト">グローバルオブジェクトとCallオブジェクト</a></li>
+    <li><a href="#グローバルオブジェクト">グローバルオブジェクト</a></li>
+    <li><a href="#グローバル関数">グローバル関数</a></li>
+    <li><a href="#クロージャ">クロージャ</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="大域変数と局所変数グローバルオブジェクトとcallオブジェクト">
+  大域変数と局所変数（グローバルオブジェクトとCallオブジェクト）
+  <a class="anchor" href="#%e5%a4%a7%e5%9f%9f%e5%a4%89%e6%95%b0%e3%81%a8%e5%b1%80%e6%89%80%e5%a4%89%e6%95%b0%e3%82%b0%e3%83%ad%e3%83%bc%e3%83%90%e3%83%ab%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%a8call%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88">#</a>
+</h1>
+<p>大域変数と局所変数（グローバルオブジェクトとCallオブジェクト）についてを述べる。</p>
+<h2 id="グローバルオブジェクトとcallオブジェクト">
+  グローバルオブジェクトとCallオブジェクト
+  <a class="anchor" href="#%e3%82%b0%e3%83%ad%e3%83%bc%e3%83%90%e3%83%ab%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%a8call%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88">#</a>
+</h2>
+<p>Javascriptはスクリプトを読み込んだ時に、<strong>グローバルオブジェクト</strong>なるものを自動で生成する。グローバルオブジェクトはグローバルスコープを持ったグローバル変数やグローバル関数を管理する。</p>
+<p>同様に、関数を呼んだ時には<strong>Callオブジェクト</strong>が生成される。Callオブジェクトには関数のスコープ内での変数や関数が管理される。</p>
+<p>変数が参照された時、それが関数内でだった場合はその関数に対応したCallオブジェクトから変数を探し、無い場合はその上位のCallオブジェクト(あるいはグローバルオブジェクト)に変数を探していく。</p>
+<h2 id="グローバルオブジェクト">
+  グローバルオブジェクト
+  <a class="anchor" href="#%e3%82%b0%e3%83%ad%e3%83%bc%e3%83%90%e3%83%ab%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88">#</a>
+</h2>
+<p>グローバルオブジェクトはブラウザが新しいページを読み込む時に自動で生成されるオブジェクトで、インスタンスの記述は不要である。関数やプロパティを参照する際も、インスタンス名の記述は不要である。</p>
+<p>代表的なグローバルオブジェクトは以下の通り。</p>
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">オブジェクト名</th>
+        <th style="border:none;">説明</th>
+    </thead>
+    <tr>
+        <td style="border:none;">Array</td>
+        <td style="border:none;">配列オブジェクト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">Boolean</td>
+        <td style="border:none;">真偽値オブジェクト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">Date</td>
+        <td style="border:none;">日付オブジェクト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">Error</td>
+        <td style="border:none;">エラーオブジェクト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">JSON</td>
+        <td style="border:none;">JSONオブジェクト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">Math</td>
+        <td style="border:none;">Mathオブジェクト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">Number</td>
+        <td style="border:none;">数値オブジェクト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">Object</td>
+        <td style="border:none;">オブジェクト</td>
+    </tr>
+    <tr>
+        <td style="border:none;">String</td>
+        <td style="border:none;">文字列オブジェクト</td>
+    </tr>
+</table>
+<h2 id="グローバル関数">
+  グローバル関数
+  <a class="anchor" href="#%e3%82%b0%e3%83%ad%e3%83%bc%e3%83%90%e3%83%ab%e9%96%a2%e6%95%b0">#</a>
+</h2>
+<p>グローバル関数はグローバルオブジェクトに含まれる関数である（グローバルオブジェクトそのものでは無い）。グローバル関数はオブジェクトのインスタンス化不要で利用できる。</p>
+<p>代表的なグローバル関数は以下の通り。</p>
+<table style="border:none;">
+    <thead>
+        <th style="border:none;">関数名</th>
+        <th style="border:none;">説明</th>
+    </thead>
+    <tr>
+        <td style="border:none;">decodeURI()</td>
+        <td style="border:none;">URIをデコード</td>
+    </tr>
+    <tr>
+        <td style="border:none;">decodeURIComponnent()</td>
+        <td style="border:none;">URIの要素をデコード</td>
+    </tr>
+    <tr>
+        <td style="border:none;">encodeURI()</td>
+        <td style="border:none;">URIをエンコード</td>
+    </tr>
+    <tr>
+        <td style="border:none;">encodeURIComponent()</td>
+        <td style="border:none;">URIの要素をエンコード</td>
+    </tr>
+    <tr>
+        <td style="border:none;">escape()</td>
+        <td style="border:none;">文字列を16進数文字列を変換</td>
+    </tr>
+    <tr>
+        <td style="border:none;">eval()</td>
+        <td style="border:none;">文字列を評価する(演算)</td>
+    </tr>
+    <tr>
+        <td style="border:none;">isFinite()</td>
+        <td style="border:none;">有限か否かを判定</td>
+    </tr>
+    <tr>
+        <td style="border:none;">isNaN()</td>
+        <td style="border:none;">NaN(非数値)か否かを判定する</td>
+    </tr>
+    <tr>
+        <td style="border:none;">parseFloat()</td>
+        <td style="border:none;">文字列を浮動小数点数に変換</td>
+    </tr>
+    <tr>
+        <td style="border:none;">parseInt()</td>
+        <td style="border:none;">文字列を整数に変換</td>
+    </tr>
+</table>
+<h2 id="クロージャ">
+  クロージャ
+  <a class="anchor" href="#%e3%82%af%e3%83%ad%e3%83%bc%e3%82%b8%e3%83%a3">#</a>
+</h2>
+<p>Javascriptにおけるクロージャとは、関数と変数が一体となったデータ構造である。この構造により、変数の値を保持する処理を簡潔に記述することができる。</p>
+<p>関数内の変数は関数の処理が終わると破棄されるが、クロージャではガベージコレクションの対象とならず、変数への参照が残ったままになる。</p>
+<p>クロージャの例としては以下の通り。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//クロージャ
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">closure</span>() {
+
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;
+
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>(){
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span><span style="color:#f92672">++</span>;
+    }
+}
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">closure</span>();
+
+<span style="color:#75715e">//c()を呼び出すごとにカウントアップ。クロージャなので値が残る
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">c</span>())
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">c</span>())
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">c</span>())
+</code></pre></div><p>実行結果</p>
+<pre><code>1
+2
+3
+</code></pre></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/c831835dce0ed370deb7483507e6abaee0323426" title='Last modified by Wataru Tsukagoshi | Jul 7, 2021' target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jul 7, 2021</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content//docs/programming/other/global.md" target="_blank" rel="noopener">
+      <img src="https://WAT36.github.io/pages/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#グローバルオブジェクトとcallオブジェクト">グローバルオブジェクトとCallオブジェクト</a></li>
+    <li><a href="#グローバルオブジェクト">グローバルオブジェクト</a></li>
+    <li><a href="#グローバル関数">グローバル関数</a></li>
+    <li><a href="#クロージャ">クロージャ</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
