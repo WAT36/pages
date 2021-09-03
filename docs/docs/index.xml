@@ -693,15 +693,6 @@
     
     <item>
       <title>ジェネレータ関数</title>
-      <link>https://WAT36.github.io/pages/docs/programming/class_func/generator-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/class_func/generator-2/</guid>
-      <description>ジェネレータ関数 # ジェネレータ関数とは、呼び出されるたびにこtなる値を返す関数の事である。例としては乱数がある。 ジェネレータ関数が普通の関数</description>
-    </item>
-    
-    <item>
-      <title>ジェネレータ関数</title>
       <link>https://WAT36.github.io/pages/docs/programming/class_func/generator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -895,7 +886,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://WAT36.github.io/pages/docs/front-end/form/</guid>
-      <description>フォーム # フォームを作成するための要素についてを述べる。 form要素 # form要素はフォームを構成する要素である。 使用する主な属性は以下の通</description>
+      <description>フォーム # HTMLにおけるフォームとは、Webサーバーに情報を送信するための文書の区間のことで、 &amp;lt;form&amp;gt;タグを用いて表す。 フ</description>
     </item>
     
     <item>
@@ -1386,15 +1377,6 @@
     
     <item>
       <title>大域変数と局所変数（グローバルオブジェクトとCallオブジェクト）</title>
-      <link>https://WAT36.github.io/pages/docs/programming/other/global-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/other/global-2/</guid>
-      <description>大域変数と局所変数（グローバルオブジェクトとCallオブジェクト） # 大域変数と局所変数（グローバルオブジェクトとCallオブジェクト）につい</description>
-    </item>
-    
-    <item>
-      <title>大域変数と局所変数（グローバルオブジェクトとCallオブジェクト）</title>
       <link>https://WAT36.github.io/pages/docs/programming/other/global/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1661,15 +1643,6 @@
       
       <guid>https://WAT36.github.io/pages/docs/programming/machine_learning/distortion_measure/</guid>
       <description>歪み尺度 # 教師あり学習では、学習が進み精度が高くなることの指標として、平均交差エントロピー誤差のような関数を利用していた。 教師なし学習、今回</description>
-    </item>
-    
-    <item>
-      <title>比較演算子</title>
-      <link>https://WAT36.github.io/pages/docs/programming/number/comparison_operator-3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://WAT36.github.io/pages/docs/programming/number/comparison_operator-3/</guid>
-      <description>比較演算子 # 比較演算子についてをまとめておく。 Java Javaでの主な比較演算子は以下の通り。 演算子 意味 例 &amp;lt; 未満 a &amp;lt; b &amp;lt;= 以下 a &amp;lt;= b &amp;gt; より大きい a &amp;gt;</description>
     </item>
     
     <item>

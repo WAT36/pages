@@ -7,6 +7,9 @@ weight: 1
 
 # フォーム
 
+HTMLにおける**フォーム**とは、Webサーバーに情報を送信するための文書の区間のことで、
+```<form>```タグを用いて表す。
+
 フォームを作成するための要素についてを述べる。
 
 ## form要素
@@ -20,19 +23,19 @@ form要素はフォームを構成する要素である。
         <td style="border:none;">・</td>
         <td style="border:none;">action</td>
         <td style="border:none;">　・・・　</td>
-        <td style="border:none;">フォームの送信先のURL</td>
+        <td style="border:none;">フォームの送信先のURL。＜button＞、＜input type="submit"＞、＜input type="image"＞、formaction属性を指定した場合、上書きされる。</td>
     </tr>
     <tr>
         <td style="border:none;">・</td>
         <td style="border:none;">autocomplete</td>
         <td style="border:none;">　・・・　</td>
-        <td style="border:none;">フォーム内のオートコンプリート機能のデフォルト値</td>
+        <td style="border:none;">フォーム内のオートコンプリート機能の指定。<br>off・・・オートコンプリートなし<br>on・・・オートコンプリートあり</td>
     </tr>
     <tr>
         <td style="border:none;">・</td>
         <td style="border:none;">method</td>
         <td style="border:none;">　・・・　</td>
-        <td style="border:none;">フォームのデータを送信する際のHTTPメソッドを指定</td>
+        <td style="border:none;">フォームのデータを送信する際のHTTPメソッドを指定。<br>get,postが指定可能</td>
     </tr>
     <tr>
         <td style="border:none;">・</td>
