@@ -36,7 +36,7 @@ https://hoge.hoge/sitemap.html
 
 コンテンツによっては異なるオリジンのコンテンツ(CSSやフォントなど)で構成される場合もある。
 
-そのような異なるオリジンからのアクセスについて、制御を規定しているのがCORS(Cross-Origin Resource Sharing)になる。
+そのような異なるオリジンからのアクセスについて、制御を規定しているのが**CORS(Cross-Origin Resource Sharing)**になる。
 
 CORSでは、クライアントとサーバ間のHTTPの仕様と、リクエストを受けるサーバ側で許可するオリジン、HTTPメソッド、HTTPヘッダなどによるアクセス制御を規定する。
 
