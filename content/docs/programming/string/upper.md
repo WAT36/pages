@@ -39,4 +39,24 @@ Pythonは文字列型のstrオブジェクトにメソッド **upper()** があ�
 
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+```javascript
+var s = "test"
+s = s.toUpperCase();
+
+console.log(s);
+```
+
+実行結果
+
+```
+TEST
+```
+
+Javascriptではメソッド **toUpperCase()** により文字列を全て大文字にできる。<br>
+ただし、これも文字列自体が変換されるわけではないので、反映させたい場合は出力を元の変数に代入してやる必要がある。
+
+
+{{< /tab >}}
 {{< /tabs >}}
