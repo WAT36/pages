@@ -39,4 +39,24 @@ Pythonは文字列型のstrオブジェクトにメソッド **lower()** があ�
 
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+```javascript
+var s = "TEST"
+s = s.toLowerCase();
+
+console.log(s);
+```
+
+実行結果
+
+```
+test
+```
+
+Javascriptではメソッド **toLowerCase()** により文字列を全て小文字にできる。<br>
+ただし、これも文字列自体が変換されるわけではないので、反映させたい場合は出力を元の変数に代入してやる必要がある。
+
+
+{{< /tab >}}
 {{< /tabs >}}
