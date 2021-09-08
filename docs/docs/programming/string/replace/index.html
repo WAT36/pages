@@ -16,7 +16,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.7e6ae839b6975ec87ff56ebad058431295bf61dbece30750ad2e19fb8906c8f5.js" integrity="sha256-fmroObaXXsh/9W660FhDEpW/Ydvs4wdQrS4Z&#43;4kGyPU="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.f0efeddca7f1ab3d8605bbb7f38020b010041dc998d55fd8aef0c9c7c31bc206.js" integrity="sha256-8O/t3Kfxqz2GBbu384AgsBAEHcmY1V/YrvDJx8MbwgY="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -170,7 +170,25 @@ t <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>repl
 
 t <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34;t&#34;</span>,<span style="color:#e6db74">&#34;b&#34;</span>,<span style="color:#ae81ff">1</span>)
 <span style="color:#66d9ef">print</span>(t)  <span style="color:#75715e"># &#34;best&#34;</span>
-</code></pre></div></div></div>
+</code></pre></div></div><input type="radio" class="toggle" name="tabs-string_replace" id="tabs-string_replace-2"  />
+  <label for="tabs-string_replace-2">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>Javscriptでは文字列のにメソッド <strong>replace()</strong> があり、これにより文字列中の文字を置換できる。<br>
+使用法は以下の通り。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">文字列</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">old</span>,<span style="color:#66d9ef">new</span>);
+</code></pre></div><p>置換対象の文字列oldは、文字列の他に正規表現の形でも入力できる。</p>
+<p>文字列を入力した場合は最初の一致した箇所のみを置換し、正規表現の場合は一致した箇所全てを置換する。</p>
+<p>ただし、文字列自体が変換されるわけではないので、反映させたい場合は出力を元の変数に代入してやる必要がある。</p>
+<p>使用例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;test&#34;</span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">t</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;t&#34;</span>,<span style="color:#e6db74">&#34;b&#34;</span>)
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">t</span>)  <span style="color:#75715e">// &#34;best&#34;
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">t</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/t/g</span>,<span style="color:#e6db74">&#34;b&#34;</span>)
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">t</span>)  <span style="color:#75715e">// &#34;besb&#34;
+</span></code></pre></div><p>実行結果</p>
+<pre><code>best
+besb
+</code></pre></div></div>
 
 </article>
  

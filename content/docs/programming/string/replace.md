@@ -55,4 +55,38 @@ print(t)  # "best"
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javscriptでは文字列のにメソッド **replace()** があり、これにより文字列中の文字を置換できる。<br>
+使用法は以下の通り。
+
+```javascript
+文字列.replace(old,new);
+```
+
+置換対象の文字列oldは、文字列の他に正規表現の形でも入力できる。  
+
+文字列を入力した場合は最初の一致した箇所のみを置換し、正規表現の場合は一致した箇所全てを置換する。
+
+ただし、文字列自体が変換されるわけではないので、反映させたい場合は出力を元の変数に代入してやる必要がある。
+
+使用例を以下に示す。
+
+```javascript
+var s = "test"
+var t = s.replace("t","b")
+console.log(t)  // "best"
+
+t = s.replace(/t/g,"b")
+console.log(t)  // "besb"
+```
+
+実行結果
+
+```
+best
+besb
+```
+
+{{< /tab >}}
 {{< /tabs >}}
