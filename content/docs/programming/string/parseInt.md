@@ -72,4 +72,32 @@ ValueError: invalid literal for int() with base 10: '+'
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptで数値の文字列を数値型に変換したい時は、
+
+関数 **Number()**、**parseInt()**、**parseFloat()** を利用する。
+
+```javascript
+var s = "1"
+console.log(s); 
+
+//文字列->数値に変換
+console.log(Number(s));
+console.log(parseInt(s));
+console.log(parseFloat(s));
+```
+
+実行結果
+
+```
+1
+1
+1
+1
+```
+
+(ログだと分からんか・・)
+
+{{< /tab >}}
 {{< /tabs >}}
