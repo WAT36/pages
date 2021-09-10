@@ -16,7 +16,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.4a52a6ebe0414149031533ea1f40e07aba3f9e804300b06febab4b5fce218d4d.js" integrity="sha256-SlKm6&#43;BBQUkDFTPqH0Dgero/noBDALBv66tLX84hjU0="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.6f67fa14517efb6d8066b649593d40c040c008d6f097ccf352748dee33509bd1.js" integrity="sha256-b2f6FFF&#43;&#43;22AZrZJWT1AwEDACNbwl8zzUnSN7jNQm9E="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -186,7 +186,17 @@ https://github.com/alex-shpak/hugo-book
 <p>cf. 組み込み型 - split()
 <a href="https://docs.python.org/ja/3/library/stdtypes.html#str.split">https://docs.python.org/ja/3/library/stdtypes.html#str.split</a></p>
 </blockquote>
-</div></div>
+</div><input type="radio" class="toggle" name="tabs-ascii" id="tabs-ascii-2"  />
+  <label for="tabs-ascii-2">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>Javascriptで文字列を分割するにも同様に<strong>split</strong>関数を使う。<br>
+<code>文字列.split(区切り文字[,最大分割回数])</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;apple-banana-cherry-durian--&#34;</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39;-&#39;</span>);
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sp</span>)
+</code></pre></div><p>実行結果</p>
+<pre><code>[&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;, &quot;durian&quot;, &quot;&quot;, &quot;&quot;] (6)
+</code></pre></div></div>
 
 </article>
  

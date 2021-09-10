@@ -61,5 +61,25 @@ pythonで文字列を分割するには文字列(str)の**split**関数を使う
 > https://docs.python.org/ja/3/library/stdtypes.html#str.split
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptで文字列を分割するにも同様に**split**関数を使う。   
+`文字列.split(区切り文字[,最大分割回数])`   
+
+
+```javascript
+var s = "apple-banana-cherry-durian--"
+let sp = s.split('-');
+
+console.log(sp)
+```
+
+実行結果
+
+```
+["apple", "banana", "cherry", "durian", "", ""] (6)
+```
+
+{{< /tab >}}
 {{< /tabs >}}
 
