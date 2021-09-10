@@ -72,5 +72,27 @@ TypeError: ord() expected a character, but string of length 2 found
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptで文字から文字コードを取得するには、文字列の関数 **charCodeAt()** を利用する。
+引数には文字コードを取得したい文字列の何文字目かを入力する。
+
+```javascript
+var s = "abc"
+
+console.log(s.charCodeAt(0))
+console.log(s.charCodeAt(1))
+console.log(s.charCodeAt(2))
+```
+
+実行結果
+
+```
+97
+98
+99
+```
+
+{{< /tab >}}
 {{< /tabs >}}
 

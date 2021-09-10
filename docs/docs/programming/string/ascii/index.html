@@ -16,7 +16,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.863f7e3764f57d7ed80837923b9898bba3080c49fba165f2c59c7a969375f3cc.js" integrity="sha256-hj9&#43;N2T1fX7YCDeSO5iYu6MIDEn7oWXyxZx6lpN188w="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.4a52a6ebe0414149031533ea1f40e07aba3f9e804300b06febab4b5fce218d4d.js" integrity="sha256-SlKm6&#43;BBQUkDFTPqH0Dgero/noBDALBv66tLX84hjU0="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -191,7 +191,20 @@ Traceback (most recent call last):
 <span style="color:#e6db74">&#39;a&#39;</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> chr(<span style="color:#ae81ff">98</span>)
 <span style="color:#e6db74">&#39;b&#39;</span>
-</code></pre></div></div></div>
+</code></pre></div></div><input type="radio" class="toggle" name="tabs-ascii" id="tabs-ascii-2"  />
+  <label for="tabs-ascii-2">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>Javascriptで文字から文字コードを取得するには、文字列の関数 <strong>charCodeAt()</strong> を利用する。
+引数には文字コードを取得したい文字列の何文字目かを入力する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abc&#34;</span>
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">charCodeAt</span>(<span style="color:#ae81ff">0</span>))
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">charCodeAt</span>(<span style="color:#ae81ff">1</span>))
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">charCodeAt</span>(<span style="color:#ae81ff">2</span>))
+</code></pre></div><p>実行結果</p>
+<pre><code>97
+98
+99
+</code></pre></div></div>
 
 </article>
  
