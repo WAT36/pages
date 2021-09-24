@@ -15,7 +15,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.e8e53d77ce9858dc42aa267ba96656c997383a87720ddc3d02f25e8fb3521a6c.js" integrity="sha256-6OU9d86YWNxCqiZ7qWZWyZc4OodyDdw9AvJej7NSGmw="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.48585c0dcd6d3b4c69aea4636ed45fa17b300a0a9acbc8a228e1eeb4ebd387ef.js" integrity="sha256-SFhcDc1tO0xprqRjbtRfoXswCgqay8iiKOHutOvTh&#43;8="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -189,7 +189,21 @@ strの指定した範囲内だけで検索したい場合には、引数start,en
 <span style="color:#f92672">&gt;&gt;&gt;</span> s<span style="color:#f92672">.</span>rfind(<span style="color:#e6db74">&#34;a&#34;</span>) 
 <span style="color:#ae81ff">11</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span>
-</code></pre></div></div></div>
+</code></pre></div></div><input type="radio" class="toggle" name="tabs-find" id="tabs-find-2"  />
+  <label for="tabs-find-2">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>javascriptでは文字列Stringの関数**indexOf()**関数を使う。<br>
+<code>String.indexOf(serachvalue[, fromIndex])</code><br>
+searchvalueには文字列中で検索したい文字列を入力する。<br>
+実行結果には、Stringの中でsearchvalueが最初に現れる位置のインデックスが返される。<br>
+存在しない場合には-1が返る。<br>
+Stringの指定した位置からの範囲内だけで検索したい場合には、引数fromIndexに値を指定して実行する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;apple,banana,cherry&#34;</span> 
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#e6db74">&#34;banana&#34;</span>))
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#e6db74">&#34;banana&#34;</span>,<span style="color:#ae81ff">10</span>))
+</code></pre></div><p>実行結果</p>
+<pre><code>6
+-1
+</code></pre></div></div>
 
 </article>
  

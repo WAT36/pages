@@ -73,5 +73,28 @@ strの指定した範囲内だけで検索したい場合には、引数start,en
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+javascriptでは文字列Stringの関数**indexOf()**関数を使う。  
+`String.indexOf(serachvalue[, fromIndex])`  
+searchvalueには文字列中で検索したい文字列を入力する。  
+実行結果には、Stringの中でsearchvalueが最初に現れる位置のインデックスが返される。  
+存在しない場合には-1が返る。  
+Stringの指定した位置からの範囲内だけで検索したい場合には、引数fromIndexに値を指定して実行する。  
+
+```javascript
+let s = "apple,banana,cherry" 
+console.log(s.indexOf("banana"))
+console.log(s.indexOf("banana",10))
+```
+
+実行結果
+
+```
+6
+-1
+```
+
+{{< /tab >}}
 {{< /tabs >}}
 
