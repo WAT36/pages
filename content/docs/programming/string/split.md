@@ -60,6 +60,8 @@ pythonで文字列を分割するには文字列(str)の**split**関数を使う
 > cf. 組み込み型 - split() 
 > https://docs.python.org/ja/3/library/stdtypes.html#str.split
 
+また、改行文字で分割したいときは**splitlines()**関数を利用する。
+
 {{< /tab >}}
 {{< tab "Javascript" >}}
 
