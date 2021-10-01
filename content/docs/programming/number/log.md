@@ -69,5 +69,28 @@ yを略した場合（引数１つの場合）、底は自動的にeとなり、
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptにも任意の底での対数を算出する関数は無いため、  
+底の変換公式  を用いて前述の**Math.log()** などを利用し算出する。
+
+```javascript
+let a = 2;
+let b = 4;
+let c = 1024;
+
+//log2(n)を算出する
+console.log(Math.log(b)/Math.log(a)) //log(2)4
+console.log(Math.log(c)/Math.log(a)) //log(2)1024
+```
+
+実行結果
+
+```
+2
+10
+```
+
+{{< /tab >}}
 {{< /tabs >}}
 
