@@ -58,5 +58,25 @@ pythonで自然対数を算出するにはmathモジュールにある関数 **l
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptで自然対数を算出するにはMathオブジェクトにある **log()** 関数を使用する。  
+
+```Javascript
+let a = 100
+let b = 500
+
+console.log(Math.log(a))
+console.log(Math.log(b))
+```
+
+実行結果
+
+```
+4.605170185988092
+6.214608098422191
+```
+
+{{< /tab >}}
 {{< /tabs >}}
 
