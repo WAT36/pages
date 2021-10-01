@@ -58,5 +58,31 @@ pythonで常用対数を算出するにはmathモジュールにある関数 **l
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptで常用対数を算出するにはMathオブジェクトにある関数 **log10()** 関数を使用する。  
+```javascript
+Math.log10(x)
+```
+
+使用例
+
+```Javascript
+let a = 100     
+let b = 500 
+
+console.log(Math.log10(a))
+console.log(Math.log10(b))
+```
+
+実行結果
+
+```
+2
+2.6989700043360187
+```
+
+
+{{< /tab >}}
 {{< /tabs >}}
 
