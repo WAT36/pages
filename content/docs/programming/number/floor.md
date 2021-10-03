@@ -77,4 +77,27 @@ pythonにもmathモジュールに**floor()**関数がある。それを利用�
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+JavascriptにはMathオブジェクトに **floor()** 関数がある。それを利用すると小数点以下切り捨てが行える。
+
+```javascript
+let a=10.1
+let b=10.0
+let c=9.9
+
+console.log(Math.floor(a))
+console.log(Math.floor(b))
+console.log(Math.floor(c))
+```
+
+実行結果
+
+```
+10
+10
+9
+```
+
+{{< /tab >}}
 {{< /tabs >}}
