@@ -83,4 +83,27 @@ pythonにもmathモジュールに**ceil()**関数がある。それを利用す
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+JavascriptにはMathオブジェクトに **ceil()** 関数がある。それを利用すると小数点以下切り上げが行える。
+
+```javascript
+let a=10.1
+let b=10.0
+let c=9.9
+
+console.log(Math.ceil(a))
+console.log(Math.ceil(b))
+console.log(Math.ceil(c))
+```
+
+実行結果
+
+```
+11
+11
+10
+```
+
+{{< /tab >}}
 {{< /tabs >}}
