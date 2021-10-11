@@ -15,7 +15,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.1d90daee31b987f9094691939583c17b06266670ad4aaa72fbbd6d681c05e826.js" integrity="sha256-HZDa7jG5h/kJRpGTlYPBewYmZnCtSqpy&#43;71taBwF6CY="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.2cb4bada70e0525d7b37d299fd930ca24a538233c3d8a9cd61aed1b356afbc99.js" integrity="sha256-LLS62nDgUl17N9KZ/ZMMokpTgjPD2KnNYa7Rs1avvJk="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -154,7 +154,7 @@ https://github.com/alex-shpak/hugo-book
   <div class="book-tabs-content markdown-inner"><p>JavaではMathクラスに**sqrt()**というメソッドがあり、これを利用すると平方根が計算できる。</p>
 <p><code>public static double sqrt(double a)</code></p>
 <p>利用するにはMathクラスをインポートする。</p>
-<p>また、Mathクラスにある累乗を行うメソッド**pow()**も利用できる。</p>
+<p>また、Mathクラスにある累乗を行うメソッド**pow()**も利用できる。pow()を利用することで、n乗根を計算することが可能になる。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.lang.Math<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span><span style="color:#f92672">{</span>
@@ -227,7 +227,24 @@ root 5:2.23606797749979
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">**</span> n
 <span style="color:#ae81ff">2.23606797749979</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span>
-</code></pre></div></div></div>
+</code></pre></div></div><input type="radio" class="toggle" name="tabs-root" id="tabs-root-2"  />
+  <label for="tabs-root-2">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>JavascriptにはMathオブジェクトに指定した数値の平方根を計算するメソッド<strong>sqrt()</strong>、また立方根を計算するメソッド**cbrt()**がある。</p>
+<p>また、n乗根を計算するには、指定した数の累乗を計算するメソッド**pow()**を利用して行う。</p>
+<p>使用例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Math.<span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">2</span>)) <span style="color:#75715e">//２の平方根
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Math.<span style="color:#a6e22e">cbrt</span>(<span style="color:#ae81ff">2</span>)) <span style="color:#75715e">//２の立方根
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Math.<span style="color:#a6e22e">pow</span>(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)) <span style="color:#75715e">//2の1/2乗（平方根）
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Math.<span style="color:#a6e22e">pow</span>(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">3</span>)) <span style="color:#75715e">//2の1/3乗（立方根）
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Math.<span style="color:#a6e22e">pow</span>(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span>)) <span style="color:#75715e">//2の1/10乗
+</span></code></pre></div><p>実行結果</p>
+<pre><code>1.4142135623730951
+1.2599210498948732
+1.4142135623730951
+1.2599210498948732
+1.0717734625362931
+</code></pre></div></div>
 
 </article>
  
