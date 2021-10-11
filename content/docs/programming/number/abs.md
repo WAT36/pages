@@ -58,5 +58,25 @@ pythonで数値の絶対値を算出するには組み込み関数の**abs**関�
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptで数値の絶対値を算出するにはMathオブジェクトの**abs()**メソッドを使用する。
+
+```javascript
+let a = 1
+let b = -1
+
+console.log(Math.abs(a))
+console.log(Math.abs(b))
+```
+
+実行結果
+
+```
+1
+1
+```
+
+{{< /tab >}}
 {{< /tabs >}}
 
