@@ -15,7 +15,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.0745e7fdf7418bac1db337b895456822dd88bfb9aff90054304b8ed772a0e910.js" integrity="sha256-B0Xn/fdBi6wdsze4lUVoIt2Iv7mv&#43;QBUMEuO13Kg6RA="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.9b05f1f0dffe2ca39a305eb5aeea9a2ab1321546d66f1ebb30d9df317c0c8813.js" integrity="sha256-mwXx8N/&#43;LKOaMF61ruqaKrEyFUbWbx67MNnfMXwMiBM="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -201,7 +201,28 @@ https://github.com/alex-shpak/hugo-book
 <span style="color:#f92672">&gt;&gt;&gt;</span> math<span style="color:#f92672">.</span>factorial(c)
 <span style="color:#ae81ff">3628800</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span>
-</code></pre></div></div></div>
+</code></pre></div></div><input type="radio" class="toggle" name="tabs-factorial" id="tabs-factorial-2"  />
+  <label for="tabs-factorial-2">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>Javascriptにも階乗計算を行うライブラリは現時点ではない（はず）。
+そのため、独自で階乗計算を行うメソッドを実装する必要がある。<br>
+階乗計算を行う上で有名なのが、再帰を使った方法である。実装例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">factorial</span>(<span style="color:#a6e22e">n</span>){
+    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>){
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+    }<span style="color:#66d9ef">else</span>{
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">factorial</span>(<span style="color:#a6e22e">n</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+    }
+}
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">factorial</span>(<span style="color:#ae81ff">1</span>))
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">factorial</span>(<span style="color:#ae81ff">5</span>))
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">factorial</span>(<span style="color:#ae81ff">10</span>))
+</code></pre></div><p>再帰計算を用いることにより、上記メソッドfactorial(n)はn!を意味する。
+実行結果は以下の通り。</p>
+<pre><code>1
+120
+3628800
+</code></pre></div></div>
 
 </article>
  

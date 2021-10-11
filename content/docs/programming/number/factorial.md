@@ -87,5 +87,35 @@ pythonにはmathモジュールに階乗計算を行う関数**factorial()**  �
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptにも階乗計算を行うライブラリは現時点ではない（はず）。
+そのため、独自で階乗計算を行うメソッドを実装する必要がある。  
+階乗計算を行う上で有名なのが、再帰を使った方法である。実装例を以下に示す。
+
+```javascript
+function factorial(n){
+    if(n == 0 || n == 1){
+        return 1;
+    }else{
+        return n * factorial(n-1);
+    }
+}
+
+console.log(factorial(1))
+console.log(factorial(5))
+console.log(factorial(10))
+```
+
+再帰計算を用いることにより、上記メソッドfactorial(n)はn!を意味する。
+実行結果は以下の通り。
+
+```
+1
+120
+3628800
+```
+
+{{< /tab >}}
 {{< /tabs >}}
 
