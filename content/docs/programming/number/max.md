@@ -68,5 +68,27 @@ javaと違い、こちらは引数の数に制限はないため、比較した�
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+JavascriptではMathオブジェクトの**max()**関数を利用する。
+こちらも引数の数に制限はないため、比較したい値をいくらでも入力できる。
+
+```javascript
+let a = 1
+let b = 2
+let c = 3
+console.log(Math.max(a,b))
+console.log(Math.max(a,b,c))
+```
+
+実行結果
+
+```
+2
+3
+```
+
+
+{{< /tab >}}
 {{< /tabs >}}
 
