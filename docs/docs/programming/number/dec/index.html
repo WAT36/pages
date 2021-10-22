@@ -15,7 +15,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.5549bb5be91bdfb004cf17e9a0110ff38864c1972909218ef7bf4cda8052f34b.js" integrity="sha256-VUm7W&#43;kb37AEzxfpoBEP84hkwZcpCSGO979M2oBS80s="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.1666da16b558c69a1909147e04a53e6c5c1b0595ab227b9df6ecae4f119adb6b.js" integrity="sha256-FmbaFrVYxpoZCRR&#43;BKU&#43;bFwbBZWrInud9uyuTxGa22s="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -206,7 +206,23 @@ Traceback (most recent call last):
   File <span style="color:#e6db74">&#34;&lt;stdin&gt;&#34;</span>, line <span style="color:#ae81ff">1</span>, <span style="color:#f92672">in</span> <span style="color:#f92672">&lt;</span>module<span style="color:#f92672">&gt;</span>
 <span style="color:#a6e22e">ValueError</span>: invalid literal <span style="color:#66d9ef">for</span> int() <span style="color:#66d9ef">with</span> base <span style="color:#ae81ff">2</span>: <span style="color:#e6db74">&#39;0xAA&#39;</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span>
-</code></pre></div></div></div>
+</code></pre></div></div><input type="radio" class="toggle" name="tabs-max" id="tabs-max-2"  />
+  <label for="tabs-max-2">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>Javascriptも<a href="https://WAT36.github.io/pages/docs/programming/string/parseInt/">文字列を数値に変換する</a> の所で述べた**parseInt()**関数を利用する。</p>
+<p><code> parseInt(x, base)</code></p>
+<p>parseInt関数で第1引数に数値に変換したい文字列、第2引数には変換元の(文字列で表した)数値の基数を入力する。</p>
+<p>実行例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(parseInt(<span style="color:#e6db74">&#39;010101&#39;</span>,<span style="color:#ae81ff">2</span>)) 
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(parseInt(<span style="color:#e6db74">&#39;AA&#39;</span>,<span style="color:#ae81ff">16</span>))
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(parseInt(<span style="color:#e6db74">&#39;abe&#39;</span>,<span style="color:#ae81ff">16</span>))
+<span style="color:#75715e">//変換できない組み合わせの場合はNaN
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(parseInt(<span style="color:#e6db74">&#39;AA&#39;</span>,<span style="color:#ae81ff">2</span>))
+</code></pre></div><p>実行結果</p>
+<pre><code>21
+170
+2750
+NaN
+</code></pre></div></div>
 
 </article>
  

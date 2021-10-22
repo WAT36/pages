@@ -93,5 +93,33 @@ ValueError: invalid literal for int() with base 2: '0xAA'
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+Javascriptも[文字列を数値に変換する]({{< relref "/docs/programming/string/parseInt.md" >}}) の所で述べた**parseInt()**関数を利用する。  
+
+` parseInt(x, base)`  
+
+parseInt関数で第1引数に数値に変換したい文字列、第2引数には変換元の(文字列で表した)数値の基数を入力する。  
+
+実行例を以下に示す。  
+
+```javascript
+console.log(parseInt('010101',2)) 
+console.log(parseInt('AA',16))
+console.log(parseInt('abe',16))
+//変換できない組み合わせの場合はNaN
+console.log(parseInt('AA',2))
+```
+
+実行結果
+
+```
+21
+170
+2750
+NaN
+```
+
+{{< /tab >}}
 {{< /tabs >}}
 
