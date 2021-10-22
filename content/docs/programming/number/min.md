@@ -69,5 +69,27 @@ javaと違い、こちらは引数の数に制限はないため、比較した�
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+JavascriptではMathオブジェクトの**minn()**関数を利用する。
+こちらも引数の数に制限はないため、比較したい値をいくらでも入力できる。
+
+```javascript
+let a = 1
+let b = 2
+let c = 3
+console.log(Math.min(b,c))
+console.log(Math.min(a,b,c))
+```
+
+実行結果
+
+```
+2
+1
+```
+
+
+{{< /tab >}}
 {{< /tabs >}}
 
