@@ -48,5 +48,20 @@ pythonではmathモジュールに定数**pi**が定義されており、これ�
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+JavascriptではMathモジュールに定数**PI**が定義されており、これが円周率に最も近い数とされている。
+
+```javascript
+console.log(Math.PI)
+```
+
+実行結果
+
+```
+3.141592653589793
+```
+
+{{< /tab >}}
 {{< /tabs >}}
 
