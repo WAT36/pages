@@ -61,4 +61,27 @@ class Main{
 
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+同様にJavascriptでも[数値を文字列に変換]({{< relref "/docs/programming/number/str.md" >}})し、その[文字列の長さを取得]({{< relref "/docs/programming/string/length.md" >}})すればOK。
+
+```javascript
+let a = 10
+let b = 123
+let c = 76543
+
+console.log(String(a).length)
+console.log(String(b).length)
+console.log(String(c).length)
+```
+
+実行結果
+
+```
+2
+3
+5
+```
+
+{{< /tab >}}
 {{< /tabs >}}
