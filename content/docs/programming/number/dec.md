@@ -95,7 +95,7 @@ ValueError: invalid literal for int() with base 2: '0xAA'
 {{< /tab >}}
 {{< tab "Javascript" >}}
 
-Javascriptも[文字列を数値に変換する]({{< relref "/docs/programming/string/parseInt.md" >}}) の所で述べた**parseInt()**関数を利用する。  
+Javascriptも[文字列を数値に変換する]({{< relref "/docs/programming/string/parseInt.md" >}}) の所で述べた **parseInt()** 関数を利用する。  
 
 ` parseInt(x, base)`  
 
