@@ -15,7 +15,7 @@
 <link rel="manifest" href="https://WAT36.github.io/pages/manifest.json">
 <link rel="icon" href="https://WAT36.github.io/pages/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://WAT36.github.io/pages/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="https://WAT36.github.io/pages/en.search.min.8a905fd9fb8d3cee070deca1dd883d189e4706794484caf033779500c801a32f.js" integrity="sha256-ipBf2fuNPO4HDeyh3Yg9GJ5HBnlEhMrwM3eVAMgBoy8="></script>
+<script defer src="https://WAT36.github.io/pages/en.search.min.3e3c25151b445550cf704b360150b25c8e4ceb60e96d5ebecad88b33e1bcc71d.js" integrity="sha256-PjwlFRtEVVDPcEs2AVCyXI5M62DpbV6&#43;ytiLM&#43;G8xx0="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -215,6 +215,16 @@ randomモジュールの中に乱数に関する関数が多くあるので、�
 <span style="color:#f92672">&gt;&gt;&gt;</span> random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">100</span>)
 <span style="color:#ae81ff">84</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> 
+</code></pre></div></div><input type="radio" class="toggle" name="tabs-random" id="tabs-random-2"  />
+  <label for="tabs-random-2">Javascript</label>
+  <div class="book-tabs-content markdown-inner"><p>JavascriptではMathモジュールの**random()**関数を利用することで、0以上1以下の数をランダムで得られる。<br>
+任意の２数min,max間でのランダムな値を取り出したい時は、<code>Math.random() * (max - min) + min</code>という様にする。</p>
+<p>実行例を以下に示す。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Math.<span style="color:#a6e22e">random</span>())
+<span style="color:#75715e">//1~100間の整数をランダムに取得
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> (<span style="color:#ae81ff">100</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> (<span style="color:#ae81ff">100</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> (<span style="color:#ae81ff">100</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
 </code></pre></div></div></div>
 
 </article>

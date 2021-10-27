@@ -102,5 +102,21 @@ randomモジュールの中に乱数に関する関数が多くあるので、�
 ```
 
 {{< /tab >}}
+{{< tab "Javascript" >}}
+
+JavascriptではMathモジュールの**random()**関数を利用することで、0以上1以下の数をランダムで得られる。  
+任意の２数min,max間でのランダムな値を取り出したい時は、```Math.random() * (max - min) + min```という様にする。
+
+実行例を以下に示す。
+
+```javascript
+console.log(Math.random())
+//1~100間の整数をランダムに取得
+console.log(Math.random() * (100 - 1) + 1)
+console.log(Math.random() * (100 - 1) + 1)
+console.log(Math.random() * (100 - 1) + 1)
+```
+
+{{< /tab >}}
 {{< /tabs >}}
 
