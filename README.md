@@ -1,5 +1,7 @@
 # pages
 
-私がGithub上に設けているブログ的なサイトです。
+~~私が Github 上に設けているブログ的なサイトです。~~
 
-https://wat36.github.io/pages/
+~~ttps://wat36.github.io/pages/~~
+
+初代自作ブログの跡地。閉鎖しました
